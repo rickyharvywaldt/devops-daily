@@ -1,0 +1,62 @@
+name: Daily
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # runs every 6 hours
+  workflow_dispatch:
+
+permissions:
+  contents: write   # allow pushing commits
+
+jobs:
+  commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install curl & jq
+        run: sudo apt-get update && sudo apt-get install -y curl jq
+
+      - name: Generate random useful commits
+        run: |
+          NUM=$((RANDOM % 4)) # 0–3 commits this run
+          TODAY=$(date -u +"%Y-%m-%d")
+
+          mkdir -p logs/k8s logs/cves logs/docker
+
+          for i in $(seq 1 $NUM); do
+            PICK=$((RANDOM % 3))
+            case $PICK in
+              0)
+                FILE="logs/k8s/$TODAY.txt"
+                echo "[$(date -u)] Latest K8s release:" >> $FILE
+                K8S=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt || echo "unavailable")
+                echo "$K8S" >> $FILE
+                echo "Logged K8s: $K8S"
+                ;;
+              1)
+                FILE="logs/cves/$TODAY.json"
+                echo "[$(date -u)] Latest CVEs:" >> $FILE
+                CVE=$(curl -s https://cve.circl.lu/api/last | jq '.[0:5]' 2>/dev/null || echo "[]")
+                echo "$CVE" >> $FILE
+                echo "Logged CVEs"
+                ;;
+              2)
+                FILE="logs/docker/$TODAY.txt"
+                echo "[$(date -u)] Dockerhub nginx tag:" >> $FILE
+                DOCKER=$(curl -s https://registry.hub.docker.com/v2/repositories/library/nginx/tags?page_size=1 | jq -r '.results[0].name' 2>/dev/null || echo "unavailable")
+                echo "$DOCKER" >> $FILE
+                echo "Logged Docker tag: $DOCKER"
+                ;;
+            esac
+
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add logs/
+            git commit -m "Automated log update on $(date -u)"
+          done
+          if [ $NUM -gt 0 ]; then
+            git push
+          fi
+
