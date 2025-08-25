@@ -16380,3 +16380,1648 @@
     ]
   }
 ]
+[Mon Aug 25 18:34:02 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9413",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-08-25T08:45:51.488Z",
+      "datePublished": "2025-08-25T18:02:08.185Z",
+      "dateUpdated": "2025-08-25T18:02:08.185Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-08-25T18:02:08.185Z"
+        },
+        "title": "lostvip-com ruoyi-go system_router.go SelectListByPage sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "lostvip-com",
+            "product": "ruoyi-go",
+            "versions": [
+              {
+                "version": "2.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in lostvip-com ruoyi-go up to 2.1. This impacts the function SelectListByPage of the file modules/system/system_router.go. This manipulation of the argument orderByColumn/isAsc causes sql injection. The attack may be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          },
+          {
+            "lang": "de",
+            "value": "In lostvip-com ruoyi-go bis 2.1 wurde eine Schwachstelle gefunden. Betroffen davon ist die Funktion SelectListByPage der Datei modules/system/system_router.go. Durch Beeinflussen des Arguments orderByColumn/isAsc mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Umgesetzt werden kann der Angriff über das Netzwerk. Die Ausnutzung wurde veröffentlicht und kann verwendet werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-25T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-08-25T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-08-25T10:51:27.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "OnTheWay (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.321254",
+            "name": "VDB-321254 | lostvip-com ruoyi-go system_router.go SelectListByPage sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.321254",
+            "name": "VDB-321254 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.633730",
+            "name": "Submit #633730 | GitHub ruoyi-go 2.1 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.633731",
+            "name": "Submit #633731 | GitHub ruoyi-go 2.1 SQL Injection (Duplicate)",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/on-theway/cve/issues/8",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/on-theway/cve/issues/9",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-5514",
+      "assignerOrgId": "e0f77b61-78fd-4786-b3fb-1ee347a748ad",
+      "state": "PUBLISHED",
+      "assignerShortName": "Mitsubishi",
+      "dateReserved": "2025-06-03T06:22:17.624Z",
+      "datePublished": "2025-08-25T05:55:32.622Z",
+      "dateUpdated": "2025-08-25T18:01:56.368Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-32MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-32MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-32MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-32MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-32MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-32MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-64MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-64MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-64MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-64MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-64MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-64MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-80MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-80MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-80MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-80MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-80MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5U-80MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-32MT/D",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-32MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-64MT/D",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-64MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-96MT/D",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-96MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-32MT/DS-TS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-32MT/DSS-TS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UC-32MR/DS-TS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.060 and later"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MT/ES-A",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-24MR/ES-A",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MT/ES-A",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-40MR/ES-A",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MT/ES-A",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5UJ-60MR/ES-A",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-30MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-30MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-30MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-40MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-40MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-40MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-60MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-60MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-60MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-80MT/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-80MT/ESS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-80MR/ES",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-30MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-30MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-30MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-40MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-40MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-40MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-60MT/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-60MT/DSS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "MELSEC iQ-F Series FX5S-60MR/DS",
+            "vendor": "Mitsubishi Electric Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Handling of Length Parameter Inconsistency vulnerability in web server function on Mitsubishi Electric Corporation MELSEC iQ-F Series CPU module allows a remote unauthenticated attacker to delay the processing of the web server function and prevent legitimate users from utilizing the web server function, by sending a specially crafted HTTP request."
+              }
+            ],
+            "value": "Improper Handling of Length Parameter Inconsistency vulnerability in web server function on Mitsubishi Electric Corporation MELSEC iQ-F Series CPU module allows a remote unauthenticated attacker to delay the processing of the web server function and prevent legitimate users from utilizing the web server function, by sending a specially crafted HTTP request."
+          }
+        ],
+        "impacts": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "Denial-of-Service (DoS)"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-130",
+                "description": "CWE-130 Improper Handling of Length Parameter Inconsistency",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "e0f77b61-78fd-4786-b3fb-1ee347a748ad",
+          "shortName": "Mitsubishi",
+          "dateUpdated": "2025-08-25T05:55:32.622Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2025-010_en.pdf"
+          },
+          {
+            "tags": [
+              "government-resource"
+            ],
+            "url": "https://jvn.jp/vu/JVNVU90316328/"
+          },
+          {
+            "tags": [
+              "government-resource"
+            ],
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-233-01"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Denial-of-Service(DoS) Vulnerability in Web server function on MELSEC iQ-F Series CPU module",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-25T18:00:52.704111Z",
+                  "id": "CVE-2025-5514",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-25T18:01:56.368Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-53120",
+      "assignerOrgId": "9974b330-7714-4307-a722-5648477acda7",
+      "state": "PUBLISHED",
+      "assignerShortName": "rapid7",
+      "dateReserved": "2025-06-26T09:06:04.496Z",
+      "datePublished": "2025-08-25T16:11:38.645Z",
+      "dateUpdated": "2025-08-25T18:00:56.162Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Unified PAM",
+            "vendor": "Securden",
+            "versions": [
+              {
+                "lessThanOrEqual": "11.3.1",
+                "status": "affected",
+                "version": "9.0.*",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Aaron Herndon, Principal Security Consultant, and Marcus Chang, Security Consultant, both of Rapid7."
+          }
+        ],
+        "datePublic": "2025-08-25T16:09:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "A path traversal vulnerability in unauthenticated upload functionality allows a malicious actor to upload binaries and scripts to the server’s configuration and web root directories, achieving remote code execution on the Unified PAM server."
+              }
+            ],
+            "value": "A path traversal vulnerability in unauthenticated upload functionality allows a malicious actor to upload binaries and scripts to the server’s configuration and web root directories, achieving remote code execution on the Unified PAM server."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 9.4,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9974b330-7714-4307-a722-5648477acda7",
+          "shortName": "rapid7",
+          "dateUpdated": "2025-08-25T16:11:38.645Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.rapid7.com/blog/post/securden-unified-pam-multiple-critical-vulnerabilities-fixed/"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Securden Unified PAM Path Traversal In File Upload",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-25T18:00:46.092126Z",
+                  "id": "CVE-2025-53120",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-25T18:00:56.162Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9407",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-08-25T06:18:22.856Z",
+      "datePublished": "2025-08-25T10:32:11.332Z",
+      "dateUpdated": "2025-08-25T18:00:27.199Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-08-25T10:32:11.332Z"
+        },
+        "title": "mtons mblog profile cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "mtons",
+            "product": "mblog",
+            "versions": [
+              {
+                "version": "3.0",
+                "status": "affected"
+              },
+              {
+                "version": "3.1",
+                "status": "affected"
+              },
+              {
+                "version": "3.2",
+                "status": "affected"
+              },
+              {
+                "version": "3.3",
+                "status": "affected"
+              },
+              {
+                "version": "3.4",
+                "status": "affected"
+              },
+              {
+                "version": "3.5.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in mtons mblog up to 3.5.0. Affected by this vulnerability is an unknown functionality of the file /settings/profile. Executing manipulation of the argument signature can lead to cross site scripting. The attack may be launched remotely. The exploit has been published and may be used. Other parameters might be affected as well."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in mtons mblog bis 3.5.0 entdeckt. Betroffen davon ist eine unbekannte Funktion der Datei /settings/profile. Dank Manipulation des Arguments signature mit unbekannten Daten kann eine cross site scripting-Schwachstelle ausgenutzt werden. Umgesetzt werden kann der Angriff über das Netzwerk. Der Exploit steht zur öffentlichen Verfügung."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.5,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-25T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-08-25T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-08-25T08:23:26.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "ZAST.AI (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.321245",
+            "name": "VDB-321245 | mtons mblog profile cross site scripting",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.321245",
+            "name": "VDB-321245 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.633635",
+            "name": "Submit #633635 | mtons https://gitee.com/mtons/mblog  <=3.5.0 Stored XSS",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://gitee.com/mtons/mblog/issues/ICPML3",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-25T18:00:14.128082Z",
+                  "id": "CVE-2025-9407",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-25T18:00:27.199Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-43770",
+      "assignerOrgId": "8b54e794-c6f0-462e-9faa-c1001a673ac3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Liferay",
+      "dateReserved": "2025-04-17T10:55:26.804Z",
+      "datePublished": "2025-08-23T01:03:40.661Z",
+      "dateUpdated": "2025-08-25T17:59:50.941Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Portal",
+            "vendor": "Liferay",
+            "versions": [
+              {
+                "lessThanOrEqual": "7.4.3.131",
+                "status": "affected",
+                "version": "7.4.0",
+                "versionType": "maven"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "DXP",
+            "vendor": "Liferay",
+            "versions": [
+              {
+                "lessThanOrEqual": "7.4.13-u92",
+                "status": "affected",
+                "version": "7.4.13",
+                "versionType": "maven"
+              },
+              {
+                "lessThanOrEqual": "2024.Q1.12",
+                "status": "affected",
+                "version": "2024.Q1.1",
+                "versionType": "maven"
+              },
+              {
+                "lessThanOrEqual": "2023.Q2.13",
+                "status": "affected",
+                "version": "2024.Q2.0",
+                "versionType": "maven"
+              },
+              {
+                "lessThanOrEqual": "2024.Q3.13",
+                "status": "affected",
+                "version": "2024.Q3.1",
+                "versionType": "maven"
+              },
+              {
+                "lessThanOrEqual": "2024.Q4.3",
+                "status": "affected",
+                "version": "2024.Q4.0",
+                "versionType": "maven"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "A reflected cross-site scripting (XSS) vulnerability in the Liferay Portal 7.4.0 through 7.4.3.131, and Liferay DXP 2024.Q4.0 through 2024.Q4.3, 2024.Q3.1 through 2024.Q3.13, 2024.Q2.0 through 2024.Q2.13, 2024.Q1.1 through 2024.Q1.12 and 7.4 GA through update 92  allows an remote non-authenticated attacker to inject JavaScript into the referer or FORWARD_URL using %00 in those parameters."
+              }
+            ],
+            "value": "A reflected cross-site scripting (XSS) vulnerability in the Liferay Portal 7.4.0 through 7.4.3.131, and Liferay DXP 2024.Q4.0 through 2024.Q4.3, 2024.Q3.1 through 2024.Q3.13, 2024.Q2.0 through 2024.Q2.13, 2024.Q1.1 through 2024.Q1.12 and 7.4 GA through update 92  allows an remote non-authenticated attacker to inject JavaScript into the referer or FORWARD_URL using %00 in those parameters."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "8b54e794-c6f0-462e-9faa-c1001a673ac3",
+          "shortName": "Liferay",
+          "dateUpdated": "2025-08-23T01:03:40.661Z"
+        },
+        "references": [
+          {
+            "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/CVE-2025-43770"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-25T17:59:19.480168Z",
+                  "id": "CVE-2025-43770",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-25T17:59:50.941Z"
+          }
+        }
+      ]
+    }
+  }
+]
