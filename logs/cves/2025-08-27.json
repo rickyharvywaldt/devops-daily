@@ -456,3 +456,804 @@
     }
   }
 ]
+[Wed Aug 27 06:33:20 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9514",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-08-26T20:48:00.702Z",
+      "datePublished": "2025-08-27T06:02:06.268Z",
+      "dateUpdated": "2025-08-27T06:02:06.268Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-08-27T06:02:06.268Z"
+        },
+        "title": "macrozheng mall Registration weak password",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-521",
+                "lang": "en",
+                "description": "Weak Password Requirements"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "macrozheng",
+            "product": "mall",
+            "versions": [
+              {
+                "version": "1.0.0",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.1",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.2",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.3",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Registration"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in macrozheng mall up to 1.0.3. This impacts an unknown function of the component Registration. Such manipulation leads to weak password requirements. The attack can be executed remotely. Attacks of this nature are highly complex. The exploitability is said to be difficult. The vendor deleted the GitHub issue for this vulnerability without and explanation."
+          },
+          {
+            "lang": "de",
+            "value": "In macrozheng mall bis 1.0.3 ist eine Schwachstelle entdeckt worden. Betroffen hiervon ist ein unbekannter Ablauf der Komponente Registration. Die Manipulation führt zu weak password requirements. Der Angriff kann remote ausgeführt werden. Das Durchführen eines Angriffs ist mit einer relativ hohen Komplexität verbunden. Das Ausnutzen gilt als schwierig."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:X/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.7,
+              "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:X/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 2.6,
+              "vectorString": "AV:N/AC:H/Au:N/C:P/I:N/A:N/E:ND/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-26T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-08-26T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-08-26T22:53:03.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "ez-lbz (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.321507",
+            "name": "VDB-321507 | macrozheng mall Registration weak password",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.321507",
+            "name": "VDB-321507 | CTI Indicators (IOB, IOC, TTP)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.635503",
+            "name": "Submit #635503 | macrozheng mall ≤ v1.0.3 CWE-521",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/macrozheng/mall/issues/923",
+            "tags": [
+              "issue-tracking"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9028",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-08-14T07:18:51.453Z",
+      "datePublished": "2025-08-15T10:32:06.405Z",
+      "dateUpdated": "2025-08-27T05:56:30.318Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-08-27T05:56:30.318Z"
+        },
+        "title": "code-projects Online Medicine Guide adphar.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Online Medicine Guide",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in code-projects Online Medicine Guide 1.0. This vulnerability affects unknown code of the file /adphar.php. Executing manipulation of the argument phuname can lead to sql injection. The attack can be launched remotely. The exploit has been published and may be used."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in code-projects Online Medicine Guide 1.0 entdeckt. Betroffen davon ist eine unbekannte Funktion der Datei /adphar.php. Die Manipulation des Arguments phuname führt zu sql injection. Umgesetzt werden kann der Angriff über das Netzwerk. Der Exploit ist öffentlich verfügbar und könnte genutzt werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-14T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-08-14T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-08-21T18:47:49.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "gailo (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.320093",
+            "name": "VDB-320093 | code-projects Online Medicine Guide adphar.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.320093",
+            "name": "VDB-320093 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.630188",
+            "name": "Submit #630188 | code-projects Online Medicine Guide v1.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Jackie1732/CVE/issues/3",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-15T14:02:13.305962Z",
+                  "id": "CVE-2025-9028",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-15T14:02:30.262Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-57797",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-08-20T07:06:29.896Z",
+      "datePublished": "2025-08-27T05:43:18.734Z",
+      "dateUpdated": "2025-08-27T05:43:18.734Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "PFU Limited",
+            "product": "ScanSnap Manager installers",
+            "versions": [
+              {
+                "version": "prior to V6.5L61",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect privilege assignment vulnerability exists in ScanSnap Manager installers versions prior to V6.5L61. If this vulnerability is exploited, an authenticated local attacker may escalate privileges and execute an arbitrary command."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Incorrect privilege assignment",
+                "lang": "en-US",
+                "cweId": "CWE-266",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.pfu.ricoh.com/imaging/news/news20230606.html"
+          },
+          {
+            "url": "https://www.pfu.ricoh.com/scansnap/software/sshome/requirement.html"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN69684540/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.8,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.5,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-08-27T05:43:18.734Z"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9513",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-08-26T20:43:48.010Z",
+      "datePublished": "2025-08-27T05:32:10.035Z",
+      "dateUpdated": "2025-08-27T05:32:10.035Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-08-27T05:32:10.035Z"
+        },
+        "title": "editso fuso mod.rs PenetrateRsaAndAesHandshake inadequate encryption",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-326",
+                "lang": "en",
+                "description": "Inadequate Encryption Strength"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-310",
+                "lang": "en",
+                "description": "Cryptographic Issues"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "editso",
+            "product": "fuso",
+            "versions": [
+              {
+                "version": "1.0.4-beta.0",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.1",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.2",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.3",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.4",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.5",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.6",
+                "status": "affected"
+              },
+              {
+                "version": "1.0.4-beta.7",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in editso fuso up to 1.0.4-beta.7. This affects the function PenetrateRsaAndAesHandshake of the file src/net/penetrate/handshake/mod.rs. This manipulation of the argument priv_key causes inadequate encryption strength. Remote exploitation of the attack is possible. A high degree of complexity is needed for the attack. The exploitability is reported as difficult."
+          },
+          {
+            "lang": "de",
+            "value": "In editso fuso bis 1.0.4-beta.7 wurde eine Schwachstelle gefunden. Betroffen davon ist die Funktion PenetrateRsaAndAesHandshake der Datei src/net/penetrate/handshake/mod.rs. Durch Beeinflussen des Arguments priv_key mit unbekannten Daten kann eine inadequate encryption strength-Schwachstelle ausgenutzt werden. Umgesetzt werden kann der Angriff über das Netzwerk. Ein Angriff erfordert eine vergleichsweise hohe Komplexität. Sie ist schwierig auszunutzen."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:X/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.7,
+              "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N/E:X/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 2.6,
+              "vectorString": "AV:N/AC:H/Au:N/C:P/I:N/A:N/E:ND/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-26T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-08-26T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-08-26T22:49:03.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "dev03301 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.321506",
+            "name": "VDB-321506 | editso fuso mod.rs PenetrateRsaAndAesHandshake inadequate encryption",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.321506",
+            "name": "VDB-321506 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.635449",
+            "name": "Submit #635449 | editso fuso dev CWE-326: Inadequate Encryption Strength",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://chatgpt.com/share/68ae1bfa-8cd4-8005-8add-969bc42047b4",
+            "tags": [
+              "related"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9511",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-08-26T20:21:22.040Z",
+      "datePublished": "2025-08-27T05:32:07.388Z",
+      "dateUpdated": "2025-08-27T05:32:07.388Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-08-27T05:32:07.388Z"
+        },
+        "title": "itsourcecode Apartment Management System addvisitor.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "itsourcecode",
+            "product": "Apartment Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was identified in itsourcecode Apartment Management System 1.0. This vulnerability affects unknown code of the file /visitor/addvisitor.php. Such manipulation of the argument ID leads to sql injection. It is possible to launch the attack remotely. The exploit is publicly available and might be used."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in itsourcecode Apartment Management System 1.0 entdeckt. Dabei betrifft es einen unbekannter Codeteil der Datei /visitor/addvisitor.php. Mittels dem Manipulieren des Arguments ID mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Angriff kann über das Netzwerk passieren. Der Exploit wurde der Öffentlichkeit bekannt gemacht und könnte verwendet werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-26T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-08-26T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-08-26T22:26:36.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "zzb1 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.321501",
+            "name": "VDB-321501 | itsourcecode Apartment Management System addvisitor.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.321501",
+            "name": "VDB-321501 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.635391",
+            "name": "Submit #635391 | itsourcecode Apartment Management System V1.0 SQL injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zzb1388/cve/issues/43",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://itsourcecode.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
