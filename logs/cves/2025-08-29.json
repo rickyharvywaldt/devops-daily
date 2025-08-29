@@ -1,0 +1,1017 @@
+[Fri Aug 29 12:46:31 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2020-25720",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2020-09-16T00:00:00.000Z",
+      "datePublished": "2024-11-17T10:17:07.511Z",
+      "dateUpdated": "2025-08-29T12:09:07.625Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Samba: check attribute access rights for ldap adds of computers",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Moderate",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in Samba where a delegated administrator with permission to create objects in Active Directory can write to all attributes of the newly created object, including security-sensitive attributes, even after the object's creation. This issue occurs because the administrator owns the object due to the lack of an Access Control List (ACL) at the time of creation and later being recognized as the 'creator owner.' The retained significant rights of the delegated administrator may not be well understood, potentially leading to unintended privilege escalation or security risks."
+          }
+        ],
+        "affected": [
+          {
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "4.17.8",
+                "versionType": "semver"
+              }
+            ],
+            "packageName": "samba",
+            "collectionURL": "https://git.samba.org/samba.git",
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:10"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba4",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhcos",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Storage 3",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "samba",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:storage:3"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2020-25720",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2305954",
+            "name": "RHBZ#2305954",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2022-06-14T00:12:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-264",
+                "description": "CWE-264",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-264",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2024-07-16T00:00:00+00:00",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2022-06-14T00:12:00+00:00",
+            "value": "Made public."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2025-08-29T12:09:07.625Z"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2024-11-17T16:18:39.310986Z",
+                  "id": "CVE-2020-25720",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-11-17T16:18:49.431Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7071",
+      "assignerOrgId": "455daabc-a392-441d-aa46-37d35189897c",
+      "state": "PUBLISHED",
+      "assignerShortName": "NCSC.ch",
+      "dateReserved": "2025-07-04T14:16:55.641Z",
+      "datePublished": "2025-08-29T09:18:06.911Z",
+      "dateUpdated": "2025-08-29T12:07:57.827Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "modules": [
+              "AES-CBC with PKCS#7 padding"
+            ],
+            "product": "ocrypto",
+            "vendor": "Oberon microsystems AG",
+            "versions": [
+              {
+                "lessThanOrEqual": "3.9.1",
+                "status": "affected",
+                "version": "3.1.0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(248, 248, 248);\">Padding oracle attack vulnerability in <i>Oberon microsystem AG</i>’s <i>ocrypto</i> library in all versions since 3.1.0 and prior to 3.9.2 allows an attacker to recover plaintexts via timing measurements of AES-CBC PKCS#7 decrypt operations.</span><br>"
+              }
+            ],
+            "value": "Padding oracle attack vulnerability in Oberon microsystem AG’s ocrypto library in all versions since 3.1.0 and prior to 3.9.2 allows an attacker to recover plaintexts via timing measurements of AES-CBC PKCS#7 decrypt operations."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-463",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-463 Padding Oracle Crypto Attack"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "attackVector": "LOCAL",
+              "baseScore": 5.9,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-208",
+                "description": "CWE-208 Observable Timing Discrepancy",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-327",
+                "description": "CWE-327 Use of a Broken or Risky Cryptographic Algorithm",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "455daabc-a392-441d-aa46-37d35189897c",
+          "shortName": "NCSC.ch",
+          "dateUpdated": "2025-08-29T09:18:06.911Z"
+        },
+        "references": [
+          {
+            "url": "https://www.oberon.ch/security-advisories/cve-2025-7071/"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Affected users should upgrade to <i>ocrypto 3.9.2</i> or later."
+              }
+            ],
+            "value": "Affected users should upgrade to ocrypto 3.9.2 or later."
+          }
+        ],
+        "source": {
+          "discovery": "INTERNAL"
+        },
+        "title": "Timing side-channel vulnerability in AES-CBC decryption with PKCS#7 padding in ocrypto library",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-29T12:07:50.804088Z",
+                  "id": "CVE-2025-7071",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-29T12:07:57.827Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-53507",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-07-02T00:52:40.811Z",
+      "datePublished": "2025-08-29T04:13:58.310Z",
+      "dateUpdated": "2025-08-29T12:05:32.544Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL330-DLS (for module MC7700)",
+            "versions": [
+              {
+                "version": "firmware version 1.03 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL330-DLS (for module MC7330)",
+            "versions": [
+              {
+                "version": "firmware version 2.02t and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL320-DLS (for module MC7700)",
+            "versions": [
+              {
+                "version": "firmware version 1.03 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL320-DLS (for module MC7330)",
+            "versions": [
+              {
+                "version": "firmware version 2.02t and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "LM-100",
+            "versions": [
+              {
+                "version": "firmware version 1.02 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "LM-200 (for module AMP570)",
+            "versions": [
+              {
+                "version": "firmware version 1.02 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "LM-200 (for module EC25-J)",
+            "versions": [
+              {
+                "version": "firmware version 1.05e and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "L2X Assist",
+            "versions": [
+              {
+                "version": "firmware version 2.01 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "L2X Assist-RS-A",
+            "versions": [
+              {
+                "version": "firmware version 1.11 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "L2X Assist-RS-E",
+            "versions": [
+              {
+                "version": "firmware version 1.12 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "F2L Assist-SS-A",
+            "versions": [
+              {
+                "version": "firmware version 1.03 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "F2L Assist-SS-E",
+            "versions": [
+              {
+                "version": "firmware version 1.01 and earlier",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple products provided by iND Co.,Ltd contain an insecure storage of sensitive information vulnerability. If exploited, configuration information, such as admin password, may be disclosed. As for the details of affected product names and versions, refer to the information under [Product Status]."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Insecure storage of sensitive information",
+                "lang": "en-US",
+                "cweId": "CWE-922",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.i-netd.co.jp/vulnerability/dceid-2025-001/"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN50585992/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.5,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-08-29T04:13:58.310Z"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-29T12:05:21.370891Z",
+                  "id": "CVE-2025-53507",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-29T12:05:32.544Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-53508",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-07-02T00:52:40.812Z",
+      "datePublished": "2025-08-29T04:14:39.074Z",
+      "dateUpdated": "2025-08-29T12:04:32.453Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL330-DLS (for module MC7700)",
+            "versions": [
+              {
+                "version": "firmware version 1.03 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL330-DLS (for module MC7330)",
+            "versions": [
+              {
+                "version": "firmware version 2.02t and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL320-DLS (for module MC7700)",
+            "versions": [
+              {
+                "version": "firmware version 1.03 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "HL320-DLS (for module MC7330)",
+            "versions": [
+              {
+                "version": "firmware version 2.02t and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "LM-100",
+            "versions": [
+              {
+                "version": "firmware version 1.02 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "LM-200 (for module AMP570)",
+            "versions": [
+              {
+                "version": "firmware version 1.02 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "LM-200 (for module EC25-J)",
+            "versions": [
+              {
+                "version": "firmware version 1.05e and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "L2X Assist",
+            "versions": [
+              {
+                "version": "firmware version 2.01 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "L2X Assist-RS-A",
+            "versions": [
+              {
+                "version": "firmware version 1.11 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "L2X Assist-RS-E",
+            "versions": [
+              {
+                "version": "firmware version 1.12 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "F2L Assist-SS-A",
+            "versions": [
+              {
+                "version": "firmware version 1.03 and earlier",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "iND Co.,Ltd",
+            "product": "F2L Assist-SS-E",
+            "versions": [
+              {
+                "version": "firmware version 1.01 and earlier",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple products provided by iND Co.,Ltd contain an OS command injection vulnerability. If exploited, an arbitrary OS command may be executed and sensitive information may be obtained. As for the details of affected product names and versions, refer to the information under [Product Status]."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Improper neutralization of special elements used in an OS command ('OS Command Injection')",
+                "lang": "en-US",
+                "cweId": "CWE-78",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.i-netd.co.jp/vulnerability/dceid-2025-001/"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN50585992/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.2,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.6,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-08-29T04:14:39.074Z"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-29T12:04:26.201302Z",
+                  "id": "CVE-2025-53508",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-29T12:04:32.453Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-8147",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-07-24T21:11:54.996Z",
+      "datePublished": "2025-08-29T04:25:28.386Z",
+      "dateUpdated": "2025-08-29T12:03:54.361Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-08-29T04:25:28.386Z"
+        },
+        "affected": [
+          {
+            "vendor": "aurelienlws",
+            "product": "LWSCache",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "2.8.5",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The LWSCache plugin for WordPress is vulnerable to unauthorized modification of data due to improper authorization on the lwscache_activatePlugin() function in all versions up to, and including, 2.8.5. This makes it possible for authenticated attackers, with Subscriber-level access and above, to activate arbitrary whitelisted LWS plugins."
+          }
+        ],
+        "title": "LWSCache <= 2.8.5 - Missing Authorization to Authenticated (Subscriber+) Limited Plugin Activation via lwscache_activatePlugin Function",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/01a6a5bf-636b-416c-86fa-43f639624e80?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/lwscache/tags/2.8.5/lwscache.php#L401"
+          },
+          {
+            "url": "https://wordpress.org/plugins/lwscache/#developers"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3352047/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-285 Improper Authorization",
+                "cweId": "CWE-285",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "wesley"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-28T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-29T12:03:48.434562Z",
+                  "id": "CVE-2025-8147",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-29T12:03:54.361Z"
+          }
+        }
+      ]
+    }
+  }
+]
