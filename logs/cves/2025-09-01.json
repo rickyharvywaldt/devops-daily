@@ -1,0 +1,744 @@
+[Mon Sep  1 02:03:46 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-41771",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2024-07-22T12:02:59.128Z",
+      "datePublished": "2025-03-03T15:29:14.503Z",
+      "dateUpdated": "2025-09-01T01:11:58.234Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.0.2:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.0.3:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.1:*:*:*:*:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "Engineering Requirements Management DOORS Next",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "7.0.2"
+              },
+              {
+                "status": "affected",
+                "version": "7.0.3"
+              },
+              {
+                "status": "affected",
+                "version": "7.1"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "IBM Engineering Requirements Management DOORS Next 7.0.2, 7.0.3, and 7.1 could allow a remote attacker to download temporary files which could expose application logic or other sensitive information."
+              }
+            ],
+            "value": "IBM Engineering Requirements Management DOORS Next 7.0.2, 7.0.3, and 7.1 could allow a remote attacker to download temporary files which could expose application logic or other sensitive information."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-522",
+                "description": "CWE-522 Insufficiently Protected Credentials",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-09-01T01:11:58.234Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7184663"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM Engineering Requirements Management DOORS Next information disclosure",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-03-04T19:00:56.359534Z",
+                  "id": "CVE-2024-41771",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-03-04T19:01:10.858Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-41770",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2024-07-22T12:02:59.128Z",
+      "datePublished": "2025-03-03T15:28:57.065Z",
+      "dateUpdated": "2025-09-01T01:11:25.136Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.0.2:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.0.3:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.1:*:*:*:*:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "Engineering Requirements Management DOORS Next",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "7.0.2"
+              },
+              {
+                "status": "affected",
+                "version": "7.0.3"
+              },
+              {
+                "status": "affected",
+                "version": "7.1"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "IBM Engineering Requirements Management DOORS Next 7.0.2, 7.0.3, and 7.1 could allow a remote attacker to download temporary files which could expose application logic or other sensitive information."
+              }
+            ],
+            "value": "IBM Engineering Requirements Management DOORS Next 7.0.2, 7.0.3, and 7.1 could allow a remote attacker to download temporary files which could expose application logic or other sensitive information."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-522",
+                "description": "CWE-522 Insufficiently Protected Credentials",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-09-01T01:11:25.136Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7184663"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM Engineering Requirements Management DOORS Next information disclosure",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-03-04T19:05:34.410184Z",
+                  "id": "CVE-2024-41770",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-03-04T19:05:46.401Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-43169",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2024-08-07T13:29:17.951Z",
+      "datePublished": "2025-03-03T15:27:29.620Z",
+      "dateUpdated": "2025-09-01T01:10:55.594Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.0.2:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.0.3:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:engineering_requirements_management_doors:7.1:*:*:*:*:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "Engineering Requirements Management DOORS Next",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "7.0.2"
+              },
+              {
+                "status": "affected",
+                "version": "7.0.3"
+              },
+              {
+                "status": "affected",
+                "version": "7.1"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "IBM Engineering Requirements Management DOORS Next 7.0.2, 7.0.3, and 7.1 could allow a user to download a malicious file without verifying the integrity of the code."
+              }
+            ],
+            "value": "IBM Engineering Requirements Management DOORS Next 7.0.2, 7.0.3, and 7.1 could allow a user to download a malicious file without verifying the integrity of the code."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-494",
+                "description": "CWE-494 Download of Code Without Integrity Check",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-09-01T01:10:55.594Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7184506"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM Engineering Requirements Management DOORS Next file download",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-03-06T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2024-43169"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-03-07T04:55:45.682Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-54179",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2024-11-30T14:47:55.533Z",
+      "datePublished": "2025-03-03T13:56:50.099Z",
+      "dateUpdated": "2025-09-01T01:10:19.247Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Business Automation Workflow",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "24.0.0"
+              },
+              {
+                "status": "affected",
+                "version": "24.0.1"
+              }
+            ]
+          },
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:business_automation_workflow:24.0.0:*:*:*:traditional:*:*:*",
+              "cpe:2.3:a:ibm:business_automation_workflow:24.0.1:*:*:*:traditional:*:*:*",
+              "cpe:2.3:a:ibm:business_automation_workflow:24.0.0:*:*:*:enterprise_service_bus:*:*:*",
+              "cpe:2.3:a:ibm:business_automation_workflow:24.0.1:*:*:*:enterprise_service_bus:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "Business Automation Workflow Enterprise Service Bus",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "24.0.0, 24.0.1"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "IBM Business Automation Workflow and IBM Business Automation Workflow Enterprise Service Bus 24.0.0, 24.0.1 and earlier unsupported versions are vulnerable to cross-site scripting. This vulnerability allows an authenticated user to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session."
+              }
+            ],
+            "value": "IBM Business Automation Workflow and IBM Business Automation Workflow Enterprise Service Bus 24.0.0, 24.0.1 and earlier unsupported versions are vulnerable to cross-site scripting. This vulnerability allows an authenticated user to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-09-01T01:10:19.247Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7184647"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM Business Automation Workflow cross-site scripting",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-03-03T14:21:46.003265Z",
+                  "id": "CVE-2024-54179",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-03-03T14:21:56.109Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-55907",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2024-12-12T18:07:25.450Z",
+      "datePublished": "2025-03-02T15:22:59.258Z",
+      "dateUpdated": "2025-09-01T01:09:49.562Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:cognos_analytics_mobile:1.1:*:*:*:*:ios:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "platforms": [
+              "iOS"
+            ],
+            "product": "Cognos Analytics Mobile",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.1"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "IBM Cognos Analytics Mobile 1.1 for iOS application could allow an attacker to reverse engineer the codebase to gain knowledge about the programming technique, interface, class definitions, algorithms and functions used due to weak obfuscation."
+              }
+            ],
+            "value": "IBM Cognos Analytics Mobile 1.1 for iOS application could allow an attacker to reverse engineer the codebase to gain knowledge about the programming technique, interface, class definitions, algorithms and functions used due to weak obfuscation."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "PHYSICAL",
+              "availabilityImpact": "NONE",
+              "baseScore": 2,
+              "baseSeverity": "LOW",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-540",
+                "description": "CWE-540 Inclusion of Sensitive Information in Source Code",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-09-01T01:09:49.562Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7184429"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM Cognos Mobile information disclosure",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-03-03T15:24:58.531148Z",
+                  "id": "CVE-2024-55907",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-03-03T15:25:14.134Z"
+          }
+        }
+      ]
+    }
+  }
+]
