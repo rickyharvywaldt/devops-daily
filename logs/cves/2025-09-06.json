@@ -1,0 +1,373 @@
+[Sat Sep  6 06:29:28 UTC 2025] Latest CVEs:
+[
+  {
+    "id": "CVE-2025-6757",
+    "sourceIdentifier": "security@wordfence.com",
+    "published": "2025-09-06T05:15:31.863",
+    "lastModified": "2025-09-06T05:15:31.863",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "The Recent Posts Widget Extended plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'rpwe' shortcode in all versions up to, and including, 2.0.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV31": [
+        {
+          "source": "security@wordfence.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "CHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 3.1,
+          "impactScore": 2.7
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "security@wordfence.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-79"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plugins.trac.wordpress.org/browser/recent-posts-widget-extended/tags/2.0.2/includes/functions.php#L24",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://plugins.trac.wordpress.org/browser/recent-posts-widget-extended/tags/2.0.2/includes/shortcode.php#L14",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://wordpress.org/plugins/recent-posts-widget-extended/#developers",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/3b70f48f-76a6-459c-8108-3ca008471534?source=cve",
+        "source": "security@wordfence.com"
+      }
+    ]
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-6757",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-06-26T23:10:18.317Z",
+      "datePublished": "2025-09-06T04:22:49.175Z",
+      "dateUpdated": "2025-09-06T04:22:49.175Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-09-06T04:22:49.175Z"
+        },
+        "affected": [
+          {
+            "vendor": "themejunkie",
+            "product": "Recent Posts Widget Extended",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "2.0.2",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Recent Posts Widget Extended plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'rpwe' shortcode in all versions up to, and including, 2.0.2 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "Recent Posts Widget Extended <= 2.0.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via rpwe Shortcode",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/3b70f48f-76a6-459c-8108-3ca008471534?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/recent-posts-widget-extended/tags/2.0.2/includes/shortcode.php#L14"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/recent-posts-widget-extended/tags/2.0.2/includes/functions.php#L24"
+          },
+          {
+            "url": "https://wordpress.org/plugins/recent-posts-widget-extended/#developers"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Muhammad Yudha - DJ"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-09-05T15:37:54.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "CVE-2025-9493",
+    "sourceIdentifier": "security@wordfence.com",
+    "published": "2025-09-06T04:16:08.990",
+    "lastModified": "2025-09-06T04:16:08.990",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "The Admin Menu Editor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘placeholder’ parameter in all versions up to, and including, 1.14 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV31": [
+        {
+          "source": "security@wordfence.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "CHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 3.1,
+          "impactScore": 2.7
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "security@wordfence.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-79"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plugins.trac.wordpress.org/browser/admin-menu-editor/tags/1.14/includes/shortcodes.php#L42",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3353790%40admin-menu-editor&old=3329611%40admin-menu-editor&sfp_email=&sfph_mail=#file857",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://wordpress.org/plugins/admin-menu-editor/",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/69b9d4e1-895b-4199-bc4e-489afd9d36eb?source=cve",
+        "source": "security@wordfence.com"
+      }
+    ]
+  },
+  {
+    "id": "CVE-2025-9442",
+    "sourceIdentifier": "security@wordfence.com",
+    "published": "2025-09-06T04:16:07.793",
+    "lastModified": "2025-09-06T04:16:07.793",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "The StreamWeasels Kick Integration plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘vodsChannel’ parameter in all versions up to, and including, 1.1.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV31": [
+        {
+          "source": "security@wordfence.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "CHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 3.1,
+          "impactScore": 2.7
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "security@wordfence.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-79"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://plugins.trac.wordpress.org/browser/streamweasels-kick-integration/trunk/public/partials/streamweasels-kick-vods-public-display.php#L44",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://plugins.trac.wordpress.org/changeset/3355340#file4",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://wordpress.org/plugins/streamweasels-kick-integration/#developers",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4a433565-0896-4ba9-a718-9507c6c4ba58?source=cve",
+        "source": "security@wordfence.com"
+      }
+    ]
+  },
+  {
+    "id": "CVE-2025-9126",
+    "sourceIdentifier": "security@wordfence.com",
+    "published": "2025-09-06T04:16:07.570",
+    "lastModified": "2025-09-06T04:16:07.570",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "The Smart Table Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘id’ parameter in all versions up to, and including, 1.0.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV31": [
+        {
+          "source": "security@wordfence.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+            "baseScore": 6.4,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "CHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 3.1,
+          "impactScore": 2.7
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "security@wordfence.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-79"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://github.com/DesignMike/smart-table-builder/commit/c9ca2adbb39fe4543e1eb56fc90cf1aeab558971",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://plugins.trac.wordpress.org/browser/smart-table-builder/trunk/includes/Frontend.php#L28",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://plugins.trac.wordpress.org/changeset/3351768/smart-table-builder/trunk/includes/Frontend.php",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://wordpress.org/plugins/smart-table-builder/#developers",
+        "source": "security@wordfence.com"
+      },
+      {
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/44e68e0c-1b21-411b-9ff7-6b6affc5988e?source=cve",
+        "source": "security@wordfence.com"
+      }
+    ]
+  }
+]
