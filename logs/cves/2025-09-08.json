@@ -560,3 +560,565 @@
     }
   }
 ]
+[Mon Sep  8 18:33:04 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-q92v-3f4w-5xg8",
+    "modified": "2025-09-08T18:24:51Z",
+    "published": "2025-07-09T18:30:47Z",
+    "aliases": [
+      "CVE-2025-53742"
+    ],
+    "summary": "Jenkins Applitools Eyes Plugin vulnerability exposes unencrypted keys to certain authenticated users",
+    "details": "Jenkins Applitools Eyes Plugin 1.16.5 and earlier stores Applitools API keys unencrypted in job config.xml files on the Jenkins controller, where they can be viewed by users with Item/Extended Read permission or access to the Jenkins controller file system.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "org.jenkins-ci.plugins:applitools-eyes"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "1.16.5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53742"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/jenkinsci/applitools-eyes-plugin"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.jenkins.io/security/advisory/2025-07-09/#SECURITY-3510"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-312"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2025-07-09T22:37:55Z",
+      "nvd_published_at": "2025-07-09T16:15:27Z"
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9114",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-08-18T09:06:53.080Z",
+      "datePublished": "2025-09-08T18:23:48.130Z",
+      "dateUpdated": "2025-09-08T18:23:48.130Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-09-08T18:23:48.130Z"
+        },
+        "affected": [
+          {
+            "vendor": "dreamstechnologies",
+            "product": "Doccure",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.4.8",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Doccure theme for WordPress is vulnerable to Arbitrary User Password Change in versions up to, and including, 1.4.8. This is due to the plugin providing user-controlled access to objects, letting a user bypass authorization and access system resources. This makes it possible for unauthenticated attackers to change user passwords and potentially take over administrator accounts."
+          }
+        ],
+        "title": "Doccure <= 1.4.8 - Unauthenticated Arbitrary User Password Change",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/8f8b1d8f-b2b6-415c-91f2-e5b98048258d?source=cve"
+          },
+          {
+            "url": "https://themeforest.net/item/doccure-medical-wordpress-theme/34329202"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-639 Authorization Bypass Through User-Controlled Key",
+                "cweId": "CWE-639",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "István Márton"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-18T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Discovered"
+          },
+          {
+            "time": "2025-09-08T05:36:20.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9113",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-08-18T09:04:28.460Z",
+      "datePublished": "2025-09-08T18:23:47.771Z",
+      "dateUpdated": "2025-09-08T18:23:47.771Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-09-08T18:23:47.771Z"
+        },
+        "affected": [
+          {
+            "vendor": "dreamstechnologies",
+            "product": "Doccure",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.4.8",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Doccure theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'doccure_temp_upload_to_media' function in all versions up to, and including, 1.4.8. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          }
+        ],
+        "title": "Doccure <= 1.4.8 - Unauthenticated Arbitrary File Upload",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6ff01c24-fa35-43bc-be60-f2bb37854681?source=cve"
+          },
+          {
+            "url": "https://themeforest.net/item/doccure-medical-wordpress-theme/34329202"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-434 Unrestricted Upload of File with Dangerous Type",
+                "cweId": "CWE-434",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "István Márton"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-18T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Discovered"
+          },
+          {
+            "time": "2025-09-08T05:35:51.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9112",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-08-18T09:01:52.205Z",
+      "datePublished": "2025-09-08T18:23:47.218Z",
+      "dateUpdated": "2025-09-08T18:23:47.218Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-09-08T18:23:47.218Z"
+        },
+        "affected": [
+          {
+            "vendor": "dreamstechnologies",
+            "product": "Doccure",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.4.8",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Doccure theme for WordPress is vulnerable to arbitrary file uploads due to incorrect file type validation in the 'doccure_temp_file_uploader' function in all versions up to, and including, 1.4.8. This makes it possible for authenticated attackers, with subscriber-level and above permissions, to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          }
+        ],
+        "title": "Doccure <= 1.4.8 - Authenticated (Subscriber+) Arbitrary File Upload",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2f38498d-0560-4935-b1f5-1fdb62f49a5b?source=cve"
+          },
+          {
+            "url": "https://themeforest.net/item/doccure-medical-wordpress-theme/34329202"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-434 Unrestricted Upload of File with Dangerous Type",
+                "cweId": "CWE-434",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "István Márton"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-08-18T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Discovered"
+          },
+          {
+            "time": "2025-09-08T05:35:13.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-30200",
+      "assignerOrgId": "9119a7d8-5eab-497f-8521-727c672e3725",
+      "state": "PUBLISHED",
+      "assignerShortName": "cisa-cg",
+      "dateReserved": "2025-03-18T15:53:26.926Z",
+      "datePublished": "2025-09-05T17:43:20.802Z",
+      "dateUpdated": "2025-09-08T18:22:21.457Z"
+    },
+    "containers": {
+      "cna": {
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ECOVACS robot vacuums and base stations communicate via an insecure Wi-Fi network with a deterministic AES encryption key, which can be easily derived."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ECOVACS",
+            "product": "DEEBOT X1 Series",
+            "defaultStatus": "unknown",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "ECOVACS",
+            "product": "DEEBOT T20 Series",
+            "defaultStatus": "unknown",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "ECOVACS",
+            "product": "DEEBOT T10 Series",
+            "defaultStatus": "unknown",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "ECOVACS",
+            "product": "DEEBOT T30 Series",
+            "defaultStatus": "unknown",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-321 Use of Hard-coded Cryptographic Key",
+                "lang": "en",
+                "type": "CWE",
+                "cweId": "CWE-321"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "description": "CWE-798 Use of Hard-coded Credentials",
+                "lang": "en",
+                "type": "CWE",
+                "cweId": "CWE-798"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "scope": "UNCHANGED",
+              "version": "3.1",
+              "baseScore": 6.3,
+              "attackVector": "ADJACENT_NETWORK",
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "integrityImpact": "LOW",
+              "userInteraction": "NONE",
+              "attackComplexity": "LOW",
+              "availabilityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "confidentialityImpact": "LOW"
+            }
+          },
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 2.3,
+              "attackVector": "ADJACENT",
+              "baseSeverity": "LOW",
+              "vectorString": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+              "userInteraction": "NONE",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "subAvailabilityImpact": "NONE",
+              "vulnAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "NONE",
+              "vulnConfidentialityImpact": "LOW"
+            }
+          },
+          {
+            "other": {
+              "type": "ssvc",
+              "content": {
+                "timestamp": "2025-09-08T18:11:07.109909Z",
+                "id": "CVE-2025-30200",
+                "options": [
+                  {
+                    "Exploitation": "none"
+                  },
+                  {
+                    "Automatable": "no"
+                  },
+                  {
+                    "Technical Impact": "partial"
+                  }
+                ],
+                "role": "CISA Coordinator",
+                "version": "2.0.3"
+              }
+            }
+          }
+        ],
+        "title": "ECOVACS Vacuum and Base Station Hard-Coded AES Encryption",
+        "references": [
+          {
+            "name": "url",
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-135-19"
+          },
+          {
+            "name": "url",
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-135-19.json"
+          },
+          {
+            "name": "url",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-30200"
+          }
+        ],
+        "credits": [
+          {
+            "value": "Dennis Giese, undefined",
+            "lang": "en"
+          },
+          {
+            "value": "Braelynn Luedtke, undefined",
+            "lang": "en"
+          },
+          {
+            "value": "Chris Anderson, undefined",
+            "lang": "en"
+          }
+        ],
+        "datePublic": "2025-07-09T00:00:00.000Z",
+        "providerMetadata": {
+          "orgId": "9119a7d8-5eab-497f-8521-727c672e3725",
+          "shortName": "cisa-cg",
+          "dateUpdated": "2025-09-08T18:11:26.081Z"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-09-08T18:22:11.344266Z",
+                  "id": "CVE-2025-30200",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-09-08T18:22:21.457Z"
+          }
+        }
+      ]
+    }
+  }
+]
