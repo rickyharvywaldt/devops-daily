@@ -1,0 +1,3532 @@
+[Wed Oct  1 01:56:13 UTC 2025] Latest CVEs:
+[
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Red Hat Developer Hub 1.6.2 has been released.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Red Hat Developer Hub (RHDH) is Red Hat's enterprise-grade, self-managed, customizable developer portal based on Backstage.io. RHDH is supported on OpenShift and other major Kubernetes clusters (AKS, EKS, GKE). The core features of RHDH include a single pane of glass, a centralized software catalog, self-service via golden path templates, and Tech Docs. RHDH is extensible by plugins.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:9966",
+          "url": "https://access.redhat.com/errata/RHSA-2025:9966"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-32996",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-32996"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-32997",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-32997"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-47273",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-47273"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-48387",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-48387"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://catalog.redhat.com/search?gs&searchType=containers&q=rhdh",
+          "url": "https://catalog.redhat.com/search?gs&searchType=containers&q=rhdh"
+        },
+        {
+          "category": "external",
+          "summary": "https://developers.redhat.com/rhdh/overview",
+          "url": "https://developers.redhat.com/rhdh/overview"
+        },
+        {
+          "category": "external",
+          "summary": "https://docs.redhat.com/en/documentation/red_hat_developer_hub",
+          "url": "https://docs.redhat.com/en/documentation/red_hat_developer_hub"
+        },
+        {
+          "category": "external",
+          "summary": "https://issues.redhat.com/browse/RHIDP-7725",
+          "url": "https://issues.redhat.com/browse/RHIDP-7725"
+        },
+        {
+          "category": "external",
+          "summary": "https://issues.redhat.com/browse/RHIDP-7726",
+          "url": "https://issues.redhat.com/browse/RHIDP-7726"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_9966.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Developer Hub 1.6.2 release.",
+      "tracking": {
+        "current_release_date": "2025-10-01T01:04:01+00:00",
+        "generator": {
+          "date": "2025-10-01T01:04:01+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.6.8"
+          }
+        },
+        "id": "RHSA-2025:9966",
+        "initial_release_date": "2025-06-30T14:17:56+00:00",
+        "revision_history": [
+          {
+            "date": "2025-06-30T14:17:56+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-06-30T14:18:06+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2025-10-01T01:04:01+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Developer Hub 1.6",
+                  "product": {
+                    "name": "Red Hat Developer Hub 1.6",
+                    "product_id": "Red Hat Developer Hub 1.6",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhdh:1.6::el9"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Developer Hub"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+                    "product_id": "registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/rhdh-hub-rhel9@sha256%3A79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262?arch=amd64&repository_url=registry.redhat.io/rhdh&tag=1.6.2-1750887220"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64",
+                    "product_id": "registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/rhdh-rhel9-operator@sha256%3Afc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb?arch=amd64&repository_url=registry.redhat.io/rhdh&tag=1.6.2-1750886883"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+                    "product_id": "registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/rhdh-operator-bundle@sha256%3Ac99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9?arch=amd64&repository_url=registry.redhat.io/rhdh&tag=1.6.2-1750938107"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "amd64"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64 as a component of Red Hat Developer Hub 1.6",
+            "product_id": "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+          },
+          "product_reference": "registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+          "relates_to_product_reference": "Red Hat Developer Hub 1.6"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64 as a component of Red Hat Developer Hub 1.6",
+            "product_id": "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64"
+          },
+          "product_reference": "registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+          "relates_to_product_reference": "Red Hat Developer Hub 1.6"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64 as a component of Red Hat Developer Hub 1.6",
+            "product_id": "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+          },
+          "product_reference": "registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64",
+          "relates_to_product_reference": "Red Hat Developer Hub 1.6"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-32996",
+        "cwe": {
+          "id": "CWE-670",
+          "name": "Always-Incorrect Control Flow Implementation"
+        },
+        "discovery_date": "2025-04-15T03:00:44.384011+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2359627"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "In http-proxy-middleware before 2.0.8 and 3.x before 3.0.4, writeBody can be called twice because \"else if\" is not used.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "http-proxy-middleware: Always-Incorrect Control Flow Implementation in http-proxy-middleware",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-32996"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2359627",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2359627"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-32996",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-32996"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-32996",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32996"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/commit/020976044d113fc0bcbbaf995e91d05e2829a145",
+            "url": "https://github.com/chimurai/http-proxy-middleware/commit/020976044d113fc0bcbbaf995e91d05e2829a145"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/pull/1089",
+            "url": "https://github.com/chimurai/http-proxy-middleware/pull/1089"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v2.0.8",
+            "url": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v2.0.8"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v3.0.4",
+            "url": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v3.0.4"
+          }
+        ],
+        "release_date": "2025-04-15T00:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T14:17:56+00:00",
+            "details": "For more about Red Hat Developer Hub, see References links",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9966"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 4.0,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:L",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "http-proxy-middleware: Always-Incorrect Control Flow Implementation in http-proxy-middleware"
+      },
+      {
+        "cve": "CVE-2025-32997",
+        "cwe": {
+          "id": "CWE-754",
+          "name": "Improper Check for Unusual or Exceptional Conditions"
+        },
+        "discovery_date": "2025-04-15T03:00:47.160071+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2359628"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in http-proxy-middleware. The issue occurs because the fixRequestBody function proceeds even when bodyParser has failed, which could lead to unintended behavior.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "http-proxy-middleware: Improper Check for Unusual or Exceptional Conditions in http-proxy-middleware",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-32997"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2359628",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2359628"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-32997",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-32997"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-32997",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-32997"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/commit/1bdccbeec243850f1d2bb50ea0ff2151e725d67e",
+            "url": "https://github.com/chimurai/http-proxy-middleware/commit/1bdccbeec243850f1d2bb50ea0ff2151e725d67e"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/pull/1096",
+            "url": "https://github.com/chimurai/http-proxy-middleware/pull/1096"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v2.0.9",
+            "url": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v2.0.9"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v3.0.5",
+            "url": "https://github.com/chimurai/http-proxy-middleware/releases/tag/v3.0.5"
+          }
+        ],
+        "release_date": "2025-04-15T00:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T14:17:56+00:00",
+            "details": "For more about Red Hat Developer Hub, see References links",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9966"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.0,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "http-proxy-middleware: Improper Check for Unusual or Exceptional Conditions in http-proxy-middleware"
+      },
+      {
+        "cve": "CVE-2025-47273",
+        "cwe": {
+          "id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        },
+        "discovery_date": "2025-05-17T16:00:41.145177+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2366982"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A path traversal vulnerability in the Python setuptools library allows attackers with limited system access to write files outside the intended temporary directory by manipulating package download URLs. This flaw bypasses basic filename sanitization and can lead to unauthorized overwrites of important system files, creating opportunities for further compromise. While it doesn't expose data or require user interaction, it poses a high integrity risk and is especially concerning in environments that rely on automated package handling or internal tooling built on setuptools.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "setuptools: Path Traversal Vulnerability in setuptools PackageIndex",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Red Hat Product Security has rated this vulnerability \"Moderate\" based on the impact of the damage caused by a successful exploitation and the pre-requisites.\n\n* Exploitation requires that the attacker have limited code execution access to a Python environment where they can trigger the vulnerable PackageIndex.download() function—this might be via a script, plugin, or automated job. Full admin rights aren't needed but a user with no access at all will be unable to exploit this vulnerability.\n* The vulnerability impacts the integrity of the system within the same security boundary—it does not enable access or compromise across trust boundaries (e.g., from one container to another or from user space to kernel).\n* Successful exploitation only allows the attacker to \"create\" new files. The vulnerability does not provide access to existing files and by an extension to any confidential information. \n* Arbitrary file writes can overwrite critical config files, executables, or scripts. This can lead to persistent code execution, system misconfiguration, or unauthorized behavior, especially in automated environments. While overwriting critical files could theoretically lead to service disruption, the vulnerability in isolation does not inherently cause denial of service. The exploit doesn't target availability directly, and in many cases, systems may continue running.\n\nWithin regulated environments, a combination of the following controls acts as a significant barrier to the successful exploitation of a CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability and therefore downgrades the severity of this particular CVE from Moderate to Low.\n\nInput validation enforces strict path constraints, rejecting directory traversal attempts or unauthorized file access. Runtime environments restrict code execution to predefined privilege levels, preventing escalation from traversal exploits. Configuration settings limit accessible directories and enforce execution boundaries to reduce the influence of user input on file system behavior. Application components are developed and validated against secure coding standards that explicitly prevent path manipulation, further minimizing exploitation risk.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-47273"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2366982",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366982"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-47273",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-47273"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-47273",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47273"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/blob/6ead555c5fb29bc57fe6105b1bffc163f56fd558/setuptools/package_index.py#L810C1-L825C88",
+            "url": "https://github.com/pypa/setuptools/blob/6ead555c5fb29bc57fe6105b1bffc163f56fd558/setuptools/package_index.py#L810C1-L825C88"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/commit/250a6d17978f9f6ac3ac887091f2d32886fbbb0b",
+            "url": "https://github.com/pypa/setuptools/commit/250a6d17978f9f6ac3ac887091f2d32886fbbb0b"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/issues/4946",
+            "url": "https://github.com/pypa/setuptools/issues/4946"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/security/advisories/GHSA-5rjg-fvgr-3xxf",
+            "url": "https://github.com/pypa/setuptools/security/advisories/GHSA-5rjg-fvgr-3xxf"
+          }
+        ],
+        "release_date": "2025-05-17T15:46:11.399000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T14:17:56+00:00",
+            "details": "For more about Red Hat Developer Hub, see References links",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9966"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "setuptools: Path Traversal Vulnerability in setuptools PackageIndex"
+      },
+      {
+        "cve": "CVE-2025-48387",
+        "cwe": {
+          "id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        },
+        "discovery_date": "2025-06-02T20:00:45.526571+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2369875"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in tar-fs. This vulnerability allows files to be written outside the intended extraction directory via specially crafted tar archives. The issue arises from insufficient path validation during tarball extraction, potentially enabling path traversal attacks that can overwrite arbitrary files on the system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "tar-fs: tar-fs has issue where extract can write outside the specified dir with a specific tarball",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability in tar-fs is Important not a moderate flaw, primarily due to its ability to bypass directory confinement during tarball extraction. The core issue—path traversal via crafted archive entries—allows attackers to write files outside the intended extraction directory, potentially overwriting system files, configuration files, or injecting malicious scripts into sensitive locations. Unlike moderate flaws that may require specific conditions or user interaction to exploit, this vulnerability can be triggered automatically in server-side environments that extract user-supplied tar files (e.g., CI/CD systems, deployment tools, or file upload handlers). Its exploitation could lead to remote code execution, privilege escalation, or denial of service, depending on the context.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+            "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-48387"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2369875",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2369875"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-48387",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-48387"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-48387",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48387"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/mafintosh/tar-fs/commit/647447b572bc135c41035e82ca7b894f02b17f0f",
+            "url": "https://github.com/mafintosh/tar-fs/commit/647447b572bc135c41035e82ca7b894f02b17f0f"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/mafintosh/tar-fs/security/advisories/GHSA-8cj5-5rvv-wf4v",
+            "url": "https://github.com/mafintosh/tar-fs/security/advisories/GHSA-8cj5-5rvv-wf4v"
+          }
+        ],
+        "release_date": "2025-06-02T19:20:18.220000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T14:17:56+00:00",
+            "details": "For more about Red Hat Developer Hub, see References links",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9966"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation is either unavailable or does not meet Red Hat Product Security standards for usability, deployment, applicability, or stability.",
+            "product_ids": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-hub-rhel9@sha256:79618b38d6f02457954b227d538e238fdebbb72a220af5bd6be3cfab3ad0f262_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-operator-bundle@sha256:c99f378315b703b586196ea3978e3858e2c73d4b16d761700efafc9a82e618d9_amd64",
+              "Red Hat Developer Hub 1.6:registry.redhat.io/rhdh/rhdh-rhel9-operator@sha256:fc721db8c90951b6a2255fd893ec0094b47a2c736ce66b41c96d7a4fdae43feb_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "tar-fs: tar-fs has issue where extract can write outside the specified dir with a specific tarball"
+      }
+    ]
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Moderate"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for python-setuptools is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Python is an interpreted, interactive, object-oriented programming language, which includes modules, classes, exceptions, very high level dynamic data types and dynamic typing. Python supports interfaces to many system calls and libraries, as well as to various windowing systems.\n\nSecurity Fix(es):\n\n* setuptools: Path Traversal Vulnerability in setuptools PackageIndex (CVE-2025-47273)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:9940",
+          "url": "https://access.redhat.com/errata/RHSA-2025:9940"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#moderate",
+          "url": "https://access.redhat.com/security/updates/classification/#moderate"
+        },
+        {
+          "category": "external",
+          "summary": "2366982",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366982"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_9940.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: python-setuptools security update",
+      "tracking": {
+        "current_release_date": "2025-10-01T01:04:01+00:00",
+        "generator": {
+          "date": "2025-10-01T01:04:01+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.6.8"
+          }
+        },
+        "id": "RHSA-2025:9940",
+        "initial_release_date": "2025-07-01T13:14:08+00:00",
+        "revision_history": [
+          {
+            "date": "2025-07-01T13:14:08+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-07-01T13:14:08+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2025-10-01T01:04:01+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux BaseOS (v. 10)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux BaseOS (v. 10)",
+                    "product_id": "BaseOS-10.0.Z",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/o:redhat:enterprise_linux:10.0"
+                    }
+                  }
+                },
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux CodeReady Linux Builder (v. 10)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux CodeReady Linux Builder (v. 10)",
+                    "product_id": "CRB-10.0.Z",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/o:redhat:enterprise_linux:10.0"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "python-setuptools-0:69.0.3-12.el10_0.src",
+                  "product": {
+                    "name": "python-setuptools-0:69.0.3-12.el10_0.src",
+                    "product_id": "python-setuptools-0:69.0.3-12.el10_0.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/python-setuptools@69.0.3-12.el10_0?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "python3-setuptools-0:69.0.3-12.el10_0.noarch",
+                  "product": {
+                    "name": "python3-setuptools-0:69.0.3-12.el10_0.noarch",
+                    "product_id": "python3-setuptools-0:69.0.3-12.el10_0.noarch",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/python3-setuptools@69.0.3-12.el10_0?arch=noarch"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+                  "product": {
+                    "name": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+                    "product_id": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/python3-setuptools-wheel@69.0.3-12.el10_0?arch=noarch"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "noarch"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "python-setuptools-0:69.0.3-12.el10_0.src as a component of Red Hat Enterprise Linux BaseOS (v. 10)",
+            "product_id": "BaseOS-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src"
+          },
+          "product_reference": "python-setuptools-0:69.0.3-12.el10_0.src",
+          "relates_to_product_reference": "BaseOS-10.0.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "python3-setuptools-0:69.0.3-12.el10_0.noarch as a component of Red Hat Enterprise Linux BaseOS (v. 10)",
+            "product_id": "BaseOS-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch"
+          },
+          "product_reference": "python3-setuptools-0:69.0.3-12.el10_0.noarch",
+          "relates_to_product_reference": "BaseOS-10.0.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch as a component of Red Hat Enterprise Linux BaseOS (v. 10)",
+            "product_id": "BaseOS-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch"
+          },
+          "product_reference": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+          "relates_to_product_reference": "BaseOS-10.0.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "python-setuptools-0:69.0.3-12.el10_0.src as a component of Red Hat Enterprise Linux CodeReady Linux Builder (v. 10)",
+            "product_id": "CRB-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src"
+          },
+          "product_reference": "python-setuptools-0:69.0.3-12.el10_0.src",
+          "relates_to_product_reference": "CRB-10.0.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "python3-setuptools-0:69.0.3-12.el10_0.noarch as a component of Red Hat Enterprise Linux CodeReady Linux Builder (v. 10)",
+            "product_id": "CRB-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch"
+          },
+          "product_reference": "python3-setuptools-0:69.0.3-12.el10_0.noarch",
+          "relates_to_product_reference": "CRB-10.0.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch as a component of Red Hat Enterprise Linux CodeReady Linux Builder (v. 10)",
+            "product_id": "CRB-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch"
+          },
+          "product_reference": "python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+          "relates_to_product_reference": "CRB-10.0.Z"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-47273",
+        "cwe": {
+          "id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        },
+        "discovery_date": "2025-05-17T16:00:41.145177+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2366982"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A path traversal vulnerability in the Python setuptools library allows attackers with limited system access to write files outside the intended temporary directory by manipulating package download URLs. This flaw bypasses basic filename sanitization and can lead to unauthorized overwrites of important system files, creating opportunities for further compromise. While it doesn't expose data or require user interaction, it poses a high integrity risk and is especially concerning in environments that rely on automated package handling or internal tooling built on setuptools.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "setuptools: Path Traversal Vulnerability in setuptools PackageIndex",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Red Hat Product Security has rated this vulnerability \"Moderate\" based on the impact of the damage caused by a successful exploitation and the pre-requisites.\n\n* Exploitation requires that the attacker have limited code execution access to a Python environment where they can trigger the vulnerable PackageIndex.download() function—this might be via a script, plugin, or automated job. Full admin rights aren't needed but a user with no access at all will be unable to exploit this vulnerability.\n* The vulnerability impacts the integrity of the system within the same security boundary—it does not enable access or compromise across trust boundaries (e.g., from one container to another or from user space to kernel).\n* Successful exploitation only allows the attacker to \"create\" new files. The vulnerability does not provide access to existing files and by an extension to any confidential information. \n* Arbitrary file writes can overwrite critical config files, executables, or scripts. This can lead to persistent code execution, system misconfiguration, or unauthorized behavior, especially in automated environments. While overwriting critical files could theoretically lead to service disruption, the vulnerability in isolation does not inherently cause denial of service. The exploit doesn't target availability directly, and in many cases, systems may continue running.\n\nWithin regulated environments, a combination of the following controls acts as a significant barrier to the successful exploitation of a CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability and therefore downgrades the severity of this particular CVE from Moderate to Low.\n\nInput validation enforces strict path constraints, rejecting directory traversal attempts or unauthorized file access. Runtime environments restrict code execution to predefined privilege levels, preventing escalation from traversal exploits. Configuration settings limit accessible directories and enforce execution boundaries to reduce the influence of user input on file system behavior. Application components are developed and validated against secure coding standards that explicitly prevent path manipulation, further minimizing exploitation risk.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "BaseOS-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+            "BaseOS-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+            "BaseOS-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+            "CRB-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+            "CRB-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+            "CRB-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-47273"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2366982",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2366982"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-47273",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-47273"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-47273",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47273"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/blob/6ead555c5fb29bc57fe6105b1bffc163f56fd558/setuptools/package_index.py#L810C1-L825C88",
+            "url": "https://github.com/pypa/setuptools/blob/6ead555c5fb29bc57fe6105b1bffc163f56fd558/setuptools/package_index.py#L810C1-L825C88"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/commit/250a6d17978f9f6ac3ac887091f2d32886fbbb0b",
+            "url": "https://github.com/pypa/setuptools/commit/250a6d17978f9f6ac3ac887091f2d32886fbbb0b"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/issues/4946",
+            "url": "https://github.com/pypa/setuptools/issues/4946"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pypa/setuptools/security/advisories/GHSA-5rjg-fvgr-3xxf",
+            "url": "https://github.com/pypa/setuptools/security/advisories/GHSA-5rjg-fvgr-3xxf"
+          }
+        ],
+        "release_date": "2025-05-17T15:46:11.399000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-07-01T13:14:08+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "BaseOS-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+              "BaseOS-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+              "BaseOS-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+              "CRB-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+              "CRB-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+              "CRB-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9940"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "BaseOS-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+              "BaseOS-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+              "BaseOS-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+              "CRB-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+              "CRB-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+              "CRB-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+              "version": "3.1"
+            },
+            "products": [
+              "BaseOS-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+              "BaseOS-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+              "BaseOS-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch",
+              "CRB-10.0.Z:python-setuptools-0:69.0.3-12.el10_0.src",
+              "CRB-10.0.Z:python3-setuptools-0:69.0.3-12.el10_0.noarch",
+              "CRB-10.0.Z:python3-setuptools-wheel-0:69.0.3-12.el10_0.noarch"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "setuptools: Path Traversal Vulnerability in setuptools PackageIndex"
+      }
+    ]
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Streams for Apache Kafka 2.9.1 is now available from the Red Hat Customer Portal.\n\nRed Hat Product Security has rated this update as having a security impact of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Red Hat Streams for Apache Kafka, based on the Apache Kafka project, offers a distributed\nbackbone that allows microservices and other applications to share data with\nextremely high throughput and extremely low latency.\n\nThis release of Red Hat Streams for Apache Kafka 2.9.1serves as a replacement for Red Hat Streams for Apache Kafka 2.9.0, and includes security and bug fixes, and enhancements.\n\nSecurity Fix(es):\n* Cruise Control: json-smart: Uncontrolled Resource Consumption vulnerability in json-smart (Resource Exhaustion) Security [amq-st-2] \"(CVE-2023-1370)\"\n* Cruise Control, Bridge, Kafka: o.netty:netty-handler: SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine Security[amq-st-2] \"(CVE-2025-24970)\"\n* Cruise Control, Bridge, Kafka: netty: Denial of Service attack on windows app using Netty Security [amq-st-2] \"(CVE-2025-25193)\"\n* Cruise Control: kafka: Apache Kafka: SCRAM authentication vulnerable to replay attacks when used without encryption Security [amq-st-2] \"(CVE-2024-56128)\"\n* Cruise Control, Operator: Jetty: Gzip Request Body Buffer Corruption Security[amq-st-2]\"(CVE-2024-13009)\"\n* Cruise Control: kafka-clients: privilege escalation to filesystem read-access via automatic ConfigProvider Security [amq-st-2] \"(CVE-2024-31141)\"\n* Cruise Control, Oerator, Kafka: org.eclipse.jetty:jetty-http: jetty: Jetty URI parsing of invalid authority Security [amq-st-2] \"(CVE-2024-6763)\"\n* Zookeeper: netty: Denial of Service attack on windows app using Netty \n  Security [amq-st-2] \"(CVE-2024-47535)\"\n* Zookeeper, Kafka:  commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default Security [amq-st-2] \"(CVE-2025-48734)\"\n* Bridge: org.apache.kafka: Kafka Client Arbitrary File Read SSRF Security [amq-st-2]\"(CVE-2025-27817)\"\n* Bridge, Drain Cleaner: io.quarkus:quarkus-resteasy: Memory Leak in Quarkus RESTEasy Classic When Client Requests Timeout Security \"(CVE-2025-1634)\"",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:9922",
+          "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2188542",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2188542"
+        },
+        {
+          "category": "external",
+          "summary": "2318563",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2318563"
+        },
+        {
+          "category": "external",
+          "summary": "2325538",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325538"
+        },
+        {
+          "category": "external",
+          "summary": "2327264",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2327264"
+        },
+        {
+          "category": "external",
+          "summary": "2333013",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2333013"
+        },
+        {
+          "category": "external",
+          "summary": "2344787",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2344787"
+        },
+        {
+          "category": "external",
+          "summary": "2344788",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2344788"
+        },
+        {
+          "category": "external",
+          "summary": "2347319",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2347319"
+        },
+        {
+          "category": "external",
+          "summary": "2365135",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2365135"
+        },
+        {
+          "category": "external",
+          "summary": "2368956",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368956"
+        },
+        {
+          "category": "external",
+          "summary": "2371367",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2371367"
+        },
+        {
+          "category": "external",
+          "summary": "ENTMQST-6736",
+          "url": "https://issues.redhat.com/browse/ENTMQST-6736"
+        },
+        {
+          "category": "external",
+          "summary": "ENTMQST-6737",
+          "url": "https://issues.redhat.com/browse/ENTMQST-6737"
+        },
+        {
+          "category": "external",
+          "summary": "ENTMQST-6738",
+          "url": "https://issues.redhat.com/browse/ENTMQST-6738"
+        },
+        {
+          "category": "external",
+          "summary": "ENTMQST-6739",
+          "url": "https://issues.redhat.com/browse/ENTMQST-6739"
+        },
+        {
+          "category": "external",
+          "summary": "ENTMQST-6740",
+          "url": "https://issues.redhat.com/browse/ENTMQST-6740"
+        },
+        {
+          "category": "external",
+          "summary": "ENTMQST-6741",
+          "url": "https://issues.redhat.com/browse/ENTMQST-6741"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_9922.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Streams for Apache Kafka 2.9.1 release and security update",
+      "tracking": {
+        "current_release_date": "2025-10-01T01:04:00+00:00",
+        "generator": {
+          "date": "2025-10-01T01:04:00+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.6.8"
+          }
+        },
+        "id": "RHSA-2025:9922",
+        "initial_release_date": "2025-06-30T13:16:39+00:00",
+        "revision_history": [
+          {
+            "date": "2025-06-30T13:16:39+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-06-30T13:16:39+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2025-10-01T01:04:00+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Streams for Apache Kafka 2.9.1",
+                  "product": {
+                    "name": "Streams for Apache Kafka 2.9.1",
+                    "product_id": "Streams for Apache Kafka 2.9.1",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:amq_streams:2.9::el9"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Streams for Apache Kafka"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2023-1370",
+        "cwe": {
+          "id": "CWE-674",
+          "name": "Uncontrolled Recursion"
+        },
+        "discovery_date": "2023-04-21T00:00:00+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2188542"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the json-smart package. This security flaw occurs when reaching a ‘[‘ or ‘{‘ character in the JSON input, and the code parses an array or an object, respectively. The 3PP does not have any limit to the nesting of such arrays or objects. Since nested arrays and objects are parsed recursively, nesting too many of them can cause stack exhaustion (stack overflow) and crash the software.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "json-smart: Uncontrolled Resource Consumption vulnerability in json-smart (Resource Exhaustion)",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2023-1370"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2188542",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2188542"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2023-1370",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2023-1370"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2023-1370",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-1370"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/advisories/GHSA-493p-pfq6-5258",
+            "url": "https://github.com/advisories/GHSA-493p-pfq6-5258"
+          },
+          {
+            "category": "external",
+            "summary": "https://research.jfrog.com/vulnerabilities/stack-exhaustion-in-json-smart-leads-to-denial-of-service-when-parsing-malformed-json-xray-427633/",
+            "url": "https://research.jfrog.com/vulnerabilities/stack-exhaustion-in-json-smart-leads-to-denial-of-service-when-parsing-malformed-json-xray-427633/"
+          }
+        ],
+        "release_date": "2023-03-22T00:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "json-smart: Uncontrolled Resource Consumption vulnerability in json-smart (Resource Exhaustion)"
+      },
+      {
+        "cve": "CVE-2024-6763",
+        "cwe": {
+          "id": "CWE-1286",
+          "name": "Improper Validation of Syntactic Correctness of Input"
+        },
+        "discovery_date": "2024-10-14T16:00:54.963689+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2318563"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Jetty. The HttpURI class performs insufficient validation on the authority segment of a URI. The HttpURI and the browser may differ on the value of the host extracted from an invalid URI. This combination of Jetty and a vulnerable browser may be vulnerable to an open redirect attack or an SSRF attack if the URI is used after passing validation checks.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "org.eclipse.jetty:jetty-http: jetty: Jetty URI parsing of invalid authority",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "For this attack to work, you would require the victim to have a vulnerable browser on top of that the URI being used after insufficient validation, all of which makes this a low-severity flaw.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-6763"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2318563",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2318563"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2024-6763",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-6763"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2024-6763",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-6763"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/jetty/jetty.project/pull/12012",
+            "url": "https://github.com/jetty/jetty.project/pull/12012"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/jetty/jetty.project/security/advisories/GHSA-qh8g-58pp-2wxh",
+            "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-qh8g-58pp-2wxh"
+          },
+          {
+            "category": "external",
+            "summary": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/25",
+            "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/25"
+          }
+        ],
+        "release_date": "2024-10-14T15:06:07.298000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options don't meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 3.7,
+              "baseSeverity": "LOW",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Low"
+          }
+        ],
+        "title": "org.eclipse.jetty:jetty-http: jetty: Jetty URI parsing of invalid authority"
+      },
+      {
+        "cve": "CVE-2024-13009",
+        "cwe": {
+          "id": "CWE-404",
+          "name": "Improper Resource Shutdown or Release"
+        },
+        "discovery_date": "2025-05-08T18:00:47.047186+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2365135"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Eclipse Jetty. This vulnerability allows corrupted and inadvertent data sharing between requests via a gzip error when inflating a request body. If the request body is malformed, the gzip decompression process can fail, resulting in the application inadvertently using data from a previous request when processing the current one.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "jetty-server: Jetty: Gzip Request Body Buffer Corruption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as an IMPORTANT severity because a buffer management vulnerability exists within the GzipHandler's buffer release mechanism when encountering gzip errors during request body inflation, this flaw can lead to the incorrect release and subsequent inadvertent sharing and corruption of request body data between concurrent uncompressed requests, results in data exposure and incorrect processing of requests due to corrupted input.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-13009"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2365135",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2365135"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2024-13009",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-13009"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2024-13009",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13009"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/jetty/jetty.project/security/advisories/GHSA-q4rv-gq96-w7c5",
+            "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-q4rv-gq96-w7c5"
+          },
+          {
+            "category": "external",
+            "summary": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/48",
+            "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/48"
+          }
+        ],
+        "release_date": "2025-05-08T17:29:31.380000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "jetty-server: Jetty: Gzip Request Body Buffer Corruption"
+      },
+      {
+        "cve": "CVE-2024-31141",
+        "cwe": {
+          "id": "CWE-552",
+          "name": "Files or Directories Accessible to External Parties"
+        },
+        "discovery_date": "2024-11-19T09:00:35.857468+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2327264"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Apache Kafka Clients. Apache Kafka Clients accepts configuration data for customizing behavior and includes ConfigProvider plugins to manipulate these configurations. Apache Kafka also provides FileConfigProvider, DirectoryConfigProvider, and EnvVarConfigProvider implementations, which include the ability to read from disk or environment variables. In applications where an untrusted party can specify Apache Kafka Clients configurations, attackers may use these ConfigProviders to read arbitrary contents of the disk and environment variables.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "kafka-clients: privilege escalation to filesystem read-access via automatic ConfigProvider",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Within regulated environments, a combination of the following controls acts as a significant barrier to successfully exploiting a CWE-269: Improper Privilege Management or CWE-552: Files or Directories Accessible to External Parties vulnerability and therefore downgrades the severity of this particular CVE from Moderate to Low.\n\nThe platform enforces strict Role-Based Access Control (RBAC), network segmentation, and pod security policies that significantly limit external access pathways. Access to the platform is granted only after successful hard token, multi-factor authentication (MFA), which is coupled with least privilege principles to ensure that only authorized roles and users can execute or manipulate code. Additionally, process isolation ensures that processes running in one container or namespace cannot access files or directories belonging to another, even if file permissions are misconfigured.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-31141"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2327264",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2327264"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2024-31141",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-31141"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2024-31141",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-31141"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread/9whdzfr0zwdhr364604w5ssnzmg4v2lv",
+            "url": "https://lists.apache.org/thread/9whdzfr0zwdhr364604w5ssnzmg4v2lv"
+          }
+        ],
+        "release_date": "2024-11-19T08:40:50.695000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "kafka-clients: privilege escalation to filesystem read-access via automatic ConfigProvider"
+      },
+      {
+        "cve": "CVE-2024-47535",
+        "cwe": {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption"
+        },
+        "discovery_date": "2024-11-12T16:01:18.772613+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2325538"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Netty. An unsafe reading of the environment file could potentially cause a denial of service. When loaded on a Windows application, Netty attempts to load a file that does not exist. If an attacker creates a large file, the Netty application crashes.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "netty: Denial of Service attack on windows app using Netty",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Within regulated environments, a combination of the following controls acts as a significant barrier to successfully exploiting a CWE-400: Uncontrolled Resource Consumption vulnerability and therefore downgrades the severity of this particular CVE from Moderate to Low.\n\nRed Hat restricts access to all platform information by default, granting access only after successful hard token-based multi-factor authentication (MFA) and enforcing least privilege to ensure only authorized roles can execute or modify code. The environment employs malicious code protections, including IDS/IPS and antimalware tools to detect threats and monitor resource usage, helping prevent uncontrolled consumption that could lead to system failure. Additional safeguards, such as web application firewalls and load-balancing strategies, protect against resource exhaustion and performance degradation. Event logs are centrally collected, correlated, and analyzed to support monitoring, alerting, and retention, aiding in the detection of abnormal behavior and potential denial-of-service (DoS) conditions. Static code analysis and peer reviews enforce strong input validation and error handling, reducing the likelihood of input-based DoS attacks.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-47535"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2325538",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2325538"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2024-47535",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-47535"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2024-47535",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47535"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/netty/netty/commit/fbf7a704a82e7449b48bd0bbb679f5661c6d61a3",
+            "url": "https://github.com/netty/netty/commit/fbf7a704a82e7449b48bd0bbb679f5661c6d61a3"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv",
+            "url": "https://github.com/netty/netty/security/advisories/GHSA-xq3w-v528-46rv"
+          }
+        ],
+        "release_date": "2024-11-12T15:50:08.334000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "netty: Denial of Service attack on windows app using Netty"
+      },
+      {
+        "cve": "CVE-2024-56128",
+        "cwe": {
+          "id": "CWE-303",
+          "name": "Incorrect Implementation of Authentication Algorithm"
+        },
+        "discovery_date": "2024-12-18T14:00:43.732728+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2333013"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Apache Kafka's implementation of the Salted Challenge Response Authentication Mechanism (SCRAM), which did not fully adhere to the requirements of RFC 5802. Specifically, as per RFC 5802, the server must verify that the nonce sent by the client in the second message matches the nonce sent by the server in its first message. However, Kafka's SCRAM implementation did not perform this validation. In environments where SCRAM is operated over plaintext communication channels, an attacker with access to the exchange can intercept and potentially reuse authentication messages, leveraging the weak nonce validation to gain unauthorized access.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "kafka: Apache Kafka: SCRAM authentication vulnerable to replay attacks when used without encryption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is marked with an Important severity because it compromises a fundamental security requirement of the SCRAM protocol as specified in RFC 5802 —the validation of nonces for ensuring message integrity and preventing replay attacks. Without proper nonce validation, an attacker with plaintext access to the SCRAM authentication exchange could manipulate or replay parts of the authentication process, potentially gaining unauthorized access or disrupting the integrity of authentication. While the use of plaintext communication for SCRAM is discouraged, many legacy systems or misconfigured deployments may still rely on it, making them directly susceptible.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-56128"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2333013",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2333013"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2024-56128",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-56128"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2024-56128",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-56128"
+          },
+          {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc5802",
+            "url": "https://datatracker.ietf.org/doc/html/rfc5802"
+          },
+          {
+            "category": "external",
+            "summary": "https://datatracker.ietf.org/doc/html/rfc5802#section-9",
+            "url": "https://datatracker.ietf.org/doc/html/rfc5802#section-9"
+          },
+          {
+            "category": "external",
+            "summary": "https://kafka.apache.org/documentation/#security_sasl_scram_security",
+            "url": "https://kafka.apache.org/documentation/#security_sasl_scram_security"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread/84dh4so32lwn7wr6c5s9mwh381vx9wkw",
+            "url": "https://lists.apache.org/thread/84dh4so32lwn7wr6c5s9mwh381vx9wkw"
+          }
+        ],
+        "release_date": "2024-12-18T13:38:03.068000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "kafka: Apache Kafka: SCRAM authentication vulnerable to replay attacks when used without encryption"
+      },
+      {
+        "cve": "CVE-2025-1634",
+        "cwe": {
+          "id": "CWE-401",
+          "name": "Missing Release of Memory after Effective Lifetime"
+        },
+        "discovery_date": "2025-02-24T14:17:31.237000+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2347319"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the quarkus-resteasy extension, which causes memory leaks when client requests with low timeouts are made. If a client request times out, a buffer is not released correctly, leading to increased memory usage and eventual application crash due to OutOfMemoryError.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "io.quarkus:quarkus-resteasy: Memory Leak in Quarkus RESTEasy Classic When Client Requests Timeout",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is marked as and Important severity rather than Moderate because it allows an unauthenticated attacker to trigger a denial of service  condition by repeatedly sending crafted HTTP requests with low timeouts. The issue leads to a memory leak that cannot be recovered without restarting the application, ultimately resulting in an OutOfMemoryError  and complete service failure.\n\nIn a production environment, this vulnerability poses a significant risk to availability, especially for applications handling multiple concurrent requests. Since no mitigation exists, all applications using quarkus-resteasy are affected until patched. The ease of exploitation, lack of required privileges, and high impact on service uptime justify the high severity rating.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-1634"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2347319",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2347319"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-1634",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-1634"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-1634",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-1634"
+          }
+        ],
+        "release_date": "2025-02-24T00:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "io.quarkus:quarkus-resteasy: Memory Leak in Quarkus RESTEasy Classic When Client Requests Timeout"
+      },
+      {
+        "cve": "CVE-2025-24970",
+        "cwe": {
+          "id": "CWE-20",
+          "name": "Improper Input Validation"
+        },
+        "discovery_date": "2025-02-10T23:00:52.785132+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2344787"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Netty's SslHandler. This vulnerability allows a native crash via a specially crafted packet that bypasses proper validation.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "io.netty:netty-handler: SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability in Netty's SslHandler is of important severity rather than moderate because it directly impacts the stability and reliability of applications using native SSLEngine. By sending a specially crafted packet, an attacker can trigger a native crash, leading to a complete process termination. Unlike typical moderate vulnerabilities that might cause limited disruptions or require specific conditions, this flaw can be exploited remotely to induce a Denial of Service (DoS), affecting high-availability systems and mission-critical services.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-24970"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2344787",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2344787"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-24970",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-24970"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-24970",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-24970"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/netty/netty/commit/87f40725155b2f89adfde68c7732f97c153676c4",
+            "url": "https://github.com/netty/netty/commit/87f40725155b2f89adfde68c7732f97c153676c4"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/netty/netty/security/advisories/GHSA-4g8c-wm8x-jfhw",
+            "url": "https://github.com/netty/netty/security/advisories/GHSA-4g8c-wm8x-jfhw"
+          }
+        ],
+        "release_date": "2025-02-10T21:57:28.730000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "io.netty:netty-handler: SslHandler doesn't correctly validate packets which can lead to native crash when using native SSLEngine"
+      },
+      {
+        "cve": "CVE-2025-25193",
+        "cwe": {
+          "id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption"
+        },
+        "discovery_date": "2025-02-10T23:00:54.794769+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2344788"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Netty. An unsafe reading of the environment file could cause a denial of service. When loaded on a Windows application, Netty attempts to load a file that does not exist. If an attacker creates a large file, the Netty application crash.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "netty: Denial of Service attack on windows app using Netty",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This issue only affects Windows environments, therefore, this would affect an environment when running a supported Red Hat JBoss EAP 7 or 8, for example, if running on Windows.\n\nWithin regulated environments, a combination of the following controls acts as a significant barrier to successfully exploiting a CWE-400: Uncontrolled Resource Consumption vulnerability and therefore downgrades the severity of this particular CVE from Moderate to Low.\n\nRed Hat restricts access to all platform information by default, granting access only after successful hard token-based multi-factor authentication (MFA) and enforcing least privilege to ensure only authorized roles can execute or modify code. The environment employs malicious code protections, including IDS/IPS and antimalware tools to detect threats and monitor resource usage, helping prevent uncontrolled consumption that could lead to system failure. Additional safeguards, such as web application firewalls and load-balancing strategies, protect against resource exhaustion and performance degradation. Event logs are centrally collected, correlated, and analyzed to support monitoring, alerting, and retention, aiding in the detection of abnormal behavior and potential denial-of-service (DoS) conditions. Static code analysis and peer reviews enforce strong input validation and error handling, reducing the likelihood of input-based DoS attacks.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-25193"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2344788",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2344788"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-25193",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-25193"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-25193",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-25193"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/netty/netty/commit/d1fbda62d3a47835d3fb35db8bd42ecc205a5386",
+            "url": "https://github.com/netty/netty/commit/d1fbda62d3a47835d3fb35db8bd42ecc205a5386"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/netty/netty/security/advisories/GHSA-389x-839f-4rhx",
+            "url": "https://github.com/netty/netty/security/advisories/GHSA-389x-839f-4rhx"
+          }
+        ],
+        "release_date": "2025-02-10T22:02:17.197000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          },
+          {
+            "category": "workaround",
+            "details": "Currently, no mitigation is available for this vulnerability.",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "netty: Denial of Service attack on windows app using Netty"
+      },
+      {
+        "cve": "CVE-2025-27817",
+        "cwe": {
+          "id": "CWE-918",
+          "name": "Server-Side Request Forgery (SSRF)"
+        },
+        "discovery_date": "2025-06-10T08:00:46.717358+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2371367"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in apache-kafka. The Kafka client improperly handles configuration data for SASL/OAUTHBEARER connections, allowing an attacker to specify a crafted token endpoint URL. This allows for arbitrary file reads and server-side request forgery (SSRF) by a malicious client. Consequently, this can allow an attacker to read arbitrary files on the Kafka broker or initiate requests to internal or external resources.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "org.apache.kafka: Kafka Client Arbitrary File Read SSRF",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This flaw does not affect any Red Hat products.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-27817"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2371367",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2371367"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-27817",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-27817"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-27817",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-27817"
+          },
+          {
+            "category": "external",
+            "summary": "https://kafka.apache.org/cve-list",
+            "url": "https://kafka.apache.org/cve-list"
+          }
+        ],
+        "release_date": "2025-06-10T07:55:14.422000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this flaw, explicitly set the allowed urls in SASL JAAS configuration using the system property \"-Dorg.apache.kafka.sasl.oauthbearer.allowed.urls\".",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "org.apache.kafka: Kafka Client Arbitrary File Read SSRF"
+      },
+      {
+        "cve": "CVE-2025-48734",
+        "cwe": {
+          "id": "CWE-284",
+          "name": "Improper Access Control"
+        },
+        "discovery_date": "2025-05-28T14:00:56.619771+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2368956"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Apache Commons BeanUtils. This vulnerability allows remote attackers to execute arbitrary code via uncontrolled access to the declaredClass property on Java enum objects, which can expose the class loader when property paths are passed from external sources to methods like getProperty() or getNestedProperty().",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as important severity because a flaw exists in Apache Commons BeanUtils, where PropertyUtilsBean and BeanUtilsBean allow uncontrolled access to the declaredClass property of Java enum objects. Applications that pass untrusted property paths directly to getProperty() or getNestedProperty() methods are at risk, as attackers can exploit this behavior to retrieve the ClassLoader instance and execute arbitrary code in the context of the affected application. This issue leads to compromise of confidentiality, integrity, and availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Streams for Apache Kafka 2.9.1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2368956",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368956"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-48734",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/advisories/GHSA-wxr5-93ph-8wr9",
+            "url": "https://github.com/advisories/GHSA-wxr5-93ph-8wr9"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/apache/commons-beanutils/commit/28ad955a1613ed5885870cc7da52093c1ce739dc",
+            "url": "https://github.com/apache/commons-beanutils/commit/28ad955a1613ed5885870cc7da52093c1ce739dc"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9",
+            "url": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2025/05/28/6",
+            "url": "https://www.openwall.com/lists/oss-security/2025/05/28/6"
+          }
+        ],
+        "release_date": "2025-05-28T13:32:08.300000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-30T13:16:39+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Streams for Apache Kafka 2.9.1"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9922"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Streams for Apache Kafka 2.9.1"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default"
+      }
+    ]
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Red Hat build of Apache Camel 4.10.3 for Spring Boot patch release and security update is now available.\n\nRed Hat Product Security has rated this update as having a security impact of\nImportant. A Common Vulnerability Scoring System (CVSS) base score, which gives\na detailed severity rating, is available for each vulnerability from the CVE\nlink(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Red Hat build of Apache Camel 4.10.3 for Spring Boot patch release and security update is now available.\n\nThe purpose of this text-only errata is to inform you about the security issues\nfixed.\n\nSecurity Fix(es):\n   \n* jetty-server: Jetty: Gzip Request Body Buffer Corruption (CVE-2024-13009)\n\n* commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default (CVE-2025-48734)\n\n* postgresql: pgjdbc insecure authentication in channel binding (CVE-2025-49146)",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:9697",
+          "url": "https://access.redhat.com/errata/RHSA-2025:9697"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2365135",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2365135"
+        },
+        {
+          "category": "external",
+          "summary": "2368956",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368956"
+        },
+        {
+          "category": "external",
+          "summary": "2372307",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2372307"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_9697.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Build of Apache Camel 4.10.3 for Spring Boot patch release.",
+      "tracking": {
+        "current_release_date": "2025-10-01T01:04:00+00:00",
+        "generator": {
+          "date": "2025-10-01T01:04:00+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.6.8"
+          }
+        },
+        "id": "RHSA-2025:9697",
+        "initial_release_date": "2025-06-25T19:47:43+00:00",
+        "revision_history": [
+          {
+            "date": "2025-06-25T19:47:43+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-06-25T19:47:43+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2025-10-01T01:04:00+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7",
+                  "product": {
+                    "name": "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7",
+                    "product_id": "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:apache_camel_spring_boot:4"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Build of Apache Camel"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2024-13009",
+        "cwe": {
+          "id": "CWE-404",
+          "name": "Improper Resource Shutdown or Release"
+        },
+        "discovery_date": "2025-05-08T18:00:47.047186+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2365135"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Eclipse Jetty. This vulnerability allows corrupted and inadvertent data sharing between requests via a gzip error when inflating a request body. If the request body is malformed, the gzip decompression process can fail, resulting in the application inadvertently using data from a previous request when processing the current one.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "jetty-server: Jetty: Gzip Request Body Buffer Corruption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as an IMPORTANT severity because a buffer management vulnerability exists within the GzipHandler's buffer release mechanism when encountering gzip errors during request body inflation, this flaw can lead to the incorrect release and subsequent inadvertent sharing and corruption of request body data between concurrent uncompressed requests, results in data exposure and incorrect processing of requests due to corrupted input.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2024-13009"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2365135",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2365135"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2024-13009",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2024-13009"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2024-13009",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-13009"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/jetty/jetty.project/security/advisories/GHSA-q4rv-gq96-w7c5",
+            "url": "https://github.com/jetty/jetty.project/security/advisories/GHSA-q4rv-gq96-w7c5"
+          },
+          {
+            "category": "external",
+            "summary": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/48",
+            "url": "https://gitlab.eclipse.org/security/cve-assignement/-/issues/48"
+          }
+        ],
+        "release_date": "2025-05-08T17:29:31.380000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-25T19:47:43+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9697"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "jetty-server: Jetty: Gzip Request Body Buffer Corruption"
+      },
+      {
+        "cve": "CVE-2025-48734",
+        "cwe": {
+          "id": "CWE-284",
+          "name": "Improper Access Control"
+        },
+        "discovery_date": "2025-05-28T14:00:56.619771+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2368956"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Apache Commons BeanUtils. This vulnerability allows remote attackers to execute arbitrary code via uncontrolled access to the declaredClass property on Java enum objects, which can expose the class loader when property paths are passed from external sources to methods like getProperty() or getNestedProperty().",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as important severity because a flaw exists in Apache Commons BeanUtils, where PropertyUtilsBean and BeanUtilsBean allow uncontrolled access to the declaredClass property of Java enum objects. Applications that pass untrusted property paths directly to getProperty() or getNestedProperty() methods are at risk, as attackers can exploit this behavior to retrieve the ClassLoader instance and execute arbitrary code in the context of the affected application. This issue leads to compromise of confidentiality, integrity, and availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2368956",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368956"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-48734",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/advisories/GHSA-wxr5-93ph-8wr9",
+            "url": "https://github.com/advisories/GHSA-wxr5-93ph-8wr9"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/apache/commons-beanutils/commit/28ad955a1613ed5885870cc7da52093c1ce739dc",
+            "url": "https://github.com/apache/commons-beanutils/commit/28ad955a1613ed5885870cc7da52093c1ce739dc"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9",
+            "url": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2025/05/28/6",
+            "url": "https://www.openwall.com/lists/oss-security/2025/05/28/6"
+          }
+        ],
+        "release_date": "2025-05-28T13:32:08.300000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-25T19:47:43+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9697"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default"
+      },
+      {
+        "cve": "CVE-2025-49146",
+        "cwe": {
+          "id": "CWE-287",
+          "name": "Improper Authentication"
+        },
+        "discovery_date": "2025-06-11T15:01:33.735376+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2372307"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A connection handling flaw was found in the pgjdbc connection driver in configurations that require channel binding. Connections created with authentication methods that should not allow channel binding permit connections to use channel binding. This flaw allows attackers to position themselves in the middle of a connection and intercept the connection.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "pgjdbc: pgjdbc insecure authentication in channel binding",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-49146"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2372307",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2372307"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-49146",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-49146"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-49146",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49146"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pgjdbc/pgjdbc/commit/9217ed16cb2918ab1b6b9258ae97e6ede244d8a0",
+            "url": "https://github.com/pgjdbc/pgjdbc/commit/9217ed16cb2918ab1b6b9258ae97e6ede244d8a0"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-hq9p-pm7w-8p54",
+            "url": "https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-hq9p-pm7w-8p54"
+          }
+        ],
+        "release_date": "2025-06-11T14:32:39.348000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-25T19:47:43+00:00",
+            "details": "Before applying this update, make sure all previously released errata\nrelevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9697"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat build of Apache Camel 4.10.3 for Spring Boot 3.4.7"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "pgjdbc: pgjdbc insecure authentication in channel binding"
+      }
+    ]
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for apache-commons-beanutils is now available for Red Hat Enterprise Linux 9.4 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The Apache Commons BeanUtils library provides utility methods for accessing and modifying properties of arbitrary JavaBeans.\n\nSecurity Fix(es):\n\n* commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default (CVE-2025-48734)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:9696",
+          "url": "https://access.redhat.com/errata/RHSA-2025:9696"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2368956",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368956"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_9696.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: apache-commons-beanutils security update",
+      "tracking": {
+        "current_release_date": "2025-10-01T01:04:00+00:00",
+        "generator": {
+          "date": "2025-10-01T01:04:00+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.6.8"
+          }
+        },
+        "id": "RHSA-2025:9696",
+        "initial_release_date": "2025-06-25T19:30:28+00:00",
+        "revision_history": [
+          {
+            "date": "2025-06-25T19:30:28+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-06-25T19:30:28+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2025-10-01T01:04:00+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat CodeReady Linux Builder EUS (v.9.4)",
+                  "product": {
+                    "name": "Red Hat CodeReady Linux Builder EUS (v.9.4)",
+                    "product_id": "CRB-9.4.0.Z.EUS",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhel_eus:9.4::crb"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.src",
+                  "product": {
+                    "name": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.src",
+                    "product_id": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/apache-commons-beanutils@1.9.4-9.el9_4.1?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+                  "product": {
+                    "name": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+                    "product_id": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/apache-commons-beanutils@1.9.4-9.el9_4.1?arch=noarch"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "noarch"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch as a component of Red Hat CodeReady Linux Builder EUS (v.9.4)",
+            "product_id": "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch"
+          },
+          "product_reference": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+          "relates_to_product_reference": "CRB-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.src as a component of Red Hat CodeReady Linux Builder EUS (v.9.4)",
+            "product_id": "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.src"
+          },
+          "product_reference": "apache-commons-beanutils-0:1.9.4-9.el9_4.1.src",
+          "relates_to_product_reference": "CRB-9.4.0.Z.EUS"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-48734",
+        "cwe": {
+          "id": "CWE-284",
+          "name": "Improper Access Control"
+        },
+        "discovery_date": "2025-05-28T14:00:56.619771+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2368956"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Apache Commons BeanUtils. This vulnerability allows remote attackers to execute arbitrary code via uncontrolled access to the declaredClass property on Java enum objects, which can expose the class loader when property paths are passed from external sources to methods like getProperty() or getNestedProperty().",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as important severity because a flaw exists in Apache Commons BeanUtils, where PropertyUtilsBean and BeanUtilsBean allow uncontrolled access to the declaredClass property of Java enum objects. Applications that pass untrusted property paths directly to getProperty() or getNestedProperty() methods are at risk, as attackers can exploit this behavior to retrieve the ClassLoader instance and execute arbitrary code in the context of the affected application. This issue leads to compromise of confidentiality, integrity, and availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+            "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.src"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2368956",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368956"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-48734",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48734"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/advisories/GHSA-wxr5-93ph-8wr9",
+            "url": "https://github.com/advisories/GHSA-wxr5-93ph-8wr9"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/apache/commons-beanutils/commit/28ad955a1613ed5885870cc7da52093c1ce739dc",
+            "url": "https://github.com/apache/commons-beanutils/commit/28ad955a1613ed5885870cc7da52093c1ce739dc"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9",
+            "url": "https://lists.apache.org/thread/s0hb3jkfj5f3ryx6c57zqtfohb0of1g9"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2025/05/28/6",
+            "url": "https://www.openwall.com/lists/oss-security/2025/05/28/6"
+          }
+        ],
+        "release_date": "2025-05-28T13:32:08.300000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-06-25T19:30:28+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+              "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.src"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:9696"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.noarch",
+              "CRB-9.4.0.Z.EUS:apache-commons-beanutils-0:1.9.4-9.el9_4.1.src"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "commons-beanutils: Apache Commons BeanUtils: PropertyUtilsBean does not suppresses an enum's declaredClass property by default"
+      }
+    ]
+  }
+]
