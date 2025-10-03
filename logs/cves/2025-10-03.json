@@ -1,0 +1,855 @@
+[Fri Oct  3 06:32:50 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-54286",
+      "assignerOrgId": "cc1ad9ee-3454-478d-9317-d3e869d708bc",
+      "state": "PUBLISHED",
+      "assignerShortName": "canonical",
+      "dateReserved": "2025-07-18T07:59:07.916Z",
+      "datePublished": "2025-10-02T09:12:49.044Z",
+      "dateUpdated": "2025-10-03T03:55:38.219Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "LXD",
+            "repo": "https://github.com/canonical/lxd",
+            "vendor": "Canonical",
+            "versions": [
+              {
+                "lessThan": "5.0.5",
+                "status": "affected",
+                "version": "5.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "5.21.4",
+                "status": "affected",
+                "version": "5.21",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "6.5",
+                "status": "affected",
+                "version": "6.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Cross-Site Request Forgery (CSRF) in LXD-UI in Canonical LXD versions &gt;= 5.0 on Linux allows an attacker to create and start container instances without user consent via crafted HTML form submissions exploiting client certificate authentication."
+              }
+            ],
+            "value": "Cross-Site Request Forgery (CSRF) in LXD-UI in Canonical LXD versions >= 5.0 on Linux allows an attacker to create and start container instances without user consent via crafted HTML form submissions exploiting client certificate authentication."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-62",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-62 Cross Site Request Forgery"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "attackVector": "NETWORK",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-352",
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/canonical/lxd/security/advisories/GHSA-p8hw-rfjg-689h"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "credits": [
+          {
+            "lang": "en",
+            "value": "GMO Flatt Security Inc."
+          }
+        ],
+        "title": "CSRF Vulnerability When Using Client Certificate Authentication with the LXD-UI",
+        "providerMetadata": {
+          "orgId": "cc1ad9ee-3454-478d-9317-d3e869d708bc",
+          "shortName": "canonical",
+          "dateUpdated": "2025-10-02T10:43:46.978Z"
+        }
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/canonical/lxd/security/advisories/GHSA-p8hw-rfjg-689h",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-54286"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-03T03:55:38.219Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-54289",
+      "assignerOrgId": "cc1ad9ee-3454-478d-9317-d3e869d708bc",
+      "state": "PUBLISHED",
+      "assignerShortName": "canonical",
+      "dateReserved": "2025-07-18T07:59:07.917Z",
+      "datePublished": "2025-10-02T09:23:03.238Z",
+      "dateUpdated": "2025-10-03T03:55:37.064Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "LXD",
+            "repo": "https://github.com/canonical/lxd",
+            "vendor": "Canonical",
+            "versions": [
+              {
+                "lessThan": "6.5",
+                "status": "affected",
+                "version": "6",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "5.21.4",
+                "status": "affected",
+                "version": "5.21",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Privilege Escalation in operations API in Canonical LXD 6.5 on multiple platforms allows attacker with read permissions to hijack terminal or console sessions and execute arbitrary commands via WebSocket connection hijacking format"
+              }
+            ],
+            "value": "Privilege Escalation in operations API in Canonical LXD 6.5 on multiple platforms allows attacker with read permissions to hijack terminal or console sessions and execute arbitrary commands via WebSocket connection hijacking format"
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-593",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-593 Session Hijacking"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "attackVector": "NETWORK",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "PASSIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1385",
+                "description": "CWE-1385: Missing Origin Validation in WebSockets",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/canonical/lxd/security/advisories/GHSA-3g72-chj4-2228"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "credits": [
+          {
+            "lang": "en",
+            "value": "GMO Flatt Security Inc."
+          }
+        ],
+        "title": "Privilege Escalation via WebSocket Connection Hijacking in LXD Operations API",
+        "providerMetadata": {
+          "orgId": "cc1ad9ee-3454-478d-9317-d3e869d708bc",
+          "shortName": "canonical",
+          "dateUpdated": "2025-10-02T10:43:52.059Z"
+        }
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/canonical/lxd/security/advisories/GHSA-3g72-chj4-2228",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-54289"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-03T03:55:37.064Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-58267",
+      "assignerOrgId": "404e59f5-483d-4b8a-8e7a-e67604dd8afb",
+      "state": "PUBLISHED",
+      "assignerShortName": "suse",
+      "dateReserved": "2025-09-04T04:04:22.186Z",
+      "datePublished": "2025-10-02T12:08:30.507Z",
+      "dateUpdated": "2025-10-03T03:55:35.943Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "packageName": "github.com/rancher/rancher",
+            "product": "rancher",
+            "vendor": "SUSE",
+            "versions": [
+              {
+                "lessThan": "2.12.2",
+                "status": "affected",
+                "version": "2.12.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.11.6",
+                "status": "affected",
+                "version": "2.11.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.10.10",
+                "status": "affected",
+                "version": "2.10.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.9.12",
+                "status": "affected",
+                "version": "2.9.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-09-26T11:02:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "A vulnerability has been identified within Rancher Manager whereby the SAML authentication from the Rancher CLI  tool is vulnerable to phishing attacks. The custom authentication protocol for SAML-based providers can be abused to steal Rancher’s authentication tokens."
+              }
+            ],
+            "value": "A vulnerability has been identified within Rancher Manager whereby the SAML authentication from the Rancher CLI  tool is vulnerable to phishing attacks. The custom authentication protocol for SAML-based providers can be abused to steal Rancher’s authentication tokens."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-345",
+                "description": "CWE-345: Insufficient Verification of Data Authenticity",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "404e59f5-483d-4b8a-8e7a-e67604dd8afb",
+          "shortName": "suse",
+          "dateUpdated": "2025-10-02T12:08:30.507Z"
+        },
+        "references": [
+          {
+            "url": "https://bugzilla.suse.com/show_bug.cgi?id=CVE-2024-58267"
+          },
+          {
+            "url": "https://github.com/rancher/rancher/security/advisories/GHSA-v3vj-5868-2ch2"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Rancher CLI SAML authentication is vulnerable to phishing attacks",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2024-58267"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-03T03:55:35.943Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-10847",
+      "assignerOrgId": "80d3bcb6-88de-48c2-a47e-aebf795f19b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "symantec",
+      "dateReserved": "2025-09-22T05:46:46.329Z",
+      "datePublished": "2025-10-01T10:48:12.150Z",
+      "dateUpdated": "2025-10-03T03:55:34.798Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Unified Infrastructure Management",
+            "vendor": "Broadcom",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "23.4.5"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Australian Signals Directorate (Cyber.gov.au)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(255, 255, 255);\">DX Unified Infrastructure Management (Nimsoft/UIM) and below contains an improper ACL handling vulnerability in the robot (controller) component. A remote attacker can execute commands, read from, or write to the target system.</span>"
+              }
+            ],
+            "value": "DX Unified Infrastructure Management (Nimsoft/UIM) and below contains an improper ACL handling vulnerability in the robot (controller) component. A remote attacker can execute commands, read from, or write to the target system."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "YES",
+              "Recovery": "USER",
+              "Safety": "NEGLIGIBLE",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "attackVector": "NETWORK",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "AMBER",
+              "subAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "DIFFUSE",
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:H/VA:H/SC:L/SI:N/SA:L/S:N/AU:Y/R:U/V:D/RE:L/U:Amber",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "LOW"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "80d3bcb6-88de-48c2-a47e-aebf795f19b5",
+          "shortName": "symantec",
+          "dateUpdated": "2025-10-01T10:48:12.150Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/36180"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "DX UIM Probe Improper ACL Handling RCE",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-10847"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-03T03:55:34.798Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-22862",
+      "assignerOrgId": "6abe59d8-c742-4dff-8ce8-9b0ca1073da8",
+      "state": "PUBLISHED",
+      "assignerShortName": "fortinet",
+      "dateReserved": "2025-01-08T09:38:22.821Z",
+      "datePublished": "2025-10-02T12:48:41.208Z",
+      "dateUpdated": "2025-10-03T03:55:33.678Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Fortinet",
+            "product": "FortiProxy",
+            "cpes": [],
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "versionType": "semver",
+                "version": "7.6.0",
+                "lessThanOrEqual": "7.6.2",
+                "status": "affected"
+              },
+              {
+                "versionType": "semver",
+                "version": "7.4.0",
+                "lessThanOrEqual": "7.4.8",
+                "status": "affected"
+              },
+              {
+                "versionType": "semver",
+                "version": "7.2.0",
+                "lessThanOrEqual": "7.2.15",
+                "status": "affected"
+              },
+              {
+                "versionType": "semver",
+                "version": "7.0.5",
+                "lessThanOrEqual": "7.0.21",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "Fortinet",
+            "product": "FortiOS",
+            "cpes": [
+              "cpe:2.3:o:fortinet:fortios:7.4.7:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.6:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.5:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.4:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.3:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.2:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.1:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.4.0:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.11:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.10:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.9:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.8:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.7:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.6:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.5:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.4:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.3:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.2:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.1:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.2.0:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.17:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.16:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.15:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.14:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.13:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.12:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.11:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.10:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.9:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.8:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.7:*:*:*:*:*:*:*",
+              "cpe:2.3:o:fortinet:fortios:7.0.6:*:*:*:*:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "versionType": "semver",
+                "version": "7.4.0",
+                "lessThanOrEqual": "7.4.7",
+                "status": "affected"
+              },
+              {
+                "versionType": "semver",
+                "version": "7.2.0",
+                "lessThanOrEqual": "7.2.11",
+                "status": "affected"
+              },
+              {
+                "versionType": "semver",
+                "version": "7.0.6",
+                "lessThanOrEqual": "7.0.17",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] in FortiOS 7.4.0 through 7.4.7, 7.2 all versions, 7.0.6 and above; and FortiProxy 7.6.0 through 7.6.2, 7.4.0 through 7.4.8, 7.2 all versions, 7.0.5 and above may allow an authenticated attacker to elevate their privileges via triggering a malicious Webhook action in the Automation Stitch component."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "6abe59d8-c742-4dff-8ce8-9b0ca1073da8",
+          "shortName": "fortinet",
+          "dateUpdated": "2025-10-02T12:48:41.208Z"
+        },
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-288",
+                "description": "Escalation of privilege",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 6.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:C"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Fortinet remediated this issue in FortiSASE version 25.2.a and hence customers do not need to perform any action.\nPlease upgrade to FortiOS version 7.6.0 or above \nPlease upgrade to FortiOS version 7.4.8 or above \nPlease upgrade to FortiOS version 7.2.12 or above \nPlease upgrade to FortiProxy version 7.6.3 or above \nPlease upgrade to FortiProxy version 7.4.9 or above"
+          }
+        ],
+        "references": [
+          {
+            "name": "https://fortiguard.fortinet.com/psirt/FG-IR-24-385",
+            "url": "https://fortiguard.fortinet.com/psirt/FG-IR-24-385"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-22862"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-03T03:55:33.678Z"
+          }
+        }
+      ]
+    }
+  }
+]
