@@ -370,3 +370,375 @@
     }
   }
 ]
+[Thu Oct  9 01:45:48 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11516",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-08T15:13:12.140Z",
+      "datePublished": "2025-10-09T00:32:05.593Z",
+      "dateUpdated": "2025-10-09T00:32:05.593Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-09T00:32:05.593Z"
+        },
+        "title": "code-projects Online Complaint Site complaint-details.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Online Complaint Site",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in code-projects Online Complaint Site 1.0. Impacted is an unknown function of the file /cms/users/complaint-details.php. Executing manipulation of the argument cid can lead to sql injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be exploited."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in code-projects Online Complaint Site 1.0 entdeckt. Davon betroffen ist unbekannter Code der Datei /cms/users/complaint-details.php. Die Bearbeitung des Arguments cid verursacht sql injection. Die Umsetzung des Angriffs kann dabei über das Netzwerk erfolgen. Der Exploit wurde der Öffentlichkeit bekannt gemacht und könnte verwendet werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-08T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-08T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-08T17:18:19.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Aurion (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.327641",
+            "name": "VDB-327641 | code-projects Online Complaint Site complaint-details.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.327641",
+            "name": "VDB-327641 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.669814",
+            "name": "Submit #669814 | code-projects Online Complaint Site V1.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Aurion365/cve/issues/3",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-w3gv-cjxr-hgj3",
+    "modified": "2025-10-09T00:31:07Z",
+    "published": "2025-10-09T00:31:07Z",
+    "aliases": [
+      "CVE-2025-11535"
+    ],
+    "details": "MongoDB Connector for BI installation via MSI on Windows leaves ACLs unset on custom install directories allows Privilege Escalation.This issue affects MongoDB Connector for BI: from 2.0.0 through 2.14.24.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11535"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.mongodb.com/docs/bi-connector/current/release-notes/#bi-2.14.25"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-276"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-08T22:15:32Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-vxp9-9jxf-vgg5",
+    "modified": "2025-10-09T00:31:07Z",
+    "published": "2025-10-09T00:31:07Z",
+    "aliases": [
+      "CVE-2025-11511"
+    ],
+    "details": "A flaw has been found in code-projects E-Commerce Website 1.0. Affected is an unknown function of the file /pages/supplier_add.php. Executing manipulation of the argument supp_email can lead to sql injection. The attack may be launched remotely. The exploit has been published and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11511"
+      },
+      {
+        "type": "WEB",
+        "url": "https://code-projects.org"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Blowingwinds/cve-report/blob/main/cve4/report.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.327635"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.327635"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.669489"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-08T23:15:31Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-mp65-82qv-vg43",
+    "modified": "2025-10-09T00:31:07Z",
+    "published": "2025-10-09T00:31:07Z",
+    "aliases": [
+      "CVE-2025-11507"
+    ],
+    "details": "A weakness has been identified in PHPGurukul Beauty Parlour Management System 1.1. The impacted element is an unknown function of the file /admin/search-invoices.php. This manipulation of the argument searchdata causes sql injection. The attack can be initiated remotely. The exploit has been made available to the public and could be exploited.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11507"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/f000x0/cve/issues/13"
+      },
+      {
+        "type": "WEB",
+        "url": "https://phpgurukul.com"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.327632"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.327632"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.668888"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-08T22:15:32Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-fq58-6vp3-x65r",
+    "modified": "2025-10-09T00:31:07Z",
+    "published": "2025-10-09T00:31:07Z",
+    "aliases": [
+      "CVE-2025-11509"
+    ],
+    "details": "A vulnerability was detected in code-projects E-Commerce Website 1.0. This impacts an unknown function of the file /pages/product_add.php. Performing manipulation of the argument prod_name results in sql injection. The attack may be initiated remotely. The exploit is now public and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11509"
+      },
+      {
+        "type": "WEB",
+        "url": "https://code-projects.org"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Blowingwinds/cve-report/blob/main/cve1/report.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.327634"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.327634"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.669485"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-08T23:15:30Z"
+    }
+  }
+]
