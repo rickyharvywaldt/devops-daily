@@ -742,3 +742,771 @@
     }
   }
 ]
+[Thu Oct  9 06:34:46 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2022-50450",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "REJECTED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2025-09-17T14:53:07.011Z",
+      "datePublished": "2025-10-01T11:45:23.963Z",
+      "dateUpdated": "2025-10-09T05:57:03.009Z",
+      "dateRejected": "2025-10-09T05:57:03.009Z"
+    },
+    "containers": {
+      "cna": {
+        "rejectedReasons": [
+          {
+            "lang": "en",
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2025-10-09T05:57:03.009Z"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7634",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-07-14T12:23:29.209Z",
+      "datePublished": "2025-10-09T05:23:53.117Z",
+      "dateUpdated": "2025-10-09T05:23:53.117Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-10-09T05:23:53.117Z"
+        },
+        "affected": [
+          {
+            "vendor": "wptravelengine",
+            "product": "WP Travel Engine – Tour Booking Plugin – Tour Operator Software",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "6.6.7",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Travel Engine – Tour Booking Plugin – Tour Operator Software plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 6.6.7 via the mode parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included."
+          }
+        ],
+        "title": "WP Travel Engine – Tour Booking Plugin – Tour Operator Software <= 6.6.7 - Unauthenticated Local File Inclusion",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ce119965-01a0-4cff-a0b2-e99bceb1406c?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wp-travel-engine/tags/6.6.0/includes/classes/Core/Controllers/Ajax/FilterTripsHtml.php#L72"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wp-travel-engine/tags/6.6.0/includes/classes/Core/Controllers/Ajax/LoadTripsHtml.php#L27"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-98 Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')",
+                "cweId": "CWE-98",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "wesley"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-07-02T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Discovered"
+          },
+          {
+            "time": "2025-07-23T14:36:52.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-10-08T16:24:07.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7526",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-07-12T08:37:47.770Z",
+      "datePublished": "2025-10-09T05:23:52.415Z",
+      "dateUpdated": "2025-10-09T05:23:52.415Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-10-09T05:23:52.415Z"
+        },
+        "affected": [
+          {
+            "vendor": "wptravelengine",
+            "product": "WP Travel Engine – Tour Booking Plugin – Tour Operator Software",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "6.6.7",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Travel Engine – Tour Booking Plugin – Tour Operator Software plugin for WordPress is vulnerable to arbitrary file deletion (via renaming) due to insufficient file path validation in the set_user_profile_image function in all versions up to, and including, 6.6.7. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php)."
+          }
+        ],
+        "title": "WP Travel Engine – Tour Booking Plugin – Tour Operator Software <= 6.6.7 - Authenticated (Subscriber+) Arbitrary File Deletion via File Renaming",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c754d957-26a8-4fef-a487-96d566c2dc36?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wp-travel-engine/tags/6.5.6/includes/dashboard/class-wp-travel-engine-form-handler.php#L512"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "cweId": "CWE-22",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "wesley"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-07-02T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Discovered"
+          },
+          {
+            "time": "2025-07-23T14:36:52.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-10-08T16:24:06.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "grafana",
+            "vendor": "grafana",
+            "versions": [
+              {
+                "status": "affected",
+                "version": ">= 8.0.0, < 8.0.7"
+              },
+              {
+                "status": "affected",
+                "version": ">= 8.1.0, < 8.1.8"
+              },
+              {
+                "status": "affected",
+                "version": ">= 8.2.0, < 8.2.7"
+              },
+              {
+                "status": "affected",
+                "version": "= 8.3.0"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Grafana is an open-source platform for monitoring and observability. Grafana versions 8.0.0-beta1 through 8.3.0 (except for patched versions) iss vulnerable to directory traversal, allowing access to local files. The vulnerable URL path is: `<grafana_host_url>/public/plugins//`, where is the plugin ID for any installed plugin. At no time has Grafana Cloud been vulnerable. Users are advised to upgrade to patched versions 8.0.7, 8.1.8, 8.2.7, or 8.3.1. The GitHub Security Advisory contains more information about vulnerable URL paths, mitigation, and the disclosure timeline."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2021-12-29T20:06:36.000Z",
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/grafana/grafana/commit/c798c0e958d15d9cc7f27c72113d572fa58545ce"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "http://packetstormsecurity.com/files/165198/Grafana-Arbitrary-File-Reading.html"
+          },
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://grafana.com/blog/2021/12/08/an-update-on-0day-cve-2021-43798-grafana-directory-traversal/"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "http://packetstormsecurity.com/files/165221/Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html"
+          },
+          {
+            "name": "[oss-security] 20211209 CVE-2021-43798 Grafana directory traversal",
+            "tags": [
+              "mailing-list",
+              "x_refsource_MLIST"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/09/2"
+          },
+          {
+            "name": "[oss-security] 20211210 CVE-2021-43813 and CVE-2021-43815 - Grafana directory traversal for some .md and .csv files",
+            "tags": [
+              "mailing-list",
+              "x_refsource_MLIST"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/10/4"
+          },
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://security.netapp.com/advisory/ntap-20211229-0004/"
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-8pjx-jj86-j47p",
+          "discovery": "UNKNOWN"
+        },
+        "title": "Grafana path traversal",
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "security-advisories@github.com",
+            "ID": "CVE-2021-43798",
+            "STATE": "PUBLIC",
+            "TITLE": "Grafana path traversal"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "grafana",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_value": ">= 8.0.0, < 8.0.7"
+                            },
+                            {
+                              "version_value": ">= 8.1.0, < 8.1.8"
+                            },
+                            {
+                              "version_value": ">= 8.2.0, < 8.2.7"
+                            },
+                            {
+                              "version_value": "= 8.3.0"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "grafana"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "Grafana is an open-source platform for monitoring and observability. Grafana versions 8.0.0-beta1 through 8.3.0 (except for patched versions) iss vulnerable to directory traversal, allowing access to local files. The vulnerable URL path is: `<grafana_host_url>/public/plugins//`, where is the plugin ID for any installed plugin. At no time has Grafana Cloud been vulnerable. Users are advised to upgrade to patched versions 8.0.7, 8.1.8, 8.2.7, or 8.3.1. The GitHub Security Advisory contains more information about vulnerable URL paths, mitigation, and the disclosure timeline."
+              }
+            ]
+          },
+          "impact": {
+            "cvss": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p",
+                "refsource": "CONFIRM",
+                "url": "https://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p"
+              },
+              {
+                "name": "https://github.com/grafana/grafana/commit/c798c0e958d15d9cc7f27c72113d572fa58545ce",
+                "refsource": "MISC",
+                "url": "https://github.com/grafana/grafana/commit/c798c0e958d15d9cc7f27c72113d572fa58545ce"
+              },
+              {
+                "name": "http://packetstormsecurity.com/files/165198/Grafana-Arbitrary-File-Reading.html",
+                "refsource": "MISC",
+                "url": "http://packetstormsecurity.com/files/165198/Grafana-Arbitrary-File-Reading.html"
+              },
+              {
+                "name": "https://grafana.com/blog/2021/12/08/an-update-on-0day-cve-2021-43798-grafana-directory-traversal/",
+                "refsource": "CONFIRM",
+                "url": "https://grafana.com/blog/2021/12/08/an-update-on-0day-cve-2021-43798-grafana-directory-traversal/"
+              },
+              {
+                "name": "http://packetstormsecurity.com/files/165221/Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html",
+                "refsource": "MISC",
+                "url": "http://packetstormsecurity.com/files/165221/Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html"
+              },
+              {
+                "name": "[oss-security] 20211209 CVE-2021-43798 Grafana directory traversal",
+                "refsource": "MLIST",
+                "url": "http://www.openwall.com/lists/oss-security/2021/12/09/2"
+              },
+              {
+                "name": "[oss-security] 20211210 CVE-2021-43813 and CVE-2021-43815 - Grafana directory traversal for some .md and .csv files",
+                "refsource": "MLIST",
+                "url": "http://www.openwall.com/lists/oss-security/2021/12/10/4"
+              },
+              {
+                "name": "https://security.netapp.com/advisory/ntap-20211229-0004/",
+                "refsource": "CONFIRM",
+                "url": "https://security.netapp.com/advisory/ntap-20211229-0004/"
+              }
+            ]
+          },
+          "source": {
+            "advisory": "GHSA-8pjx-jj86-j47p",
+            "discovery": "UNKNOWN"
+          }
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-04T04:03:08.797Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_CONFIRM",
+                "x_transferred"
+              ],
+              "url": "https://github.com/grafana/grafana/security/advisories/GHSA-8pjx-jj86-j47p"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://github.com/grafana/grafana/commit/c798c0e958d15d9cc7f27c72113d572fa58545ce"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "http://packetstormsecurity.com/files/165198/Grafana-Arbitrary-File-Reading.html"
+            },
+            {
+              "tags": [
+                "x_refsource_CONFIRM",
+                "x_transferred"
+              ],
+              "url": "https://grafana.com/blog/2021/12/08/an-update-on-0day-cve-2021-43798-grafana-directory-traversal/"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "http://packetstormsecurity.com/files/165221/Grafana-8.3.0-Directory-Traversal-Arbitrary-File-Read.html"
+            },
+            {
+              "name": "[oss-security] 20211209 CVE-2021-43798 Grafana directory traversal",
+              "tags": [
+                "mailing-list",
+                "x_refsource_MLIST",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/09/2"
+            },
+            {
+              "name": "[oss-security] 20211210 CVE-2021-43813 and CVE-2021-43815 - Grafana directory traversal for some .md and .csv files",
+              "tags": [
+                "mailing-list",
+                "x_refsource_MLIST",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/10/4"
+            },
+            {
+              "tags": [
+                "x_refsource_CONFIRM",
+                "x_transferred"
+              ],
+              "url": "https://security.netapp.com/advisory/ntap-20211229-0004/"
+            }
+          ]
+        },
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-08T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2021-43798"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-09T03:55:39.595Z"
+          }
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "assignerShortName": "GitHub_M",
+      "cveId": "CVE-2021-43798",
+      "datePublished": "2021-12-07T18:25:10.000Z",
+      "dateReserved": "2021-11-16T00:00:00.000Z",
+      "dateUpdated": "2025-10-09T03:55:39.595Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11530",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-08T19:05:41.090Z",
+      "datePublished": "2025-10-09T03:32:05.357Z",
+      "dateUpdated": "2025-10-09T03:32:05.357Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-09T03:32:05.357Z"
+        },
+        "title": "code-projects Online Complaint Site state.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Online Complaint Site",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in code-projects Online Complaint Site 1.0. Affected is an unknown function of the file /cms/admin/state.php. This manipulation of the argument state causes sql injection. The attack is possible to be carried out remotely. The exploit has been made available to the public and could be exploited."
+          },
+          {
+            "lang": "de",
+            "value": "Eine Schwachstelle wurde in code-projects Online Complaint Site 1.0 gefunden. Hierbei geht es um eine nicht exakt ausgemachte Funktion der Datei /cms/admin/state.php. Die Veränderung des Parameters state resultiert in sql injection. Die Umsetzung des Angriffs kann dabei über das Netzwerk erfolgen. Der Exploit ist öffentlich verfügbar und könnte genutzt werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-08T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-08T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-08T21:27:31.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "xmqaq (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.327668",
+            "name": "VDB-327668 | code-projects Online Complaint Site state.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.327668",
+            "name": "VDB-327668 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.670208",
+            "name": "Submit #670208 | code-projects Online Complaint Site V1.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/xmqaq/cve/issues/1",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  }
+]
