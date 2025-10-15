@@ -1,0 +1,1300 @@
+[Wed Oct 15 06:34:50 UTC 2025] Latest CVEs:
+[
+  {
+    "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE"
+        }
+      },
+      "lang": "nl",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "The Netherlands Cyber Security Center (henceforth: NCSC-NL) maintains this page to enhance access to its information and security advisories. The use of this security advisory is subject to the following terms and conditions:\n\n    NCSC-NL makes every reasonable effort to ensure that the content of this page is kept up to date, and that it is accurate and complete. Nevertheless, NCSC-NL cannot entirely rule out the possibility of errors, and therefore cannot give any warranty in respect of its completeness, accuracy or continuous keeping up-to-date. The information contained in this security advisory is intended solely for the purpose of providing general information to professional users. No rights can be derived from the information provided therein.\n\n    NCSC-NL and the Kingdom of the Netherlands assume no legal liability or responsibility for any damage resulting from either the use or inability of use of this security advisory. This includes damage resulting from the inaccuracy of incompleteness of the information contained in the advisory.\n    This security advisory is subject to Dutch law. All disputes related to or arising from the use of this advisory will be submitted to the competent court in The Hague. This choice of means also applies to the court in summary proceedings."
+        },
+        {
+          "category": "description",
+          "text": "Ivanti heeft kwetsbaarheden verholpen in Ivanti Endpoint Manager.",
+          "title": "Feiten"
+        },
+        {
+          "category": "description",
+          "text": "De kwetsbaarheden omvatten een onveilige deserialisatie, een pad-traversal en meerdere SQL-injectie kwetsbaarheden. De onveilige deserialisatie kan door lokale, geauthenticeerde aanvallers worden misbruikt om verhoogde privileges te verkrijgen, wat leidt tot ongeautoriseerde toegang tot gevoelige functionaliteiten en gegevens binnen het systeem. De pad-traversal kwetsbaarheid stelt externe, ongeauthenticeerde aanvallers in staat om willekeurige code uit te voeren op getroffen systemen, wat kan resulteren in ongeautoriseerde toegang en controle over het systeem. De SQL-injectie kwetsbaarheden stellen geauthenticeerde aanvallers in staat om willekeurige SQL-query's tegen de database uit te voeren, wat kan leiden tot ongeautoriseerde toegang tot gevoelige gegevens en compromittering van de integriteit en vertrouwelijkheid van opgeslagen informatie.",
+          "title": "Interpretaties"
+        },
+        {
+          "category": "description",
+          "text": "Ivanti heeft updates uitgebracht om de kwetsbaarheden te verhelpen. Zie bijgevoegde referenties voor meer informatie.",
+          "title": "Oplossingen"
+        },
+        {
+          "category": "general",
+          "text": "medium",
+          "title": "Kans"
+        },
+        {
+          "category": "general",
+          "text": "high",
+          "title": "Schade"
+        },
+        {
+          "category": "general",
+          "text": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+          "title": "CWE-22"
+        },
+        {
+          "category": "general",
+          "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+          "title": "CWE-89"
+        },
+        {
+          "category": "general",
+          "text": "Deserialization of Untrusted Data",
+          "title": "CWE-502"
+        }
+      ],
+      "publisher": {
+        "category": "coordinator",
+        "contact_details": "cert@ncsc.nl",
+        "name": "Nationaal Cyber Security Centrum",
+        "namespace": "https://www.ncsc.nl/"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Reference",
+          "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-EPM-October-2025"
+        }
+      ],
+      "title": "Kwetsbaarheden verholpen in Ivanti Endpoint Manager",
+      "tracking": {
+        "current_release_date": "2025-10-15T06:22:07.027110Z",
+        "generator": {
+          "date": "2025-08-04T16:30:00Z",
+          "engine": {
+            "name": "V.A.",
+            "version": "1.3"
+          }
+        },
+        "id": "NCSC-2025-0318",
+        "initial_release_date": "2025-10-15T06:22:07.027110Z",
+        "revision_history": [
+          {
+            "date": "2025-10-15T06:22:07.027110Z",
+            "number": "1.0.0",
+            "summary": "Initiele versie"
+          }
+        ],
+        "status": "final",
+        "version": "1.0.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-1"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Endpoint Manager"
+            }
+          ],
+          "category": "vendor",
+          "name": "Ivanti"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-11622",
+        "cwe": {
+          "id": "CWE-502",
+          "name": "Deserialization of Untrusted Data"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Deserialization of Untrusted Data",
+            "title": "CWE-502"
+          },
+          {
+            "category": "description",
+            "text": "Insecure deserialization in Ivanti Endpoint Manager allows a local authenticated attacker to escalate privileges.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-11622 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-11622.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-11622"
+      },
+      {
+        "cve": "CVE-2025-9713",
+        "cwe": {
+          "id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+            "title": "CWE-22"
+          },
+          {
+            "category": "description",
+            "text": "A path traversal vulnerability in Ivanti Endpoint Manager allows remote unauthenticated attackers to execute code remotely, necessitating user interaction.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-9713 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-9713.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-9713"
+      },
+      {
+        "cve": "CVE-2025-11623",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-11623 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-11623.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-11623"
+      },
+      {
+        "cve": "CVE-2025-62392",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62392 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62392.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62392"
+      },
+      {
+        "cve": "CVE-2025-62390",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62390 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62390.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62390"
+      },
+      {
+        "cve": "CVE-2025-62389",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62389 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62389.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62389"
+      },
+      {
+        "cve": "CVE-2025-62388",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62388 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62388.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62388"
+      },
+      {
+        "cve": "CVE-2025-62387",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62387 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62387.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62387"
+      },
+      {
+        "cve": "CVE-2025-62385",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62385 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62385.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62385"
+      },
+      {
+        "cve": "CVE-2025-62391",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62391 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62391.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62391"
+      },
+      {
+        "cve": "CVE-2025-62383",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62383 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62383.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62383"
+      },
+      {
+        "cve": "CVE-2025-62386",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62386 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62386.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62386"
+      },
+      {
+        "cve": "CVE-2025-62384",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+            "title": "CWE-89"
+          },
+          {
+            "category": "description",
+            "text": "Ivanti Endpoint Manager has a SQL injection vulnerability that allows remote authenticated attackers to access arbitrary data from the database.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-62384 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-62384.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2025-62384"
+      }
+    ]
+  },
+  {
+    "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE"
+        }
+      },
+      "lang": "nl",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "The Netherlands Cyber Security Center (henceforth: NCSC-NL) maintains this page to enhance access to its information and security advisories. The use of this security advisory is subject to the following terms and conditions:\n\n    NCSC-NL makes every reasonable effort to ensure that the content of this page is kept up to date, and that it is accurate and complete. Nevertheless, NCSC-NL cannot entirely rule out the possibility of errors, and therefore cannot give any warranty in respect of its completeness, accuracy or continuous keeping up-to-date. The information contained in this security advisory is intended solely for the purpose of providing general information to professional users. No rights can be derived from the information provided therein.\n\n    NCSC-NL and the Kingdom of the Netherlands assume no legal liability or responsibility for any damage resulting from either the use or inability of use of this security advisory. This includes damage resulting from the inaccuracy of incompleteness of the information contained in the advisory.\n    This security advisory is subject to Dutch law. All disputes related to or arising from the use of this advisory will be submitted to the competent court in The Hague. This choice of means also applies to the court in summary proceedings."
+        },
+        {
+          "category": "description",
+          "text": "Veeam heeft kwetsbaarheden verholpen in Veeam Backup & Replication.",
+          "title": "Feiten"
+        },
+        {
+          "category": "description",
+          "text": "De kwetsbaarheden bevinden zich in de Mount service van Veeam Backup & Replication en de Backup Server, die beide kwetsbaar zijn voor remote code execution (RCE) door geauthenticeerde domeingebruikers. Dit kan leiden tot ongeautoriseerde toegang en manipulatie van gevoelige gegevens binnen de back-upomgeving. Daarnaast is de Veeam Agent voor Microsoft Windows kwetsbaar voor Local Privilege Escalation, wat kan worden misbruikt als een systeembeheerder wordt misleid om een kwaadaardig bestand te herstellen, waardoor een aanvaller verhoogde privileges kan verkrijgen.",
+          "title": "Interpretaties"
+        },
+        {
+          "category": "description",
+          "text": "Veeam heeft updates uitgebracht om de kwetsbaarheden te verhelpen. Zie bijgevoegde referenties voor meer informatie.",
+          "title": "Oplossingen"
+        },
+        {
+          "category": "general",
+          "text": "medium",
+          "title": "Kans"
+        },
+        {
+          "category": "general",
+          "text": "high",
+          "title": "Schade"
+        },
+        {
+          "category": "general",
+          "text": "Improper Input Validation",
+          "title": "CWE-20"
+        }
+      ],
+      "publisher": {
+        "category": "coordinator",
+        "contact_details": "cert@ncsc.nl",
+        "name": "Nationaal Cyber Security Centrum",
+        "namespace": "https://www.ncsc.nl/"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Reference",
+          "url": "https://www.veeam.com/kb4771"
+        }
+      ],
+      "title": "Kwetsbaarheden verholpen in Veeam Backup & Replication",
+      "tracking": {
+        "current_release_date": "2025-10-15T06:13:55.126030Z",
+        "generator": {
+          "date": "2025-08-04T16:30:00Z",
+          "engine": {
+            "name": "V.A.",
+            "version": "1.3"
+          }
+        },
+        "id": "NCSC-2025-0317",
+        "initial_release_date": "2025-10-15T06:13:55.126030Z",
+        "revision_history": [
+          {
+            "date": "2025-10-15T06:13:55.126030Z",
+            "number": "1.0.0",
+            "summary": "Initiele versie"
+          }
+        ],
+        "status": "final",
+        "version": "1.0.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-1"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Agent for Microsoft Windows"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-2"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Backup & Replication"
+            }
+          ],
+          "category": "vendor",
+          "name": "Veeam"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-48983",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in the Mount service of Veeam Backup & Replication allows authenticated domain users to execute remote code on Backup infrastructure hosts.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-48983 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-48983.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2"
+            ]
+          }
+        ],
+        "title": "CVE-2025-48983"
+      },
+      {
+        "cve": "CVE-2025-48984",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability allows authenticated domain users to execute remote code on the Backup Server, posing a significant security risk.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-48984 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-48984.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2"
+            ]
+          }
+        ],
+        "title": "CVE-2025-48984"
+      },
+      {
+        "cve": "CVE-2025-48982",
+        "notes": [
+          {
+            "category": "description",
+            "text": "The Veeam Agent for Microsoft Windows contains a vulnerability that allows for Local Privilege Escalation if a system administrator is tricked into restoring a malicious file.",
+            "title": "Summary"
+          },
+          {
+            "category": "general",
+            "text": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+            "title": "CVSSV4"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2025-48982 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2025/cve-2025-48982.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2"
+            ]
+          }
+        ],
+        "title": "CVE-2025-48982"
+      }
+    ]
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-26861",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-02-17T06:50:38.580Z",
+      "datePublished": "2025-10-15T06:07:01.220Z",
+      "dateUpdated": "2025-10-15T06:07:01.220Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "RSUPPORT CO., LTD.",
+            "product": "RemoteCall Remote Support Program (for Operator)",
+            "versions": [
+              {
+                "version": "prior to 5.3.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RemoteCall Remote Support Program (for Operator) versions prior to 5.3.0 contain an uncontrolled search path element vulnerability. If a crafted DLL is placed in the same folder with the affected product, it may cause an arbitrary code execution."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Uncontrolled Search Path Element",
+                "lang": "en-US",
+                "cweId": "CWE-427",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.remotecall.com/en/support/download/"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN22713803/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.8,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.5,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-10-15T06:07:01.220Z"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-26860",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-02-17T06:50:38.580Z",
+      "datePublished": "2025-10-15T06:06:41.514Z",
+      "dateUpdated": "2025-10-15T06:06:41.514Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "RSUPPORT CO., LTD.",
+            "product": "RemoteCall Remote Support Program (for Operator)",
+            "versions": [
+              {
+                "version": "prior to 5.1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RemoteCall Remote Support Program (for Operator) versions prior to 5.1.0 contain an uncontrolled search path element vulnerability. If a crafted DLL is placed in the same folder with the affected product, it may cause an arbitrary code execution."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Uncontrolled Search Path Element",
+                "lang": "en-US",
+                "cweId": "CWE-427",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.remotecall.com/en/support/download/"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN22713803/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.8,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.5,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-10-15T06:06:41.514Z"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-26859",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-02-17T06:50:38.580Z",
+      "datePublished": "2025-10-15T06:06:04.501Z",
+      "dateUpdated": "2025-10-15T06:06:04.501Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "RSUPPORT CO., LTD.",
+            "product": "RemoteView PC Application Console",
+            "versions": [
+              {
+                "version": "prior to 6.0.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RemoteView PC Application Console versions prior to 6.0.2 contain an uncontrolled search path element vulnerability. If a crafted DLL is placed in the same folder with the affected product, it may cause an arbitrary code execution."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Uncontrolled Search Path Element",
+                "lang": "en-US",
+                "cweId": "CWE-427",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.rview.com/hc/en-us/articles/4420613945875-Notice-of-termination-of-RemoteView-PC-application-console-service"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN22713803/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.8,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.5,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-10-15T06:06:04.501Z"
+        }
+      }
+    }
+  }
+]
