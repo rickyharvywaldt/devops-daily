@@ -3937,3 +3937,799 @@
     ]
   }
 ]
+[Thu Oct 16 18:33:29 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-9559",
+      "assignerOrgId": "c91e5604-2bd1-401f-a0ec-b25342b57ef9",
+      "state": "PUBLISHED",
+      "assignerShortName": "Pega",
+      "dateReserved": "2025-08-27T20:01:46.786Z",
+      "datePublished": "2025-10-16T15:28:18.504Z",
+      "dateUpdated": "2025-10-16T18:13:47.670Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Pega Infinity",
+            "vendor": "Pegasystems",
+            "versions": [
+              {
+                "lessThan": "Infinity 24.2.3",
+                "status": "affected",
+                "version": "8.7.5",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Eric Kahlert from the SEC Consult Vulnerability Lab (https://www.sec-consult.com/)"
+          }
+        ],
+        "datePublic": "2025-10-16T15:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<div><div>Pega Platform versions 8.7.5 to Infinity 24.2.2 are affected by a Insecure Direct Object Reference issue in a user interface component that can only be used to read data.</div></div>"
+              }
+            ],
+            "value": "Pega Platform versions 8.7.5 to Infinity 24.2.2 are affected by a Insecure Direct Object Reference issue in a user interface component that can only be used to read data."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-180",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-180 Exploiting Incorrectly Configured Access Control Security Levels"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-639",
+                "description": "CWE-639: Authorization Bypass Through User-Controlled Key",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "c91e5604-2bd1-401f-a0ec-b25342b57ef9",
+          "shortName": "Pega",
+          "dateUpdated": "2025-10-16T15:28:18.504Z"
+        },
+        "references": [
+          {
+            "url": "https://support.pega.com/support-doc/pega-security-advisory-h25-vulnerability-remediation-note"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Pega Platform versions 8.7.5 to Infinity 24.2.2 are affected by a Insecure Direct Object Reference issue in a user interface component that can only be used to read data",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-16T18:13:10.483009Z",
+                  "id": "CVE-2025-9559",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-16T18:13:47.670Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-36128",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2025-04-15T21:16:18.171Z",
+      "datePublished": "2025-10-16T16:49:26.251Z",
+      "dateUpdated": "2025-10-16T18:13:32.234Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:mq:9.1.0:*:*:*:lts:*:*:*",
+              "cpe:2.3:a:ibm:mq:9.2.0:*:*:*:lts:*:*:*",
+              "cpe:2.3:a:ibm:mq:9.3.0:*:*:*:lts:*:*:*",
+              "cpe:2.3:a:ibm:mq:9.4.0:*:*:*:lts:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "MQ",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "9.1"
+              },
+              {
+                "status": "affected",
+                "version": "9.2"
+              },
+              {
+                "status": "affected",
+                "version": "9.3"
+              },
+              {
+                "status": "affected",
+                "version": "9.4"
+              }
+            ],
+            "x_SWEdition": "LTS"
+          },
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:mq:9.3.0:*:*:*:continuous_delivery:*:*:*",
+              "cpe:2.3:a:ibm:mq:9.4.0:*:*:*:continuous_delivery:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "MQ",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "9.3"
+              },
+              {
+                "status": "affected",
+                "version": "9.4"
+              }
+            ],
+            "x_SWEdition": "CD"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "IBM MQ 9.1, 9.2, 9.3, 9.4 LTS and 9.3, 9.4 CD is vulnerable to a denial of service, caused by improper enforcement of the timeout on individual read operations. By conducting slowloris-type attacks, a remote attacker could exploit this vulnerability to cause a denial of service."
+              }
+            ],
+            "value": "IBM MQ 9.1, 9.2, 9.3, 9.4 LTS and 9.3, 9.4 CD is vulnerable to a denial of service, caused by improper enforcement of the timeout on individual read operations. By conducting slowloris-type attacks, a remote attacker could exploit this vulnerability to cause a denial of service."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-772",
+                "description": "CWE-772 Missing Release of Resource after Effective Lifetime",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-10-16T16:49:26.251Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7244480"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<p>To secure IBM WebSphere Liberty profile shipped with IBM MQ from Slowloris DDoS attacks, use one of the following methods:</p><p>1. Load Balancer Configuration</p><p>If the setup involves a load balancer in front of the IBM WebSphere Liberty profile of IBM MQ, configure the load balancer to handle Slowloris-style attacks. A load balancer acts as an intermediary between clients and Liberty, distributing incoming requests across multiple backend servers.</p><p>By using hardware load balancers with properly configured HTTP profiles, only complete and valid HTTP requests are forwarded to the web server, effectively filtering out the partial requests caused by Slowloris. This approach helps to prevent the attack from overwhelming the server, allowing it to continue serving legitimate traffic. Refer to IBM WebSphere Liberty documentation for configuration details.</p><p>2. Reverse Proxy</p><p>Consider using a reverse proxy to handle client requests. The reverse proxy can implement various security measures, including request buffering and handling connection timeouts, to mitigate Slowloris attacks.</p><p>3. Web Application Firewall (WAF)</p><p>Deploy a Web Application Firewall that can detect and block Slowloris-style attacks. A WAF can analyze incoming traffic, identify suspicious patterns indicative of Slowloris attacks, and block such requests before they reach the application server.</p><p>4. Limit Concurrent Connections</p><p>Implement a limit on the number of concurrent connections allowed from a single IP address or source. This helps to prevent an attack from establishing numerous connections and consuming all available server resources.</p><p>5. Traffic Rate Limiting</p><p>Implement rate-limiting mechanisms on the server to restrict the number of requests from a single IP address or source within a specific time frame. This method helps to prevent an attack from sending a pool of requests in a short period.</p>\n\n<br>"
+              }
+            ],
+            "value": "To secure IBM WebSphere Liberty profile shipped with IBM MQ from Slowloris DDoS attacks, use one of the following methods:\n\n1. Load Balancer Configuration\n\nIf the setup involves a load balancer in front of the IBM WebSphere Liberty profile of IBM MQ, configure the load balancer to handle Slowloris-style attacks. A load balancer acts as an intermediary between clients and Liberty, distributing incoming requests across multiple backend servers.\n\nBy using hardware load balancers with properly configured HTTP profiles, only complete and valid HTTP requests are forwarded to the web server, effectively filtering out the partial requests caused by Slowloris. This approach helps to prevent the attack from overwhelming the server, allowing it to continue serving legitimate traffic. Refer to IBM WebSphere Liberty documentation for configuration details.\n\n2. Reverse Proxy\n\nConsider using a reverse proxy to handle client requests. The reverse proxy can implement various security measures, including request buffering and handling connection timeouts, to mitigate Slowloris attacks.\n\n3. Web Application Firewall (WAF)\n\nDeploy a Web Application Firewall that can detect and block Slowloris-style attacks. A WAF can analyze incoming traffic, identify suspicious patterns indicative of Slowloris attacks, and block such requests before they reach the application server.\n\n4. Limit Concurrent Connections\n\nImplement a limit on the number of concurrent connections allowed from a single IP address or source. This helps to prevent an attack from establishing numerous connections and consuming all available server resources.\n\n5. Traffic Rate Limiting\n\nImplement rate-limiting mechanisms on the server to restrict the number of requests from a single IP address or source within a specific time frame. This method helps to prevent an attack from sending a pool of requests in a short period."
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM MQ denial of service",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-16T18:03:23.348860Z",
+                  "id": "CVE-2025-36128",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-16T18:13:32.234Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-58051",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-08-22T14:30:32.221Z",
+      "datePublished": "2025-10-16T16:48:19.618Z",
+      "dateUpdated": "2025-10-16T18:13:19.134Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Nextcloud Tables app allowed to include local file via PhpSpreadsheet when importing a table",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-841",
+                "lang": "en",
+                "description": "CWE-841: Improper Enforcement of Behavioral Workflow",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-wpp5-4w35-pxq6",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/nextcloud/security-advisories/security/advisories/GHSA-wpp5-4w35-pxq6"
+          },
+          {
+            "name": "https://github.com/nextcloud/tables/pull/1936",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/nextcloud/tables/pull/1936"
+          },
+          {
+            "name": "https://hackerone.com/reports/3249624",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://hackerone.com/reports/3249624"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "nextcloud",
+            "product": "security-advisories",
+            "versions": [
+              {
+                "version": ">= 0.7.0, < 0.7.6",
+                "status": "affected"
+              },
+              {
+                "version": ">= 0.8.0, < 0.8.8",
+                "status": "affected"
+              },
+              {
+                "version": ">= 0.9.0, < 0.9.5",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-10-16T16:48:19.618Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nextcloud Tables allows you to create your own tables with individual columns. Prior 0.7.6, 0.8.8, and 0.9.5, when importing a table, a user was able to specify files on the server and when their format is supported by the used PhpSpreadsheet library they would be included and their content leaked to the user. It is recommended that the Nextcloud Tables app is upgraded to 0.7.6, 0.8.8 or 0.9.5."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-wpp5-4w35-pxq6",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-16T18:03:43.989845Z",
+                  "id": "CVE-2025-58051",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-16T18:13:19.134Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-53092",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-06-25T13:41:23.085Z",
+      "datePublished": "2025-10-16T16:29:35.246Z",
+      "dateUpdated": "2025-10-16T18:13:08.618Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Strapi core vulnerable to sensitive data exposure via CORS misconfiguration",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "lang": "en",
+                "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "CWE-284: Improper Access Control",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-364",
+                "lang": "en",
+                "description": "CWE-364: Signal Handler Race Condition",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-942",
+                "lang": "en",
+                "description": "CWE-942: Permissive Cross-domain Policy with Untrusted Domains",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/strapi/strapi/security/advisories/GHSA-9329-mxxw-qwf8",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/strapi/strapi/security/advisories/GHSA-9329-mxxw-qwf8"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "strapi",
+            "product": "strapi",
+            "versions": [
+              {
+                "version": "< 5.20.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-10-16T16:29:35.246Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Strapi is an open source headless content management system. Strapi versions prior to 5.20.0 contain a CORS misconfiguration vulnerability in default installations. By default, Strapi reflects the value of the Origin header back in the Access-Control-Allow-Origin response header without proper validation or whitelisting. This allows an attacker-controlled site to send credentialed requests to the Strapi backend. An attacker can exploit this by hosting a malicious site on a different origin (e.g., different port) and sending requests with credentials to the Strapi API. The vulnerability is fixed in version 5.20.0. No known workarounds exist."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-9329-mxxw-qwf8",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-16T18:03:56.017150Z",
+                  "id": "CVE-2025-53092",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-16T18:13:08.618Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-61926",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-10-03T22:21:59.616Z",
+      "datePublished": "2025-10-09T21:20:32.670Z",
+      "dateUpdated": "2025-10-16T18:13:02.504Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Allstar Reviewbot has Authentication Bypass via Hard-coded Webhook Secret",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-453",
+                "lang": "en",
+                "description": "CWE-453: Insecure Default Variable Initialization",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-798",
+                "lang": "en",
+                "description": "CWE-798: Use of Hard-coded Credentials",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 4.6,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/ossf/allstar/security/advisories/GHSA-33f4-mjch-7fpr",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/ossf/allstar/security/advisories/GHSA-33f4-mjch-7fpr"
+          },
+          {
+            "name": "https://github.com/ossf/allstar/pull/713",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/ossf/allstar/pull/713"
+          },
+          {
+            "name": "https://github.com/ossf/allstar/commit/e004ecb540d63ca6f5b1689b41af6c0040a82c73",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/ossf/allstar/commit/e004ecb540d63ca6f5b1689b41af6c0040a82c73"
+          },
+          {
+            "name": "https://github.com/ossf/allstar/blob/294ae985cc2facd0918e8d820e4196021aa0b914/pkg/reviewbot/reviewbot.go#L59",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/ossf/allstar/blob/294ae985cc2facd0918e8d820e4196021aa0b914/pkg/reviewbot/reviewbot.go#L59"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ossf",
+            "product": "allstar",
+            "versions": [
+              {
+                "version": "< 0.0.0-20250721181116-e004ecb540d6",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-10-09T21:20:32.670Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Allstar is a GitHub App to set and enforce security policies. In versions prior to 4.5, a vulnerability in Allstar’s Reviewbot component caused inbound webhook requests to be validated against a hard-coded, shared secret. The value used for the secret token was compiled into the Allstar binary and could not be configured at runtime. In practice, this meant that every deployment using Reviewbot would validate requests with the same secret unless the operator modified source code and rebuilt the component - an expectation that is not documented and is easy to miss. All Allstar releases prior to v4.5 that include the Reviewbot code path are affected. Deployments on v4.5 and later are not affected. Those who have not enabled or exposed the Reviewbot endpoint are not exposed to this issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-33f4-mjch-7fpr",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/ossf/allstar/blob/294ae985cc2facd0918e8d820e4196021aa0b914/pkg/reviewbot/reviewbot.go#L59",
+              "tags": [
+                "exploit"
+              ]
+            },
+            {
+              "url": "https://github.com/ossf/allstar/security/advisories/GHSA-33f4-mjch-7fpr",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-16T18:12:55.672891Z",
+                  "id": "CVE-2025-61926",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-16T18:13:02.504Z"
+          }
+        }
+      ]
+    }
+  }
+]
