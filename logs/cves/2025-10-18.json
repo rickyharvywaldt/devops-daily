@@ -1,0 +1,809 @@
+[Sat Oct 18 01:42:17 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40718",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2025-04-16T08:38:20.493Z",
+      "datePublished": "2025-07-08T11:41:04.457Z",
+      "dateUpdated": "2025-07-10T10:14:05.465Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Quiter Gateway (Java WAR on Apache Tomcat)",
+            "vendor": "Quiter",
+            "versions": [
+              {
+                "lessThan": "4.7.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "David Carrión Poza"
+          }
+        ],
+        "datePublic": "2025-06-30T10:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper error handling vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to send malformed payloads to generate error messages containing sensitive information."
+              }
+            ],
+            "value": "Improper error handling vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to send malformed payloads to generate error messages containing sensitive information."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-209",
+                "description": "CWE-209 Generation of Error Message Containing Sensitive Information",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2025-07-10T10:14:05.465Z"
+        },
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-quiterweb-autoweb-quiter"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The vulnerability has been fixed by Quiter team in the latest version."
+              }
+            ],
+            "value": "The vulnerability has been fixed by Quiter team in the latest version."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Improper error handling vulnerability in Quiter Gateway",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-07-08T15:52:04.066336Z",
+                  "id": "CVE-2025-40718",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-07-08T15:52:14.312Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40719",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2025-04-16T08:38:20.493Z",
+      "datePublished": "2025-07-08T11:42:48.980Z",
+      "dateUpdated": "2025-07-10T10:14:17.091Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Quiter Gateway (Java WAR on Apache Tomcat)",
+            "vendor": "Quiter",
+            "versions": [
+              {
+                "lessThan": "4.7.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "David Carrión Poza"
+          }
+        ],
+        "datePublic": "2025-06-30T10:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Reflected Cross-site Scripting (XSS) vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending a malicious URL trhough the id_concesion parameter in /&lt;Client&gt;FacturaE/VerFacturaPDF."
+              }
+            ],
+            "value": "Reflected Cross-site Scripting (XSS) vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending a malicious URL trhough the id_concesion parameter in /<Client>FacturaE/VerFacturaPDF."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2025-07-10T10:14:17.091Z"
+        },
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-quiterweb-autoweb-quiter"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The vulnerability has been fixed by Quiter team in the latest version."
+              }
+            ],
+            "value": "The vulnerability has been fixed by Quiter team in the latest version."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Reflected Cross-site Scripting (XSS) vulnerability in Quiter Gateway",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-07-08T15:39:31.650916Z",
+                  "id": "CVE-2025-40719",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-07-08T15:48:57.944Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40720",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2025-04-16T08:38:20.493Z",
+      "datePublished": "2025-07-08T11:43:06.231Z",
+      "dateUpdated": "2025-07-10T10:14:29.087Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Quiter Gateway (Java WAR on Apache Tomcat)",
+            "vendor": "Quiter",
+            "versions": [
+              {
+                "lessThan": "4.7.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "David Carrión Poza"
+          }
+        ],
+        "datePublic": "2025-06-30T10:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Reflected Cross-site Scripting (XSS) vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending a malicious URL trhough the campo parameter in /&lt;Client&gt;FacturaE/VerFacturaPDF."
+              }
+            ],
+            "value": "Reflected Cross-site Scripting (XSS) vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending a malicious URL trhough the campo parameter in /<Client>FacturaE/VerFacturaPDF."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2025-07-10T10:14:29.087Z"
+        },
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-quiterweb-autoweb-quiter"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The vulnerability has been fixed by Quiter team in the latest version."
+              }
+            ],
+            "value": "The vulnerability has been fixed by Quiter team in the latest version."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Reflected Cross-site Scripting (XSS) vulnerability in Quiter Gateway",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-07-08T15:36:22.296597Z",
+                  "id": "CVE-2025-40720",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-07-08T15:36:35.297Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40721",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2025-04-16T08:38:20.493Z",
+      "datePublished": "2025-07-08T11:43:24.662Z",
+      "dateUpdated": "2025-07-10T10:14:39.292Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Quiter Gateway (Java WAR on Apache Tomcat)",
+            "vendor": "Quiter",
+            "versions": [
+              {
+                "lessThan": "4.7.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "David Carrión Poza"
+          }
+        ],
+        "datePublic": "2025-06-30T10:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Reflected Cross-site Scripting (XSS) vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending a malicious URL trhough the id_factura parameter in /&lt;Client&gt;FacturaE/listado_facturas_ficha.jsp."
+              }
+            ],
+            "value": "Reflected Cross-site Scripting (XSS) vulnerability in versions prior to 4.7.0 of Quiter Gateway by Quiter. This vulnerability allows an attacker to execute JavaScript code in the victim's browser by sending a malicious URL trhough the id_factura parameter in /<Client>FacturaE/listado_facturas_ficha.jsp."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2025-07-10T10:14:39.292Z"
+        },
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-quiterweb-autoweb-quiter"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The vulnerability has been fixed by Quiter team in the latest version."
+              }
+            ],
+            "value": "The vulnerability has been fixed by Quiter team in the latest version."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Reflected Cross-site Scripting (XSS) vulnerability in Quiter Gateway",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-07-08T15:32:32.956870Z",
+                  "id": "CVE-2025-40721",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-07-08T15:35:52.452Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-36245",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2025-04-15T21:16:43.935Z",
+      "datePublished": "2025-09-29T22:29:33.007Z",
+      "dateUpdated": "2025-10-01T03:55:56.172Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "cpes": [
+              "cpe:2.3:a:ibm:infosphere_information_server:11.7:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:infosphere_information_server:11.7.1.6:*:*:*:*:*:*:*"
+            ],
+            "defaultStatus": "unaffected",
+            "product": "InfoSphere Information Server",
+            "vendor": "IBM",
+            "versions": [
+              {
+                "lessThanOrEqual": "11.7.1.6",
+                "status": "affected",
+                "version": "11.7.0.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(255, 255, 255);\">IBM InfoSphere 11.7.0.0 through 11.7.1.6 Information Server could allow an authenticated user to execute arbitrary commands with elevated privileges on the system due to improper validation of user supplied input.</span>"
+              }
+            ],
+            "value": "IBM InfoSphere 11.7.0.0 through 11.7.1.6 Information Server could allow an authenticated user to execute arbitrary commands with elevated privileges on the system due to improper validation of user supplied input."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "description": "CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2025-09-29T22:29:33.007Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://www.ibm.com/support/pages/node/7246170"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<table><tbody><tr><td>IBM InfoSphere Information Server</td><td>11.7.0.0 to 11.7.1.6</td><td><a target=\"_blank\" rel=\"nofollow\" href=\"https://www.ibm.com/mysupport/s/defect/aCIgJ0000004dQz/dt449123\">DT449123</a></td><td>--Apply IBM InfoSphere Information Server version <a target=\"_blank\" rel=\"nofollow\" href=\"https://www.ibm.com/support/pages/node/878310\">11.7.1.0</a>&nbsp;<br>--Apply IBM InfoSphere Information Server version <a target=\"_blank\" rel=\"nofollow\" href=\"https://www.ibm.com/support/pages/node/7182872\">11.7.1.6</a><br><br>--Apply IBM Information Server <a target=\"_blank\" rel=\"nofollow\" href=\"https://www.ibm.com/support/pages/node/7245759\">11.7.1.6 Service pack 1</a></td></tr></tbody></table>\n\n<br>"
+              }
+            ],
+            "value": "IBM InfoSphere Information Server11.7.0.0 to 11.7.1.6 DT449123 https://www.ibm.com/mysupport/s/defect/aCIgJ0000004dQz/dt449123 --Apply IBM InfoSphere Information Server version  11.7.1.0 https://www.ibm.com/support/pages/node/878310  \n--Apply IBM InfoSphere Information Server version  11.7.1.6 https://www.ibm.com/support/pages/node/7182872 \n\n--Apply IBM Information Server  11.7.1.6 Service pack 1 https://www.ibm.com/support/pages/node/7245759"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "IBM InfoSphere Information Server command execution",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-09-30T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-36245"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-01T03:55:56.172Z"
+          }
+        }
+      ]
+    }
+  }
+]
