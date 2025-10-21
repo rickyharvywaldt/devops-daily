@@ -1,0 +1,682 @@
+[Tue Oct 21 18:33:55 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2022-49444",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2025-02-26T02:08:31.571Z",
+      "datePublished": "2025-02-26T02:12:56.606Z",
+      "dateUpdated": "2025-05-04T12:44:49.062Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2025-05-04T12:44:49.062Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nmodule: fix [e_shstrndx].sh_size=0 OOB access\n\nIt is trivial to craft a module to trigger OOB access in this line:\n\n\tif (info->secstrings[strhdr->sh_size - 1] != '\\0') {\n\nBUG: unable to handle page fault for address: ffffc90000aa0fff\nPGD 100000067 P4D 100000067 PUD 100066067 PMD 10436f067 PTE 0\nOops: 0000 [#1] PREEMPT SMP PTI\nCPU: 7 PID: 1215 Comm: insmod Not tainted 5.18.0-rc5-00007-g9bf578647087-dirty #10\nHardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.14.0-4.fc34 04/01/2014\nRIP: 0010:load_module+0x19b/0x2391\n\n[rebased patch onto modules-next]"
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "kernel/module/main.c"
+            ],
+            "versions": [
+              {
+                "version": "ec2a29593c83ed71a7f16e3243941ebfcf75fdf6",
+                "lessThan": "09cb6663618a74fe5572a4931ecbf098832e79ec",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "ec2a29593c83ed71a7f16e3243941ebfcf75fdf6",
+                "lessThan": "921630e2e5124a04158129a8f22f4b425e61a858",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "ec2a29593c83ed71a7f16e3243941ebfcf75fdf6",
+                "lessThan": "45a76414b6d8b8b39c23fea53b9d20e831ae72a0",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "ec2a29593c83ed71a7f16e3243941ebfcf75fdf6",
+                "lessThan": "391e982bfa632b8315235d8be9c0a81374c6a19c",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "05d891e76dde3e430c707dae7d85139794eeadbd",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "d802672c7f00963613f289579073ac519f0d306c",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "214aa69cac91a723239118bbbfe77d5654ddff6b",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "kernel/module/main.c"
+            ],
+            "versions": [
+              {
+                "version": "5.12",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "5.12",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.54",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.17.14",
+                "lessThanOrEqual": "5.17.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.18.3",
+                "lessThanOrEqual": "5.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.19",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.12",
+                    "versionEndExcluding": "5.15.54"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.12",
+                    "versionEndExcluding": "5.17.14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.12",
+                    "versionEndExcluding": "5.18.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.12",
+                    "versionEndExcluding": "5.19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.4.110"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.10.26"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.11.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/09cb6663618a74fe5572a4931ecbf098832e79ec"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/921630e2e5124a04158129a8f22f4b425e61a858"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/45a76414b6d8b8b39c23fea53b9d20e831ae72a0"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/391e982bfa632b8315235d8be9c0a81374c6a19c"
+          }
+        ],
+        "title": "module: fix [e_shstrndx].sh_size=0 OOB access",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-60427",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2025-10-21T17:25:53.486Z",
+      "dateReserved": "2025-09-26T00:00:00.000Z",
+      "datePublished": "2025-10-21T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2025-10-21T17:25:53.486Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LibreTime 3.0.0-alpha.10 and possibly earlier is vulnerable to Broken Access Control, where a user with the DJ role can access analytics data via the Web UI and direct API calls. The backend does not verify role-based permissions for analytics endpoints, allowing unauthorized retrieval of station-wide metrics. This results in information disclosure to less privileged users."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/libretime/libretime"
+          },
+          {
+            "url": "https://github.com/libretime/libretime/issues/1251"
+          },
+          {
+            "url": "https://beafn28.gitbook.io/beafn28/cve/broken-access-control-in-libretime-analytics-endpoints-cve-2025-60427"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dataVersion": "5.1"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-62597",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-10-16T19:24:37.267Z",
+      "datePublished": "2025-10-21T16:34:19.775Z",
+      "dateUpdated": "2025-10-21T17:25:11.277Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "WeGIA Vulnerable to Reflected Cross-Site Scripting via Endpoint 'pessoa/editar_info_pessoal.php' Parameter 'sql'",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "LOW",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-wqjv-fhc9-h7hm",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-wqjv-fhc9-h7hm"
+          },
+          {
+            "name": "https://github.com/LabRedesCefetRJ/WeGIA/commit/e41395fe6a7b4f428b1797a8d5b52e0e3dbbb3d9",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/LabRedesCefetRJ/WeGIA/commit/e41395fe6a7b4f428b1797a8d5b52e0e3dbbb3d9"
+          },
+          {
+            "name": "https://github.com/LabRedesCefetRJ/WeGIA/releases/tag/3.5.1",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/LabRedesCefetRJ/WeGIA/releases/tag/3.5.1"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "LabRedesCefetRJ",
+            "product": "WeGIA",
+            "versions": [
+              {
+                "version": "< 3.5.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-10-21T16:34:19.775Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WeGIA is an open source Web Manager for Institutions with a focus on Portuguese language users. Prior to version 3.5.1, a reflected cross-site scripting (XSS) vulnerability was identified in the editar_info_pessoal.php endpoint of the WeGIA application. This vulnerability allows attackers to inject malicious scripts in the sql parameter. The vulnerable endpoint is GET /WeGIA/html/pessoa/editar_info_pessoal.php?sql=1. This issue has been patched in version 3.5.1."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-wqjv-fhc9-h7hm",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-21T17:20:40.474045Z",
+                  "id": "CVE-2025-62597",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-21T17:25:11.277Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11757",
+      "assignerOrgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+      "state": "PUBLISHED",
+      "assignerShortName": "icscert",
+      "dateReserved": "2025-10-14T18:46:17.797Z",
+      "datePublished": "2025-10-21T17:24:54.398Z",
+      "dateUpdated": "2025-10-21T17:24:54.398Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "CloudEdge App",
+            "vendor": "CloudEdge",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "4.4.2"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Ph4ng0t reported this vulnerability to CISA."
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(255, 255, 255);\">The CloudEdge Cloud does not sanitize the MQTT topic input, which could allow an attacker to leverage the MQTT wildcard to receive all the messages that should be delivered to other users by subscribing to the a MQTT topic. In these messages, the attacker can obtain the credentials and key information to connect to the cameras from peer to peer.</span>"
+              }
+            ],
+            "value": "The CloudEdge Cloud does not sanitize the MQTT topic input, which could allow an attacker to leverage the MQTT wildcard to receive all the messages that should be delivered to other users by subscribing to the a MQTT topic. In these messages, the attacker can obtain the credentials and key information to connect to the cameras from peer to peer."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-155",
+                "description": "CWE-155 Improper Neutralization of Wildcards or Matching Symbols",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+          "shortName": "icscert",
+          "dateUpdated": "2025-10-21T17:24:54.398Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "government-resource"
+            ],
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-294-05"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Improper Neutralization of Wildcards or Matching Symbols in CloudEdge Online Cameras and App",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(255, 255, 255);\">CloudEdge and its parent company Meari Technologies did not respond to CISA's attempts at coordination. Users of CloudEdge Cameras are encouraged to contact CloudEdge or </span><a target=\"_blank\" rel=\"nofollow\">Meari Technolgies</a><span style=\"background-color: rgb(255, 255, 255);\">&nbsp;and keep their systems up to date.</span>\n\n<br>"
+              }
+            ],
+            "value": "CloudEdge and its parent company Meari Technologies did not respond to CISA's attempts at coordination. Users of CloudEdge Cameras are encouraged to contact CloudEdge or Meari Technolgies and keep their systems up to date."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12031",
+      "assignerOrgId": "a0340c66-c385-4f8b-991b-3d05f6fd5220",
+      "state": "PUBLISHED",
+      "assignerShortName": "azure-access",
+      "dateReserved": "2025-10-21T17:16:07.117Z",
+      "datePublished": "2025-10-21T17:22:36.176Z",
+      "dateUpdated": "2025-10-21T17:22:36.176Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "BLU-IC2",
+            "vendor": "Azure Access Technology",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.19.5",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "BLU-IC4",
+            "vendor": "Azure Access Technology",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.19.5",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Kevin Schaller"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Benjamin Lafois"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Alexi Bitsios"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Sebastian Toscano"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Dominik Schneider"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "HTTP Security Misconfiguration - Lacking Secure and HTTPOnly Attribute may allow reading&nbsp;the sensitive cookies from the javascript context<p>This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.</p>"
+              }
+            ],
+            "value": "HTTP Security Misconfiguration - Lacking Secure and HTTPOnly Attribute may allow reading the sensitive cookies from the javascript contextThis issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-107",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-107 Cross Site Tracing"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "LOW",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1004",
+                "description": "CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0340c66-c385-4f8b-991b-3d05f6fd5220",
+          "shortName": "azure-access",
+          "dateUpdated": "2025-10-21T17:22:36.176Z"
+        },
+        "references": [
+          {
+            "url": "https://azure-access.com/security-advisories"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "HTTP Security Misconfiguration - Lacking Secure and HTTPOnly Attribute",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      }
+    }
+  }
+]
