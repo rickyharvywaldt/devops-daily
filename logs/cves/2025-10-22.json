@@ -10410,3 +10410,355 @@
     ]
   }
 ]
+[Wed Oct 22 12:51:57 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-cwmv-37m7-7829",
+    "modified": "2025-10-22T12:31:21Z",
+    "published": "2025-10-22T12:31:21Z",
+    "aliases": [
+      "CVE-2025-11915"
+    ],
+    "details": "Connection desynchronization between an HTTP proxy and the model backend. The fixes were rolled out for all proxies in front of impacted models by 2025-09-28. Users do not need to take any action.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:L/SI:N/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Clear"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11915"
+      },
+      {
+        "type": "WEB",
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/security-bulletins#gcp-2025-059"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-444"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-22T10:15:31Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-3rvr-g3cj-8jg3",
+    "modified": "2025-10-22T12:31:21Z",
+    "published": "2025-10-22T12:31:21Z",
+    "aliases": [
+      "CVE-2025-11086"
+    ],
+    "details": "The Academy LMS – WordPress LMS Plugin for Complete eLearning Solution plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 3.3.7. This is due to the plugin not properly validating a user's role prior to registering a user via the Social Login addon. This makes it possible for unauthenticated attackers to update their role to Administrator when registering on the site.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11086"
+      },
+      {
+        "type": "WEB",
+        "url": "https://academylms.net"
+      },
+      {
+        "type": "WEB",
+        "url": "https://academylms.net/whats-new"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0f42f0be-5386-448b-9e65-5d2584cc2175?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-22T12:15:33Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-342p-f7r9-8cjx",
+    "modified": "2025-10-22T12:31:21Z",
+    "published": "2025-10-22T12:31:21Z",
+    "aliases": [
+      "CVE-2025-6833"
+    ],
+    "details": "The All in One Time Clock Lite – Tracking Employee Time Has Never Been Easier plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.0 via the 'aio_time_clock_lite_js' AJAX action due to missing validation on a user controlled key. This makes it possible for authenticated attackers, with subscriber access and above, to clock other users in and out.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-6833"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3336943%40aio-time-clock-lite&new=3336943%40aio-time-clock-lite&sfp_email=&sfph_mail="
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c6c48173-ffe3-40f8-a2fa-cee66869e343?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-22T10:15:33Z"
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11086",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-09-26T18:36:19.026Z",
+      "datePublished": "2025-10-22T11:25:18.300Z",
+      "dateUpdated": "2025-10-22T11:25:18.300Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-10-22T11:25:18.300Z"
+        },
+        "affected": [
+          {
+            "vendor": "academylms",
+            "product": "Academy LMS Pro",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "3.3.7",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Academy LMS – WordPress LMS Plugin for Complete eLearning Solution plugin for WordPress is vulnerable to privilege escalation in all versions up to, and including, 3.3.7. This is due to the plugin not properly validating a user's role prior to registering a user via the Social Login addon. This makes it possible for unauthenticated attackers to update their role to Administrator when registering on the site."
+          }
+        ],
+        "title": "Academy LMS Pro <= 3.3.7 - Unauthenticated Privilege Escalation via Social Login Addon",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0f42f0be-5386-448b-9e65-5d2584cc2175?source=cve"
+          },
+          {
+            "url": "https://academylms.net/"
+          },
+          {
+            "url": "https://academylms.net/whats-new/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-269 Improper Privilege Management",
+                "cweId": "CWE-269",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Thái An"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-09-26T19:10:14.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-10-21T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-10020",
+      "assignerOrgId": "0fc0942c-577d-436f-ae8e-945763c79b02",
+      "state": "PUBLISHED",
+      "assignerShortName": "Zohocorp",
+      "dateReserved": "2025-09-05T10:51:20.375Z",
+      "datePublished": "2025-10-21T12:12:02.187Z",
+      "dateUpdated": "2025-10-22T11:18:09.933Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "ManageEngine ADManager Plus",
+            "vendor": "Zohocorp",
+            "versions": [
+              {
+                "lessThan": "8024",
+                "status": "affected",
+                "version": "0",
+                "versionType": "8024"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Zohocorp ManageEngine ADManager Plus version before 8024 are vulnerable to <span style=\"background-color: rgb(255, 255, 255);\">authenticated command injection vulnerability in the Custom Script component</span>."
+              }
+            ],
+            "value": "Zohocorp ManageEngine ADManager Plus version before 8024 are vulnerable to authenticated command injection vulnerability in the Custom Script component."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-77",
+                "description": "CWE-77 Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "0fc0942c-577d-436f-ae8e-945763c79b02",
+          "shortName": "Zohocorp",
+          "dateUpdated": "2025-10-22T11:18:09.933Z"
+        },
+        "references": [
+          {
+            "url": "https://www.manageengine.com/products/ad-manager/admanager-kb/cve-2025-10020.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Command Injection",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-21T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-10020"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-22T03:55:16.464Z"
+          }
+        }
+      ]
+    }
+  }
+]
