@@ -557,3 +557,562 @@
     }
   }
 ]
+[Thu Oct 23 01:49:09 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11575",
+      "assignerOrgId": "a39b4221-9bd0-4244-95fc-f3e2e07f1deb",
+      "state": "PUBLISHED",
+      "assignerShortName": "mongodb",
+      "dateReserved": "2025-10-09T23:13:28.369Z",
+      "datePublished": "2025-10-23T00:22:00.809Z",
+      "dateUpdated": "2025-10-23T00:22:00.809Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "platforms": [
+              "Windows"
+            ],
+            "product": "Atlas SQL ODBC driver",
+            "vendor": "MongoDB",
+            "versions": [
+              {
+                "lessThanOrEqual": "2.0.0",
+                "status": "affected",
+                "version": "1.0.0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-10-09T14:14:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Incorrect Default Permissions vulnerability in MongoDB Atlas SQL ODBC driver on Windows allows Privilege Escalation.<p>This issue affects MongoDB Atlas SQL ODBC driver: from 1.0.0 through 2.0.0.</p>"
+              }
+            ],
+            "value": "Incorrect Default Permissions vulnerability in MongoDB Atlas SQL ODBC driver on Windows allows Privilege Escalation.This issue affects MongoDB Atlas SQL ODBC driver: from 1.0.0 through 2.0.0."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-233",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-233 Privilege Escalation"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "attackVector": "LOCAL",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-276",
+                "description": "CWE-276 Incorrect Default Permissions",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a39b4221-9bd0-4244-95fc-f3e2e07f1deb",
+          "shortName": "mongodb",
+          "dateUpdated": "2025-10-23T00:22:00.809Z"
+        },
+        "references": [
+          {
+            "url": "https://www.mongodb.com/docs/atlas/release-notes/sql/"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "MongoDB Atlas SQL ODBC driver installation via MSI may leave ACLs unset on custom installation directories",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-61932",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-10-06T02:24:53.875Z",
+      "datePublished": "2025-10-20T07:25:39.916Z",
+      "dateUpdated": "2025-10-22T22:20:23.471Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "MOTEX Inc.",
+            "product": "Lanscope Endpoint Manager (On-Premises) (Client program (MR) and Detection agent (DA))",
+            "versions": [
+              {
+                "version": "Ver.9.4.7.1 and earlier",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Lanscope Endpoint Manager (On-Premises) (Client program (MR) and Detection agent (DA)) improperly verifies the origin of incoming requests, allowing an attacker to execute arbitrary code by sending specially crafted packets."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Improper Verification of Source of a Communication Channel",
+                "lang": "en-US",
+                "cweId": "CWE-940",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.motex.co.jp/news/notice/2025/release251020/"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN86318557/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-10-20T07:25:39.916Z"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-21T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2025-61932"
+                }
+              }
+            },
+            {
+              "other": {
+                "type": "kev",
+                "content": {
+                  "dateAdded": "2025-10-22",
+                  "reference": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61932"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-22T22:20:23.471Z"
+          },
+          "timeline": [
+            {
+              "time": "2025-10-22T00:00:00+00:00",
+              "lang": "en",
+              "value": "CVE-2025-61932 added to CISA KEV"
+            }
+          ],
+          "references": [
+            {
+              "name": "CISA KEV",
+              "tags": [
+                "government-resource"
+              ],
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61932"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-6264",
+      "assignerOrgId": "9974b330-7714-4307-a722-5648477acda7",
+      "state": "PUBLISHED",
+      "assignerShortName": "rapid7",
+      "dateReserved": "2025-06-19T00:22:46.272Z",
+      "datePublished": "2025-06-20T02:01:33.993Z",
+      "dateUpdated": "2025-10-22T19:18:43.198Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "platforms": [
+              "Windows",
+              "MacOS",
+              "Linux"
+            ],
+            "product": "Velociraptor",
+            "repo": "https://github.com/Velocidex/velociraptor",
+            "vendor": "Rapid7",
+            "versions": [
+              {
+                "lessThan": "0.74.3",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Users who rely on artifacts to prevent dangerous actions from already privileged users."
+              }
+            ],
+            "value": "Users who rely on artifacts to prevent dangerous actions from already privileged users."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "reporter",
+            "value": "We thank Christian Fünfhaus  from Deutsche Bahn CSIRT for identifying and reporting this issue"
+          }
+        ],
+        "datePublic": "2025-06-19T00:44:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Velociraptor allows collection of VQL queries packaged into Artifacts from endpoints. These artifacts can be used to do anything and usually run with elevated permissions.&nbsp; To limit access to some dangerous artifact, Velociraptor allows for those to require high permissions like EXECVE to launch.<br><br>The Admin.Client.UpdateClientConfig is an artifact used to update the client's configuration. This artifact did not enforce an additional required permission, allowing users with COLLECT_CLIENT permissions (normally given by the \"Investigator\" role) to collect it from endpoints and update the configuration. <br><br>This can lead to arbitrary command execution and endpoint takeover.<br><br>To successfully exploit this vulnerability the user must already have access to collect artifacts from the endpoint (i.e. have the COLLECT_CLIENT given typically by the \"Investigator' role).&nbsp;"
+              }
+            ],
+            "value": "Velociraptor allows collection of VQL queries packaged into Artifacts from endpoints. These artifacts can be used to do anything and usually run with elevated permissions.  To limit access to some dangerous artifact, Velociraptor allows for those to require high permissions like EXECVE to launch.\n\nThe Admin.Client.UpdateClientConfig is an artifact used to update the client's configuration. This artifact did not enforce an additional required permission, allowing users with COLLECT_CLIENT permissions (normally given by the \"Investigator\" role) to collect it from endpoints and update the configuration. \n\nThis can lead to arbitrary command execution and endpoint takeover.\n\nTo successfully exploit this vulnerability the user must already have access to collect artifacts from the endpoint (i.e. have the COLLECT_CLIENT given typically by the \"Investigator' role)."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-23",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-23 File Content Injection"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "HIGH",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-276",
+                "description": "CWE-276 Incorrect Default Permissions",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9974b330-7714-4307-a722-5648477acda7",
+          "shortName": "rapid7",
+          "dateUpdated": "2025-06-22T23:23:30.800Z"
+        },
+        "references": [
+          {
+            "url": "https://docs.velociraptor.app/announcements/advisories/cve-2025-6264/"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Velociraptor priviledge escalation via UpdateConfig artifact",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "To better restrict the types of artifacts users can run, the `basic artifacts` mechanism should be used as described&nbsp;<a target=\"_blank\" rel=\"nofollow\" href=\"https://docs.velociraptor.app/docs/artifacts/security/#basic-artifacts\">https://docs.velociraptor.app/docs/artifacts/security/#basic-artifacts</a><br><br>To detect unintended privilege escalations in custom artifacts, users should run the artifact verifier as described here&nbsp;<a target=\"_blank\" rel=\"nofollow\" href=\"https://docs.velociraptor.app/docs/artifacts/security/#restricting-dangerous-client-artifacts\">https://docs.velociraptor.app/docs/artifacts/security/#restricting-dangerous-client-artifacts</a>"
+              }
+            ],
+            "value": "To better restrict the types of artifacts users can run, the `basic artifacts` mechanism should be used as described  https://docs.velociraptor.app/docs/artifacts/security/#basic-artifacts \n\nTo detect unintended privilege escalations in custom artifacts, users should run the artifact verifier as described here  https://docs.velociraptor.app/docs/artifacts/security/#restricting-dangerous-client-artifacts"
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://blog.talosintelligence.com/velociraptor-leveraged-in-ransomware-attacks/"
+            },
+            {
+              "url": "https://news.sophos.com/en-us/2025/08/26/velociraptor-incident-response-tool-abused-for-remote-access/"
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-15T03:55:34.225617Z",
+                  "id": "CVE-2025-6264",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-22T19:18:43.198Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-g3v5-cgpf-rr2h",
+    "modified": "2025-10-23T00:30:33Z",
+    "published": "2025-10-20T09:30:27Z",
+    "aliases": [
+      "CVE-2025-61932"
+    ],
+    "details": "Lanscope Endpoint Manager (On-Premises) (Client program (MR) and Detection agent (DA)) improperly verifies the origin of incoming requests, allowing an attacker to execute arbitrary code by sending specially crafted packets.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61932"
+      },
+      {
+        "type": "WEB",
+        "url": "https://jvn.jp/en/jp/JVN86318557"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61932"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.motex.co.jp/news/notice/2025/release251020"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-940"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-20T08:15:33Z"
+    }
+  },
+  {
+    "modified": "2025-10-23T00:01:16Z",
+    "published": "2025-10-23T00:01:16Z",
+    "schema_version": "1.5.0",
+    "id": "MAL-2025-48556",
+    "summary": "Malicious code in qwant-search-extension (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: ossf-package-analysis (b62fa18764e78b78ad37bea56c978df2cba57aa015e3b3eb13b0fc74e05678b1)\nThe OpenSSF Package Analysis project identified 'qwant-search-extension' @ 10.0.6 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "qwant-search-extension"
+        },
+        "versions": [
+          "10.0.6"
+        ]
+      }
+    ],
+    "credits": [
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "import_time": "2025-10-23T00:24:02.612457958Z",
+          "modified_time": "2025-10-23T00:01:16Z",
+          "sha256": "b62fa18764e78b78ad37bea56c978df2cba57aa015e3b3eb13b0fc74e05678b1",
+          "source": "ossf-package-analysis",
+          "versions": [
+            "10.0.6"
+          ]
+        }
+      ]
+    }
+  }
+]
