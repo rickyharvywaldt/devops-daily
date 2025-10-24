@@ -1,0 +1,270 @@
+[Fri Oct 24 12:51:04 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7730",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-07-16T21:50:21.233Z",
+      "datePublished": "2025-10-23T22:25:22.655Z",
+      "dateUpdated": "2025-10-24T12:31:34.279Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-10-23T22:25:22.655Z"
+        },
+        "affected": [
+          {
+            "vendor": "boldthemes",
+            "product": "Bold Page Builder",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "5.4.5",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Bold Page Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘percentage’ parameter in all versions up to, and including, 5.4.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "Bold Page Builder <= 5.4.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via `percentage` Parameter",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6cd5d1c7-4be2-457b-bd28-0cb76e9800e5?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/bold-page-builder/tags/5.4.2/content_elements/bt_bb_progress_bar/bt_bb_progress_bar.php#L90"
+          },
+          {
+            "url": "https://wordpress.org/plugins/bold-page-builder/#developers"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Peter Thaleikis"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-23T09:43:52.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-24T12:11:01.661428Z",
+                  "id": "CVE-2025-7730",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-24T12:31:34.279Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x89v-x9wm-242x",
+    "modified": "2025-10-24T12:30:51Z",
+    "published": "2025-10-24T12:30:51Z",
+    "aliases": [
+      "CVE-2023-53733"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: sched: cls_u32: Undo tcf_bind_filter if u32_replace_hw_knode\n\nWhen u32_replace_hw_knode fails, we need to undo the tcf_bind_filter\noperation done at u32_set_parms.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2023-53733"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/025159ed118ba5145b241d574edadb0e00d3c20f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/9cb36faedeafb9720ac236aeae2ea57091d90a09"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/a9345793469b65ee5ba7b033239916c2a67d3dd4"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-24T12:15:35Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wfq6-x28p-qgh6",
+    "modified": "2025-10-24T12:30:51Z",
+    "published": "2025-10-24T12:30:51Z",
+    "aliases": [
+      "CVE-2025-10680"
+    ],
+    "details": "OpenVPN 2.7_alpha1 through 2.7_beta1 on POSIX based platforms allows a remote authenticated server to inject shell commands via DNS variables when --dns-updown is in use",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-10680"
+      },
+      {
+        "type": "WEB",
+        "url": "https://community.openvpn.net/Security%20Announcements/CVE-2025-10680"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.mail-archive.com/openvpn-announce@lists.sourceforge.net/msg00149.html"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-24T10:15:34Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-p2f5-h899-464p",
+    "modified": "2025-10-24T12:30:51Z",
+    "published": "2025-10-24T12:30:51Z",
+    "aliases": [
+      "CVE-2025-5605"
+    ],
+    "details": "An authentication bypass vulnerability exists in the Management Console of multiple WSO2 products. A malicious actor with access to the console can manipulate the request URI to bypass authentication and access certain restricted resources, resulting in partial information disclosure.\n\nThe known exposure from this issue is limited to memory statistics. While the vulnerability does not allow full account compromise, it still enables unauthorized access to internal system details.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5605"
+      },
+      {
+        "type": "WEB",
+        "url": "https://security.docs.wso2.com/en/latest/security-announcements/security-advisories/2025/WSO2-2025-4115"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-290"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-24T10:15:39Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-jxm3-88rp-cq73",
+    "modified": "2025-10-24T12:30:51Z",
+    "published": "2025-10-24T12:30:51Z",
+    "aliases": [
+      "CVE-2025-36361"
+    ],
+    "details": "IBM App Connect Enterprise 13.0.1.0 through 13.0.4.2, and 12.0.1.0 through 12.0.12.17 could allow an authenticated user to perform unauthorized actions on customer defined resources due to missing authorization.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-36361"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.ibm.com/support/pages/node/7249061"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-24T10:15:38Z"
+    }
+  }
+]
