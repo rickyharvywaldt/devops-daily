@@ -1865,3 +1865,1744 @@
     }
   }
 ]
+[Mon Oct 27 18:34:21 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-60735",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2025-10-24T19:44:08.283Z",
+      "dateReserved": "2025-09-26T00:00:00.000Z",
+      "datePublished": "2025-10-24T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2025-10-24T17:43:22.873Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PerfreeBlog v4.0.11 has a File Upload vulnerability in the installPlugin function"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://perfreeblog.com"
+          },
+          {
+            "url": "https://perfree.org.cn/"
+          },
+          {
+            "url": "https://github.com/dengxmenglihua/cve/blob/main/PerfreeBlog/File%20Upload%202/Arbitrary%20File%20Upload%20Vulnerability%20in%20PerfreeBlog%20System.md"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-434",
+                  "lang": "en",
+                  "description": "CWE-434 Unrestricted Upload of File with Dangerous Type"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.6,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+                "integrityImpact": "LOW",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "LOW",
+                "privilegesRequired": "LOW",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-24T19:41:06.928247Z",
+                  "id": "CVE-2025-60735",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-24T19:44:08.283Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.1"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-10497",
+      "assignerOrgId": "ceab7361-8a18-47b1-92ba-4d7d25f6715a",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitLab",
+      "dateReserved": "2025-09-15T20:04:46.546Z",
+      "datePublished": "2025-10-27T00:05:39.306Z",
+      "dateUpdated": "2025-10-27T00:05:39.306Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Allocation of Resources Without Limits or Throttling in GitLab",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.10 before 18.3.5, 18.4 before 18.4.3, and 18.5 before 18.5.1 that could have allowed an unauthenticated attacker to cause a denial of service condition by sending specially crafted payloads."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "GitLab",
+            "product": "GitLab",
+            "repo": "git://git@gitlab.com:gitlab-org/gitlab.git",
+            "cpes": [
+              "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+            ],
+            "versions": [
+              {
+                "version": "17.10",
+                "status": "affected",
+                "lessThan": "18.3.5",
+                "versionType": "semver"
+              },
+              {
+                "version": "18.4",
+                "status": "affected",
+                "lessThan": "18.4.3",
+                "versionType": "semver"
+              },
+              {
+                "version": "18.5",
+                "status": "affected",
+                "lessThan": "18.5.1",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-770: Allocation of Resources Without Limits or Throttling",
+                "cweId": "CWE-770",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/"
+          },
+          {
+            "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/570336",
+            "name": "GitLab Issue #570336",
+            "tags": [
+              "issue-tracking",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://hackerone.com/reports/3338151",
+            "name": "HackerOne Bug Bounty Report #3338151",
+            "tags": [
+              "technical-description",
+              "exploit",
+              "permissions-required"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Upgrade to versions 18.3.5, 18.4.3, 18.5.1 or above."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Thanks [a92847865](https://hackerone.com/a92847865) for reporting this vulnerability through our HackerOne bug bounty program",
+            "type": "finder"
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ceab7361-8a18-47b1-92ba-4d7d25f6715a",
+          "shortName": "GitLab",
+          "dateUpdated": "2025-10-27T00:05:39.306Z"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2021-44228",
+      "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+      "assignerShortName": "apache",
+      "dateUpdated": "2025-10-21T23:25:23.121Z",
+      "dateReserved": "2021-11-26T00:00:00.000Z",
+      "datePublished": "2021-12-10T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+        "providerMetadata": {
+          "orgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+          "shortName": "apache",
+          "dateUpdated": "2023-04-03T00:00:00.000Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Apache Log4j2 2.0-beta9 through 2.15.0 (excluding security releases 2.12.2, 2.12.3, and 2.3.1) JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default. From version 2.16.0 (along with 2.12.2, 2.12.3, and 2.3.1), this functionality has been completely removed. Note that this vulnerability is specific to log4j-core and does not affect log4net, log4cxx, or other Apache Logging Services projects."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Apache Software Foundation",
+            "product": "Apache Log4j2",
+            "versions": [
+              {
+                "version": "2.0-beta9",
+                "status": "affected",
+                "lessThan": "log4j-core*",
+                "versionType": "custom",
+                "changes": [
+                  {
+                    "at": "2.3.1",
+                    "status": "unaffected"
+                  },
+                  {
+                    "at": "2.4",
+                    "status": "affected"
+                  },
+                  {
+                    "at": "2.12.2",
+                    "status": "unaffected"
+                  },
+                  {
+                    "at": "2.13.0",
+                    "status": "affected"
+                  },
+                  {
+                    "at": "2.15.0",
+                    "status": "unaffected"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://logging.apache.org/log4j/2.x/security.html"
+          },
+          {
+            "name": "[oss-security] 20211210 CVE-2021-44228: Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/10/1"
+          },
+          {
+            "name": "[oss-security] 20211210 Re: CVE-2021-44228: Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/10/2"
+          },
+          {
+            "name": "20211210 Vulnerability in Apache Log4j Library Affecting Cisco Products: December 2021",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd"
+          },
+          {
+            "name": "[oss-security] 20211210 Re: CVE-2021-44228: Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/10/3"
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211210-0007/"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165225/Apache-Log4j2-2.14.1-Remote-Code-Execution.html"
+          },
+          {
+            "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0032"
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/alert-cve-2021-44228.html"
+          },
+          {
+            "name": "DSA-5020",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://www.debian.org/security/2021/dsa-5020"
+          },
+          {
+            "name": "[debian-lts-announce] 20211212 [SECURITY] [DLA 2842-1] apache-log4j2 security update",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "https://lists.debian.org/debian-lts-announce/2021/12/msg00007.html"
+          },
+          {
+            "name": "FEDORA-2021-f0f501d01f",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VU57UJDCFIASIO35GC55JMKSRXJMCDFM/"
+          },
+          {
+            "name": "Microsoft’s Response to CVE-2021-44228 Apache Log4j 2",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/"
+          },
+          {
+            "name": "[oss-security] 20211213 Re: CVE-2021-4104: Deserialization of untrusted data in JMSAppender in Apache Log4j 1.2",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/13/2"
+          },
+          {
+            "name": "[oss-security] 20211213 CVE-2021-4104: Deserialization of untrusted data in JMSAppender in Apache Log4j 1.2",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/13/1"
+          },
+          {
+            "name": "[oss-security] 20211214 CVE-2021-45046: Apache Log4j2 Thread Context Message Pattern and Context Lookup Pattern vulnerable to a denial of service attack",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/14/4"
+          },
+          {
+            "name": "20211210 A Vulnerability in Apache Log4j Library Affecting Cisco Products: December 2021",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd"
+          },
+          {
+            "name": "VU#930724",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.kb.cert.org/vuls/id/930724"
+          },
+          {
+            "url": "https://twitter.com/kurtseifried/status/1469345530182455296"
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-661247.pdf"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165260/VMware-Security-Advisory-2021-0028.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165270/Apache-Log4j2-2.14.1-Remote-Code-Execution.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165261/Apache-Log4j2-2.14.1-Information-Disclosure.html"
+          },
+          {
+            "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00646.html"
+          },
+          {
+            "name": "20211210 Vulnerabilities in Apache Log4j Library Affecting Cisco Products: December 2021",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd"
+          },
+          {
+            "name": "[oss-security] 20211215 Re: CVE-2021-45046: Apache Log4j2 Thread Context Message Pattern and Context Lookup Pattern vulnerable to a denial of service attack",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://www.openwall.com/lists/oss-security/2021/12/15/3"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165282/Log4j-Payload-Generator.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165281/Log4j2-Log4Shell-Regexes.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165307/Log4j-Remote-Code-Execution-Word-Bypassing.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165311/log4j-scan-Extensive-Scanner.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165306/L4sh-Log4j-Remote-Code-Execution.html"
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-714170.pdf"
+          },
+          {
+            "name": "FEDORA-2021-66d6c484f3",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/M5CSVUNV4HWZZXGOKNSK6L7RPM7BOKIB/"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165371/VMware-Security-Advisory-2021-0028.4.html"
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-397453.pdf"
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-479842.pdf"
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujan2022.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165532/Log4Shell-HTTP-Header-Injection.html"
+          },
+          {
+            "url": "https://github.com/cisagov/log4j-affected-db/blob/develop/SOFTWARE-LIST.md"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165642/VMware-vCenter-Server-Unauthenticated-Log4Shell-JNDI-Injection-Remote-Code-Execution.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/165673/UniFi-Network-Application-Unauthenticated-Log4Shell-Remote-Code-Execution.html"
+          },
+          {
+            "name": "20220314 APPLE-SA-2022-03-14-7 Xcode 13.3",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://seclists.org/fulldisclosure/2022/Mar/23"
+          },
+          {
+            "url": "https://www.bentley.com/en/common-vulnerability-exposure/be-2022-0001"
+          },
+          {
+            "url": "https://github.com/cisagov/log4j-affected-db"
+          },
+          {
+            "url": "https://support.apple.com/kb/HT213189"
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuapr2022.html"
+          },
+          {
+            "url": "https://github.com/nu11secur1ty/CVE-mitre/tree/main/CVE-2021-44228"
+          },
+          {
+            "url": "https://www.nu11secur1ty.com/2021/12/cve-2021-44228.html"
+          },
+          {
+            "name": "20220721 Open-Xchange Security Advisory 2022-07-21",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://seclists.org/fulldisclosure/2022/Jul/11"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/167794/Open-Xchange-App-Suite-7.10.x-Cross-Site-Scripting-Command-Injection.html"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/167917/MobileIron-Log4Shell-Remote-Command-Execution.html"
+          },
+          {
+            "name": "20221208 Intel Data Center Manager <= 5.1 Local Privileges Escalation",
+            "tags": [
+              "mailing-list"
+            ],
+            "url": "http://seclists.org/fulldisclosure/2022/Dec/2"
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/171626/AD-Manager-Plus-7122-Remote-Code-Execution.html"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "This issue was discovered by Chen Zhaojun of Alibaba Cloud Security Team."
+          }
+        ],
+        "metrics": [
+          {
+            "other": {
+              "type": "unknown",
+              "content": {
+                "other": "critical"
+              }
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "description": "CWE-502 Deserialization of Untrusted Data",
+                "cweId": "CWE-502"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "description": "CWE-400 Uncontrolled Resource Consumption",
+                "cweId": "CWE-400"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "description": "CWE-20 Improper Input Validation",
+                "cweId": "CWE-20"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.0.9"
+        },
+        "source": {
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-04T04:17:24.696Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "https://logging.apache.org/log4j/2.x/security.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "[oss-security] 20211210 CVE-2021-44228: Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/10/1"
+            },
+            {
+              "name": "[oss-security] 20211210 Re: CVE-2021-44228: Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/10/2"
+            },
+            {
+              "name": "20211210 Vulnerability in Apache Log4j Library Affecting Cisco Products: December 2021",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd"
+            },
+            {
+              "name": "[oss-security] 20211210 Re: CVE-2021-44228: Apache Log4j2 JNDI features do not protect against attacker controlled LDAP and other JNDI related endpoints",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/10/3"
+            },
+            {
+              "url": "https://security.netapp.com/advisory/ntap-20211210-0007/",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165225/Apache-Log4j2-2.14.1-Remote-Code-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0032",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://www.oracle.com/security-alerts/alert-cve-2021-44228.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "DSA-5020",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://www.debian.org/security/2021/dsa-5020"
+            },
+            {
+              "name": "[debian-lts-announce] 20211212 [SECURITY] [DLA 2842-1] apache-log4j2 security update",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "https://lists.debian.org/debian-lts-announce/2021/12/msg00007.html"
+            },
+            {
+              "name": "FEDORA-2021-f0f501d01f",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/VU57UJDCFIASIO35GC55JMKSRXJMCDFM/"
+            },
+            {
+              "name": "Microsoft’s Response to CVE-2021-44228 Apache Log4j 2",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/"
+            },
+            {
+              "name": "[oss-security] 20211213 Re: CVE-2021-4104: Deserialization of untrusted data in JMSAppender in Apache Log4j 1.2",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/13/2"
+            },
+            {
+              "name": "[oss-security] 20211213 CVE-2021-4104: Deserialization of untrusted data in JMSAppender in Apache Log4j 1.2",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/13/1"
+            },
+            {
+              "name": "[oss-security] 20211214 CVE-2021-45046: Apache Log4j2 Thread Context Message Pattern and Context Lookup Pattern vulnerable to a denial of service attack",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/14/4"
+            },
+            {
+              "name": "20211210 A Vulnerability in Apache Log4j Library Affecting Cisco Products: December 2021",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd"
+            },
+            {
+              "name": "VU#930724",
+              "tags": [
+                "third-party-advisory",
+                "x_transferred"
+              ],
+              "url": "https://www.kb.cert.org/vuls/id/930724"
+            },
+            {
+              "url": "https://twitter.com/kurtseifried/status/1469345530182455296",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-661247.pdf",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165260/VMware-Security-Advisory-2021-0028.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165270/Apache-Log4j2-2.14.1-Remote-Code-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165261/Apache-Log4j2-2.14.1-Information-Disclosure.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00646.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "20211210 Vulnerabilities in Apache Log4j Library Affecting Cisco Products: December 2021",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd"
+            },
+            {
+              "name": "[oss-security] 20211215 Re: CVE-2021-45046: Apache Log4j2 Thread Context Message Pattern and Context Lookup Pattern vulnerable to a denial of service attack",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://www.openwall.com/lists/oss-security/2021/12/15/3"
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165282/Log4j-Payload-Generator.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165281/Log4j2-Log4Shell-Regexes.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165307/Log4j-Remote-Code-Execution-Word-Bypassing.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165311/log4j-scan-Extensive-Scanner.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165306/L4sh-Log4j-Remote-Code-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-714170.pdf",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "FEDORA-2021-66d6c484f3",
+              "tags": [
+                "vendor-advisory",
+                "x_transferred"
+              ],
+              "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/M5CSVUNV4HWZZXGOKNSK6L7RPM7BOKIB/"
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165371/VMware-Security-Advisory-2021-0028.4.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-397453.pdf",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-479842.pdf",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://www.oracle.com/security-alerts/cpujan2022.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165532/Log4Shell-HTTP-Header-Injection.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://github.com/cisagov/log4j-affected-db/blob/develop/SOFTWARE-LIST.md",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165642/VMware-vCenter-Server-Unauthenticated-Log4Shell-JNDI-Injection-Remote-Code-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/165673/UniFi-Network-Application-Unauthenticated-Log4Shell-Remote-Code-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "20220314 APPLE-SA-2022-03-14-7 Xcode 13.3",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://seclists.org/fulldisclosure/2022/Mar/23"
+            },
+            {
+              "url": "https://www.bentley.com/en/common-vulnerability-exposure/be-2022-0001",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://github.com/cisagov/log4j-affected-db",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://support.apple.com/kb/HT213189",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://www.oracle.com/security-alerts/cpuapr2022.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://github.com/nu11secur1ty/CVE-mitre/tree/main/CVE-2021-44228",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://www.nu11secur1ty.com/2021/12/cve-2021-44228.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "20220721 Open-Xchange Security Advisory 2022-07-21",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://seclists.org/fulldisclosure/2022/Jul/11"
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/167794/Open-Xchange-App-Suite-7.10.x-Cross-Site-Scripting-Command-Injection.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/167917/MobileIron-Log4Shell-Remote-Command-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "name": "20221208 Intel Data Center Manager <= 5.1 Local Privileges Escalation",
+              "tags": [
+                "mailing-list",
+                "x_transferred"
+              ],
+              "url": "http://seclists.org/fulldisclosure/2022/Dec/2"
+            },
+            {
+              "url": "http://packetstormsecurity.com/files/171626/AD-Manager-Plus-7122-Remote-Code-Execution.html",
+              "tags": [
+                "x_transferred"
+              ]
+            }
+          ]
+        },
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "CHANGED",
+                "version": "3.1",
+                "baseScore": 10,
+                "attackVector": "NETWORK",
+                "baseSeverity": "CRITICAL",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2021-44228",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2025-02-04T14:25:34.416117Z"
+                }
+              }
+            },
+            {
+              "other": {
+                "type": "kev",
+                "content": {
+                  "dateAdded": "2021-12-10",
+                  "reference": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-44228"
+                }
+              }
+            }
+          ],
+          "references": [
+            {
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-44228",
+              "tags": [
+                "government-resource"
+              ]
+            }
+          ],
+          "timeline": [
+            {
+              "time": "2021-12-10T00:00:00+00:00",
+              "lang": "en",
+              "value": "CVE-2021-44228 added to CISA KEV"
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-21T23:25:23.121Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11447",
+      "assignerOrgId": "ceab7361-8a18-47b1-92ba-4d7d25f6715a",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitLab",
+      "dateReserved": "2025-10-07T14:07:16.919Z",
+      "datePublished": "2025-10-27T00:05:19.810Z",
+      "dateUpdated": "2025-10-27T00:05:19.810Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Allocation of Resources Without Limits or Throttling in GitLab",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.0 before 18.3.5, 18.4 before 18.4.3, and 18.5 before 18.5.1 that could have allowed an unauthenticated attacker to cause a denial of service condition by sending GraphQL requests with crafted JSON payloads."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "GitLab",
+            "product": "GitLab",
+            "repo": "git://git@gitlab.com:gitlab-org/gitlab.git",
+            "cpes": [
+              "cpe:2.3:a:gitlab:gitlab:*:*:*:*:*:*:*:*"
+            ],
+            "versions": [
+              {
+                "version": "11.0",
+                "status": "affected",
+                "lessThan": "18.3.5",
+                "versionType": "semver"
+              },
+              {
+                "version": "18.4",
+                "status": "affected",
+                "lessThan": "18.4.3",
+                "versionType": "semver"
+              },
+              {
+                "version": "18.5",
+                "status": "affected",
+                "lessThan": "18.5.1",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-770: Allocation of Resources Without Limits or Throttling",
+                "cweId": "CWE-770",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://about.gitlab.com/releases/2025/10/22/patch-release-gitlab-18-5-1-released/"
+          },
+          {
+            "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/574858",
+            "name": "GitLab Issue #574858",
+            "tags": [
+              "issue-tracking",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://hackerone.com/reports/3367019",
+            "name": "HackerOne Bug Bounty Report #3367019",
+            "tags": [
+              "technical-description",
+              "exploit",
+              "permissions-required"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Upgrade to versions 18.3.5, 18.4.3, 18.5.1 or above."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Thanks [a92847865](https://hackerone.com/a92847865) for reporting this vulnerability through our HackerOne bug bounty program",
+            "type": "finder"
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ceab7361-8a18-47b1-92ba-4d7d25f6715a",
+          "shortName": "GitLab",
+          "dateUpdated": "2025-10-27T00:05:19.810Z"
+        }
+      }
+    }
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "watchOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "7.1",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "iOS and iPadOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "14.2",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "macOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "11.0",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "macOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "12.4",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "macOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "6.2",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "macOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "5.3",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "macOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "2020",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "product": "macOS",
+            "vendor": "Apple",
+            "versions": [
+              {
+                "lessThan": "10.15",
+                "status": "affected",
+                "version": "unspecified",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A memory corruption issue was addressed with improved input validation. This issue is fixed in macOS Big Sur 11.0.1, watchOS 7.1, iOS 12.4.9, watchOS 6.2.9, Security Update 2020-006 High Sierra, Security Update 2020-006 Mojave, iOS 14.2 and iPadOS 14.2, watchOS 5.3.9, macOS Catalina 10.15.7 Supplemental Update, macOS Catalina 10.15.7 Update. Processing a maliciously crafted font may lead to arbitrary code execution."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Processing a maliciously crafted font may lead to arbitrary code execution..",
+                "lang": "en",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2021-02-05T17:06:19.000Z",
+          "orgId": "286789f9-fbc2-4510-9f9a-43facdede74c",
+          "shortName": "apple"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211931"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211928"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211929"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211940"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211944"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211945"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211946"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://support.apple.com/en-us/HT211947"
+          },
+          {
+            "name": "20201215 APPLE-SA-2020-12-14-4 Additional information for APPLE-SA-2020-11-13-1 macOS Big Sur 11.0.1",
+            "tags": [
+              "mailing-list",
+              "x_refsource_FULLDISC"
+            ],
+            "url": "http://seclists.org/fulldisclosure/2020/Dec/32"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "http://packetstormsecurity.com/files/161294/Apple-Safari-Remote-Code-Execution.html"
+          }
+        ],
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "product-security@apple.com",
+            "ID": "CVE-2020-27930",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "watchOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "7.1"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "iOS and iPadOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "14.2"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "macOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "11.0"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "macOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "12.4"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "macOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "6.2"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "macOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "5.3"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "macOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "2020"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "product_name": "macOS",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "<",
+                              "version_value": "10.15"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "Apple"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "A memory corruption issue was addressed with improved input validation. This issue is fixed in macOS Big Sur 11.0.1, watchOS 7.1, iOS 12.4.9, watchOS 6.2.9, Security Update 2020-006 High Sierra, Security Update 2020-006 Mojave, iOS 14.2 and iPadOS 14.2, watchOS 5.3.9, macOS Catalina 10.15.7 Supplemental Update, macOS Catalina 10.15.7 Update. Processing a maliciously crafted font may lead to arbitrary code execution."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "Processing a maliciously crafted font may lead to arbitrary code execution.."
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://support.apple.com/en-us/HT211931",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211931"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211928",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211928"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211929",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211929"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211940",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211940"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211944",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211944"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211945",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211945"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211946",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211946"
+              },
+              {
+                "name": "https://support.apple.com/en-us/HT211947",
+                "refsource": "MISC",
+                "url": "https://support.apple.com/en-us/HT211947"
+              },
+              {
+                "name": "20201215 APPLE-SA-2020-12-14-4 Additional information for APPLE-SA-2020-11-13-1 macOS Big Sur 11.0.1",
+                "refsource": "FULLDISC",
+                "url": "http://seclists.org/fulldisclosure/2020/Dec/32"
+              },
+              {
+                "name": "http://packetstormsecurity.com/files/161294/Apple-Safari-Remote-Code-Execution.html",
+                "refsource": "MISC",
+                "url": "http://packetstormsecurity.com/files/161294/Apple-Safari-Remote-Code-Execution.html"
+              }
+            ]
+          }
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-04T16:25:44.098Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211931"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211928"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211929"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211940"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211944"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211945"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211946"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://support.apple.com/en-us/HT211947"
+            },
+            {
+              "name": "20201215 APPLE-SA-2020-12-14-4 Additional information for APPLE-SA-2020-11-13-1 macOS Big Sur 11.0.1",
+              "tags": [
+                "mailing-list",
+                "x_refsource_FULLDISC",
+                "x_transferred"
+              ],
+              "url": "http://seclists.org/fulldisclosure/2020/Dec/32"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "http://packetstormsecurity.com/files/161294/Apple-Safari-Remote-Code-Execution.html"
+            }
+          ]
+        },
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.8,
+                "attackVector": "LOCAL",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2020-27930",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2025-01-29T17:35:09.436681Z"
+                }
+              }
+            },
+            {
+              "other": {
+                "type": "kev",
+                "content": {
+                  "dateAdded": "2021-11-03",
+                  "reference": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2020-27930"
+                }
+              }
+            }
+          ],
+          "references": [
+            {
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2020-27930",
+              "tags": [
+                "government-resource"
+              ]
+            }
+          ],
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "lang": "en",
+                  "type": "CWE",
+                  "cweId": "CWE-787",
+                  "description": "CWE-787 Out-of-bounds Write"
+                }
+              ]
+            }
+          ],
+          "timeline": [
+            {
+              "time": "2021-11-03T00:00:00+00:00",
+              "lang": "en",
+              "value": "CVE-2020-27930 added to CISA KEV"
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-21T23:35:31.914Z"
+          }
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "286789f9-fbc2-4510-9f9a-43facdede74c",
+      "assignerShortName": "apple",
+      "cveId": "CVE-2020-27930",
+      "datePublished": "2020-12-08T20:17:32.000Z",
+      "dateReserved": "2020-10-27T00:00:00.000Z",
+      "dateUpdated": "2025-10-21T23:35:31.914Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  }
+]
