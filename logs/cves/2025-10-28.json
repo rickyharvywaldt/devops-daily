@@ -1,0 +1,5011 @@
+[Tue Oct 28 01:49:13 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-6861",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2024-07-17T20:36:00.703Z",
+      "datePublished": "2024-11-06T14:54:51.099Z",
+      "dateUpdated": "2025-10-28T01:39:43.923Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Foreman: foreman: oauth secret exposure via unauthenticated access to the graphql api",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Important",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A disclosure of sensitive information flaw was found in foreman via the GraphQL API. If the introspection feature is enabled, it is possible for attackers to retrieve sensitive admin authentication keys which could result in a compromise of the entire product's API."
+          }
+        ],
+        "affected": [
+          {
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "3.3",
+                "versionType": "semver"
+              }
+            ],
+            "packageName": "foreman",
+            "collectionURL": "https://theforeman.org/",
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Satellite 6.12 for RHEL 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "foreman",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "0:3.3.0.17-1.el8sat",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:satellite_utils:6.12::el8",
+              "cpe:/a:redhat:satellite_maintenance:6.12::el8",
+              "cpe:/a:redhat:satellite:6.12::el8",
+              "cpe:/a:redhat:satellite_capsule:6.12::el8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Satellite 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "satellite-capsule:el8/foreman",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:satellite:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Satellite 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "satellite:el8/foreman",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:satellite:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Satellite 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "satellite-utils:el8/foreman",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:satellite:6"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2022:8506",
+            "name": "RHSA-2022:8506",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2024-6861",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2317450",
+            "name": "RHBZ#2317450",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://docs.theforeman.org/3.3/Release_Notes/index-katello.html#_foreman_2"
+          },
+          {
+            "url": "https://projects.theforeman.org/issues/34328"
+          }
+        ],
+        "datePublic": "2024-10-09T00:42:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "description": "Exposure of Sensitive Information to an Unauthorized Actor",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "To mitigate this issue the GraphQL introspection feature must be disabled or the GraphQL API be disabled entirely.\n\nMalicious requests can also be filtered using a reverse proxy or directly in the web server configuration."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2024-10-04T00:00:00+00:00",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2024-10-09T00:42:00+00:00",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank Sébastien Vecten for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2025-10-28T01:39:43.923Z"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2024-11-06T16:16:00.977132Z",
+                  "id": "CVE-2024-6861",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-11-06T16:16:15.642Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-1139",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2024-01-31T20:48:06.154Z",
+      "datePublished": "2024-04-25T16:25:01.080Z",
+      "dateUpdated": "2025-10-28T01:38:53.317Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Cluster-monitoring-operator: credentials leak",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Important",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.7,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A credentials leak vulnerability was found in the cluster monitoring operator in OCP.  This issue may allow a remote attacker who has basic login credentials to check the pod manifest to discover a repository pull secret."
+          }
+        ],
+        "affected": [
+          {
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver",
+                "lessThanOrEqual": "0.1.1"
+              }
+            ],
+            "packageName": "cluster-monitoring-operator",
+            "collectionURL": "https://github.com/openshift/cluster-monitoring-operator",
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-monitoring-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.12.0-202405091536.p0.g8906207.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.12::el9",
+              "cpe:/a:redhat:openshift:4.12::el8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.13",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-monitoring-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.13.0-202404200313.p0.gb518881.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.13::el9",
+              "cpe:/a:redhat:openshift:4.13::el8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/cloud-network-config-controller-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf350a68.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/driver-toolkit-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gcafed17.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/egress-router-cni-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gafffdd4.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/kubevirt-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g48fafc4.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/network-tools-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ge79d817.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/oc-mirror-plugin-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga0733c1.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/openshift-route-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g1a5e72f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-agent-installer-api-server-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2dbe78f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-agent-installer-csr-approver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g46dedc6.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-agent-installer-node-agent-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd8cf3c9.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-agent-installer-orchestrator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g46dedc6.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-agent-installer-utils-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gad85376.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-alibaba-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8ba0b37.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-alibaba-cloud-csi-driver-container-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404170009.p0.g3dc363d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-alibaba-disk-csi-driver-operator-container-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8853e6e.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-alibaba-machine-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g27f105d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-apiserver-network-proxy-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g3362d67.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-aws-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g607e2dd.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-aws-cluster-api-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g54a95bd.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-aws-ebs-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2e2e277.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-aws-ebs-csi-driver-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g95bcf9a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-aws-pod-identity-webhook-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gad7aa0a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf0e7cbb.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-cloud-node-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf0e7cbb.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-cluster-api-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7ad2773.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-disk-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb19eec1.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-disk-csi-driver-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9189357.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-file-csi-driver-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g354c55d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-file-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf401f53.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-azure-workload-identity-webhook-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g43a15be.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-baremetal-installer-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g78da43a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-baremetal-machine-controllers",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gfb20cda.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-baremetal-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g937b5fd.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-baremetal-runtimecfg-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g13046b3.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cli",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf7b14a9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cli-artifacts",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf7b14a9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cloud-credential-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga687275.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-api-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gae83c55.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-authentication-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9203d4d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-autoscaler",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9d87281.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-autoscaler-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5d436c6.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-baremetal-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g270579c.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-bootstrap",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g93fba13.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-capi-operator-container-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb4c4fb1.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-capi-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb4c4fb1.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-cloud-controller-manager-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g33a706e.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-config-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g91fa980.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-control-plane-machine-set-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g074a22c.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-csi-snapshot-controller-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404170009.p0.gd4a1162.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-dns-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5553a22.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-etcd-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g74f5363.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-image-registry-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd139e6b.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-ingress-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd876f5a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-kube-apiserver-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404171239.p0.g2eab0f9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-kube-cluster-api-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb287d08.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-kube-controller-manager-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g4e05963.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-kube-scheduler-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g33f630d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-kube-storage-version-migrator-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9cd9922.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-machine-approver",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g711b4f6.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-monitoring-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404170009.p0.g1839fb4.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-network-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd429c8b.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-node-tuning-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404171239.p0.g88d3f42.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-node-tuning-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404171239.p0.g88d3f42.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-olm-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g0dbbb61.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-openshift-apiserver-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8bd8602.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-openshift-controller-manager-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g3985c55.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-platform-operators-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g08fb27e.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-policy-controller-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g219f6f6.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-samples-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g61a3465.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-storage-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gaab7b5b.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-version-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gaf210dc.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-configmap-reloader",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g716a0c3.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-console",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf6b13c7.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-console-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g855f3fc.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-container-networking-plugins-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7295a5e.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-coredns",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7d3fa77.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-driver-manila-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g697083a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-driver-manila-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd93a218.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-driver-nfs-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ge1dd453.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-driver-shared-resource-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gc273cd5.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-driver-shared-resource-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9232c1f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-driver-shared-resource-webhook-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9232c1f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-attacher",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g06e8ce0.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-attacher-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g06e8ce0.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-provisioner",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g78a710f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-provisioner-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g78a710f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-resizer",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g59a701a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-resizer-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g59a701a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-snapshotter",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga683453.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-external-snapshotter-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga683453.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-livenessprobe",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga9bcbde.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-livenessprobe-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga9bcbde.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-node-driver-registrar",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9dcaa7f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-node-driver-registrar-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9dcaa7f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-snapshot-controller",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga683453.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-snapshot-controller-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga683453.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-csi-snapshot-validation-webhook-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga683453.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-deployer",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf7b14a9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-docker-builder",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9c104de.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-docker-registry",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb31bf58.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-etcd-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404171239.p0.gb0c0321.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-gcp-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g09e96a9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-gcp-cluster-api-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd99fb31.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-gcp-pd-csi-driver-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g95d55a0.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-gcp-pd-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8a626fe.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-haproxy-router",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb3af193.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-hyperkube-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7bee54d.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-hypershift-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404170009.p0.g96b62a5.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ibmcloud-cluster-api-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g004ecde.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ibm-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g446871f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ibmcloud-machine-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gc28b223.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ibm-vpc-block-csi-driver-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7fd94aa.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ibm-vpc-block-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g02471d9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ibm-vpc-node-label-updater-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g44a2b94.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-image-customization-controller-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2a6627b.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-insights-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g1c0ecea.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-installer",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g78da43a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-installer-artifacts",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g78da43a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ironic-agent-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g264fa5c.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ironic-machine-os-downloader-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7b56c30.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ironic-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7296ed5.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ironic-static-ip-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gc038d5a.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-k8s-prometheus-adapter",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g801a912.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kube-proxy",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g1a9befc.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kube-rbac-proxy",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g1a646b9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kube-state-metrics",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gdb0c549.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kube-storage-version-migrator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8558e14.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kubevirt-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7d96f56.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kuryr-cni-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8926a29.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-kuryr-controller-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404170009.p0.g8926a29.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-libvirt-machine-controllers",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g34dfccb.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-api-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g27f5650.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-api-provider-aws-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ge292817.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-api-provider-azure-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8666a36.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-api-provider-gcp-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga676e6b.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-api-provider-openstack-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8985876.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-config-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7c0025b.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-machine-os-images-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gd3a4a6c.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-multus-admission-controller",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5e74b0f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-multus-cni",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g823eb51.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-multus-networkpolicy-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gcd6eae1.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-multus-route-override-cni-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g078aee5.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-multus-whereabouts-ipam-cni-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g13aebf7.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-must-gather",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g833e1de.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-network-interface-bond-cni-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g29f61f6.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-network-metrics-daemon-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g69d0021.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-nutanix-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gbc56886.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-nutanix-machine-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g6f50b1a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-oauth-apiserver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8f5c90c.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-oauth-proxy",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga4a2f27.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-oauth-server-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g35f4739.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-olm-catalogd-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga333cb0.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-olm-operator-controller-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gfb6fb27.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-olm-rukpak-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2287fb2.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-openshift-apiserver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g9e9b51d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-openshift-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g27209ef.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-openshift-state-metrics-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gdff4b0f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-openstack-cinder-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g697083a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-openstack-cinder-csi-driver-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g3a74316.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-openstack-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g697083a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-operator-lifecycle-manager",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gdcfcfb3.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-operator-marketplace",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga367cea.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-operator-registry",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gdcfcfb3.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ovirt-machine-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5d70863.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ovn-kubernetes",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2fdbd1b.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ovn-kubernetes-microshift-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2fdbd1b.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-ovn-kubernetes-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2fdbd1b.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-pod",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7bee54d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-powervs-block-csi-driver-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g7436369.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-powervs-block-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g8ecfd7f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-powervs-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g32c1028.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-powervs-machine-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g1a957da.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prometheus",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb7c61bc.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prometheus-alertmanager",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ge372516.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prometheus-config-reloader",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga4b845a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prometheus-node-exporter",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5ee0a9d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prometheus-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga4b845a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prometheus-operator-admission-webhook-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga4b845a.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-prom-label-proxy",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gaf40ed0.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-sdn-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g1a9befc.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-service-ca-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g3c3f82f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-telemeter",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gc683f65.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-tests",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf066e57.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-thanos-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga267125.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-tools-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf7b14a9.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vmware-vsphere-csi-driver-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5d5105f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vmware-vsphere-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga5ed57f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vsphere-cloud-controller-manager-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gb04567f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vsphere-cluster-api-controllers-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g72e998c.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vsphere-csi-driver-operator-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g5d5105f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vsphere-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga5ed57f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vsphere-csi-driver-syncer-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.ga5ed57f.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-vsphere-problem-detector-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gece171d.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ovirt-csi-driver-rhel7",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf21b470.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ovirt-csi-driver-rhel8",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.gf21b470.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ovirt-csi-driver-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.14.0-202404161544.p0.g2fa33aa.assembly.stream.el8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.14::el8",
+              "cpe:/a:redhat:openshift:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "openshift4/ose-cluster-monitoring-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.15.0-202404161612.p0.g00d04f5.assembly.stream.el9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift:4.15::el9",
+              "cpe:/a:redhat:openshift:4.15::el8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/endpoint-monitoring-rhel8-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/grafana-dashboard-loader-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/metrics-collector-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-observability-rhel8-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/rbac-query-proxy-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 3.11",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift3/ose-cluster-monitoring-operator",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:openshift:3.11"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2024:1887",
+            "name": "RHSA-2024:1887",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2024:1891",
+            "name": "RHSA-2024:1891",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2024:2047",
+            "name": "RHSA-2024:2047",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2024:2782",
+            "name": "RHSA-2024:2782",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2024-1139",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2262158",
+            "name": "RHBZ#2262158",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2024-04-03T09:19:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "description": "Exposure of Sensitive Information to an Unauthorized Actor",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2024-01-31T00:00:00+00:00",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2024-04-03T09:19:00+00:00",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank Calvinna Caswara (noris network AG) and Patrick Gress (noris network AG) for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2025-10-28T01:38:53.317Z"
+        }
+      },
+      "adp": [
+        {
+          "title": "CISA ADP Vulnrichment",
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2024-1139",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2024-04-26T14:01:04.371877Z"
+                }
+              }
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-06-04T18:00:07.175Z"
+          }
+        },
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-01T18:26:30.566Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "https://access.redhat.com/errata/RHSA-2024:1887",
+              "name": "RHSA-2024:1887",
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT",
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://access.redhat.com/errata/RHSA-2024:1891",
+              "name": "RHSA-2024:1891",
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT",
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://access.redhat.com/errata/RHSA-2024:2047",
+              "name": "RHSA-2024:2047",
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT",
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://access.redhat.com/errata/RHSA-2024:2782",
+              "name": "RHSA-2024:2782",
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT",
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://access.redhat.com/security/cve/CVE-2024-1139",
+              "tags": [
+                "vdb-entry",
+                "x_refsource_REDHAT",
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2262158",
+              "name": "RHBZ#2262158",
+              "tags": [
+                "issue-tracking",
+                "x_refsource_REDHAT",
+                "x_transferred"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12344",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-27T13:58:08.578Z",
+      "datePublished": "2025-10-28T01:32:05.689Z",
+      "dateUpdated": "2025-10-28T01:32:05.689Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-28T01:32:05.689Z"
+        },
+        "title": "Yonyou U8 Cloud Request Header NCloudGatewayServlet unrestricted upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "Unrestricted Upload"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "Improper Access Controls"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Yonyou",
+            "product": "U8 Cloud",
+            "versions": [
+              {
+                "version": "2.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1",
+                "status": "affected"
+              },
+              {
+                "version": "2.3",
+                "status": "affected"
+              },
+              {
+                "version": "2.5",
+                "status": "affected"
+              },
+              {
+                "version": "2.6",
+                "status": "affected"
+              },
+              {
+                "version": "2.7",
+                "status": "affected"
+              },
+              {
+                "version": "2.65",
+                "status": "affected"
+              },
+              {
+                "version": "3.0",
+                "status": "affected"
+              },
+              {
+                "version": "3.1",
+                "status": "affected"
+              },
+              {
+                "version": "3.2",
+                "status": "affected"
+              },
+              {
+                "version": "3.5",
+                "status": "affected"
+              },
+              {
+                "version": "3.6",
+                "status": "affected"
+              },
+              {
+                "version": "3.6sp",
+                "status": "affected"
+              },
+              {
+                "version": "5.0",
+                "status": "affected"
+              },
+              {
+                "version": "5.0sp",
+                "status": "affected"
+              },
+              {
+                "version": "5.1",
+                "status": "affected"
+              },
+              {
+                "version": "5.1sp",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Request Header Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in Yonyou U8 Cloud up to 5.1sp. The impacted element is an unknown function of the file /service/NCloudGatewayServlet of the component Request Header Handler. Such manipulation of the argument ts/sign leads to unrestricted upload. The attack may be performed from remote. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in Yonyou U8 Cloud up to 5.1sp entdeckt. Betroffen hiervon ist ein unbekannter Ablauf der Datei /service/NCloudGatewayServlet der Komponente Request Header Handler. Durch das Beeinflussen des Arguments ts/sign mit unbekannten Daten kann eine unrestricted upload-Schwachstelle ausgenutzt werden. Der Angriff kann remote ausgeführt werden. Die Ausnutzung wurde veröffentlicht und kann verwendet werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-27T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-27T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-27T15:03:30.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "IceSc0rpion (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.330129",
+            "name": "VDB-330129 | Yonyou U8 Cloud Request Header NCloudGatewayServlet unrestricted upload",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.330129",
+            "name": "VDB-330129 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.674532",
+            "name": "Submit #674532 | yonyon U8 Cloud V2.0/V2.1/V2.3/V2.5/V2.6/V2.7/V2.65/V3.0/V3.1/V3.2/V3.5/V3.6/V3.6sp/V5.0/V5.0sp/V5.1/V5.1sp File upload",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/IceSc0rpion/CVE/issues/1",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12200",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-25T06:22:04.063Z",
+      "datePublished": "2025-10-27T01:07:44.551Z",
+      "dateUpdated": "2025-10-28T01:21:20.777Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-27T01:07:44.551Z"
+        },
+        "title": "dnsmasq Config File option.c parse_dhcp_opt null pointer dereference",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-476",
+                "lang": "en",
+                "description": "NULL Pointer Dereference"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-404",
+                "lang": "en",
+                "description": "Denial of Service"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "dnsmasq",
+            "versions": [
+              {
+                "version": "2.73rc1",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc2",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc3",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc4",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc5",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc6",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Config File Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was determined in dnsmasq up to 2.73rc6. Affected by this issue is the function parse_dhcp_opt of the file src/option.c of the component Config File Handler. This manipulation of the argument m causes null pointer dereference. The attack can only be executed locally. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way."
+          },
+          {
+            "lang": "de",
+            "value": "In dnsmasq up to 2.73rc6 wurde eine Schwachstelle gefunden. Dies betrifft die Funktion parse_dhcp_opt der Datei src/option.c der Komponente Config File Handler. Mit der Manipulation des Arguments m mit unbekannten Daten kann eine null pointer dereference-Schwachstelle ausgenutzt werden. Der Angriff erfordert einen lokalen Zugriff. Der Exploit steht zur öffentlichen Verfügung."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 4.8,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 1.7,
+              "vectorString": "AV:L/AC:L/Au:S/C:N/I:N/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-25T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-25T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-25T08:27:13.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "zh_vul (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.329870",
+            "name": "VDB-329870 | dnsmasq Config File option.c parse_dhcp_opt null pointer dereference",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.329870",
+            "name": "VDB-329870 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.673155",
+            "name": "Submit #673155 | dnsmasq v2.73rc6 NULL Pointer Dereference",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://shimo.im/docs/5xkGoMo0WVfY4dkX/",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-27T19:57:38.284456Z",
+                  "id": "CVE-2025-12200",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-27T19:57:55.085Z"
+          }
+        },
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2025-10-28T01:21:20.777Z"
+          },
+          "references": [
+            {
+              "url": "https://www.openwall.com/lists/oss-security/2025/10/27/1"
+            },
+            {
+              "url": "https://news.ycombinator.com/item?id=45727137"
+            }
+          ],
+          "title": "CVE Program Container",
+          "x_generator": {
+            "engine": "ADPogram 0.0.1"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12199",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-10-25T06:22:00.749Z",
+      "datePublished": "2025-10-27T01:02:09.029Z",
+      "dateUpdated": "2025-10-28T01:21:01.416Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-10-27T01:02:09.029Z"
+        },
+        "title": "dnsmasq Config File network.c check_servers null pointer dereference",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-476",
+                "lang": "en",
+                "description": "NULL Pointer Dereference"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-404",
+                "lang": "en",
+                "description": "Denial of Service"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "dnsmasq",
+            "versions": [
+              {
+                "version": "2.73rc1",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc2",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc3",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc4",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc5",
+                "status": "affected"
+              },
+              {
+                "version": "2.73rc6",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Config File Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in dnsmasq up to 2.73rc6. Affected by this vulnerability is the function check_servers of the file src/network.c of the component Config File Handler. The manipulation results in null pointer dereference. The attack needs to be approached locally. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          },
+          {
+            "lang": "de",
+            "value": "Es wurde eine Schwachstelle in dnsmasq up to 2.73rc6 entdeckt. Das betrifft die Funktion check_servers der Datei src/network.c der Komponente Config File Handler. Dank Manipulation mit unbekannten Daten kann eine null pointer dereference-Schwachstelle ausgenutzt werden. Umgesetzt werden muss der Angriff lokal. Die Ausnutzung wurde veröffentlicht und kann verwendet werden."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 4.8,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 1.7,
+              "vectorString": "AV:L/AC:L/Au:S/C:N/I:N/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-25T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-10-25T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-10-25T08:27:12.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "zh_vul (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.329869",
+            "name": "VDB-329869 | dnsmasq Config File network.c check_servers null pointer dereference",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.329869",
+            "name": "VDB-329869 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.673154",
+            "name": "Submit #673154 | dnsmasq v2.73rc6 NULL Pointer Dereference",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://shimo.im/docs/ZzkLMVMN7vIYJBAQ/",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-27T19:55:33.466030Z",
+                  "id": "CVE-2025-12199",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-27T19:55:41.291Z"
+          }
+        },
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2025-10-28T01:21:01.416Z"
+          },
+          "references": [
+            {
+              "url": "https://www.openwall.com/lists/oss-security/2025/10/27/1"
+            },
+            {
+              "url": "https://news.ycombinator.com/item?id=45727137"
+            }
+          ],
+          "title": "CVE Program Container",
+          "x_generator": {
+            "engine": "ADPogram 0.0.1"
+          }
+        }
+      ]
+    }
+  }
+]
