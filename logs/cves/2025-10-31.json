@@ -30128,3 +30128,745 @@
     ]
   }
 ]
+[Fri Oct 31 12:50:06 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2022-31698",
+      "assignerOrgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+      "assignerShortName": "vmware",
+      "dateUpdated": "2025-04-22T03:26:59.398Z",
+      "dateReserved": "2022-05-25T00:00:00.000Z",
+      "datePublished": "2022-12-13T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+          "shortName": "vmware",
+          "dateUpdated": "2022-12-13T00:00:00.000Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The vCenter Server contains a denial-of-service vulnerability in the content library service. A malicious actor with network access to port 443 on vCenter Server may exploit this issue to trigger a denial-of-service condition by sending a specially crafted header."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "VMware vCenter Server, VMware Cloud Foundation",
+            "versions": [
+              {
+                "version": "VMware (7.0 prior to 7.0 U3i, 6.7 prior to 6.7.0 U3s, 6.5 prior to 6.5 U3u), VMware Cloud Foundation (4.x, 3.x)",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.vmware.com/security/advisories/VMSA-2022-0030.html"
+          },
+          {
+            "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2022-1588"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "Denial of service vulnerability"
+              }
+            ]
+          }
+        ]
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-03T07:26:01.219Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "https://www.vmware.com/security/advisories/VMSA-2022-0030.html",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2022-1588",
+              "tags": [
+                "x_transferred"
+              ]
+            }
+          ]
+        },
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-400",
+                  "lang": "en",
+                  "description": "CWE-400 Uncontrolled Resource Consumption"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 5.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-04-22T03:26:21.371956Z",
+                  "id": "CVE-2022-31698",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-04-22T03:26:59.398Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "VMware Cloud Foundation",
+            "vendor": "n/a",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "VMware Cloud Foundation 4.x (before 4.3.1.1) and 3.x"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "VMware Cloud Foundation contains an information disclosure vulnerability due to logging of credentials in plain-text within multiple log files on the SDDC Manager. A malicious actor with root access on VMware Cloud Foundation SDDC Manager may be able to view credentials in plaintext within one or more log files."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "VMware Cloud Foundation updates address an information disclosure vulnerability.",
+                "lang": "en",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2022-02-04T22:29:14",
+          "orgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+          "shortName": "vmware"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.vmware.com/security/advisories/VMSA-2022-0003.html"
+          }
+        ],
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "security@vmware.com",
+            "ID": "CVE-2022-22939",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "VMware Cloud Foundation",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_value": "VMware Cloud Foundation 4.x (before 4.3.1.1) and 3.x"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "n/a"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "VMware Cloud Foundation contains an information disclosure vulnerability due to logging of credentials in plain-text within multiple log files on the SDDC Manager. A malicious actor with root access on VMware Cloud Foundation SDDC Manager may be able to view credentials in plaintext within one or more log files."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "VMware Cloud Foundation updates address an information disclosure vulnerability."
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://www.vmware.com/security/advisories/VMSA-2022-0003.html",
+                "refsource": "MISC",
+                "url": "https://www.vmware.com/security/advisories/VMSA-2022-0003.html"
+              }
+            ]
+          }
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-03T03:28:42.385Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://www.vmware.com/security/advisories/VMSA-2022-0003.html"
+            }
+          ]
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+      "assignerShortName": "vmware",
+      "cveId": "CVE-2022-22939",
+      "datePublished": "2022-02-04T22:29:14",
+      "dateReserved": "2022-01-10T00:00:00",
+      "dateUpdated": "2024-08-03T03:28:42.385Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "VMware vCenter Server and VMware Cloud Foundation",
+            "vendor": "n/a",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "VMware vCenter Server(7.0 and 6.7) and VMware Cloud Foundation (4.x and 3.x)"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The vCenter Server contains a privilege escalation vulnerability in the IWA (Integrated Windows Authentication) authentication mechanism. A malicious actor with non-administrative access to vCenter Server may exploit this issue to elevate privileges to a higher privileged group."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Privilege escalation vulnerability",
+                "lang": "en",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2022-07-25T17:06:14",
+          "orgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+          "shortName": "vmware"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.vmware.com/security/advisories/VMSA-2021-0025.html"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "http://packetstormsecurity.com/files/167733/VMware-Security-Advisory-2022-0025.2.html"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "http://packetstormsecurity.com/files/167795/VMware-Security-Advisory-2021-0025.3.html"
+          }
+        ],
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "security@vmware.com",
+            "ID": "CVE-2021-22048",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "VMware vCenter Server and VMware Cloud Foundation",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_value": "VMware vCenter Server(7.0 and 6.7) and VMware Cloud Foundation (4.x and 3.x)"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "n/a"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "The vCenter Server contains a privilege escalation vulnerability in the IWA (Integrated Windows Authentication) authentication mechanism. A malicious actor with non-administrative access to vCenter Server may exploit this issue to elevate privileges to a higher privileged group."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "Privilege escalation vulnerability"
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://www.vmware.com/security/advisories/VMSA-2021-0025.html",
+                "refsource": "MISC",
+                "url": "https://www.vmware.com/security/advisories/VMSA-2021-0025.html"
+              },
+              {
+                "name": "http://packetstormsecurity.com/files/167733/VMware-Security-Advisory-2022-0025.2.html",
+                "refsource": "MISC",
+                "url": "http://packetstormsecurity.com/files/167733/VMware-Security-Advisory-2022-0025.2.html"
+              },
+              {
+                "name": "http://packetstormsecurity.com/files/167795/VMware-Security-Advisory-2021-0025.3.html",
+                "refsource": "MISC",
+                "url": "http://packetstormsecurity.com/files/167795/VMware-Security-Advisory-2021-0025.3.html"
+              }
+            ]
+          }
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-03T18:30:23.971Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://www.vmware.com/security/advisories/VMSA-2021-0025.html"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "http://packetstormsecurity.com/files/167733/VMware-Security-Advisory-2022-0025.2.html"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "http://packetstormsecurity.com/files/167795/VMware-Security-Advisory-2021-0025.3.html"
+            }
+          ]
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+      "assignerShortName": "vmware",
+      "cveId": "CVE-2021-22048",
+      "datePublished": "2021-11-10T17:50:53",
+      "dateReserved": "2021-01-04T00:00:00",
+      "dateUpdated": "2024-08-03T18:30:23.971Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "VMware ESXi and VMware Cloud Foundation",
+            "vendor": "n/a",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "VMware ESXi(7.0 before ESXi70U2-17630552, 6.7 before ESXi670-202103101-SG, 6.5 before ESXi650-202107401-SG) and VMware Cloud Foundation (4.x, 3.x before 3.10.2)"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenSLP as used in ESXi has a denial-of-service vulnerability due a heap out-of-bounds read issue. A malicious actor with network access to port 427 on ESXi may be able to trigger a heap out-of-bounds read in OpenSLP service resulting in a denial-of-service condition."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Authentication bypass vulnerability",
+                "lang": "en",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2021-07-13T18:05:49",
+          "orgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+          "shortName": "vmware"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html"
+          }
+        ],
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "security@vmware.com",
+            "ID": "CVE-2021-21995",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "VMware ESXi and VMware Cloud Foundation",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_value": "VMware ESXi(7.0 before ESXi70U2-17630552, 6.7 before ESXi670-202103101-SG, 6.5 before ESXi650-202107401-SG) and VMware Cloud Foundation (4.x, 3.x before 3.10.2)"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "n/a"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "OpenSLP as used in ESXi has a denial-of-service vulnerability due a heap out-of-bounds read issue. A malicious actor with network access to port 427 on ESXi may be able to trigger a heap out-of-bounds read in OpenSLP service resulting in a denial-of-service condition."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "Authentication bypass vulnerability"
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html",
+                "refsource": "MISC",
+                "url": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html"
+              }
+            ]
+          }
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-03T18:30:23.592Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html"
+            }
+          ]
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+      "assignerShortName": "vmware",
+      "cveId": "CVE-2021-21995",
+      "datePublished": "2021-07-13T18:05:49",
+      "dateReserved": "2021-01-04T00:00:00",
+      "dateUpdated": "2024-08-03T18:30:23.592Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "VMware ESXi and VMware Cloud Foundation",
+            "vendor": "n/a",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "VMware ESXi(7.0 before ESXi70U2-17630552, 6.7 before ESXi670-202103101-SG, 6.5 before ESXi650-202107401-SG) and VMware Cloud Foundation (4.x, 3.x before 3.10.2)"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SFCB (Small Footprint CIM Broker) as used in ESXi has an authentication bypass vulnerability. A malicious actor with network access to port 5989 on ESXi may exploit this issue to bypass SFCB authentication by sending a specially crafted request."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Authentication bypass vulnerability",
+                "lang": "en",
+                "type": "text"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2021-07-13T18:05:43",
+          "orgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+          "shortName": "vmware"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html"
+          }
+        ],
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "security@vmware.com",
+            "ID": "CVE-2021-21994",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "VMware ESXi and VMware Cloud Foundation",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_value": "VMware ESXi(7.0 before ESXi70U2-17630552, 6.7 before ESXi670-202103101-SG, 6.5 before ESXi650-202107401-SG) and VMware Cloud Foundation (4.x, 3.x before 3.10.2)"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "n/a"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "SFCB (Small Footprint CIM Broker) as used in ESXi has an authentication bypass vulnerability. A malicious actor with network access to port 5989 on ESXi may exploit this issue to bypass SFCB authentication by sending a specially crafted request."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "Authentication bypass vulnerability"
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html",
+                "refsource": "MISC",
+                "url": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html"
+              }
+            ]
+          }
+        }
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-03T18:30:23.556Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://www.vmware.com/security/advisories/VMSA-2021-0014.html"
+            }
+          ]
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "dcf2e128-44bd-42ed-91e8-88f912c1401d",
+      "assignerShortName": "vmware",
+      "cveId": "CVE-2021-21994",
+      "datePublished": "2021-07-13T18:05:43",
+      "dateReserved": "2021-01-04T00:00:00",
+      "dateUpdated": "2024-08-03T18:30:23.556Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  }
+]
