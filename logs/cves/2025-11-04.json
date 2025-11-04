@@ -526,3 +526,509 @@
     }
   }
 ]
+[Tue Nov  4 06:36:11 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12683",
+      "assignerOrgId": "b7efe717-a805-47cf-8e9a-921fca0ce0ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "Gridware",
+      "dateReserved": "2025-11-04T04:10:20.302Z",
+      "datePublished": "2025-11-04T04:23:02.884Z",
+      "dateUpdated": "2025-11-04T04:23:02.884Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://www.voidtools.com/",
+            "defaultStatus": "unaffected",
+            "modules": [
+              "Named Pipe"
+            ],
+            "packageName": "Everything",
+            "product": "Everything",
+            "vendor": "Voidtools",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.4.1.1029"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Abdul Mhanni"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The service employed by Everything, running as SYSTEM, communicates with the lower privileged Everything GUI via a named pipe. The named pipe has a NULL DACL and thus provides all users full permission over it; leading to potential Service Denial Of Service or Privilege escalation(only if chained with other elements) for a local low privilege user.<br>"
+              }
+            ],
+            "value": "The service employed by Everything, running as SYSTEM, communicates with the lower privileged Everything GUI via a named pipe. The named pipe has a NULL DACL and thus provides all users full permission over it; leading to potential Service Denial Of Service or Privilege escalation(only if chained with other elements) for a local low privilege user."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-233",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-233 Privilege Escalation"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "UNREPORTED",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "AMBER",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:U/U:Amber",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-269",
+                "description": "CWE-269 Improper Privilege Management",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "b7efe717-a805-47cf-8e9a-921fca0ce0ce",
+          "shortName": "Gridware",
+          "dateUpdated": "2025-11-04T04:23:02.884Z"
+        },
+        "references": [
+          {
+            "url": "https://www.voidtools.com/"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "NULL DACL assigned to Named Pipe communicating with SYSTEM Service",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12456",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-28T22:14:56.946Z",
+      "datePublished": "2025-11-04T04:27:17.736Z",
+      "dateUpdated": "2025-11-04T04:27:17.736Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-04T04:27:17.736Z"
+        },
+        "affected": [
+          {
+            "vendor": "centangle",
+            "product": "Centangle-Team",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.0.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Centangle-Team plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0.0. This is due to missing or incorrect nonce validation on a function. This makes it possible for unauthenticated attackers to modify plugin's settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. Additionally, due to insufficient input sanitization and output escaping on cai_name_color parameter, this issue allows to inject arbitrary web scripts in pages, that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "Centangle Team Showcase <= 1.0.0 - Cross-Site Request Forgery To Plugin's Settings Modification And Stored Cross-Site Scripting",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6ff637c7-677f-4d70-b3cb-770d0a47e691?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/centangle-team/trunk/inc_/cai_setting.php#L88"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/centangle-team/trunk/Centangle-Team-Showcase.php#L132"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/centangle-team/trunk/inc_/cai_setting.php#L172"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/centangle-team/trunk/inc_/cai_setting.php#L196"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "dayea song"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-16T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Discovered"
+          },
+          {
+            "time": "2025-11-03T15:51:54.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12452",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-28T20:59:52.353Z",
+      "datePublished": "2025-11-04T04:27:22.522Z",
+      "dateUpdated": "2025-11-04T04:27:22.522Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-04T04:27:22.522Z"
+        },
+        "affected": [
+          {
+            "vendor": "bestiadurmiente",
+            "product": "Visit Counter",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Visit Counter plugin for WordPress is vulnerable to Cross-Site Request Forgery in version 1.0. This is due to missing or incorrect nonce validation on the widgets.php page. This makes it possible for unauthenticated attackers to update settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+          }
+        ],
+        "title": "Visit Counter 1.0 - Cross-Site Request Forgery to Stored Cross-Site Scripting",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/d9e0f3a5-35fb-4c7e-892f-8a41498e1d3c?source=cve"
+          },
+          {
+            "url": "https://wordpress.org/plugins/visit-counter/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Mohammadamin Alidoost"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-03T16:02:19.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12416",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-28T15:45:10.914Z",
+      "datePublished": "2025-11-04T04:27:13.744Z",
+      "dateUpdated": "2025-11-04T04:27:13.744Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-04T04:27:13.744Z"
+        },
+        "affected": [
+          {
+            "vendor": "mahype",
+            "product": "Pagerank tools",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.1.5",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Pagerank Tools plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Cross-Site Request Forgery in all versions up to, and including, 1.1.5. This is due to missing nonce validation on the pr_save_settings() function and insufficient input sanitization. This makes it possible for unauthenticated attackers to inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. The injected scripts will execute whenever a user accesses the plugin's settings page."
+          }
+        ],
+        "title": "Pagerank Tools <= 1.1.5 - Cross-Site Request Forgery to Stored Cross-Site Scripting",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/177900d6-c52e-4ac4-a74d-412e453f9d05?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/pagerank-tools/tags/1.1.5/functions.inc.php#L176"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/pagerank-tools/tags/1.1.5/functions.inc.php#L192"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "JohSka"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-03T15:37:53.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12415",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-28T15:42:03.979Z",
+      "datePublished": "2025-11-04T04:27:19.056Z",
+      "dateUpdated": "2025-11-04T04:27:19.056Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-04T04:27:19.056Z"
+        },
+        "affected": [
+          {
+            "vendor": "sugiartha",
+            "product": "MapMap",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.1",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The MapMap plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.1. This is due to missing or incorrect nonce validation on the admin_shortcode_submit, admin_configuration_submit, and admin_shortcode_delete functions. This makes it possible for unauthenticated attackers to update the plugin's settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+          }
+        ],
+        "title": "MapMap <= 1.1 - Cross-Site Request Forgery to Settings Update and Stored Cross-Site Scripting",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7c0ed22d-6102-47d6-9afb-fed8515ea74c?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/mapmap/tags/1.1/mapmap.php#L418"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/mapmap/tags/1.1/mapmap.php#L397"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/mapmap/tags/1.1/mapmap.php#L447"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "dayea song"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-03T15:33:46.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  }
+]
