@@ -1,0 +1,476 @@
+[Wed Nov 19 06:35:54 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12057",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2025-10-22T07:35:53.569Z",
+      "datePublished": "2025-11-19T06:00:05.080Z",
+      "dateUpdated": "2025-11-19T06:00:05.080Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2025-11-19T06:00:05.080Z"
+        },
+        "title": "WavePlayer < 3.8.0 - Unauthenticated Arbitrary File Upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-434 Unrestricted Upload of File with Dangerous Type",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "WavePlayer",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThan": "3.8.0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WavePlayer WordPress plugin before 3.8.0 does not have authorization in an AJAX action as well as does not validate the file to be copied locally, allowing unauthenticated users to upload arbitrary file on the server and lead to RCE"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/110db433-01ec-47ea-b74f-c3faa1757a3c/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "@zdenys",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12814",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-11-06T16:54:37.938Z",
+      "datePublished": "2025-11-19T05:45:15.686Z",
+      "dateUpdated": "2025-11-19T05:45:15.686Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-19T05:45:15.686Z"
+        },
+        "affected": [
+          {
+            "vendor": "softaculous",
+            "product": "SiteSEO – SEO Simplified",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.3.2",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The SiteSEO – SEO Simplified plugin for WordPress is vulnerable to unauthorized modification of data due to n incorrect capability check on the siteseo_reset_settings function in all versions up to, and including, 1.3.2. This makes it possible for authenticated attackers, who have been granted access to at least on SiteSEO setting capability, to reset the plugin's settings."
+          }
+        ],
+        "title": "SiteSEO – SEO Simplified <= 1.3.2 - Improper Authorization to Authenticated Settings Reset",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a376cafb-656c-4fe1-b5c1-c7e38dc5040e?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/siteseo/tags/1.3.2/main/ajax.php#L90"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3397272%40siteseo&new=3397272%40siteseo&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-285 Improper Authorization",
+                "cweId": "CWE-285",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Supakiad S."
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-07T18:41:14.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-11-18T17:31:00.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12822",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-11-06T18:44:15.837Z",
+      "datePublished": "2025-11-19T05:45:15.251Z",
+      "dateUpdated": "2025-11-19T05:45:15.251Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-19T05:45:15.251Z"
+        },
+        "affected": [
+          {
+            "vendor": "cyberlord92",
+            "product": "WP Login and Register using JWT",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "3.0.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Login and Register using JWT plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the 'mo_jwt_generate_new_api_key' function in all versions up to, and including, 3.0.0. This makes it possible for authenticated attackers, with Subscriber-level access and above, to generate a new API key on site's that do not have an API key configured and subsequently use that to access restricted endpoints."
+          }
+        ],
+        "title": "WP Login and Register using JWT <= 3.0.0 - Missing Authorization to Authenticated (Subscriber+) API Key Exposure",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/966523a4-3d4b-444b-b9d0-63c72527a99f?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3397900%40login-register-using-jwt&new=3397900%40login-register-using-jwt&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-862 Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Athiwat Tiprasaharn"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-06T19:00:51.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-11-18T17:17:49.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12359",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-27T16:13:08.985Z",
+      "datePublished": "2025-11-19T05:45:14.684Z",
+      "dateUpdated": "2025-11-19T05:45:14.684Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-19T05:45:14.684Z"
+        },
+        "affected": [
+          {
+            "vendor": "dfactory",
+            "product": "Responsive Lightbox & Gallery",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "2.5.3",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Responsive Lightbox & Gallery plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.5.3 via the 'get_image_size_by_url' function. This is due to insufficient validation of user-supplied URLs when determining image dimensions for gallery items. This makes it possible for authenticated attackers, with Author-level access and above, to make web requests to arbitrary locations originating from the web application which can be used to query and modify information from internal services."
+          }
+        ],
+        "title": "Responsive Lightbox & Gallery <= 2.5.3 - Authenticated (Author+) Server-Side Request Forgery",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/7f4c0bd6-f289-4a52-ac11-345076c32d84?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/tags/2.5.3/includes/class-frontend.php#L1531"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/tags/2.5.3/includes/class-fast-image.php#L25"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/tags/2.5.3/includes/functions.php#L108"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/responsive-lightbox/tags/2.5.3/includes/class-galleries.php#L3648"
+          },
+          {
+            "url": "https://research.cleantalk.org/cve-2025-12359"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3397940%40responsive-lightbox%2Ftrunk&old=3358021%40responsive-lightbox%2Ftrunk&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-918 Server-Side Request Forgery (SSRF)",
+                "cweId": "CWE-918",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Dmitrii Ignatyev"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-14T13:51:47.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-11-18T17:10:58.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-12174",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-24T15:42:34.711Z",
+      "datePublished": "2025-11-19T05:45:14.157Z",
+      "dateUpdated": "2025-11-19T05:45:14.157Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2025-11-19T05:45:14.157Z"
+        },
+        "affected": [
+          {
+            "vendor": "wpwax",
+            "product": "Directorist: AI-Powered Business Directory Plugin with Classified Ads Listings",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "8.5.2",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Directorist: AI-Powered Business Directory Plugin with Classified Ads Listings plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the 'directorist_prepare_listings_export_file' and 'directorist_type_slug_change' AJAX actions in all versions up to, and including, 8.5.2. This makes it possible for authenticated attackers, with Subscriber-level access and above, to export listing details and change the directorist slug."
+          }
+        ],
+        "title": "Directorist: AI-Powered Business Directory Plugin with Classified Ads Listings <= 8.5.2 - Missing Authorization to Authenticated (Subscriber+) Data Export and Slug Update",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/796c0ded-3a23-4dd6-968a-a8e60bd8ea0e?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3394856/directorist/tags/8.5.3/includes/classes/class-ajax-handler.php"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-862 Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Rafshanzani Suhada"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-24T15:57:43.000+00:00",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2025-11-18T00:00:00.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      }
+    }
+  }
+]
