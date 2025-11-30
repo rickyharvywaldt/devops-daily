@@ -3856,3 +3856,2111 @@
     }
   }
 ]
+[Sun Nov 30 18:33:14 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7195",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2025-07-07T08:45:21.278Z",
+      "datePublished": "2025-08-07T19:05:08.756Z",
+      "dateUpdated": "2025-11-30T18:17:55.036Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Operator-sdk: privilege escalation due to incorrect permissions of /etc/passwd",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Moderate",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.2,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Early versions of Operator-SDK provided an insecure method to allow operator containers to run in environments that used a random UID. Operator-SDK before 0.15.2 provided a script, user_setup, which modifies the permissions of the /etc/passwd file to 664 during build time. Developers who used Operator-SDK before 0.15.2 to scaffold their operator may still be impacted by this if the insecure user_setup script is still being used to build new container images. \n\nIn affected images, the /etc/passwd file is created during build time with group-writable permissions and a group ownership of root (gid=0). An attacker who can execute commands within an affected container, even as a non-root user, may be able to leverage their membership in the root group to modify the /etc/passwd file. This could allow the attacker to add a new user with any arbitrary UID, including UID 0, leading to full root privileges within the container."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Red Hat",
+            "product": "Compliance Operator 1",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "compliance/openshift-compliance-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0903a7a5c857d96c84fd022e5785514eff201047e2fdd5d6699d79f17440ef02",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_compliance_operator:1::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:4122c38381cc2bc9fe06efee1b3d2d8ea908a5cfcaf74686734f9933c1f033ce",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:4364624686c53f5996960296f8ce496ee819d500eab396f35f7bf417dfdf08b9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0488dca3cb2db097732fe153483af7c4b2acdb7b0bc241f30e78cdb0474d11bb",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d6daba3c061a1405e127105d9cd8d719bf793c3c375bdbdd839f0d0ae5517fe9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c5e7e0f82b73bcdfc594b25ecb2273819fd28dfbbecb4045f997da3d18a398dd",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1a2ef170407505193e8d1ab4832ae0b945ec2fd9245c5a93134ce73f959ea34c",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8e766e6892e3f3e4b97b2af195c359e5c388d5d5cd23bf82b571d0f8c40c674a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:33ba95658e6628be853182a24007d0eef69c350f344e01d24296396eaba1e0e9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:92dcf853dee08f8f68d43d6928df81e0e03cb95ed1c7b9035de089ec831ac12f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f4ca2e5bc681d665e6234a1713ac02ea7460ed8fc5204c363a93eb758521189a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:3d3c96fd84e118f8236161bf16f22e2456a84fb38b0cd80406e97ada5149d30f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:869e84f8f70932a52daa3e2ab00edf51d307c5e765e96f4f60959f9f048299ff",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c1537bc0126b2cabce127ec3d719b9ea6341302cde316cf37f5348ae1e287124",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:4280a31c94268bb421798385104196fcbf69d6821344601af246fd087e93ca63",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8bd6b32078b7aceea003fdcd90f51a963e056a16dbe5ea54d56cbdfc6de029d5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b815590412ff4a47e299f5d30703bc292ba70744d58f4a90eabcf4089e50e2d5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:e1ed0e73c99eb402fe547d9c112e3c2b9d23ff1fc5dda797638eebb42f4791be",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:55dd4696828ab8a7546481b8124406d858b9a43563e14599d06f5e5b1ac030f5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b251e7b26d4a6f3443d6d795a4d92992b5f79d56e5561477648eabae286d7641",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:5ee6284d6354e4e55f1ee7eb5a79b833aae6e31bf42bf185c4192e5d373f06e7",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-core-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:87f5569806a8960520bab78d69514f2e2061b2ad69040cf7c164a5037c27e6bf",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ac8d47727a66b68185bf77848b27b8e5a9c41a023cb6f424a75369b6e4b500a7",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:37d0208891259e9d725fb4146d023c1f0cd0dafbff8e322b7c12621ea25f8c85",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:a492d94ceced107b6b8dc7339cca181875d2245c5f8ac9ecc51979160a341d76",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-metrics-exporter-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:5aad1d226292a42c700e97575eec56040108869acdcb720a9c5b32d02a0035b3",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2abd2d479416e66c6f85e4e883d5e4987bc38f476f907766374784107b89de9a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cli-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:cb4d70c84e2d58e9a4f8108a16ad6f7e1ab78fc4ef7a96dc96f8b5ba788ece0e",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:65176cfc11dcc49e7b175404475dd0fcd9ad14e3b3e8ab85816cf52d64c51512",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cosi-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c5e4d50a9c4ee10b0e7f9bba3d4d21bf479b19423ef3e0530a6637be85acc1ed",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:599bfb2b83e095f88d90a408d4e8bf66bf10070255c5d174ca9ed8668111d25f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:4da2afb698447df4a45a8bc1b479e57a5da7cd7a3ace09e131717a31155ec8a5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:7c5b233911109f0a218b634d8d317229a3949b2ea5936b7ec91ebfcdd6f15060",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ea4c2c1e333eb04d8d5514d255336aa7f0d20fa462b595ebcadcf2929acf9909",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-must-gather-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ca0284c10827905e1576ea0a01bb09425acbf96d30b2e556b34e22e2d0115196",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:9bd2dd681994141e8566c1af858850b323def19b4ffbea2af12efd1d0e1015e9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odr-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2987990bc63fa58ced038084921bdf168a017bd0b94b296a7c79dc264388339a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/rook-ceph-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f0fc8196ffce6f355f06c0157a38e36109eaa9be1f3e91ad71fdd72bc33ee509",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "File Integrity Operator",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "compliance/openshift-file-integrity-operator-bundle",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift_file_integrity_operator:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "File Integrity Operator",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "compliance/openshift-file-integrity-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift_file_integrity_operator:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/addon-manager-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/discovery-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/hypershift-addon-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/hypershift-addon-rhel9-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/placement-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/registration-operator-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/registration-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/work-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-agent-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-manager-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-operator-bundle",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/acm-governance-policy-framework-addon-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/cert-policy-controller-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/cluster-backup-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/config-policy-controller-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/endpoint-monitoring-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/governance-policy-propagator-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/grafana-dashboard-loader-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/iam-policy-controller-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/metrics-collector-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicloud-integrations-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicloud-integrations-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-observability-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-application-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-application-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-channel-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-channel-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-subscription-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/rbac-query-proxy-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/search-collector-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Security 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "advanced-cluster-security/rhacs-rhel8-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:advanced_cluster_security:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat build of Apicurio Registry 3",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "apicurio/apicurio-registry-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:apicurio_registry:3"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "fuse7/fuse-apicurito-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "compliance/openshift-compliance-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "compliance/openshift-file-integrity-operator-bundle",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "compliance/openshift-file-integrity-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/cnf-tests-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/cnf-tests-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/lifecycle-agent-operator-bundle",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/topology-aware-lifecycle-manager-operator-bundle",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/ztp-site-generate-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Dev Workspaces Operator",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "devworkspace/devworkspace-project-clone-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:devworkspace"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Dev Workspaces Operator",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "devworkspace/devworkspace-project-clone-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:devworkspace"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Dev Workspaces Operator",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "devworkspace/devworkspace-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:devworkspace"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Dev Workspaces Operator",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "devworkspace/devworkspace-rhel9-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:devworkspace"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/cluster-network-addons-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/cluster-network-addons-operator-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-cleanup-vm",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-cleanup-vm-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-create-datavolume-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-disk-virt-customize-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-wait-for-vmi-status",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-wait-for-vmi-status-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Web Terminal",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "web-terminal/web-terminal-exec-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:webterminal:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Web Terminal",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "web-terminal/web-terminal-rhel9-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:webterminal:1"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19332",
+            "name": "RHSA-2025:19332",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19335",
+            "name": "RHSA-2025:19335",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19958",
+            "name": "RHSA-2025:19958",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19961",
+            "name": "RHSA-2025:19961",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:21368",
+            "name": "RHSA-2025:21368",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:21885",
+            "name": "RHSA-2025:21885",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2025-7195",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376300",
+            "name": "RHBZ#2376300",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2025-08-07T18:59:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-276",
+                "description": "Incorrect Default Permissions",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-276: Incorrect Default Permissions",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "In Red Hat OpenShift Container Platform, the following default configurations reduce the impact of this vulnerability.\n\nSecurity Context Constraints (SCCs): The default SCC, Restricted-v2, applies several crucial security settings to containers. \n\nCapabilities: drop: ALL removes all Linux capabilities, including SETUID and SETGID. This prevents a process from changing its user or group ID, a common step in privilege escalation attacks. The SETUID and SETGID capabilities can also be dropped explicitly if other capabilities are still required.\n\nallowPrivilegeEscalation: false ensures that a process cannot gain more privileges than its parent process. This blocks attempts by a compromised container process to grant itself additional capabilities.\n\nSELinux Mandatory Access Control (MAC): Pods are required to run with a pre-allocated Multi-Category Security (MCS) label. This SELinux feature provides a strong layer of isolation between containers and from the host system. A properly configured SELinux policy can prevent a container escape, even if an attacker gains elevated permissions within the container itself.\n\nFilesystem Hardening: While not a default setting, a common security practice is to set readOnlyRootFilesystem: true in a container's security context. In this specific scenario, this configuration would prevent an attacker from modifying critical files like /etc/passwd, even if they managed to gain file-level write permissions."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2025-07-04T08:54:01.878000+00:00",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2025-08-07T18:59:00+00:00",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank Antony Di Scala, James Force, and Michael Whale for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2025-11-30T18:17:55.036Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-07T19:23:11.314765Z",
+                  "id": "CVE-2025-7195",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-07T19:36:47.691Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13793",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-11-29T20:55:21.301Z",
+      "datePublished": "2025-11-30T17:02:06.228Z",
+      "dateUpdated": "2025-11-30T17:02:06.228Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-11-30T17:02:06.228Z"
+        },
+        "title": "winston-dsouza Ecommerce-Website GET Parameter header_menu.php cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "winston-dsouza",
+            "product": "Ecommerce-Website",
+            "versions": [
+              {
+                "version": "87734c043269baac0b4cfe9664784462138b1b2e",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "GET Parameter Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in winston-dsouza Ecommerce-Website up to 87734c043269baac0b4cfe9664784462138b1b2e. Affected by this issue is some unknown functionality of the file /includes/header_menu.php of the component GET Parameter Handler. Executing manipulation of the argument Error can lead to cross site scripting. The attack can be executed remotely. The exploit has been made available to the public and could be exploited. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 5,
+              "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-29T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-11-29T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-11-29T22:00:44.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "dream123 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.333797",
+            "name": "VDB-333797 | winston-dsouza Ecommerce-Website GET Parameter header_menu.php cross site scripting",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.333797",
+            "name": "VDB-333797 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.691622",
+            "name": "Submit #691622 | ecommerce-website-master web 1 XSS  vulnerability",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/dream357/report/blob/main/ecommerce-website.docx",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "CVE-2025-13792",
+    "sourceIdentifier": "cna@vuldb.com",
+    "published": "2025-11-30T16:15:47.260",
+    "lastModified": "2025-11-30T16:15:47.260",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "A security flaw has been discovered in Qualitor 8.20/8.24. Affected by this vulnerability is the function eval of the file /html/st/stdeslocamento/request/getResumo.php. Performing manipulation of the argument passageiros results in code injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be exploited. The vendor was contacted early about this disclosure but did not respond in any way."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV40": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+            "baseScore": 6.9,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "LOW",
+            "vulnIntegrityImpact": "LOW",
+            "vulnAvailabilityImpact": "LOW",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "exploitMaturity": "PROOF_OF_CONCEPT",
+            "confidentialityRequirement": "NOT_DEFINED",
+            "integrityRequirement": "NOT_DEFINED",
+            "availabilityRequirement": "NOT_DEFINED",
+            "modifiedAttackVector": "NOT_DEFINED",
+            "modifiedAttackComplexity": "NOT_DEFINED",
+            "modifiedAttackRequirements": "NOT_DEFINED",
+            "modifiedPrivilegesRequired": "NOT_DEFINED",
+            "modifiedUserInteraction": "NOT_DEFINED",
+            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+            "Safety": "NOT_DEFINED",
+            "Automatable": "NOT_DEFINED",
+            "Recovery": "NOT_DEFINED",
+            "valueDensity": "NOT_DEFINED",
+            "vulnerabilityResponseEffort": "NOT_DEFINED",
+            "providerUrgency": "NOT_DEFINED"
+          }
+        }
+      ],
+      "cvssMetricV31": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+            "baseScore": 7.3,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "LOW"
+          },
+          "exploitabilityScore": 3.9,
+          "impactScore": 3.4
+        }
+      ],
+      "cvssMetricV2": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "2.0",
+            "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+            "baseScore": 7.5,
+            "accessVector": "NETWORK",
+            "accessComplexity": "LOW",
+            "authentication": "NONE",
+            "confidentialityImpact": "PARTIAL",
+            "integrityImpact": "PARTIAL",
+            "availabilityImpact": "PARTIAL"
+          },
+          "baseSeverity": "HIGH",
+          "exploitabilityScore": 10.0,
+          "impactScore": 6.4,
+          "acInsufInfo": false,
+          "obtainAllPrivilege": false,
+          "obtainUserPrivilege": false,
+          "obtainOtherPrivilege": false,
+          "userInteractionRequired": false
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "cna@vuldb.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-74"
+          },
+          {
+            "lang": "en",
+            "value": "CWE-94"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://vuldb.com/?ctiid.333796",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?id.333796",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?submit.691251",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=hU8YbFc6KpI",
+        "source": "cna@vuldb.com"
+      }
+    ]
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13792",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-11-29T20:36:29.802Z",
+      "datePublished": "2025-11-30T16:02:05.632Z",
+      "dateUpdated": "2025-11-30T16:02:05.632Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-11-30T16:02:05.632Z"
+        },
+        "title": "Qualitor getResumo.php eval code injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "Qualitor",
+            "versions": [
+              {
+                "version": "8.20",
+                "status": "affected"
+              },
+              {
+                "version": "8.24",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in Qualitor 8.20/8.24. Affected by this vulnerability is the function eval of the file /html/st/stdeslocamento/request/getResumo.php. Performing manipulation of the argument passageiros results in code injection. Remote exploitation of the attack is possible. The exploit has been released to the public and may be exploited. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-29T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-11-29T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-11-29T21:41:33.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "matheuzsec (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.333796",
+            "name": "VDB-333796 | Qualitor getResumo.php eval code injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.333796",
+            "name": "VDB-333796 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.691251",
+            "name": "Submit #691251 | Qualitor Qualitor Web 8.20/8.24 Code Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=hU8YbFc6KpI",
+            "tags": [
+              "exploit",
+              "media-coverage"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "CVE-2025-13791",
+    "sourceIdentifier": "cna@vuldb.com",
+    "published": "2025-11-30T16:15:46.277",
+    "lastModified": "2025-11-30T16:15:46.277",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "A vulnerability was identified in Scada-LTS up to 2.7.8.1. Affected is the function Common.getHomeDir of the file br/org/scadabr/vo/exporter/ZIPProjectManager.java of the component Project Import. Such manipulation leads to path traversal. The attack may be launched remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV40": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "LOW",
+            "vulnIntegrityImpact": "LOW",
+            "vulnAvailabilityImpact": "LOW",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "exploitMaturity": "PROOF_OF_CONCEPT",
+            "confidentialityRequirement": "NOT_DEFINED",
+            "integrityRequirement": "NOT_DEFINED",
+            "availabilityRequirement": "NOT_DEFINED",
+            "modifiedAttackVector": "NOT_DEFINED",
+            "modifiedAttackComplexity": "NOT_DEFINED",
+            "modifiedAttackRequirements": "NOT_DEFINED",
+            "modifiedPrivilegesRequired": "NOT_DEFINED",
+            "modifiedUserInteraction": "NOT_DEFINED",
+            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+            "Safety": "NOT_DEFINED",
+            "Automatable": "NOT_DEFINED",
+            "Recovery": "NOT_DEFINED",
+            "valueDensity": "NOT_DEFINED",
+            "vulnerabilityResponseEffort": "NOT_DEFINED",
+            "providerUrgency": "NOT_DEFINED"
+          }
+        }
+      ],
+      "cvssMetricV31": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "LOW"
+          },
+          "exploitabilityScore": 2.8,
+          "impactScore": 3.4
+        }
+      ],
+      "cvssMetricV2": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "2.0",
+            "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+            "baseScore": 6.5,
+            "accessVector": "NETWORK",
+            "accessComplexity": "LOW",
+            "authentication": "SINGLE",
+            "confidentialityImpact": "PARTIAL",
+            "integrityImpact": "PARTIAL",
+            "availabilityImpact": "PARTIAL"
+          },
+          "baseSeverity": "MEDIUM",
+          "exploitabilityScore": 8.0,
+          "impactScore": 6.4,
+          "acInsufInfo": false,
+          "obtainAllPrivilege": false,
+          "obtainUserPrivilege": false,
+          "obtainOtherPrivilege": false,
+          "userInteractionRequired": false
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "cna@vuldb.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-22"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://github.com/Xzzz111/exps/blob/main/archives/Scada-LTS-ZipSlip-1/report.md",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://github.com/Xzzz111/exps/blob/main/archives/Scada-LTS-ZipSlip-1/report.md#proof-of-concept",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?ctiid.333795",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?id.333795",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?submit.690873",
+        "source": "cna@vuldb.com"
+      }
+    ]
+  }
+]
