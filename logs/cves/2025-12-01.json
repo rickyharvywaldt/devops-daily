@@ -1,0 +1,730 @@
+[Mon Dec  1 02:20:38 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-54236",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2025-07-17T21:15:02.453Z",
+      "datePublished": "2025-09-09T13:20:17.939Z",
+      "dateUpdated": "2025-10-24T22:20:23.685Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Commerce",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "2.4.4-p15",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-09-09T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Commerce versions 2.4.9-alpha2, 2.4.8-p2, 2.4.7-p7, 2.4.6-p12, 2.4.5-p14, 2.4.4-p15 and earlier are affected by an Improper Input Validation vulnerability. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality, and integrity impact to high. Exploitation of this issue does not require user interaction."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 9.1,
+              "environmentalSeverity": "CRITICAL",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "HIGH",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "HIGH",
+              "modifiedIntegrityImpact": "HIGH",
+              "modifiedPrivilegesRequired": "NONE",
+              "modifiedScope": "UNCHANGED",
+              "modifiedUserInteraction": "NONE",
+              "privilegesRequired": "NONE",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "UNCHANGED",
+              "temporalScore": 9.1,
+              "temporalSeverity": "CRITICAL",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-20",
+                "description": "Improper Input Validation (CWE-20)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2025-09-09T15:34:50.112Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/magento/apsb25-88.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Commerce | Improper Input Validation (CWE-20)"
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://nullsecurityx.codes/cve-2025-54236-sessionreaper-unauthenticated-rce-in-magento",
+              "tags": [
+                "exploit"
+              ]
+            },
+            {
+              "url": "https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27397",
+              "tags": [
+                "mitigation"
+              ]
+            },
+            {
+              "name": "CISA KEV",
+              "tags": [
+                "government-resource"
+              ],
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-54236"
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-24T14:08:30.772162Z",
+                  "id": "CVE-2025-54236",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            },
+            {
+              "other": {
+                "type": "kev",
+                "content": {
+                  "dateAdded": "2025-10-24",
+                  "reference": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-54236"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-24T22:20:23.685Z"
+          },
+          "timeline": [
+            {
+              "time": "2025-10-24T00:00:00+00:00",
+              "lang": "en",
+              "value": "CVE-2025-54236 added to CISA KEV"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-64772",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2025-11-21T06:09:30.817Z",
+      "datePublished": "2025-12-01T00:22:05.027Z",
+      "dateUpdated": "2025-12-01T00:22:05.027Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Sony Corporation",
+            "product": "INZONE Hub",
+            "versions": [
+              {
+                "version": "1.0.10.3 to 1.0.17.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The installer of INZONE Hub 1.0.10.3 to 1.0.17.0 contains an issue with the DLL search path, which may lead to insecurely loading Dynamic Link Libraries. As a result, arbitrary code may be executed with the privilege of the user invoking the installer."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Uncontrolled Search Path Element",
+                "lang": "en-US",
+                "cweId": "CWE-427",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.sony.com/electronics/support/others-software/inzone-hub"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN28247549/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.8,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.4,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2025-12-01T00:22:05.027Z"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13799",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-11-30T13:58:34.486Z",
+      "datePublished": "2025-12-01T01:02:05.859Z",
+      "dateUpdated": "2025-12-01T01:02:05.859Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-01T01:02:05.859Z"
+        },
+        "title": "ADSLR NBR1005GPEV2 send_order.cgi ap_macfilter_del command injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-77",
+                "lang": "en",
+                "description": "Command Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ADSLR",
+            "product": "NBR1005GPEV2",
+            "versions": [
+              {
+                "version": "250814-r037c",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in ADSLR NBR1005GPEV2 250814-r037c. This vulnerability affects the function ap_macfilter_del of the file /send_order.cgi. The manipulation of the argument mac leads to command injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-30T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-11-30T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-11-30T15:03:47.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "2er00ne (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.333810",
+            "name": "VDB-333810 | ADSLR NBR1005GPEV2 send_order.cgi ap_macfilter_del command injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.333810",
+            "name": "VDB-333810 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.691842",
+            "name": "Submit #691842 | Adslr NBR1005GPEV2 250814-r037c Remote code execution",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://www.notion.so/2a60c75766a8801e8e4bdd3be8072d9d",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13798",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-11-30T13:58:31.728Z",
+      "datePublished": "2025-12-01T00:32:06.723Z",
+      "dateUpdated": "2025-12-01T00:32:06.723Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-01T00:32:06.723Z"
+        },
+        "title": "ADSLR NBR1005GPEV2 send_order.cgi ap_macfilter_add command injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-77",
+                "lang": "en",
+                "description": "Command Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ADSLR",
+            "product": "NBR1005GPEV2",
+            "versions": [
+              {
+                "version": "250814-r037c",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in ADSLR NBR1005GPEV2 250814-r037c. This affects the function ap_macfilter_add of the file /send_order.cgi. Executing manipulation of the argument mac can lead to command injection. The attack may be performed from remote. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-30T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-11-30T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-11-30T15:03:45.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "2er00ne (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.333809",
+            "name": "VDB-333809 | ADSLR NBR1005GPEV2 send_order.cgi ap_macfilter_add command injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.333809",
+            "name": "VDB-333809 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.691841",
+            "name": "Submit #691841 | Adslr NBR1005GPEV2 250814-r037c Remote code execution",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://www.notion.so/2a60c75766a8805a8973d2ff6a6bcb26",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13797",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-11-30T13:58:22.378Z",
+      "datePublished": "2025-12-01T00:02:06.184Z",
+      "dateUpdated": "2025-12-01T00:02:06.184Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-01T00:02:06.184Z"
+        },
+        "title": "ADSLR B-QE2W401 send_order.cgi parameterdel_swifimac command injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-77",
+                "lang": "en",
+                "description": "Command Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ADSLR",
+            "product": "B-QE2W401",
+            "versions": [
+              {
+                "version": "250814-r037c",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in ADSLR B-QE2W401 250814-r037c. Affected by this issue is the function parameterdel_swifimac of the file /send_order.cgi. Performing manipulation of the argument del_swifimac results in command injection. The attack is possible to be carried out remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-11-30T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-11-30T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-11-30T15:03:43.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "2er00ne (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.333808",
+            "name": "VDB-333808 | ADSLR B-QE2W401 send_order.cgi parameterdel_swifimac command injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.333808",
+            "name": "VDB-333808 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.691838",
+            "name": "Submit #691838 | Adslr B-QE2W401 250814-r037c Remote code execution",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://www.notion.so/2a60c75766a88027a6aec07b378332a8",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
