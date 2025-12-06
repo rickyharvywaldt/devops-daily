@@ -1,0 +1,808 @@
+[Sat Dec  6 01:52:01 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-32959",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2024-04-22T10:42:22.448Z",
+      "datePublished": "2024-05-17T09:40:23.092Z",
+      "dateUpdated": "2024-08-02T02:27:53.183Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://wordpress.org/plugins",
+            "defaultStatus": "unaffected",
+            "packageName": "sirv",
+            "product": "Sirv",
+            "vendor": "Sirv",
+            "versions": [
+              {
+                "changes": [
+                  {
+                    "at": "7.2.3",
+                    "status": "unaffected"
+                  }
+                ],
+                "lessThanOrEqual": "7.2.2",
+                "status": "affected",
+                "version": "n/a",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "value": "Emili Castells (Patchstack Alliance)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Privilege Management vulnerability in Sirv allows Privilege Escalation.<p>This issue affects Sirv: from n/a through 7.2.2.</p>"
+              }
+            ],
+            "value": "Improper Privilege Management vulnerability in Sirv allows Privilege Escalation.This issue affects Sirv: from n/a through 7.2.2."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-233",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-233 Privilege Escalation"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-269",
+                "description": "CWE-269 Improper Privilege Management",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2024-05-17T09:40:23.092Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vdb-entry"
+            ],
+            "url": "https://patchstack.com/database/vulnerability/sirv/wordpress-sirv-plugin-7-2-2-arbitrary-option-update-to-privilege-escalation-vulnerability?_s_id=cve"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Update to 7.2.3 or a higher version."
+              }
+            ],
+            "value": "Update to 7.2.3 or a higher version."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "WordPress Sirv plugin <= 7.2.2 - Arbitrary Option Update to Privilege Escalation vulnerability",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        }
+      },
+      "adp": [
+        {
+          "title": "CISA ADP Vulnrichment",
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2024-32959",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2024-05-17T15:48:36.006614Z"
+                }
+              }
+            }
+          ],
+          "affected": [
+            {
+              "cpes": [
+                "cpe:2.3:a:sirv:sirv:-:*:*:*:*:wordpress:*:*"
+              ],
+              "vendor": "sirv",
+              "product": "sirv",
+              "versions": [
+                {
+                  "status": "affected",
+                  "version": "-",
+                  "versionType": "custom",
+                  "lessThanOrEqual": "7.2.2"
+                }
+              ],
+              "defaultStatus": "unknown"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-06-04T17:49:47.554Z"
+          }
+        },
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-02T02:27:53.183Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "vdb-entry",
+                "x_transferred"
+              ],
+              "url": "https://patchstack.com/database/vulnerability/sirv/wordpress-sirv-plugin-7-2-2-arbitrary-option-update-to-privilege-escalation-vulnerability?_s_id=cve"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-1544",
+      "assignerOrgId": "50d2cd11-d01a-48ed-9441-5bfce9d63b27",
+      "state": "PUBLISHED",
+      "assignerShortName": "wolfSSL",
+      "dateReserved": "2024-02-15T17:38:16.603Z",
+      "datePublished": "2024-08-27T18:44:52.770Z",
+      "dateUpdated": "2024-08-27T19:14:35.190Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unknown",
+            "product": "wolfSSL",
+            "programFiles": [
+              "wolfcrypt/src/ecc.c"
+            ],
+            "vendor": "wolfSSL",
+            "versions": [
+              {
+                "lessThanOrEqual": "5.6.4",
+                "status": "affected",
+                "version": "0",
+                "versionType": "Release"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "value": "Florian Sieck, Luca Wilke and Thomas Eisenbarth from Universität zu Lübeck"
+          }
+        ],
+        "datePublic": "2024-07-08T17:30:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Generating the ECDSA nonce k samples a random number r and then <br>truncates this randomness with a modular reduction mod n where n is the <br>order of the elliptic curve. Meaning k = r mod n. The division used <br>during the reduction estimates a factor q_e by dividing the upper two <br>digits (a digit having e.g. a size of 8 byte) of r by the upper digit of <br>n and then decrements q_e in a loop until it has the correct size. <br>Observing the number of times q_e is decremented through a control-flow <br>revealing side-channel reveals a bias in the most significant bits of <br>k. Depending on the curve this is either a negligible bias or a <br>significant bias large enough to reconstruct k with lattice reduction <br>methods. For SECP160R1, e.g., we find a bias of 15 bits."
+              }
+            ],
+            "value": "Generating the ECDSA nonce k samples a random number r and then \ntruncates this randomness with a modular reduction mod n where n is the \norder of the elliptic curve. Meaning k = r mod n. The division used \nduring the reduction estimates a factor q_e by dividing the upper two \ndigits (a digit having e.g. a size of 8 byte) of r by the upper digit of \nn and then decrements q_e in a loop until it has the correct size. \nObserving the number of times q_e is decremented through a control-flow \nrevealing side-channel reveals a bias in the most significant bits of \nk. Depending on the curve this is either a negligible bias or a \nsignificant bias large enough to reconstruct k with lattice reduction \nmethods. For SECP160R1, e.g., we find a bias of 15 bits."
+          }
+        ],
+        "impacts": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "Information Disclosure"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.1,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-203",
+                "description": "CWE-203 Observable Discrepancy",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "50d2cd11-d01a-48ed-9441-5bfce9d63b27",
+          "shortName": "wolfSSL",
+          "dateUpdated": "2024-08-27T18:44:52.770Z"
+        },
+        "references": [
+          {
+            "url": "https://github.com/wolfSSL/wolfssl/releases/tag/v5.7.2-stable"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "ECDSA nonce bias caused by truncation",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2024-08-27T19:14:00.889289Z",
+                  "id": "CVE-2024-1544",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-08-27T19:14:35.190Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-5814",
+    "sourceIdentifier": "facts@wolfssl.com",
+    "published": "2024-08-27T19:15:17.980",
+    "lastModified": "2025-12-06T00:54:13.963",
+    "vulnStatus": "Analyzed",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "A malicious TLS1.2 server can force a TLS1.3 client with downgrade capability to use a ciphersuite that it did not agree to and achieve a successful connection. This is because, aside from the extensions, the client was skipping fully parsing the server hello.  https://doi.org/10.46586/tches.v2024.i1.457-500"
+      },
+      {
+        "lang": "es",
+        "value": "Un servidor TLS1.2 malicioso puede obligar a un cliente TLS1.3 con capacidad de degradación a utilizar un conjunto de cifrado con el que no estuvo de acuerdo y lograr una conexión exitosa. Esto se debe a que, aparte de las extensiones, el cliente se saltaba por completo el análisis del saludo del servidor. https://doi.org/10.46586/tches.v2024.i1.457-500"
+      }
+    ],
+    "metrics": {
+      "cvssMetricV40": [
+        {
+          "source": "facts@wolfssl.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:X/V:D/RE:M/U:Green",
+            "baseScore": 5.1,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "NONE",
+            "userInteraction": "ACTIVE",
+            "vulnConfidentialityImpact": "LOW",
+            "vulnIntegrityImpact": "NONE",
+            "vulnAvailabilityImpact": "NONE",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "exploitMaturity": "NOT_DEFINED",
+            "confidentialityRequirement": "NOT_DEFINED",
+            "integrityRequirement": "NOT_DEFINED",
+            "availabilityRequirement": "NOT_DEFINED",
+            "modifiedAttackVector": "NOT_DEFINED",
+            "modifiedAttackComplexity": "NOT_DEFINED",
+            "modifiedAttackRequirements": "NOT_DEFINED",
+            "modifiedPrivilegesRequired": "NOT_DEFINED",
+            "modifiedUserInteraction": "NOT_DEFINED",
+            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+            "Safety": "NOT_DEFINED",
+            "Automatable": "YES",
+            "Recovery": "NOT_DEFINED",
+            "valueDensity": "DIFFUSE",
+            "vulnerabilityResponseEffort": "MODERATE",
+            "providerUrgency": "GREEN"
+          }
+        }
+      ],
+      "cvssMetricV31": [
+        {
+          "source": "nvd@nist.gov",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 3.9,
+          "impactScore": 1.4
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+        "type": "Secondary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-284"
+          }
+        ]
+      }
+    ],
+    "configurations": [
+      {
+        "nodes": [
+          {
+            "operator": "OR",
+            "negate": false,
+            "cpeMatch": [
+              {
+                "vulnerable": true,
+                "criteria": "cpe:2.3:a:wolfssl:wolfssl:*:*:*:*:*:*:*:*",
+                "versionEndIncluding": "5.7.0",
+                "matchCriteriaId": "68EDAD3E-B3D4-44BA-8F48-44DF39F1842C"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://github.com/wolfSSL/wolfssl/blob/master/ChangeLog.md#add_later",
+        "source": "facts@wolfssl.com",
+        "tags": [
+          "Release Notes"
+        ]
+      }
+    ]
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2024-5814",
+      "assignerOrgId": "50d2cd11-d01a-48ed-9441-5bfce9d63b27",
+      "state": "PUBLISHED",
+      "assignerShortName": "wolfSSL",
+      "dateReserved": "2024-06-10T19:48:59.670Z",
+      "datePublished": "2024-08-27T18:38:08.974Z",
+      "dateUpdated": "2024-08-27T19:21:04.561Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unknown",
+            "product": "wolfSSL",
+            "programFiles": [
+              "src/tls13.c"
+            ],
+            "repo": "https://github.com/wolfSSL/wolfssl",
+            "vendor": "wolfSSL",
+            "versions": [
+              {
+                "lessThanOrEqual": "5.7.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "Release"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Armin Najafabadi"
+          },
+          {
+            "lang": "en",
+            "type": "reporter",
+            "value": "Per Allansson"
+          }
+        ],
+        "datePublic": "2024-07-08T17:30:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(255, 255, 255);\">A malicious TLS1.2 server can force a TLS1.3 client with downgrade capability to use a ciphersuite that it did not agree to and achieve a successful connection. This is because, aside from the extensions, the client was skipping fully parsing the server hello.</span><a target=\"_blank\" rel=\"nofollow\" href=\"https://doi.org/10.46586/tches.v2024.i1.457-500\"></a><br>"
+              }
+            ],
+            "value": "A malicious TLS1.2 server can force a TLS1.3 client with downgrade capability to use a ciphersuite that it did not agree to and achieve a successful connection. This is because, aside from the extensions, the client was skipping fully parsing the server hello.  https://doi.org/10.46586/tches.v2024.i1.457-500"
+          }
+        ],
+        "impacts": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "Information Disclosure"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "YES",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "GREEN",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "DIFFUSE",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/AU:Y/V:D/RE:M/U:Green",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "MODERATE"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "50d2cd11-d01a-48ed-9441-5bfce9d63b27",
+          "shortName": "wolfSSL",
+          "dateUpdated": "2024-08-27T18:38:08.974Z"
+        },
+        "references": [
+          {
+            "url": "https://github.com/wolfSSL/wolfssl/blob/master/ChangeLog.md#add_later"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Update wolfSSL to 5.7.2.<br>"
+              }
+            ],
+            "value": "Update wolfSSL to 5.7.2."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Unverifed Ciphersuite used on a client-side TLS1.3 Downgrade",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "On client side, use the wolfSSL methods for specific protocol versions instead of the downgrade API.<br>"
+              }
+            ],
+            "value": "On client side, use the wolfSSL methods for specific protocol versions instead of the downgrade API."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        }
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "affected": [
+            {
+              "vendor": "wolfssl",
+              "product": "wolfssl",
+              "cpes": [
+                "cpe:2.3:a:wolfssl:wolfssl:-:*:*:*:*:*:*:*"
+              ],
+              "defaultStatus": "unknown",
+              "versions": [
+                {
+                  "version": "0",
+                  "status": "affected",
+                  "lessThanOrEqual": "5.70",
+                  "versionType": "custom"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2024-08-27T19:18:34.533190Z",
+                  "id": "CVE-2024-5814",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-08-27T19:21:04.561Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "CVE-2024-34671",
+    "sourceIdentifier": "mobile.security@samsung.com",
+    "published": "2024-10-08T07:15:05.640",
+    "lastModified": "2025-12-06T00:51:49.103",
+    "vulnStatus": "Analyzed",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "Use of implicit intent for sensitive communication in translation혻in Samsung Internet prior to version 26.0.3.1 allows local attackers to get sensitive information. User interaction is required for triggering this vulnerability."
+      },
+      {
+        "lang": "es",
+        "value": "El uso de la intención implícita de obtener comunicaciones confidenciales en translation?in Samsung Internet anterior a la versión 26.0.3.1 permite a atacantes locales obtener información confidencial. Se requiere la interacción del usuario para activar esta vulnerabilidad."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV31": [
+        {
+          "source": "mobile.security@samsung.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+            "baseScore": 3.3,
+            "baseSeverity": "LOW",
+            "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 1.8,
+          "impactScore": 1.4
+        },
+        {
+          "source": "nvd@nist.gov",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "baseScore": 5.5,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "LOCAL",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "REQUIRED",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "NONE",
+            "availabilityImpact": "NONE"
+          },
+          "exploitabilityScore": 1.8,
+          "impactScore": 3.6
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "nvd@nist.gov",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "NVD-CWE-Other"
+          }
+        ]
+      }
+    ],
+    "configurations": [
+      {
+        "nodes": [
+          {
+            "operator": "OR",
+            "negate": false,
+            "cpeMatch": [
+              {
+                "vulnerable": true,
+                "criteria": "cpe:2.3:a:samsung:internet:*:*:*:*:*:*:*:*",
+                "versionEndExcluding": "26.0.3.1",
+                "matchCriteriaId": "D41D18F2-97E5-43AC-89A0-4F3B847314E9"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://security.samsungmobile.com/serviceWeb.smsb?year=2024&month=10",
+        "source": "mobile.security@samsung.com",
+        "tags": [
+          "Vendor Advisory"
+        ]
+      }
+    ]
+  }
+]
