@@ -1,0 +1,264 @@
+[Sun Dec  7 02:07:20 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x57x-cxmg-52pw",
+    "modified": "2025-12-07T00:30:57Z",
+    "published": "2025-12-07T00:30:56Z",
+    "aliases": [
+      "CVE-2025-40283"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nBluetooth: btusb: reorder cleanup in btusb_disconnect to avoid UAF\n\nThere is a KASAN: slab-use-after-free read in btusb_disconnect().\nCalling \"usb_driver_release_interface(&btusb_driver, data->intf)\" will\nfree the btusb data associated with the interface. The same data is\nthen used later in the function, hence the UAF.\n\nFix by moving the accesses to btusb data to before the data is free'd.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40283"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/1c28c1e1522c773a94e26950ffb145e88cd9834b"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/23d22f2f71768034d6ef86168213843fc49bf550"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/297dbf87989e09af98f81f2bcb938041785557e8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/5dc00065a0496c36694afe11e52a5bc64524a9b8"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/7a6d1e740220ff9dfcb6a8c994d6ba49e76db198"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/95b9b98c93b1c0916a3d4cf4540b7f5d69145a0d"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/a2610ecd9fd5708be8997ca8f033e4200c0bb6af"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/f858f004bc343a7ae9f2533bbb2a3ab27428532f"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-06T22:15:56Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x49w-vx84-7x88",
+    "modified": "2025-12-07T00:30:56Z",
+    "published": "2025-12-07T00:30:56Z",
+    "aliases": [
+      "CVE-2025-40275"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nALSA: usb-audio: Fix NULL pointer dereference in snd_usb_mixer_controls_badd\n\nIn snd_usb_create_streams(), for UAC version 3 devices, the Interface\nAssociation Descriptor (IAD) is retrieved via usb_ifnum_to_if(). If this\ncall fails, a fallback routine attempts to obtain the IAD from the next\ninterface and sets a BADD profile. However, snd_usb_mixer_controls_badd()\nassumes that the IAD retrieved from usb_ifnum_to_if() is always valid,\nwithout performing a NULL check. This can lead to a NULL pointer\ndereference when usb_ifnum_to_if() fails to find the interface descriptor.\n\nThis patch adds a NULL pointer check after calling usb_ifnum_to_if() in\nsnd_usb_mixer_controls_badd() to prevent the dereference.\n\nThis issue was discovered by syzkaller, which triggered the bug by sending\na crafted USB device descriptor.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40275"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/23aea9c74aeea2625aaf4fbcc6beb9d09e30f9e4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/2762d3ea9c929ca4094541ca517c317ffa94625b"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/57f607c112966c21240c424b33e2cb71e121dcf0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/632108ec072ad64c8c83db6e16a7efee29ebfb74"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/85568535893600024d7d8794f4f8b6428b521e0c"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/9f282104627be5fbded3102ff9004f753c55a063"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/c5c08965ab96b16361e69a1e2a0e89dbcb99b5a6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/cbdbfc756f2990942138ed0138da9303b4dbf9ff"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-06T22:15:55Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wf68-85vc-c49w",
+    "modified": "2025-12-07T00:30:56Z",
+    "published": "2025-10-29T15:31:56Z",
+    "aliases": [
+      "CVE-2025-40083"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: sch_qfq: Fix null-deref in agg_dequeue\n\nTo prevent a potential crash in agg_dequeue (net/sched/sch_qfq.c)\nwhen cl->qdisc->ops->peek(cl->qdisc) returns NULL, we check the return\nvalue before using it, similar to the existing approach in sch_hfsc.c.\n\nTo avoid code duplication, the following changes are made:\n\n1. Changed qdisc_warn_nonwc(include/net/pkt_sched.h) into a static\ninline function.\n\n2. Moved qdisc_peek_len from net/sched/sch_hfsc.c to\ninclude/net/pkt_sched.h so that sch_qfq can reuse it.\n\n3. Applied qdisc_peek_len in agg_dequeue to avoid crashing.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40083"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/1bed56f089f09b465420bf23bb32985c305cfc28"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/3c2a8994807623c7655ece205667ae2cf74940aa"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6ff8e74c8f8a68ec07ef837b95425dfe900d060f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6ffa9d66187188e3068b5a3895e6ae1ee34f9199"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/71d84658a61322e5630c85c5388fc25e4a2d08b2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/99fc137f178797204d36ac860dd8b31e35baa2df"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/dd831ac8221e691e9e918585b1003c7071df0379"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-10-29T14:15:54Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-vj97-73gp-638r",
+    "modified": "2025-12-07T00:30:56Z",
+    "published": "2025-12-07T00:30:56Z",
+    "aliases": [
+      "CVE-2025-40287"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nexfat: fix improper check of dentry.stream.valid_size\n\nWe found an infinite loop bug in the exFAT file system that can lead to a\nDenial-of-Service (DoS) condition. When a dentry in an exFAT filesystem is\nmalformed, the following system calls — SYS_openat, SYS_ftruncate, and\nSYS_pwrite64 — can cause the kernel to hang.\n\nRoot cause analysis shows that the size validation code in exfat_find()\ndoes not check whether dentry.stream.valid_size is negative. As a result,\nthe system calls mentioned above can succeed and eventually trigger the DoS\nissue.\n\nThis patch adds a check for negative dentry.stream.valid_size to prevent\nthis vulnerability.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40287"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/204b1b02ee018ba52ad2ece21fe3a8643d66a1b2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6c627bcc1896ba62ec793d0c00da74f3c93ce3ad"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/82ebecdc74ff555daf70b811d854b1f32a296bea"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-06T22:15:56Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-r3v3-c3jq-3938",
+    "modified": "2025-12-07T00:30:56Z",
+    "published": "2025-12-04T18:30:53Z",
+    "aliases": [
+      "CVE-2025-40263"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nInput: cros_ec_keyb - fix an invalid memory access\n\nIf cros_ec_keyb_register_matrix() isn't called (due to\n`buttons_switches_only`) in cros_ec_keyb_probe(), `ckdev->idev` remains\nNULL.  An invalid memory access is observed in cros_ec_keyb_process()\nwhen receiving an EC_MKBP_EVENT_KEY_MATRIX event in cros_ec_keyb_work()\nin such case.\n\n  Unable to handle kernel read from unreadable memory at virtual address 0000000000000028\n  ...\n  x3 : 0000000000000000 x2 : 0000000000000000\n  x1 : 0000000000000000 x0 : 0000000000000000\n  Call trace:\n  input_event\n  cros_ec_keyb_work\n  blocking_notifier_call_chain\n  ec_irq_thread\n\nIt's still unknown about why the kernel receives such malformed event,\nin any cases, the kernel shouldn't access `ckdev->idev` and friends if\nthe driver doesn't intend to initialize them.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-40263"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/2d251c15c27e2dd16d6318425d2f7260cbd47d39"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6d81068685154535af06163eb585d6d9663ec7ec"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/729d21c82c1b0504ffccb17cc261bf32e024fd0f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/7bfd959187f2c7584bb43280bbc7b2846e7a5085"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/8b5ae1521660c16fa830ff17d16e650b4905b71a"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/9cf59f4724a9ee06ebb06c76b8678ac322e850b7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/d74864291cb8bd784d44d1d02e87109cf88666bb"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/e08969c4d65ac31297fcb4d31d4808c789152f68"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-04T16:16:20Z"
+    }
+  }
+]
