@@ -822,3 +822,827 @@
     }
   }
 ]
+[Mon Dec  8 01:59:18 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40290",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2025-04-16T07:20:57.185Z",
+      "datePublished": "2025-12-08T00:09:08.370Z",
+      "dateUpdated": "2025-12-08T00:09:08.370Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2025-12-08T00:09:08.370Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nxsk: avoid data corruption on cq descriptor number\n\nSince commit 30f241fcf52a (\"xsk: Fix immature cq descriptor\nproduction\"), the descriptor number is stored in skb control block and\nxsk_cq_submit_addr_locked() relies on it to put the umem addrs onto\npool's completion queue.\n\nskb control block shouldn't be used for this purpose as after transmit\nxsk doesn't have control over it and other subsystems could use it. This\nleads to the following kernel panic due to a NULL pointer dereference.\n\n BUG: kernel NULL pointer dereference, address: 0000000000000000\n #PF: supervisor read access in kernel mode\n #PF: error_code(0x0000) - not-present page\n PGD 0 P4D 0\n Oops: Oops: 0000 [#1] SMP NOPTI\n CPU: 2 UID: 1 PID: 927 Comm: p4xsk.bin Not tainted 6.16.12+deb14-cloud-amd64 #1 PREEMPT(lazy)  Debian 6.16.12-1\n Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.17.0-debian-1.17.0-1 04/01/2014\n RIP: 0010:xsk_destruct_skb+0xd0/0x180\n [...]\n Call Trace:\n  <IRQ>\n  ? napi_complete_done+0x7a/0x1a0\n  ip_rcv_core+0x1bb/0x340\n  ip_rcv+0x30/0x1f0\n  __netif_receive_skb_one_core+0x85/0xa0\n  process_backlog+0x87/0x130\n  __napi_poll+0x28/0x180\n  net_rx_action+0x339/0x420\n  handle_softirqs+0xdc/0x320\n  ? handle_edge_irq+0x90/0x1e0\n  do_softirq.part.0+0x3b/0x60\n  </IRQ>\n  <TASK>\n  __local_bh_enable_ip+0x60/0x70\n  __dev_direct_xmit+0x14e/0x1f0\n  __xsk_generic_xmit+0x482/0xb70\n  ? __remove_hrtimer+0x41/0xa0\n  ? __xsk_generic_xmit+0x51/0xb70\n  ? _raw_spin_unlock_irqrestore+0xe/0x40\n  xsk_sendmsg+0xda/0x1c0\n  __sys_sendto+0x1ee/0x200\n  __x64_sys_sendto+0x24/0x30\n  do_syscall_64+0x84/0x2f0\n  ? __pfx_pollwake+0x10/0x10\n  ? __rseq_handle_notify_resume+0xad/0x4c0\n  ? restore_fpregs_from_fpstate+0x3c/0x90\n  ? switch_fpu_return+0x5b/0xe0\n  ? do_syscall_64+0x204/0x2f0\n  ? do_syscall_64+0x204/0x2f0\n  ? do_syscall_64+0x204/0x2f0\n  entry_SYSCALL_64_after_hwframe+0x76/0x7e\n  </TASK>\n [...]\n Kernel panic - not syncing: Fatal exception in interrupt\n Kernel Offset: 0x1c000000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)\n\nInstead use the skb destructor_arg pointer along with pointer tagging.\nAs pointers are always aligned to 8B, use the bottom bit to indicate\nwhether this a single address or an allocated struct containing several\naddresses."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/xdp/xsk.c"
+            ],
+            "versions": [
+              {
+                "version": "30f241fcf52aaaef7ac16e66530faa11be78a865",
+                "lessThan": "c5ea2e50b5c9aa80c5b53526257540f0c26cd66d",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "30f241fcf52aaaef7ac16e66530faa11be78a865",
+                "lessThan": "0ebc27a4c67d44e5ce88d21cdad8201862b78837",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "932cb57e675a62982d4719e4b04e9f09a15a5baf",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/xdp/xsk.c"
+            ],
+            "versions": [
+              {
+                "version": "6.17",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "6.17",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.17.11",
+                "lessThanOrEqual": "6.17.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.17",
+                    "versionEndExcluding": "6.17.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.17",
+                    "versionEndExcluding": "6.18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.16.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/c5ea2e50b5c9aa80c5b53526257540f0c26cd66d"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/0ebc27a4c67d44e5ce88d21cdad8201862b78837"
+          },
+          {
+            "url": "https://bugs.debian.org/1118437"
+          }
+        ],
+        "title": "xsk: avoid data corruption on cq descriptor number",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14206",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-07T08:02:14.254Z",
+      "datePublished": "2025-12-08T00:02:06.916Z",
+      "dateUpdated": "2025-12-08T00:02:06.916Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-08T00:02:06.916Z"
+        },
+        "title": "SourceCodester Online Student Clearance System Fee Table delete-fee.php improper authorization",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-285",
+                "lang": "en",
+                "description": "Improper Authorization"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-266",
+                "lang": "en",
+                "description": "Incorrect Privilege Assignment"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SourceCodester",
+            "product": "Online Student Clearance System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Fee Table Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was determined in SourceCodester Online Student Clearance System 1.0. The affected element is an unknown function of the file /Admin/delete-fee.php of the component Fee Table Handler. Executing manipulation of the argument ID can lead to improper authorization. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.5,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.4,
+              "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-07T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-07T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-07T09:07:24.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "yudeshui (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.334649",
+            "name": "VDB-334649 | SourceCodester Online Student Clearance System Fee Table delete-fee.php improper authorization",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.334649",
+            "name": "VDB-334649 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.700465",
+            "name": "Submit #700465 | Sourcecodester Online Student Clearance System Project 1.0 /Admin/delete-fee.php Broken Access Control",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/rassec2/dbcve/issues/8",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://www.sourcecodester.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14208",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-07T08:07:20.088Z",
+      "datePublished": "2025-12-08T01:02:07.507Z",
+      "dateUpdated": "2025-12-08T01:02:07.507Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-08T01:02:07.507Z"
+        },
+        "title": "D-Link DIR-823X set_wan_settings sub_415028 command injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-77",
+                "lang": "en",
+                "description": "Command Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "D-Link",
+            "product": "DIR-823X",
+            "versions": [
+              {
+                "version": "20250416",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in D-Link DIR-823X up to 20250416. This affects the function sub_415028 of the file /goform/set_wan_settings. The manipulation of the argument ppp_username results in command injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be exploited."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-07T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-07T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-07T09:12:25.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "panda_0x1 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.334651",
+            "name": "VDB-334651 | D-Link DIR-823X set_wan_settings sub_415028 command injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.334651",
+            "name": "VDB-334651 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.700499",
+            "name": "Submit #700499 | D-Link DIR-823X 250416 Command Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/panda666-888/vuls/blob/main/d-link/dir-823x/set_wan_settings.md",
+            "tags": [
+              "related"
+            ]
+          },
+          {
+            "url": "https://github.com/panda666-888/vuls/blob/main/d-link/dir-823x/set_wan_settings.md#poc",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40326",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2025-04-16T07:20:57.186Z",
+      "datePublished": "2025-12-08T00:46:53.212Z",
+      "dateUpdated": "2025-12-08T00:46:53.212Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2025-12-08T00:46:53.212Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Define actions for the new time_deleg FATTR4 attributes\n\nNFSv4 clients won't send legitimate GETATTR requests for these new\nattributes because they are intended to be used only with CB_GETATTR\nand SETATTR. But NFSD has to do something besides crashing if it\never sees a GETATTR request that queries these attributes.\n\nRFC 8881 Section 18.7.3 states:\n\n> The server MUST return a value for each attribute that the client\n> requests if the attribute is supported by the server for the\n> target file system. If the server does not support a particular\n> attribute on the target file system, then it MUST NOT return the\n> attribute value and MUST NOT set the attribute bit in the result\n> bitmap. The server MUST return an error if it supports an\n> attribute on the target but cannot obtain its value. In that case,\n> no attribute values will be returned.\n\nFurther, RFC 9754 Section 5 states:\n\n> These new attributes are invalid to be used with GETATTR, VERIFY,\n> and NVERIFY, and they can only be used with CB_GETATTR and SETATTR\n> by a client holding an appropriate delegation.\n\nThus there does not appear to be a specific server response mandated\nby specification. Taking the guidance that querying these attributes\nvia GETATTR is \"invalid\", NFSD will return nfserr_inval, failing the\nrequest entirely."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "fs/nfsd/nfs4xdr.c"
+            ],
+            "versions": [
+              {
+                "version": "51c0d4f7e317d3cb4a3001e502bd8ca2d57f2a4b",
+                "lessThan": "d8f3f94dc950e7c62c96af432c26745885b0a18a",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "51c0d4f7e317d3cb4a3001e502bd8ca2d57f2a4b",
+                "lessThan": "4f76435fd517981f01608678c06ad9718a86ee98",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "fs/nfsd/nfs4xdr.c"
+            ],
+            "versions": [
+              {
+                "version": "6.14",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "6.14",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.17.8",
+                "lessThanOrEqual": "6.17.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.14",
+                    "versionEndExcluding": "6.17.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.14",
+                    "versionEndExcluding": "6.18"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/d8f3f94dc950e7c62c96af432c26745885b0a18a"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/4f76435fd517981f01608678c06ad9718a86ee98"
+          }
+        ],
+        "title": "NFSD: Define actions for the new time_deleg FATTR4 attributes",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-40324",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2025-04-16T07:20:57.186Z",
+      "datePublished": "2025-12-08T00:46:51.912Z",
+      "dateUpdated": "2025-12-08T00:46:51.912Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2025-12-08T00:46:51.912Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: Fix crash in nfsd4_read_release()\n\nWhen tracing is enabled, the trace_nfsd_read_done trace point\ncrashes during the pynfs read.testNoFh test."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "fs/nfsd/nfs4proc.c"
+            ],
+            "versions": [
+              {
+                "version": "65a33135e91e6dd661ecdf1194b9d90c49ae3570",
+                "lessThan": "930cb4fe3ab4061be31f20ee30bb72a66f7bb6d1",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "b11d8162c24af4a351d21e2c804d25ca493305e3",
+                "lessThan": "375fdd8993cecc48afa359728a6e70b280dde1c8",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "b623a8e5d38a69a3ef8644acb1030dd7c7bc28b3",
+                "lessThan": "2ac46606b2cc49e78d8e3d8f2685e79e9ba73020",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "15a8b55dbb1ba154d82627547c5761cac884d810",
+                "lessThan": "03524ccff698d4a77d096ed529073d91f5edee5d",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "15a8b55dbb1ba154d82627547c5761cac884d810",
+                "lessThan": "a4948875ed0599c037dc438c11891c9012721b1d",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "15a8b55dbb1ba154d82627547c5761cac884d810",
+                "lessThan": "8f244b773c63fa480c9a3bd1ae04f5272f285e89",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "15a8b55dbb1ba154d82627547c5761cac884d810",
+                "lessThan": "abb1f08a2121dd270193746e43b2a9373db9ad84",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "3d0dcada384af22dec764c8374a2997870ec86ae",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "fs/nfsd/nfs4proc.c"
+            ],
+            "versions": [
+              {
+                "version": "6.3",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "6.3",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.10.247",
+                "lessThanOrEqual": "5.10.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.197",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.1.159",
+                "lessThanOrEqual": "6.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.117",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.58",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.17.8",
+                "lessThanOrEqual": "6.17.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.10.220",
+                    "versionEndExcluding": "5.10.247"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.15.154",
+                    "versionEndExcluding": "5.15.197"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.1.24",
+                    "versionEndExcluding": "6.1.159"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.3",
+                    "versionEndExcluding": "6.6.117"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.3",
+                    "versionEndExcluding": "6.12.58"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.3",
+                    "versionEndExcluding": "6.17.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.3",
+                    "versionEndExcluding": "6.18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.2.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/930cb4fe3ab4061be31f20ee30bb72a66f7bb6d1"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/375fdd8993cecc48afa359728a6e70b280dde1c8"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/2ac46606b2cc49e78d8e3d8f2685e79e9ba73020"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/03524ccff698d4a77d096ed529073d91f5edee5d"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a4948875ed0599c037dc438c11891c9012721b1d"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/8f244b773c63fa480c9a3bd1ae04f5272f285e89"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/abb1f08a2121dd270193746e43b2a9373db9ad84"
+          }
+        ],
+        "title": "NFSD: Fix crash in nfsd4_read_release()",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        }
+      }
+    }
+  }
+]
