@@ -209,3 +209,214 @@
     }
   }
 ]
+[Thu Dec 11 12:56:30 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xqm7-qxfg-5xwm",
+    "modified": "2025-12-11T12:30:28Z",
+    "published": "2025-12-11T12:30:28Z",
+    "aliases": [
+      "CVE-2025-44016"
+    ],
+    "details": "A vulnerability in TeamViewer DEX Client (former 1E client) - Content Distribution Service (NomadBranch.exe) prior version 25.11 for Windows allows malicious actors to bypass file integrity validation via a crafted request. By providing a valid hash for a malicious file, an attacker can cause the service to incorrectly validate and process the file as trusted, enabling arbitrary code execution under the Nomad Branch service context.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-44016"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.teamviewer.com/en/resources/trust-center/security-bulletins/tv-2025-1005"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-11T12:16:25Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xmxh-pm35-h64j",
+    "modified": "2025-12-11T12:30:28Z",
+    "published": "2025-12-11T12:30:28Z",
+    "aliases": [
+      "CVE-2025-64990"
+    ],
+    "details": "A command injection vulnerability was discovered in TeamViewer DEX (former 1E DEX), specifically within the 1E-Explorer-TachyonCore-LogoffUser instruction prior V21.1. Improper input validation, allowing authenticated attackers with Actioner privileges to inject arbitrary commands. Exploitation enables remote execution of elevated commands on devices connected to the platform.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64990"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.teamviewer.com/en/resources/trust-center/security-bulletins/tv-2025-1006"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-11T12:16:25Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wxmq-5jpw-8955",
+    "modified": "2025-12-11T12:30:28Z",
+    "published": "2025-12-11T12:30:28Z",
+    "aliases": [
+      "CVE-2025-14514"
+    ],
+    "details": "A flaw has been found in Campcodes Supplier Management System 1.0. Affected is an unknown function of the file /admin/add_distributor.php. This manipulation of the argument txtDistributorAddress causes sql injection. The attack can be initiated remotely. The exploit has been published and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14514"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ProgramShowMaker/CVE/issues/4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/ProgramShowMaker/CVE/issues/5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.335852"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.335852"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.702752"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.702760"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.campcodes.com"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-11T12:16:24Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wpgp-vmg7-5726",
+    "modified": "2025-12-11T12:30:28Z",
+    "published": "2025-12-11T12:30:28Z",
+    "aliases": [
+      "CVE-2025-64991"
+    ],
+    "details": "A command injection vulnerability was discovered in TeamViewer DEX (former 1E DEX), specifically within the 1E-PatchInsights-Deploy instruction prior V15. Improper input validation, allowing authenticated attackers with Actioner privileges to inject arbitrary commands. Exploitation enables remote execution of elevated commands on devices connected to the platform.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64991"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.teamviewer.com/en/resources/trust-center/security-bulletins/tv-2025-1006"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-11T12:16:26Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-r6v6-gcvm-4vxr",
+    "modified": "2025-12-11T12:30:28Z",
+    "published": "2025-12-11T12:30:28Z",
+    "aliases": [
+      "CVE-2025-64989"
+    ],
+    "details": "A command injection vulnerability was discovered in TeamViewer DEX (former 1E DEX), specifically within the 1E-Explorer-TachyonCore-FindFileBySizeAndHash instruction prior V21.1. Improper input validation, allowing authenticated attackers with Actioner privileges to inject arbitrary commands. Exploitation enables remote execution of elevated commands on devices connected to the platform.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-64989"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.teamviewer.com/en/resources/trust-center/security-bulletins/tv-2025-1006"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-11T12:16:25Z"
+    }
+  }
+]
