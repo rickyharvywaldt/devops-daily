@@ -3680,3 +3680,763 @@
     }
   }
 ]
+[Fri Dec 12 18:37:59 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-55184",
+      "assignerOrgId": "4fc57720-52fe-4431-a0fb-3d2c8747b827",
+      "state": "PUBLISHED",
+      "assignerShortName": "Meta",
+      "dateReserved": "2025-08-08T18:21:47.119Z",
+      "datePublished": "2025-12-11T20:05:01.328Z",
+      "dateUpdated": "2025-12-11T20:11:26.262Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "react-server-dom-webpack",
+            "vendor": "Meta",
+            "versions": [
+              {
+                "lessThanOrEqual": "19.0.1",
+                "status": "affected",
+                "version": "19.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.1.2",
+                "status": "affected",
+                "version": "19.1.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.2.1",
+                "status": "affected",
+                "version": "19.2.0",
+                "versionType": "semver"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "react-server-dom-turbopack",
+            "vendor": "Meta",
+            "versions": [
+              {
+                "lessThanOrEqual": "19.0.1",
+                "status": "affected",
+                "version": "19.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.1.2",
+                "status": "affected",
+                "version": "19.1.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.2.1",
+                "status": "affected",
+                "version": "19.2.0",
+                "versionType": "semver"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "react-server-dom-parcel",
+            "vendor": "Meta",
+            "versions": [
+              {
+                "lessThanOrEqual": "19.0.1",
+                "status": "affected",
+                "version": "19.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.1.2",
+                "status": "affected",
+                "version": "19.1.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.2.1",
+                "status": "affected",
+                "version": "19.2.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "dateAssigned": "2025-12-09T00:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A pre-authentication denial of service vulnerability exists in React Server Components versions 19.0.0, 19.0.1 19.1.0, 19.1.1, 19.1.2, 19.2.0 and 19.2.1, including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code unsafely deserializes payloads from HTTP requests to Server Function endpoints, which can cause an infinite loop that hangs the server process and may prevent future HTTP requests from being served."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "(CWE-502) Deserialization of Untrusted Data. (CWE-400) Uncontrolled Resource Consumption",
+                "lang": "en"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "4fc57720-52fe-4431-a0fb-3d2c8747b827",
+          "shortName": "Meta",
+          "dateUpdated": "2025-12-11T20:11:26.262Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://www.facebook.com/security/advisories/cve-2025-55184"
+          },
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-55183",
+      "assignerOrgId": "4fc57720-52fe-4431-a0fb-3d2c8747b827",
+      "state": "PUBLISHED",
+      "assignerShortName": "Meta",
+      "dateReserved": "2025-08-08T18:21:47.119Z",
+      "datePublished": "2025-12-11T20:04:48.655Z",
+      "dateUpdated": "2025-12-11T20:09:32.286Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "react-server-dom-webpack",
+            "vendor": "Meta",
+            "versions": [
+              {
+                "lessThanOrEqual": "19.0.1",
+                "status": "affected",
+                "version": "19.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.1.2",
+                "status": "affected",
+                "version": "19.1.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.2.1",
+                "status": "affected",
+                "version": "19.2.0",
+                "versionType": "semver"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "react-server-dom-turbopack",
+            "vendor": "Meta",
+            "versions": [
+              {
+                "lessThanOrEqual": "19.0.1",
+                "status": "affected",
+                "version": "19.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.1.2",
+                "status": "affected",
+                "version": "19.1.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.2.1",
+                "status": "affected",
+                "version": "19.2.0",
+                "versionType": "semver"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "react-server-dom-parcel",
+            "vendor": "Meta",
+            "versions": [
+              {
+                "lessThanOrEqual": "19.0.1",
+                "status": "affected",
+                "version": "19.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.1.2",
+                "status": "affected",
+                "version": "19.1.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "19.2.1",
+                "status": "affected",
+                "version": "19.2.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "dateAssigned": "2025-12-09T00:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An information leak vulnerability exists in specific configurations of React Server Components versions 19.0.0, 19.0.1 19.1.0, 19.1.1, 19.1.2, 19.2.0 and 19.2.1, including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. A specifically crafted HTTP request sent to a vulnerable Server Function may unsafely return the source code of any Server Function. Exploitation requires the existence of a Server Function which explicitly or implicitly exposes a stringified argument."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "(CWE-502) Deserialization of Untrusted Data. (CWE-497) Exposure of Sensitive System Information to an Unauthorized Actor",
+                "lang": "en"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "4fc57720-52fe-4431-a0fb-3d2c8747b827",
+          "shortName": "Meta",
+          "dateUpdated": "2025-12-11T20:09:32.286Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://www.facebook.com/security/advisories/cve-2025-55183"
+          },
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1",
+    "cveMetadata": {
+      "cveId": "CVE-2025-62238",
+      "assignerOrgId": "8b54e794-c6f0-462e-9faa-c1001a673ac3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Liferay",
+      "dateReserved": "2025-10-09T20:58:49.216Z",
+      "datePublished": "2025-10-10T12:33:36.684Z",
+      "dateUpdated": "2025-10-10T13:29:10.623Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Portal",
+            "vendor": "Liferay",
+            "versions": [
+              {
+                "lessThanOrEqual": "7.4.3.111",
+                "status": "affected",
+                "version": "7.4.3.21",
+                "versionType": "maven"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "unaffected",
+            "product": "DXP",
+            "vendor": "Liferay",
+            "versions": [
+              {
+                "lessThanOrEqual": "7.4.13-u92",
+                "status": "affected",
+                "version": "7.4.13-u21",
+                "versionType": "maven"
+              },
+              {
+                "lessThanOrEqual": "2023.Q3.8",
+                "status": "affected",
+                "version": "2023.Q3.1",
+                "versionType": "maven"
+              },
+              {
+                "lessThanOrEqual": "2023.Q4.5",
+                "status": "affected",
+                "version": "2023.Q4.0",
+                "versionType": "maven"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "reporter",
+            "value": "foobar7"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Stored cross-site scripting (XSS) vulnerability on the Membership page in Account Settings in Liferay Portal 7.4.3.21 through 7.4.3.111, and Liferay DXP 2023.Q4.0 through 2023.Q4.5, 2023.Q3.1 through 2023.Q3.8, and 7.4 update 21 through update 92 allows remote authenticated attackers to inject arbitrary web script or HTML via a crafted payload injected into a Account's “Name“ text field."
+              }
+            ],
+            "value": "Stored cross-site scripting (XSS) vulnerability on the Membership page in Account Settings in Liferay Portal 7.4.3.21 through 7.4.3.111, and Liferay DXP 2023.Q4.0 through 2023.Q4.5, 2023.Q3.1 through 2023.Q3.8, and 7.4 update 21 through update 92 allows remote authenticated attackers to inject arbitrary web script or HTML via a crafted payload injected into a Account's “Name“ text field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 4.8,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "8b54e794-c6f0-462e-9faa-c1001a673ac3",
+          "shortName": "Liferay",
+          "dateUpdated": "2025-10-10T12:33:36.684Z"
+        },
+        "references": [
+          {
+            "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/CVE-2025-62238"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-10-10T13:29:05.521797Z",
+                  "id": "CVE-2025-62238",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-10-10T13:29:10.623Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-64582",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2025-11-05T22:53:10.939Z",
+      "datePublished": "2025-12-10T18:24:27.020Z",
+      "dateUpdated": "2025-12-10T19:10:42.976Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Experience Manager",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "6.5.23",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-12-09T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.4,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "LOW",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "LOW",
+              "modifiedIntegrityImpact": "LOW",
+              "modifiedPrivilegesRequired": "LOW",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 5.4,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "Cross-site Scripting (Stored XSS) (CWE-79)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2025-12-10T18:24:27.020Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/experience-manager/apsb25-115.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)"
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-10T19:10:34.861952Z",
+                  "id": "CVE-2025-64582",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-10T19:10:42.976Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-64581",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2025-11-05T22:53:10.939Z",
+      "datePublished": "2025-12-10T18:23:10.329Z",
+      "dateUpdated": "2025-12-11T18:57:26.151Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Experience Manager",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "6.5.23",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-12-09T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.4,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "LOW",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "LOW",
+              "modifiedIntegrityImpact": "LOW",
+              "modifiedPrivilegesRequired": "LOW",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 5.4,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "Cross-site Scripting (Stored XSS) (CWE-79)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2025-12-10T18:23:10.329Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/experience-manager/apsb25-115.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)"
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-11T17:25:20.438361Z",
+                  "id": "CVE-2025-64581",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-11T18:57:26.151Z"
+          }
+        }
+      ]
+    }
+  }
+]
