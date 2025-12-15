@@ -1,0 +1,182 @@
+[Mon Dec 15 12:57:06 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-m9gh-789g-q5pv",
+    "modified": "2025-12-15T12:30:27Z",
+    "published": "2025-12-15T12:30:27Z",
+    "aliases": [
+      "CVE-2025-37731"
+    ],
+    "details": "Improper Authentication in Elasticsearch PKI realm can lead to user impersonation via specially crafted client certificates. A malicious actor would need to have such a crafted client certificate signed by a legitimate, trusted Certificate Authority.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-37731"
+      },
+      {
+        "type": "WEB",
+        "url": "https://discuss.elastic.co/t/elasticsearch-8-19-8-9-1-8-and-9-2-2-security-update-esa-2025-27/384063"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-15T11:15:39Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-fv47-pqh6-wxgq",
+    "modified": "2025-12-15T12:30:27Z",
+    "published": "2025-12-15T12:30:27Z",
+    "aliases": [
+      "CVE-2025-66388"
+    ],
+    "details": "A vulnerability in Apache Airflow allowed authenticated UI users to view secret values in rendered templates due to secrets not being properly redacted, potentially exposing secrets to users without the appropriate authorization.\n\nUsers are recommended to upgrade to version 3.1.4, which fixes this issue.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66388"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/apache/airflow/pull/58772"
+      },
+      {
+        "type": "WEB",
+        "url": "https://lists.apache.org/thread/mv9hzsx8grjf7gdlkxwppnpbtogtls2g"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-201"
+      ],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-15T12:15:40Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-97mj-r9v7-258f",
+    "modified": "2025-12-15T12:30:27Z",
+    "published": "2025-12-15T12:30:27Z",
+    "aliases": [
+      "CVE-2025-37732"
+    ],
+    "details": "Improper neutralization of input during web page generation ('Cross-site Scripting') (CWE-79) allows an authenticated user to render HTML tags within a user’s browser via the integration package upload functionality. This issue is related to ESA-2025-17 (CVE-2025-25018) bypassing that fix to achieve HTML injection.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-37732"
+      },
+      {
+        "type": "WEB",
+        "url": "https://discuss.elastic.co/t/kibana-8-19-8-9-1-8-and-9-2-2-security-update-esa-2025-28/384064"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-15T11:15:39Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-65c5-j3wr-v7fh",
+    "modified": "2025-12-15T12:30:27Z",
+    "published": "2025-12-15T12:30:27Z",
+    "aliases": [
+      "CVE-2025-14714"
+    ],
+    "details": "An Authentication Bypass vulnerability existed where the application bundled an interpreter (Python) that inherits the Transparency, Consent, and Control (TCC) permissions granted by the user to the main application bundle\n\n\n\n\nBy executing the bundled interpreter directly the attacker's scripts run with the application's TCC privileges\n\n\n\n\nIn fixed versions parent-constraints are used to allow only the main application to launch interpreter with those permissions\n\nThis issue affects LibreOffice on macOS: from 25.2 before < 25.2.4.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14714"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.libreoffice.org/about-us/security/advisories/cve-2025-14714"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-288"
+      ],
+      "severity": "LOW",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-15T11:15:39Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-3w6x-xqhx-2c63",
+    "modified": "2025-12-15T12:30:26Z",
+    "published": "2025-12-15T12:30:26Z",
+    "aliases": [
+      "CVE-2025-11670"
+    ],
+    "details": "Zohocorp ManageEngine ADManager Plus versions before 8025 are vulnerable to NTLM Hash Exposure. \nThis vulnerability is exploitable only by technicians who have the “Impersonate as Admin” option enabled.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11670"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.manageengine.com/products/ad-manager/admanager-kb/cve-2025-11670.html"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-200"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-15T11:15:38Z"
+    }
+  }
+]
