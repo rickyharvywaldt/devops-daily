@@ -627,3 +627,218 @@
     }
   }
 ]
+[Tue Dec 16 12:55:33 UTC 2025] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-mrcm-cqrc-38qw",
+    "modified": "2025-12-16T12:30:28Z",
+    "published": "2025-12-16T12:30:28Z",
+    "aliases": [
+      "CVE-2025-0836"
+    ],
+    "details": "Missing Authorization vulnerability in Milestone Systems XProtect VMS allows users with read-only access to Management Server to have full read/write access to MIP Webhooks API.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-0836"
+      },
+      {
+        "type": "WEB",
+        "url": "https://doc.milestonesys.com/en-US/bundle/sec1504_latest/page/Milestone_Security_Advisory.html"
+      },
+      {
+        "type": "WEB",
+        "url": "https://supportcommunity.milestonesys.com/s/article/XProtect-VMS-cumulative-patches-complete-list?language=en_US"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-16T11:15:43Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-j2v6-pm7r-ggcf",
+    "modified": "2025-12-16T12:30:28Z",
+    "published": "2025-12-16T12:30:28Z",
+    "aliases": [
+      "CVE-2025-13474"
+    ],
+    "details": "Authorization Bypass Through User-Controlled Key vulnerability in Menulux Software Inc. Mobile App allows Exploitation of Trusted Identifiers.This issue affects Mobile App: before 9.5.8.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13474"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.usom.gov.tr/bildirim/tr-25-0457"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-16T12:15:46Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-hvcw-x8r7-vqvw",
+    "modified": "2025-12-16T12:30:28Z",
+    "published": "2025-12-16T12:30:28Z",
+    "aliases": [
+      "CVE-2025-13741"
+    ],
+    "details": "The Schedule Post Changes With PublishPress Future: Unpublish, Delete, Change Status, Trash, Change Categories plugin for WordPress is vulnerable to unauthorized access of data due to a missing capability check on the getAuthors function in all versions up to, and including, 4.9.2. This makes it possible for authenticated attackers, with Contributor-level access and above, to retrieve emails for all users with edit_posts capability.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13741"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/post-expirator/tags/4.9.1/src/Modules/Workflows/Rest/RestApiV1.php#L376"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2f67da8c-da60-4c77-a8b8-7dfc027662e9?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-16T12:15:46Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-cc8c-28gj-px38",
+    "modified": "2025-12-16T12:30:28Z",
+    "published": "2025-12-15T18:30:40Z",
+    "aliases": [
+      "CVE-2025-11393"
+    ],
+    "details": "A flaw was found in runtimes-inventory-rhel8-operator. An internal proxy component is incorrectly configured. Because of this flaw, the proxy attaches the cluster's main administrative credentials to any command it receives, instead of only the specific reports it is supposed to handle.\n\nThis allows a standard user within the cluster to send unauthorized commands to the management platform, effectively acting with the full permissions of the cluster administrator. This could lead to unauthorized changes to the cluster's configuration or status on the Red Hat platform.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-11393"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/errata/RHSA-2025:23236"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-11393"
+      },
+      {
+        "type": "WEB",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2402032"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-441"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-15T17:15:51Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-8vh6-v9pf-9wpq",
+    "modified": "2025-12-16T12:30:28Z",
+    "published": "2025-12-16T12:30:28Z",
+    "aliases": [
+      "CVE-2025-14002"
+    ],
+    "details": "The WPCOM Member plugin for WordPress is vulnerable to authentication bypass via brute force in all versions up to, and including, 1.7.16. This is due to weak OTP (One-Time Password) generation using only 6 numeric digits combined with a 10-minute validity window and no rate limiting on verification attempts. This makes it possible for unauthenticated attackers to brute-force the verification code and authenticate as any user, including administrators, if they know the target's phone number, and the target does not notice or ignores the SMS notification with the OTP.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14002"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/wpcom-member/tags/1.7.16/includes/class-sesstion.php#L29"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/wpcom-member/tags/1.7.16/includes/member-functions.php#L833"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset/3411048/wpcom-member"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4f02ee56-40bd-4132-92e1-e2897ff2a4c4?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-287"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2025-12-16T10:15:42Z"
+    }
+  }
+]
