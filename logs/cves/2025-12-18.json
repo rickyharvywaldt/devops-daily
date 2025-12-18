@@ -3825,3 +3825,1023 @@
     }
   }
 ]
+[Thu Dec 18 06:39:54 UTC 2025] Latest CVEs:
+[
+  {
+    "modified": "2025-12-18T06:26:30Z",
+    "published": "2025-12-11T19:46:09Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2025-192494",
+    "aliases": [
+      "GHSA-v25f-jpvx-84x8"
+    ],
+    "summary": "Malicious code in elf-stats-ember-stocking-807 (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (97a5d1952faf402a6a470de2b87abbf07ed0673375bd29af93fe62006b6a2ece)\nThe package elf-stats-ember-stocking-807 was found to contain malicious code.\n\n## Source: ghsa-malware (3716de9ef3f4ee9aafc31378dd2a5f380735170b591f9f05f924428f79dfa960)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "elf-stats-ember-stocking-807"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.0.0",
+          "1.0.1",
+          "1.0.2",
+          "1.0.3",
+          "1.0.4",
+          "1.0.5"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-v25f-jpvx-84x8"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "actran@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "amazon-inspector",
+          "sha256": "97a5d1952faf402a6a470de2b87abbf07ed0673375bd29af93fe62006b6a2ece",
+          "import_time": "2025-12-11T20:08:21.614387898Z",
+          "modified_time": "2025-12-11T19:46:09Z",
+          "versions": [
+            "1.0.0",
+            "1.0.1",
+            "1.0.2",
+            "1.0.3",
+            "1.0.4",
+            "1.0.5"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "3716de9ef3f4ee9aafc31378dd2a5f380735170b591f9f05f924428f79dfa960",
+          "import_time": "2025-12-18T06:24:57.185930425Z",
+          "id": "GHSA-v25f-jpvx-84x8",
+          "modified_time": "2025-12-18T06:03:36Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "cveId": "CVE-2025-68463",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "state": "PUBLISHED",
+      "assignerShortName": "mitre",
+      "dateReserved": "2025-12-18T05:40:36.580Z",
+      "datePublished": "2025-12-18T05:40:36.842Z",
+      "dateUpdated": "2025-12-18T05:48:21.637Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unknown",
+            "packageURL": "pkg:pypi/biopython",
+            "product": "Biopython",
+            "vendor": "Biopython",
+            "versions": [
+              {
+                "lessThanOrEqual": "186",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Bio.Entrez in Biopython through 186 allows doctype XXE."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 4.9,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-611",
+                "description": "CWE-611 Improper Restriction of XML External Entity Reference",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2025-12-18T05:48:21.637Z"
+        },
+        "references": [
+          {
+            "url": "https://github.com/biopython/biopython/issues/5109"
+          }
+        ],
+        "x_generator": {
+          "engine": "CVE-Request-form 0.0.1"
+        }
+      }
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "cveId": "CVE-2025-68462",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "state": "PUBLISHED",
+      "assignerShortName": "mitre",
+      "dateReserved": "2025-12-18T05:14:11.592Z",
+      "datePublished": "2025-12-18T05:14:11.920Z",
+      "dateUpdated": "2025-12-18T05:22:44.915Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "FreedomBox",
+            "vendor": "Debian",
+            "versions": [
+              {
+                "lessThan": "25.17.1",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Freedombox before 25.17.1 does not set proper permissions for the backups-data directory, allowing the reading of dump files of databases."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "NONE",
+              "baseScore": 3.2,
+              "baseSeverity": "LOW",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-732",
+                "description": "CWE-732 Incorrect Permission Assignment for Critical Resource",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2025-12-18T05:22:44.915Z"
+        },
+        "references": [
+          {
+            "url": "https://salsa.debian.org/freedombox-team/freedombox/-/commit/8ba444990b4af6eec4b6b2b26482b107d"
+          }
+        ],
+        "x_generator": {
+          "engine": "CVE-Request-form 0.0.1"
+        },
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:debian:freedombox:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "25.17.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-47387",
+      "assignerOrgId": "2cfc7d3e-20d3-47ac-8db7-1b7285aff15f",
+      "state": "PUBLISHED",
+      "assignerShortName": "qualcomm",
+      "dateReserved": "2025-05-06T08:33:16.268Z",
+      "datePublished": "2025-12-18T05:29:13.939Z",
+      "dateUpdated": "2025-12-18T05:29:13.939Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "platforms": [
+              "Snapdragon Compute",
+              "Snapdragon Industrial IOT"
+            ],
+            "product": "Snapdragon",
+            "vendor": "Qualcomm, Inc.",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "AQT1000"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 6200"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 6700"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 6800"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 6900"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 7800"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6391"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6420"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6430"
+              },
+              {
+                "status": "affected",
+                "version": "QCM5430"
+              },
+              {
+                "status": "affected",
+                "version": "QCM6490"
+              },
+              {
+                "status": "affected",
+                "version": "QCS5430"
+              },
+              {
+                "status": "affected",
+                "version": "QCS6490"
+              },
+              {
+                "status": "affected",
+                "version": "Qualcomm Video Collaboration VC3 Platform"
+              },
+              {
+                "status": "affected",
+                "version": "SC8180X+SDX55"
+              },
+              {
+                "status": "affected",
+                "version": "SC8380XP"
+              },
+              {
+                "status": "affected",
+                "version": "SM6250"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 7c Compute Platform (SC7180-AC)"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 7c Gen 2 Compute Platform (SC7180-AD) \"Rennell Pro\""
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 7c+ Gen 3 Compute"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8c Compute Platform (SC8180X-AD) \"Poipu Lite\""
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8c Compute Platform (SC8180XP-AD) \"Poipu Lite\""
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8cx Compute Platform (SC8180X-AA, AB)"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8cx Compute Platform (SC8180XP-AC, AF) \"Poipu Pro\""
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8cx Gen 2 5G Compute Platform (SC8180X-AC, AF) \"Poipu Pro\""
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8cx Gen 2 5G Compute Platform (SC8180XP-AA, AB)"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8cx Gen 3 Compute Platform (SC8280XP-AB, BB)"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9340"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9341"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9370"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9375"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9380"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9385"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8810"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8815"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8830"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8835"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8840"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8845"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8845H"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Memory Corruption when processing IOCTLs for JPEG data without verification."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-822",
+                "description": "CWE-822 Untrusted Pointer Dereference",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "2cfc7d3e-20d3-47ac-8db7-1b7285aff15f",
+          "shortName": "qualcomm",
+          "dateUpdated": "2025-12-18T05:29:13.939Z"
+        },
+        "references": [
+          {
+            "url": "https://docs.qualcomm.com/product/publicresources/securitybulletin/december-2025-bulletin.html"
+          }
+        ],
+        "title": "Untrusted Pointer Dereference in Camera"
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-47382",
+      "assignerOrgId": "2cfc7d3e-20d3-47ac-8db7-1b7285aff15f",
+      "state": "PUBLISHED",
+      "assignerShortName": "qualcomm",
+      "dateReserved": "2025-05-06T08:33:16.266Z",
+      "datePublished": "2025-12-18T05:29:11.983Z",
+      "dateUpdated": "2025-12-18T05:29:11.983Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "platforms": [
+              "Snapdragon Auto",
+              "Snapdragon Compute",
+              "Snapdragon Industrial IOT",
+              "Snapdragon Mobile",
+              "Snapdragon Wearables"
+            ],
+            "product": "Snapdragon",
+            "vendor": "Qualcomm, Inc.",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "FastConnect 6200"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 6700"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 6900"
+              },
+              {
+                "status": "affected",
+                "version": "FastConnect 7800"
+              },
+              {
+                "status": "affected",
+                "version": "QAM8255P"
+              },
+              {
+                "status": "affected",
+                "version": "QAM8295P"
+              },
+              {
+                "status": "affected",
+                "version": "QAM8620P"
+              },
+              {
+                "status": "affected",
+                "version": "QAM8650P"
+              },
+              {
+                "status": "affected",
+                "version": "QAM8775P"
+              },
+              {
+                "status": "affected",
+                "version": "QAMSRV1H"
+              },
+              {
+                "status": "affected",
+                "version": "QAMSRV1M"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6574"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6574A"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6574AU"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6595"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6595AU"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6688AQ"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6696"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6698AQ"
+              },
+              {
+                "status": "affected",
+                "version": "QCA6797AQ"
+              },
+              {
+                "status": "affected",
+                "version": "QCA8695AU"
+              },
+              {
+                "status": "affected",
+                "version": "QCA9367"
+              },
+              {
+                "status": "affected",
+                "version": "QCA9377"
+              },
+              {
+                "status": "affected",
+                "version": "QCM6690"
+              },
+              {
+                "status": "affected",
+                "version": "QCS610"
+              },
+              {
+                "status": "affected",
+                "version": "QCS6690"
+              },
+              {
+                "status": "affected",
+                "version": "QMP1000"
+              },
+              {
+                "status": "affected",
+                "version": "Qualcomm Video Collaboration VC1 Platform"
+              },
+              {
+                "status": "affected",
+                "version": "Qualcomm Video Collaboration VC3 Platform"
+              },
+              {
+                "status": "affected",
+                "version": "SA6155P"
+              },
+              {
+                "status": "affected",
+                "version": "SA7255P"
+              },
+              {
+                "status": "affected",
+                "version": "SA7775P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8155P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8195P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8255P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8295P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8620P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8650P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8770P"
+              },
+              {
+                "status": "affected",
+                "version": "SA8775P"
+              },
+              {
+                "status": "affected",
+                "version": "SA9000P"
+              },
+              {
+                "status": "affected",
+                "version": "SG6150"
+              },
+              {
+                "status": "affected",
+                "version": "SG6150P"
+              },
+              {
+                "status": "affected",
+                "version": "SM4635"
+              },
+              {
+                "status": "affected",
+                "version": "SM6650"
+              },
+              {
+                "status": "affected",
+                "version": "SM6650P"
+              },
+              {
+                "status": "affected",
+                "version": "SM7635"
+              },
+              {
+                "status": "affected",
+                "version": "SM7635P"
+              },
+              {
+                "status": "affected",
+                "version": "SM7675"
+              },
+              {
+                "status": "affected",
+                "version": "SM7675P"
+              },
+              {
+                "status": "affected",
+                "version": "SM8635"
+              },
+              {
+                "status": "affected",
+                "version": "SM8635P"
+              },
+              {
+                "status": "affected",
+                "version": "SM8650Q"
+              },
+              {
+                "status": "affected",
+                "version": "SM8735"
+              },
+              {
+                "status": "affected",
+                "version": "SM8750"
+              },
+              {
+                "status": "affected",
+                "version": "SM8750P"
+              },
+              {
+                "status": "affected",
+                "version": "SM8850"
+              },
+              {
+                "status": "affected",
+                "version": "SM8850P"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 4 Gen 1 Mobile Platform"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 480 5G Mobile Platform"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 480+ 5G Mobile Platform (SM4350-AC)"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 695 5G Mobile Platform"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon 8 Gen 3 Mobile Platform"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon AR1 Gen 1 Platform"
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon AR1 Gen 1 Platform \"Luna1\""
+              },
+              {
+                "status": "affected",
+                "version": "Snapdragon W5+ Gen 1 Wearable Platform"
+              },
+              {
+                "status": "affected",
+                "version": "SRV1H"
+              },
+              {
+                "status": "affected",
+                "version": "SRV1L"
+              },
+              {
+                "status": "affected",
+                "version": "SRV1M"
+              },
+              {
+                "status": "affected",
+                "version": "SW5100"
+              },
+              {
+                "status": "affected",
+                "version": "SW5100P"
+              },
+              {
+                "status": "affected",
+                "version": "SXR2330P"
+              },
+              {
+                "status": "affected",
+                "version": "SXR2350P"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9370"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9375"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9378"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9380"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9385"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9390"
+              },
+              {
+                "status": "affected",
+                "version": "WCD9395"
+              },
+              {
+                "status": "affected",
+                "version": "WCN3950"
+              },
+              {
+                "status": "affected",
+                "version": "WCN3980"
+              },
+              {
+                "status": "affected",
+                "version": "WCN3988"
+              },
+              {
+                "status": "affected",
+                "version": "WCN6450"
+              },
+              {
+                "status": "affected",
+                "version": "WCN6650"
+              },
+              {
+                "status": "affected",
+                "version": "WCN6755"
+              },
+              {
+                "status": "affected",
+                "version": "WCN7750"
+              },
+              {
+                "status": "affected",
+                "version": "WCN7860"
+              },
+              {
+                "status": "affected",
+                "version": "WCN7861"
+              },
+              {
+                "status": "affected",
+                "version": "WCN7880"
+              },
+              {
+                "status": "affected",
+                "version": "WCN7881"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8810"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8815"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8830"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8832"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8835"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8840"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8845"
+              },
+              {
+                "status": "affected",
+                "version": "WSA8845H"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Memory corruption while loading an invalid firmware in boot loader."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-863",
+                "description": "CWE-863: Incorrect Authorization",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "2cfc7d3e-20d3-47ac-8db7-1b7285aff15f",
+          "shortName": "qualcomm",
+          "dateUpdated": "2025-12-18T05:29:11.983Z"
+        },
+        "references": [
+          {
+            "url": "https://docs.qualcomm.com/product/publicresources/securitybulletin/december-2025-bulletin.html"
+          }
+        ],
+        "title": "Incorrect Authorization in Boot"
+      }
+    }
+  }
+]
