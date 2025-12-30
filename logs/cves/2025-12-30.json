@@ -1,0 +1,631 @@
+[Tue Dec 30 02:03:11 UTC 2025] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-69217",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-29T15:03:15.428Z",
+      "datePublished": "2025-12-30T00:41:18.792Z",
+      "dateUpdated": "2025-12-30T00:41:18.792Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Coturn has unsafe nonce and relay port randomization due to weak random number generation.",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-338",
+                "lang": "en",
+                "description": "CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.7,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/coturn/coturn/security/advisories/GHSA-fvj6-9jhg-9j84",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/coturn/coturn/security/advisories/GHSA-fvj6-9jhg-9j84"
+          },
+          {
+            "name": "https://github.com/coturn/coturn/commit/11fc465f4bba70bb0ad8aae17d6c4a63a29917d9",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/coturn/coturn/commit/11fc465f4bba70bb0ad8aae17d6c4a63a29917d9"
+          },
+          {
+            "name": "https://github.com/coturn/coturn/commit/88ced471385869d7e7fbbc4766e78ef521b36af6",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/coturn/coturn/commit/88ced471385869d7e7fbbc4766e78ef521b36af6"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "coturn",
+            "product": "coturn",
+            "versions": [
+              {
+                "version": ">= 4.6.2r5, <= 4.7.0-r4",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-12-30T00:41:18.792Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "coturn is a free open source implementation of TURN and STUN Server. Versions 4.6.2r5 through 4.7.0-r4 have a bad random number generator for nonces and port randomization after refactoring. Additionally, random numbers aren't generated with openssl's RAND_bytes but libc's random() (if it's not running on Windows). When fetching about 50 sequential nonces (i.e., through sending 50 unauthenticated allocations requests) it is possible to completely reconstruct the current state of the random number generator, thereby predicting the next nonce. This allows authentication while spoofing IPs. An attacker can send authenticated messages without ever receiving the responses, including the nonce (requires knowledge of the credentials, which is e.g., often the case in IoT settings). Since the port randomization is deterministic given the pseudorandom seed, an attacker can exactly reconstruct the ports and, hence predict the randomization of the ports. If an attacker allocates a relay port, they know the current port, and they are able to predict the next relay port (at least if it is not used before). Commit 11fc465f4bba70bb0ad8aae17d6c4a63a29917d9 contains a fix."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-fvj6-9jhg-9j84",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-15213",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-28T13:07:22.869Z",
+      "datePublished": "2025-12-30T01:02:07.571Z",
+      "dateUpdated": "2025-12-30T01:02:07.571Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-30T01:02:07.571Z"
+        },
+        "title": "code-projects Student File Management System File Download download.php improper authorization",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-285",
+                "lang": "en",
+                "description": "Improper Authorization"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-266",
+                "lang": "en",
+                "description": "Incorrect Privilege Assignment"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Student File Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "File Download Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in code-projects Student File Management System 1.0. The affected element is an unknown function of the file /download.php of the component File Download Handler. The manipulation of the argument store_id leads to improper authorization. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:N/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-28T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-28T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-28T14:12:27.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Mountain Ghost (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.338598",
+            "name": "VDB-338598 | code-projects Student File Management System File Download download.php improper authorization",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.338598",
+            "name": "VDB-338598 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.725080",
+            "name": "Submit #725080 | Code-Projects 学生文件管理系统  V1.0  越权",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Bai-public/CVE/issues/5",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-15212",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-28T13:05:03.836Z",
+      "datePublished": "2025-12-30T00:32:06.172Z",
+      "dateUpdated": "2025-12-30T00:32:06.172Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-30T00:32:06.172Z"
+        },
+        "title": "code-projects Refugee Food Management System regfood.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Refugee Food Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in code-projects Refugee Food Management System 1.0. This issue affects some unknown processing of the file /home/regfood.php. Performing manipulation of the argument a results in sql injection. Remote exploitation of the attack is possible. The exploit is now public and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-28T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-28T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-28T14:10:17.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "XU17 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.338596",
+            "name": "VDB-338596 | code-projects Refugee Food Management System regfood.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.338596",
+            "name": "VDB-338596 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.722807",
+            "name": "Submit #722807 | code-projects Refugee Food Management System 1.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.724712",
+            "name": "Submit #724712 | Code-projects Refugee Food Management System v1.0 SQL injection (Duplicate)",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/YZS17/CVE/blob/main/Refugee%20Food_Management_System/sqli_regfood.php.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-15211",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-28T13:04:59.885Z",
+      "datePublished": "2025-12-30T00:02:07.439Z",
+      "dateUpdated": "2025-12-30T00:02:07.439Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-30T00:02:07.439Z"
+        },
+        "title": "code-projects Refugee Food Management System refugee.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Refugee Food Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in code-projects Refugee Food Management System 1.0. Impacted is an unknown function of the file /home/refugee.php. Executing manipulation of the argument refNo/Fname/Lname/sex/age/contact/nationality_nid can lead to sql injection. The attack can be executed remotely. The exploit has been published and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-28T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-28T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-28T14:10:18.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "XU17 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.338597",
+            "name": "VDB-338597 | code-projects Refugee Food Management System refugee.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.338597",
+            "name": "VDB-338597 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.722806",
+            "name": "Submit #722806 | code-projects Refugee Food Management System 1.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/YZS17/CVE/blob/main/Refugee%20Food_Management_System/sqli_refugee.php.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25153",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "REJECTED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2025-12-24T14:28:02.436Z",
+      "datePublished": "2025-12-24T19:27:53.062Z",
+      "dateUpdated": "2025-12-30T00:11:01.693Z",
+      "dateRejected": "2025-12-30T00:11:01.693Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2025-12-30T00:11:01.693Z"
+        },
+        "rejectedReasons": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority as the reported issue does not constitute a security vulnerability and represents a minor, non-exploitable memory leak."
+              }
+            ],
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority as the reported issue does not constitute a security vulnerability and represents a minor, non-exploitable memory leak."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        }
+      }
+    }
+  }
+]
