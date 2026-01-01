@@ -7814,3 +7814,518 @@
     ]
   }
 ]
+[Thu Jan  1 18:37:00 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21437",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-29T03:00:29.275Z",
+      "datePublished": "2026-01-01T18:06:02.368Z",
+      "dateUpdated": "2026-01-01T18:06:02.368Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "eopkg vulnerable to package file list integrity bypass",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-353",
+                "lang": "en",
+                "description": "CWE-353: Missing Support for Integrity Check",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "LOW",
+              "subAvailabilityImpact": "HIGH",
+              "baseScore": 2,
+              "baseSeverity": "LOW",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:N/VI:L/VA:N/SC:N/SI:L/SA:H",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/getsolus/eopkg/security/advisories/GHSA-hjp7-qwrj-6cc6",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/getsolus/eopkg/security/advisories/GHSA-hjp7-qwrj-6cc6"
+          },
+          {
+            "name": "https://github.com/getsolus/eopkg/pull/201",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/getsolus/eopkg/pull/201"
+          },
+          {
+            "name": "https://github.com/getsolus/eopkg/commit/e7694323ed64e08b5b4b108fff273c64125cd39d",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/getsolus/eopkg/commit/e7694323ed64e08b5b4b108fff273c64125cd39d"
+          },
+          {
+            "name": "https://github.com/getsolus/eopkg/releases/tag/v4.4.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/getsolus/eopkg/releases/tag/v4.4.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "getsolus",
+            "product": "eopkg",
+            "versions": [
+              {
+                "version": "< 4.4.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-01T18:06:02.368Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eopkg is a Solus package manager implemented in python3. In versions prior to 4.4.0, a malicious package could include files that are not tracked by `eopkg`. This requires the installation of a package from a malicious or compromised source. Files in such packages would not be shown by `lseopkg` and related tools. The issue has been fixed in v4.4.0. Users only installing packages from the Solus repositories are not affected."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-hjp7-qwrj-6cc6",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21436",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-29T03:00:29.275Z",
+      "datePublished": "2026-01-01T18:03:17.320Z",
+      "dateUpdated": "2026-01-01T18:03:17.320Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "eopkg has Path Traversal: '../filedir' vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-24",
+                "lang": "en",
+                "description": "CWE-24: Path Traversal: '../filedir'",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "HIGH",
+              "subAvailabilityImpact": "HIGH",
+              "baseScore": 5.8,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:A/VC:N/VI:H/VA:N/SC:N/SI:H/SA:H",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/getsolus/eopkg/security/advisories/GHSA-786v-47cq-qm6m",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/getsolus/eopkg/security/advisories/GHSA-786v-47cq-qm6m"
+          },
+          {
+            "name": "https://github.com/getsolus/eopkg/pull/201",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/getsolus/eopkg/pull/201"
+          },
+          {
+            "name": "https://github.com/getsolus/eopkg/commit/e7694323ed64e08b5b4b108fff273c64125cd39d",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/getsolus/eopkg/commit/e7694323ed64e08b5b4b108fff273c64125cd39d"
+          },
+          {
+            "name": "https://github.com/getsolus/eopkg/releases/tag/v4.4.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/getsolus/eopkg/releases/tag/v4.4.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "getsolus",
+            "product": "eopkg",
+            "versions": [
+              {
+                "version": "< 4.4.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-01T18:03:17.320Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eopkg is a Solus package manager implemented in python3. In versions prior to 4.4.0, a malicious package could escape the directory set by `--destdir`. This requires the installation of a package from a malicious or compromised source. Files in such packages would not be installed in the path given by `--destdir`, but on a different location on the host. The issue has been fixed in v4.4.0. Users only installing packages from the Solus repositories are not affected."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-786v-47cq-qm6m",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21428",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-29T03:00:29.274Z",
+      "datePublished": "2026-01-01T17:54:43.959Z",
+      "dateUpdated": "2026-01-01T17:54:43.959Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "cpp-httplib has CRLF injection in http headers",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-93",
+                "lang": "en",
+                "description": "CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 7.7,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:P",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-wpc6-j37r-jcx7",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-wpc6-j37r-jcx7"
+          },
+          {
+            "name": "https://github.com/yhirose/cpp-httplib/commit/98048a033a532ff22320ce1d11789f8d5710dfcd",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/yhirose/cpp-httplib/commit/98048a033a532ff22320ce1d11789f8d5710dfcd"
+          },
+          {
+            "name": "https://github.com/yhirose/cpp-httplib/releases/tag/v0.30.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/yhirose/cpp-httplib/releases/tag/v0.30.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "yhirose",
+            "product": "cpp-httplib",
+            "versions": [
+              {
+                "version": "< 0.30.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-01T17:54:43.959Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to version 0.30.0, the ``write_headers`` function does not check for CR & LF characters in user supplied headers, allowing untrusted header value to escape header lines.\nThis vulnerability allows attackers to add extra headers, modify request body unexpectedly & trigger an SSRF attack. When combined with a server that supports http1.1 pipelining (springboot, python twisted etc), this can be used for server side request forgery (SSRF). Version 0.30.0 fixes this issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-wpc6-j37r-jcx7",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-68272",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-16T14:05:31.364Z",
+      "datePublished": "2026-01-01T18:08:06.947Z",
+      "dateUpdated": "2026-01-01T18:08:06.947Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Signal K Server Vulnerable to Denial of Service via Unrestricted Access Request Flooding",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-400",
+                "lang": "en",
+                "description": "CWE-400: Uncontrolled Resource Consumption",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-770",
+                "lang": "en",
+                "description": "CWE-770: Allocation of Resources Without Limits or Throttling",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-7rqc-ff8m-7j23",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-7rqc-ff8m-7j23"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SignalK",
+            "product": "signalk-server",
+            "versions": [
+              {
+                "version": "< 2.19.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-01T18:08:06.947Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Signal K Server is a server application that runs on a central hub in a boat. A Denial of Service (DoS) vulnerability in versions prior to 2.19.0 allows an unauthenticated attacker to crash the SignalK Server by flooding the access request endpoint (`/signalk/v1/access/requests`). This causes a \"JavaScript heap out of memory\" error due to unbounded in-memory storage of request objects. Version 2.19.0 fixes the issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-7rqc-ff8m-7j23",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-66398",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-11-28T23:33:56.363Z",
+      "datePublished": "2026-01-01T18:00:38.575Z",
+      "dateUpdated": "2026-01-01T18:00:38.575Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Signal K Server has Unauthenticated State Pollution leading to Remote Code Execution (RCE)",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "lang": "en",
+                "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-913",
+                "lang": "en",
+                "description": "CWE-913: Improper Control of Dynamically-Managed Code Resources",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.7,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-w3x5-7c4c-66p9",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-w3x5-7c4c-66p9"
+          },
+          {
+            "name": "https://github.com/SignalK/signalk-server/releases/tag/v2.19.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/SignalK/signalk-server/releases/tag/v2.19.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SignalK",
+            "product": "signalk-server",
+            "versions": [
+              {
+                "version": "< 2.19.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-01T18:00:38.575Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Signal K Server is a server application that runs on a central hub in a boat. Prior to version 2.19.0, an unauthenticated attacker can pollute the internal state (`restoreFilePath`) of the server via the `/skServer/validateBackup` endpoint. This allows the attacker to hijack the administrator's \"Restore\" functionality to overwrite critical server configuration files (e.g., `security.json`, `package.json`), leading to account takeover and Remote Code Execution (RCE). Version 2.19.0 patches this vulnerability."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-w3x5-7c4c-66p9",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  }
+]
