@@ -638,3 +638,625 @@
     }
   }
 ]
+[Fri Jan  2 18:36:50 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-68114",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-15T16:16:22.744Z",
+      "datePublished": "2025-12-17T21:14:31.226Z",
+      "dateUpdated": "2025-12-18T15:09:11.561Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Capstone doesn't check vsnprintf return in SStream_concat, allows stack buffer underflow and overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-124",
+                "lang": "en",
+                "description": "CWE-124: Buffer Underwrite ('Buffer Underflow')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-120",
+                "lang": "en",
+                "description": "CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "LOW",
+              "baseScore": 4.8,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/capstone-engine/capstone/security/advisories/GHSA-85f5-6xr3-q76r",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/capstone-engine/capstone/security/advisories/GHSA-85f5-6xr3-q76r"
+          },
+          {
+            "name": "https://github.com/capstone-engine/capstone/commit/2c7797182a1618be12017d7d41e0b6581d5d529e",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/capstone-engine/capstone/commit/2c7797182a1618be12017d7d41e0b6581d5d529e"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "capstone-engine",
+            "product": "capstone",
+            "versions": [
+              {
+                "version": "<= 6.0.0-Alpha5",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-12-17T21:14:31.226Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Capstone is a disassembly framework. In versions 6.0.0-Alpha5 and prior, an unchecked vsnprintf return in SStream_concat lets a malicious cs_opt_mem.vsnprintf drive SStream’s index negative or past the end, leading to a stack buffer underflow/overflow when the next write occurs. Commit 2c7797182a1618be12017d7d41e0b6581d5d529e fixes the issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-85f5-6xr3-q76r",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/capstone-engine/capstone/security/advisories/GHSA-85f5-6xr3-q76r",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-18T14:55:48.777775Z",
+                  "id": "CVE-2025-68114",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-18T15:09:11.561Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-68613",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-19T14:58:47.823Z",
+      "datePublished": "2025-12-19T22:23:47.777Z",
+      "dateUpdated": "2025-12-22T15:06:07.683Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "n8n Vulnerable to Remote Code Execution via Expression Injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-913",
+                "lang": "en",
+                "description": "CWE-913: Improper Control of Dynamically-Managed Code Resources",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 10,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp"
+          },
+          {
+            "name": "https://github.com/n8n-io/n8n/commit/08f332015153decdda3c37ad4fcb9f7ba13a7c79",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/n8n-io/n8n/commit/08f332015153decdda3c37ad4fcb9f7ba13a7c79"
+          },
+          {
+            "name": "https://github.com/n8n-io/n8n/commit/1c933358acef527ff61466e53268b41a04be1000",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/n8n-io/n8n/commit/1c933358acef527ff61466e53268b41a04be1000"
+          },
+          {
+            "name": "https://github.com/n8n-io/n8n/commit/39a2d1d60edde89674ca96dcbb3eb076ffff6316",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/n8n-io/n8n/commit/39a2d1d60edde89674ca96dcbb3eb076ffff6316"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n8n-io",
+            "product": "n8n",
+            "versions": [
+              {
+                "version": ">= 0.211.0, < 1.120.4",
+                "status": "affected"
+              },
+              {
+                "version": "= 1.121.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-12-19T22:23:47.777Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. Versions starting with 0.211.0 and prior to 1.120.4, 1.121.1, and 1.122.0 contain a critical Remote Code Execution (RCE) vulnerability in their workflow expression evaluation system. Under certain conditions, expressions supplied by authenticated users during workflow configuration may be evaluated in an execution context that is not sufficiently isolated from the underlying runtime. An authenticated attacker could abuse this behavior to execute arbitrary code with the privileges of the n8n process. Successful exploitation may lead to full compromise of the affected instance, including unauthorized access to sensitive data, modification of workflows, and execution of system-level operations. This issue has been fixed in versions 1.120.4, 1.121.1, and 1.122.0. Users are strongly advised to upgrade to a patched version, which introduces additional safeguards to restrict expression evaluation. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only; and/or deploy n8n in a hardened environment with restricted operating system privileges and network access to reduce the impact of potential exploitation. These workarounds do not fully eliminate the risk and should only be used as short-term measures."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-v98v-ff95-f3cp",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-22T15:05:54.378193Z",
+                  "id": "CVE-2025-68613",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-22T15:06:07.683Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-68614",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-19T14:58:47.824Z",
+      "datePublished": "2025-12-22T23:43:02.947Z",
+      "dateUpdated": "2025-12-22T23:55:13.545Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "LibreNMS Alert Rule API Cross-Site Scripting Vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:L",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/librenms/librenms/security/advisories/GHSA-c89f-8g7g-59wj",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/librenms/librenms/security/advisories/GHSA-c89f-8g7g-59wj"
+          },
+          {
+            "name": "https://github.com/librenms/librenms/commit/ebe6c79bf4ce0afeb575c1285afe3934e44001f1",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/librenms/librenms/commit/ebe6c79bf4ce0afeb575c1285afe3934e44001f1"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "librenms",
+            "product": "librenms",
+            "versions": [
+              {
+                "version": "< 25.12.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2025-12-22T23:43:02.947Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LibreNMS is an auto-discovering PHP/MySQL/SNMP based network monitoring tool. Prior to version 25.12.0, the Alert Rule API is vulnerable to stored cross-site scripting. Alert rules can be created or updated via LibreNMS API. The alert rule name is not properly sanitized, and can be used to inject HTML code. This issue has been patched in version 25.12.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-c89f-8g7g-59wj",
+          "discovery": "UNKNOWN"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-22T23:55:04.294873Z",
+                  "id": "CVE-2025-68614",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-22T23:55:13.545Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-68645",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2025-12-22T20:11:28.425Z",
+      "dateReserved": "2025-12-21T00:00:00.000Z",
+      "datePublished": "2025-12-22T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2025-12-22T18:05:12.794Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Local File Inclusion (LFI) vulnerability exists in the Webmail Classic UI of Zimbra Collaboration (ZCS) 10.0 and 10.1 because of improper handling of user-supplied request parameters in the RestFilter servlet. An unauthenticated remote attacker can craft requests to the /h/rest endpoint to influence internal request dispatching, allowing inclusion of arbitrary files from the WebRoot directory."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wiki.zimbra.com/wiki/Security_Center"
+          },
+          {
+            "url": "https://wiki.zimbra.com/wiki/Zimbra_Responsible_Disclosure_Policy"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-98",
+                  "lang": "en",
+                  "description": "CWE-98 Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 8.8,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-22T20:11:24.080683Z",
+                  "id": "CVE-2025-68645",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-22T20:11:28.425Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21429",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-29T03:00:29.274Z",
+      "datePublished": "2026-01-02T17:23:17.252Z",
+      "dateUpdated": "2026-01-02T17:23:17.252Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Emlog has Broken Access Control (BAC)",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-862",
+                "lang": "en",
+                "description": "CWE-862: Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 2,
+              "baseSeverity": "LOW",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/emlog/emlog/security/advisories/GHSA-jw5v-2g53-rx8w",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/emlog/emlog/security/advisories/GHSA-jw5v-2g53-rx8w"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "emlog",
+            "product": "emlog",
+            "versions": [
+              {
+                "version": "= 2.5.23",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-02T17:23:17.252Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Emlog is an open source website building system. In version 2.5.23, the admin can set controls which makes users unable to edit or delete their articles after publishing them. As of time of publication, no known patched versions are available."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-jw5v-2g53-rx8w",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  }
+]
