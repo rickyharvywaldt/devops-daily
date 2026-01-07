@@ -1,0 +1,826 @@
+[Wed Jan  7 02:04:51 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14631",
+      "assignerOrgId": "f23511db-6c3e-4e32-a477-6aa17d310630",
+      "state": "PUBLISHED",
+      "assignerShortName": "TPLink",
+      "dateReserved": "2025-12-12T21:55:15.121Z",
+      "datePublished": "2026-01-07T01:04:26.594Z",
+      "dateUpdated": "2026-01-07T01:04:26.594Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "modules": [
+              "802.11"
+            ],
+            "product": "Archer BE400",
+            "vendor": "TP-Link Systems Inc.",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.1.0 Build 20250710 rel.14914",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Kari Hulkko of Black Duck Cybersecurity Research Center (CyRC)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "A NULL Pointer Dereference vulnerability in TP-Link Archer BE400 V1(802.11 modules) allows&nbsp;\n\n<span style=\"background-color: rgb(255, 255, 255);\">an adjacent attacker to cause a denial-of-service (DoS) by triggering a device reboot.</span>\n\n<p>This issue affects Archer BE400: xi 1.1.0 Build 20250710 rel.14914.</p>"
+              }
+            ],
+            "value": "A NULL Pointer Dereference vulnerability in TP-Link Archer BE400 V1(802.11 modules) allows \n\nan adjacent attacker to cause a denial-of-service (DoS) by triggering a device reboot.\n\nThis issue affects Archer BE400: xi 1.1.0 Build 20250710 rel.14914."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-129",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-129 Pointer Manipulation"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "ADJACENT",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-476",
+                "description": "CWE-476 NULL Pointer Dereference",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f23511db-6c3e-4e32-a477-6aa17d310630",
+          "shortName": "TPLink",
+          "dateUpdated": "2026-01-07T01:04:26.594Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://www.tp-link.com/en/support/download/archer-be400/v1/#Firmware"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://www.tp-link.com/us/support/download/archer-be400/#Firmware"
+          },
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://www.tp-link.com/us/support/faq/4871/"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Null Pointer Dereference Vulnerability in Malformed 802.11 Frame of TP-Link Archer BE400",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0649",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-01-06T16:20:31.689Z",
+      "datePublished": "2026-01-07T00:32:07.531Z",
+      "dateUpdated": "2026-01-07T00:32:07.531Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-01-07T00:32:07.531Z"
+        },
+        "title": "invoiceninja Migration Import Import.php copy server-side request forgery",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-918",
+                "lang": "en",
+                "description": "Server-Side Request Forgery"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "invoiceninja",
+            "versions": [
+              {
+                "version": "5.12.0",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.1",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.2",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.3",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.4",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.5",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.6",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.7",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.8",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.9",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.10",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.11",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.12",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.13",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.14",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.15",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.16",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.17",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.18",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.19",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.20",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.21",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.22",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.23",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.24",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.25",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.26",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.27",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.28",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.29",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.30",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.31",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.32",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.33",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.34",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.35",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.36",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.37",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.38",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Migration Import"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in invoiceninja up to 5.12.38. The affected element is the function copy of the file /app/Jobs/Util/Import.php of the component Migration Import. The manipulation of the argument company_logo leads to server-side request forgery. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.7,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 5.8,
+              "vectorString": "AV:N/AC:L/Au:M/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-06T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-01-06T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-01-06T17:25:41.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "gets (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.339720",
+            "name": "VDB-339720 | invoiceninja Migration Import Import.php copy server-side request forgery",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.339720",
+            "name": "VDB-339720 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.721323",
+            "name": "Submit #721323 | invoiceninja <= 5.12.38. ssrf",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://note-hxlab.wetolink.com/share/fWqEpn5fX4rH",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2024-14020",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-01-04T18:23:09.662Z",
+      "datePublished": "2026-01-07T00:02:07.376Z",
+      "dateUpdated": "2026-01-07T00:02:07.376Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-01-07T00:02:07.376Z"
+        },
+        "title": "carboneio carbone Formatter input.js prototype pollution",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-1321",
+                "lang": "en",
+                "description": "Improperly Controlled Modification of Object Prototype Attributes"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "carboneio",
+            "product": "carbone",
+            "versions": [
+              {
+                "version": "fbcd349077ad0e8748be73eab2a82ea92b6f8a7e",
+                "status": "affected"
+              },
+              {
+                "version": "3.5.6",
+                "status": "unaffected"
+              }
+            ],
+            "modules": [
+              "Formatter Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in carboneio carbone up to fbcd349077ad0e8748be73eab2a82ea92b6f8a7e. This impacts an unknown function of the file lib/input.js of the component Formatter Handler. Executing a manipulation can lead to improperly controlled modification of object prototype attributes. The attack can be launched remotely. This attack is characterized by high complexity. The exploitability is said to be difficult. Upgrading to version 3.5.6 will fix this issue. This patch is called 04f9feb24bfca23567706392f9ad2c53bbe4134e. You should upgrade the affected component. A successful exploitation can \"only occur if the parent NodeJS application has the same security issue\"."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 2.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 5,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L/E:X/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 5,
+              "vectorString": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L/E:X/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4.6,
+              "vectorString": "AV:N/AC:H/Au:S/C:P/I:P/A:P/E:ND/RL:OF/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2024-06-12T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2024-06-12T00:00:00.000Z",
+            "lang": "en",
+            "value": "Countermeasure disclosed"
+          },
+          {
+            "time": "2026-01-04T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-01-04T19:28:15.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "VulDB GitHub Commit Analyzer",
+            "type": "tool"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.339503",
+            "name": "VDB-339503 | carboneio carbone Formatter input.js prototype pollution",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.339503",
+            "name": "VDB-339503 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://github.com/carboneio/carbone/commit/04f9feb24bfca23567706392f9ad2c53bbe4134e",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/carboneio/carbone/releases/tag/3.5.6",
+            "tags": [
+              "patch"
+            ]
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0628",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-01-05T23:32:30.339Z",
+      "datePublished": "2026-01-06T23:57:00.488Z",
+      "dateUpdated": "2026-01-06T23:57:00.488Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "143.0.7499.192",
+                "status": "affected",
+                "lessThan": "143.0.7499.192",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient policy enforcement in WebView tag in Google Chrome prior to 143.0.7499.192 allowed an attacker who convinced a user to install a malicious extension to inject scripts or HTML into a privileged page via a crafted Chrome Extension. (Chromium security severity: High)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Insufficient policy enforcement"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-01-06T23:57:00.488Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/01/stable-channel-update-for-desktop.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/463155954"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0643",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-01-06T13:56:12.840Z",
+      "datePublished": "2026-01-06T23:32:05.828Z",
+      "dateUpdated": "2026-01-06T23:32:05.828Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-01-06T23:32:05.828Z"
+        },
+        "title": "projectworlds House Rental and Property Listing Signup register.php unrestricted upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "Unrestricted Upload"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "Improper Access Controls"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "projectworlds",
+            "product": "House Rental and Property Listing",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Signup"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in projectworlds House Rental and Property Listing 1.0. Impacted is an unknown function of the file /app/register.php?action=reg of the component Signup. This manipulation of the argument image causes unrestricted upload. Remote exploitation of the attack is possible. The exploit has been published and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-06T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-01-06T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-01-06T15:01:55.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "1uzpk (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.339686",
+            "name": "VDB-339686 | projectworlds House Rental and Property Listing Signup register.php unrestricted upload",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.339686",
+            "name": "VDB-339686 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.732563",
+            "name": "Submit #732563 | projectworlds.com rental And Property Listing Project V1.0 File unrestricted upload",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/1uzpk/cve/issues/4",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ]
+      }
+    }
+  }
+]
