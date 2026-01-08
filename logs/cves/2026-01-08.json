@@ -1,0 +1,478 @@
+[Thu Jan  8 02:04:53 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21883",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-05T17:24:36.928Z",
+      "datePublished": "2026-01-08T01:20:53.479Z",
+      "dateUpdated": "2026-01-08T01:20:53.479Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Bokeh server applications have Incomplete Origin Validation in WebSockets",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1385",
+                "lang": "en",
+                "description": "CWE-1385: Missing Origin Validation in WebSockets",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 4.5,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:U",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/bokeh/bokeh/security/advisories/GHSA-793v-589g-574v",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/bokeh/bokeh/security/advisories/GHSA-793v-589g-574v"
+          },
+          {
+            "name": "https://github.com/bokeh/bokeh/commit/cedd113b0e271b439dce768671685cf5f861812e",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/bokeh/bokeh/commit/cedd113b0e271b439dce768671685cf5f861812e"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "bokeh",
+            "product": "bokeh",
+            "versions": [
+              {
+                "version": "< 3.8.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-08T01:20:53.479Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Bokeh is an interactive visualization library written in Python. In versions 3.8.1 and below, if a server is configured with an allowlist (e.g., dashboard.corp), an attacker can register a domain like dashboard.corp.attacker.com (or use a subdomain if applicable) and lure a victim to visit it. The malicious site can then initiate a WebSocket connection to the vulnerable Bokeh server. Since the Origin header (e.g., http://dashboard.corp.attacker.com/) matches the allowlist according to the flawed logic, the connection is accepted. Once connected, the attacker can interact with the Bokeh server on behalf of the victim, potentially accessing sensitive data, or modifying visualizations. This issue is fixed in version 3.8.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-793v-589g-574v",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-22035",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-05T22:30:38.719Z",
+      "datePublished": "2026-01-08T00:10:28.278Z",
+      "dateUpdated": "2026-01-08T00:10:28.278Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Greenshot Vulnerable to OS Command Injection via ExternalCommand Plugin",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "lang": "en",
+                "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/greenshot/greenshot/security/advisories/GHSA-7hvw-q8q5-gpmj",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/greenshot/greenshot/security/advisories/GHSA-7hvw-q8q5-gpmj"
+          },
+          {
+            "name": "https://github.com/greenshot/greenshot/commit/5dedd5c9f0a9896fa0af1d4980d875a48bf432cb",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/greenshot/greenshot/commit/5dedd5c9f0a9896fa0af1d4980d875a48bf432cb"
+          },
+          {
+            "name": "https://github.com/greenshot/greenshot/releases/tag/v1.3.311",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/greenshot/greenshot/releases/tag/v1.3.311"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "greenshot",
+            "product": "greenshot",
+            "versions": [
+              {
+                "version": "< 1.3.311",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-08T00:10:28.278Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Greenshot is an open source Windows screenshot utility. Versions 1.3.310 and below arvulnerable to OS Command Injection through unsanitized filename processing. The FormatArguments method in ExternalCommandDestination.cs:269 uses string.Format() to insert user-controlled filenames directly into shell commands without sanitization, allowing attackers to execute arbitrary commands by crafting malicious filenames containing shell metacharacters. This issue is fixed in version 1.3.311."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-7hvw-q8q5-gpmj",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21877",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-05T17:24:36.928Z",
+      "datePublished": "2026-01-08T00:39:58.697Z",
+      "dateUpdated": "2026-01-08T00:39:58.697Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "n8n is vulnerable to Remote Code Execution via Arbitrary File Write",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "CWE-94: Improper Control of Generation of Code ('Code Injection')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "CWE-434: Unrestricted Upload of File with Dangerous Type",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 10,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/n8n-io/n8n/security/advisories/GHSA-v364-rw7m-3263",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-v364-rw7m-3263"
+          },
+          {
+            "name": "https://github.com/n8n-io/n8n/commit/f4b009d00d1f4ba9359b8e8f1c071e3d910a55f6",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/n8n-io/n8n/commit/f4b009d00d1f4ba9359b8e8f1c071e3d910a55f6"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n8n-io",
+            "product": "n8n",
+            "versions": [
+              {
+                "version": "< 1.121.3",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-08T00:39:58.697Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. In versions 0.121.2 and below, an authenticated attacker may be able to execute malicious code using the n8n service. This could result in full compromise and can impact both self-hosted and n8n Cloud instances. This issue is fixed in version 1.121.3. Administrators can reduce exposure by disabling the Git node and limiting access for untrusted users, but upgrading to the latest version is recommended."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-v364-rw7m-3263",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21868",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-05T16:44:16.368Z",
+      "datePublished": "2026-01-08T00:26:46.668Z",
+      "dateUpdated": "2026-01-08T00:26:46.668Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Flag Forge has ReDoS Vulnerability in User Profile Lookup API",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1333",
+                "lang": "en",
+                "description": "CWE-1333: Inefficient Regular Expression Complexity",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/FlagForgeCTF/flagForge/security/advisories/GHSA-949h-9824-xmcx",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/FlagForgeCTF/flagForge/security/advisories/GHSA-949h-9824-xmcx"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "FlagForgeCTF",
+            "product": "flagForge",
+            "versions": [
+              {
+                "version": "< 2.3.3",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-08T00:26:46.668Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flag Forge is a Capture The Flag (CTF) platform. Versions 2.3.2 and below have a Regular Expression Denial of Service (ReDoS) vulnerability in the user profile API endpoint (/api/user/[username]). The application constructs a regular expression dynamically using unescaped user input (the username parameter). An attacker can exploit this by sending a specially crafted username containing regex meta-characters (e.g., deeply nested groups or quantifiers), causing the MongoDB regex engine to consume excessive CPU resources. This can lead to Denial of Service for other users. The issue is fixed in version 2.3.3. To workaround this issue, implement a Web Application Firewall (WAF) rule to block requests containing regex meta-characters in the URL path."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-949h-9824-xmcx",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21881",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-05T17:24:36.928Z",
+      "datePublished": "2026-01-08T01:08:01.853Z",
+      "dateUpdated": "2026-01-08T01:08:01.853Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Kanboard is Vulnerable to Reverse Proxy Authentication Bypass",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-287",
+                "lang": "en",
+                "description": "CWE-287: Improper Authentication",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/kanboard/kanboard/security/advisories/GHSA-wwpf-3j4p-739w",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/kanboard/kanboard/security/advisories/GHSA-wwpf-3j4p-739w"
+          },
+          {
+            "name": "https://github.com/kanboard/kanboard/commit/7af6143e2ad25b5c15549cca8af4341c7ac4e2fc",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/kanboard/kanboard/commit/7af6143e2ad25b5c15549cca8af4341c7ac4e2fc"
+          },
+          {
+            "name": "https://github.com/kanboard/kanboard/releases/tag/v1.2.49",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/kanboard/kanboard/releases/tag/v1.2.49"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "kanboard",
+            "product": "kanboard",
+            "versions": [
+              {
+                "version": "< 1.2.49",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-08T01:08:01.853Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Kanboard is project management software focused on Kanban methodology. Versions 1.2.48 and below is vulnerable to a critical authentication bypass when REVERSE_PROXY_AUTH is enabled. The application blindly trusts HTTP headers for user authentication without verifying the request originated from a trusted reverse proxy. An attacker can impersonate any user, including administrators, by simply sending a spoofed HTTP header. This issue is fixed in version 1.2.49."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-wwpf-3j4p-739w",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  }
+]
