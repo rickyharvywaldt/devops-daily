@@ -213,3 +213,218 @@
     }
   }
 ]
+[Fri Jan  9 12:55:36 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x2rg-q7qq-q3c7",
+    "modified": "2026-01-09T12:32:26Z",
+    "published": "2026-01-09T12:32:26Z",
+    "aliases": [
+      "CVE-2025-14172"
+    ],
+    "details": "The WP Page Permalink Extension plugin for WordPress is vulnerable to Missing Authorization in all versions up to, and including, 1.5.4. This is due to missing authorization checks on the `cwpp_trigger_flush_rewrite_rules` function hooked to `wp_ajax_cwpp_trigger_flush_rewrite_rules`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to flush the site's rewrite rules via the `action` parameter.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14172"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/change-wp-page-permalinks/tags/1.5.4/change-wp-page-permalinks.php#L188"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/change-wp-page-permalinks/trunk/change-wp-page-permalinks.php#L188"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c5ba37d7-8fde-4ee3-93db-d2459da34bc4?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-09T12:15:53Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wc63-83rx-8qcg",
+    "modified": "2026-01-09T12:32:26Z",
+    "published": "2026-01-09T12:32:26Z",
+    "aliases": [
+      "CVE-2025-13967"
+    ],
+    "details": "The Woodpecker for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form_name' parameter of the [woodpecker-connector] shortcode in all versions up to, and including, 3.0.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13967"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/woodpecker/tags/3.0.4/public/class-wfw-public.php#L109"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/woodpecker/tags/3.0.4/public/partials/wfw-public-shortcode.php#L39"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/woodpecker/trunk/public/class-wfw-public.php#L109"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/woodpecker/trunk/public/partials/wfw-public-shortcode.php#L39"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1d99c8a8-daeb-402b-990d-6bacf6e9a780?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-09T12:15:53Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-vcxh-46f5-vx6r",
+    "modified": "2026-01-09T12:32:26Z",
+    "published": "2026-01-09T12:32:26Z",
+    "aliases": [
+      "CVE-2025-66049"
+    ],
+    "details": "Vivotek IP7137 camera with firmware version 0200a is vulnerable to an information disclosure issue where live camera footage can be accessed through the RTSP protocol on port 8554 without requiring authentication. This allows unauthorized users with network access to view the camera's feed, potentially compromising user privacy and security. \nThe vendor has not replied to the CNA. Possibly all firmware versions are affected. Since the product has met End-Of-Life phase, a fix is not expected to be released.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66049"
+      },
+      {
+        "type": "WEB",
+        "url": "https://cert.pl/posts/2026/01/CVE-2025-66049"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-09T12:15:53Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-pc52-v769-jjvw",
+    "modified": "2026-01-09T12:32:26Z",
+    "published": "2026-01-09T12:32:26Z",
+    "aliases": [
+      "CVE-2025-13897"
+    ],
+    "details": "The Client Testimonial Slider plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'aft_testimonial_meta_name' custom field in the Client Information metabox in all versions up to, and including, 2.0 due to insufficient input sanitization and output escaping on user-supplied attributes. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the injected administrative page.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13897"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/wp-client-testimonial/tags/2.0/wp-client-testimonial.php#L117"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/wp-client-testimonial/trunk/wp-client-testimonial.php#L117"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5bf12608-4e02-4b3a-9363-991dca5ee11b?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-09T12:15:52Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-m6m8-c4cv-c66j",
+    "modified": "2026-01-09T12:32:26Z",
+    "published": "2026-01-09T12:32:26Z",
+    "aliases": [
+      "CVE-2026-22082"
+    ],
+    "details": "This vulnerability exists in Tenda wireless routers (300Mbps Wireless Router F3 and N300 Easy Setup Router) due to the use of login credentials as the session ID through its web-based administrative interface. A remote attacker could exploit this vulnerability by intercepting network traffic and capturing the session ID during insecure transmission.\n  \nSuccessful exploitation of this vulnerability could allow the attacker to hijack an authenticated session and compromise sensitive configuration information on the targeted device.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22082"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0004"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-384"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-09T12:15:54Z"
+    }
+  }
+]
