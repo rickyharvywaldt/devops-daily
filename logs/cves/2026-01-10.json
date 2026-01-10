@@ -567,3 +567,298 @@
     }
   }
 ]
+[Sat Jan 10 18:35:27 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xf94-h87h-g9wr",
+    "modified": "2026-01-10T15:31:22Z",
+    "published": "2026-01-10T15:31:22Z",
+    "aliases": [
+      "CVE-2026-0824"
+    ],
+    "details": "A security flaw has been discovered in questdb ui up to 1.11.9. Impacted is an unknown function of the component Web Console. The manipulation results in cross site scripting. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. Upgrading to version 1.1.10 is recommended to address this issue. The patch is identified as b42fd9f18476d844ae181a10a249e003dafb823d. You should upgrade the affected component. The vendor confirmed early that the fix \"is going to be released as a part of QuestDB 9.3.0\" as well.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0824"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/questdb/ui/pull/518"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/questdb/ui/pull/519#issue-3790862030"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/questdb/ui/commit/b42fd9f18476d844ae181a10a249e003dafb823d"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/59lab/dbdb/blob/main/There%20is%20a%20cross-site%20scripting(XSS)%20vulnerability%20in%20the%20QuestDB%20database.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/questdb/questdb/releases/tag/9.3.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.340357"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.340357"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.733253"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-10T15:15:50Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-rcpp-qhfh-r47v",
+    "modified": "2026-01-10T15:31:22Z",
+    "published": "2026-01-10T15:31:22Z",
+    "aliases": [
+      "CVE-2026-0821"
+    ],
+    "details": "A vulnerability was determined in quickjs-ng quickjs up to 0.11.0. This vulnerability affects the function js_typed_array_constructor of the file quickjs.c. Executing a manipulation can lead to heap-based buffer overflow. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. This patch is called c5d80831e51e48a83eab16ea867be87f091783c5. A patch should be applied to remediate this issue.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0821"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/issues/1296"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/issues/1296#issue-3780003395"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/pull/1299"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/commit/c5d80831e51e48a83eab16ea867be87f091783c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.340355"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.340355"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.731780"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-10T13:15:49Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-p889-p985-pvfj",
+    "modified": "2026-01-10T15:31:22Z",
+    "published": "2026-01-10T15:31:22Z",
+    "aliases": [
+      "CVE-2025-13393"
+    ],
+    "details": "The Featured Image from URL (FIFU) plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 5.3.1. This is due to insufficient validation of user-supplied URLs before passing them to the getimagesize() function in the Elementor widget integration. This makes it possible for authenticated attackers, with Contributor-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services via the fifu_input_url parameter in the FIFU Elementor widget granted they have permissions to use Elementor.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-13393"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/featured-image-from-url/trunk/elementor/widgets/widget.php#L121"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/featured-image-from-url/trunk/elementor/widgets/widget.php#L94"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset/3428744"
+      },
+      {
+        "type": "WEB",
+        "url": "https://research.cleantalk.org/cve-2025-13393"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b7115070-b84d-4d69-993a-f512b9f9c081?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-10T14:15:49Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-f45f-r423-g82r",
+    "modified": "2026-01-10T15:31:22Z",
+    "published": "2026-01-10T15:31:22Z",
+    "aliases": [
+      "CVE-2025-12379"
+    ],
+    "details": "The Shortcodes and extra features for Phlox theme plugin for WordPress is vulnerable to Stored Cross-Site Scripting via a combination of the 'tag' and ‘title_tag’ parameters in all versions up to, and including, 2.17.13 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-12379"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/auxin-elements/tags/2.17.12/includes/elementor/widgets/heading-modern.php#L1194"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset/3429103/auxin-elements/trunk/includes/elementor/widgets/heading-modern.php"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1144e0d9-692e-45a5-ac63-bcdd64a8bd8a?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-10T14:15:49Z"
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-67vh-536w-6pc4",
+    "modified": "2026-01-10T15:31:22Z",
+    "published": "2026-01-10T15:31:22Z",
+    "aliases": [
+      "CVE-2026-0822"
+    ],
+    "details": "A vulnerability was identified in quickjs-ng quickjs up to 0.11.0. This issue affects the function js_typed_array_sort of the file quickjs.c. The manipulation leads to heap-based buffer overflow. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The identifier of the patch is 53eefbcd695165a3bd8c584813b472cb4a69fbf5. To fix this issue, it is recommended to deploy a patch.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-0822"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/issues/1297"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/issues/1297#issue-3780006202"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/pull/1298"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/quickjs-ng/quickjs/commit/53eefbcd695165a3bd8c584813b472cb4a69fbf5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.340356"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.340356"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.731783"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-01-10T14:15:50Z"
+    }
+  }
+]
