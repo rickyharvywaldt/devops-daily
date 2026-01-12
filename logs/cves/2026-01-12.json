@@ -1213,3 +1213,623 @@
     ]
   }
 ]
+[Mon Jan 12 18:40:01 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-22783",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-09T18:27:19.388Z",
+      "datePublished": "2026-01-12T18:27:38.259Z",
+      "dateUpdated": "2026-01-12T18:27:38.259Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Iris Allows Arbitrary File Deletion via Mass Assignment in Datastore File Management",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "CWE-434: Unrestricted Upload of File with Dangerous Type",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-915",
+                "lang": "en",
+                "description": "CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-73",
+                "lang": "en",
+                "description": "CWE-73: External Control of File Name or Path",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.6,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/dfir-iris/iris-web/security/advisories/GHSA-qhqj-8qw6-wp8v",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/dfir-iris/iris-web/security/advisories/GHSA-qhqj-8qw6-wp8v"
+          },
+          {
+            "name": "https://github.com/dfir-iris/iris-web/commit/57c1b80494bac187893aebc6d9df1ce6e56485b7",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/dfir-iris/iris-web/commit/57c1b80494bac187893aebc6d9df1ce6e56485b7"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "dfir-iris",
+            "product": "iris-web",
+            "versions": [
+              {
+                "version": "< 2.4.24",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-12T18:27:38.259Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Iris is a web collaborative platform that helps incident responders share technical details during investigations. Prior to 2.4.24, the DFIR-IRIS datastore file management system has a vulnerability where mass assignment of the file_local_name field combined with path trust in the delete operation enables authenticated users to delete arbitrary filesystem paths. The vulnerability manifests through a three-step attack chain: authenticated users upload a file to the datastore, update the file's file_local_name field to point to an arbitrary filesystem path through mass assignment, then trigger the delete operation which removes the target file without path validation. This vulnerability is fixed in 2.4.24."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-qhqj-8qw6-wp8v",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0824",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-01-09T18:34:33.813Z",
+      "datePublished": "2026-01-10T14:32:08.724Z",
+      "dateUpdated": "2026-01-12T18:26:21.294Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-01-10T14:32:08.724Z"
+        },
+        "title": "questdb ui Web Console cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "questdb",
+            "product": "ui",
+            "versions": [
+              {
+                "version": "1.11.0",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.1",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.2",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.3",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.4",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.5",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.6",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.7",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.8",
+                "status": "affected"
+              },
+              {
+                "version": "1.11.9",
+                "status": "affected"
+              },
+              {
+                "version": "1.1.10",
+                "status": "unaffected"
+              }
+            ],
+            "modules": [
+              "Web Console"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in questdb ui up to 1.11.9. Impacted is an unknown function of the component Web Console. The manipulation results in cross site scripting. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. Upgrading to version 1.1.10 is recommended to address this issue. The patch is identified as b42fd9f18476d844ae181a10a249e003dafb823d. You should upgrade the affected component. The vendor confirmed early that the fix \"is going to be released as a part of QuestDB 9.3.0\" as well."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.5,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:N/E:POC/RL:OF/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-09T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-01-09T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-01-09T19:40:31.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "59lab (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.340357",
+            "name": "VDB-340357 | questdb ui Web Console cross site scripting",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.340357",
+            "name": "VDB-340357 | CTI Indicators (IOB, IOC, TTP)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.733253",
+            "name": "Submit #733253 | questdb V9.2.3(latest) xss",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/59lab/dbdb/blob/main/There%20is%20a%20cross-site%20scripting(XSS)%20vulnerability%20in%20the%20QuestDB%20database.md",
+            "tags": [
+              "related"
+            ]
+          },
+          {
+            "url": "https://github.com/questdb/questdb/releases/tag/9.3.0",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/questdb/ui/pull/519#issue-3790862030",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/questdb/ui/commit/b42fd9f18476d844ae181a10a249e003dafb823d",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/questdb/ui/pull/518",
+            "tags": [
+              "issue-tracking",
+              "patch"
+            ]
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-12T18:26:06.017455Z",
+                  "id": "CVE-2026-0824",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-12T18:26:21.294Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-66939",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-01-12T18:25:32.920Z",
+      "dateReserved": "2025-12-08T00:00:00.000Z",
+      "datePublished": "2026-01-12T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-01-12T15:52:48.306Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross Site Scripting vulnerability in 66biolinks by AltumCode v.61.0.1 allows an attacker to execute arbitrary code via a crafted favicon file"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://66biolinks.com/"
+          },
+          {
+            "url": "https://gist.github.com/Waqar-Arain/2a21b135a04e7804c124688ea1085875"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-79",
+                  "lang": "en",
+                  "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 5.4,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+                "integrityImpact": "LOW",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-12T18:23:16.009684Z",
+                  "id": "CVE-2025-66939",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-12T18:25:32.920Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14470",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "REJECTED",
+      "dateReserved": "2025-12-10T17:03:47.032Z",
+      "dateUpdated": "2026-01-12T18:23:11.236Z",
+      "dateRejected": "2026-01-12T18:23:11.236Z",
+      "assignerShortName": "Wordfence"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-01-12T18:23:11.236Z"
+        },
+        "rejectedReasons": [
+          {
+            "lang": "en",
+            "value": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. Reason: This candidate was issued in error. Notes: All references and descriptions in this candidate have been removed to prevent accidental usage."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-22781",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-09T18:27:19.388Z",
+      "datePublished": "2026-01-12T18:23:00.512Z",
+      "dateUpdated": "2026-01-12T18:23:00.512Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "TinyWeb CGI Command Injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "lang": "en",
+                "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "subAvailabilityImpact": "HIGH",
+              "baseScore": 10,
+              "baseSeverity": "CRITICAL",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/maximmasiutin/TinyWeb/security/advisories/GHSA-m779-84h5-72q2",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/maximmasiutin/TinyWeb/security/advisories/GHSA-m779-84h5-72q2"
+          },
+          {
+            "name": "https://github.com/maximmasiutin/TinyWeb/commit/876b7e2887f4ea5be3e18bb2af7313f23a283c96",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/maximmasiutin/TinyWeb/commit/876b7e2887f4ea5be3e18bb2af7313f23a283c96"
+          },
+          {
+            "name": "https://www.masiutin.net/tinyweb-cve-2025-cgi-command-injection.html",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.masiutin.net/tinyweb-cve-2025-cgi-command-injection.html"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "maximmasiutin",
+            "product": "TinyWeb",
+            "versions": [
+              {
+                "version": "< 1.98",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-12T18:23:00.512Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TinyWeb is a web server (HTTP, HTTPS) written in Delphi for Win32. TinyWeb HTTP Server before version 1.98 is vulnerable to OS command injection via CGI ISINDEX-style query parameters. The query parameters are passed as command-line arguments to the CGI executable via Windows CreateProcess(). An unauthenticated remote attacker can execute arbitrary commands on the server by injecting Windows shell metacharacters into HTTP requests. This vulnerability is fixed in 1.98."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-m779-84h5-72q2",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  }
+]
