@@ -76220,3 +76220,609 @@
     ]
   }
 ]
+[Thu Jan 15 18:43:19 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-67647",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2025-12-09T18:36:41.331Z",
+      "datePublished": "2026-01-15T18:33:25.295Z",
+      "dateUpdated": "2026-01-15T18:33:25.295Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "SvelteKit Denial of service and possible SSRF when using prerendering",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-248",
+                "lang": "en",
+                "description": "CWE-248: Uncaught Exception",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-918",
+                "lang": "en",
+                "description": "CWE-918: Server-Side Request Forgery (SSRF)",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "LOW",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:L/VA:H/SC:L/SI:L/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/sveltejs/kit/security/advisories/GHSA-j62c-4x62-9r35",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/sveltejs/kit/security/advisories/GHSA-j62c-4x62-9r35"
+          },
+          {
+            "name": "https://github.com/sveltejs/kit/commit/d9ae9b00b14f5574d109f3fd548f960594346226",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/sveltejs/kit/commit/d9ae9b00b14f5574d109f3fd548f960594346226"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "sveltejs",
+            "product": "kit",
+            "versions": [
+              {
+                "version": ">= 2.19.0, < 2.49.5",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-01-15T18:33:25.295Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SvelteKit is a framework for rapidly developing robust, performant web applications using Svelte. Prior to 2.49.5, SvelteKit is vulnerable to a server side request forgery (SSRF) and denial of service (DoS) under certain conditions. From 2.44.0 through 2.49.4, the vulnerability results in a DoS when your app has at least one prerendered route (export const prerender = true). From 2.19.0 through 2.49.4, the vulnerability results in a DoS when your app has at least one prerendered route and you are using adapter-node without a configured ORIGIN environment variable, and you are not using a reverse proxy that implements Host header validation. This vulnerability is fixed in 2.49.5."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-j62c-4x62-9r35",
+          "discovery": "UNKNOWN"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13845",
+      "assignerOrgId": "076d1eb6-cfab-4401-b34d-6dfc2a413bdb",
+      "state": "PUBLISHED",
+      "assignerShortName": "schneider",
+      "dateReserved": "2025-12-01T19:20:04.243Z",
+      "datePublished": "2026-01-15T18:33:23.235Z",
+      "dateUpdated": "2026-01-15T18:33:23.235Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "EcoStruxure Power Build Rapsody",
+            "vendor": "Schneider Electric",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "FR v2.8.1.0300 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "ESP v2.8.5.0200 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "PT v2.8.7.0100 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "BEL (FR) v2.8.8.0100 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "BEL (EN) v2.8.3.0100 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "INT (EN) v2.8.4.0300 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "NL v2.8.2.0000 and prior"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "CWE-416: Use After Free vulnerability that could cause remote code execution when the end user imports the malicious project file (SSD file) into Rapsody."
+              }
+            ],
+            "value": "CWE-416: Use After Free vulnerability that could cause remote code execution when the end user imports the malicious project file (SSD file) into Rapsody."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-416",
+                "description": "CWE-416 Use After Free",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "076d1eb6-cfab-4401-b34d-6dfc2a413bdb",
+          "shortName": "schneider",
+          "dateUpdated": "2026-01-15T18:33:23.235Z"
+        },
+        "references": [
+          {
+            "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-013-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-013-04.pdf"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        }
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0635",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-01-06T01:49:07.352Z",
+      "datePublished": "2026-01-14T05:28:08.887Z",
+      "dateUpdated": "2026-01-15T18:33:19.942Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-01-14T05:28:08.887Z"
+        },
+        "affected": [
+          {
+            "vendor": "techknowprime",
+            "product": "Responsive Accordion Slider",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.2.2",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Responsive Accordion Slider plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the 'resp_accordion_silder_save_images' function in all versions up to, and including, 1.2.2. This makes it possible for authenticated attackers, with Contributor-level access and above, to modify any slider's image metadata including titles, descriptions, alt text, and links."
+          }
+        ],
+        "title": "Responsive Accordion Slider <= 1.2.2 - Missing Authorization to Authenticated (Contributor+) Slider Update via 'resp_accordion_silder_save_images'",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/55cfb2c6-ca3f-45b7-8cd9-a5a1c3783ae0?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/responsive-accordion-slider/tags/1.2.2/includes/admin/class-ras-admin.php#L101"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-862 Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Kazuma Matsumoto"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-13T16:44:33.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-15T18:31:13.676171Z",
+                  "id": "CVE-2026-0635",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-15T18:33:19.942Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14613",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-12-12T20:43:30.437Z",
+      "datePublished": "2026-01-14T05:28:12.007Z",
+      "dateUpdated": "2026-01-15T18:29:50.855Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-01-14T05:28:12.007Z"
+        },
+        "affected": [
+          {
+            "vendor": "daschmi",
+            "product": "GetContentFromURL",
+            "versions": [
+              {
+                "version": "*",
+                "status": "affected",
+                "lessThanOrEqual": "1.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The GetContentFromURL plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 1.0. This is due to the plugin using wp_remote_get() instead of wp_safe_remote_get() to fetch content from a user-supplied URL in the 'url' parameter of the [gcfu] shortcode. This makes it possible for authenticated attackers, with Contributor-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services."
+          }
+        ],
+        "title": "GetContentFromURL <= 1.0 - Authenticated (Contributor+) Server-Side Request Forgery via 'url' Shortcode Attribute",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/b83db6c7-09af-4707-a96b-ee551f27e3b7?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/getcontentfromurl/trunk/classes/shortcode.class.php#L20"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/getcontentfromurl/tags/1.0/classes/shortcode.class.php#L20"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-918 Server-Side Request Forgery (SSRF)",
+                "cweId": "CWE-918",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 7.2,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Ivan Cese"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-13T17:19:31.000+00:00",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-15T18:29:36.310300Z",
+                  "id": "CVE-2025-14613",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-15T18:29:50.855Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-13844",
+      "assignerOrgId": "076d1eb6-cfab-4401-b34d-6dfc2a413bdb",
+      "state": "PUBLISHED",
+      "assignerShortName": "schneider",
+      "dateReserved": "2025-12-01T19:13:56.544Z",
+      "datePublished": "2026-01-15T18:28:37.316Z",
+      "dateUpdated": "2026-01-15T18:28:37.316Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "EcoStruxure Power Build Rapsody",
+            "vendor": "Schneider Electric",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "FR v2.8.1 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "INT v2.8.6 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "ES v2.8.5 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "BEL (NL) v2.8.3 and prior"
+              },
+              {
+                "status": "affected",
+                "version": "BEL (FR) v2.8.8 and prior"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "CWE-415: Double Free vulnerability exists that could cause heap memory corruption when the end user imports a malicious project file (SSD file) shared by the attacker into Rapsody."
+              }
+            ],
+            "value": "CWE-415: Double Free vulnerability exists that could cause heap memory corruption when the end user imports a malicious project file (SSD file) shared by the attacker into Rapsody."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-415",
+                "description": "CWE-415 Double Free",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "076d1eb6-cfab-4401-b34d-6dfc2a413bdb",
+          "shortName": "schneider",
+          "dateUpdated": "2026-01-15T18:28:37.316Z"
+        },
+        "references": [
+          {
+            "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-013-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-013-04.pdf"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        }
+      }
+    }
+  }
+]
