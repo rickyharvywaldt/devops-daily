@@ -1,0 +1,5138 @@
+[Mon Jan 19 02:11:23 UTC 2026] Latest CVEs:
+[
+  {
+    "modified": "2026-01-19T01:55:13Z",
+    "published": "2026-01-16T13:51:12Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-322",
+    "aliases": [
+      "GHSA-m8m9-h738-g5fh"
+    ],
+    "summary": "Malicious code in admin10001 (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: ghsa-malware (cd2649bb4fa68be63a9cdca6eb598a2c9b756cdfbbf050c3fa915074bccb1e1d)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n\n## Source: ossf-package-analysis (065613074af4477848f512912797945118719f8a78d11e96304c37e450569850)\nThe OpenSSF Package Analysis project identified 'admin10001' @ 1.0.107 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n\n- The package executes one or more commands associated with malicious behavior.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "admin10001"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.0.3",
+          "1.0.0",
+          "1.0.4",
+          "1.0.7",
+          "1.0.10",
+          "1.0.8",
+          "1.0.14",
+          "1.0.13",
+          "1.0.15",
+          "1.0.22",
+          "1.0.21",
+          "1.0.20",
+          "1.0.18",
+          "1.0.24",
+          "1.0.27",
+          "1.0.25",
+          "1.0.31",
+          "1.0.29",
+          "1.0.34",
+          "1.0.40",
+          "1.0.35",
+          "1.0.36",
+          "1.0.38",
+          "1.0.45",
+          "1.0.43",
+          "1.0.41",
+          "1.0.46",
+          "1.0.48",
+          "1.0.52",
+          "1.0.49",
+          "1.0.51",
+          "1.0.53",
+          "1.0.56",
+          "1.0.58",
+          "1.0.64",
+          "1.0.61",
+          "1.0.59",
+          "1.0.67",
+          "1.0.70",
+          "1.0.74",
+          "1.0.71",
+          "1.0.73",
+          "1.0.69",
+          "1.0.65",
+          "1.0.78",
+          "1.0.79",
+          "1.0.76",
+          "1.0.82",
+          "1.0.84",
+          "1.0.96",
+          "1.0.89",
+          "1.0.94",
+          "1.0.93",
+          "1.0.90",
+          "1.0.92",
+          "1.0.107",
+          "1.0.98",
+          "1.0.106",
+          "1.0.100",
+          "1.0.105",
+          "1.0.111",
+          "1.0.118",
+          "1.0.113",
+          "1.0.115",
+          "1.0.117",
+          "1.0.120",
+          "1.0.126",
+          "1.0.125",
+          "1.0.122",
+          "1.0.127",
+          "1.0.124",
+          "1.0.132",
+          "1.0.133",
+          "1.0.129",
+          "1.0.134",
+          "1.0.137",
+          "1.0.138",
+          "1.0.144",
+          "1.0.141",
+          "1.0.142",
+          "1.0.143",
+          "1.0.145",
+          "1.0.153",
+          "1.0.156",
+          "1.0.148",
+          "1.0.151",
+          "1.0.150",
+          "1.0.165",
+          "1.0.158",
+          "1.0.164",
+          "1.0.161",
+          "1.0.166",
+          "1.0.159",
+          "1.0.174",
+          "1.0.173",
+          "1.0.172",
+          "1.0.171",
+          "1.0.177",
+          "1.0.178",
+          "1.0.183",
+          "1.0.181",
+          "1.0.182"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-m8m9-h738-g5fh"
+      }
+    ],
+    "credits": [
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "543fb72dd74b0801e24b9fc6a43ed5d9e4174a52f66aefe1d2326b3ec4479169",
+          "import_time": "2026-01-16T14:07:59.038874202Z",
+          "modified_time": "2026-01-16T14:05:52Z",
+          "versions": [
+            "1.0.3"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "c41f0f4e4bc9426a89f82f30c8d33ccbd2b95dc47f1a8c79cb0ae3a2a6c7ff66",
+          "import_time": "2026-01-16T14:07:58.961413068Z",
+          "modified_time": "2026-01-16T13:51:12Z",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ac69c191b3d52f36cda36bc4359ae3a62f407c142b505fd6393535e822b52f59",
+          "import_time": "2026-01-16T14:41:29.493466557Z",
+          "modified_time": "2026-01-16T14:12:25Z",
+          "versions": [
+            "1.0.4"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "a3e25d3ac3e77c1f6287100db0a8222ba90e55124a4128ff7136ee5e77d72266",
+          "import_time": "2026-01-16T15:08:37.295231914Z",
+          "modified_time": "2026-01-16T15:07:51Z",
+          "versions": [
+            "1.0.7"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "fbba6d4c418ec45bbd5c77a2b40f1a3335b5d2bd846f2fb53ad3bcea6a64a889",
+          "import_time": "2026-01-16T15:40:14.363657571Z",
+          "modified_time": "2026-01-16T15:15:55Z",
+          "versions": [
+            "1.0.10"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "e3ec3f1ce4d68547a01ee5577c5d4163890db4bba874034852b9b5e30a6c0cf1",
+          "import_time": "2026-01-16T15:40:14.195769174Z",
+          "modified_time": "2026-01-16T15:12:39Z",
+          "versions": [
+            "1.0.8"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "1d08c9d7244ae2b190885a1c094d72243c46eae5cd3b638bee2e9b2ee18100e0",
+          "import_time": "2026-01-16T16:09:00.202789966Z",
+          "modified_time": "2026-01-16T15:45:56Z",
+          "versions": [
+            "1.0.14"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "27fc8e3904a37e6077895c344947a72495813dcfc208b4dea2b4bb5b415e706b",
+          "import_time": "2026-01-16T16:09:00.104309823Z",
+          "modified_time": "2026-01-16T15:41:01Z",
+          "versions": [
+            "1.0.13"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "66ae1ed071b8fef7052c076fb433103cc4f0081a26bc1419f303f699006d0fca",
+          "import_time": "2026-01-16T16:09:00.289628981Z",
+          "modified_time": "2026-01-16T15:50:30Z",
+          "versions": [
+            "1.0.15"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "fad3da234cfebc43b5db538b45b2afd6214af829618013ee42e9a43c5c10da32",
+          "import_time": "2026-01-16T16:44:37.945547425Z",
+          "modified_time": "2026-01-16T16:36:04Z",
+          "versions": [
+            "1.0.22"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "555b7350f527f78c99a5b10b702cf257d6933e6cf674a00243a4bebbd94507cf",
+          "import_time": "2026-01-16T16:44:37.864172509Z",
+          "modified_time": "2026-01-16T16:20:46Z",
+          "versions": [
+            "1.0.21"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "b2bf28e629e80790dd731a7ce12881c3a910229f3217dfe11dab6ea97d389e32",
+          "import_time": "2026-01-16T16:44:37.732554935Z",
+          "modified_time": "2026-01-16T16:15:44Z",
+          "versions": [
+            "1.0.20"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "c43ff6ef9b8494597d950016bf4bd40dcbecd638275e9263e57b2359e488955c",
+          "import_time": "2026-01-16T16:44:37.640790896Z",
+          "modified_time": "2026-01-16T16:10:55Z",
+          "versions": [
+            "1.0.18"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ce42e356159e6ebb423a8155b0d05c1f29db1ac276ba51567e1ba349ef222f33",
+          "import_time": "2026-01-16T17:40:25.543254635Z",
+          "modified_time": "2026-01-16T17:21:12Z",
+          "versions": [
+            "1.0.24"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ee9103c6a8c8f47561a9497f92fd1f6147c3b5ee3a5eab60aa79aed89847e86b",
+          "import_time": "2026-01-16T17:40:25.624270036Z",
+          "modified_time": "2026-01-16T17:30:33Z",
+          "versions": [
+            "1.0.27"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ffc47c76c6b9f1c6698913fb9d6c2fea00576d0363964d00d6554afe90b5e562",
+          "import_time": "2026-01-16T17:40:25.470841215Z",
+          "modified_time": "2026-01-16T17:20:37Z",
+          "versions": [
+            "1.0.25"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "8ff5e7ec4443819159014997d887f5910e2fa0d12380e68f27dd7fe02268ebd4",
+          "import_time": "2026-01-16T18:09:54.620361759Z",
+          "modified_time": "2026-01-16T17:45:49Z",
+          "versions": [
+            "1.0.31"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "c87cb8a8f5ae214d9f4819e47753adda465323ac66a26b79f0e9e5c539a283b4",
+          "import_time": "2026-01-16T18:09:54.494815089Z",
+          "modified_time": "2026-01-16T17:42:35Z",
+          "versions": [
+            "1.0.29"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "16c76fdf8e2061f3f88a1e60e756633dcf4a8966595a80620760567f65831a69",
+          "import_time": "2026-01-16T18:46:27.402556066Z",
+          "modified_time": "2026-01-16T18:15:41Z",
+          "versions": [
+            "1.0.34"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "2064ead1b4e9052cc303811c7374b83825b56837eda6dc60e43cb95af2f0a151",
+          "import_time": "2026-01-16T18:46:27.828650676Z",
+          "modified_time": "2026-01-16T18:45:33Z",
+          "versions": [
+            "1.0.40"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "208c1ae77f4027350dfca2605206df85b13b658dc24890d957bbdc60f40f9396",
+          "import_time": "2026-01-16T18:46:27.488017602Z",
+          "modified_time": "2026-01-16T18:20:59Z",
+          "versions": [
+            "1.0.35"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "3c04dc19dbc1db62dc9a3b9fd6d8ed26e39883880de6c5a87d615a33a3ccbb74",
+          "import_time": "2026-01-16T18:46:27.566949229Z",
+          "modified_time": "2026-01-16T18:30:37Z",
+          "versions": [
+            "1.0.36"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "440bbac5c4f27ef7b2ee0288a0615fa77fe4293314ffdb4c6c8c0d78f1583249",
+          "import_time": "2026-01-16T18:46:27.679089011Z",
+          "modified_time": "2026-01-16T18:35:38Z",
+          "versions": [
+            "1.0.38"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "19885823895b896b44b34561a531661b09628a7a9900a4fb9332c0859495fb84",
+          "import_time": "2026-01-16T19:07:44.070423493Z",
+          "modified_time": "2026-01-16T19:05:41Z",
+          "versions": [
+            "1.0.45"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "51f810a57b93814d5268865610bf2ff3f5dfb1f269be1704acada868b4ab8601",
+          "import_time": "2026-01-16T19:07:44.021289327Z",
+          "modified_time": "2026-01-16T19:00:53Z",
+          "versions": [
+            "1.0.43"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "b6d1f1d967afed49ea592048cde946c1831f0168ded0bf94c687e0dd3eb3a81b",
+          "import_time": "2026-01-16T19:07:43.974445949Z",
+          "modified_time": "2026-01-16T18:55:48Z",
+          "versions": [
+            "1.0.41"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "fc67b8ddf34643f5a2e97b0e4df221d39164dabf0614f6686ab3de7017647ebe",
+          "import_time": "2026-01-17T04:14:37.204544557Z",
+          "modified_time": "2026-01-17T04:10:43Z",
+          "versions": [
+            "1.0.46"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "929cd54329878cd6858e78423242aeddbd33a30a2468e2c8e9fd5864d1974812",
+          "import_time": "2026-01-17T06:45:09.73035886Z",
+          "modified_time": "2026-01-17T06:21:06Z",
+          "versions": [
+            "1.0.48"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "991543df652fd7185da92e596ee3013c6c05fad74a0f71a595cd1bbce88b1d86",
+          "import_time": "2026-01-17T07:06:43.889484293Z",
+          "modified_time": "2026-01-17T06:55:43Z",
+          "versions": [
+            "1.0.52"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "efb530add1c5ecb091a091420daa41b612ccd830738ac7ba75b7a1d4ef165f35",
+          "import_time": "2026-01-17T07:06:43.730869911Z",
+          "modified_time": "2026-01-17T06:47:55Z",
+          "versions": [
+            "1.0.49"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "f71f93f03e71e6570a0ccf87a3ece7dbf62dd5462b951518a3c07cf065fe4886",
+          "import_time": "2026-01-17T07:06:43.799753541Z",
+          "modified_time": "2026-01-17T06:53:28Z",
+          "versions": [
+            "1.0.51"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "0e7d489c0c704a2542c08b1a494b4970911af27d7cf3554e68758e023fd1275c",
+          "import_time": "2026-01-17T07:36:20.215357323Z",
+          "modified_time": "2026-01-17T07:12:54Z",
+          "versions": [
+            "1.0.53"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "73fa51e1611624b69804026933fe6d6d5b0fcd327b462538cf98e9c79c5b2550",
+          "import_time": "2026-01-17T08:08:22.128581162Z",
+          "modified_time": "2026-01-17T07:41:03Z",
+          "versions": [
+            "1.0.56"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "d57d805cb7bcac315645c40191a9f6189bae5dc8d4e04ffb9480521ad393b1fb",
+          "import_time": "2026-01-17T08:08:22.249538526Z",
+          "modified_time": "2026-01-17T07:45:52Z",
+          "versions": [
+            "1.0.58"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "dbc4cae10057b343e1d0351197a5f2ec3a5868db2398fd9b932ee85d578bcceb",
+          "import_time": "2026-01-17T08:08:22.646913854Z",
+          "modified_time": "2026-01-17T08:07:22Z",
+          "versions": [
+            "1.0.64"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "e4a1605eb8edde8bdbf8b9ff6102fc8eb47e350badb5208a6261aff54e61be0f",
+          "import_time": "2026-01-17T08:08:22.525178464Z",
+          "modified_time": "2026-01-17T08:02:44Z",
+          "versions": [
+            "1.0.61"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "f888fd0354210b05cae0ba6adafe5dd47dbd1371374e07b9d7a19ea14c3f75de",
+          "import_time": "2026-01-17T08:08:22.380285066Z",
+          "modified_time": "2026-01-17T07:52:50Z",
+          "versions": [
+            "1.0.59"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "360798947fd54054c509ecccc0806e40166dfff880a84a3b49f340b0801e1904",
+          "import_time": "2026-01-17T08:41:19.120675984Z",
+          "modified_time": "2026-01-17T08:18:07Z",
+          "versions": [
+            "1.0.67"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "597484cf4de0ae0520e70b192353c5b8f30a3eb8011b7d9d58e774b82221d26b",
+          "import_time": "2026-01-17T08:41:19.303983768Z",
+          "modified_time": "2026-01-17T08:25:40Z",
+          "versions": [
+            "1.0.70"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "7cd53ffa0b7cda490b747edc963811a28de45ef05892d345c99d4977876e2c71",
+          "import_time": "2026-01-17T08:41:19.586444977Z",
+          "modified_time": "2026-01-17T08:40:28Z",
+          "versions": [
+            "1.0.74"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "d7f7f2cf09d78dbf1ab254712099d508bcf4ca877fd0cbffb875c29bfc62e3a5",
+          "import_time": "2026-01-17T08:41:19.471567038Z",
+          "modified_time": "2026-01-17T08:32:46Z",
+          "versions": [
+            "1.0.71"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "0da41dfa4bd921a7005518748d378c70504ce05dba1e187770c5da74ad4e4837",
+          "import_time": "2026-01-17T08:41:19.534355007Z",
+          "modified_time": "2026-01-17T08:35:44Z",
+          "versions": [
+            "1.0.73"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "1430b44a47f128fd5d5fb41cccd529631cf986837da0b9ccfdc2e43cb4e0cd2f",
+          "import_time": "2026-01-17T08:41:19.234066768Z",
+          "modified_time": "2026-01-17T08:20:34Z",
+          "versions": [
+            "1.0.69"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "19c2b80ee788e263ddf0f9b07cd2852f226c907f91fc07b0f941a0f4d1f3b901",
+          "import_time": "2026-01-17T08:41:18.880844075Z",
+          "modified_time": "2026-01-17T08:13:27Z",
+          "versions": [
+            "1.0.65"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "8d9c6a903ba691d2bd86d684c376059d4a3cc30768ddcb1bebb86f193814c2fb",
+          "import_time": "2026-01-17T09:06:53.056536258Z",
+          "modified_time": "2026-01-17T08:53:04Z",
+          "versions": [
+            "1.0.78"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ab7607b7d949dacae1680cb4000791e3a341924f8b2ba9da0dc473193c03b7da",
+          "import_time": "2026-01-17T09:06:53.242243874Z",
+          "modified_time": "2026-01-17T09:02:35Z",
+          "versions": [
+            "1.0.79"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "d0a8fafee7fe3b2d18d37ddb21b9776ea0c6b056e58573bd8ce18991f39cc5dc",
+          "import_time": "2026-01-17T09:06:52.799535094Z",
+          "modified_time": "2026-01-17T08:45:24Z",
+          "versions": [
+            "1.0.76"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "3da503f36c8d9192d9d020068b8db1ff49c164c5be19c886a98fdc3900a9f319",
+          "import_time": "2026-01-17T09:37:06.911872038Z",
+          "modified_time": "2026-01-17T09:17:36Z",
+          "versions": [
+            "1.0.82"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "47c8d9e595a1819be1d5df558a25c1372ae771db8e28fa82350517e8daa17b92",
+          "import_time": "2026-01-17T09:37:06.962631725Z",
+          "modified_time": "2026-01-17T09:23:08Z",
+          "versions": [
+            "1.0.84"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "bb295829c6159abbf52fbadeb6bd33b73dbccac67b235fd5dde0433aeb9816b7",
+          "import_time": "2026-01-17T10:07:07.589915902Z",
+          "modified_time": "2026-01-17T10:00:46Z",
+          "versions": [
+            "1.0.96"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "da99a14eb723185e64223fdc6db454de9d178f2f68fe5ffd85eb210eb82c3c0d",
+          "import_time": "2026-01-17T10:07:07.172093072Z",
+          "modified_time": "2026-01-17T09:40:41Z",
+          "versions": [
+            "1.0.89"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "20e7a90b1148f11a37a83485f7c2bf4127ecd600123a7f6a9aff0d8ec2f9f453",
+          "import_time": "2026-01-17T10:07:07.511904023Z",
+          "modified_time": "2026-01-17T09:57:23Z",
+          "versions": [
+            "1.0.94"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "a290b9e631d1c85d6bcdbff8118aa4d51087bc8537f626b62006ef3ff38bfaaa",
+          "import_time": "2026-01-17T10:07:07.415227473Z",
+          "modified_time": "2026-01-17T09:56:01Z",
+          "versions": [
+            "1.0.93"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "a5510f9480f8169cae5336c80eb5f0108775b195a487171713cb24eeea29f607",
+          "import_time": "2026-01-17T10:07:07.251000849Z",
+          "modified_time": "2026-01-17T09:48:00Z",
+          "versions": [
+            "1.0.90"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "b7d140518be652f49a038ed0728ec6814d8c2c434a22e1d3ae955e5d8bdd07c7",
+          "import_time": "2026-01-17T10:07:07.346589417Z",
+          "modified_time": "2026-01-17T09:53:08Z",
+          "versions": [
+            "1.0.92"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "065613074af4477848f512912797945118719f8a78d11e96304c37e450569850",
+          "import_time": "2026-01-17T10:39:28.190435423Z",
+          "modified_time": "2026-01-17T10:35:18Z",
+          "versions": [
+            "1.0.107"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "3ed48c1606aff2e84ffe1fdaa79c62494e4fcb8c7a47e0597c3ac6fe5e135b5b",
+          "import_time": "2026-01-17T10:39:27.595375971Z",
+          "modified_time": "2026-01-17T10:07:51Z",
+          "versions": [
+            "1.0.98"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "7a8b88010e39d987d9f25cd9ea93c8ade7ea21324cacec3dd173f5aae81b6692",
+          "import_time": "2026-01-17T10:39:28.04685767Z",
+          "modified_time": "2026-01-17T10:31:54Z",
+          "versions": [
+            "1.0.106"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "db4638bf3a3ff59bb301562d409fd5bd419363b98758080317e3f0e345f47552",
+          "import_time": "2026-01-17T10:39:27.729004003Z",
+          "modified_time": "2026-01-17T10:16:01Z",
+          "versions": [
+            "1.0.100"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "e43fcc415f5112615332d224452f5599c283baab07366e151c2276261d589118",
+          "import_time": "2026-01-17T10:39:27.870918692Z",
+          "modified_time": "2026-01-17T10:25:39Z",
+          "versions": [
+            "1.0.105"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "06581108b30f673871cd404bdb0720897b2b73c1d421f612f02760e024054317",
+          "import_time": "2026-01-17T11:06:03.041672083Z",
+          "modified_time": "2026-01-17T10:52:02Z",
+          "versions": [
+            "1.0.111"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "4e6a9817843761a809cf3fd1fe76da31f8844953e0c3eaaf050afc2d04ec87b4",
+          "import_time": "2026-01-17T11:06:03.444261869Z",
+          "modified_time": "2026-01-17T11:02:52Z",
+          "versions": [
+            "1.0.118"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "57c3ba16eca940b07c47a4ea8d075299d1c7eee3fb9ea9a9b326c02272821057",
+          "import_time": "2026-01-17T11:06:02.886017685Z",
+          "modified_time": "2026-01-17T10:47:43Z",
+          "versions": [
+            "1.0.113"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "8c15de751bb5d1f0006a71e212f335ffd74bb38189943eda1f20b6d178a87f61",
+          "import_time": "2026-01-17T11:06:03.161007174Z",
+          "modified_time": "2026-01-17T11:00:16Z",
+          "versions": [
+            "1.0.115"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "b033608c424325fff07b10276f2920dcbfc9d8c2d0792b1c8e372fbf649e03db",
+          "import_time": "2026-01-17T11:06:03.312092314Z",
+          "modified_time": "2026-01-17T11:00:43Z",
+          "versions": [
+            "1.0.117"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "bc672c8c239e216dc97e0afb960b626c00290ca68d4c1b58da8e01bcf7d03507",
+          "import_time": "2026-01-17T11:06:03.621743191Z",
+          "modified_time": "2026-01-17T11:05:42Z",
+          "versions": [
+            "1.0.120"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "057d5b06d7be3ec1139a4f7cbba28913a60f2c294a2f844158f7a505e81a50e3",
+          "import_time": "2026-01-17T11:35:05.495287828Z",
+          "modified_time": "2026-01-17T11:26:34Z",
+          "versions": [
+            "1.0.126"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "08593591df75a95659f1dfa1a733c5f48f86ee2fdb3229d5a2fecbb4d548d1a0",
+          "import_time": "2026-01-17T11:35:05.384470307Z",
+          "modified_time": "2026-01-17T11:25:49Z",
+          "versions": [
+            "1.0.125"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "0b75fe7c6ad18465920677f6e7f6c7e4e8b21d64e0d6452bc99817d65fc993b3",
+          "import_time": "2026-01-17T11:35:05.151027703Z",
+          "modified_time": "2026-01-17T11:10:35Z",
+          "versions": [
+            "1.0.122"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "4979c444595ddb6c13858e5bead517969f4d8d0b52a3533522785e228f8d1b26",
+          "import_time": "2026-01-17T11:35:05.567576179Z",
+          "modified_time": "2026-01-17T11:32:41Z",
+          "versions": [
+            "1.0.127"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "a3ba08b26c7ce775bcd400bcb9ec3e2e24a69d8e229c425074935364cadd7c12",
+          "import_time": "2026-01-17T11:35:05.282547832Z",
+          "modified_time": "2026-01-17T11:15:41Z",
+          "versions": [
+            "1.0.124"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "3232e3402d7082e7e19ebec1865e8bc803955eb1d73039dfedadb813eaf07fe2",
+          "import_time": "2026-01-17T12:10:21.036907306Z",
+          "modified_time": "2026-01-17T11:45:32Z",
+          "versions": [
+            "1.0.132"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "6143fa5cc4699ddc78dadecef6fd58332dcf809f64af8d6f6419a190d8e964b8",
+          "import_time": "2026-01-17T12:10:21.337396894Z",
+          "modified_time": "2026-01-17T11:51:49Z",
+          "versions": [
+            "1.0.133"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ed0a59a1f800cf1224b6813e1544a520a99b25eca9db4bdaeceb3c34e67cbf10",
+          "import_time": "2026-01-17T12:10:21.182501437Z",
+          "modified_time": "2026-01-17T11:46:11Z",
+          "versions": [
+            "1.0.129"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ffc5842edfa21504feb5f04f899203c7d7c4db20f0498129c8ab7d63faa5600e",
+          "import_time": "2026-01-17T12:10:21.490349636Z",
+          "modified_time": "2026-01-17T11:52:30Z",
+          "versions": [
+            "1.0.134"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "f50253c375671d7ed730ccd9274c9da9cccaadb2021c4675c2f769af14885bb5",
+          "import_time": "2026-01-17T12:47:34.093438754Z",
+          "modified_time": "2026-01-17T12:36:02Z",
+          "versions": [
+            "1.0.137"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "40a0b0cec093a65543a56c71f39750f1cc6f8fdb81ace3c6e633d05b05a70830",
+          "import_time": "2026-01-17T12:47:34.168603557Z",
+          "modified_time": "2026-01-17T12:40:36Z",
+          "versions": [
+            "1.0.138"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "96830100fcb131c3244486a041c6778616fd2dd25a17687230aef1c5edca695c",
+          "import_time": "2026-01-17T14:06:37.063882719Z",
+          "modified_time": "2026-01-17T13:59:03Z",
+          "versions": [
+            "1.0.144"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "9d5ba5e5dc407e58402d25c6df9873fb88df8cb0930ca3d13d819717b1a98578",
+          "import_time": "2026-01-17T14:06:36.752062009Z",
+          "modified_time": "2026-01-17T13:40:48Z",
+          "versions": [
+            "1.0.141"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "cd570fc6c4233498e2350e93058f514a00c6bc39541a7d2c3e7c482a276277c2",
+          "import_time": "2026-01-17T14:06:36.946662508Z",
+          "modified_time": "2026-01-17T13:46:01Z",
+          "versions": [
+            "1.0.142"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "22a7558b1e322f37fa3d363d96e1aaded08c768f72b8fd90b18f2f80b7c2c4fa",
+          "import_time": "2026-01-17T14:06:36.854131839Z",
+          "modified_time": "2026-01-17T13:44:34Z",
+          "versions": [
+            "1.0.143"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "8672caeb8f47df3104dd646404cd8e28b458d1624598e0d80d1fd42439ca828a",
+          "import_time": "2026-01-17T14:06:37.133903767Z",
+          "modified_time": "2026-01-17T14:01:31Z",
+          "versions": [
+            "1.0.145"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "0950151b145e142edfb323c5c11b5886c168597e6c4ee610e01fae322e8770e7",
+          "import_time": "2026-01-17T14:37:47.758629711Z",
+          "modified_time": "2026-01-17T14:30:06Z",
+          "versions": [
+            "1.0.153"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "3b207ad3f7d81eba33baf0e73a6d084e6308205694118e0e8b53ca90db90975f",
+          "import_time": "2026-01-17T14:37:47.879631869Z",
+          "modified_time": "2026-01-17T14:35:40Z",
+          "versions": [
+            "1.0.156"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "7121d10eef1f9226847710eb3388f62c0310d73de9552c58596a0994e10da01d",
+          "import_time": "2026-01-17T14:37:47.398040166Z",
+          "modified_time": "2026-01-17T14:12:05Z",
+          "versions": [
+            "1.0.148"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "76ef12a4be844350e27684d971d144c87a6679860bc8b1506cfffaadbf29a90c",
+          "import_time": "2026-01-17T14:37:47.634244169Z",
+          "modified_time": "2026-01-17T14:25:31Z",
+          "versions": [
+            "1.0.151"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "84162e495460678d2235237f14d64beacd49479fd1d27f72c25e829433056aa5",
+          "import_time": "2026-01-17T14:37:47.515330671Z",
+          "modified_time": "2026-01-17T14:18:40Z",
+          "versions": [
+            "1.0.150"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "6ecac505af062b8b61b70cef2b6250fe606d4cb97223a1dfdc083e47f78340bd",
+          "import_time": "2026-01-17T15:06:51.602599026Z",
+          "modified_time": "2026-01-17T15:00:33Z",
+          "versions": [
+            "1.0.165"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "b69581a75bc5a3893fedda1a321909eeddf3a3bfc63e2a93cb602ed2256d6abd",
+          "import_time": "2026-01-17T15:06:51.292859602Z",
+          "modified_time": "2026-01-17T14:42:41Z",
+          "versions": [
+            "1.0.158"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "cff45ada73c4ab37d14e0723be4f58133493b62f10763ae0a8ba8e517982a152",
+          "import_time": "2026-01-17T15:06:51.529596503Z",
+          "modified_time": "2026-01-17T14:57:15Z",
+          "versions": [
+            "1.0.164"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "e9fb1231ae3cd53083313c683ab89e9a63cdaa8a14e486ae220008216b122b39",
+          "import_time": "2026-01-17T15:06:51.443745695Z",
+          "modified_time": "2026-01-17T14:50:37Z",
+          "versions": [
+            "1.0.161"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "ed4a798a170a22408bd3e00a02adeeaafde408a3cf29660c0e616c570c3788eb",
+          "import_time": "2026-01-17T15:06:51.650067753Z",
+          "modified_time": "2026-01-17T15:05:43Z",
+          "versions": [
+            "1.0.166"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "00371c7c4e0bf6131fc0622b400f207ea46dbc10d72777bcb034dc76b3d3c3a3",
+          "import_time": "2026-01-17T15:06:51.361446292Z",
+          "modified_time": "2026-01-17T14:47:47Z",
+          "versions": [
+            "1.0.159"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "16f849793fcc6285160d559fe65947314c6d7bb02d9922df54c923f0587414a1",
+          "import_time": "2026-01-17T15:36:57.228644421Z",
+          "modified_time": "2026-01-17T15:35:20Z",
+          "versions": [
+            "1.0.174"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "a7cf6c5926cd4e790090969f4518c41060affd67e9b7a240c73eadfe4fa51227",
+          "import_time": "2026-01-17T15:36:57.080282204Z",
+          "modified_time": "2026-01-17T15:30:45Z",
+          "versions": [
+            "1.0.173"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "d608aabe6b4b37ceb4898e7a37cd9fcda98fcc7d99784b17ba9521a9c1158826",
+          "import_time": "2026-01-17T15:36:56.961566461Z",
+          "modified_time": "2026-01-17T15:25:42Z",
+          "versions": [
+            "1.0.172"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "dee826515737ea7ded6cea7337849ccec95a9ce6a7850cce422cc2d5d2b4c39d",
+          "import_time": "2026-01-17T15:36:56.820096138Z",
+          "modified_time": "2026-01-17T15:23:04Z",
+          "versions": [
+            "1.0.171"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "1f54c3bd7d64dec032b8f5a6c4e1a985fede8fefd1e4244b8d5923da31db07a7",
+          "import_time": "2026-01-17T16:07:02.841098656Z",
+          "modified_time": "2026-01-17T15:45:48Z",
+          "versions": [
+            "1.0.177"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "73315c4a5483881966d3825794dd5d648fe5dd56ebc1e7768a94b6fa92fa57e5",
+          "import_time": "2026-01-17T16:07:02.933292785Z",
+          "modified_time": "2026-01-17T15:50:24Z",
+          "versions": [
+            "1.0.178"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "16856438f1c5bb6b230cb87e8903e6b603fbb6016ac85e9921557e9d70204e9f",
+          "import_time": "2026-01-17T16:40:05.793286845Z",
+          "modified_time": "2026-01-17T16:25:27Z",
+          "versions": [
+            "1.0.183"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "b19919b3c5e5ebb2432be9f256602e9a733e920f3d852a0322afb406819c425c",
+          "import_time": "2026-01-17T16:40:05.5339204Z",
+          "modified_time": "2026-01-17T16:20:37Z",
+          "versions": [
+            "1.0.181"
+          ]
+        },
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "fabd7b0c29859eb3373fc29ec60b7ae35129c10d27f07b7fd336f475afbb0aeb",
+          "import_time": "2026-01-17T16:40:05.66652417Z",
+          "modified_time": "2026-01-17T16:20:51Z",
+          "versions": [
+            "1.0.182"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "cd2649bb4fa68be63a9cdca6eb598a2c9b756cdfbbf050c3fa915074bccb1e1d",
+          "import_time": "2026-01-19T01:53:37.789678792Z",
+          "id": "GHSA-m8m9-h738-g5fh",
+          "modified_time": "2026-01-19T01:07:29Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-01-19T01:55:13Z",
+    "published": "2026-01-04T04:15:31Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-32",
+    "aliases": [
+      "GHSA-qm8x-x4wp-qmmw"
+    ],
+    "summary": "Malicious code in blobhunter-depconf-poc (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (f921f8e8c11a044b483aa7c500c15b42917baa7ef4489b8301c564088fd4b7e3)\nThe package blobhunter-depconf-poc was found to contain malicious code.\n\n## Source: ghsa-malware (456ccd986350c2f39ca5162cc6ab17825dbf1c7df8a25db5bf20b8b1c7e8d70d)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n\n## Source: ossf-package-analysis (e86eec93623f868cd6b6974b56152c2691dbf38308a3b580a1eae1999364c1ff)\nThe OpenSSF Package Analysis project identified 'blobhunter-depconf-poc' @ 1.0.0 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "blobhunter-depconf-poc"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-qm8x-x4wp-qmmw"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "actran@amazon.com"
+        ]
+      },
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "e86eec93623f868cd6b6974b56152c2691dbf38308a3b580a1eae1999364c1ff",
+          "import_time": "2026-01-04T04:25:51.217379441Z",
+          "modified_time": "2026-01-04T04:15:31Z",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "f921f8e8c11a044b483aa7c500c15b42917baa7ef4489b8301c564088fd4b7e3",
+          "import_time": "2026-01-08T09:11:23.431621198Z",
+          "modified_time": "2026-01-08T09:02:00Z",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "456ccd986350c2f39ca5162cc6ab17825dbf1c7df8a25db5bf20b8b1c7e8d70d",
+          "import_time": "2026-01-19T01:53:37.791184141Z",
+          "id": "GHSA-qm8x-x4wp-qmmw",
+          "modified_time": "2026-01-19T00:59:53Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-01-19T01:55:13Z",
+    "published": "2025-12-23T08:02:14Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2025-192724",
+    "aliases": [
+      "GHSA-xhmc-g8hp-fgqq"
+    ],
+    "summary": "Malicious code in chai-as-validated (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (ac732b7c822ce779d3d7579dba60aef4d3d11aadbd5ee31db0eab0e240833634)\nThe package chai-as-validated was found to contain malicious code.\n\n## Source: ghsa-malware (d72b52e278b0d88eca8e67015e29d5eef13d699a7cdd07b75670b3e6755306c3)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "chai-as-validated",
+          "purl": "pkg:npm/chai-as-validated"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "2.3.2"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-xhmc-g8hp-fgqq"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "actran@amazon.com"
+        ]
+      },
+      {
+        "name": "ReversingLabs",
+        "type": "FINDER",
+        "contact": [
+          "https://www.reversinglabs.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "reversing-labs",
+          "sha256": "2c9381cc8f5a51ff293e1e8b16e8bde383379b7ed751b9700f7a54b9df7bf798",
+          "import_time": "2025-12-23T16:08:08.708053158Z",
+          "id": "RLMA-2025-06085",
+          "modified_time": "2025-12-23T08:02:14Z",
+          "versions": [
+            "2.3.2"
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "ac732b7c822ce779d3d7579dba60aef4d3d11aadbd5ee31db0eab0e240833634",
+          "import_time": "2025-12-24T00:51:44.38289418Z",
+          "modified_time": "2025-12-24T00:41:11Z",
+          "versions": [
+            "2.3.2"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "d72b52e278b0d88eca8e67015e29d5eef13d699a7cdd07b75670b3e6755306c3",
+          "import_time": "2026-01-19T01:53:37.794802687Z",
+          "id": "GHSA-xhmc-g8hp-fgqq",
+          "modified_time": "2026-01-19T00:56:46Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7195",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2025-07-07T08:45:21.278Z",
+      "datePublished": "2025-08-07T19:05:08.756Z",
+      "dateUpdated": "2026-01-19T01:36:19.528Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Operator-sdk: privilege escalation due to incorrect permissions of /etc/passwd",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Moderate",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.2,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Early versions of Operator-SDK provided an insecure method to allow operator containers to run in environments that used a random UID. Operator-SDK before 0.15.2 provided a script, user_setup, which modifies the permissions of the /etc/passwd file to 664 during build time. Developers who used Operator-SDK before 0.15.2 to scaffold their operator may still be impacted by this if the insecure user_setup script is still being used to build new container images. \n\nIn affected images, the /etc/passwd file is created during build time with group-writable permissions and a group ownership of root (gid=0). An attacker who can execute commands within an affected container, even as a non-root user, may be able to leverage their membership in the root group to modify the /etc/passwd file. This could allow the attacker to add a new user with any arbitrary UID, including UID 0, leading to full root privileges within the container."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "operator-framework",
+            "product": "operator-sdk",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "0.15.2",
+                "versionType": "semver"
+              }
+            ],
+            "packageName": "operator-sdk",
+            "collectionURL": "https://github.com/operator-framework/operator-sdk",
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "RHEL-9-CNV-4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/cluster-network-addons-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.17.39-2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "RHEL-9-CNV-4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/cluster-network-addons-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.18.25-3",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "RHEL-9-CNV-4.20",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/cluster-network-addons-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "v4.20.3-3",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.20::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Compliance Operator 1",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "compliance/openshift-compliance-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0903a7a5c857d96c84fd022e5785514eff201047e2fdd5d6699d79f17440ef02",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_compliance_operator:1::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Compliance Operator 1",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "compliance/openshift-compliance-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0deacfbd0d55638fb334e2435007586fcfd3a08328c3a7c9b2908bb0cab759c2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_compliance_operator:1::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "File Integrity Operator 1",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "compliance/openshift-file-integrity-rhel8-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:822fc16687164f666df5e498030bec3d3ab1e07d0a0576cc133a468e4ea01cf2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_file_integrity_operator:1::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:46013beb1d8f782e92088ad4ea2d10155c67edb8d613966a5c069340bcac5ddd",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f9a38a9960a716f58f5ba7b07df9c6d2fa4527d5fffe0eba5dc190b4762019d1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:a1bcab43a493a6452acb4bc80f69da3f226fa70e676e8a66e97e92fb50b5fada",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ba619fd1055ec06103c2e32806b2c8b3fd13e8a1388f90c70aec862c5d153c8f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:cb526dd6bd0473d4bc13f174698ea619c5e5dbe5cf465c2c2193679232b0ae4c",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:58ce162b9dcc276ea6d83e18fa08170b0ef047df7fc7a8957ee338d1359492eb",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.6",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:efb5ae4311c91dda0b3deae41996dc2e0b0ac8c98ff346cd38ea619d9226b95b",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.6::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d64f8dd4bc9c3c9cd4cde0d9c824a5554d3e3bad10cc45259f0cae1b49d60d72",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:3aca4b3b0ee0e2a80cb9f30c64d6f098ba44aa47b599d403a5a2e6215c23e4a2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0488dca3cb2db097732fe153483af7c4b2acdb7b0bc241f30e78cdb0474d11bb",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b996388849ae27f7721c24987d19e8f0b561ba3c0d03496c89fe1d987a64fe7e",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ff0c848b18b366afbe60b4fe97c876c0f71999262c9b92eae89db03b1158496f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:abaf77e6b461da4ae52774dfc2816c619c0bb9a2199024742ec173f3401c9981",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8e766e6892e3f3e4b97b2af195c359e5c388d5d5cd23bf82b571d0f8c40c674a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:33ba95658e6628be853182a24007d0eef69c350f344e01d24296396eaba1e0e9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:dd99548b21e36ba637fbf8e44f6062d2fec98abd536dba16e10475648664984e",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:3aca4b3b0ee0e2a80cb9f30c64d6f098ba44aa47b599d403a5a2e6215c23e4a2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0488dca3cb2db097732fe153483af7c4b2acdb7b0bc241f30e78cdb0474d11bb",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:96d1b5fa26dde708b2530542d4a49a5cc5854d08e43d13b323f2a251c7006303",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ff0c848b18b366afbe60b4fe97c876c0f71999262c9b92eae89db03b1158496f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:abaf77e6b461da4ae52774dfc2816c619c0bb9a2199024742ec173f3401c9981",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8e766e6892e3f3e4b97b2af195c359e5c388d5d5cd23bf82b571d0f8c40c674a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.7",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:33ba95658e6628be853182a24007d0eef69c350f344e01d24296396eaba1e0e9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.7::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:e69f76da9ffe324bd5b82eaf453bf36198dfc593e2646a81efc157b386e92734",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:17ce360bc53af9054c8b1f09d5f62061e449298e471bd0a7cc022dc2b8c402db",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:eecd891d3dc33d6665812de5cc0be197d0ab6037012dfb1fff083cf0db267044",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:25764e7533896af9e5495a37533cf40ece09ec9af2ec76e5334ae8da23913064",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b23631c48b4fe914a688d27ac66f868cf7d0db6d8683a619c3eee1b333191873",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ffdf5c91456c39315670801fc38dd18a7ce0202a65155fe3e0b9bb531f19c19f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1d1deb4104d8aeec314f451c168913fd389ac2d8b1380a68e8722c860ea4cb16",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.8",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:a001d75b0ffe122ec003be49502fea70aa8290c7a24cea9821eddaa234eddf77",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.8::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/addon-manager-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:746daa9bb14b25657d06f1f812597c9af23bfc3609f5886073350b1ceb76a0a1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f4ca2e5bc681d665e6234a1713ac02ea7460ed8fc5204c363a93eb758521189a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/discovery-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:3d3c96fd84e118f8236161bf16f22e2456a84fb38b0cd80406e97ada5149d30f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:88c20a3db23ec8edb463c9aba6340522118967db2a220b95d86a7fcc8c6462cb",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/placement-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b488d0482849357ec15b94803eba470bd3c96a3aa70eb401e5e010d939996fd5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-operator-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:36c26ae9529d584fbd4ed24376ff8a83fd583190d4b13461a484e8f49c3ac3b3",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/registration-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:840fbf02ac4883ef94a41476eb3ab46ffd105726ccd4b02b9b48b6606dcfd8f8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "multicluster engine for Kubernetes 2.9",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "multicluster-engine/work-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ae7818eab65947f74badec716268053224a27b53d704d89c455380d54009c10c",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine:2.9::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.11",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:dc57216ee72653b47f144eaec5673ace76df32a1178f98edf999578b3a467971",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.11::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.11",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-application-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:37a2e996d6c951d40a301e24c0bcc0decf1079e85759d6b8fd529cc6e672d9d1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.11::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.11",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-channel-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f36ff8e848eafea3ebbfaa1194a41062ff0f3c13d8006bc8a17002b20febc07a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.11::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.11",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-subscription-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c3db783ef02b62873185288bf8f8435923f69ea7b18613c2c5beb5586bc17c12",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.11::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:37c6415ccd9a7a41d99d67ebe5ffd33c54d723c23e9cb744ea0626a9ab5b7854",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ba2a04ce8cd5cc8221049896d4e1a46b4912e6f8213316020b3f40dfdacd7954",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicloud-integrations-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:7e2deb1a27aa0b83ae76b48abf19d386600275812f4fa7edd1ff38c1989e02dc",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-application-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:5018f06c42442fa004f7d726669f500ac171193008959415bb1f101b94106dc9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-channel-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:bb27d3e78b9caea894a24d849e972b99308bfb00c8ad7bc979031660910bad4d",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-subscription-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0fa09c7b7e469826f9788e24cffedea3a90a456af78d4a3237fecb99a3ad52a1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ba2a04ce8cd5cc8221049896d4e1a46b4912e6f8213316020b3f40dfdacd7954",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.12::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.13",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:784b6f4a2ea7f405f769903ee8c12998cf7b27112f9fee75039a6c0f4154a998",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.13::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.13",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:bf1433c1b724907496c3ffbe697e1ae3b1c92cdfd1e2836a652eba80c335cb54",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.13::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.13",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:784b6f4a2ea7f405f769903ee8c12998cf7b27112f9fee75039a6c0f4154a998",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.13::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.13",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:bf1433c1b724907496c3ffbe697e1ae3b1c92cdfd1e2836a652eba80c335cb54",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.13::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:05847c2e995e681bdcc3f809e76f512767f40ac4498c14fad4afb4cae83f33d1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:55dd4696828ab8a7546481b8124406d858b9a43563e14599d06f5e5b1ac030f5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicloud-integrations-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:7bff1645296326504b40e17540b4b4c2e5aa86147799b61d1bda5757305d3683",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-application-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:3521a37cfcc56e8766e5c0dca7c90d6a3f2cd11441b5cf3be6ce1b76b9f8831f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-channel-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:9dc8efe7f5e8e7b1ccacdd9e2feddf4fb90432e61f8fa9f7229e320ab0ee800d",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhacm2/multicluster-operators-subscription-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2f4d26918cf42cad318cc95935e4637e3912ef4454e91fa0e8f1d42dc185e8b6",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:acm:2.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b4568ee6f890f98c1ac67b7115931a0f16bb1d69f3863ce554efddf64ce7b765",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-cli-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:13b0299a3e045cc02e6d864398e3676b1dc038504fab8993a92b8b8fdff252c6",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-core-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1a8aa05a3f37eff50915cdec070605872f17f86463285dcae212ab4094816452",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:13454f2f70870d6765f740f36582cdf8139c9ed4c0c38e5f8981eea1374771ad",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0a0e70953d2217d929b55a7a7a4c1e49c7e5f6b196b693312c252bfec2dc3843",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:5bb9afd3185ec19f4957fbe3d195414c02c8e0bd94d6e016525df326bc40c1e6",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-metrics-exporter-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d3850e64b6707d4fa8c87efd652e4b06ee122c58fe43040b371295626f7d3784",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:00cb6923e961942f4beabe19a6ad142dbff62929996728c664a1995fc76fcf8a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0d8ff43ca27a8ca5017fc136f9708c743043b72479bced7ce7a91c1057d92339",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cosi-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d5d4cb5b5bb90f9ed33bd7007eb597d9757455fd06a2d541b7888994436966a2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f011d15924cc17887a92b01285d253add0b738c1551ee6c9efef88e123e607ef",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:7a22735b61f1ac887f6d08a4af1bf55f18feddf520da107d0de5df6740ae5c3c",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:cbe22e7e520838a025ac828af32fc68bb3194335c8c06751ed938d4ce7352391",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0fda299fc4af5af2365f1bc7b2155e6a109196218443a03e65eb1b117cbdeeae",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-must-gather-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b637addd2433a802522b7d3fdb48edde41a42192ba467cad24df7fa09d9df16d",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c790126755b9d5f81438217a6856ca43157ea08a2d53e106f130501ebc51c893",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odr-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ef73b23ba0c7a14113ad6e97159d645827c761c65ab20e9f9fd39fe6f62a9d0d",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/rook-ceph-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:af9ace02b420dcd45afcf3f137e87acf86bb390c0c99b3ca7812d2a3c4439ef1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:78175febe7b181ade5054857d20b097797663c72cb17cbae4203958e8a351329",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-core-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8ed89037982928b39705d3554f51012c537bef9994e2895511a8a356d735fb2a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8b739d8102a7af6efbf3435d44efd5d00798782109c106d91aeef9f5d766db2b",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d53c5343851957d291397d11fb14f4b52a1b0e5dbd9a305a3eaf66c45e9b6228",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:e180ab9a046e9a14f8c537d387879a96c5013aa784221eb976b0b08fb9e1f7f8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-metrics-exporter-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d79168a44c5789d77d249f5ec981d36345cfbd834ee6cef2de0eb8d90e8bf308",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2afaf7feceda2596f257888a5cc5dd19293252da973d4988e00a21c50aa601c4",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cli-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b5be57abafaafc06cff6e269d29d87219427c45df48715378ea4a11174ee0775",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:02e2e6d8f4037d66a951af24d72a02cb1e41bce6a5c1f184fc6797c49f60fc75",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cosi-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:22c95138c3ca3d086227da3181548a73e86eb244670e0f6acf8ed9011883fdb2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:38cb8bd22d70d3bce535843ff70bc7b80dcea847ed1debab7e9f3ffe34eb6e81",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:4e8b2ecb4e17c95e6ff584a05f1d0563285aeb5c1a84bf99faddfa408da1a1f0",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:27b15f29e01661f7b6857e5da669d4b81f9f1cbcd97e186603552455d82d3152",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:6dd2a862134375a110375e9a217e93703c3ffb65e6cbe5a7f1b31e2f89d14334",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-must-gather-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:60b09475094e6491e12869dfbf54b878c0d4f2333b7f1c71448c2f878b6918c0",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c26a1f8a23a349877e322bdf3f114c508a1f4d425c490e23daeeaa025cbd5c40",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odr-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0db4c6508d18e6a8ad4197c666fe01ac772ad4e04f2a7f739aadf7168816e817",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/rook-ceph-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:fdf600ba18bcca35643aed1008c3b9084113c003994e347b38beb18413dc5cac",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:28f2860ac1920009eda82fadd3bd134aa53e410974f257b2d700dd57a5ce55c8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-core-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f1c8c40ee99ee53c66bba5a4d81c87f1396097316f31dec48a1646701f41f232",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8c9693993390434902aef2af7beb58823b8646dad7f3ac317ec7e7faafde9767",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:e6fb7a9352e05748be5085eb685af6ecd4ac6c466fac27f6391b1e801f79c7c8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c2f92235f218700f0d19cda4ae7e2d58689f82f4d31e1e97aa446ae6658a7c64",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-metrics-exporter-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b5841b2cd71832edfd9920412c8cc857a2c2e8beef7822a544c5cf418499a9ce",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:81406e5a67aa735204cbb02891f9074ce834e13d9c0225d2ee679dd49e3f3d73",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cli-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ca1b1124a86dc099788fba8296fcfa2c2398f1e23ff70f0192a71dc14ec20124",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:51e41acedaa776080b4f8a297d13d4f609839b834d929f4312a2c70afdb68329",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cosi-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:4203be47980aac5ac4f0df5cf1452684b65efb0c3b99fba663e215b9d4ee45ba",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:271c19cfd3fa7295781909453024996f81d21cab5d875a8ce04c04e14ec78fb4",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:0e4f342bb1f967db85cd40ab3318966bbf011629276cc946c11cab721e091f4b",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2e5849819b5220b3b7c2185a1fe85b6d02151bc44aa5e582f7f0090d77cbb591",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:6ddcc11d8dccc02a79c55d157326c715c160a53382e5d74fa3329e55d58fdbfd",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-must-gather-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1985673ff4c5b1df5b030031b2537af107134ecbe51087474f0b8ae7c3aa3c90",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b0b7b38bcb61288eaf3a7f7339ed0b2f4dbbf463f71ee6f64400dbecbf995d31",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odr-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:04037c00520f7f909565b6461455f0878a54d9f879b328708872c7f03bd24175",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/rook-ceph-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:875e86d19b02583156eb12fc726b5089a377403088389997383c0c986e3b2fc1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:fa22abd3771012d249add9357a05ac7adb6d41783f09fb0920cbc340a3134739",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:12bd5b3aec0dbd7bd29e10956eae9986ab95591918e4331ef495ba9480e13338",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-core-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2a9ecf79a8209fb80fc189c2a05b68ebb3874dd2e1c404361f3b26533188e6a1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c0a8b08176be1737fb15f9e68444b7fe56678071518253ed3ad82c9f9c0bb8d5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:166573d2a6d90fe041bccb6ccb867e487131fce54ddf6e52bfaf79859bcd9cb7",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b2ec7b94fa8e3e95fbe9195f0ae886d85fa6edc592949b6d28eb67e5e5cd1654",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-metrics-exporter-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f408b197483b49725f11757d3adac645353cfdafffff59298aca57bc012a538d",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f7d2d378424b19d0192cf0a9b09a7d17bf0a10a5cb4a74ac60884919b6e2b160",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cli-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:8903e0bced0e11a54fcba807bda0e5e4a4ca3072c62b3e1a8262df657e5de955",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d8ed86cee00a93e3d4a313f2a2ff9ffa0523552596acfcd3ff3d8f80ae1cd8e5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cosi-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1feecf8d8b8d2cbc52990a41805d80b8681763b1e3f8302b2d1e210582b8f6cf",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d631debe5d2d966111f3c2e84f06fc443110c6fb32e1b9a45e79a8466fa7603f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:198b75c63870db6f31e6e9e9b2d6c90ab2a8739ffd5d2d4db24a22ebdadc3fc7",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:63b810beca8b6ccc35d1a80c6f0c42d3b50adea67c25ab352f6514fb5d1461cb",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:6812730c7d8139d2c212088c4f0ad0740f39cc5a56a449a008aef2fb58c15f0e",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-must-gather-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2d44d2a7b7524c431ff8176599bb1b72a682c0911e026fb086e4aeabc3bd1e8f",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:5312aad7dc29bd8be36a7a831d418ee55b10059a85431a8e9af29f6f502d632d",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odr-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:9ce5157811f6d08cd803b1daad2b4d30cb1bf334a044b4676186321c322957f9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/rook-ceph-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:a319b25a6d5deef4d0a0f365734d6be96fdd863962e36b306e9946521aec724c",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1ff67f3ff46b59b86c2f29596008440da7da8d594005881c65d6d4ab645aefc6",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/cephcsi-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:5ee6284d6354e4e55f1ee7eb5a79b833aae6e31bf42bf185c4192e5d373f06e7",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-core-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:e0d3839cbb1734c0e224e0c076c7c8b4d0e0888e31989b8a6a611418ea2c72bc",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/mcg-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:00bdcca61bc8765fbbc838deeb86392ce25c72f0170241c270484ec9b77bd263",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:49f1e7092bdd19f318580b3d4dfc37dbec8435f814b7d1b863ed34a6ba6157ee",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-client-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f588f9517ac72fb92989f929ad6e643440f709cb4d311974d0e201bfd6b17958",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-metrics-exporter-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:ecc54bc4e8be6f3bfade15c23827e84445acc12c63b4e133cee73e57ac5a42aa",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/ocs-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2abd2d479416e66c6f85e4e883d5e4987bc38f476f907766374784107b89de9a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cli-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:c786effa06598ecb80690644d1c9075588e123ad200db05686568a80a1feeb56",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b14c3a7c4cc6531ed0d9701fe1b07ddc8c85e702ef8b058f0eaaadb1e8852a04",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-cosi-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:173a4998c70c4c8ff9d0d4f90fb48e8e3d3f8fbc4deeb4f742cbaa38dda61215",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:b2fbb75c7054d13ff54575b398d6d70b5f0348c9777fcb88611b95c0dc18db4e",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-csi-addons-sidecar-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:95172347459900115fd67d22daa025b8545a9ee9ec05d1098f9196710c720d76",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-console-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:7c5b233911109f0a218b634d8d317229a3949b2ea5936b7ec91ebfcdd6f15060",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-multicluster-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:d72bc2058e6fe68d79add2423d6ec95baf531f4d3e6a542f6e9d9a07f52bd9c9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-must-gather-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:9164cc380719f38594bfef8cd590c16c53b066809ceecfc04ebef36355f42ce9",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odf-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:1d10099e7b5e3a3c4444569f6af365f90494c71b758aad1dad53f5aecf788ca5",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/odr-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:2987990bc63fa58ced038084921bdf168a017bd0b94b296a7c79dc264388339a",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Openshift Data Foundation 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "odf4/rook-ceph-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "sha256:f0fc8196ffce6f355f06c0157a38e36109eaa9be1f3e91ad71fdd72bc33ee509",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_data_foundation:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/addon-manager-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/clusterlifecycle-state-metrics-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/discovery-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/hypershift-addon-rhel8-operator",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/hypershift-addon-rhel9-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/managedcluster-import-controller-rhel8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/placement-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/registration-operator-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/registration-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Engine for Kubernetes",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-engine/work-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_engine"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-agent-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-manager-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Multicluster Global Hub",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "multicluster-globalhub/multicluster-globalhub-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:multicluster_globalhub"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/acm-cluster-permission-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/acm-governance-policy-framework-addon-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/cert-policy-controller-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/cluster-backup-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/config-policy-controller-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/endpoint-monitoring-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/governance-policy-propagator-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/grafana-dashboard-loader-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/iam-policy-controller-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/klusterlet-addon-controller-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/metrics-collector-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicloud-integrations-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-observability-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-application-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/multicluster-operators-channel-rhel8",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/rbac-query-proxy-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Management for Kubernetes 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhacm2/search-collector-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:acm:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Advanced Cluster Security 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "advanced-cluster-security/rhacs-rhel8-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:advanced_cluster_security:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat build of Apicurio Registry 2",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "apicurio/apicurio-registry-rhel8-operator",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/a:redhat:service_registry:2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat build of Apicurio Registry 3",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "apicurio/apicurio-registry-rhel8-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:apicurio_registry:3"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "fuse7/fuse-apicurito-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "compliance/openshift-compliance-rhel8-operator",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/cnf-tests-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/cnf-tests-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/lifecycle-agent-operator-bundle",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/topology-aware-lifecycle-manager-operator-bundle",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift4/ztp-site-generate-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/cluster-network-addons-operator-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-cleanup-vm",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-cleanup-vm-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-create-datavolume-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-disk-virt-customize-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-wait-for-vmi-status",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Virtualization 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-native-virtualization/kubevirt-tekton-tasks-wait-for-vmi-status-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Web Terminal",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "web-terminal/web-terminal-exec-rhel9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:webterminal:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Web Terminal",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "web-terminal/web-terminal-rhel9-operator",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:webterminal:1"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHEA-2025:23406",
+            "name": "RHEA-2025:23406",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHEA-2025:23478",
+            "name": "RHEA-2025:23478",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHEA-2026:0129",
+            "name": "RHEA-2026:0129",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19332",
+            "name": "RHSA-2025:19332",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19335",
+            "name": "RHSA-2025:19335",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19958",
+            "name": "RHSA-2025:19958",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:19961",
+            "name": "RHSA-2025:19961",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:21368",
+            "name": "RHSA-2025:21368",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:21885",
+            "name": "RHSA-2025:21885",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:22415",
+            "name": "RHSA-2025:22415",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:22416",
+            "name": "RHSA-2025:22416",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:22418",
+            "name": "RHSA-2025:22418",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:22420",
+            "name": "RHSA-2025:22420",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:22683",
+            "name": "RHSA-2025:22683",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:22684",
+            "name": "RHSA-2025:22684",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:23528",
+            "name": "RHSA-2025:23528",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:23529",
+            "name": "RHSA-2025:23529",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2025:23542",
+            "name": "RHSA-2025:23542",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:0627",
+            "name": "RHSA-2026:0627",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:0718",
+            "name": "RHSA-2026:0718",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:0722",
+            "name": "RHSA-2026:0722",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:0737",
+            "name": "RHSA-2026:0737",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2025-7195",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2376300",
+            "name": "RHBZ#2376300",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2025-08-07T18:59:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-276",
+                "description": "Incorrect Default Permissions",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-276: Incorrect Default Permissions",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "In Red Hat OpenShift Container Platform, the following default configurations reduce the impact of this vulnerability.\n\nSecurity Context Constraints (SCCs): The default SCC, Restricted-v2, applies several crucial security settings to containers. \n\nCapabilities: drop: ALL removes all Linux capabilities, including SETUID and SETGID. This prevents a process from changing its user or group ID, a common step in privilege escalation attacks. The SETUID and SETGID capabilities can also be dropped explicitly if other capabilities are still required.\n\nallowPrivilegeEscalation: false ensures that a process cannot gain more privileges than its parent process. This blocks attempts by a compromised container process to grant itself additional capabilities.\n\nSELinux Mandatory Access Control (MAC): Pods are required to run with a pre-allocated Multi-Category Security (MCS) label. This SELinux feature provides a strong layer of isolation between containers and from the host system. A properly configured SELinux policy can prevent a container escape, even if an attacker gains elevated permissions within the container itself.\n\nFilesystem Hardening: While not a default setting, a common security practice is to set readOnlyRootFilesystem: true in a container's security context. In this specific scenario, this configuration would prevent an attacker from modifying critical files like /etc/passwd, even if they managed to gain file-level write permissions."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2025-07-04T08:54:01.878000+00:00",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2025-08-07T18:59:00+00:00",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank Antony Di Scala, James Force, and Michael Whale for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-01-19T01:36:19.528Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        }
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-08-07T19:23:11.314765Z",
+                  "id": "CVE-2025-7195",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-08-07T19:36:47.691Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-1132",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-01-18T07:13:50.269Z",
+      "datePublished": "2026-01-19T01:32:06.215Z",
+      "dateUpdated": "2026-01-19T01:32:06.215Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-01-19T01:32:06.215Z"
+        },
+        "title": "Yonyou KSOA HTTP GET Parameter edit_folder.jsp sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Yonyou",
+            "product": "KSOA",
+            "versions": [
+              {
+                "version": "9.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "HTTP GET Parameter Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in Yonyou KSOA 9.0. The affected element is an unknown function of the file /kmf/edit_folder.jsp of the component HTTP GET Parameter Handler. Performing a manipulation of the argument folderid results in sql injection. The attack can be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-18T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-01-18T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-01-18T08:19:10.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LX-66-LX (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.341722",
+            "name": "VDB-341722 | Yonyou KSOA HTTP GET Parameter edit_folder.jsp sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.341722",
+            "name": "VDB-341722 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.734568",
+            "name": "Submit #734568 | Yonyou KSOA v9.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/LX-66-LX/cve/issues/15",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
