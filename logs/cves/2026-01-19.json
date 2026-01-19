@@ -5136,3 +5136,524 @@
     }
   }
 ]
+[Mon Jan 19 06:47:06 UTC 2026] Latest CVEs:
+[
+  {
+    "modified": "2026-01-19T06:27:16Z",
+    "published": "2025-09-16T04:42:33Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2025-47214",
+    "aliases": [
+      "GHSA-89rc-r8hx-7wrp"
+    ],
+    "summary": "Malicious code in updox (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: ghsa-malware (6dd4f7a8300a1eb6ed1be834e8cbec76f95c8eb7325192124ad7379896c9a0b0)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n\n## Source: ossf-package-analysis (a87020f6a4aed44d59ba8a26ececf43e48cea644b9cb1a9d1a724b707fb86549)\nThe OpenSSF Package Analysis project identified 'updox' @ 99.0.0 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "updox"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "99.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-89rc-r8hx-7wrp"
+      }
+    ],
+    "credits": [
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "a87020f6a4aed44d59ba8a26ececf43e48cea644b9cb1a9d1a724b707fb86549",
+          "import_time": "2025-09-16T05:06:51.091425535Z",
+          "modified_time": "2025-09-16T04:42:33Z",
+          "versions": [
+            "99.0.0"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "6dd4f7a8300a1eb6ed1be834e8cbec76f95c8eb7325192124ad7379896c9a0b0",
+          "import_time": "2026-01-19T06:25:36.911054648Z",
+          "id": "GHSA-89rc-r8hx-7wrp",
+          "modified_time": "2026-01-19T05:24:56Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-01-19T06:27:15Z",
+    "published": "2026-01-16T00:10:24Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-311",
+    "aliases": [
+      "GHSA-rcjf-9p8h-7q5w"
+    ],
+    "summary": "Malicious code in sparkling-router (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (22829b6f6507a82b0a8acae51ea2b4cc5034afde231740f3eaede5e0af3a0fac)\nThe package sparkling-router was found to contain malicious code.\n\n## Source: ghsa-malware (6e84c7e51a68544e8af8935aa539926a2bc3d269e42c78c99a3765e76c54770f)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "sparkling-router"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-rcjf-9p8h-7q5w"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "actran@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "amazon-inspector",
+          "sha256": "22829b6f6507a82b0a8acae51ea2b4cc5034afde231740f3eaede5e0af3a0fac",
+          "import_time": "2026-01-16T00:28:52.050519394Z",
+          "modified_time": "2026-01-16T00:10:24Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "6e84c7e51a68544e8af8935aa539926a2bc3d269e42c78c99a3765e76c54770f",
+          "import_time": "2026-01-19T06:25:36.91755644Z",
+          "id": "GHSA-rcjf-9p8h-7q5w",
+          "modified_time": "2026-01-19T05:24:56Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-01-19T06:27:13Z",
+    "published": "2026-01-17T07:00:15Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-327",
+    "aliases": [
+      "GHSA-w856-vp94-4mqj"
+    ],
+    "summary": "Malicious code in mapkit-example-vanillajs (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: ghsa-malware (e4444c4384bc61fe285647ae3fa5fa1ae0e79116dceff54c86b9cc589fd31ffe)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n\n## Source: ossf-package-analysis (03576999871a27b531ba136d78dbaeaec56a63cfd7abc1616d5437dea4a5286d)\nThe OpenSSF Package Analysis project identified 'mapkit-example-vanillajs' @ 1.3.0 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package executes one or more commands associated with malicious behavior.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mapkit-example-vanillajs"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.3.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-w856-vp94-4mqj"
+      }
+    ],
+    "credits": [
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "03576999871a27b531ba136d78dbaeaec56a63cfd7abc1616d5437dea4a5286d",
+          "import_time": "2026-01-19T00:29:30.166859661Z",
+          "modified_time": "2026-01-17T07:00:15Z",
+          "versions": [
+            "1.3.0"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "e4444c4384bc61fe285647ae3fa5fa1ae0e79116dceff54c86b9cc589fd31ffe",
+          "import_time": "2026-01-19T06:25:36.919606964Z",
+          "id": "GHSA-w856-vp94-4mqj",
+          "modified_time": "2026-01-19T05:24:57Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-01-19T06:27:11Z",
+    "published": "2026-01-11T03:44:11Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-190",
+    "aliases": [
+      "GHSA-wjx6-w662-h65v"
+    ],
+    "summary": "Malicious code in conmiyagi-map (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (c2e125bb096a79fe5c600e1826a5926312c29943a9f33edb1f2efbb0e0416203)\nThe package conmiyagi-map was found to contain malicious code.\n\n## Source: ghsa-malware (fc52bddaac2d657d1e598f3b111f1195c1841882824da63324fac949f6f341ab)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n\n## Source: ossf-package-analysis (c8f5de6d3e2bef38a4fe380906eec23e42ccc849900e74efb21812bbb3afc5ec)\nThe OpenSSF Package Analysis project identified 'conmiyagi-map' @ 0.0.1 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "conmiyagi-map"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-wjx6-w662-h65v"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "actran@amazon.com"
+        ]
+      },
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "ossf-package-analysis",
+          "sha256": "c8f5de6d3e2bef38a4fe380906eec23e42ccc849900e74efb21812bbb3afc5ec",
+          "import_time": "2026-01-11T04:25:19.530053332Z",
+          "modified_time": "2026-01-11T03:44:11Z",
+          "versions": [
+            "0.0.1"
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "c2e125bb096a79fe5c600e1826a5926312c29943a9f33edb1f2efbb0e0416203",
+          "import_time": "2026-01-15T22:07:41.383725596Z",
+          "modified_time": "2026-01-15T21:43:07Z",
+          "versions": [
+            "0.0.1"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "fc52bddaac2d657d1e598f3b111f1195c1841882824da63324fac949f6f341ab",
+          "import_time": "2026-01-19T06:25:36.920472584Z",
+          "id": "GHSA-wjx6-w662-h65v",
+          "modified_time": "2026-01-19T05:24:56Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-1140",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-01-18T07:29:57.238Z",
+      "datePublished": "2026-01-19T05:32:05.853Z",
+      "dateUpdated": "2026-01-19T05:32:05.853Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-01-19T05:32:05.853Z"
+        },
+        "title": "UTT 进取 520W ConfigExceptAli strcpy buffer overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-120",
+                "lang": "en",
+                "description": "Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "UTT",
+            "product": "进取 520W",
+            "versions": [
+              {
+                "version": "1.7.7-180627",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in UTT 进取 520W 1.7.7-180627. This issue affects the function strcpy of the file /goform/ConfigExceptAli. The manipulation results in buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-01-18T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-01-18T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-01-18T08:35:06.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "cymiao (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.341731",
+            "name": "VDB-341731 | UTT 进取 520W ConfigExceptAli strcpy buffer overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.341731",
+            "name": "VDB-341731 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.735300",
+            "name": "Submit #735300 | UTT 进取 520W v3v1.7.7-180627 Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cymiao1978/cve/blob/main/new/35.md",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
