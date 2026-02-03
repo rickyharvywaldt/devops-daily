@@ -11522,3 +11522,607 @@
     }
   }
 ]
+[Tue Feb  3 13:12:33 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21227",
+      "assignerOrgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+      "state": "PUBLISHED",
+      "assignerShortName": "microsoft",
+      "dateReserved": "2025-12-11T21:02:05.732Z",
+      "datePublished": "2026-01-22T22:47:37.562Z",
+      "dateUpdated": "2026-01-30T03:40:05.517Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Azure Logic Apps Elevation of Privilege Vulnerability",
+        "datePublic": "2026-01-22T08:00:00.000Z",
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_logic_apps:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "-"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Microsoft",
+            "product": "Azure Logic Apps",
+            "versions": [
+              {
+                "version": "-",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Improper limitation of a pathname to a restricted directory ('path traversal') in Azure Logic Apps allows an unauthorized attacker to elevate privileges over a network.",
+            "lang": "en-US"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "lang": "en-US",
+                "type": "CWE",
+                "cweId": "CWE-22"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+          "shortName": "microsoft",
+          "dateUpdated": "2026-01-30T03:40:05.517Z"
+        },
+        "references": [
+          {
+            "name": "Azure Logic Apps Elevation of Privilege Vulnerability",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21227"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N/E:U/RL:O/RC:C"
+            }
+          }
+        ],
+        "tags": [
+          "exclusively-hosted-service"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-21227"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-23T20:08:10.503780Z",
+                  "id": "CVE-2026-21227",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-23T20:08:20.644Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-21524",
+      "assignerOrgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+      "state": "PUBLISHED",
+      "assignerShortName": "microsoft",
+      "dateReserved": "2025-12-30T18:10:54.846Z",
+      "datePublished": "2026-01-22T22:47:35.505Z",
+      "dateUpdated": "2026-01-30T03:40:03.824Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Azure Data Explorer Information Disclosure Vulnerability",
+        "datePublic": "2026-01-22T08:00:00.000Z",
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_data_explorer:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "-"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Microsoft",
+            "product": "Azure Data Explorer",
+            "versions": [
+              {
+                "version": "-",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Exposure of sensitive information to an unauthorized actor in Azure Data Explorer allows an unauthorized attacker to disclose information over a network.",
+            "lang": "en-US"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+                "lang": "en-US",
+                "type": "CWE",
+                "cweId": "CWE-200"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+          "shortName": "microsoft",
+          "dateUpdated": "2026-01-30T03:40:03.824Z"
+        },
+        "references": [
+          {
+            "name": "Azure Data Explorer Information Disclosure Vulnerability",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21524"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N/E:P/RL:O/RC:C"
+            }
+          }
+        ],
+        "tags": [
+          "exclusively-hosted-service"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-21524"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-23T20:07:40.157571Z",
+                  "id": "CVE-2026-21524",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-23T20:07:51.256Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-24305",
+      "assignerOrgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+      "state": "PUBLISHED",
+      "assignerShortName": "microsoft",
+      "dateReserved": "2026-01-21T21:28:02.969Z",
+      "datePublished": "2026-01-22T22:47:36.181Z",
+      "dateUpdated": "2026-01-30T03:40:04.365Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Azure Entra ID Elevation of Privilege Vulnerability",
+        "datePublic": "2026-01-22T08:00:00.000Z",
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:microsoft_entra_id:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "-"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Microsoft",
+            "product": "Microsoft Entra",
+            "versions": [
+              {
+                "version": "-",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Azure Entra ID Elevation of Privilege Vulnerability",
+            "lang": "en-US"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-285: Improper Authorization",
+                "lang": "en-US",
+                "type": "CWE",
+                "cweId": "CWE-285"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+          "shortName": "microsoft",
+          "dateUpdated": "2026-01-30T03:40:04.365Z"
+        },
+        "references": [
+          {
+            "name": "Azure Entra ID Elevation of Privilege Vulnerability",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ],
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24305"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N/E:U/RL:O/RC:C"
+            }
+          }
+        ],
+        "tags": [
+          "exclusively-hosted-service"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-24305"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-23T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-24305"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-24T04:55:13.440Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-7760",
+      "assignerOrgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+      "state": "PUBLISHED",
+      "assignerShortName": "TR-CERT",
+      "dateReserved": "2025-07-17T13:37:17.357Z",
+      "datePublished": "2026-02-03T12:33:23.735Z",
+      "dateUpdated": "2026-02-03T12:33:23.735Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Association Web Package Flora",
+            "vendor": "Ofisimo Web-Based Software Technologies",
+            "versions": [
+              {
+                "lessThanOrEqual": "03022026",
+                "status": "affected",
+                "version": "v3.0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Çetin BİNİCİ"
+          }
+        ],
+        "datePublic": "2026-02-03T12:30:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Ofisimo Web-Based Software Technologies Association Web Package Flora allows XSS Through HTTP Headers.<p>This issue affects Association Web Package Flora: from v3.0 through 03022026.&nbsp;NOTE: The vendor was contacted early about this disclosure but did not respond in any way.\n\n</p>"
+              }
+            ],
+            "value": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Ofisimo Web-Based Software Technologies Association Web Package Flora allows XSS Through HTTP Headers.This issue affects Association Web Package Flora: from v3.0 through 03022026. NOTE: The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-86",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-86 XSS Through HTTP Headers"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.6,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+          "shortName": "TR-CERT",
+          "dateUpdated": "2026-02-03T12:33:23.735Z"
+        },
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-26-0015"
+          }
+        ],
+        "source": {
+          "advisory": "TR-26-0015",
+          "defect": [
+            "TR-26-0015"
+          ],
+          "discovery": "UNKNOWN"
+        },
+        "title": "Reflected XSS in Ofisimo's Association Web Package Flora",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-7760"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-vwhw-vp9v-q9c9",
+    "modified": "2026-02-03T12:30:29Z",
+    "published": "2026-02-03T12:30:29Z",
+    "aliases": [
+      "CVE-2025-67855"
+    ],
+    "details": "A flaw was found in mooodle. A remote attacker could exploit a reflected Cross-Site Scripting (XSS) vulnerability in the policy tool return URL. This vulnerability arises from insufficient sanitization of URL parameters, allowing attackers to inject malicious scripts through specially crafted links. Successful exploitation could lead to information disclosure or arbitrary client-side script execution within the user's browser.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-67855"
+      },
+      {
+        "type": "WEB",
+        "url": "https://access.redhat.com/security/cve/CVE-2025-67855"
+      },
+      {
+        "type": "WEB",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2423861"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-02-03T11:15:55Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-vwhw-vp9v-q9c9"
+          }
+        ]
+      }
+    }
+  }
+]
