@@ -1,0 +1,665 @@
+[Tue Feb 10 19:13:14 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-23740",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-15T15:45:01.958Z",
+      "datePublished": "2026-02-06T16:43:41.330Z",
+      "dateUpdated": "2026-02-06T19:11:55.655Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Asterisk vulnerable to potential privilege escalation",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-427",
+                "lang": "en",
+                "description": "CWE-427: Uncontrolled Search Path Element",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "NONE",
+              "baseScore": 0,
+              "baseSeverity": "NONE",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/asterisk/asterisk/security/advisories/GHSA-xpc6-x892-v83c",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/asterisk/asterisk/security/advisories/GHSA-xpc6-x892-v83c"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "asterisk",
+            "product": "asterisk",
+            "versions": [
+              {
+                "version": "< 23.2.2",
+                "status": "affected"
+              },
+              {
+                "version": "< 22.8.2",
+                "status": "affected"
+              },
+              {
+                "version": "< 21.12.1",
+                "status": "affected"
+              },
+              {
+                "version": "< 20.18.2",
+                "status": "affected"
+              },
+              {
+                "version": "< 20.7-cert9",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-06T16:43:52.278Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Asterisk is an open source private branch exchange and telephony toolkit. Prior to versions 20.7-cert9, 20.18.2, 21.12.1, 22.8.2, and 23.2.2, when ast_coredumper writes its gdb init and output files to a directory that is world-writable (for example /tmp), an attacker with write permission(which is all users on a linux system) to that directory can cause root to execute arbitrary commands or overwrite arbitrary files by controlling the gdb init file and output paths. This issue has been patched in versions 20.7-cert9, 20.18.2, 21.12.1, 22.8.2, and 23.2.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-xpc6-x892-v83c",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-23740"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.8,
+                "attackVector": "LOCAL",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-06T19:11:52.277402Z",
+                  "id": "CVE-2026-23740",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-06T19:11:55.655Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-70963",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-02-06T18:37:19.153Z",
+      "dateReserved": "2026-01-09T00:00:00.000Z",
+      "datePublished": "2026-02-06T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-02-06T17:36:36.846Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gophish <=0.12.1 is vulnerable to Incorrect Access Control. The administrative dashboard exposes each user’s long-lived API key directly inside the rendered HTML/JavaScript of the page on every login. This makes permanent API credentials accessible to any script running in the browser context."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gophish/gophish/issues/9366"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-70963"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-922",
+                  "lang": "en",
+                  "description": "CWE-922 Insecure Storage of Sensitive Information"
+                }
+              ]
+            },
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-200",
+                  "lang": "en",
+                  "description": "CWE-200 Exposure of Sensitive Information to an Unauthorized Actor"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.6,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "LOW",
+                "privilegesRequired": "LOW",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-06T18:36:17.133329Z",
+                  "id": "CVE-2025-70963",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-06T18:37:19.153Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-24670",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-23T20:40:23.387Z",
+      "datePublished": "2026-02-03T16:56:16.652Z",
+      "dateUpdated": "2026-02-04T16:52:43.929Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Open eClass Has Broken Access Control in Course Units Module Allows Students to Create Units",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "CWE-284: Improper Access Control",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/gunet/openeclass/security/advisories/GHSA-4jf5-636r-hv9v",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/gunet/openeclass/security/advisories/GHSA-4jf5-636r-hv9v"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "gunet",
+            "product": "openeclass",
+            "versions": [
+              {
+                "version": "< 4.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-03T16:56:16.652Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Open eClass platform (formerly known as GUnet eClass) is a complete course management system. Prior to version 4.2, a broken access control vulnerability allows authenticated students to create new course units, an action normally restricted to higher-privileged roles. This issue has been patched in version 4.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-4jf5-636r-hv9v",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-24670"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-04T15:46:38.110450Z",
+                  "id": "CVE-2026-24670",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-04T16:52:43.929Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-24671",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-23T20:40:23.387Z",
+      "datePublished": "2026-02-03T16:56:26.219Z",
+      "dateUpdated": "2026-02-04T16:52:35.918Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Open eClass is Vulnerable to Stored Cross-Site Scripting (XSS) in Multiple High-Privilege User Fields",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/gunet/openeclass/security/advisories/GHSA-2x83-4fh2-fcw7",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/gunet/openeclass/security/advisories/GHSA-2x83-4fh2-fcw7"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "gunet",
+            "product": "openeclass",
+            "versions": [
+              {
+                "version": "< 4.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-03T16:56:26.219Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Open eClass platform (formerly known as GUnet eClass) is a complete course management system. Prior to version 4.2, a Stored Cross-Site Scripting (XSS) vulnerability allows authenticated high-privileged users (teachers or administrators) to inject malicious JavaScript into multiple user-controllable input fields across the application, which is executed when other users access affected pages. This issue has been patched in version 4.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-2x83-4fh2-fcw7",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-24671"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-04T15:54:25.062457Z",
+                  "id": "CVE-2026-24671",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-04T16:52:35.918Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-24672",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-01-23T20:40:23.388Z",
+      "datePublished": "2026-02-03T16:56:36.889Z",
+      "dateUpdated": "2026-02-04T16:52:30.735Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Open eClass is Vulnerable to Stored Cross-Site Scripting (XSS) in User Profile Fields",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/gunet/openeclass/security/advisories/GHSA-3p2x-qgxw-qvxh",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/gunet/openeclass/security/advisories/GHSA-3p2x-qgxw-qvxh"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "gunet",
+            "product": "openeclass",
+            "versions": [
+              {
+                "version": "< 4.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-03T16:56:36.889Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Open eClass platform (formerly known as GUnet eClass) is a complete course management system. Prior to version 4.2, a Stored Cross-Site Scripting (XSS) vulnerability allows authenticated students to inject malicious JavaScript into user profile fields, which is executed when users with viewing privileges access affected application pages. This issue has been patched in version 4.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-3p2x-qgxw-qvxh",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-24672"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-04T15:54:23.626017Z",
+                  "id": "CVE-2026-24672",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-04T16:52:30.735Z"
+          }
+        }
+      ]
+    }
+  }
+]
