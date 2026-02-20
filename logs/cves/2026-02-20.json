@@ -1,0 +1,535 @@
+[Fri Feb 20 02:34:07 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26988",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-17T01:41:24.606Z",
+      "datePublished": "2026-02-20T01:17:15.699Z",
+      "dateUpdated": "2026-02-20T01:17:15.699Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "LibreNMS: SQL Injection in ajax_table.php spreads through a covert data stream",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/librenms/librenms/security/advisories/GHSA-h3rv-q4rq-pqcv",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/librenms/librenms/security/advisories/GHSA-h3rv-q4rq-pqcv"
+          },
+          {
+            "name": "https://github.com/librenms/librenms/pull/18777",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/librenms/librenms/pull/18777"
+          },
+          {
+            "name": "https://github.com/librenms/librenms/commit/15429580baba03ed1dd377bada1bde4b7a1175a1",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/librenms/librenms/commit/15429580baba03ed1dd377bada1bde4b7a1175a1"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "librenms",
+            "product": "librenms",
+            "versions": [
+              {
+                "version": "< 26.2.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-20T01:17:15.699Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LibreNMS is an auto-discovering PHP/MySQL/SNMP based network monitoring tool. Versions 25.12.0 and below contain an SQL Injection vulnerability in the ajax_table.php endpoint. The application fails to properly sanitize or parameterize user input when processing IPv6 address searches. Specifically, the address parameter is split into an address and a prefix, and the prefix portion is directly concatenated into the SQL query string without validation. This allows an attacker to inject arbitrary SQL commands, potentially leading to unauthorized data access or database manipulation. This issue has been fixed in version 26.2.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-h3rv-q4rq-pqcv",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26988"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26987",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-17T01:41:24.606Z",
+      "datePublished": "2026-02-20T01:11:13.925Z",
+      "dateUpdated": "2026-02-20T01:11:13.925Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "LibreNMS affected by reflected XSS via email field",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/librenms/librenms/security/advisories/GHSA-gqx7-99jw-6fpr",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/librenms/librenms/security/advisories/GHSA-gqx7-99jw-6fpr"
+          },
+          {
+            "name": "https://github.com/librenms/librenms/pull/19038",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/librenms/librenms/pull/19038"
+          },
+          {
+            "name": "https://github.com/librenms/librenms/commit/8e626b38ef92e240532cdac2ac7e38706a71208b",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/librenms/librenms/commit/8e626b38ef92e240532cdac2ac7e38706a71208b"
+          },
+          {
+            "name": "https://github.com/librenms/librenms/releases/tag/26.2.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/librenms/librenms/releases/tag/26.2.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "librenms",
+            "product": "librenms",
+            "versions": [
+              {
+                "version": "< 26.2.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-20T01:11:13.925Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LibreNMS is an auto-discovering PHP/MySQL/SNMP based network monitoring tool. Versions 25.12.0 and below are vulnerable to  Reflected XSS attacks via email field. This issue has been fixed in version 26.2.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-gqx7-99jw-6fpr",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26987"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26980",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-17T01:41:24.605Z",
+      "datePublished": "2026-02-20T01:00:51.633Z",
+      "dateUpdated": "2026-02-20T01:00:51.633Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Ghost has a SQL Injection in its Content API",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 9.4,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-w52v-v783-gw97",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/TryGhost/Ghost/security/advisories/GHSA-w52v-v783-gw97"
+          },
+          {
+            "name": "https://github.com/TryGhost/Ghost/commit/30868d632b2252b638bc8a4c8ebf73964592ed91",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/TryGhost/Ghost/commit/30868d632b2252b638bc8a4c8ebf73964592ed91"
+          },
+          {
+            "name": "https://github.com/TryGhost/Ghost/releases/tag/v6.19.1",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/TryGhost/Ghost/releases/tag/v6.19.1"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "TryGhost",
+            "product": "Ghost",
+            "versions": [
+              {
+                "version": ">= 3.24.0, < 6.19.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-20T01:00:51.633Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Ghost is a Node.js content management system. Versions 3.24.0 through 6.19.0 allow unauthenticated attackers to perform arbitrary reads from the database. This issue has been fixed in version 6.19.1."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-w52v-v783-gw97",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26980"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26977",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-17T01:41:24.604Z",
+      "datePublished": "2026-02-20T00:56:42.680Z",
+      "dateUpdated": "2026-02-20T00:56:42.680Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Frappe Learning Management System exposes details of unpublished courses to unauthorized users",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-862",
+                "lang": "en",
+                "description": "CWE-862: Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "CWE-284: Improper Access Control",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/frappe/lms/security/advisories/GHSA-26vf-p39q-frx3",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/frappe/lms/security/advisories/GHSA-26vf-p39q-frx3"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "frappe",
+            "product": "lms",
+            "versions": [
+              {
+                "version": "<= 2.44.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-20T00:56:42.680Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Frappe Learning Management System (LMS) is a learning system that helps users structure their content. In versions 2.44.0 and below, unauthorized users are able to access the details of unpublished courses via API endpoints. A fix for this issue is planned for the 2.45.0 release."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-26vf-p39q-frx3",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26977"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26960",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-16T22:20:28.611Z",
+      "datePublished": "2026-02-20T01:07:52.979Z",
+      "dateUpdated": "2026-02-20T01:07:52.979Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "node-tar has Arbitrary File Read/Write via Hardlink Target Escape Through Symlink Chain in Extraction",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/isaacs/node-tar/security/advisories/GHSA-83g3-92jg-28cx",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/isaacs/node-tar/security/advisories/GHSA-83g3-92jg-28cx"
+          },
+          {
+            "name": "https://github.com/isaacs/node-tar/commit/2cb1120bcefe28d7ecc719b41441ade59c52e384",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/isaacs/node-tar/commit/2cb1120bcefe28d7ecc719b41441ade59c52e384"
+          },
+          {
+            "name": "https://github.com/isaacs/node-tar/commit/d18e4e1f846f4ddddc153b0f536a19c050e7499f",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/isaacs/node-tar/commit/d18e4e1f846f4ddddc153b0f536a19c050e7499f"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "isaacs",
+            "product": "node-tar",
+            "versions": [
+              {
+                "version": "< 7.5.8",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-20T01:07:52.979Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "node-tar is a full-featured Tar for Node.js. When using default options in versions 7.5.7 and below, an attacker-controlled archive can create a hardlink inside the extraction directory that points to a file outside the extraction root, enabling arbitrary file read and write as the extracting user. Severity is high because the primitive bypasses path protections and turns archive extraction into a direct filesystem access primitive. This issue has been fixed in version 7.5.8."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-83g3-92jg-28cx",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26960"
+          }
+        ]
+      }
+    }
+  }
+]
