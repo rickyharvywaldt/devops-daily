@@ -1,0 +1,789 @@
+[Mon Feb 23 19:15:00 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0669",
+      "assignerOrgId": "c4f26cc8-17ff-4c99-b5e2-38fc1793eacc",
+      "state": "PUBLISHED",
+      "assignerShortName": "wikimedia-foundation",
+      "dateReserved": "2026-01-07T16:35:00.729Z",
+      "datePublished": "2026-01-07T17:46:57.285Z",
+      "dateUpdated": "2026-01-07T19:21:57.287Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "MediaWiki - CSS extension",
+            "repo": "http://gerrit.wikimedia.org/g/mediawiki/extensions/CSS",
+            "vendor": "Wikimedia Foundation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.44"
+              },
+              {
+                "status": "affected",
+                "version": "1.43"
+              },
+              {
+                "status": "affected",
+                "version": "1.39"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Radman Siddiki"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Wikimedia Foundation MediaWiki - CSS extension allows Path Traversal.<p>This issue affects MediaWiki - CSS extension: 1.44, 1.43, 1.39.</p>"
+              }
+            ],
+            "value": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Wikimedia Foundation MediaWiki - CSS extension allows Path Traversal.This issue affects MediaWiki - CSS extension: 1.44, 1.43, 1.39."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-126",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-126 Path Traversal"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "c4f26cc8-17ff-4c99-b5e2-38fc1793eacc",
+          "shortName": "wikimedia-foundation",
+          "dateUpdated": "2026-01-07T17:46:57.285Z"
+        },
+        "references": [
+          {
+            "url": "https://phabricator.wikimedia.org/T401526"
+          },
+          {
+            "url": "https://gerrit.wikimedia.org/r/q/Ia15bf3f2e5a341868568492a736ac3dbf706c22e"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Path Traversal vulnerability in CSS extension on certain web servers",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-0669"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-07T19:20:56.695860Z",
+                  "id": "CVE-2026-0669",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-07T19:21:57.287Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26313",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-13T16:27:51.807Z",
+      "datePublished": "2026-02-19T21:07:37.943Z",
+      "dateUpdated": "2026-02-20T19:53:54.846Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Go Ethereum affected by DoS via malicious p2p message",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-770",
+                "lang": "en",
+                "description": "CWE-770: Allocation of Resources Without Limits or Throttling",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/ethereum/go-ethereum/security/advisories/GHSA-689v-6xwf-5jf3",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/ethereum/go-ethereum/security/advisories/GHSA-689v-6xwf-5jf3"
+          },
+          {
+            "name": "https://github.com/ethereum/go-ethereum/releases/tag/v1.17.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/ethereum/go-ethereum/releases/tag/v1.17.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ethereum",
+            "product": "go-ethereum",
+            "versions": [
+              {
+                "version": "< 1.17.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-19T21:07:37.943Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "go-ethereum (geth) is a golang execution layer implementation of the Ethereum protocol. Prior to version 1.17.0, an attacker can cause high memory usage by sending a specially-crafted p2p message. The issue is resolved in the v1.17.0 release."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-689v-6xwf-5jf3",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26313"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-20T19:51:54.100199Z",
+                  "id": "CVE-2026-26313",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-20T19:53:54.846Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0670",
+      "assignerOrgId": "c4f26cc8-17ff-4c99-b5e2-38fc1793eacc",
+      "state": "PUBLISHED",
+      "assignerShortName": "wikimedia-foundation",
+      "dateReserved": "2026-01-07T16:35:04.806Z",
+      "datePublished": "2026-01-07T18:55:42.559Z",
+      "dateUpdated": "2026-01-07T19:25:36.796Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "MediaWiki - ProofreadPage Extension",
+            "repo": "https://gerrit.wikimedia.org/g/mediawiki/extensions/ProofreadPage",
+            "vendor": "Wikimedia Foundation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.45"
+              },
+              {
+                "status": "affected",
+                "version": "1.44"
+              },
+              {
+                "status": "affected",
+                "version": "1.43"
+              },
+              {
+                "status": "affected",
+                "version": "1.39"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "SomeRandomDeveloper"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Wikimedia Foundation MediaWiki - ProofreadPage Extension allows Cross-Site Scripting (XSS).<p>This issue affects MediaWiki - ProofreadPage Extension: 1.45, 1.44, 1.43, 1.39.</p>"
+              }
+            ],
+            "value": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Wikimedia Foundation MediaWiki - ProofreadPage Extension allows Cross-Site Scripting (XSS).This issue affects MediaWiki - ProofreadPage Extension: 1.45, 1.44, 1.43, 1.39."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-63",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-63 Cross-Site Scripting (XSS)"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "c4f26cc8-17ff-4c99-b5e2-38fc1793eacc",
+          "shortName": "wikimedia-foundation",
+          "dateUpdated": "2026-01-07T18:55:42.559Z"
+        },
+        "references": [
+          {
+            "url": "https://phabricator.wikimedia.org/T409423"
+          },
+          {
+            "url": "https://gerrit.wikimedia.org/r/q/I7c028db5ed81843aacd596b0ee4dc2980f5b6e3c"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Stored XSS through a system message and a user-provided parameter in ProofreadPage",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-0670"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "CHANGED",
+                "version": "3.1",
+                "baseScore": 6.1,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "integrityImpact": "LOW",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-01-07T19:24:45.370321Z",
+                  "id": "CVE-2026-0670",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-01-07T19:25:36.796Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27512",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-02-19T19:51:07.328Z",
+      "datePublished": "2026-02-23T16:26:20.398Z",
+      "dateUpdated": "2026-02-23T18:37:42.335Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unknown",
+            "product": "Tenda F3",
+            "vendor": "Shenzhen Tenda Technology Co., Ltd.",
+            "versions": [
+              {
+                "lessThanOrEqual": "12.01.01.55_multi",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Kazuma Matsumoto, a security researcher at GMO Cybersecurity by IERAE, Inc."
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Shenzhen Tenda F3 <span style=\"background-color: rgb(255, 255, 255);\">Wireless Router</span>&nbsp;firmware V12.01.01.55_multi contains a content-type confusion vulnerability in the administrative interface. Responses omit the X-Content-Type-Options: nosniff header and include attacker-influenced content that can be reflected into the response body. Under affected browser behaviors, MIME sniffing may cause the response to be interpreted as active HTML, enabling script execution in the context of the administrative interface."
+              }
+            ],
+            "value": "Shenzhen Tenda F3 Wireless Router firmware V12.01.01.55_multi contains a content-type confusion vulnerability in the administrative interface. Responses omit the X-Content-Type-Options: nosniff header and include attacker-influenced content that can be reflected into the response body. Under affected browser behaviors, MIME sniffing may cause the response to be interpreted as active HTML, enabling script execution in the context of the administrative interface."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-116",
+                "description": "CWE-116 Improper Encoding or Escaping of Output",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-02-23T16:26:20.398Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "product"
+            ],
+            "url": "https://www.tendacn.com/product/F3"
+          },
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/tenda-f3-reflected-script-execution-via-missing-nosniff-header"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Tenda F3 Reflected Script Execution via Missing nosniff Header",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27512"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-23T18:37:29.301396Z",
+                  "id": "CVE-2026-27512",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-23T18:37:42.335Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-70833",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-02-23T18:36:57.535Z",
+      "dateReserved": "2026-01-09T00:00:00.000Z",
+      "datePublished": "2026-02-20T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-02-20T15:57:26.686Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An Authentication Bypass vulnerability in Smanga 3.2.7 allows an unauthenticated attacker to reset the password of any user (including the administrator) and fully takeover the account by manipulating POST parameters. The issue stems from insecure permission validation in check-power.php."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/LX-66-LX/cve/issues/4"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-70833"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-287",
+                  "lang": "en",
+                  "description": "CWE-287 Improper Authentication"
+                }
+              ]
+            },
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-639",
+                  "lang": "en",
+                  "description": "CWE-639 Authorization Bypass Through User-Controlled Key"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 9.4,
+                "attackVector": "NETWORK",
+                "baseSeverity": "CRITICAL",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "LOW",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-23T18:34:46.706281Z",
+                  "id": "CVE-2025-70833",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-23T18:36:57.535Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  }
+]
