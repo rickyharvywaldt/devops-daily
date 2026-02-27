@@ -690,3 +690,695 @@
     }
   }
 ]
+[Fri Feb 27 02:32:41 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3273",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-26T15:16:31.377Z",
+      "datePublished": "2026-02-27T00:32:09.615Z",
+      "dateUpdated": "2026-02-27T00:32:09.615Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-02-27T00:32:09.615Z"
+        },
+        "title": "Tenda F453 httpd AdvSetWrlsafeset formWrlsafeset buffer overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-120",
+                "lang": "en",
+                "description": "Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Tenda",
+            "product": "F453",
+            "versions": [
+              {
+                "version": "1.0.0.3",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:tenda:f453_firmware:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "httpd"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was identified in Tenda F453 1.0.0.3. Affected by this vulnerability is the function formWrlsafeset of the file /goform/AdvSetWrlsafeset of the component httpd. Such manipulation of the argument mit_ssid_index leads to buffer overflow. The attack can be executed remotely. The exploit is publicly available and might be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-26T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-26T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-26T16:21:45.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LtzHust (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.347997",
+            "name": "VDB-347997 | Tenda F453 httpd AdvSetWrlsafeset formWrlsafeset buffer overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.347997",
+            "name": "VDB-347997 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.759606",
+            "name": "Submit #759606 | Tenda F453 v1.0.0.3 Buffer Access Using Size of Source Buffer",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Litengzheng/vul_db/blob/main/F453/vul_73/README.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.tenda.com.cn/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3273"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27647",
+      "assignerOrgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+      "state": "PUBLISHED",
+      "assignerShortName": "icscert",
+      "dateReserved": "2026-02-24T00:35:18.446Z",
+      "datePublished": "2026-02-27T00:23:50.315Z",
+      "dateUpdated": "2026-02-27T00:23:50.315Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "mobility46.se",
+            "vendor": "Mobility46",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Khaled Sarieddine and Mohammad Ali Sayed reported this vulnerability to CISA."
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The WebSocket backend uses charging station identifiers to uniquely \nassociate sessions but allows multiple endpoints to connect using the \nsame session identifier. This implementation results in predictable \nsession identifiers and enables session hijacking or shadowing, where \nthe most recent connection displaces the legitimate charging station and\n receives backend commands intended for that station. This vulnerability\n may allow unauthorized users to authenticate as other users or enable a\n malicious actor to cause a denial-of-service condition by overwhelming \nthe backend with valid session requests."
+              }
+            ],
+            "value": "The WebSocket backend uses charging station identifiers to uniquely \nassociate sessions but allows multiple endpoints to connect using the \nsame session identifier. This implementation results in predictable \nsession identifiers and enables session hijacking or shadowing, where \nthe most recent connection displaces the legitimate charging station and\n receives backend commands intended for that station. This vulnerability\n may allow unauthorized users to authenticate as other users or enable a\n malicious actor to cause a denial-of-service condition by overwhelming \nthe backend with valid session requests."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-613",
+                "description": "CWE-613",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+          "shortName": "icscert",
+          "dateUpdated": "2026-02-27T00:23:50.315Z"
+        },
+        "references": [
+          {
+            "url": "https://www.mobility46.se/en/contact-us"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-08"
+          },
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-08.json"
+          }
+        ],
+        "source": {
+          "advisory": "ICSA-26-057-08",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Mobility46 mobility46.se Insufficient Session Expiration",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Mobility46 did not respond to CISA's request for coordination. Contact \nMobility46 using their contact page here: \n<a target=\"_blank\" rel=\"nofollow\" href=\"https://www.mobility46.se/en/contact-us\">https://www.mobility46.se/en/contact-us</a> for more information.\n\n<br>"
+              }
+            ],
+            "value": "Mobility46 did not respond to CISA's request for coordination. Contact \nMobility46 using their contact page here: \n https://www.mobility46.se/en/contact-us  for more information."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27647"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27028",
+      "assignerOrgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+      "state": "PUBLISHED",
+      "assignerShortName": "icscert",
+      "dateReserved": "2026-02-24T00:35:18.464Z",
+      "datePublished": "2026-02-27T00:20:52.288Z",
+      "dateUpdated": "2026-02-27T00:20:52.288Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "mobility46.se",
+            "vendor": "Mobility46",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Khaled Sarieddine and Mohammad Ali Sayed reported this vulnerability to CISA."
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "WebSocket endpoints lack proper authentication mechanisms, enabling \nattackers to perform unauthorized station impersonation and manipulate \ndata sent to the backend. An unauthenticated attacker can connect to the\n OCPP WebSocket endpoint using a known or discovered charging station \nidentifier, then issue or receive OCPP commands as a legitimate charger.\n Given that no authentication is required, this can lead to privilege \nescalation, unauthorized control of charging infrastructure, and \ncorruption of charging network data reported to the backend."
+              }
+            ],
+            "value": "WebSocket endpoints lack proper authentication mechanisms, enabling \nattackers to perform unauthorized station impersonation and manipulate \ndata sent to the backend. An unauthenticated attacker can connect to the\n OCPP WebSocket endpoint using a known or discovered charging station \nidentifier, then issue or receive OCPP commands as a legitimate charger.\n Given that no authentication is required, this can lead to privilege \nescalation, unauthorized control of charging infrastructure, and \ncorruption of charging network data reported to the backend."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 9.4,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-306",
+                "description": "CWE-306",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+          "shortName": "icscert",
+          "dateUpdated": "2026-02-27T00:20:52.288Z"
+        },
+        "references": [
+          {
+            "url": "https://www.mobility46.se/en/contact-us"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-08"
+          },
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-08.json"
+          }
+        ],
+        "source": {
+          "advisory": "ICSA-26-057-08",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Mobility46 mobility46.se Missing Authentication for Critical Function",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Mobility46 did not respond to CISA's request for coordination. Contact \nMobility46 using their contact page here: \n<a target=\"_blank\" rel=\"nofollow\" href=\"https://www.mobility46.se/en/contact-us\">https://www.mobility46.se/en/contact-us</a> for more information.\n\n<br>"
+              }
+            ],
+            "value": "Mobility46 did not respond to CISA's request for coordination. Contact \nMobility46 using their contact page here: \n https://www.mobility46.se/en/contact-us  for more information."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27028"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26305",
+      "assignerOrgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+      "state": "PUBLISHED",
+      "assignerShortName": "icscert",
+      "dateReserved": "2026-02-24T00:35:18.457Z",
+      "datePublished": "2026-02-27T00:22:24.167Z",
+      "dateUpdated": "2026-02-27T00:22:24.167Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "mobility46.se",
+            "vendor": "Mobility46",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Khaled Sarieddine and Mohammad Ali Sayed reported this vulnerability to CISA."
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The WebSocket Application Programming Interface lacks restrictions on \nthe number of authentication requests. This absence of rate limiting may\n allow an attacker to conduct denial-of-service attacks by suppressing \nor mis-routing legitimate charger telemetry, or conduct brute-force \nattacks to gain unauthorized access."
+              }
+            ],
+            "value": "The WebSocket Application Programming Interface lacks restrictions on \nthe number of authentication requests. This absence of rate limiting may\n allow an attacker to conduct denial-of-service attacks by suppressing \nor mis-routing legitimate charger telemetry, or conduct brute-force \nattacks to gain unauthorized access."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-307",
+                "description": "CWE-307",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+          "shortName": "icscert",
+          "dateUpdated": "2026-02-27T00:22:24.167Z"
+        },
+        "references": [
+          {
+            "url": "https://www.mobility46.se/en/contact-us"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-08"
+          },
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-08.json"
+          }
+        ],
+        "source": {
+          "advisory": "ICSA-26-057-08",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Mobility46 mobility46.se Improper Restriction of Excessive Authentication Attempts",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Mobility46 did not respond to CISA's request for coordination. Contact \nMobility46 using their contact page here: \n<a target=\"_blank\" rel=\"nofollow\" href=\"https://www.mobility46.se/en/contact-us\">https://www.mobility46.se/en/contact-us</a> for more information.\n\n<br>"
+              }
+            ],
+            "value": "Mobility46 did not respond to CISA's request for coordination. Contact \nMobility46 using their contact page here: \n https://www.mobility46.se/en/contact-us  for more information."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26305"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26290",
+      "assignerOrgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+      "state": "PUBLISHED",
+      "assignerShortName": "icscert",
+      "dateReserved": "2026-02-24T00:16:49.674Z",
+      "datePublished": "2026-02-27T00:13:16.357Z",
+      "dateUpdated": "2026-02-27T00:13:16.357Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "ev.energy",
+            "vendor": "EV Energy",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "All versions"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Khaled Sarieddine and Mohammad Ali Sayed reported this vulnerability to CISA."
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The WebSocket backend uses charging station identifiers to uniquely \nassociate sessions but allows multiple endpoints to connect using the \nsame session identifier. This implementation results in predictable \nsession identifiers and enables session hijacking or shadowing, where \nthe most recent connection displaces the legitimate charging station and\n receives backend commands intended for that station. This vulnerability\n may allow unauthorized users to authenticate as other users or enable a\n malicious actor to cause a denial-of-service condition by overwhelming \nthe backend with valid session requests."
+              }
+            ],
+            "value": "The WebSocket backend uses charging station identifiers to uniquely \nassociate sessions but allows multiple endpoints to connect using the \nsame session identifier. This implementation results in predictable \nsession identifiers and enables session hijacking or shadowing, where \nthe most recent connection displaces the legitimate charging station and\n receives backend commands intended for that station. This vulnerability\n may allow unauthorized users to authenticate as other users or enable a\n malicious actor to cause a denial-of-service condition by overwhelming \nthe backend with valid session requests."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-613",
+                "description": "CWE-613",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+          "shortName": "icscert",
+          "dateUpdated": "2026-02-27T00:13:16.357Z"
+        },
+        "references": [
+          {
+            "url": "https://www.ev.energy/en-us"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-07"
+          },
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-057-07.json"
+          }
+        ],
+        "source": {
+          "advisory": "ICSA-26-057-07",
+          "discovery": "EXTERNAL"
+        },
+        "title": "EV Energy ev.energy Insufficient Session Expiration",
+        "workarounds": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "EV Energy did not respond to CISA's request for coordination. Contact EV\n Energy using their contact page here: <a target=\"_blank\" rel=\"nofollow\" href=\"https://www.ev.energy/en-us\">https://www.ev.energy/en-us</a> for \nmore information.\n\n<br>"
+              }
+            ],
+            "value": "EV Energy did not respond to CISA's request for coordination. Contact EV\n Energy using their contact page here:  https://www.ev.energy/en-us  for \nmore information."
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26290"
+          }
+        ]
+      }
+    }
+  }
+]
