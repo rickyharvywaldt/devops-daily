@@ -1,0 +1,829 @@
+[Sat Feb 28 02:22:25 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3054",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-23T17:54:56.109Z",
+      "datePublished": "2026-02-24T02:02:06.992Z",
+      "dateUpdated": "2026-02-24T20:45:48.226Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-02-24T02:02:06.992Z"
+        },
+        "title": "Alinto SOGo cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Alinto",
+            "product": "SOGo",
+            "versions": [
+              {
+                "version": "5.12.3",
+                "status": "affected"
+              },
+              {
+                "version": "5.12.4",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:alinto:sogo:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was identified in Alinto SOGo 5.12.3/5.12.4. This impacts an unknown function. The manipulation of the argument hint leads to cross site scripting. The attack can be initiated remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 5,
+              "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N/E:POC/RL:ND/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-23T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-23T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-23T19:00:01.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "erickfernandox (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.347412",
+            "name": "VDB-347412 | Alinto SOGo cross site scripting",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.347412",
+            "name": "VDB-347412 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.757609",
+            "name": "Submit #757609 | Inverse / SOGo Community SOGo Groupware 5.12.3 - 5.12.4 Cross Site Scripting",
+            "tags": [
+              "third-party-advisory"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3054"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-24T20:44:03.799583Z",
+                  "id": "CVE-2026-3054",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-24T20:45:48.226Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26369",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-02-15T15:02:46.359Z",
+      "datePublished": "2026-02-15T15:29:56.204Z",
+      "dateUpdated": "2026-02-17T16:50:04.129Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-02-15T15:29:56.204Z"
+        },
+        "datePublic": "2026-02-14T00:00:00.000Z",
+        "title": "JUNG eNet SMART HOME server 2.2.1/2.3.1 Privilege Escalation via setUserGroup",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eNet SMART HOME server 2.2.1 and 2.3.1 contains a privilege escalation vulnerability due to insufficient authorization checks in the setUserGroup JSON-RPC method. A low-privileged user (UG_USER) can send a crafted POST request to /jsonrpc/management specifying their own username to elevate their account to the UG_ADMIN group, bypassing intended access controls and gaining administrative capabilities such as modifying device configurations, network settings, and other smart home system functions."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Privilege Management",
+                "cweId": "CWE-269",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "JUNG",
+            "product": "eNet SMART HOME server",
+            "versions": [
+              {
+                "version": "2.3.1 (46841)",
+                "status": "affected"
+              },
+              {
+                "version": "2.2.1 (46056)",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5975.php",
+            "name": "ZeroScience Vulnerability Advisory ZSL-2026-5975",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: JUNG eNet SMART HOME server 2.2.1/2.3.1 Privilege Escalation via setUserGroup",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/jung-enet-smart-home-server-privilege-escalation-v"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LiquidWorm as Gjoko Krstic of Zero Science Lab",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26369"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-17T16:49:54.959697Z",
+                  "id": "CVE-2026-26369",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-17T16:50:04.129Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-26368",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-02-15T15:02:31.876Z",
+      "datePublished": "2026-02-15T15:29:55.403Z",
+      "dateUpdated": "2026-02-17T16:50:34.868Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-02-15T15:29:55.403Z"
+        },
+        "datePublic": "2026-02-14T00:00:00.000Z",
+        "title": "JUNG eNet SMART HOME server 2.2.1/2.3.1 Account Takeover via resetUserPassword",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eNet SMART HOME server 2.2.1 and 2.3.1 contains a missing authorization vulnerability in the resetUserPassword JSON-RPC method that allows any authenticated low-privileged user (UG_USER) to reset the password of arbitrary accounts, including those in the UG_ADMIN and UG_SUPER_ADMIN groups, without supplying the current password or having sufficient privileges. By sending a crafted JSON-RPC request to /jsonrpc/management, an attacker can overwrite existing credentials, resulting in direct account takeover with full administrative access and persistent privilege escalation."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "JUNG",
+            "product": "eNet SMART HOME server",
+            "versions": [
+              {
+                "version": "2.3.1 (46841)",
+                "status": "affected"
+              },
+              {
+                "version": "2.2.1 (46056)",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5974.php",
+            "name": "ZeroScience Vulnerability Advisory ZSL-2026-5974",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: JUNG eNet SMART HOME server 2.2.1/2.3.1 Account Takeover via resetUserPassword",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/jung-enet-smart-home-server-account-takeover-via-r"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LiquidWorm as Gjoko Krstic of Zero Science Lab",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-26368"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-17T16:50:17.927530Z",
+                  "id": "CVE-2026-26368",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-17T16:50:34.868Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-23595",
+      "assignerOrgId": "eb103674-0d28-4225-80f8-39fb86215de0",
+      "state": "PUBLISHED",
+      "assignerShortName": "hpe",
+      "dateReserved": "2026-01-14T15:40:17.990Z",
+      "datePublished": "2026-02-17T20:45:43.833Z",
+      "dateUpdated": "2026-02-18T15:18:41.436Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "HPE Aruba Networking Private 5G Core",
+            "vendor": "Hewlett Packard Enterprise (HPE)",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.24.3.4",
+                "status": "affected",
+                "version": "1.24.3.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "reporter",
+            "value": "Communication Security Establishments (CSE)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<p>An authentication bypass in the application API allows an unauthorized administrative account to be created. A remote attacker could exploit this vulnerability to create privileged user accounts. Successful exploitation could allow an attacker to gain administrative access, modify system configurations, and access or manipulate sensitive data. </p>"
+              }
+            ],
+            "value": "An authentication bypass in the application API allows an unauthorized administrative account to be created. A remote attacker could exploit this vulnerability to create privileged user accounts. Successful exploitation could allow an attacker to gain administrative access, modify system configurations, and access or manipulate sensitive data."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "ADJACENT_NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "eb103674-0d28-4225-80f8-39fb86215de0",
+          "shortName": "hpe",
+          "dateUpdated": "2026-02-17T20:45:43.833Z"
+        },
+        "references": [
+          {
+            "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05002en_us&docLocale=en_US"
+          }
+        ],
+        "source": {
+          "advisory": "HPESBNW05002",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Unauthenticated Authentication Bypass in application API allows unauthorized administrative account creation",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-23595"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-18T14:36:43.151616Z",
+                  "id": "CVE-2026-23595",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-18T15:18:41.436Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-23596",
+      "assignerOrgId": "eb103674-0d28-4225-80f8-39fb86215de0",
+      "state": "PUBLISHED",
+      "assignerShortName": "hpe",
+      "dateReserved": "2026-01-14T15:40:17.991Z",
+      "datePublished": "2026-02-17T20:46:12.694Z",
+      "dateUpdated": "2026-02-18T15:15:27.361Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "HPE Aruba Networking Private 5G Core",
+            "vendor": "Hewlett Packard Enterprise (HPE)",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.24.3.4",
+                "status": "affected",
+                "version": "1.24.3.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "reporter",
+            "value": "Communication Security Establishments (CSE)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<p>A vulnerability in the management API of the affected product could allow an unauthenticated remote attacker to trigger service restarts. Successful exploitation could allow an attacker to disrupt services and negatively impact system availability. </p>"
+              }
+            ],
+            "value": "A vulnerability in the management API of the affected product could allow an unauthenticated remote attacker to trigger service restarts. Successful exploitation could allow an attacker to disrupt services and negatively impact system availability."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "ADJACENT_NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "eb103674-0d28-4225-80f8-39fb86215de0",
+          "shortName": "hpe",
+          "dateUpdated": "2026-02-17T20:46:12.694Z"
+        },
+        "references": [
+          {
+            "url": "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05002en_us&docLocale=en_US"
+          }
+        ],
+        "source": {
+          "advisory": "HPESBNW05002",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Unauthenticated Improper Access Control in management API allows unauthorized service disruption",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-23596"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-400",
+                  "lang": "en",
+                  "description": "CWE-400 Uncontrolled Resource Consumption"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-18T14:39:55.206536Z",
+                  "id": "CVE-2026-23596",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-18T15:15:27.361Z"
+          }
+        }
+      ]
+    }
+  }
+]
