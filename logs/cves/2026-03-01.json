@@ -12947,3 +12947,621 @@
     }
   }
 ]
+[Sun Mar  1 06:54:06 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "RUSTSEC-2026-0029",
+    "modified": "2026-03-01T06:01:36Z",
+    "published": "2026-02-26T12:00:00Z",
+    "aliases": [
+      "GHSA-j8cj-hw74-64jv"
+    ],
+    "related": [],
+    "summary": "Double-free and use-after-free for Hive",
+    "details": "`Drop` implementation for `Hive` did perform free, but so did `Hive::close`, which,\nat the end of the scope performed `Drop`, therefore triggering double-free.\n\nAdditionally, function `Hive::from_handle` was not marked as unsafe, making it,\nin combination with `as_handle` easy to clone and trigger double-free in safe\ncode or triggering UB when using invalid pointer.",
+    "severity": [],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "crates.io",
+          "name": "hivex",
+          "purl": "pkg:cargo/hivex"
+        },
+        "ecosystem_specific": {
+          "affects": {
+            "arch": [],
+            "os": [],
+            "functions": [
+              "hivex::Hive::close",
+              "hivex::Hive::from_handle"
+            ]
+          },
+          "affected_functions": null
+        },
+        "database_specific": {
+          "categories": [],
+          "cvss": null,
+          "informational": "unsound"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0.0.0-0"
+              },
+              {
+                "fixed": "0.2.1"
+              }
+            ]
+          }
+        ],
+        "versions": []
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://crates.io/crates/hivex"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://rustsec.org/advisories/RUSTSEC-2026-0029.html"
+      },
+      {
+        "type": "WEB",
+        "url": "https://codeberg.org/1millibyte/toolsnt/issues/18"
+      }
+    ],
+    "database_specific": {
+      "license": "CC0-1.0"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rustsec-2026-0029"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-03-01T05:38:31Z",
+    "published": "2026-03-01T05:38:31Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-1093",
+    "summary": "Malicious code in naughty-package (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: ossf-package-analysis (0468ae18d44d78c000a973ca7dfb090efc540fc1792b894ee063d4441a306d27)\nThe OpenSSF Package Analysis project identified 'naughty-package' @ 1.0.2 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "naughty-package"
+        },
+        "versions": [
+          "1.0.2"
+        ]
+      }
+    ],
+    "credits": [
+      {
+        "name": "OpenSSF: Package Analysis",
+        "type": "FINDER",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "import_time": "2026-03-01T05:49:10.714017155Z",
+          "modified_time": "2026-03-01T05:38:31Z",
+          "sha256": "0468ae18d44d78c000a973ca7dfb090efc540fc1792b894ee063d4441a306d27",
+          "source": "ossf-package-analysis",
+          "versions": [
+            "1.0.2"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-1093"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3382",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-28T14:23:15.512Z",
+      "datePublished": "2026-03-01T05:32:12.992Z",
+      "dateUpdated": "2026-03-01T05:32:12.992Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-01T05:32:12.992Z"
+        },
+        "title": "ChaiScript boxed_number.hpp get_as memory corruption",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "ChaiScript",
+            "versions": [
+              {
+                "version": "6.0",
+                "status": "affected"
+              },
+              {
+                "version": "6.1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in ChaiScript up to 6.1.0. The impacted element is the function chaiscript::Boxed_Number::get_as of the file include/chaiscript/dispatchkit/boxed_number.hpp. Performing a manipulation results in memory corruption. The attack requires a local approach. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 4.8,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 1.7,
+              "vectorString": "AV:L/AC:L/Au:S/C:N/I:N/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-28T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-28T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-28T15:28:27.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Oneafter (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.348268",
+            "name": "VDB-348268 | ChaiScript boxed_number.hpp get_as memory corruption",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.348268",
+            "name": "VDB-348268 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.761301",
+            "name": "Submit #761301 | ChaiScript develop branch Memory Corruption",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/ChaiScript/ChaiScript/issues/635",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/ChaiScript/ChaiScript/issues/635#issue-3828258513",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/ChaiScript/ChaiScript/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3382"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "CVE-2026-3380",
+    "sourceIdentifier": "cna@vuldb.com",
+    "published": "2026-03-01T04:16:01.890",
+    "lastModified": "2026-03-01T04:16:01.890",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "A vulnerability was found in Tenda F453 1.0.0.3. This issue affects the function frmL7ImForm of the file /goform/L7Im. The manipulation of the argument page results in buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV40": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "HIGH",
+            "vulnIntegrityImpact": "HIGH",
+            "vulnAvailabilityImpact": "HIGH",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "exploitMaturity": "PROOF_OF_CONCEPT",
+            "confidentialityRequirement": "NOT_DEFINED",
+            "integrityRequirement": "NOT_DEFINED",
+            "availabilityRequirement": "NOT_DEFINED",
+            "modifiedAttackVector": "NOT_DEFINED",
+            "modifiedAttackComplexity": "NOT_DEFINED",
+            "modifiedAttackRequirements": "NOT_DEFINED",
+            "modifiedPrivilegesRequired": "NOT_DEFINED",
+            "modifiedUserInteraction": "NOT_DEFINED",
+            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+            "Safety": "NOT_DEFINED",
+            "Automatable": "NOT_DEFINED",
+            "Recovery": "NOT_DEFINED",
+            "valueDensity": "NOT_DEFINED",
+            "vulnerabilityResponseEffort": "NOT_DEFINED",
+            "providerUrgency": "NOT_DEFINED"
+          }
+        }
+      ],
+      "cvssMetricV31": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "HIGH"
+          },
+          "exploitabilityScore": 2.8,
+          "impactScore": 5.9
+        }
+      ],
+      "cvssMetricV2": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "2.0",
+            "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+            "baseScore": 9.0,
+            "accessVector": "NETWORK",
+            "accessComplexity": "LOW",
+            "authentication": "SINGLE",
+            "confidentialityImpact": "COMPLETE",
+            "integrityImpact": "COMPLETE",
+            "availabilityImpact": "COMPLETE"
+          },
+          "baseSeverity": "HIGH",
+          "exploitabilityScore": 8.0,
+          "impactScore": 10.0,
+          "acInsufInfo": false,
+          "obtainAllPrivilege": false,
+          "obtainUserPrivilege": false,
+          "obtainOtherPrivilege": false,
+          "userInteractionRequired": false
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "cna@vuldb.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-119"
+          },
+          {
+            "lang": "en",
+            "value": "CWE-120"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://github.com/Litengzheng/vul_db/blob/main/F453/vul_81/README.md",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?ctiid.348265",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?id.348265",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/?submit.759629",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://www.tenda.com.cn/",
+        "source": "cna@vuldb.com"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "fkie_cve-2026-3380"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3380",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-28T06:56:58.789Z",
+      "datePublished": "2026-03-01T03:02:09.623Z",
+      "dateUpdated": "2026-03-01T03:02:09.623Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-01T03:02:09.623Z"
+        },
+        "title": "Tenda F453 L7Im frmL7ImForm buffer overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-120",
+                "lang": "en",
+                "description": "Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Tenda",
+            "product": "F453",
+            "versions": [
+              {
+                "version": "1.0.0.3",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:tenda:f453_firmware:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in Tenda F453 1.0.0.3. This issue affects the function frmL7ImForm of the file /goform/L7Im. The manipulation of the argument page results in buffer overflow. The attack may be launched remotely. The exploit has been made public and could be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-28T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-28T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-28T08:02:02.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LtzHust2 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.348265",
+            "name": "VDB-348265 | Tenda F453 L7Im frmL7ImForm buffer overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.348265",
+            "name": "VDB-348265 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.759629",
+            "name": "Submit #759629 | Tenda F453 v1.0.0.3 Buffer Access Using Size of Source Buffer",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Litengzheng/vul_db/blob/main/F453/vul_81/README.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.tenda.com.cn/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3380"
+          }
+        ]
+      }
+    }
+  }
+]
