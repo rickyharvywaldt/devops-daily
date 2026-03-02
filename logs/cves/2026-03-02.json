@@ -1,0 +1,3236 @@
+[Mon Mar  2 13:10:48 UTC 2026] Latest CVEs:
+[
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for grafana is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB & OpenTSDB. \n\nSecurity Fix(es):\n\n* crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate (CVE-2025-61729)\n\n* grafana/grafana/pkg/services/dashboards: Grafana Dashboard Permissions Scope Bypass Enables Cross?Dashboard Privilege Escalation (CVE-2026-21721)\n\n* golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip (CVE-2025-61728)\n\n* golang: net/url: Memory exhaustion in query parameter parsing in net/url (CVE-2025-61726)\n\n* crypto/tls: Unexpected session resumption in crypto/tls (CVE-2025-68121)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:2920",
+          "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2418462",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+        },
+        {
+          "category": "external",
+          "summary": "2433242",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433242"
+        },
+        {
+          "category": "external",
+          "summary": "2434431",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434431"
+        },
+        {
+          "category": "external",
+          "summary": "2434432",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+        },
+        {
+          "category": "external",
+          "summary": "2437111",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_2920.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: grafana security update",
+      "tracking": {
+        "current_release_date": "2026-03-02T12:46:55+00:00",
+        "generator": {
+          "date": "2026-03-02T12:46:55+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.7.2"
+          }
+        },
+        "id": "RHSA-2026:2920",
+        "initial_release_date": "2026-02-18T12:55:46+00:00",
+        "revision_history": [
+          {
+            "date": "2026-02-18T12:55:46+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-02-18T12:55:46+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-03-02T12:46:55+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                    "product_id": "AppStream-9.7.0.Z.MAIN",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-18.el9_7.src",
+                  "product": {
+                    "name": "grafana-0:10.2.6-18.el9_7.src",
+                    "product_id": "grafana-0:10.2.6-18.el9_7.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-18.el9_7?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-18.el9_7.aarch64",
+                  "product": {
+                    "name": "grafana-0:10.2.6-18.el9_7.aarch64",
+                    "product_id": "grafana-0:10.2.6-18.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-18.el9_7?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+                    "product_id": "grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-18.el9_7?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+                    "product_id": "grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-18.el9_7?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+                    "product_id": "grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-18.el9_7?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-18.el9_7.ppc64le",
+                  "product": {
+                    "name": "grafana-0:10.2.6-18.el9_7.ppc64le",
+                    "product_id": "grafana-0:10.2.6-18.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-18.el9_7?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+                    "product_id": "grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-18.el9_7?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+                    "product_id": "grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-18.el9_7?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+                    "product_id": "grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-18.el9_7?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-18.el9_7.x86_64",
+                  "product": {
+                    "name": "grafana-0:10.2.6-18.el9_7.x86_64",
+                    "product_id": "grafana-0:10.2.6-18.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-18.el9_7?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-18.el9_7.x86_64",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-18.el9_7.x86_64",
+                    "product_id": "grafana-selinux-0:10.2.6-18.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-18.el9_7?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+                    "product_id": "grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-18.el9_7?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+                    "product_id": "grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-18.el9_7?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-18.el9_7.s390x",
+                  "product": {
+                    "name": "grafana-0:10.2.6-18.el9_7.s390x",
+                    "product_id": "grafana-0:10.2.6-18.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-18.el9_7?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-18.el9_7.s390x",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-18.el9_7.s390x",
+                    "product_id": "grafana-selinux-0:10.2.6-18.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-18.el9_7?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+                    "product_id": "grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-18.el9_7?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+                    "product_id": "grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-18.el9_7?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-18.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64"
+          },
+          "product_reference": "grafana-0:10.2.6-18.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-18.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le"
+          },
+          "product_reference": "grafana-0:10.2.6-18.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-18.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x"
+          },
+          "product_reference": "grafana-0:10.2.6-18.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-18.el9_7.src as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src"
+          },
+          "product_reference": "grafana-0:10.2.6-18.el9_7.src",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-18.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64"
+          },
+          "product_reference": "grafana-0:10.2.6-18.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-18.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-18.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-18.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-18.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-18.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-18.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-18.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-18.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-18.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-18.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-18.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-18.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-18.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T12:55:46+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61728",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:39.965024+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434431"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the archive/zip package in the Go standard library. A super-linear file name indexing algorithm is used in the first time a file in an archive is opened. A crafted zip archive containing a specific arrangement of file names can cause an excessive CPU and memory consumption. A Go application processing a malicious archive can become unresponsive or crash, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker needs to be able to process a malicious zip archive with an application using the archive/zip package. Additionally, this vulnerability can cause a Go application to consume an excessive amount of CPU and memory, eventually resulting in a denial of service with no other security impact. Due to these reasons, this flaw has been rated with a moderate severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61728"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434431",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434431"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61728",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61728"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61728",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61728"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736713",
+            "url": "https://go.dev/cl/736713"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77102",
+            "url": "https://go.dev/issue/77102"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4342",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4342"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.354000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T12:55:46+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this vulnerability, implement a timeout in your archive/zip processing logic to abort the operation if it exceeds a few seconds, preventing the application from consuming an excessive amount of resources.",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T12:55:46+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      },
+      {
+        "cve": "CVE-2025-68121",
+        "discovery_date": "2026-02-05T18:01:30.086058+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2437111"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and mutates the returned Config, or uses Config.GetConfigForClient. This can cause a client to resume a session with a server that it would not have resumed with during the initial handshake, or cause a server to resume a session with a client that it would not have resumed with during the initial handshake.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: Unexpected session resumption in crypto/tls",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2437111",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-68121",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/737700",
+            "url": "https://go.dev/cl/737700"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77217",
+            "url": "https://go.dev/issue/77217"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337"
+          }
+        ],
+        "release_date": "2026-02-05T17:48:44.141000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T12:55:46+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "crypto/tls: Unexpected session resumption in crypto/tls"
+      },
+      {
+        "cve": "CVE-2026-21721",
+        "cwe": {
+          "id": "CWE-639",
+          "name": "Authorization Bypass Through User-Controlled Key"
+        },
+        "discovery_date": "2026-01-27T10:02:34.317952+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2433242"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "The dashboard permissions API does not verify the target dashboard scope and only checks the dashboards.permissions:* action. As a result, a user who has permission management rights on one dashboard can read and modify permissions on other dashboards. This is an organization‑internal privilege escalation.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "grafana/grafana/pkg/services/dashboards: Grafana Dashboard Permissions Scope Bypass Enables Cross‑Dashboard Privilege Escalation",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-21721"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2433242",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433242"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-21721",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-21721"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-21721",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21721"
+          },
+          {
+            "category": "external",
+            "summary": "https://grafana.com/security/security-advisories/CVE-2026-21721",
+            "url": "https://grafana.com/security/security-advisories/CVE-2026-21721"
+          }
+        ],
+        "release_date": "2026-01-27T09:07:55.160000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T12:55:46+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2920"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:grafana-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debuginfo-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-debugsource-0:10.2.6-18.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:grafana-selinux-0:10.2.6-18.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "grafana/grafana/pkg/services/dashboards: Grafana Dashboard Permissions Scope Bypass Enables Cross‑Dashboard Privilege Escalation"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:2920"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for grafana is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB & OpenTSDB. \n\nSecurity Fix(es):\n\n* crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate (CVE-2025-61729)\n\n* grafana/grafana/pkg/services/dashboards: Grafana Dashboard Permissions Scope Bypass Enables Cross?Dashboard Privilege Escalation (CVE-2026-21721)\n\n* golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip (CVE-2025-61728)\n\n* golang: net/url: Memory exhaustion in query parameter parsing in net/url (CVE-2025-61726)\n\n* crypto/tls: Unexpected session resumption in crypto/tls (CVE-2025-68121)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:2914",
+          "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2418462",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+        },
+        {
+          "category": "external",
+          "summary": "2433242",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433242"
+        },
+        {
+          "category": "external",
+          "summary": "2434431",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434431"
+        },
+        {
+          "category": "external",
+          "summary": "2434432",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+        },
+        {
+          "category": "external",
+          "summary": "2437111",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_2914.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: grafana security update",
+      "tracking": {
+        "current_release_date": "2026-03-02T12:46:55+00:00",
+        "generator": {
+          "date": "2026-03-02T12:46:55+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.7.2"
+          }
+        },
+        "id": "RHSA-2026:2914",
+        "initial_release_date": "2026-02-18T11:31:17+00:00",
+        "revision_history": [
+          {
+            "date": "2026-02-18T11:31:17+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-02-18T11:31:17+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-03-02T12:46:55+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 10)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 10)",
+                    "product_id": "AppStream-10.1.Z",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/o:redhat:enterprise_linux:10.1"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-22.el10_1.s390x",
+                  "product": {
+                    "name": "grafana-0:10.2.6-22.el10_1.s390x",
+                    "product_id": "grafana-0:10.2.6-22.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-22.el10_1?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-22.el10_1.s390x",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-22.el10_1.s390x",
+                    "product_id": "grafana-selinux-0:10.2.6-22.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-22.el10_1?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+                    "product_id": "grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-22.el10_1?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+                    "product_id": "grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-22.el10_1?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-22.el10_1.x86_64",
+                  "product": {
+                    "name": "grafana-0:10.2.6-22.el10_1.x86_64",
+                    "product_id": "grafana-0:10.2.6-22.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-22.el10_1?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-22.el10_1.x86_64",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-22.el10_1.x86_64",
+                    "product_id": "grafana-selinux-0:10.2.6-22.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-22.el10_1?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+                    "product_id": "grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-22.el10_1?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+                    "product_id": "grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-22.el10_1?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-22.el10_1.src",
+                  "product": {
+                    "name": "grafana-0:10.2.6-22.el10_1.src",
+                    "product_id": "grafana-0:10.2.6-22.el10_1.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-22.el10_1?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-22.el10_1.aarch64",
+                  "product": {
+                    "name": "grafana-0:10.2.6-22.el10_1.aarch64",
+                    "product_id": "grafana-0:10.2.6-22.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-22.el10_1?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+                    "product_id": "grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-22.el10_1?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+                    "product_id": "grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-22.el10_1?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+                    "product_id": "grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-22.el10_1?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-22.el10_1.ppc64le",
+                  "product": {
+                    "name": "grafana-0:10.2.6-22.el10_1.ppc64le",
+                    "product_id": "grafana-0:10.2.6-22.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-22.el10_1?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+                    "product_id": "grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-22.el10_1?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+                    "product_id": "grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-22.el10_1?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+                    "product_id": "grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-22.el10_1?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-22.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64"
+          },
+          "product_reference": "grafana-0:10.2.6-22.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-22.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le"
+          },
+          "product_reference": "grafana-0:10.2.6-22.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-22.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x"
+          },
+          "product_reference": "grafana-0:10.2.6-22.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-22.el10_1.src as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src"
+          },
+          "product_reference": "grafana-0:10.2.6-22.el10_1.src",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-22.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64"
+          },
+          "product_reference": "grafana-0:10.2.6-22.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-22.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-22.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-22.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-22.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-22.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-22.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-22.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-22.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-22.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-22.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-22.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-22.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-22.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T11:31:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61728",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:39.965024+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434431"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the archive/zip package in the Go standard library. A super-linear file name indexing algorithm is used in the first time a file in an archive is opened. A crafted zip archive containing a specific arrangement of file names can cause an excessive CPU and memory consumption. A Go application processing a malicious archive can become unresponsive or crash, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker needs to be able to process a malicious zip archive with an application using the archive/zip package. Additionally, this vulnerability can cause a Go application to consume an excessive amount of CPU and memory, eventually resulting in a denial of service with no other security impact. Due to these reasons, this flaw has been rated with a moderate severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61728"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434431",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434431"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61728",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61728"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61728",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61728"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736713",
+            "url": "https://go.dev/cl/736713"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77102",
+            "url": "https://go.dev/issue/77102"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4342",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4342"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.354000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T11:31:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this vulnerability, implement a timeout in your archive/zip processing logic to abort the operation if it exceeds a few seconds, preventing the application from consuming an excessive amount of resources.",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "golang: archive/zip: Excessive CPU consumption when building archive index in archive/zip"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T11:31:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      },
+      {
+        "cve": "CVE-2025-68121",
+        "discovery_date": "2026-02-05T18:01:30.086058+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2437111"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and mutates the returned Config, or uses Config.GetConfigForClient. This can cause a client to resume a session with a server that it would not have resumed with during the initial handshake, or cause a server to resume a session with a client that it would not have resumed with during the initial handshake.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: Unexpected session resumption in crypto/tls",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2437111",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-68121",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/737700",
+            "url": "https://go.dev/cl/737700"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77217",
+            "url": "https://go.dev/issue/77217"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337"
+          }
+        ],
+        "release_date": "2026-02-05T17:48:44.141000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T11:31:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "crypto/tls: Unexpected session resumption in crypto/tls"
+      },
+      {
+        "cve": "CVE-2026-21721",
+        "cwe": {
+          "id": "CWE-639",
+          "name": "Authorization Bypass Through User-Controlled Key"
+        },
+        "discovery_date": "2026-01-27T10:02:34.317952+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2433242"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "The dashboard permissions API does not verify the target dashboard scope and only checks the dashboards.permissions:* action. As a result, a user who has permission management rights on one dashboard can read and modify permissions on other dashboards. This is an organization‑internal privilege escalation.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "grafana/grafana/pkg/services/dashboards: Grafana Dashboard Permissions Scope Bypass Enables Cross‑Dashboard Privilege Escalation",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+            "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+            "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-21721"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2433242",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433242"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-21721",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-21721"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-21721",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21721"
+          },
+          {
+            "category": "external",
+            "summary": "https://grafana.com/security/security-advisories/CVE-2026-21721",
+            "url": "https://grafana.com/security/security-advisories/CVE-2026-21721"
+          }
+        ],
+        "release_date": "2026-01-27T09:07:55.160000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-02-18T11:31:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:2914"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.src",
+              "AppStream-10.1.Z:grafana-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debuginfo-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-debugsource-0:10.2.6-22.el10_1.x86_64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.aarch64",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.ppc64le",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.s390x",
+              "AppStream-10.1.Z:grafana-selinux-0:10.2.6-22.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "grafana/grafana/pkg/services/dashboards: Grafana Dashboard Permissions Scope Bypass Enables Cross‑Dashboard Privilege Escalation"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:2914"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-58406",
+      "assignerOrgId": "4bb8329e-dd38-46c1-aafb-9bf32bcb93c6",
+      "state": "PUBLISHED",
+      "assignerShortName": "CERT-PL",
+      "dateReserved": "2025-09-01T07:18:45.944Z",
+      "datePublished": "2026-03-02T11:16:56.975Z",
+      "dateUpdated": "2026-03-02T11:16:56.975Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "CGM CLININET",
+            "vendor": "CGM",
+            "versions": [
+              {
+                "lessThan": "2025.MS3",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<span style=\"background-color: rgb(255, 255, 255);\">The CGM CLININET application respond without essential security HTTP headers, exposing users to client‑side attacks such as clickjacking, MIME sniffing, unsafe caching, weak cross‑origin isolation, and missing transport security controls.</span>"
+              }
+            ],
+            "value": "The CGM CLININET application respond without essential security HTTP headers, exposing users to client‑side attacks such as clickjacking, MIME sniffing, unsafe caching, weak cross‑origin isolation, and missing transport security controls."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "PASSIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-693",
+                "description": "CWE-693 Protection Mechanism Failure",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "4bb8329e-dd38-46c1-aafb-9bf32bcb93c6",
+          "shortName": "CERT-PL",
+          "dateUpdated": "2026-03-02T11:16:56.975Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://cert.pl/en/posts/2026/03/CVE-2025-10350/"
+          },
+          {
+            "tags": [
+              "product"
+            ],
+            "url": "https://www.cgm.com/pol_pl/products/szpital/cgm-clininet.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Lack of HTTP Response Headers",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-58406"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-58405",
+      "assignerOrgId": "4bb8329e-dd38-46c1-aafb-9bf32bcb93c6",
+      "state": "PUBLISHED",
+      "assignerShortName": "CERT-PL",
+      "dateReserved": "2025-09-01T07:18:45.944Z",
+      "datePublished": "2026-03-02T11:16:45.223Z",
+      "dateUpdated": "2026-03-02T11:16:45.223Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "CGM CLININET",
+            "vendor": "CGM",
+            "versions": [
+              {
+                "lessThan": "2025.MS3",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The CGM CLININET application does not implement any mechanisms that prevent clickjacking attacks, neither HTTP security headers nor HTML-based frame‑busting protections were detected. As a result, an attacker can embed the application inside a maliciously crafted IFRAME and trick users into performing unintended actions, including potentially bypassing CSRF/XSRF defenses."
+              }
+            ],
+            "value": "The CGM CLININET application does not implement any mechanisms that prevent clickjacking attacks, neither HTTP security headers nor HTML-based frame‑busting protections were detected. As a result, an attacker can embed the application inside a maliciously crafted IFRAME and trick users into performing unintended actions, including potentially bypassing CSRF/XSRF defenses."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "PASSIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1021",
+                "description": "CWE-1021 Improper Restriction of Rendered UI Layers or Frames",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "4bb8329e-dd38-46c1-aafb-9bf32bcb93c6",
+          "shortName": "CERT-PL",
+          "dateUpdated": "2026-03-02T11:16:45.223Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://cert.pl/en/posts/2026/03/CVE-2025-10350/"
+          },
+          {
+            "tags": [
+              "product"
+            ],
+            "url": "https://www.cgm.com/pol_pl/products/szpital/cgm-clininet.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Lack of protection mechanisms against Clickjacking attacks",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-58405"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-58402",
+      "assignerOrgId": "4bb8329e-dd38-46c1-aafb-9bf32bcb93c6",
+      "state": "PUBLISHED",
+      "assignerShortName": "CERT-PL",
+      "dateReserved": "2025-09-01T07:18:45.943Z",
+      "datePublished": "2026-03-02T11:16:31.420Z",
+      "dateUpdated": "2026-03-02T11:16:31.420Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "CGM CLININET",
+            "vendor": "CGM",
+            "versions": [
+              {
+                "lessThan": "2025.MS4",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The CGM CLININET application uses direct, sequential object identifiers \"MessageID\" without proper authorization checks. By modifying the parameter in the GET request, an attacker can access messages and attachments belonging to other users."
+              }
+            ],
+            "value": "The CGM CLININET application uses direct, sequential object identifiers \"MessageID\" without proper authorization checks. By modifying the parameter in the GET request, an attacker can access messages and attachments belonging to other users."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-639",
+                "description": "CWE-639 Authorization Bypass Through User-Controlled Key",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "4bb8329e-dd38-46c1-aafb-9bf32bcb93c6",
+          "shortName": "CERT-PL",
+          "dateUpdated": "2026-03-02T11:16:31.420Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://cert.pl/en/posts/2026/03/CVE-2025-10350/"
+          },
+          {
+            "tags": [
+              "product"
+            ],
+            "url": "https://www.cgm.com/pol_pl/products/szpital/cgm-clininet.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Insecure Direct Object Reference Message ID",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-58402"
+          }
+        ]
+      }
+    }
+  }
+]
