@@ -7698,3 +7698,586 @@
     }
   }
 ]
+[Tue Mar  3 13:09:16 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-20441",
+      "assignerOrgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+      "state": "PUBLISHED",
+      "assignerShortName": "MediaTek",
+      "dateReserved": "2025-11-03T01:30:59.012Z",
+      "datePublished": "2026-03-02T08:39:23.774Z",
+      "dateUpdated": "2026-03-03T04:55:53.784Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+          "shortName": "MediaTek",
+          "dateUpdated": "2026-03-02T08:39:23.774Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In MAE, there is a possible out of bounds write due to a missing bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10432500; Issue ID: MSV-5803."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "MediaTek, Inc.",
+            "product": "MT2718, MT6899, MT6991, MT8678, MT8793",
+            "versions": [
+              {
+                "version": "Android 15.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://corp.mediatek.com/product-security-bulletin/March-2026"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-787",
+                "description": "CWE-787 Out-of-bounds Write"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-20441"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.7,
+                "attackVector": "LOCAL",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "HIGH",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-20441"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-03T04:55:53.784Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-20442",
+      "assignerOrgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+      "state": "PUBLISHED",
+      "assignerShortName": "MediaTek",
+      "dateReserved": "2025-11-03T01:30:59.012Z",
+      "datePublished": "2026-03-02T08:39:25.755Z",
+      "dateUpdated": "2026-03-02T13:25:53.843Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+          "shortName": "MediaTek",
+          "dateUpdated": "2026-03-02T08:39:25.755Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In display, there is a possible system crash due to use after free. This could lead to local denial of service if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10436998; Issue ID: MSV-5723."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "MediaTek, Inc.",
+            "product": "MT6739, MT6761, MT6765, MT6768, MT6781, MT6789, MT6833, MT6835, MT6853, MT6855, MT6877, MT6878, MT6879, MT6883, MT6885, MT6886, MT6889, MT6893, MT6895, MT6897, MT6899, MT6983, MT6985, MT6989, MT6991, MT6993, MT8186, MT8188, MT8196, MT8667, MT8673, MT8676, MT8678, MT8765, MT8766, MT8768, MT8771, MT8781, MT8791T, MT8792, MT8793, MT8795T, MT8796, MT8798, MT8873, MT8883",
+            "versions": [
+              {
+                "version": "Android 14.0, 15.0, 16.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://corp.mediatek.com/product-security-bulletin/March-2026"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-416",
+                "description": "CWE-416 Use After Free"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-20442"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 4.4,
+                "attackVector": "LOCAL",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "HIGH",
+                "confidentialityImpact": "NONE"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T13:25:50.244208Z",
+                  "id": "CVE-2026-20442",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-02T13:25:53.843Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-20443",
+      "assignerOrgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+      "state": "PUBLISHED",
+      "assignerShortName": "MediaTek",
+      "dateReserved": "2025-11-03T01:30:59.012Z",
+      "datePublished": "2026-03-02T08:39:27.755Z",
+      "dateUpdated": "2026-03-03T04:55:52.697Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+          "shortName": "MediaTek",
+          "dateUpdated": "2026-03-02T08:39:27.755Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In display, there is a possible memory corruption due to use after free. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10436998; Issue ID: MSV-5722."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "MediaTek, Inc.",
+            "product": "MT6739, MT6761, MT6765, MT6768, MT6781, MT6789, MT6833, MT6835, MT6853, MT6855, MT6877, MT6878, MT6879, MT6883, MT6885, MT6886, MT6889, MT6893, MT6895, MT6897, MT6899, MT6983, MT6985, MT6989, MT6991, MT6993, MT8186, MT8188, MT8196, MT8667, MT8673, MT8676, MT8678, MT8765, MT8766, MT8768, MT8771, MT8781, MT8791T, MT8792, MT8793, MT8795T, MT8796, MT8798, MT8873, MT8883",
+            "versions": [
+              {
+                "version": "Android 14.0, 15.0, 16.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://corp.mediatek.com/product-security-bulletin/March-2026"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-416",
+                "description": "CWE-416 Use After Free"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-20443"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.7,
+                "attackVector": "LOCAL",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "HIGH",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-20443"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-03T04:55:52.697Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-20444",
+      "assignerOrgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+      "state": "PUBLISHED",
+      "assignerShortName": "MediaTek",
+      "dateReserved": "2025-11-03T01:30:59.012Z",
+      "datePublished": "2026-03-02T08:39:29.734Z",
+      "dateUpdated": "2026-03-03T04:55:51.573Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+          "shortName": "MediaTek",
+          "dateUpdated": "2026-03-02T08:39:29.734Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In display, there is a possible memory corruption due to a missing bounds check. This could lead to local escalation of privilege if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10436995; Issue ID: MSV-5721."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "MediaTek, Inc.",
+            "product": "MT6739, MT6761, MT6765, MT6768, MT6781, MT6789, MT6833, MT6835, MT6853, MT6855, MT6877, MT6878, MT6879, MT6883, MT6885, MT6886, MT6889, MT6893, MT6895, MT6897, MT6899, MT6983, MT6985, MT6989, MT6991, MT6993, MT8186, MT8188, MT8196, MT8667, MT8673, MT8676, MT8678, MT8765, MT8766, MT8768, MT8771, MT8781, MT8791T, MT8792, MT8793, MT8795T, MT8796, MT8798, MT8873, MT8883",
+            "versions": [
+              {
+                "version": "Android 14.0, 15.0, 16.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://corp.mediatek.com/product-security-bulletin/March-2026"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-787",
+                "description": "CWE-787 Out-of-bounds Write"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-20444"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.7,
+                "attackVector": "LOCAL",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "HIGH",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-20444"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-03T04:55:51.573Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-20445",
+      "assignerOrgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+      "state": "PUBLISHED",
+      "assignerShortName": "MediaTek",
+      "dateReserved": "2025-11-03T01:30:59.012Z",
+      "datePublished": "2026-03-02T08:39:35.796Z",
+      "dateUpdated": "2026-03-02T13:21:49.146Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ee979b05-11f8-4f25-a7e0-a1fa9c190374",
+          "shortName": "MediaTek",
+          "dateUpdated": "2026-03-02T08:39:35.796Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In MDDP, there is a possible system crash due to a race condition. This could lead to local denial of service if a malicious actor has already obtained the System privilege. User interaction is not needed for exploitation. Patch ID: ALPS10289875; Issue ID: MSV-5184."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "MediaTek, Inc.",
+            "product": "MT6835, MT6855, MT6878, MT6879, MT6883, MT6885, MT6886, MT6889, MT6893, MT6895, MT6897, MT6899, MT6983, MT6985, MT6989, MT6991, MT6993, MT8188, MT8678, MT8755, MT8771, MT8797, MT8798",
+            "versions": [
+              {
+                "version": "Android 14.0, 15.0, 16.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://corp.mediatek.com/product-security-bulletin/March-2026"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-367",
+                "description": "CWE-367 Time-of-check Time-of-use (TOCTOU) Race Condition"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-20445"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 4.4,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "HIGH",
+                "confidentialityImpact": "NONE"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T13:21:45.506483Z",
+                  "id": "CVE-2026-20445",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-02T13:21:49.146Z"
+          }
+        }
+      ]
+    }
+  }
+]
