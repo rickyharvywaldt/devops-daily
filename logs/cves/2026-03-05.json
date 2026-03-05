@@ -1,0 +1,866 @@
+[Thu Mar  5 13:11:54 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28415",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-27T15:33:57.289Z",
+      "datePublished": "2026-02-27T21:44:51.956Z",
+      "dateUpdated": "2026-03-02T21:55:38.664Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Gradio has Open Redirect in OAuth Flow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "lang": "en",
+                "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "CWE-284: Improper Access Control",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-330",
+                "lang": "en",
+                "description": "CWE-330: Use of Insufficiently Random Values",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-601",
+                "lang": "en",
+                "description": "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/gradio-app/gradio/security/advisories/GHSA-pfjf-5gxr-995x",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/gradio-app/gradio/security/advisories/GHSA-pfjf-5gxr-995x"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "gradio-app",
+            "product": "gradio",
+            "versions": [
+              {
+                "version": "< 6.6.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-27T21:44:51.956Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gradio is an open-source Python package designed for quick prototyping. Prior to version 6.6.0, the _redirect_to_target() function in Gradio's OAuth flow accepts an unvalidated _target_url query parameter, allowing redirection to arbitrary external URLs. This affects the /logout and /login/callback endpoints on Gradio apps with OAuth enabled (i.e. apps running on Hugging Face Spaces with gr.LoginButton). Starting in version 6.6.0, the _target_url parameter is sanitized to only use the path, query, and fragment, stripping any scheme or host."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-pfjf-5gxr-995x",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28415"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T21:55:30.572710Z",
+                  "id": "CVE-2026-28415",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-02T21:55:38.664Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28416",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-02-27T15:33:57.289Z",
+      "datePublished": "2026-02-27T21:47:04.975Z",
+      "dateUpdated": "2026-03-02T21:59:40.942Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Gradio has SSRF via Malicious `proxy_url` Injection in `gr.load()` Config Processing",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-918",
+                "lang": "en",
+                "description": "CWE-918: Server-Side Request Forgery (SSRF)",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/gradio-app/gradio/security/advisories/GHSA-jmh7-g254-2cq9",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/gradio-app/gradio/security/advisories/GHSA-jmh7-g254-2cq9"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "gradio-app",
+            "product": "gradio",
+            "versions": [
+              {
+                "version": "< 6.6.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-02-27T21:47:04.975Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gradio is an open-source Python package designed for quick prototyping. Prior to version 6.6.0, a Server-Side Request Forgery (SSRF) vulnerability in Gradio allows an attacker to make arbitrary HTTP requests from a victim's server by hosting a malicious Gradio Space. When a victim application uses `gr.load()` to load an attacker-controlled Space, the malicious `proxy_url` from the config is trusted and added to the allowlist, enabling the attacker to access internal services, cloud metadata endpoints, and private networks through the victim's infrastructure. Version 6.6.0 fixes the issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-jmh7-g254-2cq9",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28416"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-02T21:59:31.348228Z",
+                  "id": "CVE-2026-28416",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-02T21:59:40.942Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-2975",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-22T15:09:00.869Z",
+      "datePublished": "2026-02-23T06:02:07.772Z",
+      "dateUpdated": "2026-02-23T13:23:00.814Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-02-23T06:02:07.772Z"
+        },
+        "title": "FastApiAdmin Custom Documentation Endpoint init_app.py reset_api_docs information disclosure",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-200",
+                "lang": "en",
+                "description": "Information Disclosure"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "Improper Access Controls"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "FastApiAdmin",
+            "versions": [
+              {
+                "version": "2.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1",
+                "status": "affected"
+              },
+              {
+                "version": "2.2.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Custom Documentation Endpoint"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in FastApiAdmin up to 2.2.0. Affected by this vulnerability is the function reset_api_docs of the file /backend/app/plugin/init_app.py of the component Custom Documentation Endpoint. The manipulation results in information disclosure. The attack may be performed from remote. The exploit has been released to the public and may be used for attacks."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-22T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-22T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-22T16:14:18.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.347359",
+            "name": "VDB-347359 | FastApiAdmin Custom Documentation Endpoint init_app.py reset_api_docs information disclosure",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.347359",
+            "name": "VDB-347359 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.756067",
+            "name": "Submit #756067 | fastapiadmin <= 2.2.0 Exposure of Sensitive System Information to an Unauthorized Cont",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/fastapi-admin/vulnerability-1",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-2975"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-23T13:22:50.585629Z",
+                  "id": "CVE-2026-2975",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-23T13:23:00.814Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-2977",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-22T15:09:07.919Z",
+      "datePublished": "2026-02-23T07:02:06.897Z",
+      "dateUpdated": "2026-02-23T13:18:42.686Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-02-23T07:02:06.897Z"
+        },
+        "title": "FastApiAdmin Scheduled Task API controller.py upload_controller unrestricted upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "Unrestricted Upload"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "Improper Access Controls"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "FastApiAdmin",
+            "versions": [
+              {
+                "version": "2.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1",
+                "status": "affected"
+              },
+              {
+                "version": "2.2.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Scheduled Task API"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in FastApiAdmin up to 2.2.0. This affects the function upload_controller of the file /backend/app/api/v1/module_common/file/controller.py of the component Scheduled Task API. Such manipulation leads to unrestricted upload. It is possible to launch the attack remotely. The exploit has been disclosed publicly and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-22T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-22T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-22T16:14:21.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.347361",
+            "name": "VDB-347361 | FastApiAdmin Scheduled Task API controller.py upload_controller unrestricted upload",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.347361",
+            "name": "VDB-347361 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.756144",
+            "name": "Submit #756144 | fastapiadmin <= 2.2.0 Unrestricted Upload",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/fastapi-admin/vulnerability-3",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-2977"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-23T13:18:32.229509Z",
+                  "id": "CVE-2026-2977",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-23T13:18:42.686Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-2976",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-02-22T15:09:05.206Z",
+      "datePublished": "2026-02-23T06:32:07.764Z",
+      "dateUpdated": "2026-02-23T13:22:23.755Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-02-23T06:32:07.764Z"
+        },
+        "title": "FastApiAdmin Download Endpoint controller.py download_controller information disclosure",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-200",
+                "lang": "en",
+                "description": "Information Disclosure"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "Improper Access Controls"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "FastApiAdmin",
+            "versions": [
+              {
+                "version": "2.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1",
+                "status": "affected"
+              },
+              {
+                "version": "2.2.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "Download Endpoint"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in FastApiAdmin up to 2.2.0. Affected by this issue is the function download_controller of the file /backend/app/api/v1/module_common/file/controller.py of the component Download Endpoint. This manipulation of the argument file_path causes information disclosure. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:N/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-02-22T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-02-22T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-02-22T16:14:20.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.347360",
+            "name": "VDB-347360 | FastApiAdmin Download Endpoint controller.py download_controller information disclosure",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.347360",
+            "name": "VDB-347360 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.756089",
+            "name": "Submit #756089 | fastapiadmin <= 2.2.0 Path Traversal: '/absolute/pathname/here'",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/CC-T-454455/Vulnerabilities/tree/master/fastapi-admin/vulnerability-2",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-2976"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-02-23T13:22:12.583982Z",
+                  "id": "CVE-2026-2976",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-02-23T13:22:23.755Z"
+          }
+        }
+      ]
+    }
+  }
+]
