@@ -864,3 +864,860 @@
     }
   }
 ]
+[Thu Mar  5 19:19:43 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14517",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-11T06:46:00.975Z",
+      "datePublished": "2025-12-11T14:02:09.594Z",
+      "dateUpdated": "2025-12-11T14:50:44.816Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-11T14:02:09.594Z"
+        },
+        "title": "Yalantis uCrop AndroidManifest.xml UCropActivity  improper export of android application components",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-926",
+                "lang": "en",
+                "description": "Improper Export of Android Application Components"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Yalantis",
+            "product": "uCrop",
+            "versions": [
+              {
+                "version": "2.2.11",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was determined in Yalantis uCrop 2.2.11. This affects the function UCropActivity  of the file AndroidManifest.xml. Executing manipulation can lead to improper export of android application components. The attack can only be executed locally. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 4.8,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4.3,
+              "vectorString": "AV:L/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-11T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-11T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-11T07:51:07.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "arrester (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.335855",
+            "name": "VDB-335855 | Yalantis uCrop AndroidManifest.xml UCropActivity  improper export of android application components",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.335855",
+            "name": "VDB-335855 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.702811",
+            "name": "Submit #702811 | uCrop Android Library uCrop 2.2.11 Intent Spoofing",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://mesquite-dream-86b.notion.site/uCrop-Library-SSRF-and-Intent-Spoofing-2b8512562197804dae69edf96b942446?source=copy_link",
+            "tags": [
+              "related"
+            ]
+          },
+          {
+            "url": "https://mesquite-dream-86b.notion.site/uCrop-Library-SSRF-and-Intent-Spoofing-2b8512562197804dae69edf96b942446#469832583e0444dcb3d08b0ca661d1c6",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-14517"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-11T14:44:41.118617Z",
+                  "id": "CVE-2025-14517",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-11T14:50:44.816Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-14516",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2025-12-11T06:45:53.170Z",
+      "datePublished": "2025-12-11T14:02:07.166Z",
+      "dateUpdated": "2025-12-11T14:48:37.830Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2025-12-11T14:02:07.166Z"
+        },
+        "title": "Yalantis uCrop URL com.yalantis.ucrop.task.BitmapLoadTask.java downloadFile server-side request forgery",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-918",
+                "lang": "en",
+                "description": "Server-Side Request Forgery"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Yalantis",
+            "product": "uCrop",
+            "versions": [
+              {
+                "version": "2.2.11",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "URL Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in Yalantis uCrop 2.2.11. Affected by this issue is the function downloadFile of the file com.yalantis.ucrop.task.BitmapLoadTask.java of the component URL Handler. Performing manipulation results in server-side request forgery. The attack may be initiated remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-12-11T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2025-12-11T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2025-12-11T07:51:05.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "arrester (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.335854",
+            "name": "VDB-335854 | Yalantis uCrop URL com.yalantis.ucrop.task.BitmapLoadTask.java downloadFile server-side request forgery",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.335854",
+            "name": "VDB-335854 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.702810",
+            "name": "Submit #702810 | uCrop Android Library 2.2.11 Server-Side Request Forgery",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://mesquite-dream-86b.notion.site/uCrop-Library-SSRF-and-Intent-Spoofing-2b8512562197804dae69edf96b942446",
+            "tags": [
+              "related"
+            ]
+          },
+          {
+            "url": "https://mesquite-dream-86b.notion.site/uCrop-Library-SSRF-and-Intent-Spoofing-2b8512562197804dae69edf96b942446?pvs=25#039fe30a92dc4ed88c9b03f85418e92e",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-14516"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-11T14:47:20.325840Z",
+                  "id": "CVE-2025-14516",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-11T14:48:37.830Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-15015",
+      "assignerOrgId": "cded6c7f-6ce5-4948-8f87-aa7a3bbb6b0e",
+      "state": "PUBLISHED",
+      "assignerShortName": "twcert",
+      "dateReserved": "2025-12-22T01:45:22.814Z",
+      "datePublished": "2025-12-22T03:22:46.742Z",
+      "dateUpdated": "2025-12-22T14:50:46.219Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Enterprise Cloud Database",
+            "vendor": "Ragic",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-12-22T03:15:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Enterprise Cloud Database developed by Ragic has a Arbitrary File Read vulnerability, allowing unauthenticated remote attackers to exploit Relative Path Traversal to download arbitrary system files."
+              }
+            ],
+            "value": "Enterprise Cloud Database developed by Ragic has a Arbitrary File Read vulnerability, allowing unauthenticated remote attackers to exploit Relative Path Traversal to download arbitrary system files."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-139",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-139 Relative Path Traversal"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-23",
+                "description": "CWE-23 Relative Path Traversal",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "cded6c7f-6ce5-4948-8f87-aa7a3bbb6b0e",
+          "shortName": "twcert",
+          "dateUpdated": "2025-12-22T03:22:46.742Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.twcert.org.tw/tw/cp-132-10587-797c6-1.html"
+          },
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.twcert.org.tw/en/cp-139-10588-771e5-2.html"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Contact the vendor to Install the patch."
+              }
+            ],
+            "value": "Contact the vendor to Install the patch."
+          }
+        ],
+        "source": {
+          "advisory": "TVN-202512007",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Ragic｜Enterprise Cloud Database - Arbitrary File Read",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-15015"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-22T14:50:38.154344Z",
+                  "id": "CVE-2025-15015",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-22T14:50:46.219Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-15016",
+      "assignerOrgId": "cded6c7f-6ce5-4948-8f87-aa7a3bbb6b0e",
+      "state": "PUBLISHED",
+      "assignerShortName": "twcert",
+      "dateReserved": "2025-12-22T01:45:24.328Z",
+      "datePublished": "2025-12-22T03:27:57.769Z",
+      "dateUpdated": "2025-12-22T14:43:27.232Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Enterprise Cloud Database",
+            "vendor": "Ragic",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2025-12-22T03:25:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Enterprise Cloud Database developed by Ragic has a Hard-coded Cryptographic Key vulnerability, allowing unauthenticated remote attackers to exploit the fixed key to generate verification information and log into the system as any user."
+              }
+            ],
+            "value": "Enterprise Cloud Database developed by Ragic has a Hard-coded Cryptographic Key vulnerability, allowing unauthenticated remote attackers to exploit the fixed key to generate verification information and log into the system as any user."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-37",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-37 Retrieve Embedded Sensitive Data"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-321",
+                "description": "CWE-321 Use of Hard-coded Cryptographic Key",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "cded6c7f-6ce5-4948-8f87-aa7a3bbb6b0e",
+          "shortName": "twcert",
+          "dateUpdated": "2025-12-22T03:27:57.769Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.twcert.org.tw/tw/cp-132-10587-797c6-1.html"
+          },
+          {
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.twcert.org.tw/en/cp-139-10588-771e5-2.html"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Contact the vendor to Install the patch."
+              }
+            ],
+            "value": "Contact the vendor to Install the patch."
+          }
+        ],
+        "source": {
+          "advisory": "TVN-202512007",
+          "discovery": "EXTERNAL"
+        },
+        "title": "Ragic｜Enterprise Cloud Database - Hard-coded Cryptographic Key",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-15016"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-12-22T14:42:08.668678Z",
+                  "id": "CVE-2025-15016",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-12-22T14:43:27.232Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-m2hx-wjxc-9fp4",
+    "modified": "2026-03-05T18:57:18Z",
+    "published": "2026-03-05T18:57:18Z",
+    "aliases": [
+      "CVE-2026-29060"
+    ],
+    "summary": "Gokapi has privilege escalation with auth token",
+    "details": "### Impact\nA registered user without privileges to create or modify file requests is able to create a short-lived API key that has the permission to do so.\n\nThe user must be registered with Gokapi. If you do not have any other users with access to the admin/upload menu, you are not  impacted.\n\n### Patches\nThis CVE is patched in v2.2.3",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/forceu/gokapi"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.2.3"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/Forceu/Gokapi/security/advisories/GHSA-m2hx-wjxc-9fp4"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/Forceu/Gokapi"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-03-05T18:57:18Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-m2hx-wjxc-9fp4"
+          }
+        ]
+      }
+    }
+  }
+]
