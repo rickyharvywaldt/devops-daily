@@ -602,3 +602,1838 @@
     }
   }
 ]
+[Fri Mar  6 06:57:50 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28795",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-03-03T14:25:19.245Z",
+      "datePublished": "2026-03-06T06:21:52.789Z",
+      "dateUpdated": "2026-03-06T06:21:52.789Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "OpenChatBI: Critical Path Traversal Vulnerability in save_report Tool of OpenChatBI",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/zhongyu09/openchatbi/security/advisories/GHSA-vmwq-8g8c-jm79",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/zhongyu09/openchatbi/security/advisories/GHSA-vmwq-8g8c-jm79"
+          },
+          {
+            "name": "https://github.com/zhongyu09/openchatbi/issues/10",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/zhongyu09/openchatbi/issues/10"
+          },
+          {
+            "name": "https://github.com/zhongyu09/openchatbi/pull/12",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/zhongyu09/openchatbi/pull/12"
+          },
+          {
+            "name": "https://github.com/zhongyu09/openchatbi/commit/372a7e861da5159c3106d64d6f6edf8284db8c75",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/zhongyu09/openchatbi/commit/372a7e861da5159c3106d64d6f6edf8284db8c75"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "zhongyu09",
+            "product": "openchatbi",
+            "versions": [
+              {
+                "version": "< 0.2.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-03-06T06:21:52.789Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenChatBI is an intelligent chat-based BI tool powered by large language models, designed to help users query, analyze, and visualize data through natural language conversations. Prior to version 0.2.2, the save_report tool in openchatbi/tool/save_report.py suffers from a critical path traversal vulnerability due to insufficient input sanitization of the file_format parameter. This issue has been patched in version 0.2.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-vmwq-8g8c-jm79",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28795"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-2446",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-02-13T08:32:25.403Z",
+      "datePublished": "2026-03-06T06:00:03.502Z",
+      "dateUpdated": "2026-03-06T06:00:03.502Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-03-06T06:00:03.502Z"
+        },
+        "title": "Powerpack for LearnDash < 1.3.0 - Unauthenticated Arbitrary Option Update",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-862 Missing Authorization",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "PowerPack for LearnDash",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThan": "1.3.0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The PowerPack for LearnDash WordPress plugin before 1.3.0 does not have authorization and CRSF checks in an AJAX action, allowing unauthenticated users to update arbitrary WordPress options (such as default_role etc) and create arbitrary admin users"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/cbc95cea-e5d4-4874-add6-c8c728b683b7/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Khaled Alenazi (Nxploited)",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-2446"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-1128",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-01-17T21:55:30.995Z",
+      "datePublished": "2026-03-06T06:00:03.095Z",
+      "dateUpdated": "2026-03-06T06:00:03.095Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-03-06T06:00:03.095Z"
+        },
+        "title": "WP eCommerce <= 3.15.1 - Coupon Deletion via CSRF",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "WP eCommerce",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThanOrEqual": "3.15.1"
+              }
+            ],
+            "defaultStatus": "affected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP eCommerce WordPress plugin through 3.15.1 does not have CSRF check in place when deleting coupons, which could allow attackers to make a logged in admin remove them via a CSRF attack"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/35010d36-f985-4121-b7ee-c97edf724a7f/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Bob Matyas",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-1128"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for git-lfs is now available for Red Hat Enterprise Linux 9.4 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server.\n\nSecurity Fix(es):\n\n* crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate (CVE-2025-61729)\n\n* golang: net/url: Memory exhaustion in query parameter parsing in net/url (CVE-2025-61726)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:3930",
+          "url": "https://access.redhat.com/errata/RHSA-2026:3930"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2418462",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+        },
+        {
+          "category": "external",
+          "summary": "2434432",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_3930.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: git-lfs security update",
+      "tracking": {
+        "current_release_date": "2026-03-06T05:55:51+00:00",
+        "generator": {
+          "date": "2026-03-06T05:55:51+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.7.2"
+          }
+        },
+        "id": "RHSA-2026:3930",
+        "initial_release_date": "2026-03-05T17:14:14+00:00",
+        "revision_history": [
+          {
+            "date": "2026-03-05T17:14:14+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-03-05T17:14:14+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-03-06T05:55:51+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+                    "product_id": "AppStream-9.4.0.Z.EUS",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhel_eus:9.4::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:3.4.1-4.el9_4.4.src",
+                  "product": {
+                    "name": "git-lfs-0:3.4.1-4.el9_4.4.src",
+                    "product_id": "git-lfs-0:3.4.1-4.el9_4.4.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@3.4.1-4.el9_4.4?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+                  "product": {
+                    "name": "git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+                    "product_id": "git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@3.4.1-4.el9_4.4?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+                    "product_id": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@3.4.1-4.el9_4.4?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+                    "product_id": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@3.4.1-4.el9_4.4?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+                  "product": {
+                    "name": "git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+                    "product_id": "git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@3.4.1-4.el9_4.4?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+                    "product_id": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@3.4.1-4.el9_4.4?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+                    "product_id": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@3.4.1-4.el9_4.4?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+                  "product": {
+                    "name": "git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+                    "product_id": "git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@3.4.1-4.el9_4.4?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64",
+                    "product_id": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@3.4.1-4.el9_4.4?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+                    "product_id": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@3.4.1-4.el9_4.4?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:3.4.1-4.el9_4.4.s390x",
+                  "product": {
+                    "name": "git-lfs-0:3.4.1-4.el9_4.4.s390x",
+                    "product_id": "git-lfs-0:3.4.1-4.el9_4.4.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@3.4.1-4.el9_4.4?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+                    "product_id": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@3.4.1-4.el9_4.4?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+                    "product_id": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@3.4.1-4.el9_4.4?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:3.4.1-4.el9_4.4.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64"
+          },
+          "product_reference": "git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:3.4.1-4.el9_4.4.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le"
+          },
+          "product_reference": "git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:3.4.1-4.el9_4.4.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x"
+          },
+          "product_reference": "git-lfs-0:3.4.1-4.el9_4.4.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:3.4.1-4.el9_4.4.src as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src"
+          },
+          "product_reference": "git-lfs-0:3.4.1-4.el9_4.4.src",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:3.4.1-4.el9_4.4.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64"
+          },
+          "product_reference": "git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64"
+          },
+          "product_reference": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le"
+          },
+          "product_reference": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x"
+          },
+          "product_reference": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64"
+          },
+          "product_reference": "git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64"
+          },
+          "product_reference": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le"
+          },
+          "product_reference": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x"
+          },
+          "product_reference": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+          },
+          "product_reference": "git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.EUS"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-03-05T17:14:14+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:3930"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+            "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+            "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-03-05T17:14:14+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:3930"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.src",
+              "AppStream-9.4.0.Z.EUS:git-lfs-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debuginfo-0:3.4.1-4.el9_4.4.x86_64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.aarch64",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.ppc64le",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.s390x",
+              "AppStream-9.4.0.Z.EUS:git-lfs-debugsource-0:3.4.1-4.el9_4.4.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:3930"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for git-lfs is now available for Red Hat Enterprise Linux 9.0 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server.\n\nSecurity Fix(es):\n\n* crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate (CVE-2025-61729)\n\n* golang: net/url: Memory exhaustion in query parameter parsing in net/url (CVE-2025-61726)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:3932",
+          "url": "https://access.redhat.com/errata/RHSA-2026:3932"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2418462",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+        },
+        {
+          "category": "external",
+          "summary": "2434432",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_3932.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: git-lfs security update",
+      "tracking": {
+        "current_release_date": "2026-03-06T05:55:49+00:00",
+        "generator": {
+          "date": "2026-03-06T05:55:49+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "4.7.2"
+          }
+        },
+        "id": "RHSA-2026:3932",
+        "initial_release_date": "2026-03-05T16:08:17+00:00",
+        "revision_history": [
+          {
+            "date": "2026-03-05T16:08:17+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-03-05T16:08:17+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-03-06T05:55:49+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+                    "product_id": "AppStream-9.0.0.Z.E4S",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhel_e4s:9.0::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:2.13.3-5.el9_0.6.src",
+                  "product": {
+                    "name": "git-lfs-0:2.13.3-5.el9_0.6.src",
+                    "product_id": "git-lfs-0:2.13.3-5.el9_0.6.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@2.13.3-5.el9_0.6?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+                  "product": {
+                    "name": "git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+                    "product_id": "git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@2.13.3-5.el9_0.6?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+                    "product_id": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@2.13.3-5.el9_0.6?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+                    "product_id": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@2.13.3-5.el9_0.6?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+                  "product": {
+                    "name": "git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+                    "product_id": "git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@2.13.3-5.el9_0.6?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+                    "product_id": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@2.13.3-5.el9_0.6?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+                    "product_id": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@2.13.3-5.el9_0.6?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+                  "product": {
+                    "name": "git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+                    "product_id": "git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@2.13.3-5.el9_0.6?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64",
+                    "product_id": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@2.13.3-5.el9_0.6?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+                    "product_id": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@2.13.3-5.el9_0.6?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-0:2.13.3-5.el9_0.6.s390x",
+                  "product": {
+                    "name": "git-lfs-0:2.13.3-5.el9_0.6.s390x",
+                    "product_id": "git-lfs-0:2.13.3-5.el9_0.6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs@2.13.3-5.el9_0.6?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+                  "product": {
+                    "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+                    "product_id": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debugsource@2.13.3-5.el9_0.6?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+                  "product": {
+                    "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+                    "product_id": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/git-lfs-debuginfo@2.13.3-5.el9_0.6?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:2.13.3-5.el9_0.6.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64"
+          },
+          "product_reference": "git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:2.13.3-5.el9_0.6.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le"
+          },
+          "product_reference": "git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:2.13.3-5.el9_0.6.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x"
+          },
+          "product_reference": "git-lfs-0:2.13.3-5.el9_0.6.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:2.13.3-5.el9_0.6.src as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src"
+          },
+          "product_reference": "git-lfs-0:2.13.3-5.el9_0.6.src",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-0:2.13.3-5.el9_0.6.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64"
+          },
+          "product_reference": "git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64"
+          },
+          "product_reference": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le"
+          },
+          "product_reference": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x"
+          },
+          "product_reference": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64"
+          },
+          "product_reference": "git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64"
+          },
+          "product_reference": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le"
+          },
+          "product_reference": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x"
+          },
+          "product_reference": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+          },
+          "product_reference": "git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-03-05T16:08:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:3932"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "Within HostnameError.Error(), when constructing an error string, there is no limit to the number of hosts that will be printed out. Furthermore, the error string is constructed by repeated string concatenation, leading to quadratic runtime. Therefore, a certificate provided by a malicious actor can result in excessive resource consumption.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+            "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+            "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-03-05T16:08:17+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:3932"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.src",
+              "AppStream-9.0.0.Z.E4S:git-lfs-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debuginfo-0:2.13.3-5.el9_0.6.x86_64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.aarch64",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.ppc64le",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.s390x",
+              "AppStream-9.0.0.Z.E4S:git-lfs-debugsource-0:2.13.3-5.el9_0.6.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:3932"
+          }
+        ]
+      }
+    }
+  }
+]
