@@ -2437,3 +2437,682 @@
     }
   }
 ]
+[Fri Mar  6 13:07:23 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28035",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-25T12:13:25.489Z",
+      "datePublished": "2026-03-05T05:54:13.960Z",
+      "dateUpdated": "2026-03-06T12:20:03.169Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://themeforest.net",
+            "defaultStatus": "unaffected",
+            "packageName": "printy",
+            "product": "Printy",
+            "vendor": "ThemeREX",
+            "versions": [
+              {
+                "lessThanOrEqual": "<= 1.8",
+                "status": "affected",
+                "version": "n/a",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Tran Nguyen Bao Khanh (VCI - VNPT Cyber Immunity) | Patchstack Bug Bounty Program"
+          }
+        ],
+        "datePublic": "2026-03-05T06:51:50.280Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in ThemeREX Printy printy allows PHP Local File Inclusion.<p>This issue affects Printy: from n/a through <= 1.8.</p>"
+              }
+            ],
+            "value": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in ThemeREX Printy printy allows PHP Local File Inclusion.This issue affects Printy: from n/a through <= 1.8."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-252",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "PHP Local File Inclusion"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-98",
+                "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-05T05:54:13.960Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vdb-entry"
+            ],
+            "url": "https://patchstack.com/database/Wordpress/Theme/printy/vulnerability/wordpress-printy-theme-1-8-local-file-inclusion-vulnerability?_s_id=cve"
+          }
+        ],
+        "title": "WordPress Printy theme <= 1.8 - Local File Inclusion vulnerability",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28035"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 8.1,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-06T12:19:52.489950Z",
+                  "id": "CVE-2026-28035",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-06T12:20:03.169Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25200",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-06T12:07:22.108Z",
+      "datePublished": "2026-03-06T12:19:22.840Z",
+      "dateUpdated": "2026-03-06T12:19:22.840Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-06T12:19:22.840Z"
+        },
+        "datePublic": "2018-11-06T12:00:00.000Z",
+        "title": "OOP CMS BLOG 1.0 Cross-Site Request Forgery via addUser.php",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OOP CMS BLOG 1.0 contains a cross-site request forgery vulnerability that allows unauthenticated attackers to create administrative user accounts by crafting malicious POST requests. Attackers can submit forms to the addUser.php endpoint with parameters including userName, password, email, and role set to administrative privileges to gain unauthorized access."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Zsoft",
+            "product": "OOP CMS BLOG",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/45794",
+            "name": "ExploitDB-45794",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: OOP CMS BLOG 1.0 Cross-Site Request Forgery via addUser.php",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/oop-cms-blog-cross-site-request-forgery-via-adduserphp"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Ihsan Sencan",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25200"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25199",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-06T12:07:08.787Z",
+      "datePublished": "2026-03-06T12:19:22.036Z",
+      "dateUpdated": "2026-03-06T12:19:22.036Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-06T12:19:22.036Z"
+        },
+        "datePublic": "2018-11-06T12:00:00.000Z",
+        "title": "OOP CMS BLOG 1.0 SQL Injection via search parameter",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OOP CMS BLOG 1.0 contains SQL injection vulnerabilities that allow unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through multiple parameters. Attackers can inject SQL commands via the search parameter in search.php, pageid parameter in page.php, and id parameter in posts.php to extract database information including table names, schema names, and database credentials."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                "cweId": "CWE-89",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Zsoft",
+            "product": "OOP CMS BLOG",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/45799",
+            "name": "ExploitDB-45799",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: OOP CMS BLOG 1.0 SQL Injection via search parameter",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/oop-cms-blog-sql-injection-via-search-parameter"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Ihsan Sencan",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25199"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25198",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-06T12:06:38.474Z",
+      "datePublished": "2026-03-06T12:19:21.154Z",
+      "dateUpdated": "2026-03-06T12:19:21.154Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-06T12:19:21.154Z"
+        },
+        "datePublic": "2018-11-03T12:00:00.000Z",
+        "title": "eToolz 3.4.8.0 Denial of Service via Buffer Overflow",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eToolz 3.4.8.0 contains a denial of service vulnerability that allows local attackers to crash the application by supplying oversized input buffers. Attackers can create a payload file containing 255 bytes of data that triggers a buffer overflow condition when processed by the application."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Out-of-bounds Write",
+                "cweId": "CWE-787",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Gaijin",
+            "product": "eToolz",
+            "versions": [
+              {
+                "version": "3.4.8.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 6.2,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/45797",
+            "name": "ExploitDB-45797",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: eToolz 3.4.8.0 Denial of Service via Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/etoolz-denial-of-service-via-buffer-overflow"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Ihsan Sencan",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25198"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25197",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-06T12:01:47.469Z",
+      "datePublished": "2026-03-06T12:19:20.419Z",
+      "dateUpdated": "2026-03-06T12:19:20.419Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-06T12:19:20.419Z"
+        },
+        "datePublic": "2018-11-07T12:00:00.000Z",
+        "title": "PlayJoom 0.10.1 SQL Injection via catid Parameter",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PlayJoom 0.10.1 contains an SQL injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL queries by injecting malicious code through the catid parameter. Attackers can send GET requests to index.php with option=com_playjoom&view=genre&catid=[SQL] to extract sensitive database information including usernames, databases, and version details."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                "cweId": "CWE-89",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Playjoom",
+            "product": "PlayJoom",
+            "versions": [
+              {
+                "version": "0.10.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/45803",
+            "name": "ExploitDB-45803",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: PlayJoom 0.10.1 SQL Injection via catid Parameter",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/playjoom-sql-injection-via-catid-parameter"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Ihsan Sencan",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25197"
+          }
+        ]
+      }
+    }
+  }
+]
