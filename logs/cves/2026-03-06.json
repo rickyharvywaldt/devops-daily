@@ -1,0 +1,604 @@
+[Fri Mar  6 02:31:34 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3612",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-03-05T18:20:48.894Z",
+      "datePublished": "2026-03-06T00:32:10.901Z",
+      "dateUpdated": "2026-03-06T00:32:10.901Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-06T00:32:10.901Z"
+        },
+        "title": "Wavlink WL-NU516U1 OTA Online Upgrade adm.cgi sub_405AF4 command injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-77",
+                "lang": "en",
+                "description": "Command Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Wavlink",
+            "product": "WL-NU516U1",
+            "versions": [
+              {
+                "version": "V240425",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:wavlink:wl-nu516u1_firmware:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "OTA Online Upgrade"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was determined in Wavlink WL-NU516U1 V240425. This affects the function sub_405AF4 of the file /cgi-bin/adm.cgi of the component OTA Online Upgrade. This manipulation of the argument firmware_url causes command injection. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.6,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.2,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.2,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 8.3,
+              "vectorString": "AV:N/AC:L/Au:M/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-03-05T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-03-05T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-03-05T19:25:52.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "haimianbaobao (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.349220",
+            "name": "VDB-349220 | Wavlink WL-NU516U1 OTA Online Upgrade adm.cgi sub_405AF4 command injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.349220",
+            "name": "VDB-349220 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.754668",
+            "name": "Submit #754668 | Wavlink NU516U1 V240425 Command Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Wlz1112/WAVLINK-NU516-V240425/blob/main/firmware_url.md",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3612"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3610",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-03-05T18:05:38.127Z",
+      "datePublished": "2026-03-06T00:32:08.720Z",
+      "dateUpdated": "2026-03-06T00:32:08.720Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-06T00:32:08.720Z"
+        },
+        "title": "HSC Cybersecurity Mailinspector URL mliUserValidation.php cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "HSC Cybersecurity",
+            "product": "Mailinspector",
+            "versions": [
+              {
+                "version": "5.3.2-3",
+                "status": "affected"
+              },
+              {
+                "version": "5.4.0",
+                "status": "unaffected"
+              }
+            ],
+            "modules": [
+              "URL Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in HSC Cybersecurity Mailinspector up to 5.3.2-3. Affected by this issue is some unknown functionality of the file /mailinspector/mliUserValidation.php of the component URL Handler. The manipulation of the argument error_description results in cross site scripting. The attack may be performed from remote. The exploit has been made public and could be used. Upgrading to version 5.4.0 can resolve this issue. You should upgrade the affected component. The vendor was contacted early and responded very professional: \"We have already implemented the fix and made a hotfix available to affected customers, ensuring mitigation while the official release 5.4.0 has not yet been published. This allows customers to address the issue immediately, outside the regular release cycle.\""
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N/E:P/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 5,
+              "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N/E:POC/RL:OF/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-03-05T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-03-05T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-03-05T19:11:51.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "gabriel (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.349219",
+            "name": "VDB-349219 | HSC Cybersecurity Mailinspector URL mliUserValidation.php cross site scripting",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.349219",
+            "name": "VDB-349219 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.748710",
+            "name": "Submit #748710 | HSC Cybersecurity mailinspector 5.3.2-3 Cross Site Scripting",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://docs.google.com/document/d/1KI2SIDcVm5U3Yzo5tNT5YOwREQWe_5BJaWe-ctRmLoI/edit?usp=sharing",
+            "tags": [
+              "broken-link",
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3610"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-gv46-4xfq-jv58",
+    "modified": "2026-03-06T01:05:53Z",
+    "published": "2026-03-02T23:24:54Z",
+    "aliases": [
+      "CVE-2026-28466"
+    ],
+    "summary": "OpenClaw Vulnerable to Remote Code Execution via Node Invoke Approval Bypass in Gateway",
+    "details": "### Summary\n\nA remote code execution (RCE) vulnerability in the gateway-to-node invocation path allowed an authenticated gateway client to bypass node-host exec approvals by injecting internal control fields into `node.invoke` parameters.\n\n### Affected Component\n\n- Gateway method: `node.invoke` for node command `system.run`\n- Node host runner: exec approval gating for `system.run`\n\n### Impact\n\nIf an attacker can authenticate to a gateway (for example via a leaked/shared gateway token or a paired device token with `operator.write`), they could execute arbitrary commands on connected node hosts that support `system.run`. This can lead to full compromise of developer workstations, CI runners, and servers running the node host.\n\n### Technical Details\n\nThe gateway forwarded user-controlled `params` to node hosts without sanitizing internal approval fields. The node host treated `params.approved === true` and/or `params.approvalDecision` as sufficient to skip the approval workflow.\n\n### Fix\n\nPatched in **OpenClaw `2026.2.14`**.\n\n- Commits:\n  - `318379cdb8d045da0009b0051bd0e712e5c65e2d`\n  - `a7af646fdab124a7536998db6bd6ad567d2b06b0`\n  - `c1594627421f95b6bc4ad7c606657dc75b5ad0ce`\n  - `0af76f5f0e93540efbdf054895216c398692afcd`\n- Gateway strips untrusted approval control fields from `system.run` user input.\n- Gateway only re-attaches approval flags when `params.runId` references a valid `exec.approval.request` record and the request context matches. Approval IDs are bound to the requesting device identity (stable across reconnects), preventing replay by other clients.\n- Gateway forwards only an allowlisted set of `system.run` parameters, preventing future control-field smuggling.\n\n### Mitigations\n\n- Upgrade to `2026.2.14` or later.\n- Restrict access to the gateway (do not expose it to untrusted networks/users).\n- Rotate gateway credentials if you suspect token/password exposure.\n- Disable remote command execution on nodes by blocking `system.run` at the gateway (`gateway.nodes.denyCommands`) and/or by configuring node exec security to `deny`.\n\n### Credits\n\nOpenClaw thanks @222n5 for reporting this issue.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2026.2.14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gv46-4xfq-jv58"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28466"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/commit/0af76f5f0e93540efbdf054895216c398692afcd"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/commit/318379cdb8d045da0009b0051bd0e712e5c65e2d"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/commit/a7af646fdab124a7536998db6bd6ad567d2b06b0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/commit/c1594627421f95b6bc4ad7c606657dc75b5ad0ce"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/openclaw/openclaw"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/openclaw-remote-code-execution-via-node-invoke-approval-bypass"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20",
+        "CWE-441",
+        "CWE-863"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-03-02T23:24:54Z",
+      "nvd_published_at": "2026-03-05T22:16:19Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-gv46-4xfq-jv58"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-v892-hwpg-jwqp",
+    "modified": "2026-03-06T01:05:42Z",
+    "published": "2026-03-02T23:23:03Z",
+    "aliases": [
+      "CVE-2026-28486"
+    ],
+    "summary": "OpenClaw vulnerable to path traversal (Zip Slip) in archive extraction during explicit installation commands",
+    "details": "## Summary\n\nA path traversal (Zip Slip) issue in archive extraction during explicit installation commands could allow a crafted archive to write files outside the intended extraction directory.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected versions: `>=2026.1.16-2 <2026.2.14`\n- Fixed version: `2026.2.14`\n\n## Affected Commands / Flows\n\nThis only affects users who run installation commands against an untrusted archive (local file or download URL), for example:\n\n- `openclaw skills install` (download+extract installers)\n- `openclaw hooks install` (archive installs)\n- `openclaw plugins install` (archive installs)\n- `openclaw signal install` (signal-cli asset extraction)\n\nIt is not triggered by receiving messages or normal gateway operation.\n\n## Impact\n\nArbitrary file write as the current user. In the worst case this can be used for persistence or code execution if an attacker can convince a user to install a crafted archive.\n\n## Fix\n\n- Fix commit: `3aa94afcfd12104c683c9cad81faf434d0dadf87`\n- Released in: `2026.2.14`\n\n## Credits\n\nOpenClaw thanks @markmusson for reporting.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2026.1.16-2"
+              },
+              {
+                "fixed": "2026.2.14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v892-hwpg-jwqp"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28486"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/commit/3aa94afcfd12104c683c9cad81faf434d0dadf87"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/openclaw/openclaw"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/openclaw-path-traversal-zip-slip-in-archive-extraction-via-installation-commands"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-03-02T23:23:03Z",
+      "nvd_published_at": "2026-03-05T22:16:23Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-v892-hwpg-jwqp"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xw4p-pw82-hqr7",
+    "modified": "2026-03-06T01:05:34Z",
+    "published": "2026-03-02T22:51:51Z",
+    "aliases": [
+      "CVE-2026-28457"
+    ],
+    "summary": "OpenClaw's sandbox skill mirroring path traversal vulnerability could write outside the sandbox workspace",
+    "details": "## Overview\n\nIn affected versions, OpenClaw’s sandbox skill mirroring used the skill’s frontmatter `name` as part of the destination path when copying skills into the sandbox workspace. A crafted skill name containing traversal segments (for example `../`) or an absolute path could cause the copy to write outside `<sandbox_workspace>/skills/`.\n\n## Impact\n\n- Files may be written outside the sandbox workspace root (within the permissions of the user running OpenClaw).\n\n## Attack Requirements\n\n- Attacker can provide a skill package (controls `SKILL.md` frontmatter).\n- Victim runs with sandbox enabled and skill mirroring into the sandbox workspace.\n\n## Affected Packages / Versions\n\n- `openclaw` (npm): `< 2026.2.14`\n\n## Fixed In\n\n- `openclaw` (npm): `>= 2026.2.14`\n\n## Fix Commit(s)\n\n- 3eb6a31b6fcf8268456988bfa8e3637d373438c2\n\nOpenClaw thanks @1seal for reporting.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2026.2.14"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xw4p-pw82-hqr7"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28457"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/openclaw/openclaw/commit/3eb6a31b6fcf8268456988bfa8e3637d373438c2"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/openclaw/openclaw"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/openclaw-path-traversal-in-sandbox-skill-mirroring-via-name-parameter"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-03-02T22:51:51Z",
+      "nvd_published_at": "2026-03-05T22:16:18Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xw4p-pw82-hqr7"
+          }
+        ]
+      }
+    }
+  }
+]
