@@ -3116,3 +3116,635 @@
     }
   }
 ]
+[Fri Mar  6 18:54:31 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-29121",
+      "assignerOrgId": "b7efe717-a805-47cf-8e9a-921fca0ce0ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "Gridware",
+      "dateReserved": "2026-03-04T07:53:45.786Z",
+      "datePublished": "2026-03-05T00:48:59.825Z",
+      "dateUpdated": "2026-03-06T18:22:54.833Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "SFX2100 Satellite Receiver",
+            "vendor": "International Datacasting Corporation",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "SFX2100"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Abdul Mhanni"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "International Data Casting (IDC) SFX2100 satellite receiver comes with the `/sbin/<code>ip`</code>&nbsp;utility installed with the setuid bit set. This configuration grants elevated privileges to any local user who can execute the binary. A local actor is able to use the GTFObins resource to preform privileged file reads as the root user on the local file system and may potentially lead to other avenues for preforming privileged actions.&nbsp;<br>"
+              }
+            ],
+            "value": "International Data Casting (IDC) SFX2100 satellite receiver comes with the `/sbin/ip` utility installed with the setuid bit set. This configuration grants elevated privileges to any local user who can execute the binary. A local actor is able to use the GTFObins resource to preform privileged file reads as the root user on the local file system and may potentially lead to other avenues for preforming privileged actions."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-233",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-233 Privilege Escalation"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 8.3,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "PROOF_OF_CONCEPT",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "AMBER",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:P/RE:L/U:Amber",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "LOW"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-269",
+                "description": "CWE-269 Improper Privilege Management",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "b7efe717-a805-47cf-8e9a-921fca0ce0ce",
+          "shortName": "Gridware",
+          "dateUpdated": "2026-03-05T05:56:32.661Z"
+        },
+        "references": [
+          {
+            "url": "https://www.abdulmhsblog.com/posts/sfx2100-vulns/"
+          },
+          {
+            "url": "https://gtfobins.org/gtfobins/ip/"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "`/sbin/ip` Binary given SETUID Permissions on IDC SFX2100 Leading to Potential LPE",
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-29121"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-06T18:22:46.775471Z",
+                  "id": "CVE-2026-29121",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-06T18:22:54.833Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28009",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-25T12:13:06.635Z",
+      "datePublished": "2026-03-05T05:54:07.668Z",
+      "dateUpdated": "2026-03-06T18:21:51.430Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://themeforest.net",
+            "defaultStatus": "unaffected",
+            "packageName": "dronex",
+            "product": "DroneX",
+            "vendor": "ThemeREX",
+            "versions": [
+              {
+                "lessThanOrEqual": "<= 1.1.12",
+                "status": "affected",
+                "version": "n/a",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Bonds | Patchstack Bug Bounty Program"
+          }
+        ],
+        "datePublic": "2026-03-05T06:51:59.006Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in ThemeREX DroneX dronex allows PHP Local File Inclusion.<p>This issue affects DroneX: from n/a through <= 1.1.12.</p>"
+              }
+            ],
+            "value": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in ThemeREX DroneX dronex allows PHP Local File Inclusion.This issue affects DroneX: from n/a through <= 1.1.12."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-252",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "PHP Local File Inclusion"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-98",
+                "description": "Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-05T05:54:07.668Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vdb-entry"
+            ],
+            "url": "https://patchstack.com/database/Wordpress/Theme/dronex/vulnerability/wordpress-dronex-theme-1-1-12-local-file-inclusion-vulnerability?_s_id=cve"
+          }
+        ],
+        "title": "WordPress DroneX theme <= 1.1.12 - Local File Inclusion vulnerability",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28009"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 8.1,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-06T18:21:47.668295Z",
+                  "id": "CVE-2026-28009",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-06T18:21:51.430Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-69649",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-03-06T18:21:07.961Z",
+      "dateReserved": "2026-01-09T00:00:00.000Z",
+      "datePublished": "2026-03-06T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-03-06T18:21:07.961Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GNU Binutils thru 2.46 readelf contains a null pointer dereference vulnerability when processing a crafted ELF binary with malformed header fields. During relocation processing, an invalid or null section pointer may be passed into display_relocations(), resulting in a segmentation fault (SIGSEGV) and abrupt termination. No evidence of memory corruption beyond the null pointer dereference, nor any possibility of code execution, was observed."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=33697"
+          },
+          {
+            "url": "https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git;h=66a3492ce68e1ae45b2489bd9a815c39ea5d7f66"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-69649"
+          }
+        ]
+      }
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2024-43035",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-03-06T18:20:33.640Z",
+      "dateReserved": "2024-08-05T00:00:00.000Z",
+      "datePublished": "2026-03-05T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unknown",
+            "product": "Fonoster",
+            "vendor": "Fonoster",
+            "versions": [
+              {
+                "lessThan": "0.6.1",
+                "status": "affected",
+                "version": "0.5.5",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Fonoster 0.5.5 before 0.6.1 allows ../ directory traversal to read arbitrary files via the /sounds/:file or /tts/:file VoiceServer endpoint. This occurs in serveFiles in mods/voice/src/utils.ts. NOTE: serveFiles exists in 0.5.5 but not in the next release, 0.6.1."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-24",
+                "description": "CWE-24 Path Traversal: '../filedir'",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-03-05T19:00:21.139Z"
+        },
+        "references": [
+          {
+            "url": "https://github.com/fonoster/fonoster/blob/4a1438d9dedeaf7b2a5b6a50d5e233f994e2b2cf/mods/voice/src/utils.ts#L66-L70"
+          },
+          {
+            "url": "https://zeropath.com/blog/fonoster-voiceserver-lfi-vulnerability"
+          }
+        ],
+        "x_generator": {
+          "engine": "enrichogram 0.0.1"
+        },
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 5.8,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N"
+            }
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2024-43035"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-06T18:20:27.912948Z",
+                  "id": "CVE-2024-43035",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-06T18:20:33.640Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27982",
+      "assignerOrgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+      "state": "PUBLISHED",
+      "assignerShortName": "jpcert",
+      "dateReserved": "2026-02-25T04:48:37.210Z",
+      "datePublished": "2026-03-05T05:31:25.711Z",
+      "dateUpdated": "2026-03-06T18:19:55.985Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "allauth",
+            "product": "django-allauth",
+            "versions": [
+              {
+                "version": "prior to 65.14.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An open redirect vulnerability exists in django-allauth versions prior to 65.14.1 when SAML IdP initiated SSO is enabled (it is disabled by default), which may allow an attacker to redirect users to an arbitrary external website via a crafted URL."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "URL redirection to untrusted site ('Open Redirect')",
+                "lang": "en-US",
+                "cweId": "CWE-601",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://allauth.org/news/2026/02/django-allauth-65.14.1-released/"
+          },
+          {
+            "url": "https://jvn.jp/en/jp/JVN23669411/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 5.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ede6fdc4-6654-4307-a26d-3331c018e2ce",
+          "shortName": "jpcert",
+          "dateUpdated": "2026-03-05T05:31:25.711Z"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27982"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-06T18:19:44.307456Z",
+                  "id": "CVE-2026-27982",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-06T18:19:55.985Z"
+          }
+        }
+      ]
+    }
+  }
+]
