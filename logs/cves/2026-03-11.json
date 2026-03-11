@@ -1,0 +1,666 @@
+[Wed Mar 11 02:29:22 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28485",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-02-27T19:21:11.891Z",
+      "datePublished": "2026-03-05T21:59:59.595Z",
+      "dateUpdated": "2026-03-09T20:40:24.277Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-05T22:28:23.583Z"
+        },
+        "datePublic": "2026-02-16T00:00:00.000Z",
+        "title": "OpenClaw 2026.1.5 < 2026.2.12 - Missing Authentication in Browser Control HTTP Endpoints",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw versions 2026.1.5 prior to 2026.2.12 fail to enforce mandatory authentication on the /agent/act browser-control HTTP route, allowing unauthorized local callers to invoke privileged operations. Remote attackers on the local network or local processes can execute arbitrary browser-context actions and access sensitive in-session data by sending requests to unauthenticated endpoints."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Missing Authentication for Critical Function",
+                "cweId": "CWE-306",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "OpenClaw",
+            "vendor": "OpenClaw",
+            "versions": [
+              {
+                "version": "2026.1.5",
+                "lessThan": "2026.2.12",
+                "status": "affected",
+                "versionType": "custom"
+              }
+            ],
+            "packageURL": "pkg:npm/openclaw"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "versionStartIncluding": "2026.1.5",
+                    "versionEndExcluding": "2026.2.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "attackVector": "LOCAL",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "LOW",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qpjj-47vm-64pj",
+            "name": "GitHub Security Advisory (GHSA-qpjj-47vm-64pj)",
+            "tags": [
+              "vendor-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/9230a2ae14307740a13ada7afd6dcfab34e0287f",
+            "name": "Patch Commit",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: OpenClaw 2026.1.5 < 2026.2.12 - Missing Authentication in Browser Control HTTP Endpoints",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/openclaw-missing-authentication-in-browser-control-http-endpoints"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Troy Cusolle (@tcusolle)",
+            "type": "reporter"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28485"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-03-09T20:40:15.317200Z",
+                  "id": "CVE-2026-28485",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-03-09T20:40:24.277Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27266",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-02-18T22:02:41.387Z",
+      "datePublished": "2026-03-11T00:23:12.707Z",
+      "dateUpdated": "2026-03-11T00:23:12.707Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Experience Manager",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "6.5.23",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-03-10T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.4,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "LOW",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "LOW",
+              "modifiedIntegrityImpact": "LOW",
+              "modifiedPrivilegesRequired": "LOW",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 5.4,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "Cross-site Scripting (Stored XSS) (CWE-79)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-03-11T00:23:12.707Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/experience-manager/apsb26-24.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27266"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27265",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-02-18T22:02:41.387Z",
+      "datePublished": "2026-03-11T00:23:22.784Z",
+      "dateUpdated": "2026-03-11T00:23:22.784Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Experience Manager",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "6.5.23",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-03-10T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.4,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "LOW",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "LOW",
+              "modifiedIntegrityImpact": "LOW",
+              "modifiedPrivilegesRequired": "LOW",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 5.4,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "Cross-site Scripting (Stored XSS) (CWE-79)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-03-11T00:23:22.784Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/experience-manager/apsb26-24.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27265"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27264",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-02-18T22:02:41.386Z",
+      "datePublished": "2026-03-11T00:23:15.420Z",
+      "dateUpdated": "2026-03-11T00:23:15.420Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Experience Manager",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "6.5.23",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-03-10T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.4,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "LOW",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "LOW",
+              "modifiedIntegrityImpact": "LOW",
+              "modifiedPrivilegesRequired": "LOW",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 5.4,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "Cross-site Scripting (Stored XSS) (CWE-79)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-03-11T00:23:15.420Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/experience-manager/apsb26-24.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27264"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27263",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-02-18T22:02:41.386Z",
+      "datePublished": "2026-03-11T00:23:34.487Z",
+      "dateUpdated": "2026-03-11T00:23:34.487Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Experience Manager",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "6.5.23",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-03-10T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Experience Manager versions 6.5.23 and earlier are affected by a stored Cross-Site Scripting (XSS) vulnerability that could be abused by a low-privileged attacker to inject malicious scripts into vulnerable form fields. Malicious JavaScript may be executed in a victim’s browser when they browse to the page containing the vulnerable field."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.4,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "LOW",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "LOW",
+              "modifiedIntegrityImpact": "LOW",
+              "modifiedPrivilegesRequired": "LOW",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 5.4,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "Cross-site Scripting (Stored XSS) (CWE-79)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-03-11T00:23:34.487Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/experience-manager/apsb26-24.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Experience Manager | Cross-site Scripting (Stored XSS) (CWE-79)",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27263"
+          }
+        ]
+      }
+    }
+  }
+]
