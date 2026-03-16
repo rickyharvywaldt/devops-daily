@@ -1,0 +1,1127 @@
+[Mon Mar 16 02:52:29 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-4205",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-03-15T11:36:55.279Z",
+      "datePublished": "2026-03-16T01:32:09.418Z",
+      "dateUpdated": "2026-03-16T01:32:09.418Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-16T01:32:09.418Z"
+        },
+        "title": "D-Link DNS-1550-04 app_mgr.cgi FTP_Server_BlockIP_Del command injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-77",
+                "lang": "en",
+                "description": "Command Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "D-Link",
+            "product": "DNS-120",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNR-202L",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-315L",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-320",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-320L",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-320LW",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-321",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNR-322L",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-323",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-325",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-326",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-327L",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNR-326",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-340L",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-343",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-345",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-726-4",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-1100-4",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-1200-05",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          },
+          {
+            "vendor": "D-Link",
+            "product": "DNS-1550-04",
+            "versions": [
+              {
+                "version": "20260205",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in D-Link DNS-120, DNR-202L, DNS-315L, DNS-320, DNS-320L, DNS-320LW, DNS-321, DNR-322L, DNS-323, DNS-325, DNS-326, DNS-327L, DNR-326, DNS-340L, DNS-343, DNS-345, DNS-726-4, DNS-1100-4, DNS-1200-05 and DNS-1550-04 up to 20260205. The impacted element is the function cgi_refresh_db/FTP_Server_BlockIP_Add/FTP_Server_BlockIP_Del of the file /cgi-bin/app_mgr.cgi. Such manipulation leads to command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-03-15T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-03-15T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-03-15T12:42:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Bond (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?id.351117",
+            "name": "VDB-351117 | D-Link DNS-1550-04 app_mgr.cgi FTP_Server_BlockIP_Del command injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.351117",
+            "name": "VDB-351117 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.770410",
+            "name": "Submit #770410 | D-Link DNS-120/202L/315L/320/320L/320LW/321/322L/323/325/326/327L/326/340L/343/345/726-4/1100-4/1200-05/1550-04 up to 20260205 Command Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.770411",
+            "name": "Submit #770411 | D-Link DNS-120/202L/315L/320/320L/320LW/321/322L/323/325/326/327L/326/340L/343/345/726-4/1100-4/1200-05/1550-04 up to 20260205 Command Injection (Duplicate)",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.770412",
+            "name": "Submit #770412 | D-Link DNS-120/202L/315L/320/320L/320LW/321/322L/323/325/326/327L/326/340L/343/345/726-4/1100-4/1200-05/1550-04 up to 20260205 Command Injection (Duplicate)",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/wudipjq/my_vuln/blob/main/D-Link8/vuln_131/131.md",
+            "tags": [
+              "related"
+            ]
+          },
+          {
+            "url": "https://github.com/wudipjq/my_vuln/blob/main/D-Link8/vuln_132/132.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-4205"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2017-20224",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-15T21:57:29.608Z",
+      "datePublished": "2026-03-16T01:28:27.434Z",
+      "dateUpdated": "2026-03-16T01:28:27.434Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-16T01:28:27.434Z"
+        },
+        "title": "Telesquare SKT LTE Router SDT-CS3B1 WebDAV Arbitrary File Upload",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Telesquare SKT LTE Router SDT-CS3B1 version 1.2.0 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious content by exploiting enabled WebDAV HTTP methods. Attackers can use PUT, DELETE, MKCOL, MOVE, COPY, and PROPPATCH methods to upload executable code, delete files, or manipulate server content for remote code execution or denial of service."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Unrestricted Upload of File with Dangerous Type",
+                "cweId": "CWE-434",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Telesquare",
+            "product": "SDT-CS3B1",
+            "versions": [
+              {
+                "version": "1.2.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.2.0:*:*:*:*:*:*:*"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.1.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:telesquare:sdt-cs3b1:-:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2017-5446.php",
+            "name": "Zero Science Lab Disclosure",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://cxsecurity.com/issue/WLB-2017120301",
+            "name": "CXSecurity",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Telesquare SKT LTE Router SDT-CS3B1 WebDAV Arbitrary File Upload",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/telesquare-skt-lte-router-sdt-cs3b1-webdav-arbitrary-file-upload"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LiquidWorm as Gjoko Krstic of Zero Science Lab",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2017-20224"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2017-20223",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-15T21:57:06.190Z",
+      "datePublished": "2026-03-16T01:28:26.649Z",
+      "dateUpdated": "2026-03-16T01:28:26.649Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-16T01:28:26.649Z"
+        },
+        "title": "Telesquare SKT LTE Router SDT-CS3B1 Insecure Direct Object Reference",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Telesquare SKT LTE Router SDT-CS3B1 firmware version 1.2.0 contains an insecure direct object reference vulnerability that allows attackers to bypass authorization and access resources by manipulating user-supplied input parameters. Attackers can directly reference objects in the system to retrieve sensitive information and access functionalities without proper access controls."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Authorization Bypass Through User-Controlled Key",
+                "cweId": "CWE-639",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Telesquare",
+            "product": "SDT-CS3B1",
+            "versions": [
+              {
+                "version": "1.2.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.2.0:*:*:*:*:*:*:*"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.1.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:telesquare:sdt-cs3b1:-:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2017-5445.php",
+            "name": "Zero Science Lab Disclosure",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/43402/",
+            "name": "Exploit DB",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://packetstormsecurity.com/files/145551",
+            "name": "Packet Storm Security",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://cxsecurity.com/issue/WLB-2017120297",
+            "name": "CXSecurity",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/136993",
+            "name": "IBM X-Force Exchange",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Telesquare SKT LTE Router SDT-CS3B1 Insecure Direct Object Reference",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/telesquare-skt-lte-router-sdt-cs3b1-insecure-direct-object-reference"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LiquidWorm as Gjoko Krstic of Zero Science Lab",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2017-20223"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2017-20222",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-15T21:55:20.809Z",
+      "datePublished": "2026-03-16T01:28:25.888Z",
+      "dateUpdated": "2026-03-16T01:28:25.888Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-16T01:28:25.888Z"
+        },
+        "title": "Telesquare SKT LTE Router SDT-CS3B1 Unauthenticated Remote Reboot",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Telesquare SKT LTE Router SDT-CS3B1 software version 1.2.0 contains an unauthenticated remote reboot vulnerability that allows attackers to trigger device reboot without authentication. Attackers can send POST requests to the lte.cgi endpoint with the Command=Reboot parameter to cause denial of service by forcing the router to restart."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Missing Authentication for Critical Function",
+                "cweId": "CWE-306",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Telesquare",
+            "product": "SDT-CS3B1",
+            "versions": [
+              {
+                "version": "1.2.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.2.0:*:*:*:*:*:*:*"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.1.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:telesquare:sdt-cs3b1:-:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2017-5444.php",
+            "name": "Zero Science Lab Disclosure",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://cxsecurity.com/issue/WLB-2017120300",
+            "name": "CXSecurity",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://packetstormsecurity.com/files/145555",
+            "name": "Packet Storm Security",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/43401/",
+            "name": "Exploit DB",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/136825",
+            "name": "IBM X-Force Exchange",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Telesquare SKT LTE Router SDT-CS3B1 Unauthenticated Remote Reboot",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/telesquare-skt-lte-router-sdt-cs3b1-unauthenticated-remote-reboot"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LiquidWorm as Gjoko Krstic of Zero Science Lab",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2017-20222"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2017-20221",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-03-15T21:54:37.665Z",
+      "datePublished": "2026-03-16T01:28:24.978Z",
+      "dateUpdated": "2026-03-16T01:28:24.978Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-03-16T01:28:24.978Z"
+        },
+        "title": "Telesquare SKT LTE Router SDT-CS3B1 CSRF System Command Execution",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Telesquare SKT LTE Router SDT-CS3B1 version 1.2.0 contains a cross-site request forgery vulnerability that allows authenticated attackers to execute arbitrary system commands by exploiting missing request validation. Attackers can craft malicious web pages that perform administrative actions when visited by logged-in users, enabling command execution with router privileges."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Telesquare",
+            "product": "SDT-CS3B1",
+            "versions": [
+              {
+                "version": "1.2.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.2.0:*:*:*:*:*:*:*"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:telesquare:sdt-cs3b1_firmware:1.1.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:telesquare:sdt-cs3b1:-:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2017-5443.php",
+            "name": "Zero Science Lab Disclosure",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://cxsecurity.com/issue/WLB-2017120299",
+            "name": "CXSecurity",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://packetstormsecurity.com/files/145550",
+            "name": "Packet Storm Security",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/43400/",
+            "name": "Exploit DB",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/136839",
+            "name": "IBM X-Force Exchange",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Telesquare SKT LTE Router SDT-CS3B1 CSRF System Command Execution",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/telesquare-skt-lte-router-sdt-cs3b1-csrf-system-command-execution"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LiquidWorm as Gjoko Krstic of Zero Science Lab",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2017-20221"
+          }
+        ]
+      }
+    }
+  }
+]
