@@ -1,0 +1,701 @@
+[Thu Mar 19 07:04:46 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28073",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-25T12:13:47.059Z",
+      "datePublished": "2026-03-19T05:18:56.777Z",
+      "dateUpdated": "2026-03-19T05:18:56.777Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-19T05:18:56.777Z"
+        },
+        "title": "WordPress WP eMember theme <= v10.2.2 - Reflected Cross Site Scripting (XSS) vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-591",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-591 Reflected XSS"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Tips and Tricks HQ",
+            "product": "WP eMember",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "n/a",
+                "lessThanOrEqual": "v10.2.2",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Tips and Tricks HQ WP eMember allows Reflected XSS.This issue affects WP eMember: from n/a through v10.2.2.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Tips and Tricks HQ WP eMember allows Reflected XSS.<p>This issue affects WP eMember: from n/a through v10.2.2.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wp-emember/vulnerability/wordpress-wp-emember-theme-v10-2-2-reflected-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "tags": [
+              "vdb-entry"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "CHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "LOW",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Tran Nguyen Bao Khanh (VCI - VNPT Cyber Immunity) | Patchstack Bug Bounty Program",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28073"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28070",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-25T12:13:39.590Z",
+      "datePublished": "2026-03-19T05:20:03.784Z",
+      "dateUpdated": "2026-03-19T05:20:03.784Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-19T05:20:03.784Z"
+        },
+        "title": "WordPress WP eMember plugin <= v10.2.2 - Broken Access Control vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-862",
+                "description": "CWE-862 Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-180",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-180 Exploiting Incorrectly Configured Access Control Security Levels"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Tips and Tricks HQ",
+            "product": "WP eMember",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "n/a",
+                "lessThanOrEqual": "v10.2.2",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing Authorization vulnerability in Tips and Tricks HQ WP eMember allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP eMember: from n/a through v10.2.2.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Missing Authorization vulnerability in Tips and Tricks HQ WP eMember allows Exploiting Incorrectly Configured Access Control Security Levels.<p>This issue affects WP eMember: from n/a through v10.2.2.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wp-emember/vulnerability/wordpress-wp-emember-plugin-v10-2-2-broken-access-control-vulnerability?_s_id=cve",
+            "tags": [
+              "vdb-entry"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Tran Nguyen Bao Khanh (VCI - VNPT Cyber Immunity) | Patchstack Bug Bounty Program",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28070"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-28044",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-25T12:13:30.134Z",
+      "datePublished": "2026-03-19T05:21:26.027Z",
+      "dateUpdated": "2026-03-19T05:21:26.027Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-19T05:21:26.027Z"
+        },
+        "title": "WordPress WP Rocket plugin <= 3.19.4 - Cross Site Scripting (XSS) vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-592",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-592 Stored XSS"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "WP Media",
+            "product": "WP Rocket",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "n/a",
+                "lessThanOrEqual": "3.19.4",
+                "changes": [
+                  {
+                    "at": "3.20.0.2",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WP Media WP Rocket allows Stored XSS.This issue affects WP Rocket: from n/a through 3.19.4.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WP Media WP Rocket allows Stored XSS.<p>This issue affects WP Rocket: from n/a through 3.19.4.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wp-rocket/vulnerability/wordpress-wp-rocket-plugin-3-19-4-cross-site-scripting-xss-vulnerability?_s_id=cve",
+            "tags": [
+              "vdb-entry"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "REQUIRED",
+              "scope": "CHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "LOW",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:L"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Update the WordPress WP Rocket plugin to the latest available version (at least 3.20.0.2).",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Update the WordPress WP Rocket plugin to the latest available version (at least 3.20.0.2)."
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "stealthcopter | Patchstack Bug Bounty Program",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-28044"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27542",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-20T11:18:46.194Z",
+      "datePublished": "2026-03-19T05:22:49.717Z",
+      "dateUpdated": "2026-03-19T05:26:02.727Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-19T05:26:02.727Z"
+        },
+        "title": "WordPress Woocommerce Wholesale Lead Capture plugin <= 2.0.3.1 - Privilege Escalation vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-266",
+                "description": "CWE-266 Incorrect Privilege Assignment",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-233",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-233 Privilege Escalation"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Rymera Web Co Pty Ltd.",
+            "product": "Woocommerce Wholesale Lead Capture",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "n/a",
+                "lessThanOrEqual": "2.0.3.1",
+                "changes": [
+                  {
+                    "at": "2.0.3.2",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in Rymera Web Co Pty Ltd. Woocommerce Wholesale Lead Capture allows Privilege Escalation.This issue affects Woocommerce Wholesale Lead Capture: from n/a through 2.0.3.1.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Incorrect Privilege Assignment vulnerability in Rymera Web Co Pty Ltd. Woocommerce Wholesale Lead Capture allows Privilege Escalation.<p>This issue affects Woocommerce Wholesale Lead Capture: from n/a through 2.0.3.1.</p>"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "x_known-exploited-vulnerability"
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/woocommerce-wholesale-lead-capture/vulnerability/wordpress-woocommerce-wholesale-lead-capture-plugin-1-17-8-privilege-escalation-vulnerability?_s_id=cve",
+            "tags": [
+              "vdb-entry"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Update the WordPress Woocommerce Wholesale Lead Capture plugin to the latest available version (at least 2.0.3.2).",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Update the WordPress Woocommerce Wholesale Lead Capture plugin to the latest available version (at least 2.0.3.2)."
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Teemu Saarentaus | Patchstack Bug Bounty Program",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27542"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-27540",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-02-20T11:18:46.193Z",
+      "datePublished": "2026-03-19T05:24:45.836Z",
+      "dateUpdated": "2026-03-19T05:24:45.836Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-03-19T05:24:45.836Z"
+        },
+        "title": "WordPress Woocommerce Wholesale Lead Capture plugin <= 2.0.3.1 - Arbitrary File Upload vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-434",
+                "description": "CWE-434 Unrestricted Upload of File with Dangerous Type",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-17",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-17 Using Malicious Files"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Rymera Web Co Pty Ltd.",
+            "product": "Woocommerce Wholesale Lead Capture",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "n/a",
+                "lessThanOrEqual": "2.0.3.1",
+                "changes": [
+                  {
+                    "at": "2.0.3.2",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in Rymera Web Co Pty Ltd. Woocommerce Wholesale Lead Capture allows Using Malicious Files.This issue affects Woocommerce Wholesale Lead Capture: from n/a through 2.0.3.1.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Unrestricted Upload of File with Dangerous Type vulnerability in Rymera Web Co Pty Ltd. Woocommerce Wholesale Lead Capture allows Using Malicious Files.<p>This issue affects Woocommerce Wholesale Lead Capture: from n/a through 2.0.3.1.</p>"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "x_known-exploited-vulnerability"
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/woocommerce-wholesale-lead-capture/vulnerability/wordpress-woocommerce-wholesale-lead-capture-plugin-1-17-8-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "tags": [
+              "vdb-entry"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "HIGH",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Update the WordPress Woocommerce Wholesale Lead Capture plugin to the latest available version (at least 2.0.3.2).",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Update the WordPress Woocommerce Wholesale Lead Capture plugin to the latest available version (at least 2.0.3.2)."
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Teemu Saarentaus | Patchstack Bug Bounty Program",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-27540"
+          }
+        ]
+      }
+    }
+  }
+]
