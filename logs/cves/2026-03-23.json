@@ -1,0 +1,325 @@
+[Mon Mar 23 07:18:46 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xqxq-9vr5-7623",
+    "modified": "2026-03-23T06:30:29Z",
+    "published": "2026-03-23T06:30:28Z",
+    "aliases": [
+      "CVE-2026-4574"
+    ],
+    "details": "A vulnerability was detected in SourceCodester Simple E-learning System 1.0. This vulnerability affects unknown code of the component User Profile Update Handler. The manipulation of the argument firstName results in sql injection. It is possible to launch the attack remotely. The exploit is now public and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4574"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/meifukun/Web-Security-PoCs/blob/main/Simple-E-learning-System/SQLi-UserProfile-firstName.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.352411"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.352411"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.775182"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.sourcecodester.com"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-23T06:16:20Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xqxq-9vr5-7623"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wvqx-v3f6-w8rh",
+    "modified": "2026-03-23T06:30:29Z",
+    "published": "2026-03-23T06:30:29Z",
+    "aliases": [
+      "CVE-2026-4600"
+    ],
+    "details": "Versions of the package jsrsasign before 11.1.1 are vulnerable to Improper Verification of Cryptographic Signature via the DSA domain-parameter validation in KJUR.crypto.DSA.setPublic (and the related DSA/X509 verification flow in src/dsa-2.0.js). An attacker can forge DSA signatures or X.509 certificates that X509.verifySignature() accepts by supplying malicious domain parameters such as g=1, y=1, and a fixed r=1, which make the verification equation true for any hash.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4600"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/kjur/jsrsasign/pull/646"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/kjur/jsrsasign/commit/37b4c06b145c7bfd6bc2a6df5d0a12c56b15ef60"
+      },
+      {
+        "type": "WEB",
+        "url": "https://gist.github.com/Kr0emer/bf15ddc097176e951659a24a8e9002a7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://security.snyk.io/vuln/SNYK-JS-JSRSASIGN-15370940"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-347"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-23T06:16:21Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wvqx-v3f6-w8rh"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wcm9-77g7-g8p2",
+    "modified": "2026-03-23T06:30:29Z",
+    "published": "2026-03-23T06:30:28Z",
+    "aliases": [
+      "CVE-2026-4573"
+    ],
+    "details": "A security vulnerability has been detected in SourceCodester Simple E-learning System 1.0. This affects an unknown part of the file /includes/form_handlers/delete_post.php of the component HTTP GET Parameter Handler. The manipulation of the argument post_id leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4573"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/meifukun/Web-Security-PoCs/blob/main/Simple-E-learning-System/SQLi-DeletePost-postId.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.352410"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.352410"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.775181"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.sourcecodester.com"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-23T06:16:20Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wcm9-77g7-g8p2"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-w8q8-93cx-6h7r",
+    "modified": "2026-03-23T06:30:29Z",
+    "published": "2026-03-23T06:30:29Z",
+    "aliases": [
+      "CVE-2026-4601"
+    ],
+    "details": "Versions of the package jsrsasign before 11.1.1 are vulnerable to Missing Cryptographic Step via the KJUR.crypto.DSA.signWithMessageHash process in the DSA signing implementation. An attacker can recover the private key by forcing r or s to be zero, so the library emits an invalid signature without retrying, and then solves for x from the resulting signature.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:H/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4601"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/kjur/jsrsasign/pull/645"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/kjur/jsrsasign/commit/0710e392ec35de697ce11e4219c988ba2b5fe0eb"
+      },
+      {
+        "type": "WEB",
+        "url": "https://gist.github.com/Kr0emer/93789fe6efe5519db9692d4ad1dad586"
+      },
+      {
+        "type": "WEB",
+        "url": "https://security.snyk.io/vuln/SNYK-JS-JSRSASIGN-15370941"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-325"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-23T06:16:21Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-w8q8-93cx-6h7r"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-cp6c-hh2v-v765",
+    "modified": "2026-03-23T06:30:29Z",
+    "published": "2026-03-23T06:30:29Z",
+    "aliases": [
+      "CVE-2026-4575"
+    ],
+    "details": "A flaw has been found in code-projects Exam Form Submission 1.0. This issue affects some unknown processing of the file /admin/update_s2.php. This manipulation of the argument sname causes cross site scripting. The attack can be initiated remotely. The exploit has been published and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4575"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/yao536/cve/issues/1"
+      },
+      {
+        "type": "WEB",
+        "url": "https://code-projects.org"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?ctiid.352412"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?id.352412"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/?submit.775202"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-23T06:16:20Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-cp6c-hh2v-v765"
+          }
+        ]
+      }
+    }
+  }
+]
