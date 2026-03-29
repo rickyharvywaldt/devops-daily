@@ -1,0 +1,529 @@
+[Sun Mar 29 13:07:01 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-j9px-j4m5-375m",
+    "modified": "2026-03-29T12:31:25Z",
+    "published": "2026-03-29T12:31:25Z",
+    "aliases": [
+      "CVE-2026-5041"
+    ],
+    "details": "A vulnerability was identified in code-projects Chamber of Commerce Membership Management System 1.0. Impacted is the function fwrite of the file admin/pageMail.php. The manipulation of the argument mailSubject/mailMessage leads to command injection. The attack may be initiated remotely. The exploit is publicly available and might be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5041"
+      },
+      {
+        "type": "WEB",
+        "url": "https://code-projects.org"
+      },
+      {
+        "type": "WEB",
+        "url": "https://gist.github.com/y7y7y77/dd6df2db50fd0146b72fc4e0766a4ffd"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/778873"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/353964"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/353964/cti"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-74"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-29T10:15:56Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-j9px-j4m5-375m"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-h95j-mxr9-q69c",
+    "modified": "2026-03-29T12:31:25Z",
+    "published": "2026-03-29T12:31:25Z",
+    "aliases": [
+      "CVE-2026-5043"
+    ],
+    "details": "A weakness has been identified in Belkin F9K1122 1.00.33. The impacted element is the function formSetPassword of the file /goform/formSetPassword of the component Parameter Handler. This manipulation of the argument webpage causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5043"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_154/README.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/779124"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/353966"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/353966/cti"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-29T12:15:57Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-h95j-mxr9-q69c"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-h7qj-64j4-6grw",
+    "modified": "2026-03-29T12:31:25Z",
+    "published": "2026-03-29T12:31:25Z",
+    "aliases": [
+      "CVE-2026-5042"
+    ],
+    "details": "A security flaw has been discovered in Belkin F9K1122 1.00.33. The affected element is the function formCrossBandSwitch of the file /goform/formCrossBandSwitch of the component Parameter Handler. The manipulation of the argument webpage results in stack-based buffer overflow. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5042"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_153/README.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/779123"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/353965"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/353965/cti"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-29T11:16:34Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-h7qj-64j4-6grw"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5043",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-03-27T16:35:46.876Z",
+      "datePublished": "2026-03-29T11:15:10.987Z",
+      "dateUpdated": "2026-03-29T11:15:10.987Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-29T11:15:10.987Z"
+        },
+        "title": "Belkin F9K1122 Parameter formSetPassword stack-based overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-121",
+                "lang": "en",
+                "description": "Stack-based Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Belkin",
+            "product": "F9K1122",
+            "versions": [
+              {
+                "version": "1.00.33",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:belkin:f9k1122_firmware:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "Parameter Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in Belkin F9K1122 1.00.33. The impacted element is the function formSetPassword of the file /goform/formSetPassword of the component Parameter Handler. This manipulation of the argument webpage causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-03-27T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-03-27T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-03-27T17:41:58.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LtzHuster2 (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/353966",
+            "name": "VDB-353966 | Belkin F9K1122 Parameter formSetPassword stack-based overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/353966/cti",
+            "name": "VDB-353966 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/779124",
+            "name": "Submit #779124 | Belkin F9K1122 1.00.33 Stack-based Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_154/README.md",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5043"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5044",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-03-27T16:35:50.165Z",
+      "datePublished": "2026-03-29T12:15:10.537Z",
+      "dateUpdated": "2026-03-29T12:15:10.537Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-03-29T12:15:10.537Z"
+        },
+        "title": "Belkin F9K1122 Setting formSetSystemSettings stack-based overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-121",
+                "lang": "en",
+                "description": "Stack-based Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Belkin",
+            "product": "F9K1122",
+            "versions": [
+              {
+                "version": "1.00.33",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:belkin:f9k1122_firmware:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "Setting Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in Belkin F9K1122 1.00.33. This affects the function formSetSystemSettings of the file /goform/formSetSystemSettings of the component Setting Handler. Such manipulation of the argument webpage leads to stack-based buffer overflow. The attack can be executed remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-03-27T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-03-27T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-03-27T17:42:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LtzHuster2 (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/353967",
+            "name": "VDB-353967 | Belkin F9K1122 Setting formSetSystemSettings stack-based overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/353967/cti",
+            "name": "VDB-353967 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/779125",
+            "name": "Submit #779125 | Belkin F9K1122 1.00.33 Stack-based Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_155/README.md",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5044"
+          }
+        ]
+      }
+    }
+  }
+]
