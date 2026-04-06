@@ -1,0 +1,815 @@
+[Mon Apr  6 02:57:28 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5610",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-04-05T15:29:44.472Z",
+      "datePublished": "2026-04-06T01:30:13.927Z",
+      "dateUpdated": "2026-04-06T01:30:13.927Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-04-06T01:30:13.927Z"
+        },
+        "title": "Belkin F9K1015 formWISP5G stack-based overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-121",
+                "lang": "en",
+                "description": "Stack-based Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Belkin",
+            "product": "F9K1015",
+            "versions": [
+              {
+                "version": "1.00.10",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:belkin:f9k1015_firmware:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in Belkin F9K1015 1.00.10. Affected by this issue is the function formWISP5G of the file /goform/formWISP5G. Such manipulation of the argument webpage leads to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-05T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-04-05T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-04-05T17:35:03.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LtzHust (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/355401",
+            "name": "VDB-355401 | Belkin F9K1015 formWISP5G stack-based overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/355401/cti",
+            "name": "VDB-355401 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/785537",
+            "name": "Submit #785537 | Belkin F9K1015 1.00.10 Stack-based Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Litengzheng/vuldb_new/blob/main/Belkin%20F9K1015/vul_3/README.md",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5610"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "CVE-2026-5608",
+    "sourceIdentifier": "cna@vuldb.com",
+    "published": "2026-04-06T01:16:40.367",
+    "lastModified": "2026-04-06T01:16:40.367",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "A vulnerability was detected in Belkin F9K1122 1.00.33. Affected is the function formWlanSetup of the file /goform/formWlanSetup. The manipulation of the argument webpage results in stack-based buffer overflow. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV40": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+            "baseScore": 7.4,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "HIGH",
+            "vulnIntegrityImpact": "HIGH",
+            "vulnAvailabilityImpact": "HIGH",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "exploitMaturity": "PROOF_OF_CONCEPT",
+            "confidentialityRequirement": "NOT_DEFINED",
+            "integrityRequirement": "NOT_DEFINED",
+            "availabilityRequirement": "NOT_DEFINED",
+            "modifiedAttackVector": "NOT_DEFINED",
+            "modifiedAttackComplexity": "NOT_DEFINED",
+            "modifiedAttackRequirements": "NOT_DEFINED",
+            "modifiedPrivilegesRequired": "NOT_DEFINED",
+            "modifiedUserInteraction": "NOT_DEFINED",
+            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+            "Safety": "NOT_DEFINED",
+            "Automatable": "NOT_DEFINED",
+            "Recovery": "NOT_DEFINED",
+            "valueDensity": "NOT_DEFINED",
+            "vulnerabilityResponseEffort": "NOT_DEFINED",
+            "providerUrgency": "NOT_DEFINED"
+          }
+        }
+      ],
+      "cvssMetricV31": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+            "baseScore": 8.8,
+            "baseSeverity": "HIGH",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "HIGH"
+          },
+          "exploitabilityScore": 2.8,
+          "impactScore": 5.9
+        }
+      ],
+      "cvssMetricV2": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "2.0",
+            "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+            "baseScore": 9.0,
+            "accessVector": "NETWORK",
+            "accessComplexity": "LOW",
+            "authentication": "SINGLE",
+            "confidentialityImpact": "COMPLETE",
+            "integrityImpact": "COMPLETE",
+            "availabilityImpact": "COMPLETE"
+          },
+          "baseSeverity": "HIGH",
+          "exploitabilityScore": 8.0,
+          "impactScore": 10.0,
+          "acInsufInfo": false,
+          "obtainAllPrivilege": false,
+          "obtainUserPrivilege": false,
+          "obtainOtherPrivilege": false,
+          "userInteractionRequired": false
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "cna@vuldb.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-119"
+          },
+          {
+            "lang": "en",
+            "value": "CWE-121"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_80/README.md",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/submit/785315",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/vuln/355399",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/vuln/355399/cti",
+        "source": "cna@vuldb.com"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "fkie_cve-2026-5608"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5608",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-04-05T15:22:23.478Z",
+      "datePublished": "2026-04-06T00:30:10.336Z",
+      "dateUpdated": "2026-04-06T00:30:10.336Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-04-06T00:30:10.336Z"
+        },
+        "title": "Belkin F9K1122 formWlanSetup stack-based overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-121",
+                "lang": "en",
+                "description": "Stack-based Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Belkin",
+            "product": "F9K1122",
+            "versions": [
+              {
+                "version": "1.00.33",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:belkin:f9k1122_firmware:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in Belkin F9K1122 1.00.33. Affected is the function formWlanSetup of the file /goform/formWlanSetup. The manipulation of the argument webpage results in stack-based buffer overflow. The attack may be performed from remote. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-05T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-04-05T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-04-05T17:33:46.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LtzHust2 (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/355399",
+            "name": "VDB-355399 | Belkin F9K1122 formWlanSetup stack-based overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/355399/cti",
+            "name": "VDB-355399 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/785315",
+            "name": "Submit #785315 | Belkin F9K1122 1.00.33 Stack-based Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Litengzheng/vul_db/blob/main/Belkin/vul_80/README.md",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5608"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "CVE-2026-5607",
+    "sourceIdentifier": "cna@vuldb.com",
+    "published": "2026-04-06T01:16:39.817",
+    "lastModified": "2026-04-06T01:16:39.817",
+    "vulnStatus": "Received",
+    "cveTags": [],
+    "descriptions": [
+      {
+        "lang": "en",
+        "value": "A security vulnerability has been detected in imprvhub mcp-browser-agent up to 0.8.0. This impacts the function CallToolRequestSchema of the file src/handlers.ts of the component URL Parameter Handler. The manipulation of the argument request.params.name/request.params.arguments leads to server-side request forgery. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+      }
+    ],
+    "metrics": {
+      "cvssMetricV40": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "4.0",
+            "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+            "baseScore": 5.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "attackRequirements": "NONE",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "vulnConfidentialityImpact": "LOW",
+            "vulnIntegrityImpact": "LOW",
+            "vulnAvailabilityImpact": "LOW",
+            "subConfidentialityImpact": "NONE",
+            "subIntegrityImpact": "NONE",
+            "subAvailabilityImpact": "NONE",
+            "exploitMaturity": "PROOF_OF_CONCEPT",
+            "confidentialityRequirement": "NOT_DEFINED",
+            "integrityRequirement": "NOT_DEFINED",
+            "availabilityRequirement": "NOT_DEFINED",
+            "modifiedAttackVector": "NOT_DEFINED",
+            "modifiedAttackComplexity": "NOT_DEFINED",
+            "modifiedAttackRequirements": "NOT_DEFINED",
+            "modifiedPrivilegesRequired": "NOT_DEFINED",
+            "modifiedUserInteraction": "NOT_DEFINED",
+            "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+            "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+            "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+            "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+            "modifiedSubIntegrityImpact": "NOT_DEFINED",
+            "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+            "Safety": "NOT_DEFINED",
+            "Automatable": "NOT_DEFINED",
+            "Recovery": "NOT_DEFINED",
+            "valueDensity": "NOT_DEFINED",
+            "vulnerabilityResponseEffort": "NOT_DEFINED",
+            "providerUrgency": "NOT_DEFINED"
+          }
+        }
+      ],
+      "cvssMetricV31": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Primary",
+          "cvssData": {
+            "version": "3.1",
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+            "baseScore": 6.3,
+            "baseSeverity": "MEDIUM",
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "LOW",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "LOW",
+            "integrityImpact": "LOW",
+            "availabilityImpact": "LOW"
+          },
+          "exploitabilityScore": 2.8,
+          "impactScore": 3.4
+        }
+      ],
+      "cvssMetricV2": [
+        {
+          "source": "cna@vuldb.com",
+          "type": "Secondary",
+          "cvssData": {
+            "version": "2.0",
+            "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+            "baseScore": 6.5,
+            "accessVector": "NETWORK",
+            "accessComplexity": "LOW",
+            "authentication": "SINGLE",
+            "confidentialityImpact": "PARTIAL",
+            "integrityImpact": "PARTIAL",
+            "availabilityImpact": "PARTIAL"
+          },
+          "baseSeverity": "MEDIUM",
+          "exploitabilityScore": 8.0,
+          "impactScore": 6.4,
+          "acInsufInfo": false,
+          "obtainAllPrivilege": false,
+          "obtainUserPrivilege": false,
+          "obtainOtherPrivilege": false,
+          "userInteractionRequired": false
+        }
+      ]
+    },
+    "weaknesses": [
+      {
+        "source": "cna@vuldb.com",
+        "type": "Primary",
+        "description": [
+          {
+            "lang": "en",
+            "value": "CWE-918"
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "url": "https://github.com/wing3e/public_exp/issues/25",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/submit/785034",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/vuln/355398",
+        "source": "cna@vuldb.com"
+      },
+      {
+        "url": "https://vuldb.com/vuln/355398/cti",
+        "source": "cna@vuldb.com"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "fkie_cve-2026-5607"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5607",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-04-05T14:03:44.670Z",
+      "datePublished": "2026-04-06T00:15:13.901Z",
+      "dateUpdated": "2026-04-06T00:15:13.901Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-04-06T00:15:13.901Z"
+        },
+        "title": "imprvhub mcp-browser-agent URL Parameter handlers.ts CallToolRequestSchema server-side request forgery",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-918",
+                "lang": "en",
+                "description": "Server-Side Request Forgery"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "imprvhub",
+            "product": "mcp-browser-agent",
+            "versions": [
+              {
+                "version": "0.1",
+                "status": "affected"
+              },
+              {
+                "version": "0.2",
+                "status": "affected"
+              },
+              {
+                "version": "0.3",
+                "status": "affected"
+              },
+              {
+                "version": "0.4",
+                "status": "affected"
+              },
+              {
+                "version": "0.5",
+                "status": "affected"
+              },
+              {
+                "version": "0.6",
+                "status": "affected"
+              },
+              {
+                "version": "0.7",
+                "status": "affected"
+              },
+              {
+                "version": "0.8.0",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "URL Parameter Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in imprvhub mcp-browser-agent up to 0.8.0. This impacts the function CallToolRequestSchema of the file src/handlers.ts of the component URL Parameter Handler. The manipulation of the argument request.params.name/request.params.arguments leads to server-side request forgery. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-05T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-04-05T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-04-05T16:08:48.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "feng kairui (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/355398",
+            "name": "VDB-355398 | imprvhub mcp-browser-agent URL Parameter handlers.ts CallToolRequestSchema server-side request forgery",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/355398/cti",
+            "name": "VDB-355398 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/785034",
+            "name": "Submit #785034 | imprvhub mcp-browser-agent 0.8.0 Server-Side Request Forgery",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/wing3e/public_exp/issues/25",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5607"
+          }
+        ]
+      }
+    }
+  }
+]
