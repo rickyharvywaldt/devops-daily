@@ -1048,3 +1048,424 @@
     }
   }
 ]
+[Sat Apr 11 18:54:06 UTC 2026] Latest CVEs:
+[
+  {
+    "modified": "2026-04-11T17:07:46Z",
+    "published": "2026-04-11T17:07:46Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-2559",
+    "summary": "Malicious code in databasesupalake (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (ec2327cbf40d485fa6ea474f7cdbe9a352e0a2b27969816ffb22fee6244a8b96)\nDuring installation package downloads and runs a malicious executable. Likely continuation of 2026-03-rowrap.\n\nThe campaign is built over a malicious Roblox API wrapper. The roboat[.]pro domain advertises a wrapper that is either directly malicious (as roboat collected in the campaign 2026-03-rowrap) or uses a malicious dependencies (like roboat-utils). New versions are published simultaneously with malicious dependencies and quickly removed. Another advertisement channel is https://github.com/Addi9000/roboat referencing two active contributors: https://github.com/Addi9000 and https://github.com/RoCruise\n\n\n---\n\nCategory: MALICIOUS - The campaign has clearly malicious intent, like infostealers.\n\n\nCampaign: 2026-03-roboat-addition\n\n\nReasons (based on the campaign):\n\n\n - The package overrides the install command in setup.py to execute malicious code during installation.\n\n\n - Downloads and executes a remote executable.\n\n\n - The malicious code is intentionally included in a dependency of the package\n\n\n - malware\n\n\n - clones-real-package\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "databasesupalake"
+        },
+        "versions": [
+          "1.2.0"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://www.virustotal.com/gui/file/9f14d239ab8f1289bc7aedeb67d3d72b467ee6c11b201890ab14c5c4f7c175d2/detection"
+      },
+      {
+        "type": "EVIDENCE",
+        "url": "https://www.virustotal.com/gui/file/48b108261d5de97a42eff81cf1a60a32286f72bf8b5f130959e0daa86b783608"
+      },
+      {
+        "type": "EVIDENCE",
+        "url": "https://www.virustotal.com/gui/file/ef20289b52ab23ec23c5ff885a2293523ce8456fb00e3d67f1b084c28f7d282a/detection"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Addi9000/roboat/blob/331166c8ea3bd080f08fe6d571202e3b47017ed7/README.md#L31"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Addi9000/roboat/commit/331166c8ea3bd080f08fe6d571202e3b47017ed7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Addi9000"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/RoCruise"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.roboat.pro/"
+      },
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/databasesupalake"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "REPORTER",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "iocs": {
+        "domains": [
+          "jolly-violet-def9.staraledreamer.workers.dev",
+          "holy-sun-41ff.staraledreamer.workers.dev",
+          "spring-math-9df3.aledreamsaledreams2.workers.dev"
+        ],
+        "urls": [
+          "https://jolly-violet-def9.staraledreamer.workers.dev/DDDD.exe",
+          "https://holy-sun-41ff.staraledreamer.workers.dev/gore.vbs",
+          "https://github.com/betonme27/flies/releases/download/a/s22s.zhr",
+          "https://dawn-thunder-f821.staraledreamer.workers.dev/gore.vbs",
+          "https://green-shadow-38d7.aledreamsaledreams2.workers.dev/tree.vbs",
+          "https://spring-math-9df3.aledreamsaledreams2.workers.dev/winre.bat",
+          "https://github.com/aledreamsaledreqms-source/frakenstein/raw/refs/heads/main/tree.vbs",
+          "https://lingering-field-4351.aledreamer1234.workers.dev/yy.bat"
+        ]
+      },
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/2026-03-roboat-addition/databasesupalake",
+          "import_time": "2026-04-11T17:45:43.800657587Z",
+          "modified_time": "2026-04-11T17:07:46.151652Z",
+          "sha256": "ec2327cbf40d485fa6ea474f7cdbe9a352e0a2b27969816ffb22fee6244a8b96",
+          "source": "kam193",
+          "versions": [
+            "1.2.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-2559"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-34621",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-03-30T17:30:36.490Z",
+      "datePublished": "2026-04-11T06:45:43.512Z",
+      "dateUpdated": "2026-04-11T17:06:40.544Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Acrobat Reader",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "26.001.21367",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-04-10T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Acrobat Reader versions 24.001.30356, 26.001.21367 and earlier are affected by an Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 9.6,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 9.7,
+              "environmentalSeverity": "CRITICAL",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "HIGH",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "HIGH",
+              "modifiedConfidentialityImpact": "HIGH",
+              "modifiedIntegrityImpact": "HIGH",
+              "modifiedPrivilegesRequired": "NONE",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "NONE",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 9.6,
+              "temporalSeverity": "CRITICAL",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1321",
+                "description": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') (CWE-1321)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-04-11T06:45:43.512Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/acrobat/apsb26-43.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Acrobat Reader | Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution') (CWE-1321)",
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-34621"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-11T17:06:32.007984Z",
+                  "id": "CVE-2026-34621",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-11T17:06:40.544Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wqgp-m495-6968",
+    "modified": "2026-04-11T15:30:24Z",
+    "published": "2026-03-18T18:31:17Z",
+    "aliases": [
+      "CVE-2025-71269"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: do not free data reservation in fallback from inline due to -ENOSPC\n\nIf we fail to create an inline extent due to -ENOSPC, we will attempt to\ngo through the normal COW path, reserve an extent, create an ordered\nextent, etc. However we were always freeing the reserved qgroup data,\nwhich is wrong since we will use data. Fix this by freeing the reserved\nqgroup data in __cow_file_range_inline() only if we are not doing the\nfallback (ret is <= 0).",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-71269"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/0a1fbbd780f04d1b6cf48dd327c866ba937de1c4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/3a9fd45afadec1fbfec72057b9473d509fa8b68c"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/3edd1f6c7c520536b62b2904807033597554dbac"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6de3a371a8b9fd095198b1aa68c22cc10a4c6961"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/f8da41de0bff9eb1d774a7253da0c9f637c4470a"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-18T18:16:22Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wqgp-m495-6968"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-p4gj-pp28-43q4",
+    "modified": "2026-04-11T15:30:24Z",
+    "published": "2026-04-11T15:30:24Z",
+    "aliases": [
+      "CVE-2026-23900"
+    ],
+    "details": "Various stored XSS vulnerabilities in the maps- and icon rendering logic in Phoca Maps component 5.0.0-6.0.2 have been discovered.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23900"
+      },
+      {
+        "type": "WEB",
+        "url": "https://phoca.cz"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-11T14:16:03Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-p4gj-pp28-43q4"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-mx2c-4m76-c7r4",
+    "modified": "2026-04-11T15:30:24Z",
+    "published": "2026-03-25T12:30:23Z",
+    "aliases": [
+      "CVE-2026-23360"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnvme: fix admin queue leak on controller reset\n\nWhen nvme_alloc_admin_tag_set() is called during a controller reset,\na previous admin queue may still exist. Release it properly before\nallocating a new one to avoid orphaning the old queue.\n\nThis fixes a regression introduced by commit 03b3bcd319b3 (\"nvme: fix\nadmin request_queue lifetime\").",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23360"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/089a6f17881a82c6c6e05f8564a867be0767eade"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/2efbc838a26d3da72d8fe05770bdf869d4ca3ac5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/64f87b96de0e645a4c066c7cffd753f334446db6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6e28bab900e40e4d610b04f9f82e01983d8fb356"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/8eb2b3cdcd9b6631b94b82c1f4f6bc32b40d942f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/b84bb7bd913d8ca2f976ee6faf4a174f91c02b8d"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/e159eb852aeee95443a9458ecb7d072bbb689913"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-03-25T11:16:34Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-mx2c-4m76-c7r4"
+          }
+        ]
+      }
+    }
+  }
+]
