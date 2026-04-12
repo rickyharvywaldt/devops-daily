@@ -1,0 +1,316 @@
+[Sun Apr 12 07:22:08 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-rf4q-qfjf-vw22",
+    "modified": "2026-04-12T06:30:28Z",
+    "published": "2026-04-12T06:30:28Z",
+    "aliases": [
+      "CVE-2026-6117"
+    ],
+    "details": "A vulnerability was found in AstrBotDevs AstrBot up to 4.22.1. This issue affects the function install_plugin_upload of the file astrbot/dashboard/routes/plugin.py of the component install-upload Endpoint. The manipulation of the argument File results in sandbox issue. The attack can be executed remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6117"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/AstrBotDevs/AstrBot/issues/7168"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/AstrBotDevs/AstrBot"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/792653"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356977"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356977/cti"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-12T05:16:01Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-rf4q-qfjf-vw22"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-qc3j-w6xm-rcvh",
+    "modified": "2026-04-12T06:30:28Z",
+    "published": "2026-04-12T06:30:27Z",
+    "aliases": [
+      "CVE-2026-6115"
+    ],
+    "details": "A flaw has been found in Totolink A7100RU 7.4cu.2313_b20191024. This affects the function setAppCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Executing a manipulation of the argument enable can lead to os command injection. The attack may be launched remotely. The exploit has been published and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6115"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_180/README.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/792248"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356975"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356975/cti"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.totolink.net"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-77"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-12T05:16:00Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-qc3j-w6xm-rcvh"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-frh5-x99h-w9g9",
+    "modified": "2026-04-12T06:30:28Z",
+    "published": "2026-04-12T06:30:28Z",
+    "aliases": [
+      "CVE-2026-6120"
+    ],
+    "details": "A vulnerability was detected in Tenda F451 1.0.0.7. Affected is the function fromDhcpListClient of the file /goform/DhcpListClient of the component httpd. The manipulation of the argument page results in stack-based buffer overflow. The attack can be launched remotely. The exploit is now public and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6120"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Jimi-Lab/cve/issues/11"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/792864"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356983"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356983/cti"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.tenda.com.cn"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-12T06:16:22Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-frh5-x99h-w9g9"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wj59-xw95-68pp",
+    "modified": "2026-04-12T06:30:27Z",
+    "published": "2026-04-12T06:30:27Z",
+    "aliases": [
+      "CVE-2026-6114"
+    ],
+    "details": "A vulnerability was detected in Totolink A7100RU 7.4cu.2313_b20191024. Affected by this issue is the function setNetworkCfg of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. Performing a manipulation of the argument proto results in os command injection. The attack may be initiated remotely. The exploit is now public and may be used.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6114"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/Litengzheng/vuldb_new/blob/main/A7100RU/vul_179/README.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/792247"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356974"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/356974/cti"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.totolink.net"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-77"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-12T04:16:49Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wj59-xw95-68pp"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-q7pg-xjgf-wr6f",
+    "modified": "2026-04-12T06:30:27Z",
+    "published": "2026-04-12T06:30:27Z",
+    "aliases": [
+      "CVE-2026-31413"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Fix unsound scalar forking in maybe_fork_scalars() for BPF_OR\n\nmaybe_fork_scalars() is called for both BPF_AND and BPF_OR when the\nsource operand is a constant.  When dst has signed range [-1, 0], it\nforks the verifier state: the pushed path gets dst = 0, the current\npath gets dst = -1.\n\nFor BPF_AND this is correct: 0 & K == 0.\nFor BPF_OR this is wrong:    0 | K == K, not 0.\n\nThe pushed path therefore tracks dst as 0 when the runtime value is K,\nproducing an exploitable verifier/runtime divergence that allows\nout-of-bounds map access.\n\nFix this by passing env->insn_idx (instead of env->insn_idx + 1) to\npush_stack(), so the pushed path re-executes the ALU instruction with\ndst = 0 and naturally computes the correct result for any opcode.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-31413"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/342aa1ee995ef5bbf876096dc3a5e51218d76fa4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/58bd87d0e69204dbd739e4387a1edb0c4b1644e7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/c845894ebd6fb43226b3118d6b017942550910c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/d13281ae7ea8902b21d99d10a2c8caf0bdec0455"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-12T06:16:20Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-q7pg-xjgf-wr6f"
+          }
+        ]
+      }
+    }
+  }
+]
