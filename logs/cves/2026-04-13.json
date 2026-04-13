@@ -1,0 +1,740 @@
+[Mon Apr 13 08:11:53 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6168",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-04-12T20:49:43.517Z",
+      "datePublished": "2026-04-13T06:30:14.050Z",
+      "dateUpdated": "2026-04-13T06:30:14.050Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-04-13T06:30:14.050Z"
+        },
+        "title": "TOTOLINK A7000R cstecgi.cgi setWiFiEasyGuestCfg stack-based overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-121",
+                "lang": "en",
+                "description": "Stack-based Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "TOTOLINK",
+            "product": "A7000R",
+            "versions": [
+              {
+                "version": "9.1.0u.6115",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:totolink:a7000r_firmware:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in TOTOLINK A7000R up to 9.1.0u.6115. The affected element is the function setWiFiEasyGuestCfg of the file /cgi-bin/cstecgi.cgi. This manipulation of the argument ssid5g causes stack-based buffer overflow. Remote exploitation of the attack is possible. The exploit has been published and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-12T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-04-12T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-04-12T22:54:48.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "DLChen (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/357056",
+            "name": "VDB-357056 | TOTOLINK A7000R cstecgi.cgi setWiFiEasyGuestCfg stack-based overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/357056/cti",
+            "name": "VDB-357056 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/797193",
+            "name": "Submit #797193 | TOTOLINK A7000R <=V9.1.0u.6115 Stack-based Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zhuchan770/vulnerability/blob/main/A7000R/setWiFiEasyGuestCfg/ToToLink%20A7000R%20setWiFiEasyGuestCfg%20338996b67c9780b89829d0ea70058788.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.totolink.net/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6168"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6167",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-04-12T20:43:43.273Z",
+      "datePublished": "2026-04-13T06:15:10.133Z",
+      "dateUpdated": "2026-04-13T06:15:10.133Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-04-13T06:15:10.133Z"
+        },
+        "title": "code-projects Faculty Management System subject-print.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Faculty Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in code-projects Faculty Management System 1.0. Impacted is an unknown function of the file /subject-print.php. The manipulation of the argument ID results in sql injection. The attack may be launched remotely. The exploit is now public and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-12T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-04-12T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-04-12T22:49:02.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "wfcht-sy (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/357055",
+            "name": "VDB-357055 | code-projects Faculty Management System subject-print.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/357055/cti",
+            "name": "VDB-357055 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/797098",
+            "name": "Submit #797098 | code-projects Faculty Management System V1.0 SQL injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/wfcht-sy/src/issues/1",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6167"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6166",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-04-12T20:43:35.218Z",
+      "datePublished": "2026-04-13T06:00:19.595Z",
+      "dateUpdated": "2026-04-13T06:00:19.595Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-04-13T06:00:19.595Z"
+        },
+        "title": "code-projects Vehicle Showroom Management System UpdateVehicleFunction.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Vehicle Showroom Management System",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in code-projects Vehicle Showroom Management System 1.0. This issue affects some unknown processing of the file /util/UpdateVehicleFunction.php. The manipulation of the argument VEHICLE_ID leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-12T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-04-12T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-04-12T22:48:59.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "wfcht-sy (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/357054",
+            "name": "VDB-357054 | code-projects Vehicle Showroom Management System UpdateVehicleFunction.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/357054/cti",
+            "name": "VDB-357054 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/797097",
+            "name": "Submit #797097 | code-projects Vehicle Showroom Management System V1.0 SQL injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/wfcht-sy/src/issues/2",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6166"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5936",
+      "assignerOrgId": "14984358-7092-470d-8f34-ade47a7658a2",
+      "state": "PUBLISHED",
+      "assignerShortName": "Foxit",
+      "dateReserved": "2026-04-09T03:41:58.832Z",
+      "datePublished": "2026-04-13T06:57:40.220Z",
+      "dateUpdated": "2026-04-13T06:57:40.220Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "14984358-7092-470d-8f34-ade47a7658a2",
+          "shortName": "Foxit",
+          "dateUpdated": "2026-04-13T06:57:40.220Z"
+        },
+        "title": "Server-Side Request Forgery (SSRF) via URL Parameter in Foxit PDF Services API",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-918",
+                "description": "CWE-918 Server-Side request forgery (SSRF)",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "Information Disclosure"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Foxit Software Inc.",
+            "product": "Foxit PDF Services API",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "before 2026-04-07"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An attacker can control a server-side HTTP request by supplying a crafted URL, causing the server to initiate requests to arbitrary destinations. This behavior may be exploited to probe internal network services, access otherwise unreachable endpoints (e.g., cloud metadata services), or bypass network access controls, potentially leading to sensitive information disclosure and further compromise of the internal environment.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "An attacker can control a server-side HTTP request by supplying a crafted URL, causing the server to initiate requests to arbitrary destinations. This behavior may be exploited to probe internal network services, access otherwise unreachable endpoints (e.g., cloud metadata services), or bypass network access controls, potentially leading to sensitive information disclosure and further compromise of the internal environment."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.foxit.com/support/security-bulletins.html"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Vedant Roy of Ultimate Kronos Group(UKG)",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.1"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5936"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5085",
+      "assignerOrgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+      "state": "PUBLISHED",
+      "assignerShortName": "CPANSec",
+      "dateReserved": "2026-03-28T19:20:25.997Z",
+      "datePublished": "2026-04-13T06:56:14.964Z",
+      "dateUpdated": "2026-04-13T06:56:14.964Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://cpan.org/modules",
+            "defaultStatus": "unaffected",
+            "packageName": "Solstice",
+            "product": "Solstice::Session",
+            "programFiles": [
+              "lib/Solstice/Session.pm",
+              "lib/Solstice/Subsession.pm"
+            ],
+            "programRoutines": [
+              {
+                "name": "Solstice::Session::_generateSessionID"
+              },
+              {
+                "name": "Solstice::Subsession::_generateID"
+              }
+            ],
+            "vendor": "MCRAWFOR",
+            "versions": [
+              {
+                "lessThanOrEqual": "1440",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Solstice::Session versions through 1440 for Perl generates session ids insecurely.\n\nThe _generateSessionID method returns an MD5 digest seeded by the epoch time, a random hash reference, a call to the built-in rand() function and the process id.\n\nThe same method is used in the _generateID method in Solstice::Subsession, which is part of the same distribution.\n\nThe epoch time may be guessed, if it is not leaked in the HTTP Date header. Stringified hash refences will contain predictable content. The built-in rand() function is seeded by 16-bits and is unsuitable for security purposes. The process id comes from a small set of numbers.\n\nPredictable session ids could allow an attacker to gain access to systems."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-115",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-115 Authentication Bypass"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-340",
+                "description": "CWE-340 Generation of Predictable Numbers or Identifiers",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-338",
+                "description": "CWE-338 Use of Cryptographically Weak Pseudo-Random Number Generator",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+          "shortName": "CPANSec",
+          "dateUpdated": "2026-04-13T06:56:14.964Z"
+        },
+        "references": [
+          {
+            "url": "https://metacpan.org/dist/Solstice/source/lib/Solstice/Session.pm#L481"
+          },
+          {
+            "url": "https://metacpan.org/dist/Solstice/source/lib/Solstice/Subsession.pm#L105"
+          },
+          {
+            "tags": [
+              "technical-description"
+            ],
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Solstice::Session versions through 1440 for Perl generates session ids insecurely",
+        "x_generator": {
+          "engine": "cpansec-cna-tool 0.1"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5085"
+          }
+        ]
+      }
+    }
+  }
+]
