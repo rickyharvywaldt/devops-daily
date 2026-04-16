@@ -1000,3 +1000,1005 @@
     }
   }
 ]
+[Thu Apr 16 19:23:13 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-32288",
+      "assignerOrgId": "1bb62c36-49e3-4200-9d77-64a1400537cc",
+      "state": "PUBLISHED",
+      "assignerShortName": "Go",
+      "dateReserved": "2026-03-11T16:38:46.557Z",
+      "datePublished": "2026-04-08T01:06:57.416Z",
+      "dateUpdated": "2026-04-13T18:20:08.191Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bb62c36-49e3-4200-9d77-64a1400537cc",
+          "shortName": "Go",
+          "dateUpdated": "2026-04-08T01:06:57.416Z"
+        },
+        "title": "Unbounded allocation for old GNU sparse in archive/tar",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "tar.Reader can allocate an unbounded amount of memory when reading a maliciously-crafted archive containing a large number of sparse regions encoded in the \"old GNU sparse map\" format."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Go standard library",
+            "product": "archive/tar",
+            "collectionURL": "https://pkg.go.dev",
+            "packageName": "archive/tar",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "1.25.9",
+                "status": "affected",
+                "versionType": "semver"
+              },
+              {
+                "version": "1.26.0-0",
+                "lessThan": "1.26.2",
+                "status": "affected",
+                "versionType": "semver"
+              }
+            ],
+            "programRoutines": [
+              {
+                "name": "Reader.readOldGNUSparseMap"
+              },
+              {
+                "name": "readGNUSparseMap1x0"
+              },
+              {
+                "name": "Reader.Next"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-400: Uncontrolled Resource Consumption"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://go.dev/cl/763766"
+          },
+          {
+            "url": "https://go.dev/issue/78301"
+          },
+          {
+            "url": "https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU"
+          },
+          {
+            "url": "https://pkg.go.dev/vuln/GO-2026-4869"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Colin Walters (walters@verbum.org)"
+          },
+          {
+            "lang": "en",
+            "value": "Uuganbayar Lkhamsuren (https://github.com/uug4na)"
+          },
+          {
+            "lang": "en",
+            "value": "Jakub Ciolek"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-32288"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 5.5,
+                "attackVector": "LOCAL",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                "integrityImpact": "NONE",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "NONE"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-13T17:51:05.649111Z",
+                  "id": "CVE-2026-32288",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-13T18:20:08.191Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-29131",
+      "assignerOrgId": "455daabc-a392-441d-aa46-37d35189897c",
+      "state": "PUBLISHED",
+      "assignerShortName": "NCSC.ch",
+      "dateReserved": "2026-03-04T09:08:03.277Z",
+      "datePublished": "2026-04-02T08:46:15.928Z",
+      "dateUpdated": "2026-04-02T13:31:31.492Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "455daabc-a392-441d-aa46-37d35189897c",
+          "shortName": "NCSC.ch",
+          "dateUpdated": "2026-04-02T08:46:15.928Z"
+        },
+        "title": "PGP Decryption Recipient LDAP Injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-90",
+                "description": "CWE-90 Improper Neutralization of Special Elements used in an LDAP Query ('LDAP Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-136",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-136 LDAP Injection"
+              }
+            ]
+          },
+          {
+            "capecId": "CAPEC-116",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-116 Excavation"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SEPPmail",
+            "product": "Secure Email Gateway",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "15.0.3",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:seppmail:seppmail_secure_email_gateway:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "0",
+                    "versionEndExcluding": "15.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SEPPmail Secure Email Gateway before version 15.0.3 allows attackers with a specially crafted email address to read the contents of emails encrypted for other users.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "SEPPmail Secure Email Gateway before version 15.0.3 allows attackers with a specially crafted email address to read the contents of emails encrypted for other users."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://downloads.seppmail.com/extrelnotes/150/ERN15.0.html#seppmail-vulnerability-disclosure-1503",
+            "tags": [
+              "release-notes"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 4.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-31T14:22:00.000Z",
+            "lang": "en",
+            "value": "Vulnerability disclosed to SEPPmail"
+          },
+          {
+            "time": "2026-03-03T00:00:00.000Z",
+            "lang": "en",
+            "value": "Version 15.0.3 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Andris Suter-Dörig",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Matteo Scarlata",
+            "type": "coordinator"
+          },
+          {
+            "lang": "en",
+            "value": "Kenny Paterson",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-29131"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-02T13:16:53.366492Z",
+                  "id": "CVE-2026-29131",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-02T13:31:31.492Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-29132",
+      "assignerOrgId": "455daabc-a392-441d-aa46-37d35189897c",
+      "state": "PUBLISHED",
+      "assignerShortName": "NCSC.ch",
+      "dateReserved": "2026-03-04T09:08:03.277Z",
+      "datePublished": "2026-04-02T08:25:00.574Z",
+      "dateUpdated": "2026-04-02T14:50:57.915Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "455daabc-a392-441d-aa46-37d35189897c",
+          "shortName": "NCSC.ch",
+          "dateUpdated": "2026-04-02T08:25:00.574Z"
+        },
+        "title": "ESWmail-Verify Bypass",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-306",
+                "description": "CWE-306 Missing Authentication for Critical Function",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-87",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-87 Forceful Browsing"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SEPPmail",
+            "product": "Secure Email Gateway",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "15.0.3",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:seppmail:seppmail_secure_email_gateway:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "0",
+                    "versionEndExcluding": "15.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SEPPmail Secure Email Gateway before version 15.0.3 allows an attacker with access to a victim's GINA account to bypass a second-password check and read protected emails.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "SEPPmail Secure Email Gateway before version 15.0.3 allows an attacker with access to a victim's GINA account to bypass a second-password check and read protected emails."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://downloads.seppmail.com/extrelnotes/150/ERN15.0.html#seppmail-vulnerability-disclosure-1503",
+            "tags": [
+              "release-notes"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-31T14:22:00.000Z",
+            "lang": "en",
+            "value": "Vulnerability disclosed to SEPPmail"
+          },
+          {
+            "time": "2026-03-03T00:00:00.000Z",
+            "lang": "en",
+            "value": "Version 15.0.3 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Andris Suter-Dörig",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Matteo Scarlata",
+            "type": "coordinator"
+          },
+          {
+            "lang": "en",
+            "value": "Kenny Paterson",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-29132"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-02T14:50:46.244390Z",
+                  "id": "CVE-2026-29132",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-02T14:50:57.915Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-32289",
+      "assignerOrgId": "1bb62c36-49e3-4200-9d77-64a1400537cc",
+      "state": "PUBLISHED",
+      "assignerShortName": "Go",
+      "dateReserved": "2026-03-11T16:38:46.557Z",
+      "datePublished": "2026-04-08T01:06:56.297Z",
+      "dateUpdated": "2026-04-13T18:20:46.377Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bb62c36-49e3-4200-9d77-64a1400537cc",
+          "shortName": "Go",
+          "dateUpdated": "2026-04-08T01:06:56.297Z"
+        },
+        "title": "JsBraceDepth Context Tracking Bugs (XSS) in html/template",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Context was not properly tracked across template branches for JS template literals, leading to possibly incorrect escaping of content when branches were used. Additionally template actions within JS template literals did not properly track the brace depth, leading to incorrect escaping being applied. These issues could cause actions within JS template literals to be incorrectly or improperly escaped, leading to XSS vulnerabilities."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Go standard library",
+            "product": "html/template",
+            "collectionURL": "https://pkg.go.dev",
+            "packageName": "html/template",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "1.25.9",
+                "status": "affected",
+                "versionType": "semver"
+              },
+              {
+                "version": "1.26.0-0",
+                "lessThan": "1.26.2",
+                "status": "affected",
+                "versionType": "semver"
+              }
+            ],
+            "programRoutines": [
+              {
+                "name": "context.String"
+              },
+              {
+                "name": "context.mangle"
+              },
+              {
+                "name": "escaper.escapeBranch"
+              },
+              {
+                "name": "Error.Error"
+              },
+              {
+                "name": "HTMLEscaper"
+              },
+              {
+                "name": "JSEscape"
+              },
+              {
+                "name": "JSEscapeString"
+              },
+              {
+                "name": "JSEscaper"
+              },
+              {
+                "name": "ParseFS"
+              },
+              {
+                "name": "ParseFiles"
+              },
+              {
+                "name": "ParseGlob"
+              },
+              {
+                "name": "Template.AddParseTree"
+              },
+              {
+                "name": "Template.Clone"
+              },
+              {
+                "name": "Template.DefinedTemplates"
+              },
+              {
+                "name": "Template.Execute"
+              },
+              {
+                "name": "Template.ExecuteTemplate"
+              },
+              {
+                "name": "Template.Funcs"
+              },
+              {
+                "name": "Template.Parse"
+              },
+              {
+                "name": "Template.ParseFS"
+              },
+              {
+                "name": "Template.ParseFiles"
+              },
+              {
+                "name": "Template.ParseGlob"
+              },
+              {
+                "name": "URLQueryEscaper"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://go.dev/cl/763762"
+          },
+          {
+            "url": "https://go.dev/issue/78331"
+          },
+          {
+            "url": "https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU"
+          },
+          {
+            "url": "https://pkg.go.dev/vuln/GO-2026-4865"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-32289"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "CHANGED",
+                "version": "3.1",
+                "baseScore": 6.1,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "integrityImpact": "LOW",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-13T17:48:22.714020Z",
+                  "id": "CVE-2026-32289",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-13T18:20:46.377Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-29133",
+      "assignerOrgId": "455daabc-a392-441d-aa46-37d35189897c",
+      "state": "PUBLISHED",
+      "assignerShortName": "NCSC.ch",
+      "dateReserved": "2026-03-04T09:08:03.277Z",
+      "datePublished": "2026-04-02T08:26:26.949Z",
+      "dateUpdated": "2026-04-02T14:50:21.869Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "455daabc-a392-441d-aa46-37d35189897c",
+          "shortName": "NCSC.ch",
+          "dateUpdated": "2026-04-02T08:26:26.949Z"
+        },
+        "title": "UID Regex Bypass",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-20",
+                "description": "CWE-20 Improper Input Validation",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-194",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-194 Fake the Source of Data"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SEPPmail",
+            "product": "Secure Email Gateway",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "15.0.3",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:seppmail:seppmail_secure_email_gateway:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "0",
+                    "versionEndExcluding": "15.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SEPPmail Secure Email Gateway before version 15.0.3 allows an attacker to upload PGP keys with UIDs that do not match their email address.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "SEPPmail Secure Email Gateway before version 15.0.3 allows an attacker to upload PGP keys with UIDs that do not match their email address."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://downloads.seppmail.com/extrelnotes/150/ERN15.0.html#seppmail-vulnerability-disclosure-1503",
+            "tags": [
+              "release-notes"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "LOW",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:N"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2025-10-31T14:22:00.000Z",
+            "lang": "en",
+            "value": "Vulnerability disclosed to SEPPmail"
+          },
+          {
+            "time": "2026-03-03T00:00:00.000Z",
+            "lang": "en",
+            "value": "Version 15.0.3 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Andris Suter-Dörig",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Matteo Scarlata",
+            "type": "coordinator"
+          },
+          {
+            "lang": "en",
+            "value": "Kenny Paterson",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.5.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-29133"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-02T14:50:11.761620Z",
+                  "id": "CVE-2026-29133",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-02T14:50:21.869Z"
+          }
+        }
+      ]
+    }
+  }
+]
