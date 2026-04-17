@@ -2176,3 +2176,489 @@
     }
   }
 ]
+[Fri Apr 17 07:57:04 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6441",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-04-16T18:15:29.101Z",
+      "datePublished": "2026-04-17T06:44:50.145Z",
+      "dateUpdated": "2026-04-17T06:44:50.145Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-17T06:44:50.145Z"
+        },
+        "affected": [
+          {
+            "vendor": "flightbycanto",
+            "product": "Canto",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "3.1.1",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Canto plugin for WordPress is vulnerable to Missing Authorization in versions up to and including 3.1.1. This is due to the absence of any capability check or nonce verification in the updateOptions() function, which is exposed via two AJAX hooks: wp_ajax_updateOptions (class-canto.php line 231) and wp_ajax_fbc_updateOptions (class-canto-settings.php line 76). Both hooks are registered exclusively under the wp_ajax_ prefix (requiring only a logged-in user), with no call to current_user_can() or check_ajax_referer(). This makes it possible for authenticated attackers with subscriber-level access and above to arbitrarily modify or delete plugin options controlling cron scheduling behavior (fbc_duplicates, fbc_cron, fbc_schedule, fbc_cron_time_day, fbc_cron_time_hour, fbc_cron_start) and to manipulate or clear the plugin's scheduled WordPress cron event (fbc_scheduled_update)."
+          }
+        ],
+        "title": "Canto <= 3.1.1 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Setting Modification",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c1a0200f-9861-4eca-adbf-d458eb6b4e63?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/canto/trunk/includes/class-canto.php#L572"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/canto/tags/3.1.1/includes/class-canto.php#L572"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/canto/trunk/includes/class-canto.php#L231"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/canto/tags/3.1.1/includes/class-canto.php#L231"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/canto/trunk/includes/class-canto-settings.php#L603"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/canto/tags/3.1.1/includes/class-canto-settings.php#L603"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-862 Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Abhirup Konwar"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-16T18:16:51.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6441"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-4659",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-03-23T16:01:46.932Z",
+      "datePublished": "2026-04-17T06:44:49.739Z",
+      "dateUpdated": "2026-04-17T06:44:49.739Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-17T06:44:49.739Z"
+        },
+        "affected": [
+          {
+            "vendor": "unitecms",
+            "product": "Unlimited Elements For Elementor",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "2.0.6",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Unlimited Elements for Elementor plugin for WordPress is vulnerable to Arbitrary File Read via the Repeater JSON/CSV URL parameter in versions up to, and including, 2.0.6. This is due to insufficient path traversal sanitization in the URLtoRelative() and urlToPath() functions, combined with the ability to enable debug output in widget settings. The URLtoRelative() function only performs a simple string replacement to remove the site's base URL without sanitizing path traversal sequences (../), and the cleanPath() function only normalizes directory separators without removing traversal components. This allows an attacker to provide a URL like http://site.com/../../../../etc/passwd which, after URLtoRelative() strips the domain, results in /../../../../etc/passwd being concatenated with the base path and ultimately resolved to /etc/passwd. This makes it possible for authenticated attackers with Author-level access and above to read arbitrary local files from the WordPress host, including sensitive files such as wp-config."
+          }
+        ],
+        "title": "Unlimited Elements For Elementor <= 2.0.6 - Authenticated (Contributor+) Arbitrary File Read via Path Traversal in Repeater JSON/CSV URL with Path Traversal",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/9e7e3763-4606-4fc4-aa0f-b67e6087bdc2?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/trunk/inc_php/unitecreator_operations.class.php#L710"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/tags/2.0.6/inc_php/unitecreator_operations.class.php#L710"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/trunk/inc_php/unitecreator_helper.class.php#L667"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/tags/2.0.6/inc_php/unitecreator_helper.class.php#L667"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/trunk/inc_php/unitecreator_helper.class.php#L643"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/tags/2.0.6/inc_php/unitecreator_helper.class.php#L643"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/trunk/provider/provider_helper.class.php#L607"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/tags/2.0.6/provider/provider_helper.class.php#L607"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/trunk/provider/provider_helper.class.php#L597"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/unlimited-elements-for-elementor/tags/2.0.6/provider/provider_helper.class.php#L597"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3504458%40unlimited-elements-for-elementor&new=3504458%40unlimited-elements-for-elementor&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "cweId": "CWE-22",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Dmitrii Ignatyev"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-16T17:54:33.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-4659"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6443",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-04-16T18:22:16.366Z",
+      "datePublished": "2026-04-17T06:44:49.128Z",
+      "dateUpdated": "2026-04-17T06:44:49.128Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-17T06:44:49.128Z"
+        },
+        "affected": [
+          {
+            "vendor": "essentialplugin",
+            "product": "Accordion and Accordion Slider",
+            "versions": [
+              {
+                "version": "1.4.6",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Accordion and Accordion Slider plugin for WordPress is vulnerable to an injected backdoor in version 1.4.6. This is due to the plugin being sold to a malicious threat actor that embedded a backdoor in all of the plugin's they acquired. This makes it possible for the threat actor to maintain a persistent backdoor and inject spam into the affected sites."
+          }
+        ],
+        "title": "Accordion and Accordion Slider 1.4.6 - Injected Backdoor",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2597724a-9a39-4e46-b153-f42366f833ba?source=cve"
+          },
+          {
+            "url": "https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-506 Embedded Malicious Code",
+                "cweId": "CWE-506",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Eu Joe Chegne"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Damien"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-16T18:38:10.000Z",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2026-04-09T00:00:00.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6443"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xhph-rh45-hg46",
+    "modified": "2026-04-17T06:31:08Z",
+    "published": "2026-04-17T06:31:08Z",
+    "aliases": [
+      "CVE-2026-5234"
+    ],
+    "details": "The LatePoint plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 5.3.2. The vulnerability exists because the OsStripeConnectController::create_payment_intent_for_transaction action is registered as a public action (no authentication required) and loads invoices by sequential integer invoice_id without any access_key or ownership verification. This is in contrast to other invoice-related actions (view_by_key, payment_form, summary_before_payment) in OsInvoicesController which properly require a cryptographic UUID access_key. This makes it possible for unauthenticated attackers to enumerate valid invoice IDs via an error message oracle, create unauthorized transaction intent records in the database containing sensitive financial data (invoice_id, order_id, customer_id, charge_amount), and on sites with Stripe Connect configured, the response also leaks Stripe payment_intent_client_secret tokens, transaction_intent_key values, and payment amounts for any invoice.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5234"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.2.9/lib/controllers/stripe_connect_controller.php#L20"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.2.9/lib/controllers/stripe_connect_controller.php#L31"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.2.9/lib/controllers/stripe_connect_controller.php#L33"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/tags/5.2.9/lib/controllers/stripe_connect_controller.php#L50"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/trunk/lib/controllers/stripe_connect_controller.php#L20"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/trunk/lib/controllers/stripe_connect_controller.php#L31"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/trunk/lib/controllers/stripe_connect_controller.php#L33"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/latepoint/trunk/lib/controllers/stripe_connect_controller.php#L50"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset/3505127/latepoint/trunk/lib/controllers/stripe_connect_controller.php"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/afec4c8c-a18d-4907-8879-2412f8a1abed?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-17T05:16:18Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xhph-rh45-hg46"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wcw2-cv2c-x8cm",
+    "modified": "2026-04-17T06:31:08Z",
+    "published": "2026-04-17T06:31:08Z",
+    "aliases": [
+      "CVE-2026-5502"
+    ],
+    "details": "The Tutor LMS – eLearning and online course solution plugin for WordPress is vulnerable to unauthorized course content manipulation in versions up to and including 3.9.8. This is due to a missing authorization check in the tutor_update_course_content_order() function. The function only validates the nonce (CSRF protection) but does not verify whether the user has permission to manage course content. The can_user_manage() authorization check only executes when the 'content_parent' parameter is present in the request. When this parameter is omitted, the function proceeds directly to save_course_content_order() which manipulates the wp_posts table without any authorization validation. This makes it possible for authenticated attackers with subscriber-level access and above to detach all lessons from any topic, move lessons between topics, and modify the menu_order of course content, effectively allowing them to disrupt the structure of any course on the site.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5502"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/tutor/tags/3.9.7/classes/Course.php#L1700"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/tutor/tags/3.9.7/classes/Course.php#L1789"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/tutor/trunk/classes/Course.php#L1700"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/tutor/trunk/classes/Course.php#L1789"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset/3505142/tutor/tags/3.9.9/classes/Course.php"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f32ae42d-dd1f-41d7-8ae4-ddec56d78ae6?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-04-17T05:16:19Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wcw2-cv2c-x8cm"
+          }
+        ]
+      }
+    }
+  }
+]
