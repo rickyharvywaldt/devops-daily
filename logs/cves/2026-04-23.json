@@ -1,0 +1,673 @@
+[Thu Apr 23 13:57:17 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-69627",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-04-14T16:30:15.973Z",
+      "dateReserved": "2026-01-09T00:00:00.000Z",
+      "datePublished": "2026-04-13T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-04-13T15:16:10.135Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nitro PDF Pro for Windows 14.41.1.4 contains a heap use-after-free vulnerability in the implementation of the JavaScript method this.mailDoc(). During execution, an internal XID object is allocated and then freed prematurely, after which the freed pointer is still passed into UI and logging helper functions. Because the freed memory region may contain unpredictable heap data or remnants of attacker-controlled JavaScript strings, downstream routines such as wcscmp() may process invalid or stale pointers. This can result in access violations and non-deterministic crashes."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://nitro.com"
+          },
+          {
+            "url": "https://jeroscope.com/advisories/2025/jero-2025-016/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-69627"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-416",
+                  "lang": "en",
+                  "description": "CWE-416 Use After Free"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 8.4,
+                "attackVector": "LOCAL",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-14T15:39:52.327437Z",
+                  "id": "CVE-2025-69627",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-14T16:30:15.973Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5926",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2026-04-08T22:30:44.020Z",
+      "datePublished": "2026-04-22T23:38:46.689Z",
+      "dateUpdated": "2026-04-22T23:39:07.336Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2026-04-22T23:39:07.336Z"
+        },
+        "title": "Security vulnerabilities have been found in IBM Verify Identity Access and IBM Security Verify Access",
+        "affected": [
+          {
+            "vendor": "IBM",
+            "product": "Verify Identity Access Container",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "11.0",
+                "lessThanOrEqual": "11.0.2",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:verify_identity_access_container:11.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:verify_identity_access_container:11.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:verify_identity_access_container:11.0.2:*:*:*:*:*:*:*"
+            ]
+          },
+          {
+            "vendor": "IBM",
+            "product": "Security Verify Access Container",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "10.0",
+                "lessThanOrEqual": "10.0.9.1",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:security_verify_access_container:10.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:security_verify_access_container:10.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:security_verify_access_container:10.0.9.1:*:*:*:*:*:*:*"
+            ]
+          },
+          {
+            "vendor": "IBM",
+            "product": "Verify Identity Access",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "11.0",
+                "lessThanOrEqual": "11.0.2",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:verify_identity_access:11.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:verify_identity_access:11.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:verify_identity_access:11.0.2:*:*:*:*:*:*:*"
+            ]
+          },
+          {
+            "vendor": "IBM",
+            "product": "Security Verify Access",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "10.0",
+                "lessThanOrEqual": "10.0.9.1",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:security_verify_access:10.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:security_verify_access:10.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:security_verify_access:10.0.9.1:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 uses weaker than expected cryptographic algorithms that could allow an attacker to decrypt highly sensitive information.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM Verify Identity Access Container 11.0 through 11.0.2 and IBM Security Verify Access Container 10.0 through 10.0.9.1 and IBM Verify Identity Access 11.0 through 11.0.2 and IBM Security Verify Access 10.0 through 10.0.9.1 uses weaker than expected cryptographic algorithms that could allow an attacker to decrypt highly sensitive information.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7269372",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "IBM encourages customers to update their systems promptly.Appliance:Affected Products and VersionsFix availabilityIBM Verify Identity Access 11.0 - 11.0.2Download IBM Verify Identity Access v11.0.2 IF1IBM Security Verify Access 10.0.0 - 10.0.9.1Download IBM Security Verify Access v10.0.9.1 IF1Container:Container Download",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p><strong>IBM encourages customers to update their systems promptly.</strong></p><p></p><p><strong>Appliance:</strong></p><div><table><thead><tr><td><p><strong>Affected Products and Versions</strong></p></td><td><p><strong>Fix availability</strong></p></td></tr><tr><td><p>IBM Verify Identity Access 11.0 - 11.0.2</p></td><td><p><a href=\"https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Security&amp;product=ibm/Tivoli/IBM+Verify+Identity+Access&amp;release=11.0.2.0&amp;platform=Linux&amp;function=fixId&amp;fixids=11.0.2.0-ISS-IVIA-IF0001+&amp;includeSupersedes=0\" rel=\"nofollow\">Download IBM Verify Identity Access v11.0.2 IF1</a></p></td></tr><tr><td><p>IBM Security Verify Access 10.0.0 - 10.0.9.1</p></td><td><p><a href=\"https://www.ibm.com/support/fixcentral/swg/selectFixes?parent=IBM%20Security&amp;product=ibm/Tivoli/IBM+Security+Verify+Access&amp;release=10.0.9.1&amp;platform=Linux&amp;function=fixId&amp;fixids=10.0.9.1-ISS-ISVA-IF0001+&amp;includeSupersedes=0\" rel=\"nofollow\">Download IBM Security Verify Access v10.0.9.1 IF1</a></p></td></tr></thead></table></div><p></p><p><strong>Container:</strong></p><p><a href=\"https://docs.verify.ibm.com/ibm-security-verify-access/docs/containers\" rel=\"nofollow\">Container Download</a></p>"
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "ibm-cvegen"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5926"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-4512",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-03-20T14:28:42.326Z",
+      "datePublished": "2026-04-23T06:00:09.102Z",
+      "dateUpdated": "2026-04-23T06:00:09.102Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-04-23T06:00:09.102Z"
+        },
+        "title": "WP reCaptcha by WebDesignBy < 2.0 – Admin+ Stored XSS",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-79 Cross-Site Scripting (XSS)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "reCaptcha by WebDesignBy",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThan": "2.0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The reCaptcha by WebDesignBy WordPress plugin before 2.0 does not sanitize or escape the Site Key setting before outputting it in a JavaScript string context via the grecaptcha_js() function. This allows administrators on multisite installations (who do not have the unfiltered_html capability) to inject arbitrary JavaScript that executes for all visitors to the WordPress login page."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/6dfb4378-fe6a-4462-af10-8e7504e3d593/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Mustafa Ahmed",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-4512"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-41233",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-04-18T03:47:03.134Z",
+      "datePublished": "2026-04-23T04:00:19.011Z",
+      "dateUpdated": "2026-04-23T12:26:22.883Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Froxlor has a Reseller Domain Quota Bypass via Unvalidated adminid Parameter in Domains.add()",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-863",
+                "lang": "en",
+                "description": "CWE-863: Incorrect Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/froxlor/froxlor/security/advisories/GHSA-jvx4-xv3m-hrj4",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-jvx4-xv3m-hrj4"
+          },
+          {
+            "name": "https://github.com/froxlor/froxlor/commit/bf47ba15329506e9f9662f9462463932aa80dff5",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/froxlor/froxlor/commit/bf47ba15329506e9f9662f9462463932aa80dff5"
+          },
+          {
+            "name": "https://github.com/froxlor/froxlor/releases/tag/2.3.6",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/froxlor/froxlor/releases/tag/2.3.6"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "froxlor",
+            "product": "froxlor",
+            "versions": [
+              {
+                "version": "< 2.3.6",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-04-23T04:00:19.011Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Froxlor is open source server administration software. Prior to version 2.3.6, in `Domains.add()`, the `adminid` parameter is accepted from user input and used without validation when the calling reseller does not have the `customers_see_all` permission. This allows a reseller to attribute newly created domains to any other admin, bypassing their own domain quota (since the wrong admin's `domains_used` counter is incremented) and potentially exhausting another admin's quota. Version 2.3.6 fixes the issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-jvx4-xv3m-hrj4",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-41233"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-jvx4-xv3m-hrj4",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-23T12:26:17.190754Z",
+                  "id": "CVE-2026-41233",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-23T12:26:22.883Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-41229",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-04-18T03:47:03.134Z",
+      "datePublished": "2026-04-23T03:44:25.617Z",
+      "dateUpdated": "2026-04-23T12:31:15.671Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Froxlor has a PHP Code Injection via Unescaped Single Quotes in userdata.inc.php Generation (MysqlServer API)",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "CWE-94: Improper Control of Generation of Code ('Code Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/froxlor/froxlor/security/advisories/GHSA-gc9w-cc93-rjv8",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-gc9w-cc93-rjv8"
+          },
+          {
+            "name": "https://github.com/froxlor/froxlor/commit/3589ddf93ab59eb2a8971f0f56cbf6266d03c4ae",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/froxlor/froxlor/commit/3589ddf93ab59eb2a8971f0f56cbf6266d03c4ae"
+          },
+          {
+            "name": "https://github.com/froxlor/froxlor/releases/tag/2.3.6",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/froxlor/froxlor/releases/tag/2.3.6"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "froxlor",
+            "product": "froxlor",
+            "versions": [
+              {
+                "version": "< 2.3.6",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-04-23T03:44:25.617Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Froxlor is open source server administration software. Prior to version 2.3.6, `PhpHelper::parseArrayToString()` writes string values into single-quoted PHP string literals without escaping single quotes. When an admin with `change_serversettings` permission adds or updates a MySQL server via the API, the `privileged_user` parameter (which has no input validation) is written unescaped into `lib/userdata.inc.php`. Since this file is `require`d on every request via `Database::getDB()`, an attacker can inject arbitrary PHP code that executes as the web server user on every subsequent page load. Version 2.3.6 contains a patch."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-gc9w-cc93-rjv8",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-41229"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-gc9w-cc93-rjv8",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-23T12:31:11.971510Z",
+                  "id": "CVE-2026-41229",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-23T12:31:15.671Z"
+          }
+        }
+      ]
+    }
+  }
+]
