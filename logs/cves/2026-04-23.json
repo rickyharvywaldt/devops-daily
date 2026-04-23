@@ -671,3 +671,538 @@
     }
   }
 ]
+[Thu Apr 23 19:19:28 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2026-31169",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-04-23T18:38:05.319Z",
+      "dateReserved": "2026-03-09T00:00:00.000Z",
+      "datePublished": "2026-04-23T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-04-23T18:38:05.319Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in ToToLink A3300R firmware v17.0.0cu.557_B20221024 allowing attackers to execute arbitrary commands via the week parameter to /cgi-bin/cstecgi.cgi."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Svigo-o/TOTOLINK-Vul/tree/main/totolink-a3300r-week-cmd-injection"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-31169"
+          }
+        ]
+      }
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-35570",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-04-03T20:09:02.826Z",
+      "datePublished": "2026-04-20T23:24:08.324Z",
+      "dateUpdated": "2026-04-21T19:49:30.148Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "OpenClaude has Sandbox Bypass via Early-Exit Logic Flaw that Allows Path Traversal",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "CWE-284: Improper Access Control",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/Gitlawb/openclaude/security/advisories/GHSA-m6rx-7pvw-2f73",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/Gitlawb/openclaude/security/advisories/GHSA-m6rx-7pvw-2f73"
+          },
+          {
+            "name": "https://github.com/Gitlawb/openclaude/commit/7002cb302b78ea2a19da3f26226de24e2903fa1d",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/Gitlawb/openclaude/commit/7002cb302b78ea2a19da3f26226de24e2903fa1d"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Gitlawb",
+            "product": "openclaude",
+            "versions": [
+              {
+                "version": "< 0.5.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-04-20T23:24:08.324Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaude is an open-source coding-agent command line interface for cloud and local model providers. Versions prior to 0.5.1 have a logic flaw in `bashToolHasPermission()` inside `src/tools/BashTool/bashPermissions.ts`. When the sandbox auto-allow feature is active and no explicit deny rule is configured, the function returns an `allow` result immediately — before the path constraint filter (`checkPathConstraints`) is ever evaluated. This allows commands containing path traversal sequences (e.g., `../../../../../etc/passwd`) to bypass directory restrictions entirely. Version 0.5.1 contains a patch for the issue."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-m6rx-7pvw-2f73",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-35570"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/Gitlawb/openclaude/security/advisories/GHSA-m6rx-7pvw-2f73",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-21T16:01:46.877935Z",
+                  "id": "CVE-2026-35570",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-21T19:49:30.148Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6921",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-04-23T16:11:31.076Z",
+      "datePublished": "2026-04-23T16:12:24.489Z",
+      "dateUpdated": "2026-04-23T18:36:37.373Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "147.0.7727.117",
+                "status": "affected",
+                "lessThan": "147.0.7727.117",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Race in GPU in Google Chrome on Windows prior to 147.0.7727.117 allowed a remote attacker to potentially perform a sandbox escape via a crafted video file. (Chromium security severity: Medium)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Race",
+                "cweId": "CWE-362"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-04-23T16:12:24.489Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop_22.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/493315759"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6921"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "CHANGED",
+                "version": "3.1",
+                "baseScore": 8.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-23T18:31:42.336774Z",
+                  "id": "CVE-2026-6921",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-23T18:36:37.373Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-04-23T18:36:37Z",
+    "published": "2026-04-23T18:36:37Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-3023",
+    "summary": "Malicious code in test-pkg-jie (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (bc409f90d96c576263a60bd95ab30260b973097425292cdd53999e49cb3c4011)\nDuring installation, the package attempts to create a reverse shell\n\n\n---\n\nCategory: MALICIOUS - The campaign has clearly malicious intent, like infostealers.\n\n\nCampaign: 2026-04-my-package-jiecub3\n\n\nReasons (based on the campaign):\n\n\n - The package contains code to create a reverse shell, allowing an attacker to execute any commands on the victim's machine.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "test-pkg-jie"
+        },
+        "versions": [
+          "1.0.0",
+          "1.1.0",
+          "1.2.0",
+          "1.3.0",
+          "1.4.0"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/test-pkg-jie"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "ANALYST",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/2026-04-my-package-jiecub3/test-pkg-jie",
+          "import_time": "2026-04-23T18:55:57.642502008Z",
+          "modified_time": "2026-04-23T18:36:37.964293Z",
+          "sha256": "bc409f90d96c576263a60bd95ab30260b973097425292cdd53999e49cb3c4011",
+          "source": "kam193",
+          "versions": [
+            "1.0.0",
+            "1.1.0",
+            "1.2.0",
+            "1.3.0",
+            "1.4.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-3023"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-39861",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-04-07T19:13:20.379Z",
+      "datePublished": "2026-04-21T00:56:39.062Z",
+      "dateUpdated": "2026-04-21T13:44:49.618Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Claude Code: Sandbox Escape via Symlink Following Allows Arbitrary File Write Outside Workspace",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-61",
+                "lang": "en",
+                "description": "CWE-61: UNIX Symbolic Link (Symlink) Following",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 7.7,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/anthropics/claude-code/security/advisories/GHSA-vp62-r36r-9xqp",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-vp62-r36r-9xqp"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "anthropics",
+            "product": "claude-code",
+            "versions": [
+              {
+                "version": "< 2.1.64",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-04-21T00:56:39.062Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Claude Code is an agentic coding tool. Prior to version 2.1.64, Claude Code's sandbox did not prevent sandboxed processes from creating symlinks pointing to locations outside the workspace. When Claude Code subsequently wrote to a path within such a symlink, its unsandboxed process followed the symlink and wrote to the target location outside the workspace without prompting the user for confirmation. This allowed a sandbox escape where neither the sandboxed command nor the unsandboxed app could independently write outside the workspace, but their combination could write to arbitrary locations, potentially leading to code execution outside the sandbox. Reliably exploiting this required the ability to add untrusted content into a Claude Code context window to trigger sandboxed code execution via prompt injection. Users on standard Claude Code auto-update have received this fix automatically. Users performing manual updates are advised to update to version 2.1.64 or later."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-vp62-r36r-9xqp",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-39861"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-21T13:44:29.934669Z",
+                  "id": "CVE-2026-39861",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-21T13:44:49.618Z"
+          }
+        }
+      ]
+    }
+  }
+]
