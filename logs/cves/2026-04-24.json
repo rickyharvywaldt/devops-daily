@@ -1,0 +1,584 @@
+[Fri Apr 24 08:12:03 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3569",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-03-04T20:51:43.677Z",
+      "datePublished": "2026-04-24T07:45:08.536Z",
+      "dateUpdated": "2026-04-24T07:45:08.536Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-24T07:45:08.536Z"
+        },
+        "affected": [
+          {
+            "vendor": "liaison",
+            "product": "Liaison Site Prober",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "1.2.1",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Liaison Site Prober plugin for WordPress is vulnerable to Information Exposure in all versions up to and including 1.2.1 via the /wp-json/site-prober/v1/logs REST API endpoint. The permissions_read() permission callback unconditionally returns true (via __return_true()) instead of checking for appropriate capabilities. This makes it possible for unauthenticated attackers to retrieve sensitive audit log data including IP addresses, user IDs, usernames, login/logout events, failed login attempts, and detailed activity descriptions."
+          }
+        ],
+        "title": "Liaison Site Prober <= 1.2.1 - Missing Authorization to Unauthenticated Information Exposure in '/logs' REST API Endpoint",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/eda5addb-40e2-4187-b803-34500b36be0a?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/liaison-site-prober/trunk/includes/class-liaison-rest-controller.php#L50"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/liaison-site-prober/tags/1.2.1/includes/class-liaison-rest-controller.php#L50"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/liaison-site-prober/trunk/includes/class-liaison-rest-controller.php#L90"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/liaison-site-prober/tags/1.2.1/includes/class-liaison-rest-controller.php#L90"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/liaison-site-prober/trunk/includes/class-liaison-rest-controller.php#L19"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/liaison-site-prober/tags/1.2.1/includes/class-liaison-rest-controller.php#L19"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3481019%40liaison-site-prober&new=3481019%40liaison-site-prober&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-862 Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Itthidej Aramsri"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-23T19:17:51.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3569"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-4078",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-03-12T20:02:44.935Z",
+      "datePublished": "2026-04-24T07:45:08.094Z",
+      "dateUpdated": "2026-04-24T07:45:08.094Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-24T07:45:08.094Z"
+        },
+        "affected": [
+          {
+            "vendor": "iteras",
+            "product": "ITERAS",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "1.8.2",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ITERAS plugin for WordPress is vulnerable to Stored Cross-Site Scripting via multiple shortcodes (iteras-ordering, iteras-signup, iteras-paywall-login, iteras-selfservice) in all versions up to and including 1.8.2. This is due to insufficient input sanitization and output escaping in the combine_attributes() function. The function directly concatenates shortcode attribute values into JavaScript code within <script> tags using double-quoted string interpolation (line 489: '\"'.$key.'\": \"'.$value.'\"') without any escaping. An attacker can break out of the JavaScript string context by including a double-quote character in a shortcode attribute value and inject arbitrary JavaScript. This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "ITERAS <= 1.8.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode Attributes",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/bd034f43-370c-4ad9-ad02-4cae0f48d781?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/trunk/public/iteras-public.php#L489"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/tags/1.8.2/public/iteras-public.php#L489"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/trunk/public/iteras-public.php#L519"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/tags/1.8.2/public/iteras-public.php#L519"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/trunk/public/iteras-public.php#L511"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/tags/1.8.2/public/iteras-public.php#L511"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/trunk/public/iteras-public.php#L527"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/tags/1.8.2/public/iteras-public.php#L527"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/trunk/public/iteras-public.php#L561"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/tags/1.8.2/public/iteras-public.php#L561"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/trunk/public/iteras-public.php#L551"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/iteras/tags/1.8.2/public/iteras-public.php#L551"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3507724%40iteras&new=3507724%40iteras&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Muhammad Yudha - DJ"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-23T19:20:52.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-4078"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-3565",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-03-04T20:28:38.759Z",
+      "datePublished": "2026-04-24T07:45:07.610Z",
+      "dateUpdated": "2026-04-24T07:45:07.610Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-24T07:45:07.610Z"
+        },
+        "affected": [
+          {
+            "vendor": "taqnix",
+            "product": "Taqnix",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "1.0.3",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Taqnix plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.0.3. This is due to a missing nonce verification in the taqnix_delete_my_account() function, where the check_ajax_referer() call is explicitly commented out on line 883. This makes it possible for unauthenticated attackers to trick a logged-in non-administrator user into deleting their own account via a forged request granted they can trick the user into performing an action such as clicking a link or visiting a malicious page."
+          }
+        ],
+        "title": "Taqnix <= 1.0.3 - Cross-Site Request Forgery to Account Deletion via 'taqnix_delete_my_account' AJAX Action",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/82aeab24-3467-4cb0-b71f-b7f97c26dc80?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/taqnix/trunk/public/class-taqnix-user.php#L916"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/taqnix/tags/1.0.3/public/class-taqnix-user.php#L916"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/taqnix/trunk/public/class-taqnix-user.php#L883"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/taqnix/tags/1.0.3/public/class-taqnix-user.php#L883"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/taqnix/trunk/public/class-taqnix-user.php#L67"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/taqnix/tags/1.0.3/public/class-taqnix-user.php#L67"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3491080%40taqnix&new=3491080%40taqnix&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-352 Cross-Site Request Forgery (CSRF)",
+                "cweId": "CWE-352",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Youcef Hamdani"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-23T19:16:41.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-3565"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11762",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2025-10-14T20:34:25.859Z",
+      "datePublished": "2026-04-24T07:45:06.751Z",
+      "dateUpdated": "2026-04-24T07:45:06.751Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-24T07:45:06.751Z"
+        },
+        "affected": [
+          {
+            "vendor": "hubspotdev",
+            "product": "HubSpot All-In-One Marketing – Forms, Popups, Live Chat",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "11.3.32",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The HubSpot All-In-One Marketing - Forms, Popups, Live Chat plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 11.3.32 via the leadin/public/admin/class-adminconstants.php file. This makes it possible for authenticated attackers, with Contributor-level access and above, to extract a list of all installed plugins and their versions which can be leveraged for reconnaissance and further attacks."
+          }
+        ],
+        "title": "HubSpot All-In-One Marketing - Forms, Popups, Live Chat <= 11.3.32 - Missing Authorization to Authenticated (Contributor+) Installed Plugin Disclosure",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2a8c62e6-f459-433a-b0c4-c79285ea7fe9?source=cve"
+          },
+          {
+            "url": "https://research.cleantalk.org/CVE-2025-11762"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/leadin/tags/11.3.33/public/admin/class-adminconstants.php"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-862 Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Dmitrii Ignatyev"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-23T19:19:31.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-11762"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2026-31283",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-04-24T07:32:30.441Z",
+      "dateReserved": "2026-03-09T00:00:00.000Z",
+      "datePublished": "2026-04-13T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-04-24T07:32:30.441Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In Totara LMS v19.1.5 and before, the forgot password API does not implement rate limiting for the target email address. which can be used for an Email Bombing attack. NOTE: the Supplier's position is that the pwresettime configuration defaults to 30 minutes, the pwresettime configuration is a hard control enforced via flag PWRESET_STATUS_ALREADYSENT, and no further password-reset email messages are sent if this flag is active for a specific email address."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://totara.com/"
+          },
+          {
+            "url": "https://github.com/saykino/CVE-2026-31283"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "disputed"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-31283"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-770",
+                  "lang": "en",
+                  "description": "CWE-770 Allocation of Resources Without Limits or Throttling"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 9.8,
+                "attackVector": "NETWORK",
+                "baseSeverity": "CRITICAL",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-14T15:40:54.096682Z",
+                  "id": "CVE-2026-31283",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-14T16:32:37.891Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  }
+]
