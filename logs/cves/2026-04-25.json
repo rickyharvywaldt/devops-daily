@@ -896,3 +896,754 @@
     }
   }
 ]
+[Sat Apr 25 07:25:48 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "RUSTSEC-2023-0071",
+    "modified": "2026-04-25T06:40:09Z",
+    "published": "2023-11-22T12:00:00Z",
+    "aliases": [
+      "CVE-2023-49092",
+      "GHSA-c38w-74pg-36hr",
+      "GHSA-4grx-2x9w-596c"
+    ],
+    "related": [],
+    "summary": "Marvin Attack: potential key recovery through timing sidechannels",
+    "details": "### Impact\nDue to a non-constant-time implementation, information about the private key is leaked through timing information which is observable over the network. An attacker may be able to use that information to recover the key.\n\n### Patches\nNo patch is yet available, however work is underway to migrate to a fully constant-time implementation.\n\n### Workarounds\nThe only currently available workaround is to avoid using the `rsa` crate in settings where attackers are able to observe timing information, e.g. local use on a non-compromised computer is fine.\n\n### References\nThis vulnerability was discovered as part of the \"[Marvin Attack]\", which revealed several implementations of RSA including OpenSSL had not properly mitigated timing sidechannel attacks.\n\n[Marvin Attack]: https://people.redhat.com/~hkario/marvin/",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "crates.io",
+          "name": "rsa",
+          "purl": "pkg:cargo/rsa"
+        },
+        "ecosystem_specific": {
+          "affects": {
+            "arch": [],
+            "os": [],
+            "functions": []
+          },
+          "affected_functions": null
+        },
+        "database_specific": {
+          "categories": [
+            "crypto-failure"
+          ],
+          "cvss": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "informational": null
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0.0.0-0"
+              }
+            ]
+          }
+        ],
+        "versions": []
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://crates.io/crates/rsa"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://rustsec.org/advisories/RUSTSEC-2023-0071.html"
+      },
+      {
+        "type": "REPORT",
+        "url": "https://github.com/RustCrypto/RSA/issues/626"
+      },
+      {
+        "type": "REPORT",
+        "url": "https://github.com/RustCrypto/RSA/issues/19#issuecomment-1822995643"
+      },
+      {
+        "type": "WEB",
+        "url": "https://people.redhat.com/~hkario/marvin/"
+      }
+    ],
+    "database_specific": {
+      "license": "CC0-1.0"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rustsec-2023-0071"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6951",
+      "assignerOrgId": "bae035ff-b466-4ff4-94d0-fc9efd9e1730",
+      "state": "PUBLISHED",
+      "assignerShortName": "snyk",
+      "dateReserved": "2026-04-24T07:25:39.128Z",
+      "datePublished": "2026-04-25T05:00:05.257Z",
+      "dateUpdated": "2026-04-25T05:00:05.257Z"
+    },
+    "containers": {
+      "cna": {
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "exploitCodeMaturity": "PROOF_OF_CONCEPT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P"
+            },
+            "cvssV4_0": {
+              "version": "4.0",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "exploitMaturity": "PROOF_OF_CONCEPT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 9.2,
+              "baseSeverity": "CRITICAL",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "value": "Kuycheu Kung",
+            "lang": "en"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-94",
+                "description": "Remote Code Execution (RCE)",
+                "lang": "en"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "bae035ff-b466-4ff4-94d0-fc9efd9e1730",
+          "shortName": "snyk",
+          "dateUpdated": "2026-04-25T05:00:05.257Z"
+        },
+        "descriptions": [
+          {
+            "value": "Versions of the package simple-git before 3.36.0 are vulnerable to Remote Code Execution (RCE) due to an incomplete fix for [CVE-2022-25912](https://security.snyk.io/vuln/SNYK-JS-SIMPLEGIT-3112221) that blocks the -c option but not the equivalent --config form. If untrusted input can reach the options argument passed to simple-git, an attacker may still achieve remote code execution by enabling protocol.ext.allow=always and using an ext:: clone source.",
+            "lang": "en"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://security.snyk.io/vuln/SNYK-JS-SIMPLEGIT-15456078"
+          },
+          {
+            "url": "https://gist.github.com/KKC73/02d1d97f3410756095b501fda0ac8ca6"
+          },
+          {
+            "url": "https://github.com/steveukx/git-js/commit/89a2294febed5dfe737c4c735d936bb6018746a8"
+          }
+        ],
+        "affected": [
+          {
+            "product": "simple-git",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "3.36.0",
+                "status": "affected",
+                "versionType": "semver"
+              }
+            ],
+            "vendor": "n/a"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6951"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-31534",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "REJECTED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-03-09T15:48:24.113Z",
+      "datePublished": "2026-04-24T14:30:22.784Z",
+      "dateUpdated": "2026-04-25T05:49:26.758Z",
+      "dateRejected": "2026-04-25T05:49:26.758Z"
+    },
+    "containers": {
+      "cna": {
+        "rejectedReasons": [
+          {
+            "lang": "en",
+            "value": "This CVE ID has been rejected or withdrawn by its CVE Numbering Authority."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-04-25T05:49:26.758Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-31534"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-31671",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-03-09T15:48:24.130Z",
+      "datePublished": "2026-04-24T14:45:18.669Z",
+      "dateUpdated": "2026-04-25T05:48:30.115Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-04-25T05:48:30.115Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nxfrm_user: fix info leak in build_report()\n\nstruct xfrm_user_report is a __u8 proto field followed by a struct\nxfrm_selector which means there is three \"empty\" bytes of padding, but\nthe padding is never zeroed before copying to userspace.  Fix that up by\nzeroing the structure before setting individual member variables."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/xfrm/xfrm_user.c"
+            ],
+            "versions": [
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "d27c02eec529f78055a46a5c9e6c62684382b2d8",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "716c546e88cfe49d841658240e10cb57bc50a2cc",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "0616314b3b34f24cbb91da8c6bd8bcdc4c8592f9",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "e0c8542c3d097ed4205ded51868195d5d6ddac62",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "ff5ee507302303b15859753c3e0d67d38fd12c88",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "6c55714c931051cd7f4839c19ce0867179fd22fe",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "0a30dceb0e1f0c480d2482e6d7cebf8aebb6eb72",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "97a64b4577ae2bc5599dbd008a3cd9e25de9b9f5",
+                "lessThan": "d10119968d0e1f2b669604baf2a8b5fdb72fa6b4",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/xfrm/xfrm_user.c"
+            ],
+            "versions": [
+              {
+                "version": "2.6.19",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "2.6.19",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.10.253",
+                "lessThanOrEqual": "5.10.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.203",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.1.169",
+                "lessThanOrEqual": "6.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.135",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.82",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.23",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.19.13",
+                "lessThanOrEqual": "6.19.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.0",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "5.10.253"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "5.15.203"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "6.1.169"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "6.6.135"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "6.12.82"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "6.18.23"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "6.19.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.19",
+                    "versionEndExcluding": "7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/d27c02eec529f78055a46a5c9e6c62684382b2d8"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/716c546e88cfe49d841658240e10cb57bc50a2cc"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/0616314b3b34f24cbb91da8c6bd8bcdc4c8592f9"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/e0c8542c3d097ed4205ded51868195d5d6ddac62"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/ff5ee507302303b15859753c3e0d67d38fd12c88"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/6c55714c931051cd7f4839c19ce0867179fd22fe"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/0a30dceb0e1f0c480d2482e6d7cebf8aebb6eb72"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/d10119968d0e1f2b669604baf2a8b5fdb72fa6b4"
+          }
+        ],
+        "title": "xfrm_user: fix info leak in build_report()",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-31671"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-31670",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-03-09T15:48:24.130Z",
+      "datePublished": "2026-04-24T14:45:17.958Z",
+      "dateUpdated": "2026-04-25T05:48:28.964Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-04-25T05:48:28.964Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rfkill: prevent unlimited numbers of rfkill events from being created\n\nUserspace can create an unlimited number of rfkill events if the system\nis so configured, while not consuming them from the rfkill file\ndescriptor, causing a potential out of memory situation.  Prevent this\nfrom bounding the number of pending rfkill events at a \"large\" number\n(i.e. 1000) to prevent abuses like this."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/rfkill/core.c"
+            ],
+            "versions": [
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "4bcd1615a4e2a185ae9edd27b4143d7dfa7134f4",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "b1e0c8d3ab58a0161db487bf5fc47adfcaf5d5ca",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "e3842779547c83150569071d9980517cc9029fc0",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "673d2a3eef6e0ee9736501a150c9e4024a4e60a6",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "82843afc19012a29ba863961ef494165aa1a88f4",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "a8c26800e0220e1550af012f5a20e50f5c78864d",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "80ce4cb026f0a4c4532b6cad827b44debda6256a",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "c64fb01627e24725d1f9d535e4426475a4415753",
+                "lessThan": "ea245d78dec594372e27d8c79616baf49e98a4a1",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/rfkill/core.c"
+            ],
+            "versions": [
+              {
+                "version": "2.6.31",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "2.6.31",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.10.253",
+                "lessThanOrEqual": "5.10.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.203",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.1.169",
+                "lessThanOrEqual": "6.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.135",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.82",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.23",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.19.13",
+                "lessThanOrEqual": "6.19.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.0",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "5.10.253"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "5.15.203"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "6.1.169"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "6.6.135"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "6.12.82"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "6.18.23"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "6.19.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.31",
+                    "versionEndExcluding": "7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/4bcd1615a4e2a185ae9edd27b4143d7dfa7134f4"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/b1e0c8d3ab58a0161db487bf5fc47adfcaf5d5ca"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/e3842779547c83150569071d9980517cc9029fc0"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/673d2a3eef6e0ee9736501a150c9e4024a4e60a6"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/82843afc19012a29ba863961ef494165aa1a88f4"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a8c26800e0220e1550af012f5a20e50f5c78864d"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/80ce4cb026f0a4c4532b6cad827b44debda6256a"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/ea245d78dec594372e27d8c79616baf49e98a4a1"
+          }
+        ],
+        "title": "net: rfkill: prevent unlimited numbers of rfkill events from being created",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-31670"
+          }
+        ]
+      }
+    }
+  }
+]
