@@ -85164,3 +85164,416 @@
     }
   }
 ]
+[Sun May  3 13:22:29 UTC 2026] Latest CVEs:
+[
+  {
+    "modified": "2026-05-03T12:34:26Z",
+    "published": "2026-05-03T12:32:29Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-3246",
+    "summary": "Malicious code in win-update-helper-tool-v2 (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (251972769752a77d15c86627fe078560c49ce79a47bcc4542128386eb5362342)\nIf run as a module, the code runs code to silently control the device via Telegram bot (execute commands, exfiltrate files).\n\n\n---\n\nCategory: MALICIOUS - The campaign has clearly malicious intent, like infostealers.\n\n\nCampaign: 2026-05-system-update-tool\n\n\nReasons (based on the campaign):\n\n\n - rat\n\n\n - The package contains code to execute remote commands (probably limited to a specific set) on the victim's machine.\n\n\n - files-exfiltration\n\n\n - peristence-autorun\n\n\n - persistence\n\n\n - impersonation\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "win-update-helper-tool-v2"
+        },
+        "versions": [
+          "1.0.0"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/win-update-helper-tool-v2"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "REPORTER",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/2026-05-system-update-tool/win-update-helper-tool-v2",
+          "import_time": "2026-05-03T12:50:01.21104587Z",
+          "modified_time": "2026-05-03T12:34:26.459368Z",
+          "sha256": "251972769752a77d15c86627fe078560c49ce79a47bcc4542128386eb5362342",
+          "source": "kam193",
+          "versions": [
+            "1.0.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-3246"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-7696",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-02T19:38:07.051Z",
+      "datePublished": "2026-05-03T12:30:38.217Z",
+      "dateUpdated": "2026-05-03T12:30:38.217Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-03T12:30:38.217Z"
+        },
+        "title": "Acrel Electrical EEMS Enterprise Power Operation and Maintenance Cloud Platform uploadH5Files unrestricted upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "Unrestricted Upload"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-284",
+                "lang": "en",
+                "description": "Improper Access Controls"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Acrel Electrical",
+            "product": "EEMS Enterprise Power Operation and Maintenance Cloud Platform",
+            "versions": [
+              {
+                "version": "1.3.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in Acrel Electrical EEMS Enterprise Power Operation and Maintenance Cloud Platform 1.3.0. This impacts an unknown function of the file /SubstationWEBV2/main/uploadH5Files. The manipulation of the argument File results in unrestricted upload. The attack may be launched remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-02T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-02T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-02T21:43:20.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "bigbrother_man (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/360865",
+            "name": "VDB-360865 | Acrel Electrical EEMS Enterprise Power Operation and Maintenance Cloud Platform uploadH5Files unrestricted upload",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/360865/cti",
+            "name": "VDB-360865 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/807944",
+            "name": "Submit #807944 | Acrel Electric Co., Ltd. EEMS Enterprise Power Operation and Maintenance Cloud Platform 1.3.0 Unrestricted Upload of File with Dangerous Type",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://ucn9h68n9289.feishu.cn/wiki/X9PAw4i5kiPueKkZqCCcNVYZnnc?from=from_copylink",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-7696"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-05-03T12:30:31Z",
+    "published": "2026-05-03T12:30:31Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-3245",
+    "summary": "Malicious code in system-update-tool (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (4902f753d49279adae969f368b995d1ec8990f506dfb70d9c8891098f657ae9b)\nIf run as a module, the code runs code to silently control the device via Telegram bot (execute commands, exfiltrate files).\n\n\n---\n\nCategory: MALICIOUS - The campaign has clearly malicious intent, like infostealers.\n\n\nCampaign: 2026-05-system-update-tool\n\n\nReasons (based on the campaign):\n\n\n - rat\n\n\n - The package contains code to execute remote commands (probably limited to a specific set) on the victim's machine.\n\n\n - files-exfiltration\n\n\n - peristence-autorun\n\n\n - persistence\n\n\n - impersonation\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "system-update-tool"
+        },
+        "versions": [
+          "1.0.0"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/system-update-tool"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "REPORTER",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/2026-05-system-update-tool/system-update-tool",
+          "import_time": "2026-05-03T12:50:01.207824612Z",
+          "modified_time": "2026-05-03T12:30:31.321414Z",
+          "sha256": "4902f753d49279adae969f368b995d1ec8990f506dfb70d9c8891098f657ae9b",
+          "source": "kam193",
+          "versions": [
+            "1.0.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-3245"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-05-03T12:20:21Z",
+    "published": "2026-05-03T12:20:21Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-3244",
+    "summary": "Malicious code in puan4 (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (6be2e7028440f68ad3621664d195d72288e6a1d8658f16a421f3ec52d63d6f7a)\nDuring import, package automatically starts a connection to a C2 server, exfiltrates information about the host and data like sensitive files and browsers' data.\n\n\n---\n\nCategory: MALICIOUS - The campaign has clearly malicious intent, like infostealers.\n\n\nCampaign: 2026-05-puan3\n\n\nReasons (based on the campaign):\n\n\n - exfiltration-generic\n\n\n - exfiltration-browser-data\n\n\n - The package contains code to execute remote commands (probably limited to a specific set) on the victim's machine.\n\n\n - rat\n\n\n - exfiltration-credentials\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "puan4"
+        },
+        "versions": [
+          "1.0.3"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/puan4"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "REPORTER",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "iocs": {
+        "ips": [
+          "185.246.113.53"
+        ]
+      },
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/2026-05-puan3/puan4",
+          "import_time": "2026-05-03T12:50:01.205148862Z",
+          "modified_time": "2026-05-03T12:20:21.680443Z",
+          "sha256": "6be2e7028440f68ad3621664d195d72288e6a1d8658f16a421f3ec52d63d6f7a",
+          "source": "kam193",
+          "versions": [
+            "1.0.3"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-3244"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-05-03T12:16:07Z",
+    "published": "2026-05-03T12:16:07Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-3243",
+    "summary": "Malicious code in puan3 (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (531ab02814e67f81e5c82fb57b72d59c3972d0975932f6e9d00ea680040e9a13)\nDuring import, package automatically starts a connection to a C2 server, exfiltrates information about the host and data like the browser's history and sensitive files, and then waits for remote commands to execute.\n\n\n---\n\nCategory: MALICIOUS - The campaign has clearly malicious intent, like infostealers.\n\n\nCampaign: 2026-05-puan3\n\n\nReasons (based on the campaign):\n\n\n - exfiltration-generic\n\n\n - exfiltration-browser-data\n\n\n - The package contains code to execute remote commands (probably limited to a specific set) on the victim's machine.\n\n\n - rat\n\n\n - exfiltration-credentials\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "puan3"
+        },
+        "versions": [
+          "0.1.0",
+          "0.1.1"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/puan3"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "REPORTER",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "iocs": {
+        "ips": [
+          "185.246.113.53"
+        ]
+      },
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/2026-05-puan3/puan3",
+          "import_time": "2026-05-03T12:50:01.134320007Z",
+          "modified_time": "2026-05-03T12:16:07.229837Z",
+          "sha256": "531ab02814e67f81e5c82fb57b72d59c3972d0975932f6e9d00ea680040e9a13",
+          "source": "kam193",
+          "versions": [
+            "0.1.0",
+            "0.1.1"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-3243"
+          }
+        ]
+      }
+    }
+  }
+]
