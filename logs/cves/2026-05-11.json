@@ -7849,3 +7849,623 @@
     }
   }
 ]
+[Mon May 11 19:54:47 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-42376",
+      "assignerOrgId": "33c584b5-0579-4c06-b2a0-8d8329fcab9c",
+      "state": "PUBLISHED",
+      "assignerShortName": "securin",
+      "dateReserved": "2026-04-27T06:21:56.902Z",
+      "datePublished": "2026-05-04T16:03:59.473Z",
+      "dateUpdated": "2026-05-04T16:32:10.149Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "33c584b5-0579-4c06-b2a0-8d8329fcab9c",
+          "shortName": "securin",
+          "dateUpdated": "2026-05-04T16:03:59.473Z"
+        },
+        "title": "D-Link DIR-456U A1 Hardcoded Telnet Backdoor Credentials",
+        "datePublic": "2026-04-24T00:00:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-798",
+                "description": "CWE-798 Use of Hard-coded Credentials",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "D-Link",
+            "product": "DIR-456U Firmware",
+            "platforms": [
+              "MIPS32 Little-Endian"
+            ],
+            "versions": [
+              {
+                "status": "affected",
+                "version": "A1",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:2.3:o:dlink:dir-456u_firmware:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR-456U Hardware Revision A1 (End-of-Life, EOL) contains a hardcoded telnet backdoor. The device starts a telnet daemon at boot via /etc/init0.d/S80telnetd.sh with the username \"Alphanetworks\" and the static password \"whdrv01_dlob_dir456U\" read from /etc/config/image_sign. The custom telnetd binary accepts a -u user:password flag, and the custom login binary uses strcmp() to validate credentials. Successful authentication grants an unauthenticated attacker on the local network a root shell with full administrative control. The device has reached End-of-Life (EOL) and will not receive patches.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>D-Link DIR-456U Hardware Revision A1 (End-of-Life, EOL) contains a hardcoded telnet backdoor. The device starts a telnet daemon at boot via /etc/init0.d/S80telnetd.sh with the username \"Alphanetworks\" and the static password \"whdrv01_dlob_dir456U\" read from /etc/config/image_sign. The custom telnetd binary accepts a -u user:password flag, and the custom login binary uses strcmp() to validate credentials. Successful authentication grants an unauthenticated attacker on the local network a root shell with full administrative control. The device has reached End-of-Life (EOL) and will not receive patches.</p>"
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "unsupported-when-assigned"
+        ],
+        "references": [
+          {
+            "url": "https://www.securin.io/zero-day/cve-2026-42376-hardcoded-telnet-backdoor-in-d-link-dir-456u-a1-end-of-life-",
+            "name": "D-Link DIR-456U A1 Hardcoded Telnet Backdoor - Securin Advisory"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "This product is End-of-Life (EOL) and will NOT receive patches. Users should replace the device. Temporary: connect via backdoor and run \"killall telnetd\" and \"iptables -A INPUT -p tcp --dport 23 -j DROP\" (lost on reboot).",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>This product is End-of-Life (EOL) and will NOT receive patches. Users should replace the device. Temporary: connect via backdoor and run \"killall telnetd\" and \"iptables -A INPUT -p tcp --dport 23 -j DROP\" (lost on reboot).</p>"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Arjun Basnet from Securin Labs",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.2"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-42376"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://www.securin.io/zero-day/cve-2026-42376-hardcoded-telnet-backdoor-in-d-link-dir-456u-a1-end-of-life-",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-04T16:32:05.738044Z",
+                  "id": "CVE-2026-42376",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-04T16:32:10.149Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-87f9-hvmw-gh4p",
+    "modified": "2026-05-11T19:37:00Z",
+    "published": "2026-05-11T19:37:00Z",
+    "aliases": [
+      "CVE-2026-41159"
+    ],
+    "summary": "Mermaid: Improper sanitization of configuration leads to CSS injection",
+    "details": "### Impact\n\nMermaid's default configuration allows injecting CSS that applies outside of the Mermaid diagram via the `fontFamily`, `themeCSS`, and `altFontFamily` configuration options.\n\nLive demo: [mermaid.live](https://mermaid.live/edit#pako:eNpNjktLxDAUhf9KvFBR6JS-60QQfODKlUvJ5k6TtsEmKTHFGUP-u-mI6Nmdy3fOPR56wwVQSBIvtXSUeAaD0e4ZlZxPDChhcLxFfwiEauOuLq_9Afv30ZpVczpaITS5kGox1qF2gfSeBwYhJAnThAyz-ewntI68vG5-0z3Z7e7IA9OQwmglB-rsKlJQwircLPgNZeAmocTPAi4GXGfHgOkQYwvqN2PUbzJuGSegA84f0a0LRyeeJI4W_xChubCPcbQD2pwbgHo4Aq2aKmvbqq3zoiu7pizqFE6RybN9VFfFY1HWXRVS-Dr_zLObrt7_V_gGGXZlGg)\n\nExample code:\n\n```\n%%{init: {\"fontFamily\": \"x;a{b} :not(&){background:green !important} c{d}\"}}%%\nflowchart LR\n    A --> B\n```\n\nThe injected CSS exploits stylis's `&` (scope reference) handling. `:not(&)` escapes the `#mermaid-xxx` automatic scoping, applying styles to all page elements. Global at-rules (`@font-face`, `@keyframes`, `@counter-style`) are also injectable as stylis hoists them to top level.\n\nThis allows page defacement and DOM attribute exfiltration via CSS `:has()` selectors.\n\n### Patches\n\n- [v11.15.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0) (see [64769738d5b59211e1decb471ffbaca8afec51aa](https://github.com/mermaid-js/mermaid/commit/64769738d5b59211e1decb471ffbaca8afec51aa))\n- [v10.9.6](https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6) (see [a9d9f0d8eb790349121508688cd338253fd80d76](https://github.com/mermaid-js/mermaid/commit/a9d9f0d8eb790349121508688cd338253fd80d76))\n\n### Workarounds\n\nIf you can't upgrade mermaid, you can set the [`secure`](https://mermaid.js.org/config/schema-docs/config.html#secure) config value in the mermaid config to avoid allowing diagrams to modify `fontFamily`, `themeCSS`, `altFontFamily`, and `themeVariables`.\n\nSetting [`\"securityLevel\": \"sandbox\"`](https://mermaid.js.org/config/schema-docs/config.html#securitylevel)  will also prevent this.\n\n### Credits\n\nReported by @zsxsoft on behalf of @KeenSecurityLab",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "11.0.0-alpha.1"
+              },
+              {
+                "fixed": "11.15.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 11.14.0"
+        }
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "10.9.6"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 10.9.5"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-87f9-hvmw-gh4p"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/64769738d5b59211e1decb471ffbaca8afec51aa"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/a9d9f0d8eb790349121508688cd338253fd80d76"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/mermaid-js/mermaid"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-11T19:37:00Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-87f9-hvmw-gh4p"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-6m6c-36f7-fhxh",
+    "modified": "2026-05-11T19:36:55Z",
+    "published": "2026-05-11T19:36:55Z",
+    "aliases": [
+      "CVE-2026-41150"
+    ],
+    "summary": "Mermaid Gantt Charts are vulnerable to an Infinite Loop DoS",
+    "details": "### Impact\n\nMermaid v11.14.0 and earlier are vulnerable to a denial-of-service attack when rendering gantt charts, if they use the [`excludes` attribute](https://mermaid.js.org/syntax/gantt.html?#excludes) to exclude all dates.\n\nExample:\n\n```\ngantt\n  excludes monday,tuesday,wednesday,thursday,friday,saturday,sunday\n  DoS :2025-01-01, 1d\n```\n\n`mermaid.parse` is unaffected, unless you then call the `ganttDb.getTasks()` (which is called when rendering a diagram).\n\n### Patches\n\nThis has been patched in:\n\n- [v11.15.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0) (see [faafb5d49106dd32c367f3882505f2dd625aa30e](https://github.com/mermaid-js/mermaid/commit/faafb5d49106dd32c367f3882505f2dd625aa30e))\n- [v10.9.6](https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6) (see [a59ea56174712ee5430dfd5bc877cb5151f501a6](https://github.com/mermaid-js/mermaid/commit/a59ea56174712ee5430dfd5bc877cb5151f501a6))\n\n### Workarounds\n\nThere are no workarounds available without updating to a newer version of mermaid.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:L/SC:N/SI:N/SA:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "11.0.0-alpha.1"
+              },
+              {
+                "fixed": "11.15.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 11.14.0"
+        }
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "10.9.6"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 10.9.5"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-6m6c-36f7-fhxh"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/a59ea56174712ee5430dfd5bc877cb5151f501a6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/faafb5d49106dd32c367f3882505f2dd625aa30e"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/mermaid-js/mermaid"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-835"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-11T19:36:55Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-6m6c-36f7-fhxh"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-ghcm-xqfw-q4vr",
+    "modified": "2026-05-11T19:36:47Z",
+    "published": "2026-05-11T19:36:46Z",
+    "aliases": [
+      "CVE-2026-41149"
+    ],
+    "summary": "Mermaid: Improper sanitization of `classDef` in state diagrams leads to HTML injection",
+    "details": "### Impact\n\nUnder the default configuration, Mermaid state diagram's `classDef` allow DOM injection that escapes the SVG, although `<script>` tags are removed, preventing XSS.\n\n#### Proof-of-concept\n\n```\nstateDiagram-v2\n  classDef xss fill:red</style></svg><style>*{x:x;y:y;overflow:visible!important;contain:none!important;transform:none!important;filter:none!important;clip-path:none!important}</style><div style=\"x:x;y:y;color:red;font:5em/1 monospace;display:grid;place-items:center;z-index:2147483647;width:100vw;height:100vh;position:fixed;top:0;left:0;background:black\">HACKED</div><svg><style>a:b\n  [*] --> A:::xss\n```\n\n### Patches\n\n- [v11.15.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0) (see [37ff937f1da2e19f882fd1db01235db4d01f4056](https://github.com/mermaid-js/mermaid/commit/37ff937f1da2e19f882fd1db01235db4d01f4056))\n- [v10.9.6](https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6) (see [4e2d512bf5bf6f9de1a8f0a48da78dc4d09ac4f3](https://github.com/mermaid-js/mermaid/commit/4e2d512bf5bf6f9de1a8f0a48da78dc4d09ac4f3))\n\n### Workarounds\n\nIf you can not update to a patched version, setting [`\"securityLevel\": \"sandbox\"`](https://mermaid.js.org/config/schema-docs/config.html#securitylevel)  will prevent this, by rendering the mermaid diagram in a sandboxed `<iframe>`.\n\n### Credits\n\nThanks to @zsxsoft from @KeenSecurityLab for reporting this vulnerability.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "11.0.0-alpha.1"
+              },
+              {
+                "fixed": "11.15.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 11.14.0"
+        }
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "10.9.6"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 10.9.5"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-ghcm-xqfw-q4vr"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/37ff937f1da2e19f882fd1db01235db4d01f4056"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/4e2d512bf5bf6f9de1a8f0a48da78dc4d09ac4f3"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/mermaid-js/mermaid"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://mermaid.js.org/config/schema-docs/config.html#securitylevel"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-11T19:36:46Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-ghcm-xqfw-q4vr"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xcj9-5m2h-648r",
+    "modified": "2026-05-11T19:36:41Z",
+    "published": "2026-05-11T19:36:41Z",
+    "aliases": [
+      "CVE-2026-41148"
+    ],
+    "summary": "Mermaid: Improper sanitization of `classDefs` in diagrams leads to CSS injection",
+    "details": "### Details\n\nThe state diagram and any other diagram type that routes user-controlled style strings through createCssStyles parser for Mermaid v11.14.0 and earlier captures `classDef` values with an unrestricted regex:\n\n```jison\n// packages/mermaid/src/diagrams/state/parser/stateDiagram.jison:83\n<CLASSDEFID>[^\\n]*   { this.popState(); return 'CLASSDEF_STYLEOPTS' }\n```\n\nThe value passes unsanitized through `addStyleClass()` -> `createCssStyles()` -> `style.innerHTML` (mermaidAPI.ts:418). A `}` in the value closes the generated CSS selector, and everything after becomes a new CSS rule on the page.\n\n### PoC\n\n```\nstateDiagram-v2 \n      classDef x }*{ background-image: url(\"http://media.giphy.com/media/SggILpMXO7Xt6/giphy.gif\")}\n```\n\nLive demo:\n<https://mermaid.live/edit#pako:eNpFjzFvgzAQhf-KdVNbEcBgMHhtlkqtOnSJKi8ONsYKBmRMlRTx3-skanvTfbp7996t0IxSAYPZC6_2Rmgn7O4rQ00v5nmvWnRG29OKjqI5aTcug9wZK7RiaHH9A4fO-4kliVXSiFibqbvEzWjvnHxo_fI6vR3e6cGXyX2qTcvhcYMItDMSmHeLisAqZ8UVYeUDQhx8p6ziwEIrhTtx4MNVM4nhcxztrywE0h2wVvRzoGWS_z_8rahBKvcckntgmN5OAFvhDIzUNCZZQXCR5nVaZkUEF2BVFpOcEkoxxhUuyRbB980yjStapKHqoKFlhvPtB7BFZEU>\n\n### Patches\n\nThis has been patched in:\n\n- [v11.15.0](https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0) (see [e9b0f34d8d82a6260077764ee45e1d7d90957a0f](https://github.com/mermaid-js/mermaid/commit/e9b0f34d8d82a6260077764ee45e1d7d90957a0f))\n- [v10.9.6](https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6) (see [8fead23c59166b7bab6a39eac81acebee2859102](https://github.com/mermaid-js/mermaid/commit/8fead23c59166b7bab6a39eac81acebee2859102))\n\n### Workarounds\n\nSetting [`\"securityLevel\": \"sandbox\"`](https://mermaid.js.org/config/schema-docs/config.html#securitylevel)  will prevent this, by rendering the mermaid diagram in a sandboxed `<iframe>`.\n\n### Impact\n\n Enables page defacement, user tracking via `url()` callbacks, and DOM attribute exfiltration via CSS `:has()` selectors.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "11.0.0-alpha.1"
+              },
+              {
+                "fixed": "11.15.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 11.14.0"
+        }
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "mermaid"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "10.9.6"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 10.9.5"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/security/advisories/GHSA-xcj9-5m2h-648r"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/8fead23c59166b7bab6a39eac81acebee2859102"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/commit/e9b0f34d8d82a6260077764ee45e1d7d90957a0f"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/mermaid-js/mermaid"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/mermaid%4011.15.0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mermaid-js/mermaid/releases/tag/v10.9.6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://mermaid.js.org/config/schema-docs/config.html#securitylevel"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-11T19:36:41Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xcj9-5m2h-648r"
+          }
+        ]
+      }
+    }
+  }
+]
