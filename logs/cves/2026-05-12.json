@@ -1,0 +1,1034 @@
+[Tue May 12 03:41:44 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-8266",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-10T15:44:24.038Z",
+      "datePublished": "2026-05-11T02:45:08.137Z",
+      "dateUpdated": "2026-05-12T02:44:46.519Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-11T02:45:08.137Z"
+        },
+        "title": "Open5GS SMF gsm-build.c gsm_build_pdu_session_establishment_accept denial of service",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-404",
+                "lang": "en",
+                "description": "Denial of Service"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "Open5GS",
+            "versions": [
+              {
+                "version": "2.7.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.1",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.2",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.3",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.4",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.5",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.6",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.7",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:open5gs:open5gs:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "SMF"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in Open5GS up to 2.7.7. This affects the function gsm_build_pdu_session_establishment_accept of the file /src/smf/gsm-build.c of the component SMF. The manipulation results in denial of service. The attack can be launched remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:N/I:N/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-10T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-10T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-10T17:49:38.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "FrankLin (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/362563",
+            "name": "VDB-362563 | Open5GS SMF gsm-build.c gsm_build_pdu_session_establishment_accept denial of service",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/362563/cti",
+            "name": "VDB-362563 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/808483",
+            "name": "Submit #808483 | Open5gs SMF v2.7.7 Denial of Service",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/open5gs/open5gs/issues/4447",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/open5gs/open5gs/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-8266"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-12T02:44:37.750149Z",
+                  "id": "CVE-2026-8266",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-12T02:44:46.519Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-8260",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-10T15:16:46.711Z",
+      "datePublished": "2026-05-11T01:15:09.977Z",
+      "dateUpdated": "2026-05-12T02:44:02.854Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-11T01:15:09.977Z"
+        },
+        "title": "D-Link DCS-935L HNAP Service hnap_service SetDeviceSettings buffer overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-120",
+                "lang": "en",
+                "description": "Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "D-Link",
+            "product": "DCS-935L",
+            "versions": [
+              {
+                "version": "1.10.01",
+                "status": "affected"
+              }
+            ],
+            "modules": [
+              "HNAP Service"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in D-Link DCS-935L up to 1.10.01. The impacted element is the function SetDeviceSettings of the file /web/cgi-bin/hnap/hnap_service of the component HNAP Service. The manipulation of the argument AdminPassword results in buffer overflow. The attack can be executed remotely. The exploit has been made public and could be used."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 9,
+              "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-10T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-10T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-10T17:21:50.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "0xcc12138 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/362557",
+            "name": "VDB-362557 | D-Link DCS-935L HNAP Service hnap_service SetDeviceSettings buffer overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/362557/cti",
+            "name": "VDB-362557 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/809888",
+            "name": "Submit #809888 | D-Link DCS-935L ≤1.10.01 Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/0xcc12138/DCS-935L-HNAP-Service-CVE",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-8260"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-12T02:43:47.391369Z",
+                  "id": "CVE-2026-8260",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-12T02:44:02.854Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-8254",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-10T14:41:50.816Z",
+      "datePublished": "2026-05-10T23:45:17.119Z",
+      "dateUpdated": "2026-05-12T02:42:53.538Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-11T08:04:05.648Z"
+        },
+        "title": "Devs Palace ERP Online sales_save cross site scripting",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "Cross Site Scripting"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Devs Palace",
+            "product": "ERP Online",
+            "versions": [
+              {
+                "version": "4.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in Devs Palace ERP Online up to 4.0.0. Affected by this issue is some unknown functionality of the file /inventory/sales_save. The manipulation results in cross site scripting. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 4.8,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 2.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 2.4,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:L/A:N/E:P/RL:X/RC:R",
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 3.3,
+              "vectorString": "AV:N/AC:L/Au:M/C:N/I:P/A:N/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-10T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-10T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-11T10:05:06.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Andrea Intilangelo",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "acme (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "acme (VulDB User)",
+            "type": "analyst"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/362551",
+            "name": "VDB-362551 | Devs Palace ERP Online sales_save cross site scripting",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/362551/cti",
+            "name": "VDB-362551 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/808279",
+            "name": "Submit #808279 | Devs Palace ERP Online 4.0.0 Code Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://olografix.org/acme/_poc/ERP_Online-POC1.gif",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-8254"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-12T02:42:42.855375Z",
+                  "id": "CVE-2026-8254",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-12T02:42:53.538Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-8248",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-10T14:39:56.367Z",
+      "datePublished": "2026-05-10T22:15:10.574Z",
+      "dateUpdated": "2026-05-12T02:41:21.202Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-10T22:15:10.574Z"
+        },
+        "title": "Open5GS SMF npcf-handler.c update_authorized_pcc_rule_and_qos denial of service",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-404",
+                "lang": "en",
+                "description": "Denial of Service"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "Open5GS",
+            "versions": [
+              {
+                "version": "2.7.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.1",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.2",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.3",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.4",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.5",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.6",
+                "status": "affected"
+              },
+              {
+                "version": "2.7.7",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:open5gs:open5gs:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "SMF"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in Open5GS up to 2.7.7. The affected element is the function update_authorized_pcc_rule_and_qos of the file /src/smf/npcf-handler.c of the component SMF. The manipulation results in denial of service. The attack may be launched remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 4.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 4,
+              "vectorString": "AV:N/AC:L/Au:S/C:N/I:N/A:P/E:POC/RL:ND/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-10T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-10T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-10T16:45:14.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "LinZiyu (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/362545",
+            "name": "VDB-362545 | Open5GS SMF npcf-handler.c update_authorized_pcc_rule_and_qos denial of service",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/362545/cti",
+            "name": "VDB-362545 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/808472",
+            "name": "Submit #808472 | Open5gs SMF v2.7.7 Denial of Service",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/open5gs/open5gs/issues/4442",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/open5gs/open5gs/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-8248"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-12T02:41:09.319495Z",
+                  "id": "CVE-2026-8248",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-12T02:41:21.202Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2021-47950",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-02-01T11:24:18.719Z",
+      "datePublished": "2026-05-10T12:52:11.604Z",
+      "dateUpdated": "2026-05-12T02:40:22.057Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-05-10T12:52:11.604Z"
+        },
+        "title": "Advanced Guestbook 2.4.4 Persistent XSS via Smilies",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Advanced Guestbook 2.4.4 contains a persistent cross-site scripting vulnerability in the smilies administration interface that allows authenticated attackers to inject malicious scripts by manipulating the s_emotion parameter. Attackers can submit POST requests to admin.php with JavaScript code in the s_emotion field, which executes when administrators view the smilies tab."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Ampps",
+            "product": "Advanced Guestbook",
+            "versions": [
+              {
+                "version": "2.4.4",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "LOW",
+              "subIntegrityImpact": "LOW",
+              "userInteraction": "PASSIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/49875",
+            "name": "ExploitDB-49875",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.ampps.com/apps/guestbooks/Advanced_Guestbook",
+            "name": "Official Product Homepage",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Advanced Guestbook 2.4.4 Persistent XSS via Smilies",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/advanced-guestbook-persistent-xss-via-smilies"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Abdulkadir AYDOGAN",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2021-47950"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-12T02:40:12.501481Z",
+                  "id": "CVE-2021-47950",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-12T02:40:22.057Z"
+          }
+        }
+      ]
+    }
+  }
+]
