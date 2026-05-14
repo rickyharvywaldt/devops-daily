@@ -1,0 +1,342 @@
+[Thu May 14 14:26:12 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-mxmp-wr3w-rvqx",
+    "modified": "2026-05-14T13:18:33Z",
+    "published": "2026-05-14T13:18:33Z",
+    "aliases": [
+      "CVE-2026-46356"
+    ],
+    "summary": "Fleet: IP spoofing allows bypassing API rate limiting",
+    "details": "### Summary\nA vulnerability in Fleet's IP extraction logic allows unauthenticated attackers to bypass API rate limiting by spoofing client IP headers. This may allow brute-force login attempts or other abuse against Fleet instances exposed to the public internet.\n\n### Impact\nFleet extracted client IP addresses from request headers (`True-Client-IP`, `X-Real-IP`, `X-Forwarded-For`) without validating that those headers originate from a trusted proxy. The extracted IP is used as the key for rate limiting and IP ban decisions.\n\nAs a result, an attacker could rotate the value of these headers on each request, causing Fleet to treat each attempt as coming from a different client. This effectively bypasses per-IP rate limits on sensitive endpoints such as the login API, enabling unrestricted brute-force or credential stuffing attacks.\n\nThis issue primarily affects Fleet instances that are directly exposed to the internet without a reverse proxy that overwrites forwarded-IP headers. Instances behind a properly configured proxy or WAF are less affected.\n\n### Workarounds\nIf an immediate upgrade is not possible, administrators should ensure Fleet is deployed behind a reverse proxy (e.g., nginx, Cloudflare, AWS ALB) that overwrites `X-Forwarded-For` with the true client IP, and apply rate limiting at the proxy or WAF layer.\n\n### For more information\nIf you have any questions or comments about this advisory:\nEmail us at [security@fleetdm.com](mailto:security@fleetdm.com)\nJoin #fleet in [osquery Slack](https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw)\n\n### Credits\nWe thank @fuzzztf for responsibly reporting this issue.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/fleetdm/fleet"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.80.1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/fleetdm/fleet/security/advisories/GHSA-mxmp-wr3w-rvqx"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/fleetdm/fleet"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/fleetdm/fleet/releases/tag/fleet-v4.80.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-290"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-14T13:18:33Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-mxmp-wr3w-rvqx"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-q58j-g3f4-h26h",
+    "modified": "2026-05-14T13:18:16Z",
+    "published": "2026-05-14T13:18:16Z",
+    "aliases": [
+      "CVE-2026-41249"
+    ],
+    "summary": "CoreShop Vulnerable to Remote Code Execution (RCE) via Insecure `pull_request_target` Configuration",
+    "details": "### Summary\n\nThe GitHub Actions workflow (`.github/workflows/static.yml`) uses the `pull_request_target` trigger but dangerously checks out the unverified code from the pull request head (`ref: ${{ github.event.pull_request.head.ref }}`). Subsequently, it executes a script (`bin/console`) from this untrusted checkout.\nThis allows any external attacker to achieve Remote Code Execution (RCE) on the GitHub Actions runner simply by submitting a malicious Pull Request. Also known as a \"Pwn Request\" vulnerability.\n\n**Steps to Reproduce:**\n1. Fork the target repository.\n2. In the forked repository, modify a file that satisfies the `paths` condition (e.g., `src/dummy.php` or `composer.json`) to trigger the workflow.\n3. Modify the `bin/console` file (which is executed in the workflow steps) with the following malicious payload:\n```bash\n#!/bin/bash\necho \"=== PWNED ===\"\necho \"whoami:\"\nwhoami\n```\n4. Commit the changes and open a Pull Request against the `5.0` or `next` branch of the base repository.\n5. The `Static Tests` workflow will trigger automatically. Navigate to the Actions tab and inspect the logs for the `Validate YAML` (or any step executing `bin/console`).\n6. You will see the output of `whoami` (typically `runner`), proving that the arbitrary code was successfully executed in the runner's context.\n\n<img width=\"490\" height=\"87\" alt=\"スクリーンショット 2026-04-14 11 14 56\" src=\"https://github.com/user-attachments/assets/94276033-b989-46dc-b4a1-3dafa1603235\" />\n\n\n**Impact:**\nBecause `pull_request_target` runs in the context of the base repository, the runner has access to repository secrets (e.g., `PIMCORE_SECRET`, `PIMCORE_PRODUCT_KEY`) loaded in the environment. An attacker can exfiltrate these secrets, modify repository contents (if the token has write permissions), or abuse the runner's computing resources.\n\n**Recommended Mitigation:**\nDo not checkout untrusted PR code (`head.ref`) when using `pull_request_target` if the code will be built or executed.\nConsider adopting a separated architecture using the `workflow_run` event:\n1. Use the `pull_request` event to safely run the build/tests in an unprivileged sandbox and upload artifacts.\n2. Use the `workflow_run` event (which is privileged) to download the artifacts and perform actions requiring secrets.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Packagist",
+          "name": "coreshop/core-shop"
+        },
+        "versions": [
+          "5.0.0"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/coreshop/CoreShop/security/advisories/GHSA-q58j-g3f4-h26h"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/coreshop/CoreShop"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-94"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-14T13:18:16Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-q58j-g3f4-h26h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-rjg2-95x7-8qmx",
+    "modified": "2026-05-14T13:17:58Z",
+    "published": "2026-05-14T13:17:58Z",
+    "aliases": [
+      "CVE-2026-27886"
+    ],
+    "summary": "Strapi may leak sensitive data via relational filtering due to lack of query sanitization",
+    "details": "### Summary of CVE-2026-27886 Vulnerability Details\n\n- CVE: CVE-2026-27886\n- CVSS v3.1 Vector: `CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N` (9.3 — Critical)\n- Affected Versions: `@strapi/strapi` <=5.36.1\n- How to Patch: Immediately update your Strapi to >=5.37.0\n\n### Description of CVE-2026-27886\n\nStrapi versions prior to 5.37.0 did not sufficiently sanitize query parameters when filtering content via relational fields. An unauthenticated attacker could use the `where` query parameter on any publicly-accessible content-type with an `updatedBy` (or other admin-relation) field to perform a boolean-oracle attack against private fields on the joined `admin_users` table, including the `resetPasswordToken` field. Extracting an admin reset token via this oracle made full administrative account takeover possible without authentication.\n\nWhen a filter such as `where[updatedBy][resetPasswordToken][$startsWith]=a` was applied to a public Content API endpoint, the underlying query generation performed a `LEFT JOIN` against the `admin_users` table and emitted a `WHERE` clause referencing the joined column. The query parameter sanitization layer did not block operator chains that traversed into relational target schemas the caller had no read permission on, allowing the response count to be used as a one-bit oracle on any admin-table field.\n\nThe patch introduces explicit query-parameter sanitization at the controller and service boundary via three new primitives: `strictParam`, `addQueryParams`, and `addBodyParams`. Operator chains that traverse into restricted relational targets are now rejected before reaching the database.\n\n### IoC's for CVE-2026-27886\n\nIndicators that an instance running an unpatched version may have been exploited:\n\n- Server access logs containing query strings traversing into admin-relation private fields. Regex: `\\?(.*&)?where\\[(updatedBy|createdBy|publishedBy)\\]\\[(email|password|resetPasswordToken|confirmationToken|firstname|lastname|preferedLanguage)\\]\\[\\$(startsWith|contains|eq|gt|lt|ge|le|in|notIn|notNull|null)\\]=`\n- High volume of public Content API requests from a single IP iterating through a hex alphabet (`0`-`9`, `a`-`f`) on the same content-type endpoint with progressively-longer filter values\n- Subsequent `POST /admin/reset-password` calls using a reset token that the legitimate admin did not request\n- Successful admin password change immediately following a burst of public Content API requests with `where[updatedBy]` query parameters\n- Sustained burst of identical-shape requests with only the trailing character of the filter value varying\n\n### Credit\nDiscovered by: James Doll - WildWest CyberSecurity\nContact: cve+2026-27886@wildwestcyber.com\nWebsite: https://wildwestcyber.com\nLinkedIn: https://www.linkedin.com/in/james-doll-273a61243",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@strapi/strapi"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "4.0.0"
+              },
+              {
+                "fixed": "5.37.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/strapi/strapi/security/advisories/GHSA-rjg2-95x7-8qmx"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/strapi/strapi"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-200",
+        "CWE-22",
+        "CWE-943"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-14T13:17:58Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-rjg2-95x7-8qmx"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-9vcr-g537-3w5v",
+    "modified": "2026-05-14T13:17:36Z",
+    "published": "2026-05-14T13:17:36Z",
+    "aliases": [
+      "CVE-2026-26191"
+    ],
+    "summary": "Fleet vulnerable to OS command injection in software packages",
+    "details": "### Summary\n\nA vulnerability in Fleet's software installer pipeline could allow a crafted software package to execute arbitrary commands as root (macOS/Linux) or SYSTEM (Windows) on managed endpoints when an uninstall is triggered.\n\n### Impact\n\nWhen a software package (.pkg, .deb, .rpm, .exe, or .msi) is uploaded to Fleet, metadata is extracted from the package binary and used to generate uninstall scripts. In affected versions, this metadata is not properly sanitized before being included in the generated scripts. A specially crafted package containing malicious values in its metadata fields could result in unintended command execution when the uninstall script runs on managed endpoints.\n\n### Workarounds\n\nIf an immediate upgrade is not possible, administrators should avoid uploading software packages obtained from untrusted or unverified sources. Additionally, administrators can manually inspect and edit auto-generated uninstall scripts before deployment.\n\n### For more information\n\nIf you have any questions or comments about this advisory:\n\nEmail us at [[security@fleetdm.com](mailto:security@fleetdm.com)](mailto:security@fleetdm.com)\n\nJoin #fleet in [[osquery Slack](https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw)](https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw)\n\n### Credits\n\nWe thank @secfox-ai for responsibly reporting this issue.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/fleetdm/fleet/v4"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.81.1"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/fleetdm/fleet/security/advisories/GHSA-9vcr-g537-3w5v"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/fleetdm/fleet"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/fleetdm/fleet/releases/tag/fleet-v4.81.1"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-14T13:17:36Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-9vcr-g537-3w5v"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x67p-9m2r-fxqv",
+    "modified": "2026-05-14T13:17:18Z",
+    "published": "2026-05-14T13:17:18Z",
+    "aliases": [
+      "CVE-2026-26062"
+    ],
+    "summary": "Fleet server may terminate unexpectedly when handling certain gRPC requests",
+    "details": "### Summary\n\nFleet contained a denial-of-service (DoS) issue in the gRPC Launcher `PublishLogs` endpoint. In affected versions, certain unexpected input values were not handled gracefully, which could cause the Fleet server process to terminate while processing an authenticated request from an enrolled Launcher host.\n\n### Impact\n\nAn authenticated attacker with access to any enrolled Launcher node key could cause an immediate and complete denial of service by sending a single gRPC request to the `PublishLogs` endpoint.\n\nThis vulnerability impacts **availability only**. There is:\n\n- No exposure of sensitive data\n- No authentication bypass\n- No privilege escalation\n- No integrity impact\n\n### Workarounds\n\nIf upgrading immediately is not possible, the following mitigations can reduce exposure:\n\n- Restrict network access to the Fleet gRPC endpoint where feasible (for example, limiting inbound access to known host IP ranges).\n- Deploy Fleet behind infrastructure that terminates or filters gRPC traffic if Launcher log ingestion is not required.\n- Monitor for repeated Fleet process crashes or unexpected restarts indicating potential exploitation.\n\n### For More Information\n\nIf you have any questions or concerns about this advisory, please contact us at:\n\nEmail us at [security@fleetdm.com](mailto:security@fleetdm.com)\n\n### Credits\n\nWe thank @fuzzztf for responsibly reporting this issue.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/fleetdm/fleet/v4"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "4.81.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/fleetdm/fleet/security/advisories/GHSA-x67p-9m2r-fxqv"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/fleetdm/fleet"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/fleetdm/fleet/releases/tag/fleet-v4.81.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-05-14T13:17:18Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-x67p-9m2r-fxqv"
+          }
+        ]
+      }
+    }
+  }
+]
