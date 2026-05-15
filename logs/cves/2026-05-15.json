@@ -1,0 +1,822 @@
+[Fri May 15 03:54:59 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-7373",
+      "assignerOrgId": "9974b330-7714-4307-a722-5648477acda7",
+      "state": "PUBLISHED",
+      "assignerShortName": "rapid7",
+      "dateReserved": "2026-04-28T23:54:36.962Z",
+      "datePublished": "2026-05-15T02:06:21.328Z",
+      "dateUpdated": "2026-05-15T02:06:21.328Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "9974b330-7714-4307-a722-5648477acda7",
+          "shortName": "rapid7",
+          "dateUpdated": "2026-05-15T02:06:21.328Z"
+        },
+        "title": "Metasploit Pro on Windows: Local Privilege Escalation via OpenSSL Configuration File Loading",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-829",
+                "description": "CWE-829 Inclusion of Functionality from Untrusted Control Sphere",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-427",
+                "description": "CWE-427 Uncontrolled Search Path Element",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-284",
+                "description": "CWE-284 Improper Access Control",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Rapid7",
+            "product": "Metasploit Pro",
+            "platforms": [
+              "Windows"
+            ],
+            "versions": [
+              {
+                "status": "affected",
+                "version": "5.0.0",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Rapid7 Metasploit Pro is vulnerable to a local privilege escalation attack that allows users to gain SYSTEM level control of a Windows host. Upon startup the metasploitPostgreSQL service the subsequent  postgres.exe service attempts to load an OpenSSL configuration file from a non-existent directory that is writable by standard users. By planting a crafted openssl.cnf file an attacker can trick the high-privilege service into executing arbitrary commands. This effectively permits an unprivileged user to bypass security controls and achieve a full host compromise under the agent's SYSTEM level access.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Rapid7 Metasploit Pro is vulnerable to a local privilege escalation attack that allows users to gain SYSTEM level control of a Windows host. Upon startup the metasploitPostgreSQL service the subsequent  postgres.exe service attempts to load an OpenSSL configuration file from a non-existent directory that is writable by standard users. By planting a crafted openssl.cnf file an attacker can trick the high-privilege service into executing arbitrary commands. This effectively permits an unprivileged user to bypass security controls and achieve a full host compromise under the agent's SYSTEM level access."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.rapid7.com/insight/metasploit-pro-release-notes/",
+            "name": "Similar CVE Reference",
+            "tags": [
+              "release-notes"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "LOW",
+              "subAvailabilityImpact": "HIGH",
+              "exploitMaturity": "PROOF_OF_CONCEPT",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.5,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:H/E:P"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-04-23T14:05:00.000Z",
+            "lang": "en",
+            "value": "Vulnerability reported to Rapid7"
+          },
+          {
+            "time": "2026-04-24T03:54:00.000Z",
+            "lang": "en",
+            "value": "Rapid7 acknowledged receipt and confirmed remediation in progress"
+          },
+          {
+            "time": "2026-04-28T23:55:00.000Z",
+            "lang": "en",
+            "value": "CVE-2026-7373 reserved"
+          },
+          {
+            "time": "2026-05-14T05:49:00.000Z",
+            "lang": "en",
+            "value": "CVE record updated"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Andrea Intilangelo",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Rapid7 Vulnerability Disclosure Program"
+        },
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "security@rapid7.com",
+            "ID": "CVE-2026-7373",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "Metasploit Pro",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_affected": "=",
+                              "version_value": "5"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "Rapid7"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "A vulnerability exists in the Windows version of Metasploit Pro where the service 'metasploitPostgreSQL' calls the process 'postgres.exe' (running as SYSTEM) attempting to load an OpenSSL configuration file (openssl.cnf) from a non-existent path with weak permissions. An attacker can create the missing directory and place a malicious OpenSSL configuration file that references a malicious DLL, leading to arbitrary code execution with SYSTEM privileges."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "CWE-829 Inclusion of Functionality from Untrusted Control Sphere"
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://rapid7.atlassian.net/browse/MS-10153",
+                "refsource": "MISC",
+                "url": "https://rapid7.atlassian.net/browse/MS-10153"
+              }
+            ]
+          }
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-7373"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-2652",
+      "assignerOrgId": "c09c270a-b464-47c1-9133-acb35b22c19a",
+      "state": "PUBLISHED",
+      "assignerShortName": "@huntr_ai",
+      "dateReserved": "2026-02-18T02:53:33.607Z",
+      "datePublished": "2026-05-15T02:13:19.541Z",
+      "dateUpdated": "2026-05-15T02:13:19.541Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Authentication Bypass in mlflow/mlflow",
+        "providerMetadata": {
+          "orgId": "c09c270a-b464-47c1-9133-acb35b22c19a",
+          "shortName": "@huntr_ai",
+          "dateUpdated": "2026-05-15T02:13:19.541Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in mlflow/mlflow versions 3.9.0 and earlier allows unauthenticated access to certain FastAPI routes when the server is started with authentication enabled (`--app-name basic-auth`) and served via uvicorn (ASGI). The FastAPI permission middleware only enforces authentication on `/gateway/` routes, leaving other routes such as the Job API (`/ajax-api/3.0/jobs/*`) and the OpenTelemetry trace ingestion API (`/v1/traces`) unprotected. This allows unauthenticated remote attackers to submit jobs, read job results, cancel running jobs, and inject arbitrary trace data into experiments. The issue arises from an architectural mismatch between Flask and FastAPI authentication mechanisms, where the `_find_fastapi_validator()` function fails to handle non-`/gateway/` paths, resulting in a complete authentication bypass. This vulnerability is fixed in version 3.10.0."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "mlflow",
+            "product": "mlflow/mlflow",
+            "versions": [
+              {
+                "version": "unspecified",
+                "lessThan": "3.10.0",
+                "status": "affected",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://huntr.com/bounties/5aeff5f0-49c7-4180-b5cb-c9a046f16756"
+          },
+          {
+            "url": "https://github.com/mlflow/mlflow/commit/bb62e773263c14e9ba4d1a82fe72d0de2442c6aa"
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+              "baseScore": 8.6,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "description": "CWE-305 Authentication Bypass by Primary Weakness",
+                "cweId": "CWE-305"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "advisory": "5aeff5f0-49c7-4180-b5cb-c9a046f16756",
+          "discovery": "EXTERNAL"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-2652"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0428",
+      "assignerOrgId": "b58fc414-a1e4-4f92-9d70-1add41838648",
+      "state": "PUBLISHED",
+      "assignerShortName": "AMD",
+      "dateReserved": "2025-12-06T13:53:33.452Z",
+      "datePublished": "2026-05-15T02:41:13.879Z",
+      "dateUpdated": "2026-05-15T02:41:13.879Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b58fc414-a1e4-4f92-9d70-1add41838648",
+          "shortName": "AMD",
+          "dateUpdated": "2026-05-15T02:41:13.879Z"
+        },
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI300A",
+            "versions": [
+              {
+                "version": "BKC 26",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI300X",
+            "versions": [
+              {
+                "version": "ROCm 6.3.1",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI308X",
+            "versions": [
+              {
+                "version": "ROCm 6.4.2",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI325X",
+            "versions": [
+              {
+                "version": "ROCm 6.3.1",
+                "status": "unaffected"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-05-15T02:40:36.026Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient parameter sanitization in TEE SOC Driver could allow an attacker to issue a malformed DRV_SOC_CMD_ID_SRIOV_COPY_VF_CHIPLET_REGS to write invalid data to a remote Die, potentially resulting in unexpected behavior.",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Insufficient parameter sanitization in TEE SOC Driver could allow an attacker to issue a malformed DRV_SOC_CMD_ID_SRIOV_COPY_VF_CHIPLET_REGS to write invalid data to a remote Die, potentially resulting in unexpected behavior.<br>"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-1284",
+                "description": "CWE-1284  Improper Validation of Specified Quantity in Input",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-6027.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "AMD PSIRT Automation 1.0"
+        },
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:L/AC:H/AT:N/PR:H/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "attackVector": "LOCAL",
+              "attackComplexity": "HIGH",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "baseScore": 1.8,
+              "baseSeverity": "LOW"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-0428"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-0427",
+      "assignerOrgId": "b58fc414-a1e4-4f92-9d70-1add41838648",
+      "state": "PUBLISHED",
+      "assignerShortName": "AMD",
+      "dateReserved": "2025-12-06T13:53:32.646Z",
+      "datePublished": "2026-05-15T02:51:22.457Z",
+      "dateUpdated": "2026-05-15T02:51:22.457Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b58fc414-a1e4-4f92-9d70-1add41838648",
+          "shortName": "AMD",
+          "dateUpdated": "2026-05-15T02:51:22.457Z"
+        },
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI210",
+            "versions": [
+              {
+                "version": "GIM 8.2.0.K",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI300X",
+            "versions": [
+              {
+                "version": "GIM 8.2.0.K",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI325X",
+            "versions": [
+              {
+                "version": "GIM 8.2.0.K",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ PRO V710",
+            "versions": [
+              {
+                "version": "Contact your AMD Customer Engineering representative",
+                "status": "unaffected"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-05-15T02:42:14.190Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper cleanup of shared register resources in GPU firmware could allow an admin-privileged attacker from a Guest Virtual machine (VM) to access these shared resources from another Guest VM, potentially resulting in the loss of confidentiality, integrity, or availability.",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper cleanup of shared register resources in GPU firmware could allow an admin-privileged attacker from a Guest Virtual machine (VM) to access these shared resources from another Guest VM, potentially resulting in the loss of confidentiality, integrity, or availability.  <br>"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-459",
+                "description": "CWE-459  Incomplete Cleanup",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-6027.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "AMD PSIRT Automation 1.0"
+        },
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "baseScore": 4.6,
+              "baseSeverity": "MEDIUM"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-0427"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-66664",
+      "assignerOrgId": "b58fc414-a1e4-4f92-9d70-1add41838648",
+      "state": "PUBLISHED",
+      "assignerShortName": "AMD",
+      "dateReserved": "2025-12-06T15:03:58.971Z",
+      "datePublished": "2026-05-15T02:41:56.659Z",
+      "dateUpdated": "2026-05-15T02:41:56.659Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b58fc414-a1e4-4f92-9d70-1add41838648",
+          "shortName": "AMD",
+          "dateUpdated": "2026-05-15T02:41:56.659Z"
+        },
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ RX 6000 Series Graphics Products",
+            "versions": [
+              {
+                "version": "AMD Software: Adrenalin Edition 25.12.1 (25.10.37.01)",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ RX 7000 Series Graphics Products",
+            "versions": [
+              {
+                "version": "AMD Software: Adrenalin Edition 25.11.1 (25.20.29.01)",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ PRO W6000 Series Graphics Products",
+            "versions": [
+              {
+                "version": "AMD Software: PRO Edition 25.Q4 (25.10.37.01)",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ PRO W7000 Series Graphics Products",
+            "versions": [
+              {
+                "version": "AMD Software: PRO Edition 25.Q3.1 (25.10.32)",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI250",
+            "versions": [
+              {
+                "version": "ROCm 7.0",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI210",
+            "versions": [
+              {
+                "version": "ROCm 7.0",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI300X",
+            "versions": [
+              {
+                "version": "ROCm 6.3.1",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI325X",
+            "versions": [
+              {
+                "version": "ROCm 6.3.1",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI308X",
+            "versions": [
+              {
+                "version": "ROCm 6.4.2",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Instinct™ MI300A",
+            "versions": [
+              {
+                "version": "BKC 26 (ROCm 7.0.1)",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ PRO V520",
+            "versions": [
+              {
+                "version": "Contact your AMD Customer Engineering representative",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ PRO V620",
+            "versions": [
+              {
+                "version": "Contact your AMD Customer Engineering representative",
+                "status": "unaffected"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "vendor": "AMD",
+            "product": "AMD Radeon™ PRO V710",
+            "versions": [
+              {
+                "version": "Contact your AMD Customer Engineering representative",
+                "status": "unaffected"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-05-15T02:40:41.476Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient parameter sanitization in AMD Secure Processor (ASP) TEE SOC Driver could allow an attacker to issue a malformed DRV_SOC_CMD_ID_LOAD_GFX_IP_FW SR-IOV command to cause out-of-bounds read, potentially resulting in SOC Driver memory contents exposure or an exception",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Insufficient parameter sanitization in AMD Secure Processor (ASP) TEE SOC Driver could allow an attacker to issue a malformed DRV_SOC_CMD_ID_LOAD_GFX_IP_FW SR-IOV command to cause out-of-bounds read, potentially resulting in SOC Driver memory contents exposure or an exception<br>"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-125",
+                "description": "CWE-125  Out-of-bounds Read",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.amd.com/en/resources/product-security/bulletin/AMD-SB-6027.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "AMD PSIRT Automation 1.0"
+        },
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "baseScore": 4.6,
+              "baseSeverity": "MEDIUM"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-66664"
+          }
+        ]
+      }
+    }
+  }
+]
