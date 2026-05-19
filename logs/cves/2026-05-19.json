@@ -7199,3 +7199,716 @@
     }
   }
 ]
+[Tue May 19 15:35:18 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-8544",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-05-14T05:40:18.744Z",
+      "datePublished": "2026-05-14T19:52:24.099Z",
+      "dateUpdated": "2026-05-15T03:56:30.076Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "148.0.7778.168",
+                "status": "affected",
+                "lessThan": "148.0.7778.168",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in Media in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Use after free",
+                "cweId": "CWE-416"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-05-14T19:52:24.099Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/497151750"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-8544"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 8.8,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-14T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-8544"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-15T03:56:30.076Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-8545",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-05-14T05:40:18.959Z",
+      "datePublished": "2026-05-14T19:52:24.457Z",
+      "dateUpdated": "2026-05-15T13:48:12.428Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "148.0.7778.168",
+                "status": "affected",
+                "lessThan": "148.0.7778.168",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Object corruption in Compositing in Google Chrome prior to 148.0.7778.168 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Object corruption"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-05-14T19:52:24.457Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/497486030"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-8545"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-119",
+                  "lang": "en",
+                  "description": "CWE-119 Improper Restriction of Operations within the Bounds of a Memory Buffer"
+                }
+              ]
+            },
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 3.1,
+                "attackVector": "NETWORK",
+                "baseSeverity": "LOW",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-15T13:47:45.640165Z",
+                  "id": "CVE-2026-8545",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-15T13:48:12.428Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-44408",
+      "assignerOrgId": "6786b568-6808-4982-b61f-398b0d9679eb",
+      "state": "PUBLISHED",
+      "assignerShortName": "zte",
+      "dateReserved": "2026-05-06T08:50:27.676Z",
+      "datePublished": "2026-05-19T07:45:05.146Z",
+      "dateUpdated": "2026-05-19T13:24:26.608Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "6786b568-6808-4982-b61f-398b0d9679eb",
+          "shortName": "zte",
+          "dateUpdated": "2026-05-19T07:45:05.146Z"
+        },
+        "title": "Unauthorized access vulnerability in ZTE MU5250",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-200",
+                "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-1",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-1 Accessing Functionality Not Properly Constrained by ACLs"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ZTE",
+            "product": "MU5250",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "BD_FLYMODEMMU5250V1.0.0B27"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "There is an unauthorized access vulnerability in ZTE MU5250. Due to improper permission control of the Web interface, an unauthorized attacker can  modify configuration through the interface.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>There is an unauthorized access vulnerability in ZTE MU5250. Due to improper permission control of the Web interface, an unauthorized attacker can&nbsp; modify configuration through the interface.</p><p><br></p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.zte.com.cn/zte-iccp-isupport-webui/bulletin/detail/2657904255874650158"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "ADJACENT_NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Duc Anh Nguyen from NTCS&TinyxLab",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.2"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-44408"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-19T13:24:20.209354Z",
+                  "id": "CVE-2026-44408",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-19T13:24:26.608Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-32994",
+      "assignerOrgId": "36234546-b8fa-4601-9d6f-f4e334aa8ea1",
+      "state": "PUBLISHED",
+      "assignerShortName": "hackerone",
+      "dateReserved": "2026-03-17T15:00:07.746Z",
+      "datePublished": "2026-05-19T04:43:41.777Z",
+      "dateUpdated": "2026-05-19T12:36:27.839Z"
+    },
+    "containers": {
+      "cna": {
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The /api/v1/autotranslate.translateMessage endpoint in versions <8.5.0, <8.4.2, <8.3.4, <8.2.4, <8.1.5, <8.0.6, <7.13.8, and <7.10.12 allows any authenticated user to retrieve the full content of any message from any room (private groups, direct messages, channels) by simply providing the target message ID. The endpoint fetches the message via Messages.findOneById(messageId) with no room access check (canAccessRoomIdAsync is never called), returning the complete IMessage object including message text, sender info, room ID, timestamps, and markdown content."
+          }
+        ],
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "vendor": "Rocket.Chat",
+            "product": "Rocket.Chat",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "8.5.0",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "8.4.2",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "8.3.4",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "8.2.4",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "8.1.5",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "8.0.6",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "7.13.8",
+                "versionType": "semver"
+              },
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThan": "7.10.12",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://hackerone.com/reports/3713682"
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "vectorString": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-284",
+                "description": "CWE-284 Improper Access Control - Generic"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "36234546-b8fa-4601-9d6f-f4e334aa8ea1",
+          "shortName": "hackerone",
+          "dateUpdated": "2026-05-19T04:43:41.777Z"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-32994"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-19T12:36:21.168251Z",
+                  "id": "CVE-2026-32994",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-19T12:36:27.839Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-22069",
+      "assignerOrgId": "7f2b1ad8-5432-4d64-91a1-9099af1cc695",
+      "state": "PUBLISHED",
+      "assignerShortName": "OPPO",
+      "dateReserved": "2026-01-06T06:15:53.763Z",
+      "datePublished": "2026-05-19T02:47:20.980Z",
+      "dateUpdated": "2026-05-19T12:45:40.714Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "7f2b1ad8-5432-4d64-91a1-9099af1cc695",
+          "shortName": "OPPO",
+          "dateUpdated": "2026-05-19T02:47:20.980Z"
+        },
+        "title": "O+ Connect Local Privilege Escalation Vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-266",
+                "description": "CWE-266 Incorrect privilege assignment",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-233",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-233 Privilege Escalation"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "OPPO",
+            "product": "O+ Connect",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "16.2.0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A local privilege escalation vulnerability exists in O+ Connect because it fails to validate the identity of the caller on the pipe interface.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "A local privilege escalation vulnerability exists in O+ Connect because it fails to validate the identity of the caller on the pipe interface."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://security.oppo.com/en/noticeDetail?notice_only_key=NOTICE-2056566978633801728"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "REQUIRED",
+              "scope": "CHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:H"
+            }
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.2"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-22069"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-19T12:45:34.868075Z",
+                  "id": "CVE-2026-22069",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-19T12:45:40.714Z"
+          }
+        }
+      ]
+    }
+  }
+]
