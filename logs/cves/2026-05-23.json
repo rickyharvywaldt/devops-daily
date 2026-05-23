@@ -13170,3 +13170,672 @@
     }
   }
 ]
+[Sat May 23 19:18:08 UTC 2026] Latest CVEs:
+[
+  {
+    "modified": "2026-05-23T18:39:14Z",
+    "published": "2026-05-23T18:39:14Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-4269",
+    "summary": "Malicious code in mistral-evals (PyPI)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: kam193 (f79806b5d197ed3b6beeedfb7092ad6da36d1d186ad57dc12be0b030c63726c9)\nInstalling the package or importing the module exfiltrates basic information about the host, and the package has no other purpose.\n\n\n---\n\nCategory: PROBABLY_PENTEST - Packages looking like typical pentest packages, but also anything that looks like testing, exploring pre-prepared kits, research & co, with clearly low-harm possibilities.\n\n\nCampaign: GENERIC-standard-pypi-install-pentest\n\n\nReasons (based on the campaign):\n\n\n - The package contains code to exfiltrate basic data from the system, like IP or username. It has a limited risk.\n\n\n - The package overrides the install command in setup.py to execute malicious code during installation.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mistral-evals"
+        },
+        "versions": [
+          "999.0.0"
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://bad-packages.kam193.eu/pypi/package/mistral-evals"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Kamil Mańkowski (kam193)",
+        "type": "REPORTER",
+        "contact": [
+          "https://github.com/kam193",
+          "https://bad-packages.kam193.eu/"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "id": "pypi/GENERIC-standard-pypi-install-pentest/mistral-evals",
+          "import_time": "2026-05-23T18:50:34.358076568Z",
+          "modified_time": "2026-05-23T18:39:14.112097Z",
+          "sha256": "f79806b5d197ed3b6beeedfb7092ad6da36d1d186ad57dc12be0b030c63726c9",
+          "source": "kam193",
+          "versions": [
+            "999.0.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-4269"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25357",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-05-23T16:27:56.915Z",
+      "datePublished": "2026-05-23T18:32:14.169Z",
+      "dateUpdated": "2026-05-23T18:32:14.169Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-05-23T18:32:14.169Z"
+        },
+        "datePublic": "2018-06-29T00:00:00.000Z",
+        "title": "Dolibarr ERP CRM 7.0.3 Remote Code Evaluation via install/step1.php",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dolibarr ERP CRM 7.0.3 contains a remote code evaluation vulnerability that allows unauthenticated attackers to execute arbitrary code by injecting PHP code through the db_name parameter. Attackers can send a POST request to install/step1.php with malicious PHP code in the db_name parameter, then execute commands via the check.php endpoint using the cmd GET parameter."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Control of Generation of Code ('Code Injection')",
+                "cweId": "CWE-94",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Dolibarr",
+            "product": "Dolibarr ERP CRM",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThanOrEqual": "7.0.3"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dolibarr:dolibarr_erp\\/crm:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "7.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/44964",
+            "name": "ExploitDB-44964",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://dolibarr.org",
+            "name": "Official Product Homepage",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "https://github.com/Dolibarr/dolibarr",
+            "name": "Product Reference",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Dolibarr ERP CRM 7.0.3 Remote Code Evaluation via install/step1.php",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/dolibarr-erp-crm-remote-code-evaluation-via-install-step1-php"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "om3rcitak - https://omercitak.com",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25357"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25358",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-05-23T16:48:08.746Z",
+      "datePublished": "2026-05-23T18:30:57.111Z",
+      "dateUpdated": "2026-05-23T18:30:57.111Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-05-23T18:30:57.111Z"
+        },
+        "datePublic": "2018-07-10T00:00:00.000Z",
+        "title": "D-Link DIR601 2.02NA Credential Disclosure via my_cgi.cgi",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR601 2.02NA contains a credential disclosure vulnerability that allows unauthenticated attackers to retrieve sensitive configuration data by manipulating the table_name parameter in POST requests. Attackers can send requests to /my_cgi.cgi with table_name values like admin_user, wireless_settings, and wireless_security to extract administrative credentials and wireless network keys in clear text."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Exposure of Sensitive System Information to an Unauthorized Control Sphere",
+                "cweId": "CWE-497",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "D-Link",
+            "product": "DIR601NA",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "versionType": "custom",
+                "lessThanOrEqual": "2.02"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/45002",
+            "name": "ExploitDB-45002",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "http://ca.dlink.com/",
+            "name": "Official Product Homepage",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "https://www.packetlabs.net",
+            "name": "Official Product Homepage",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "http://support.dlink.ca/ProductInfo.aspx?m=DIR-601",
+            "name": "Product Reference",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: D-Link DIR601 2.02NA Credential Disclosure via my_cgi.cgi",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/d-link-dir601-2-02na-credential-disclosure-via-my-cgi-cgi"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Richard Rogerson",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25358"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25356",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-05-23T16:26:22.154Z",
+      "datePublished": "2026-05-23T18:30:55.727Z",
+      "dateUpdated": "2026-05-23T18:30:55.727Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-05-23T18:30:55.727Z"
+        },
+        "datePublic": "2018-06-30T00:00:00.000Z",
+        "title": "SIPp 3.6 Local Buffer Overflow via Command-line Arguments",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SIPp 3.6 and earlier contains a local buffer overflow vulnerability in command-line argument handling that allows local attackers to crash the application or execute arbitrary code. Attackers can trigger the vulnerability by supplying oversized input to the -3pcc, -i, or -log_file parameters, causing strcpy to write beyond buffer boundaries in sipp.cpp."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+                "cweId": "CWE-120",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Sipp",
+            "product": "SIPp",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "versionType": "custom",
+                "lessThanOrEqual": "3.6"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 8.6,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/44962",
+            "name": "ExploitDB-44962",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "http://sipp.sourceforge.net/",
+            "name": "Official Product Homepage",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "https://github.com/SIPp/sipp/releases",
+            "name": "Product Reference",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: SIPp 3.6 Local Buffer Overflow via Command-line Arguments",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/sipp-local-buffer-overflow-via-command-line-arguments"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Fakhri Zulkifli",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25356"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2018-25355",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-05-23T16:22:59.669Z",
+      "datePublished": "2026-05-23T18:30:54.959Z",
+      "dateUpdated": "2026-05-23T18:30:54.959Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-05-23T18:30:54.959Z"
+        },
+        "datePublic": "2018-06-16T00:00:00.000Z",
+        "title": "Audiograbber 1.83 Local Buffer Overflow via SEH",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Audiograbber 1.83 contains a local buffer overflow vulnerability that allows attackers to execute arbitrary code by exploiting structured exception handling mechanisms. Attackers can craft malicious input in the Interpret or Album fields that triggers a buffer overflow, overwriting SEH pointers and executing injected shellcode with application privileges."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')",
+                "cweId": "CWE-120",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Audiograbber",
+            "product": "Audiograbber",
+            "versions": [
+              {
+                "version": "1.83",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "LOCAL",
+              "baseScore": 8.6,
+              "baseSeverity": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "HIGH",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/44903",
+            "name": "ExploitDB-44903",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.audiograbber.org/",
+            "name": "Official Product Homepage",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: Audiograbber 1.83 Local Buffer Overflow via SEH",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/audiograbber-local-buffer-overflow-via-seh"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Dennis 'dhn' Herrmann",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2018-25355"
+          }
+        ]
+      }
+    }
+  }
+]
