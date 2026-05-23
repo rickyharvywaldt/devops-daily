@@ -12197,3 +12197,976 @@
     }
   }
 ]
+[Sat May 23 13:46:59 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-46300",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-05-13T15:03:33.111Z",
+      "datePublished": "2026-05-23T11:44:02.231Z",
+      "dateUpdated": "2026-05-23T12:24:19.703Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-05-23T11:44:02.231Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: skbuff: propagate shared-frag marker through frag-transfer helpers\n\nTwo frag-transfer helpers (__pskb_copy_fclone() and skb_shift()) fail\nto propagate the SKBFL_SHARED_FRAG bit in skb_shinfo()->flags when\nmoving frags from source to destination.  __pskb_copy_fclone() defers\nthe rest of the shinfo metadata to skb_copy_header() after copying\nfrag descriptors, but that helper only carries over gso_{size,segs,\ntype} and never touches skb_shinfo()->flags; skb_shift() moves frag\ndescriptors directly and leaves flags untouched.  As a result, the\ndestination skb keeps a reference to the same externally-owned or\npage-cache-backed pages while reporting skb_has_shared_frag() as\nfalse.\n\nThe mismatch is harmful in any in-place writer that uses\nskb_has_shared_frag() to decide whether shared pages must be detoured\nthrough skb_cow_data().  ESP input is one such writer (esp4.c,\nesp6.c), and a single nft 'dup to <local>' rule -- or any other\nnf_dup_ipv4() / xt_TEE caller -- is enough to land a pskb_copy()'d\nskb in esp_input() with the marker stripped, letting an unprivileged\nuser write into the page cache of a root-owned read-only file via\nauthencesn-ESN stray writes.\n\nSet SKBFL_SHARED_FRAG on the destination whenever frag descriptors\nwere actually moved from the source.  skb_copy() and skb_copy_expand()\nshare skb_copy_header() too but linearize all paged data into freshly\nallocated head storage and emerge with nr_frags == 0, so\nskb_has_shared_frag() returns false on its own; they need no change.\n\nThe same omission exists in skb_gro_receive() and skb_gro_receive_list().\nThe former moves the incoming skb's frag descriptors into the\naccumulator's last sub-skb via two paths (a direct frag-move loop and\nthe head_frag + memcpy path); the latter chains the incoming skb whole\nonto p's frag_list.  Downstream skb_segment() reads only\nskb_shinfo(p)->flags, and skb_segment_list() reuses each sub-skb's\nshinfo as the nskb -- both p and lp must carry the marker.\n\nThe same omission also exists in tcp_clone_payload(), which builds an\nMTU probe skb by moving frag descriptors from skbs on sk_write_queue\ninto a freshly allocated nskb.  The helper falls into the same family\nand warrants the same fix for consistency; no TCP TX-side in-place\nwriter is currently known to reach a user page through this gap, but\na future consumer depending on the marker would regress silently.\n\nThe same omission exists in skb_segment(): the per-iteration flag\nmerge takes only head_skb's flag, and the inner switch that rebinds\nfrag_skb to list_skb on head_skb-frags exhaustion does not fold the\nnew frag_skb's flag into nskb.  Fold frag_skb's flag at both sites\nso segments drawing frags from frag_list members carry the marker."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/core/gro.c",
+              "net/core/skbuff.c",
+              "net/ipv4/tcp_output.c"
+            ],
+            "versions": [
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "fbeab9555564a1b98e8582cd106dfe46c4606991",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "179f1852bdedc300e373e807cc102cd81feff196",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "12401fcfb01f53ccc63ab0a3246570fe8f3105ee",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "989214c66884d70716d83dc1d0bf5e16287bf349",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "fc6eb39c55e97df2f94ad974b8a5bbcd019da2c8",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "ff375cc75f9167168db38e0464a482d5fbc8d81d",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "9bc9d6d6967a2239aa57af2aa53554eddd640d20",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/core/gro.c",
+              "net/core/skbuff.c",
+              "net/ipv4/tcp_output.c"
+            ],
+            "versions": [
+              {
+                "version": "3.9",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "3.9",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.10.257",
+                "lessThanOrEqual": "5.10.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.208",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.1.174",
+                "lessThanOrEqual": "6.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.141",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.91",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.33",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.0.10",
+                "lessThanOrEqual": "7.0.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "5.10.257"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "5.15.208"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.1.174"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.6.141"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.12.91"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.18.33"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "7.0.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/fbeab9555564a1b98e8582cd106dfe46c4606991"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/179f1852bdedc300e373e807cc102cd81feff196"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/12401fcfb01f53ccc63ab0a3246570fe8f3105ee"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/989214c66884d70716d83dc1d0bf5e16287bf349"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/fc6eb39c55e97df2f94ad974b8a5bbcd019da2c8"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/ff375cc75f9167168db38e0464a482d5fbc8d81d"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/9bc9d6d6967a2239aa57af2aa53554eddd640d20"
+          }
+        ],
+        "title": "net: skbuff: propagate shared-frag marker through frag-transfer helpers",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-46300"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/13/5"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/21/11"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/21/12"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/21/13"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-05-23T12:24:19.703Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-9300",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-22T17:45:01.607Z",
+      "datePublished": "2026-05-23T11:45:12.057Z",
+      "dateUpdated": "2026-05-23T11:45:12.057Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-23T11:45:12.057Z"
+        },
+        "title": "omec-project amf NGSetupRequest memory corruption",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "omec-project",
+            "product": "amf",
+            "versions": [
+              {
+                "version": "2.1.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1.1",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:omec-project:amf:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "NGSetupRequest Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in omec-project amf up to 2.1.1. This affects an unknown part of the component NGSetupRequest Handler. Such manipulation leads to memory corruption. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. It is best practice to apply a patch to resolve this issue."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:OF/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-22T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-22T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-22T19:50:14.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "shovon0203 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/365247",
+            "name": "VDB-365247 | omec-project amf NGSetupRequest memory corruption",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/365247/cti",
+            "name": "VDB-365247 | CTI Indicators (IOB, IOC)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/811841",
+            "name": "Submit #811841 | Linux Foundation Projects SD-Core 2.1.1 Memory Corruption",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/omec-project/amf/issues/679",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/omec-project/amf/pull/666",
+            "tags": [
+              "issue-tracking",
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/omec-project/amf/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-9300"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-43503",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-05-01T14:12:56.014Z",
+      "datePublished": "2026-05-23T11:44:01.103Z",
+      "dateUpdated": "2026-05-23T11:44:01.103Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-05-23T11:44:01.103Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: skbuff: preserve shared-frag marker during coalescing\n\nskb_try_coalesce() can attach paged frags from @from to @to.  If @from\nhas SKBFL_SHARED_FRAG set, the resulting @to skb can contain the same\nexternally-owned or page-cache-backed frags, but the shared-frag marker\nis currently lost.\n\nThat breaks the invariant relied on by later in-place writers.  In\nparticular, ESP input checks skb_has_shared_frag() before deciding\nwhether an uncloned nonlinear skb can skip skb_cow_data().  If TCP\nreceive coalescing has moved shared frags into an unmarked skb, ESP can\nsee skb_has_shared_frag() as false and decrypt in place over page-cache\nbacked frags.\n\nPropagate SKBFL_SHARED_FRAG when skb_try_coalesce() transfers paged\nfrags.  The tailroom copy path does not need the marker because it copies\nbytes into @to's linear data rather than transferring frag descriptors."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/core/skbuff.c"
+            ],
+            "versions": [
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "3599e6b3cc1ada96883d496a50a210d3afbb6987",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "2f2b16022a2e10ca7bccfb98db5ed2ec0f72641c",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "9d3e5fd19fe1063bf607219e8562fbd567b8e8d5",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "78bf6b6bb19541d19fbda6242e7cfe2c682763c0",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "760e1addc27ba1a7beb4a0a7e8b3e9ec49e7a34e",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "3bd9e113d50034db99d7ef69fd8e5242d15e414a",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "cef401de7be8c4e155c6746bfccf721a4fa5fab9",
+                "lessThan": "3884358a9286b17f389a72b1426fc4547c23c111",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "net/core/skbuff.c"
+            ],
+            "versions": [
+              {
+                "version": "3.9",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "3.9",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.10.257",
+                "lessThanOrEqual": "5.10.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.208",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.1.174",
+                "lessThanOrEqual": "6.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.141",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.91",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.33",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.0.10",
+                "lessThanOrEqual": "7.0.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "5.10.257"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "5.15.208"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.1.174"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.6.141"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.12.91"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "6.18.33"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.9",
+                    "versionEndExcluding": "7.0.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/3599e6b3cc1ada96883d496a50a210d3afbb6987"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/2f2b16022a2e10ca7bccfb98db5ed2ec0f72641c"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/9d3e5fd19fe1063bf607219e8562fbd567b8e8d5"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/78bf6b6bb19541d19fbda6242e7cfe2c682763c0"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/760e1addc27ba1a7beb4a0a7e8b3e9ec49e7a34e"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/3bd9e113d50034db99d7ef69fd8e5242d15e414a"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/3884358a9286b17f389a72b1426fc4547c23c111"
+          }
+        ],
+        "title": "net: skbuff: preserve shared-frag marker during coalescing",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-43503"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-23143",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-01-13T15:37:45.973Z",
+      "datePublished": "2026-02-14T15:36:08.834Z",
+      "dateUpdated": "2026-05-23T11:25:51.824Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-05-23T11:25:51.824Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nvirtio_net: Fix misalignment bug in struct virtnet_info\n\nUse the new TRAILING_OVERLAP() helper to fix a misalignment bug\nalong with the following warning:\n\ndrivers/net/virtio_net.c:429:46: warning: structure containing a flexible array member is not at the end of another structure [-Wflex-array-member-not-at-end]\n\nThis helper creates a union between a flexible-array member (FAM)\nand a set of members that would otherwise follow it (in this case\n`u8 rss_hash_key_data[VIRTIO_NET_RSS_MAX_KEY_SIZE];`). This\noverlays the trailing members (rss_hash_key_data) onto the FAM\n(hash_key_data) while keeping the FAM and the start of MEMBERS aligned.\nThe static_assert() ensures this alignment remains.\n\nNotice that due to tail padding in flexible `struct\nvirtio_net_rss_config_trailer`, `rss_trailer.hash_key_data`\n(at offset 83 in struct virtnet_info) and `rss_hash_key_data` (at\noffset 84 in struct virtnet_info) are misaligned by one byte. See\nbelow:\n\nstruct virtio_net_rss_config_trailer {\n        __le16                     max_tx_vq;            /*     0     2 */\n        __u8                       hash_key_length;      /*     2     1 */\n        __u8                       hash_key_data[];      /*     3     0 */\n\n        /* size: 4, cachelines: 1, members: 3 */\n        /* padding: 1 */\n        /* last cacheline: 4 bytes */\n};\n\nstruct virtnet_info {\n...\n        struct virtio_net_rss_config_trailer rss_trailer; /*    80     4 */\n\n        /* XXX last struct has 1 byte of padding */\n\n        u8                         rss_hash_key_data[40]; /*    84    40 */\n...\n        /* size: 832, cachelines: 13, members: 48 */\n        /* sum members: 801, holes: 8, sum holes: 31 */\n        /* paddings: 2, sum paddings: 5 */\n};\n\nAfter changes, those members are correctly aligned at offset 795:\n\nstruct virtnet_info {\n...\n        union {\n                struct virtio_net_rss_config_trailer rss_trailer; /*   792     4 */\n                struct {\n                        unsigned char __offset_to_hash_key_data[3]; /*   792     3 */\n                        u8         rss_hash_key_data[40]; /*   795    40 */\n                };                                       /*   792    43 */\n        };                                               /*   792    44 */\n...\n        /* size: 840, cachelines: 14, members: 47 */\n        /* sum members: 801, holes: 8, sum holes: 35 */\n        /* padding: 4 */\n        /* paddings: 1, sum paddings: 4 */\n        /* last cacheline: 8 bytes */\n};\n\nAs a result, the RSS key passed to the device is shifted by 1\nbyte: the last byte is cut off, and instead a (possibly\nuninitialized) byte is added at the beginning.\n\nAs a last note `struct virtio_net_rss_config_hdr *rss_hdr;` is also\nmoved to the end, since it seems those three members should stick\naround together. :)"
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "drivers/net/virtio_net.c"
+            ],
+            "versions": [
+              {
+                "version": "ed3100e90d0d120a045a551b85eb43cf2527e885",
+                "lessThan": "ae48108c2310f1dd700e0dbb655c2f1d92ed00fc",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "ed3100e90d0d120a045a551b85eb43cf2527e885",
+                "lessThan": "4156c3745f06bc197094b9ee97a9584e69ed00bf",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "4c47aff10f6f0a2506dc2126c17ccd4c42bfa211",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "drivers/net/virtio_net.c"
+            ],
+            "versions": [
+              {
+                "version": "6.15",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "6.15",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.7",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.19",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.15",
+                    "versionEndExcluding": "6.18.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.15",
+                    "versionEndExcluding": "6.19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.12.91"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/ae48108c2310f1dd700e0dbb655c2f1d92ed00fc"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/4156c3745f06bc197094b9ee97a9584e69ed00bf"
+          }
+        ],
+        "title": "virtio_net: Fix misalignment bug in struct virtnet_info",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-23143"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-9299",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-05-22T17:44:58.828Z",
+      "datePublished": "2026-05-23T11:00:14.603Z",
+      "dateUpdated": "2026-05-23T11:00:14.603Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-05-23T11:00:14.603Z"
+        },
+        "title": "omec-project amf handler.go PDUSessionResourceModifyIndication memory corruption",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "omec-project",
+            "product": "amf",
+            "versions": [
+              {
+                "version": "2.1.0",
+                "status": "affected"
+              },
+              {
+                "version": "2.1.1",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:omec-project:amf:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in omec-project amf up to 2.1.1. Affected by this issue is the function PDUSessionResourceModifyIndication of the file /go/src/amf/ngap/handler.go. This manipulation causes memory corruption. Remote exploitation of the attack is possible. The exploit has been published and may be used. Applying a patch is the recommended action to fix this issue."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:OF/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-22T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-05-22T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-05-22T19:50:11.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "shovon0203 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/365246",
+            "name": "VDB-365246 | omec-project amf handler.go PDUSessionResourceModifyIndication memory corruption",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/365246/cti",
+            "name": "VDB-365246 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/811829",
+            "name": "Submit #811829 | Linux Foundation Projects SD-Core 2.1.1 Memory Corruption",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/omec-project/amf/issues/681",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/omec-project/amf/pull/666",
+            "tags": [
+              "issue-tracking",
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/omec-project/amf/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-9299"
+          }
+        ]
+      }
+    }
+  }
+]
