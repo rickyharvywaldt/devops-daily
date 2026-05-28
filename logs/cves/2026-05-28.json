@@ -74036,3 +74036,887 @@
     }
   }
 ]
+[Thu May 28 20:29:47 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-48896",
+      "assignerOrgId": "6ff30186-7fb7-4ad9-be33-533e7b05e586",
+      "state": "PUBLISHED",
+      "assignerShortName": "Joomla",
+      "dateReserved": "2026-05-26T10:06:17.656Z",
+      "datePublished": "2026-05-26T16:45:55.573Z",
+      "dateUpdated": "2026-05-27T09:15:12.329Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Joomla! CMS",
+            "vendor": "Joomla! Project",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "4.0.0-5.4.5"
+              },
+              {
+                "status": "affected",
+                "version": "6.0.0-6.1.0"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Doyensec in collaboration with Claude and Anthropic Research"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Christos Papakonstantinou, Cantina"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Insufficient state checks lead to a vector that allows to bypass 2FA checks."
+              }
+            ],
+            "value": "Insufficient state checks lead to a vector that allows to bypass 2FA checks."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-115",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-115: Authentication Bypass"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-287",
+                "description": "CWE-287 Improper Authentication",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "6ff30186-7fb7-4ad9-be33-533e7b05e586",
+          "shortName": "Joomla",
+          "dateUpdated": "2026-05-27T09:15:12.329Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://developer.joomla.org/security-centre/1043-20260511-core-mfa-authentication-bypass.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Joomla! Core - [20260511] - MFA Authentication Bypass",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-48896"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-26T18:56:43.158826Z",
+                  "id": "CVE-2026-48896",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-26T18:57:20.522Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-42401",
+      "assignerOrgId": "271b6943-45a9-4f3a-ab4e-976f3fa05b5a",
+      "state": "PUBLISHED",
+      "assignerShortName": "elastic",
+      "dateReserved": "2026-04-27T10:14:34.318Z",
+      "datePublished": "2026-05-28T19:40:21.015Z",
+      "dateUpdated": "2026-05-28T19:40:21.015Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Kibana",
+            "vendor": "Elastic",
+            "versions": [
+              {
+                "lessThanOrEqual": "9.3.4",
+                "status": "affected",
+                "version": "9.0.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThanOrEqual": "8.19.15",
+                "status": "affected",
+                "version": "8.0.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<p>Improper Neutralization of Input During Web Page Generation (CWE-79) in Kibana can lead to stored HTML injection. A user with write access to an Elasticsearch index could persist crafted markup which, when subsequently rendered through an affected Kibana view by another user, was not sufficiently sanitized. Successful exploitation could result in unauthorized UI manipulation and outbound network requests issued from the viewing user's browser session.</p>"
+              }
+            ],
+            "value": "Improper Neutralization of Input During Web Page Generation (CWE-79) in Kibana can lead to stored HTML injection. A user with write access to an Elasticsearch index could persist crafted markup which, when subsequently rendered through an affected Kibana view by another user, was not sufficiently sanitized. Successful exploitation could result in unauthorized UI manipulation and outbound network requests issued from the viewing user's browser session."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-137",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-137 Parameter Injection"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 4.1,
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "privilegesRequired": "LOW",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "271b6943-45a9-4f3a-ab4e-976f3fa05b5a",
+          "shortName": "elastic",
+          "dateUpdated": "2026-05-28T19:40:21.015Z"
+        },
+        "references": [
+          {
+            "url": "https://discuss.elastic.co/t/kibana-8-19-16-9-3-5-security-update-esa-2026-34/386552"
+          }
+        ],
+        "source": {
+          "discovery": "Elastic"
+        },
+        "title": "Improper Neutralization of Input During Web Page Generation in Kibana Leading to Stored HTML Injection",
+        "x_generator": {
+          "engine": "Elastic CVE Publisher 0.0.1"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-42401"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-48897",
+      "assignerOrgId": "6ff30186-7fb7-4ad9-be33-533e7b05e586",
+      "state": "PUBLISHED",
+      "assignerShortName": "Joomla",
+      "dateReserved": "2026-05-26T10:06:17.656Z",
+      "datePublished": "2026-05-26T16:44:53.779Z",
+      "dateUpdated": "2026-05-27T09:14:05.696Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Joomla! CMS",
+            "vendor": "Joomla! Project",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "4.0.0-5.4.5"
+              },
+              {
+                "status": "affected",
+                "version": "6.0.0-6.1.0"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Morris Baumgarten-Egemole"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Insufficient state checks lead to a vector that allows to bypass 2FA checks."
+              }
+            ],
+            "value": "Insufficient state checks lead to a vector that allows to bypass 2FA checks."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-115",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-115: Authentication Bypass"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-287",
+                "description": "CWE-287 Improper Authentication",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "6ff30186-7fb7-4ad9-be33-533e7b05e586",
+          "shortName": "Joomla",
+          "dateUpdated": "2026-05-27T09:14:05.696Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://developer.joomla.org/security-centre/1044-20260512-core-mfa-authentication-bypass.html"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Joomla! Core - [20260512] - MFA Authentication Bypass",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-48897"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-26T19:19:17.612461Z",
+                  "id": "CVE-2026-48897",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-26T19:19:26.183Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "product": "Modicon Controllers (M340 CPUs, M340 communication modules,  Premium CPUs, Premium communication modules, Quantum CPUs, Quantum communication modules - see security notification for specific versions)",
+            "vendor": "Schneider Electric",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "Modicon Controllers (M340 CPUs"
+              },
+              {
+                "status": "affected",
+                "version": "M340 communication modules"
+              },
+              {
+                "status": "affected",
+                "version": "Premium CPUs"
+              },
+              {
+                "status": "affected",
+                "version": "Premium communication modules"
+              },
+              {
+                "status": "affected",
+                "version": "Quantum CPUs"
+              },
+              {
+                "status": "affected",
+                "version": "Quantum communication modules - see security notification for specific versions)"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A CWE-200: Information Exposure vulnerability exists in Modicon Controllers (M340 CPUs, M340 communication modules, Premium CPUs, Premium communication modules, Quantum CPUs, Quantum communication modules - see security notification for specific versions), which could cause the disclosure of FTP hardcoded credentials when using the Web server of the controller on an unsecure network."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "description": "CWE-200: Information Exposure",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "dateUpdated": "2019-11-20T22:01:49.000Z",
+          "orgId": "076d1eb6-cfab-4401-b34d-6dfc2a413bdb",
+          "shortName": "schneider"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://www.schneider-electric.com/ww/en/download/document/SEVD-2019-281-02/"
+          }
+        ],
+        "x_legacyV4Record": {
+          "CVE_data_meta": {
+            "ASSIGNER": "cybersecurity@schneider-electric.com",
+            "ID": "CVE-2019-6852",
+            "STATE": "PUBLIC"
+          },
+          "affects": {
+            "vendor": {
+              "vendor_data": [
+                {
+                  "product": {
+                    "product_data": [
+                      {
+                        "product_name": "Modicon Controllers (M340 CPUs, M340 communication modules,  Premium CPUs, Premium communication modules, Quantum CPUs, Quantum communication modules - see security notification for specific versions)",
+                        "version": {
+                          "version_data": [
+                            {
+                              "version_value": "Modicon Controllers (M340 CPUs"
+                            },
+                            {
+                              "version_value": "M340 communication modules"
+                            },
+                            {
+                              "version_value": "Premium CPUs"
+                            },
+                            {
+                              "version_value": "Premium communication modules"
+                            },
+                            {
+                              "version_value": "Quantum CPUs"
+                            },
+                            {
+                              "version_value": "Quantum communication modules - see security notification for specific versions)"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "vendor_name": "Schneider Electric"
+                }
+              ]
+            }
+          },
+          "data_format": "MITRE",
+          "data_type": "CVE",
+          "data_version": "4.0",
+          "description": {
+            "description_data": [
+              {
+                "lang": "eng",
+                "value": "A CWE-200: Information Exposure vulnerability exists in Modicon Controllers (M340 CPUs, M340 communication modules, Premium CPUs, Premium communication modules, Quantum CPUs, Quantum communication modules - see security notification for specific versions), which could cause the disclosure of FTP hardcoded credentials when using the Web server of the controller on an unsecure network."
+              }
+            ]
+          },
+          "problemtype": {
+            "problemtype_data": [
+              {
+                "description": [
+                  {
+                    "lang": "eng",
+                    "value": "CWE-200: Information Exposure"
+                  }
+                ]
+              }
+            ]
+          },
+          "references": {
+            "reference_data": [
+              {
+                "name": "https://www.schneider-electric.com/ww/en/download/document/SEVD-2019-281-02/",
+                "refsource": "CONFIRM",
+                "url": "https://www.schneider-electric.com/ww/en/download/document/SEVD-2019-281-02/"
+              }
+            ]
+          }
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2019-6852"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-04T20:31:04.426Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_CONFIRM",
+                "x_transferred"
+              ],
+              "url": "https://www.schneider-electric.com/ww/en/download/document/SEVD-2019-281-02/"
+            }
+          ]
+        },
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-28T19:38:28.655664Z",
+                  "id": "CVE-2019-6852",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-28T19:39:27.517Z"
+          }
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "076d1eb6-cfab-4401-b34d-6dfc2a413bdb",
+      "assignerShortName": "schneider",
+      "cveId": "CVE-2019-6852",
+      "datePublished": "2019-11-20T22:01:49.000Z",
+      "dateReserved": "2019-01-25T00:00:00.000Z",
+      "dateUpdated": "2026-05-28T19:39:27.517Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2"
+  },
+  {
+    "containers": {
+      "cna": {
+        "title": "Paint 3D Remote Code Execution Vulnerability",
+        "datePublic": "2021-06-08T07:00:00.000Z",
+        "affected": [
+          {
+            "vendor": "Microsoft",
+            "product": "Paint 3D",
+            "cpes": [
+              "cpe:2.3:a:microsoft:paint_3d:-:*:*:*:*:*:*:*"
+            ],
+            "platforms": [
+              "Unknown"
+            ],
+            "versions": [
+              {
+                "version": "6.0.0",
+                "lessThan": "6.2105.4017.0",
+                "versionType": "custom",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Paint 3D Remote Code Execution Vulnerability",
+            "lang": "en-US"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "Remote Code Execution",
+                "lang": "en-US",
+                "type": "Impact"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+          "shortName": "microsoft",
+          "dateUpdated": "2024-05-29T14:55:28.518Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-31946"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-21-671/"
+          },
+          {
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-21-684/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en-US",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.8,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H/E:U/RL:O/RC:C"
+            }
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2021-31946"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-03T23:10:31.283Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-31946"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://www.zerodayinitiative.com/advisories/ZDI-21-671/"
+            },
+            {
+              "tags": [
+                "x_refsource_MISC",
+                "x_transferred"
+              ],
+              "url": "https://www.zerodayinitiative.com/advisories/ZDI-21-684/"
+            }
+          ]
+        },
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "lang": "en",
+                  "description": "CWE-noinfo Not enough information"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-28T19:39:18.929185Z",
+                  "id": "CVE-2021-31946",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-28T19:39:23.790Z"
+          }
+        }
+      ]
+    },
+    "cveMetadata": {
+      "assignerOrgId": "f38d906d-7342-40ea-92c1-6c4a2c6478c8",
+      "assignerShortName": "microsoft",
+      "cveId": "CVE-2021-31946",
+      "datePublished": "2021-06-08T22:46:19.000Z",
+      "dateReserved": "2021-04-30T00:00:00.000Z",
+      "dateUpdated": "2026-05-28T19:39:23.790Z",
+      "state": "PUBLISHED"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2"
+  }
+]
