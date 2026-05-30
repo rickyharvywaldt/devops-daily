@@ -1,0 +1,677 @@
+[Sat May 30 03:53:26 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-48840",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "state": "PUBLISHED",
+      "assignerShortName": "mitre",
+      "dateReserved": "2026-05-25T17:51:46.146Z",
+      "datePublished": "2026-05-30T01:50:42.637Z",
+      "dateUpdated": "2026-05-30T01:50:42.637Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Exim",
+            "repo": "https://code.exim/org/exim/exim",
+            "vendor": "Exim",
+            "versions": [
+              {
+                "lessThan": "4.99.4",
+                "status": "affected",
+                "version": "4.88",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Exim 4.88 before 4.99.4, in some proxy configurations, mishandles certain short payloads, leading to disclosure of uninitialized stack memory values to a client."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-839",
+                "description": "CWE-839 Numeric Range Comparison Without Minimum Check",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-05-30T01:50:42.637Z"
+        },
+        "references": [
+          {
+            "url": "https://exim.org/static/doc/security/EXIM-Security-2026-05-19.1"
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2026/05/29/3"
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ],
+        "x_generator": {
+          "engine": "CVE-Request-form 0.0.1"
+        },
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:exim:exim:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "4.88",
+                    "versionEndExcluding": "4.99.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-48840"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-46402",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-05-13T21:04:10.932Z",
+      "datePublished": "2026-05-27T21:54:06.646Z",
+      "dateUpdated": "2026-05-30T01:51:53.437Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Microsoft UFO uses untrusted task_name in log paths, allowing authenticated path traversal and log file creation outside the logs directory",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-73",
+                "lang": "en",
+                "description": "CWE-73: External Control of File Name or Path",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/microsoft/UFO/security/advisories/GHSA-whcg-fgpx-76f2",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/microsoft/UFO/security/advisories/GHSA-whcg-fgpx-76f2"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "microsoft",
+            "product": "UFO",
+            "versions": [
+              {
+                "version": "3.0.1-4-ge2626659",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-05-27T21:54:06.646Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Microsoft UFO open-source framework for intelligent automation across devices and platforms. In 3.0.1-4-ge2626659, Microsoft UFO uses the user-controlled task_name value directly when constructing session log paths. An authenticated client can supply path traversal sequences in task_name and cause UFO to create log directories and log files outside the intended logs/ directory."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-whcg-fgpx-76f2",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-46402"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/microsoft/UFO/security/advisories/GHSA-whcg-fgpx-76f2",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-30T01:51:28.111727Z",
+                  "id": "CVE-2026-46402",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-30T01:51:53.437Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-45102",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-05-08T19:27:26.699Z",
+      "datePublished": "2026-05-27T18:50:19.418Z",
+      "dateUpdated": "2026-05-30T01:44:42.995Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "OneUptime: RCE due to Node.js' vm module escape via error objects and infinite recursion",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-693",
+                "lang": "en",
+                "description": "CWE-693: Protection Mechanism Failure",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-g9cp-35m2-fjv6",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-g9cp-35m2-fjv6"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "OneUptime",
+            "product": "oneuptime",
+            "versions": [
+              {
+                "version": "< 10.0.98",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-05-27T18:50:19.418Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is an open-source monitoring and observability platform. Prior to 10.0.98, OneUptime uses the Node.js' vm module as an isolation primitive. This API was not designed for that and can be escaped via error objects and infinite recursion. This vulnerability is fixed in 10.0.98."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-g9cp-35m2-fjv6",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-45102"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-g9cp-35m2-fjv6",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-30T01:44:07.997434Z",
+                  "id": "CVE-2026-45102",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-30T01:44:42.995Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-44724",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-05-07T18:04:17.308Z",
+      "datePublished": "2026-05-27T19:26:28.392Z",
+      "dateUpdated": "2026-05-30T01:45:59.001Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "systeminformation: Linux command injection in networkInterfaces() via unsanitized NetworkManager connection profile name",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "lang": "en",
+                "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/sebhildebrandt/systeminformation/security/advisories/GHSA-hvx9-hwr7-wjj9",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/sebhildebrandt/systeminformation/security/advisories/GHSA-hvx9-hwr7-wjj9"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "sebhildebrandt",
+            "product": "systeminformation",
+            "versions": [
+              {
+                "version": ">= 4.17.0, < 5.31.6",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-05-27T19:26:28.392Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "systeminformation is a System and OS information library for node.js. From 4.17.0 to 5.31.5, on Linux, systeminformation is vulnerable to command injection in networkInterfaces() when an active NetworkManager connection profile name contains shell metacharacters. The vulnerable value is obtained internally from real nmcli device status output. The library sanitizes the network interface name before using it in shell commands, but it does not apply equivalent sanitization to the parsed NetworkManager connection profile name. That unsanitized connectionName is then interpolated into three shell command strings executed through execSync(). This vulnerability is fixed in 5.31.6."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-hvx9-hwr7-wjj9",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-44724"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/sebhildebrandt/systeminformation/security/advisories/GHSA-hvx9-hwr7-wjj9",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-30T01:45:32.874409Z",
+                  "id": "CVE-2026-44724",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-30T01:45:59.001Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-44660",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-05-07T16:20:08.659Z",
+      "datePublished": "2026-05-27T20:42:59.830Z",
+      "dateUpdated": "2026-05-30T01:49:35.278Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "UltraJSON: Memory Leak in ujson.dump() on Write Failure",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-401",
+                "lang": "en",
+                "description": "CWE-401: Missing Release of Memory after Effective Lifetime",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/ultrajson/ultrajson/security/advisories/GHSA-c38f-wx89-p2xg",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/ultrajson/ultrajson/security/advisories/GHSA-c38f-wx89-p2xg"
+          },
+          {
+            "name": "https://github.com/ultrajson/ultrajson/commit/82af1d0ac01d09aa40c887b460d44b9d9f4bccd9",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/ultrajson/ultrajson/commit/82af1d0ac01d09aa40c887b460d44b9d9f4bccd9"
+          },
+          {
+            "name": "https://github.com/ultrajson/ultrajson/releases/tag/5.12.1",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/ultrajson/ultrajson/releases/tag/5.12.1"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ultrajson",
+            "product": "ultrajson",
+            "versions": [
+              {
+                "version": "< 5.12.1",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-05-27T20:42:59.830Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "UltraJSON is a fast JSON encoder and decoder written in pure C with bindings for Python 3.7+. Prior to 5.12.1, when ujson.dump() writes to a file-like object and the write operation raises an exception, the serialized JSON string object is not decremented, leaking memory. Each failed write operation leaks the full size of the serialized payload. This vulnerability is fixed in 5.12.1."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-c38f-wx89-p2xg",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-44660"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/ultrajson/ultrajson/security/advisories/GHSA-c38f-wx89-p2xg",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-30T01:49:01.498929Z",
+                  "id": "CVE-2026-44660",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-30T01:49:35.278Z"
+          }
+        }
+      ]
+    }
+  }
+]
