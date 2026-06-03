@@ -17057,3 +17057,437 @@
     }
   }
 ]
+[Wed Jun  3 21:20:56 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-pj2v-ggqh-cmq2",
+    "modified": "2026-06-03T21:09:37Z",
+    "published": "2026-06-03T21:09:37Z",
+    "aliases": [
+      "CVE-2026-44016"
+    ],
+    "summary": "Docling: Unsafe Playwright-based HTML Rendering",
+    "details": "### Impact\nIn versions `>= 2.82.0, < 2.91.0`, if the HTML backend was explicitly configured for rendering (rendering option by default deactivated), then the Playwright-based rendering feature could allow JavaScript execution and unrestricted network access when processing untrusted HTML documents. An attacker could craft malicious HTML that executes arbitrary JavaScript in the rendering context or makes unauthorized network requests to internal services, potentially leading to SSRF attacks, data exfiltration, or remote code execution in the rendering environment.\n\n### Patches\nFixed in version 2.91.0. The rendering context now explicitly disables JavaScript execution (`java_script_enabled=False`) and implements network isolation controls. When `enable_remote_fetch` is disabled, the browser operates in offline mode, preventing all network requests.\n\n### Workarounds\nRefrain from using `render_page=True` when processing untrusted HTML documents.\n\n### References\n- Fix release: [v2.91.0](https://github.com/docling-project/docling/releases/tag/v2.91.0)",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "docling"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.82.0"
+              },
+              {
+                "fixed": "2.91.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/docling-project/docling/security/advisories/GHSA-pj2v-ggqh-cmq2"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/docling-project/docling"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/docling-project/docling/releases/tag/v2.91.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-94",
+        "CWE-918"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-03T21:09:37Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-pj2v-ggqh-cmq2"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-ch57-39q2-4crm",
+    "modified": "2026-06-03T21:06:27Z",
+    "published": "2026-06-03T21:06:27Z",
+    "aliases": [
+      "CVE-2026-43980"
+    ],
+    "summary": "malla: Stored XSS via Meshtastic node names in multiple frontend pages",
+    "details": "Node names (long_name, short_name) received via MQTT are stored in SQLite without sanitization and rendered into the DOM without escaping.\nAny participant on a public Meshtastic MQTT broker can set a malicious node name that executes JavaScript in the browser of every Malla dashboard visitor.\n\nAffected files:\n\n - src/malla/templates/traceroute_graph.html (line ~832)\n - src/malla/templates/map.html (lines ~945, 1078)\n - src/malla/templates/packet_detail.html (lines ~1402, 1452)\n - src/malla/static/js/relay_node_analysis.js (line ~124)\n\nSteps to reproduce\n\n 1. Publish a Meshtastic NODEINFO_APP packet to any public MQTT broker with long_name set to a HTML entity i.e `<img src=x onerror=alert(1)>`\n 2. Wait for malla-capture to store it\n 3. Open the dashboard\n\nImpact\n\nAllows unauthenticated remote attackers to execute arbitrary JavaScript in the browser, such as: \n\n - Phishing overlays\n - Force redirect to malicious websites\n - Injection of arbitrary third-party scripts (no CSP restrictions)\n - Browser resource abuse \n - Persistent dashboard denial of service",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "malla"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "0.1.7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/zenitraM/malla/security/advisories/GHSA-ch57-39q2-4crm"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/zenitraM/malla/commit/4086e2b5f61615a813b70b25bc76095083552135"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/zenitraM/malla"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-03T21:06:27Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-ch57-39q2-4crm"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-48501",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-05-21T15:33:08.292Z",
+      "datePublished": "2026-05-29T15:14:54.975Z",
+      "dateUpdated": "2026-05-29T17:14:30.823Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "GitHub CLI tokens leak via `gh attestation` commands",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-863",
+                "lang": "en",
+                "description": "CWE-863: Incorrect Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/cli/cli/security/advisories/GHSA-8xvp-7hj6-mcj9",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/cli/cli/security/advisories/GHSA-8xvp-7hj6-mcj9"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "cli",
+            "product": "cli",
+            "versions": [
+              {
+                "version": "< 2.93.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-05-29T15:14:54.975Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GitHub CLI (gh) is GitHub’s official command line tool. Prior to 2.93.0, GitHub CLI incorrectly includes authorization header in API requests to TUF repository mirrors via gh attestation, gh release verify, and gh release verify-asset commands. The CLI uses a shared HTTP client with an authentication layer that automatically attaches tokens to outgoing requests. This layer lacks accurate host detection and can incorrectly attribute the target host, providing it with a token it should never receive. Specifically, the host normalization logic collapses any *.github.com subdomain to github.com, so a request to tuf-repo.github.com (a GitHub Pages site, not a GitHub API endpoint) is treated as a request to github.com and receives the user's github.com token. For hosts that don't match github.com or a known GHES instance at all, the resolver falls back to GH_ENTERPRISE_TOKEN if set. The gh attestation, gh release verify and gh release verify-asset commands fetch data from several external hosts as part of their normal operation (TUF metadata from tuf-repo.github.com and tuf-repo-cdn.sigstore.dev, artifact bundles from Azure Blob Storage). Because these requests go through the same authenticated HTTP client, the token is sent to all of them. This vulnerability is fixed in 2.93.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-8xvp-7hj6-mcj9",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-48501"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-29T17:13:29.316659Z",
+                  "id": "CVE-2026-48501",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-29T17:14:30.823Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-8x6r-g9mw-2r78",
+    "modified": "2026-06-03T21:05:17Z",
+    "published": "2026-06-03T21:05:17Z",
+    "aliases": [
+      "CVE-2026-42342"
+    ],
+    "summary": "React Router vulnerable to DoS via unbounded path expansion in __manifest endpoint",
+    "details": "There exists a potential DOS attack vector in React Router Framework Mode applications (as well as Remix v2.10.0 - 2.17.4).  Certain requests can be crafted to consume disproportionate resources on the server, resulting in response time degredation and/or service unavailability for end users.\n\n> [!NOTE]\n> This does not impact your React Router application if you are using [Declarative Mode](https://reactrouter.com/start/modes#declarative) (`<BrowserRouter>`) or [Data Mode](https://reactrouter.com/start/modes#data) (`createBrowserRouter`/`<RouterProvider>`).",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "react-router"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "7.0.0"
+              },
+              {
+                "fixed": "7.15.0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@remix-run/server-runtime"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "2.10.0"
+              },
+              {
+                "fixed": "2.17.5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/remix-run/react-router/security/advisories/GHSA-8x6r-g9mw-2r78"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42342"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/remix-run/react-router"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-400"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-03T21:05:17Z",
+      "nvd_published_at": "2026-06-02T20:16:36Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-8x6r-g9mw-2r78"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-49rj-9fvp-4h2h",
+    "modified": "2026-06-03T21:03:32Z",
+    "published": "2026-06-03T21:03:32Z",
+    "aliases": [
+      "CVE-2026-42211"
+    ],
+    "summary": "React Router's vendored turbo-stream v2 allows arbitrary constructor invocation via TYPE_ERROR deserialization leading to Unauth RCE",
+    "details": "When using React Router v7 in [Framework Mode](https://reactrouter.com/start/modes#framework), there exists a combination of steps that could potentially allow unauthorized RCE through external requests.  This first requires the application code to have an existing prototype pollution vulnerability.  This can be leveraged into a 2-step attack in which the second step can trigger unauthorized RCE on the remote server.\n\n> [!NOTE]\n> This does not impact your React Router application if you are using [Declarative Mode](https://reactrouter.com/start/modes#declarative) (`<BrowserRouter>`) or [Data Mode](https://reactrouter.com/start/modes#data) (`createBrowserRouter`/`<RouterProvider>`).",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "react-router"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "7.0.0"
+              },
+              {
+                "fixed": "7.14.2"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 7.14.1"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/remix-run/react-router/security/advisories/GHSA-49rj-9fvp-4h2h"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42211"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/remix-run/react-router"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-03T21:03:32Z",
+      "nvd_published_at": "2026-06-02T20:16:36Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-49rj-9fvp-4h2h"
+          }
+        ]
+      }
+    }
+  }
+]
