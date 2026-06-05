@@ -1,0 +1,697 @@
+[Fri Jun  5 15:14:58 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-vx9w-5cx4-9796",
+    "modified": "2026-06-05T14:44:09Z",
+    "published": "2026-01-16T20:58:51Z",
+    "aliases": [
+      "CVE-2026-26217"
+    ],
+    "summary": "Crawl4AI Has Local File Inclusion in Docker API via file:// URLs",
+    "details": "A local file inclusion vulnerability exists in the Crawl4AI Docker API. The /execute_js, /screenshot, /pdf, and /html endpoints accept file:// URLs, allowing attackers to read arbitrary files from the server filesystem.\n\nAttack Vector:\n```json\nPOST /execute_js\n{\n    \"url\": \"file:///etc/passwd\",\n    \"scripts\": [\"document.body.innerText\"]\n}\n```\nImpact\n\nAn unauthenticated attacker can:\n- Read sensitive files (/etc/passwd, /etc/shadow, application configs)\n- Access environment variables via /proc/self/environ\n- Discover internal application structure\n- Potentially read credentials and API keys\n\nWorkarounds\n\n1. Disable the Docker API\n2. Add authentication to the API\n3. Use network-level filtering",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "Crawl4AI"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.8.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/unclecode/crawl4ai/security/advisories/GHSA-vx9w-5cx4-9796"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26217"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/pypa/advisory-database/tree/main/vulns/crawl4ai/PYSEC-2026-34.yaml"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/unclecode/crawl4ai"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/unclecode/crawl4ai/blob/main/docs/blog/release-v0.8.0.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/unclecode/crawl4ai/blob/release/v0.8.0/docs/blog/release-v0.8.0.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/unclecode/crawl4ai/blob/release/v0.8.0/docs/migration/v0.8.0-upgrade-guide.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/crawl4ai-docker-api-local-file-inclusion-via-file-url-handling"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-22"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-01-16T20:58:51Z",
+      "nvd_published_at": "2026-02-12T16:16:17Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-vx9w-5cx4-9796"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-11209",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-06-04T17:10:50.681Z",
+      "datePublished": "2026-06-04T23:05:45.295Z",
+      "dateUpdated": "2026-06-05T14:36:45.328Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "149.0.7827.53",
+                "status": "affected",
+                "lessThan": "149.0.7827.53",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Inappropriate implementation in Passwords in Google Chrome prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: Medium)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Insufficient policy enforcement"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-06-04T23:05:45.295Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/506391032"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-11209"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-200",
+                  "lang": "en",
+                  "description": "CWE-200 Exposure of Sensitive Information to an Unauthorized Actor"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-05T14:36:09.154498Z",
+                  "id": "CVE-2026-11209",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-05T14:36:45.328Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2026-38579",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-06-05T14:36:43.189Z",
+      "dateReserved": "2026-04-06T00:00:00.000Z",
+      "datePublished": "2026-06-05T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-06-05T14:36:43.189Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple reflected Cross-Site Scripting (XSS) vulnerabilities in damasac thaipalliative_lte through version 3.0 allow remote attackers to inject arbitrary web script or HTML via the idFormMain parameter (line 24), the id parameter (lines 25, 75), and the ptid_key parameter (lines 26, 42) in /substudy/ezform.php. User input is echoed into HTML attributes and JavaScript contexts without encoding."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/damasac/thaipalliative_lte/blob/57b57630fb403eba524533062ef5244e9b7c4380/substudy/ezform.php#L14"
+          },
+          {
+            "url": "https://github.com/theemperorspath/advisories/blob/main/2026/CVE-2026-38579.md"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-38579"
+          }
+        ]
+      }
+    },
+    "dataVersion": "5.2"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-5243",
+      "assignerOrgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+      "state": "PUBLISHED",
+      "assignerShortName": "TR-CERT",
+      "dateReserved": "2025-05-27T07:32:38.832Z",
+      "datePublished": "2025-07-24T12:45:22.450Z",
+      "dateUpdated": "2026-06-05T14:36:37.537Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+          "shortName": "TR-CERT",
+          "dateUpdated": "2026-06-05T14:36:37.537Z"
+        },
+        "title": "Arbitrary File Upload in SMG Software's Information Portal",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-434",
+                "description": "CWE-434 Unrestricted Upload of File with Dangerous Type",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-78",
+                "description": "CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-242",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-242 Code Injection"
+              }
+            ]
+          },
+          {
+            "capecId": "CAPEC-650",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-650 Upload a Web Shell to a Web Server"
+              }
+            ]
+          },
+          {
+            "capecId": "CAPEC-175",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-175 Code Inclusion"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "SMG Software",
+            "product": "Information Portal",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "13.06.2025",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in SMG Software Information Portal allows Code Injection, Upload a Web Shell to a Web Server, Code Inclusion.\n\nThis issue affects Information Portal: before 13.06.2025.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Unrestricted Upload of File with Dangerous Type, Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in SMG Software Information Portal allows Code Injection, Upload a Web Shell to a Web Server, Code Inclusion.<p>This issue affects Information Portal: before 13.06.2025.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0174",
+            "tags": [
+              "government-resource",
+              "broken-link"
+            ]
+          },
+          {
+            "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0174",
+            "tags": [
+              "government-resource"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 10,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Ersin ERENLER",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "NSC Informatics Inc.",
+            "type": "sponsor"
+          }
+        ],
+        "source": {
+          "defect": [
+            "TR-25-0174"
+          ],
+          "advisory": "TR-25-0174",
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-5243"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-07-24T13:08:13.203041Z",
+                  "id": "CVE-2025-5243",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-07-24T13:36:01.931Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-5253",
+      "assignerOrgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+      "state": "PUBLISHED",
+      "assignerShortName": "TR-CERT",
+      "dateReserved": "2025-05-27T08:17:44.974Z",
+      "datePublished": "2025-07-25T11:27:41.281Z",
+      "dateUpdated": "2026-06-05T14:35:02.022Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+          "shortName": "TR-CERT",
+          "dateUpdated": "2026-06-05T14:35:02.022Z"
+        },
+        "title": "DoS in Kron Technologies' Kron PAM",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-770",
+                "description": "CWE-770 Allocation of Resources Without Limits or Throttling",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE - 406 Insufficient Control of Network Message Volume (Network Amplification)"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-469",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-469 HTTP DoS"
+              }
+            ]
+          },
+          {
+            "capecId": "CAPEC-124",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-124 Shared Resource Manipulation"
+              }
+            ]
+          },
+          {
+            "capecId": "CAPEC-130",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-130 Excessive Allocation"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Kron Technologies",
+            "product": "Kron PAM",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "3.7",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Allocation of Resources Without Limits or Throttling vulnerability in Kron Technologies Kron PAM allows HTTP DoS.\n\nThis issue affects Kron PAM: before 3.7.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Allocation of Resources Without Limits or Throttling vulnerability in Kron Technologies Kron PAM allows HTTP DoS.<p>This issue affects Kron PAM: before 3.7.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0178",
+            "tags": [
+              "government-resource",
+              "broken-link"
+            ]
+          },
+          {
+            "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-25-0178",
+            "tags": [
+              "government-resource"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Taha Yildirim",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Türk Telekom",
+            "type": "sponsor"
+          }
+        ],
+        "source": {
+          "defect": [
+            "TR-25-0178"
+          ],
+          "advisory": "TR-25-0178",
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-5253"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-07-25T11:41:30.935231Z",
+                  "id": "CVE-2025-5253",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-07-25T11:41:35.641Z"
+          }
+        }
+      ]
+    }
+  }
+]
