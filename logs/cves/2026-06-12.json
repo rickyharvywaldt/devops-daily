@@ -1,0 +1,567 @@
+[Fri Jun 12 04:26:32 UTC 2026] Latest CVEs:
+[
+  {
+    "@rdf:about": "https://jvndb.jvn.jp/en/contents/2026/JVNDB-2026-019378.html",
+    "title": "Mitigation for iSCSI Port Vulnerability in Hitachi Disk Array Systems",
+    "link": "https://jvndb.jvn.jp/en/contents/2026/JVNDB-2026-019378.html",
+    "description": "When a large number of malicious packets are received, the iSCSI port may become unresponsive. (CVE-2025-7737)",
+    "sec:identifier": "JVNDB-2026-019378",
+    "sec:references": {
+      "@source": "CVE",
+      "@id": "CVE-2025-7737",
+      "#text": "https://www.cve.org/CVERecord?id=CVE-2025-7737"
+    },
+    "sec:cpe": {
+      "@version": "2.2",
+      "@vendor": "Hitachi, Ltd",
+      "@product": "Hitachi Virtual Storage Platform",
+      "#text": "cpe:/h:hitachi:virtual_storage_platform"
+    },
+    "dc:date": "2026-06-12T11:46+09:00",
+    "dcterms:issued": "2026-06-12T11:46+09:00",
+    "dcterms:modified": "2026-06-12T11:46+09:00",
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "jvndb-2026-019378"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-9125",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-05-20T17:39:30.319Z",
+      "datePublished": "2026-06-12T01:28:02.071Z",
+      "dateUpdated": "2026-06-12T01:28:02.071Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-06-12T01:28:02.071Z"
+        },
+        "affected": [
+          {
+            "vendor": "2winfactor",
+            "product": "Presto Player",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "4.2.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Presto Player plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'link_url' parameter of the [presto_player_overlay] shortcode in versions up to, and including, 4.2.0 This is due to insufficient input sanitization and output escaping in the getOverlays() function, which copies the link_url shortcode attribute directly into the overlay configuration without scheme validation, allowing javascript: URIs to survive and be rendered as the href of a clickable anchor element by the presto-dynamic-overlay-ui web component. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "The Ultimate Video Player For WordPress <= 4.2.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via 'link_url' Shortcode Attribute",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c87e7f50-f14a-4751-abcb-3a5bdd214889?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.4/inc/Services/Shortcodes.php#L464"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.4/inc/Services/Shortcodes.php#L513"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.4/templates/video.php#L16"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.4/dist/components/collection/components/core/features/presto-dynamic-overlays/component/presto-dynamic-overlays.js#L1"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.1/inc/Services/Shortcodes.php#L464"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.1/inc/Services/Shortcodes.php#L513"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.1/templates/video.php#L16"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/presto-player/tags/4.1.1/dist/components/collection/components/core/features/presto-dynamic-overlays/component/presto-dynamic-overlays.js#L1"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3553268/presto-player/trunk/inc/Services/Shortcodes.php"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Dmitrii Ignatyev"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-20T17:56:26.000Z",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2026-06-11T12:49:42.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-9125"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-45170",
+      "assignerOrgId": "d6c1279f-00f6-4ef7-9217-f89ffe703ec0",
+      "state": "PUBLISHED",
+      "assignerShortName": "palo_alto",
+      "dateReserved": "2026-05-08T23:00:57.503Z",
+      "datePublished": "2026-06-12T00:05:43.688Z",
+      "dateUpdated": "2026-06-12T00:05:43.688Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "d6c1279f-00f6-4ef7-9217-f89ffe703ec0",
+          "shortName": "palo_alto",
+          "dateUpdated": "2026-06-12T00:05:43.688Z"
+        },
+        "title": "Idira Privilege Cloud Connector: Potential Security Bypass due to Incomplete TLS Certificate Validation",
+        "datePublic": "2026-06-11T17:10:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-295",
+                "description": "CWE-295 - Improper Certificate Validation",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-114",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-114 Authentication Abuse"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "CyberArk Software, a Palo Alto Networks Company",
+            "product": "PAM SH Connector",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.1.0",
+                "lessThan": "1.1.100504",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cyberark_software_a_palo_alto_networks_company:pam_sh_connector:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "1.1.0",
+                    "versionEndExcluding": "1.1.100504"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Idira Privilege Cloud Connector versions prior 1.1.100504 under specific conditions and configuration scenarios, TLS certificate validation may not be fully enforced. CyberArk Security Bulletin: CA26-17",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Idira Privilege Cloud Connector versions prior 1.1.100504 under specific conditions and configuration scenarios, TLS certificate validation may not be fully enforced. CyberArk Security Bulletin: CA26-17"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.cyberark.com/",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "ADJACENT",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "AMBER",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.5,
+              "vectorString": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/U:Amber"
+            }
+          }
+        ],
+        "exploits": [
+          {
+            "lang": "en",
+            "value": "Palo Alto Networks is not aware of any malicious exploitation of this issue.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Palo Alto Networks is not aware of any malicious exploitation of this issue."
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-06-11T17:10:00.000Z",
+            "lang": "en",
+            "value": "Initial publication."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Palo Alto Networks thanks our internal security research teams for discovering and reporting this issue",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "INTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-45170"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-12034",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-06-11T18:16:09.122Z",
+      "datePublished": "2026-06-11T20:48:14.479Z",
+      "dateUpdated": "2026-06-12T01:04:25.215Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "149.0.7827.115",
+                "status": "affected",
+                "lessThan": "149.0.7827.115",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient validation of untrusted input in Linux Toolkit Theming in Google Chrome on Linux prior to 149.0.7827.115 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a malicious file. (Chromium security severity: High)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Insufficient validation of untrusted input",
+                "cweId": "CWE-20"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-06-11T20:48:14.479Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_01962725236.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/519258799"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-12034"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "CHANGED",
+                "version": "3.1",
+                "baseScore": 8.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-12T01:04:05.296218Z",
+                  "id": "CVE-2026-12034",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-12T01:04:25.215Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-12033",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-06-11T18:16:08.901Z",
+      "datePublished": "2026-06-11T20:48:14.113Z",
+      "dateUpdated": "2026-06-12T01:01:01.214Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "149.0.7827.115",
+                "status": "affected",
+                "lessThan": "149.0.7827.115",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Out of bounds read in VideoCapture in Google Chrome prior to 149.0.7827.115 allowed a remote attacker who had compromised the GPU process to obtain potentially sensitive information from process memory via a crafted HTML page. (Chromium security severity: High)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Out of bounds read",
+                "cweId": "CWE-125"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-06-11T20:48:14.113Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/06/stable-channel-update-for-desktop_01962725236.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/519248779"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-12033"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 5.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "HIGH",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-12T01:00:57.639280Z",
+                  "id": "CVE-2026-12033",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-12T01:01:01.214Z"
+          }
+        }
+      ]
+    }
+  }
+]
