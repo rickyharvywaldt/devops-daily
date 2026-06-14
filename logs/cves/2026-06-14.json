@@ -1,0 +1,493 @@
+[Sun Jun 14 14:13:33 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-9641",
+      "assignerOrgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+      "state": "PUBLISHED",
+      "assignerShortName": "CPANSec",
+      "dateReserved": "2026-05-26T18:44:37.132Z",
+      "datePublished": "2026-06-12T14:57:30.534Z",
+      "dateUpdated": "2026-06-14T12:38:27.715Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://cpan.org/modules",
+            "defaultStatus": "unaffected",
+            "packageName": "Crypt-PBKDF2",
+            "product": "Crypt::PBKDF2",
+            "repo": "https://github.com/arodland/Crypt-PBKDF2",
+            "vendor": "ARODLAND",
+            "versions": [
+              {
+                "lessThan": "0.261630",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Crypt::PBKDF2 versions before 0.261630 for Perl have a weak default algorithm and number of iterations.\n\nThe default algorithm is HMAC-SHA1, which should only be used for legacy systems.\n\nThese versions default to using 1000 iterations.\n\nDepending on the chosen algorithm, 220,000 to 1,400,000 iterations should be used."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-916",
+                "description": "CWE-916 Use of Password Hash With Insufficient Computational Effort",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+          "shortName": "CPANSec",
+          "dateUpdated": "2026-06-12T14:57:30.534Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "technical-description"
+            ],
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#pbkdf2"
+          },
+          {
+            "tags": [
+              "release-notes"
+            ],
+            "url": "https://metacpan.org/release/ARODLAND/Crypt-PBKDF2-0.261630/changes"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Upgrade to version 0.261630 or later."
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Crypt::PBKDF2 versions before 0.261630 for Perl have a weak default algorithm and number of iterations",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "Change the default algorithm to something stronger, such as \"HMACSHA2\", and the output_len accordingly (32 for SHA256).\n\nThe number of iterations should also be increased (600,000 for SHA256, for example)."
+          }
+        ],
+        "x_generator": {
+          "engine": "cpansec-cna-tool 0.1"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-9641"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 5.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-12T17:46:14.634769Z",
+                  "id": "CVE-2026-9641",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-12T17:46:30.101Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/06/12/5"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/06/13/1"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/06/14/1"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/06/14/2"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-06-14T12:38:27.715Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-hx22-9fx3-xg77",
+    "modified": "2026-06-14T12:30:26Z",
+    "published": "2026-06-14T12:30:26Z",
+    "aliases": [
+      "CVE-2026-11526"
+    ],
+    "details": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11526"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/lstein/Perl-GD/commit/67b163713c6c78dfeb693da0978ae934e5cd8210.patch"
+      },
+      {
+        "type": "WEB",
+        "url": "https://metacpan.org/release/RURBAN/GD-2.86/changes"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-73"
+      ],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-14T12:16:22Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-hx22-9fx3-xg77"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2g88-7qc8-9vxv",
+    "modified": "2026-06-14T12:30:26Z",
+    "published": "2026-06-14T12:30:26Z",
+    "aliases": [
+      "CVE-2026-11527"
+    ],
+    "details": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11527"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/shlomif/perl-Config-IniFiles/commit/3e48f9627fbba4dae5de35be1f735cdeb7e47fb8.patch"
+      },
+      {
+        "type": "WEB",
+        "url": "https://metacpan.org/release/SHLOMIF/Config-IniFiles-3.001000/changes"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-73"
+      ],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-14T12:16:23Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-2g88-7qc8-9vxv"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-11527",
+      "assignerOrgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+      "state": "PUBLISHED",
+      "assignerShortName": "CPANSec",
+      "dateReserved": "2026-06-07T19:33:54.590Z",
+      "datePublished": "2026-06-14T11:40:45.634Z",
+      "dateUpdated": "2026-06-14T11:40:45.634Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://cpan.org/modules",
+            "defaultStatus": "unaffected",
+            "packageName": "Config-IniFiles",
+            "product": "Config::IniFiles",
+            "programFiles": [
+              "lib/Config/IniFiles.pm"
+            ],
+            "programRoutines": [
+              {
+                "name": "Config::IniFiles::_make_filehandle"
+              }
+            ],
+            "repo": "https://github.com/shlomif/perl-Config-IniFiles",
+            "vendor": "SHLOMIF",
+            "versions": [
+              {
+                "lessThan": "3.001000",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle.\n\nConfig::IniFiles::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. The helper is the open path behind the documented -file argument: new(-file => $thing) reaches it through ReadConfig. An in-memory scalar reference (-file => \\$text) does not open a path and is unaffected.\n\nAny caller that forwards untrusted input to the -file argument can run an arbitrary command or truncate a file under the process UID."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "description": "CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-73",
+                "description": "CWE-73 External Control of File Name or Path",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+          "shortName": "CPANSec",
+          "dateUpdated": "2026-06-14T11:40:45.634Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/shlomif/perl-Config-IniFiles/commit/3e48f9627fbba4dae5de35be1f735cdeb7e47fb8.patch"
+          },
+          {
+            "tags": [
+              "release-notes"
+            ],
+            "url": "https://metacpan.org/release/SHLOMIF/Config-IniFiles-3.001000/changes"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Upgrade to Config::IniFiles 3.001000 or later, which opens the -file argument with a 3-arg read open so the filename is never interpreted as a command or redirect."
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Config::IniFiles versions before 3.001000 for Perl allow OS command injection and file overwrite via a 2-arg open() of the -file argument in _make_filehandle",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "For deployments that cannot upgrade to 3.001000, do not pass untrusted input as the -file argument. Callers can open the file themselves and pass the resulting filehandle, or pass the configuration as an in-memory scalar reference, which bypasses the affected string path."
+          }
+        ],
+        "x_generator": {
+          "engine": "cpansec-cna-tool 0.1"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-11527"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-11526",
+      "assignerOrgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+      "state": "PUBLISHED",
+      "assignerShortName": "CPANSec",
+      "dateReserved": "2026-06-07T19:26:46.259Z",
+      "datePublished": "2026-06-14T11:39:21.122Z",
+      "dateUpdated": "2026-06-14T11:39:21.122Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://cpan.org/modules",
+            "defaultStatus": "unaffected",
+            "packageName": "GD",
+            "product": "GD",
+            "programFiles": [
+              "lib/GD/Image.pm",
+              "lib/GD/Image_pm.PL"
+            ],
+            "programRoutines": [
+              {
+                "name": "GD::Image::_make_filehandle"
+              }
+            ],
+            "repo": "https://github.com/lstein/Perl-GD",
+            "vendor": "RURBAN",
+            "versions": [
+              {
+                "lessThan": "2.86",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle.\n\nGD::Image::_make_filehandle opens a filename argument with Perl's 2-arg open(), so a filename that begins or ends with a pipe (\"| cmd\", \"cmd |\") or begins with a redirect (\"> path\", \">> path\") is run as a command or redirect rather than opened as a file. _make_filehandle is the single open path behind every filename-accepting constructor (new, newFromPng, newFromJpeg, and the rest); the in-memory *Data variants do not open a path and are unaffected.\n\nAny caller that forwards untrusted input to one of these constructors as a pathname can run an arbitrary command or truncate a file under the process UID."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "description": "CWE-78 Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-73",
+                "description": "CWE-73 External Control of File Name or Path",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+          "shortName": "CPANSec",
+          "dateUpdated": "2026-06-14T11:39:21.122Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/lstein/Perl-GD/commit/67b163713c6c78dfeb693da0978ae934e5cd8210.patch"
+          },
+          {
+            "tags": [
+              "release-notes"
+            ],
+            "url": "https://metacpan.org/release/RURBAN/GD-2.86/changes"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Upgrade to GD 2.86 or later, which opens filename arguments with a 3-arg read open so the filename is never interpreted as a command or redirect."
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "GD versions before 2.86 for Perl allow OS command injection and file overwrite via a 2-arg open() of filename arguments in _make_filehandle",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "For deployments that cannot upgrade to 2.86, do not pass untrusted input as a pathname to GD::Image constructors. Callers can open the file themselves and pass the resulting filehandle, which bypasses the affected string path."
+          }
+        ],
+        "x_generator": {
+          "engine": "cpansec-cna-tool 0.1"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-11526"
+          }
+        ]
+      }
+    }
+  }
+]
