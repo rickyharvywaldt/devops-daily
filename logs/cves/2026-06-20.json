@@ -14218,3 +14218,276 @@
     }
   }
 ]
+[Sat Jun 20 19:44:17 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xppm-jmw6-fhmf",
+    "modified": "2026-06-20T18:31:29Z",
+    "published": "2026-06-20T18:31:29Z",
+    "aliases": [
+      "CVE-2026-56317"
+    ],
+    "details": "Nuxt before 4.4.7 (and the 3.x branch before 3.21.7) contains a cross-site scripting vulnerability in the NoScript component that writes slot content to innerHTML without escaping. Attackers can inject malicious scripts through untrusted data in NoScript slots, such as route.query parameters, which execute in the document context when the noscript tag is implicitly closed by script tags.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/nuxt/nuxt/security/advisories/GHSA-m3q2-p4fw-w38m"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56317"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/nuxt/nuxt/commit/4b054e9d95f8daf366cb144b52782047c511a66e"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/nuxt/nuxt/commit/7fea9fd687f1dacbfb63db5fae5839896b017a0e"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/nuxt-cross-site-scripting-via-noscript-component-slot-content"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "LOW",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-20T16:17:05Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xppm-jmw6-fhmf"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-r945-3x7m-hrjx",
+    "modified": "2026-06-20T18:31:29Z",
+    "published": "2026-06-20T18:31:29Z",
+    "aliases": [
+      "CVE-2026-56319"
+    ],
+    "details": "Capgo before 12.128.2 contains an information disclosure vulnerability in the GET /statistics/app/:app_id endpoint that allows app-limited API keys to distinguish existing sibling app IDs through differential error responses. Attackers can enumerate real app IDs outside their allowed scope by observing 500 PGRST116 errors for inaccessible apps versus 401 errors for nonexistent apps, breaking tenant isolation.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-73p9-mprg-7r75"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56319"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/capgo-app-existence-oracle-via-get-statistics-app-app-id"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-203"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-20T16:17:05Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-r945-3x7m-hrjx"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-qr8q-6c25-rppr",
+    "modified": "2026-06-20T18:31:29Z",
+    "published": "2026-06-20T18:31:29Z",
+    "aliases": [
+      "CVE-2026-56276"
+    ],
+    "details": "Flowise before 3.1.2 contains a mass assignment vulnerability in the PUT /api/v1/user endpoint that allows authenticated users to directly modify the credential field without validation. Attackers can bypass password change verification and session invalidation by supplying a crafted password hash, establishing persistent account access after temporary session compromise.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-59fh-9f3p-7m39"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56276"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/flowise-mass-assignment-in-put-api-v1-user-allows-password-hash-override"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-915"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-20T16:17:04Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-qr8q-6c25-rppr"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-pw45-xmrx-x2w8",
+    "modified": "2026-06-20T18:31:29Z",
+    "published": "2026-06-20T18:31:29Z",
+    "aliases": [
+      "CVE-2026-56325"
+    ],
+    "details": "Capgo before 12.128.2 uses ILIKE pattern matching instead of exact matching for app_id lookup in the preview subdomain resolver, allowing underscore characters in app_id to act as SQL wildcards. Attackers can create apps with app_ids differing by one character at underscore positions to cause unintended pattern matches, breaking preview functionality for legitimate apps or causing app-id confusion.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-cw88-ch2j-8vqj"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56325"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/capgo-app-id-confusion-via-ilike-wildcard-in-preview-subdomain-lookup"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-20"
+      ],
+      "severity": "LOW",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-20T16:17:05Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-pw45-xmrx-x2w8"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-hqgf-f82p-fjh7",
+    "modified": "2026-06-20T18:31:29Z",
+    "published": "2026-06-20T18:31:29Z",
+    "aliases": [
+      "CVE-2026-56304"
+    ],
+    "details": "picklescan before 1.0.1 contains an unsafe pickle deserialization vulnerability allowing unauthenticated attackers to create arbitrary zero-byte files via logging.FileHandler class instantiation. Attackers can exploit this by crafting malicious pickle payloads to bypass RCE blocklists and create lock files or other filesystem artifacts, potentially causing denial of service or application disruption.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/mmaitre314/picklescan/security/advisories/GHSA-m7j5-r2p5-c39r"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56304"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/picklescan-arbitrary-file-creation-via-logging-filehandler-deserialization"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-502"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-06-20T16:17:05Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-hqgf-f82p-fjh7"
+          }
+        ]
+      }
+    }
+  }
+]
