@@ -3743,3 +3743,578 @@
     }
   }
 ]
+[Thu Jun 25 20:07:25 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2x83-8g95-xh59",
+    "modified": "2026-06-25T19:36:23Z",
+    "published": "2026-06-25T19:36:23Z",
+    "aliases": [
+      "CVE-2026-48511"
+    ],
+    "summary": "MessagePack-CSharp: ExpandoObject formatter can perform quadratic insertion work on untrusted maps",
+    "details": "## Summary\n\n`ExpandoObjectFormatter.Deserialize` populates `System.Dynamic.ExpandoObject` by calling `IDictionary<string, object>.Add` for each map entry. `ExpandoObject` internally maintains member names in array-like structures, so inserting many distinct keys can require repeated linear scans and array copies.\n\nFor large attacker-controlled maps, this produces quadratic CPU and allocation behavior. The issue is especially surprising because `ExpandoObjectResolver.Options` is configured with `MessagePackSecurity.UntrustedData`, but collision-resistant dictionary comparers cannot protect `ExpandoObject` insertion internals.\n\n## Impact\n\nApplications are affected when they deserialize untrusted MessagePack maps into `ExpandoObject` using `ExpandoObjectResolver` or related resolver options.\n\nA hostile payload containing many distinct keys can cause CPU exhaustion and allocation churn disproportionate to the input size. This can make a server unresponsive or exhaust memory under concurrent request load.\n\nThis is not a hash-collision attack against a configurable dictionary comparer. The super-linear behavior comes from `ExpandoObject`'s insertion model, so `MessagePackSecurity.UntrustedData` does not eliminate the cost.\n\n## Affected components\n\n- Package: `MessagePack`\n- APIs: `ExpandoObjectFormatter.Deserialize`, `ExpandoObjectResolver`\n- Data type: `System.Dynamic.ExpandoObject`\n- Finding ID: `MESSAGEPACKCSHARP-102`\n\n## Patches\n\nFixes are prepared and will be released in coordinated patch versions.\n\nUpgrade guidance:\n\n1. Upgrade `MessagePack` to the patched version for your release line.\n2. Upgrade companion MessagePack packages in the same dependency graph to the coordinated patched versions.\n\nPotential fixes include applying a map-entry count limit for `ExpandoObject` under untrusted-data settings, buffering into a security-aware dictionary before materializing a bounded `ExpandoObject`, or otherwise rejecting maps large enough to trigger quadratic behavior.\n\n## Workarounds\n\nPatching is recommended.\n\nUntil a patched version is available, avoid deserializing untrusted payloads into `ExpandoObject`. Prefer strongly typed DTOs or dictionaries with security-aware comparers and explicit count limits. Enforce request-size and map-entry limits at the transport or application layer.\n\n## Resources\n\n- `MESSAGEPACKCSHARP-102`: `ExpandoObjectFormatter` quadratic insertion behavior\n- CWE-407: Inefficient Algorithmic Complexity",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.5.301"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0"
+              },
+              {
+                "fixed": "3.1.7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-2x83-8g95-xh59"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48511"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-407"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-25T19:36:23Z",
+      "nvd_published_at": "2026-06-22T22:16:47Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-2x83-8g95-xh59"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-06-25T19:15:43Z",
+    "published": "2026-06-25T18:27:36Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-6470",
+    "summary": "Malicious code in chlklib (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (b08a933891c92fdec26fbadf4921d2e08ff101126fb656a2b57d747fefa9d0d4)\nPackage name `chlklib` is a one-character deletion of the popular `chalk` package and replicates chalk's public API surface (Chalk, chalkStderr, supportsColor, colorNames). On require/import, the main entry invokes `getOriginal()` at module top level, which POSTs to https://funnystore.org/lib/index.php, XOR-decodes the response body with a hardcoded key, and passes the result to `eval()` (see dist/vendor/original-color/index.cjs around line 55, invoked from dist/index.cjs). Any developer who installs and requires this package — most likely after mistyping `chalk` — immediately executes attacker-controlled JavaScript fetched at runtime from funnystore.org. The remote endpoint is mutable and unrelated to the package's stated 'terminal prompt' purpose, giving the operator full RCE on the installer's machine on every require. The XOR-then-eval obfuscation and typosquat-with-replicated-API shape together match a deliberate dropper campaign rather than any legitimate use case.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "chlklib"
+        },
+        "versions": [
+          "1.2.3",
+          "1.2.2",
+          "1.2.0",
+          "1.2.1"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "dist/vendor/original-color/index.cjs",
+                "sha256": "9faf80b37a3d9554bbe8b3ff443a6a114ce7c29ead29deaef766f2701cc52243",
+                "tlsh": "6251c647a6f4615a11f244fa632faa0177bea2e81108d958f6acc2f50fc642144d4aef"
+              },
+              {
+                "path": "package.json",
+                "sha256": "f393aaa919fad51bf578515115f26444534b2957186fc22bc9a24fb8e47465a3",
+                "tlsh": "8031b318c8b06ed77aca26b4aa5e8b56667140070a546f0433cd412c0fcc2df8aff1ce"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "chlklib-1.2.3.tgz",
+                "hashes": {
+                  "sha1": "d6a4a13aa087d2a0328b196fe0487a8a7aaf2e26",
+                  "sha512_sri": "sha512-cPRZlR3K2900J28CU0nKgvvVtn5mgWHdVKiQm51kQ0tWH6vrcKh0P4yRDbF2NadaRh7myQl28LgWAtLM2An0nQ=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/chlklib/v/1.2.3"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/chlklib/v/1.2.2"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/chlklib/v/1.2.0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/chlklib/v/1.2.1"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "inspector-research@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "id": "IN-MAL-2026-007526",
+          "import_time": "2026-06-25T19:13:49.230688071Z",
+          "modified_time": "2026-06-25T18:27:36Z",
+          "sha256": "136a65e3a9bd3712d0e949a0a9b56747918d7d1436cbad01e204ab23ff5e990f",
+          "source": "amazon-inspector",
+          "versions": [
+            "1.2.3"
+          ]
+        },
+        {
+          "id": "IN-MAL-2026-007527",
+          "import_time": "2026-06-25T19:13:49.311925244Z",
+          "modified_time": "2026-06-25T18:27:37Z",
+          "sha256": "766413ce8bb9e5a330bf1a6f878e75a03528339df61dac409a66a06218e082d4",
+          "source": "amazon-inspector",
+          "versions": [
+            "1.2.2"
+          ]
+        },
+        {
+          "id": "IN-MAL-2026-007529",
+          "import_time": "2026-06-25T19:13:49.484821524Z",
+          "modified_time": "2026-06-25T18:27:41Z",
+          "sha256": "b08a933891c92fdec26fbadf4921d2e08ff101126fb656a2b57d747fefa9d0d4",
+          "source": "amazon-inspector",
+          "versions": [
+            "1.2.0"
+          ]
+        },
+        {
+          "id": "IN-MAL-2026-007528",
+          "import_time": "2026-06-25T19:13:49.3560492Z",
+          "modified_time": "2026-06-25T18:27:38Z",
+          "sha256": "fe013bde99ee7eafc14dc4db6ac67e239dd3ee3be046c2444c69b07181b236a3",
+          "source": "amazon-inspector",
+          "versions": [
+            "1.2.1"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-6470"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-v72x-2h86-7f8m",
+    "modified": "2026-06-25T18:53:44Z",
+    "published": "2026-06-25T18:53:44Z",
+    "aliases": [
+      "CVE-2026-48510"
+    ],
+    "summary": "MessagePack-CSharp: LZ4 decompression allocates from unbounded declared output lengths",
+    "details": "## Summary\n\nWhen MessagePack-CSharp decompresses `Lz4Block` or `Lz4BlockArray` payloads, it reads declared uncompressed lengths from the wire and allocates output buffers based on those lengths before validating that the compressed data is valid or that the declared expansion is reasonable.\n\nA small payload can claim a very large uncompressed length and force a large allocation before LZ4 decoding begins.\n\n## Impact\n\nApplications are affected when they deserialize attacker-controlled MessagePack payloads with `MessagePackCompression.Lz4Block` or `MessagePackCompression.Lz4BlockArray` enabled.\n\nIn the `Lz4Block` case, an attacker-controlled integer is used to request the destination span. In the `Lz4BlockArray` case, per-block uncompressed lengths and their aggregate can be attacker-controlled. Without a cap, the declared output size can be disproportionate to the input size, producing out-of-memory exceptions, process termination on constrained hosts, or severe memory pressure.\n\nThis advisory is about unbounded allocation from declared decompressed sizes. It is separate from the LZ4 source-buffer over-read issue, which concerns unsafe decoder reads beyond the compressed input buffer.\n\n## Affected components\n\n- Package: `MessagePack`\n- Feature: LZ4 compressed MessagePack payloads\n- APIs: `MessagePackSerializer` with `WithCompression(MessagePackCompression.Lz4Block)` or `WithCompression(MessagePackCompression.Lz4BlockArray)`\n- Internal routine: `MessagePackSerializer.TryDecompress`\n- Finding ID: `MESSAGEPACKCSHARP-OPEN-004`\n\n## Patches\n\nFixes are prepared and will be released in coordinated patch versions.\n\nUpgrade guidance:\n\n1. Upgrade `MessagePack` to the patched version for your release line.\n2. Upgrade companion MessagePack packages in the same dependency graph to the coordinated patched versions.\n\nThe fix should reject negative and excessive uncompressed lengths before allocation. It should also cap aggregate decompressed size for block arrays and expose or honor an appropriate maximum decompressed length policy.\n\n## Workarounds\n\nPatching is recommended.\n\nUntil a patched version is available, do not enable MessagePack-CSharp's built-in LZ4 compression modes for untrusted inputs. If compression is required, enforce strict compressed and decompressed size limits outside MessagePack-CSharp before deserialization.\n\n## Resources\n\n- `MESSAGEPACKCSHARP-OPEN-004`: LZ4 decompression allocation from unbounded uncompressed length\n- `MESSAGEPACKCSHARP-011`: duplicate decompression-bomb finding\n- CWE-409: Improper Handling of Highly Compressed Data\n- CWE-770: Allocation of Resources Without Limits or Throttling",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.5.301"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0"
+              },
+              {
+                "fixed": "3.1.7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-v72x-2h86-7f8m"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48510"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-409",
+        "CWE-770"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-25T18:53:44Z",
+      "nvd_published_at": "2026-06-22T22:16:47Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-v72x-2h86-7f8m"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-48946",
+      "assignerOrgId": "6ff30186-7fb7-4ad9-be33-533e7b05e586",
+      "state": "PUBLISHED",
+      "assignerShortName": "Joomla",
+      "dateReserved": "2026-05-26T16:47:13.550Z",
+      "datePublished": "2026-06-25T15:25:28.947Z",
+      "dateUpdated": "2026-06-25T18:52:47.376Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "K2 extension for Joomla",
+            "vendor": "getk2.com",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.0-2.26"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Matan Bahar"
+          },
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Niv Kochan"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "The K2 frontend article-attachment upload path accepts files whose extension is `.php`, and Apache's standard mod_php matches `\\.php$` and executes them under the K2 web user. A K2 Author can upload a `shell.php`, then fetch `/media/k2/attachments/shell.php` and execute arbitrary PHP code in the web server's context."
+              }
+            ],
+            "value": "The K2 frontend article-attachment upload path accepts files whose extension is `.php`, and Apache's standard mod_php matches `\\.php$` and executes them under the K2 web user. A K2 Author can upload a `shell.php`, then fetch `/media/k2/attachments/shell.php` and execute arbitrary PHP code in the web server's context."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-434",
+                "description": "CWE-434 Unrestricted Upload of File with Dangerous Type",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "6ff30186-7fb7-4ad9-be33-533e7b05e586",
+          "shortName": "Joomla",
+          "dateUpdated": "2026-06-25T17:02:33.540Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "product"
+            ],
+            "url": "https://www.getk2.org/"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Joomla Extension - getk2.com - Privileged RCE vulnerability in K2 extension for Joomla < 2.26",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-48946"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+                "integrityImpact": "LOW",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "LOW",
+                "privilegesRequired": "LOW",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-25T18:52:26.276335Z",
+                  "id": "CVE-2026-48946",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-25T18:52:47.376Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2f33-pr97-265q",
+    "modified": "2026-06-25T18:52:46Z",
+    "published": "2026-06-25T18:52:46Z",
+    "aliases": [
+      "CVE-2026-48509"
+    ],
+    "summary": "MessagePack-CSharp: ASP.NET Core MessagePackInputFormatter defaults to TrustedData for HTTP request bodies",
+    "details": "## Summary\n\nThe parameterless `MessagePackInputFormatter()` constructor uses default serializer options, which resolve to `MessagePackSerializerOptions.Standard` with `MessagePackSecurity.TrustedData`. The formatter is designed for ASP.NET Core MVC request bodies, which commonly cross an HTTP trust boundary.\n\nThis insecure default can expose applications to denial-of-service attacks that `MessagePackSecurity.UntrustedData` is intended to mitigate, such as hash-collision attacks against dictionary-like model properties.\n\n## Impact\n\nApplications are affected when they register `new MessagePackInputFormatter()` without explicitly passing serializer options configured for untrusted data.\n\nAn unauthenticated or otherwise untrusted HTTP client can send MessagePack request bodies that are deserialized using the trusted-data posture. For models containing hash-based collections, this can enable algorithmic complexity attacks using colliding keys. The default constructor makes the unsafe posture easy to use at the exact boundary where request bodies should be treated as untrusted.\n\n## Affected components\n\n- Package: `MessagePack.AspNetCoreMvcFormatter`\n- API: `MessagePackInputFormatter()` parameterless constructor\n- Scenario: ASP.NET Core MVC model binding from HTTP request bodies\n- Finding IDs: `MESSAGEPACKCSHARP-OPEN-009`, duplicate `MESSAGEPACKCSHARP-095`\n\n## Patches\n\nFixes are prepared and will be released in coordinated patch versions.\n\nUpgrade guidance:\n\n1. Upgrade `MessagePack.AspNetCoreMvcFormatter` to the patched version for your release line.\n2. Upgrade companion MessagePack packages in the same dependency graph to the coordinated patched versions.\n\nThe fix should default the parameterless constructor to `MessagePackSerializerOptions.Standard.WithSecurity(MessagePackSecurity.UntrustedData)`, or require callers to pass explicit options so the trust posture is deliberate.\n\n## Workarounds\n\nDo not use the parameterless constructor on affected versions. Register the formatter with explicit untrusted-data options, for example:\n\n```csharp\noptions.InputFormatters.Add(\n    new MessagePackInputFormatter(\n        MessagePackSerializerOptions.Standard.WithSecurity(MessagePackSecurity.UntrustedData)));\n```\n\nAlso apply normal HTTP request-size limits and model validation appropriate for your service.\n\n## Resources\n\n- `MESSAGEPACKCSHARP-OPEN-009`: MVC input formatter defaults to trusted-data security posture\n- `MESSAGEPACKCSHARP-095`: duplicate finding for the same root cause\n- CWE-1188: Initialization of a Resource with an Insecure Default",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.5.301"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "package": {
+          "ecosystem": "NuGet",
+          "name": "MessagePack"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "3.0"
+              },
+              {
+                "fixed": "3.1.7"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp/security/advisories/GHSA-2f33-pr97-265q"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48509"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/MessagePack-CSharp/MessagePack-CSharp"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-1188"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-06-25T18:52:46Z",
+      "nvd_published_at": "2026-06-22T22:16:47Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-2f33-pr97-265q"
+          }
+        ]
+      }
+    }
+  }
+]
