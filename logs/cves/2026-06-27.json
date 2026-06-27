@@ -1,0 +1,715 @@
+[Sat Jun 27 03:54:40 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-53577",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-06-09T19:11:53.484Z",
+      "datePublished": "2026-06-26T20:52:04.006Z",
+      "dateUpdated": "2026-06-27T03:15:44.579Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Kestra: Cross-Execution File Read via Preview Endpoint (IDOR)",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-863",
+                "lang": "en",
+                "description": "CWE-863: Incorrect Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/kestra-io/kestra/security/advisories/GHSA-r6v3-xxwj-9h42",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/kestra-io/kestra/security/advisories/GHSA-r6v3-xxwj-9h42"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "kestra-io",
+            "product": "kestra",
+            "versions": [
+              {
+                "version": "< 1.0.45",
+                "status": "affected"
+              },
+              {
+                "version": ">= 1.1.0, < 1.3.21",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-06-26T20:53:29.778Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Kestra is an open-source, event-driven orchestration platform. Prior to 1.0.45 and 1.3.21, the previewFileFromExecution endpoint (GET /api/v1/{tenant}/executions/{executionId}/file/preview) contains an access control bypass that allows any authenticated user to read output files from any other execution within the same tenant, bypassing execution-level and namespace-level isolation. This vulnerability is fixed in 1.0.45 and 1.3.21."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-r6v3-xxwj-9h42",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-53577"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/kestra-io/kestra/security/advisories/GHSA-r6v3-xxwj-9h42",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-27T03:15:19.214267Z",
+                  "id": "CVE-2026-53577",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-27T03:15:44.579Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "modified": "2026-06-27T03:14:47Z",
+    "published": "2026-06-27T02:32:25Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-6544",
+    "summary": "Malicious code in chai-as-persisted (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (5cf9c49450e0fa0d47be1b6ae27991f844868ff6c435d2082948b5feae862709)\nThe package's postinstall script (`npm run smoke:pino`) executes index.js, which spawns a detached `node lib/initializeCaller.js` child. That module hides the C2 URL in base64 strings stored under a fabricated local `process.env` object (keys `DEV_API_KEY`, `DEV_SECRET_KEY`, `DEV_SECRET_VALUE`) to defeat trivial string scanning. At install time it `atob()`-decodes the URL to `https://www.ipregionchecker.org/api/ip-check-encrypted/3aeb34a37`, POSTs to it via axios, and passes the response body to `new Function.constructor('require', response)`, invoking it with `require` — executing attacker-controlled JavaScript with full Node module access on the installer's machine. The detached `child.unref()` keeps execution alive after `npm install` returns. The package name `chai-as-persisted` is a one-edit impersonation of the widely-used `chai-as-promised`; the shipped code is unrelated to chai (it pretends to be a pino-style logger middleware in index.js) and the package description/keywords (logger/stream/json) further misrepresent its purpose. This is a deliberate install-time RCE dropper distributed via a typosquat against chai-as-promised.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "chai-as-persisted"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "4.2.8",
+          "6.1.9"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "lib/initializeCaller.js",
+                "sha256": "76ca537732f161ae4d3a78b876390ddbab16e001c392a74009b31fb91ce4f89b",
+                "tlsh": "4d119c4d71f82008042151e5b62f14126025e4673d8ad5e4bacc834b1fa667fbd53adf"
+              },
+              {
+                "path": "package.json",
+                "sha256": "f061b9cb90a2c542ba90a73748290ff65dc070f811f75772bbfd0cc4453e0cbb",
+                "tlsh": "d0019720debc4e2305ed25860c2a06037a615c175528fc2833e7922c0f9d5bb00ff22e"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "chai-as-persisted-4.2.8.tgz",
+                "hashes": {
+                  "sha1": "f81cd3b1b4fa7eb57ab85af8d81f00ae94b10c89",
+                  "sha512_sri": "sha512-OF+BlgV0u9rUuZYMvemtJ0jtoutqeNa8QgGbcduKIJEtdzrvqyHPkXKiBLwOBjOV6NQZL/j/0XmtVd9hDuBy+Q=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/chai-as-persisted/v/4.2.8"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/chai-as-persisted/v/6.1.9"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "inspector-research@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "id": "IN-MAL-2026-007675",
+          "import_time": "2026-06-27T03:13:09.022299524Z",
+          "modified_time": "2026-06-27T02:32:37Z",
+          "ranges": [
+            {
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ],
+              "type": "SEMVER"
+            }
+          ],
+          "sha256": "5cf9c49450e0fa0d47be1b6ae27991f844868ff6c435d2082948b5feae862709",
+          "source": "amazon-inspector",
+          "versions": [
+            "4.2.8"
+          ]
+        },
+        {
+          "id": "IN-MAL-2026-007674",
+          "import_time": "2026-06-27T03:13:08.872578262Z",
+          "modified_time": "2026-06-27T02:32:25Z",
+          "ranges": [
+            {
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ],
+              "type": "SEMVER"
+            }
+          ],
+          "sha256": "611d869aaf9d1a8b945c83cc9982fd76cd49a26563d444af3cee98ccb5b6fbda",
+          "source": "amazon-inspector",
+          "versions": [
+            "6.1.9"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-6544"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-50136",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-06-03T18:49:32.275Z",
+      "datePublished": "2026-06-26T20:36:54.016Z",
+      "dateUpdated": "2026-06-27T03:14:40.644Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Budibase: Unauthenticated S3 signed upload URL generation allows arbitrary writes with stored datasource credentials",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-306",
+                "lang": "en",
+                "description": "CWE-306: Missing Authentication for Critical Function",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/Budibase/budibase/security/advisories/GHSA-jj36-r9w3-3pfh",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-jj36-r9w3-3pfh"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Budibase",
+            "product": "budibase",
+            "versions": [
+              {
+                "version": "< 3.39.3",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-06-26T20:36:54.016Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Budibase is an open-source low-code platform. Prior to 3.39.3, the application server exposes an unauthenticated endpoint that generates S3 PutObject presigned URLs using credentials stored in a workspace datasource. The route is protected only by the recaptcha middleware and does not require authentication, table permission, datasource permission, or builder access. A public caller who knows a workspace ID and S3 datasource ID can request a signed upload URL for attacker-controlled bucket and key values. This vulnerability is fixed in 3.39.3."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-jj36-r9w3-3pfh",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-50136"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-jj36-r9w3-3pfh",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-27T03:14:08.239023Z",
+                  "id": "CVE-2026-50136",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-27T03:14:40.644Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-54352",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-06-12T19:23:22.317Z",
+      "datePublished": "2026-06-26T20:32:51.458Z",
+      "dateUpdated": "2026-06-27T03:12:11.845Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Budibase: Arbitrary file read by workspace-builder via PWA-zip symlink upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-59",
+                "lang": "en",
+                "description": "CWE-59: Improper Link Resolution Before File Access ('Link Following')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 9.6,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/Budibase/budibase/security/advisories/GHSA-w7mq-r738-x278",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-w7mq-r738-x278"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Budibase",
+            "product": "budibase",
+            "versions": [
+              {
+                "version": "< 3.39.9",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-06-26T20:32:51.458Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Budibase is an open-source low-code platform. Prior to 3.39.9, `POST /api/pwa/process-zip` at packages/server/src/api/routes/static.ts:24 accepts a builder-uploaded .zip, extracts it with extract-zip@2.0.1 into a temp directory, then for each entry listed in icons.json validates the icon path, opens it, and streams the bytes into MinIO. The resulting object is served back via GET /api/assets/{appId}/pwa/{uuid}.png. extract-zip@2.0.1 preserves absolute symlink targets when restoring symlink entries. The icon-source validator at packages/server/src/api/controllers/static/index.ts:259-268 resolves the icon source string against baseDir (path.resolve), checks resolvedSrc.startsWith(baseDir + path.sep) against that string, and calls fs.existsSync(resolvedSrc) which follows symbolic links to confirm the target exists. None of the three calls reject symbolic-link entries. packages/backend-core/src/objectStore/objectStore.ts:302 then calls (await fsp.open(path)).createReadStream() on the resolved path. fsp.open follows the symlink, the target file's bytes stream into MinIO, and the response of the asset-fetch endpoint returns those bytes verbatim. Result: a workspace-level builder reads any file the server process can open. This vulnerability is fixed in 3.39.9."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-w7mq-r738-x278",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-54352"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/Budibase/budibase/security/advisories/GHSA-w7mq-r738-x278",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-27T03:11:42.439522Z",
+                  "id": "CVE-2026-54352",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-27T03:12:11.845Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-55188",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-06-16T15:20:43.086Z",
+      "datePublished": "2026-06-26T20:03:52.699Z",
+      "dateUpdated": "2026-06-27T03:11:05.352Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "RustFS: ListRemoteTargetHandler authorization bypass leaks replication target credentials",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "lang": "en",
+                "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-522",
+                "lang": "en",
+                "description": "CWE-522: Insufficiently Protected Credentials",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-862",
+                "lang": "en",
+                "description": "CWE-862: Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-863",
+                "lang": "en",
+                "description": "CWE-863: Incorrect Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/rustfs/rustfs/security/advisories/GHSA-796f-j7xp-hwf4",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/rustfs/rustfs/security/advisories/GHSA-796f-j7xp-hwf4"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "rustfs",
+            "product": "rustfs",
+            "versions": [
+              {
+                "version": ">= 1.0.0-alpha.1, <= 1.0.0-beta.8",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-06-26T20:03:52.699Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RustFS is a distributed object storage system built in Rust. From 1.0.0-alpha.1 until 1.0.0-beta.9, RustFS contains an authorization bypass in the bucket replication admin API. The ListRemoteTargetHandler handler for listing remote replication targets only checks whether request credentials exist, but does not verify that the caller has replication or administrator permissions. As a result, an authenticated user with no effective bucket or admin permissions can list remote replication target configuration for a bucket. Because the returned BucketTarget objects include remote target credentials, this can disclose replication access keys and secret keys. This vulnerability is fixed in 1.0.0-beta.9."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-796f-j7xp-hwf4",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-55188"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/rustfs/rustfs/security/advisories/GHSA-796f-j7xp-hwf4",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-27T03:08:06.306843Z",
+                  "id": "CVE-2026-55188",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-06-27T03:11:05.352Z"
+          }
+        }
+      ]
+    }
+  }
+]
