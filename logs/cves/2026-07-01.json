@@ -13372,3 +13372,362 @@
     }
   }
 ]
+[Wed Jul  1 20:02:26 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-m492-gv72-xvxj",
+    "modified": "2026-07-01T19:49:25Z",
+    "published": "2026-07-01T19:49:24Z",
+    "aliases": [],
+    "summary": "Kimai Password Reset Link Remains Valid After Password Change",
+    "details": "### Summary\n\nThe LoginLink signature used for password reset URLs covers only the user's `id` — it does not include the password hash. After a user clicks a reset link and successfully changes their password, the same link remains valid for up to 2 additional uses within a 1-hour window. Anyone who intercepts or caches the original link can log in as the user even after the password has been changed.\n\n### Details\n\n`config/packages/security.yaml:73-78` configures the login link:\n\n```yaml\nlogin_link:\n    check_route: link_login_check\n    signature_properties: ['id']\n    lifetime: 900\n    max_uses: 3\n```\n\nThe HMAC signature covers only `id`, not `password`, `username`, or `email`. The effective lifetime for password reset links is extended to 3600 seconds by `PasswordResetController.php:106-119` via `getPasswordResetRetryLifetime()`.\n\nAfter the first successful use (where the user sets a new password), the `__pw_reset__` session flag is cleared by `WizardController.php:105`. Subsequent uses of the same link bypass the forced-password-reset wizard and grant a normal authenticated session.\n\nSymfony's `LoginLinkHandler::consumeLoginLink` decrements a per-link counter but allows up to 3 total uses. Re-issuing a new link does not invalidate the old one.\n\nThe same vulnerability affects `UserLoginLinkCommand.php:77`, which generates admin-on-demand login links with the same signature scheme.\n\n### PoC\n\n**Step 1 — Generate a password reset link:**\n\n```bash\ndocker exec <kimai_container> bin/console kimai:user:login-link <username>\n```\n\n**Step 2 — Use the link to log in and change the password.**\n\n**Step 3 — Open the same link in a different browser or incognito session.**\n\nThe link logs the attacker in as a fully authenticated user, despite the password having been changed in Step 2.\n\n**Step 4 — The link works a third time (3 total uses within 1 hour).**\n\n### Impact\n\nA password reset link that leaks through any of the following channels remains a valid authentication credential even after the legitimate user has changed their password: corporate mail-relay scanners that pre-click links (Microsoft Defender ATP, Mimecast, Barracuda), shared inboxes, browser history sync across devices, HTTP referrer headers, or proxy/WAF logs. The user believes they have secured their account by setting a new password, but the leaked link still grants full access for up to 2 additional uses within the hour.\n\n# Solution\n\nLogin links now also use the `password` hash for generating the signature, which will immediately expire the link after the user changed the password.\n\nRead <https://www.kimai.org/en/security/ghsa-m492-gv72-xvxj> for more information.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Packagist",
+          "name": "kimai/kimai"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2.58.0"
+              }
+            ]
+          }
+        ],
+        "database_specific": {
+          "last_known_affected_version_range": "<= 2.57.0"
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "WEB",
+        "url": "https://github.com/kimai/kimai/security/advisories/GHSA-m492-gv72-xvxj"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/kimai/kimai"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.kimai.org/en/security/ghsa-m492-gv72-xvxj"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-640"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-01T19:49:24Z",
+      "nvd_published_at": null
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-m492-gv72-xvxj"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-72p9-6vv6-gvqh",
+    "modified": "2026-07-01T19:47:20Z",
+    "published": "2026-05-27T15:33:28Z",
+    "aliases": [
+      "CVE-2026-9712"
+    ],
+    "summary": "pretix vulnerable to Authorization Bypass Through User-Controlled Key",
+    "details": "When creating an export through the pretix API, API clients are returned an UUID value for their export job (a long, random string like 35742818-c375-4d15-839f-d49aecce94d6). Using this UUID, the API client can then request the actual file for download. The same kind of UUID is used in other places in pretix when temporary files are generated for internal use or download.\n\nOne remaining API endpoint, however, wrongfully did not verify if the UUID used for download actually belongs to a file that is supposed to be downloadable and belongs to the correct user. In reality, this is hard to exploit because an attacker would need to have access to a valid UUID for the file they desire which is unlikely to happen without a separate security problem giving them access to logs etc.",
+    "severity": [
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:U"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "pretix"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "2026.4.2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9712"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/pretix/pretix"
+      },
+      {
+        "type": "WEB",
+        "url": "https://pretix.eu/about/en/blog/20260527-release-2026-4-2"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-639"
+      ],
+      "severity": "LOW",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-01T19:47:20Z",
+      "nvd_published_at": "2026-05-27T15:16:36Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-72p9-6vv6-gvqh"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-43ph-42gv-7965",
+    "modified": "2026-07-01T19:46:29Z",
+    "published": "2026-05-27T15:33:28Z",
+    "aliases": [
+      "CVE-2026-48927"
+    ],
+    "summary": "Jenkins buildgraph-view Plugin does not escape the build URL",
+    "details": "Jenkins buildgraph-view Plugin 1.8 and earlier does not escape the build URL.\n\nThis results in a stored cross-site scripting (XSS) vulnerability exploitable by attackers able to configure jobs or views.\n\nAs of publication of this advisory, there is no fix.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "org.jenkins-ci.plugins:buildgraph-view"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "last_affected": "1.8"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48927"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/jenkinsci/buildgraph-view-plugin"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.jenkins.io/security/advisory/2026-05-27/#SECURITY-3486"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-01T19:46:29Z",
+      "nvd_published_at": "2026-05-27T15:16:32Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-43ph-42gv-7965"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-hj3h-r49w-34wh",
+    "modified": "2026-07-01T19:46:00Z",
+    "published": "2026-05-27T15:33:28Z",
+    "aliases": [
+      "CVE-2026-9674"
+    ],
+    "summary": "Jenkins Multijob Plugin has a cross-site request forgery (CSRF) vulnerability",
+    "details": "Jenkins Multijob Plugin 662.vd2e0001f6b_b_d and earlier does not require POST requests for an HTTP endpoint, resulting in a cross-site request forgery (CSRF) vulnerability.\n\nThis vulnerability allows attackers to resume failed Multijob builds.\n\nMultijob Plugin 669.v9d96a_d9c71b_0 requires POST requests for the affected HTTP endpoint.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "org.jenkins-ci.plugins:jenkins-multijob-plugin"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "669.v9d96a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9674"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/jenkinsci/jenkins-multijob-plugin"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.jenkins.io/security/advisory/2026-05-27/#SECURITY-3781"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-352"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-01T19:46:00Z",
+      "nvd_published_at": "2026-05-27T15:16:36Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-hj3h-r49w-34wh"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-p8jh-4p5p-2rfp",
+    "modified": "2026-07-01T19:45:17Z",
+    "published": "2026-05-27T15:33:27Z",
+    "aliases": [
+      "CVE-2026-48926"
+    ],
+    "summary": "Jenkins Job Import Plugin does not perform a permission check in an HTTP endpoint",
+    "details": "Jenkins Job Import Plugin 143.v044a_2e819b_27 and earlier does not perform a permission check in an HTTP endpoint.\n\nThis allows attackers with Overall/Read permission to enumerate credentials IDs of credentials stored in Jenkins. Those can be used as part of an attack to capture the credentials using another vulnerability.\n\nAn enumeration of credentials IDs in Job Import Plugin 143.145.v48f9a_a_6ff384 requires Job Import/Import Jobs permission.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Maven",
+          "name": "org.jenkins-ci.plugins:job-import-plugin"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "143.145.v48f9a"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48926"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://github.com/jenkinsci/job-import-plugin"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.jenkins.io/security/advisory/2026-05-27/#SECURITY-3783"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-269"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": true,
+      "github_reviewed_at": "2026-07-01T19:45:17Z",
+      "nvd_published_at": "2026-05-27T15:16:32Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-p8jh-4p5p-2rfp"
+          }
+        ]
+      }
+    }
+  }
+]
