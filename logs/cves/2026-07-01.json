@@ -1,0 +1,273 @@
+[Wed Jul  1 09:58:01 UTC 2026] Latest CVEs:
+[
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-r49c-4q8x-x33v",
+    "modified": "2026-07-01T09:30:26Z",
+    "published": "2026-07-01T09:30:26Z",
+    "aliases": [
+      "CVE-2026-56016"
+    ],
+    "details": "CGI::Session::ID::md5 versions before 4.49 for Perl generate predictable session ids from low-entropy sources.\n\nThe generate_id method builds the session id from a MD5 digest of the process id, the epoch time, and the built-in rand() function. All three are predictable, low-entropy sources: the PID is drawn from a small range, the epoch time can be guessed or read from the HTTP Date header, and Perl's rand() is unsuitable for security purposes because it is predictable and reversible.\n\nAn attacker who predicts a session id can impersonate the corresponding session and bypass authentication.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56016"
+      },
+      {
+        "type": "WEB",
+        "url": "https://metacpan.org/release/MARKSTOS/CGI-Session-4.49/changes"
+      },
+      {
+        "type": "WEB",
+        "url": "https://metacpan.org/release/MARKSTOS/CGI-Session-4.49/source/lib/CGI/Session/ID/md5.pm"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-338"
+      ],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-01T08:16:21Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-r49c-4q8x-x33v"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-qrp7-xr7v-h39q",
+    "modified": "2026-07-01T09:30:26Z",
+    "published": "2026-07-01T09:30:26Z",
+    "aliases": [
+      "CVE-2026-12732"
+    ],
+    "details": "The LearnPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'class_wrapper_form' shortcode attribute in versions up to, and including, 4.4.0. This is due to insufficient input sanitization and output escaping in the FilterCourseTemplate::sections() method at line 98, where the attacker-controlled attribute is inserted into an HTML class attribute via sprintf('<form class=\"%s\">', $class_wrapper_form) without esc_attr() escaping. The FilterCourseShortcode::render() handler does not apply shortcode_atts() filtering, so raw user attributes flow directly through do_action('learn-press/filter-courses/layout', $data) into the template. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12732"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/learnpress/tags/4.4.0/inc/Shortcodes/Course/FilterCourseShortcode.php#L29"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/learnpress/tags/4.4.0/inc/TemplateHooks/Course/FilterCourseTemplate.php#L98"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3587186%40learnpress&new=3587186%40learnpress&sfp_email=&sfph_mail="
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/09c8db69-60fa-4087-9096-5d34ce44f616?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-01T08:16:21Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-qrp7-xr7v-h39q"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-9qpr-hf24-hm48",
+    "modified": "2026-07-01T09:30:26Z",
+    "published": "2026-07-01T09:30:26Z",
+    "aliases": [
+      "CVE-2026-13733"
+    ],
+    "details": "The Download Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'no_data_msg' Shortcode Attribute in all versions up to, and including, 3.3.60 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Although wp_kses_post is applied to post content on save, it only strips HTML tokens and does not neutralize C-style escape sequences embedded within shortcode attribute values, meaning contributors can craft a payload that survives the kses filter and is silently reconstructed into a raw script tag at render time.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13733"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.59/src/Package/Shortcodes.php#L37"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.59/src/Package/Shortcodes.php#L398"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.59/src/Package/views/all-packages-shortcode.php#L396"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.60/src/Package/Shortcodes.php#L37"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.60/src/Package/Shortcodes.php#L398"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/download-manager/tags/3.3.60/src/Package/views/all-packages-shortcode.php#L396"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3590868%40download-manager&new=3590868%40download-manager&sfp_email=&sfph_mail="
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ebf96aa9-2ee7-4411-8f43-3e8d023197bd?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-01T08:16:21Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-9qpr-hf24-hm48"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-5g5j-j2fm-vcpf",
+    "modified": "2026-07-01T09:30:26Z",
+    "published": "2026-07-01T09:30:26Z",
+    "aliases": [
+      "CVE-2026-50043"
+    ],
+    "details": "Improper neutralization of special elements used in an OS command ('OS Command Injection') issue exists in SkyBridge MB-A100/MB-A110. If this vulnerability is exploited, an arbitrary OS command may be executed by an attacker who can log in to the product with an administrative privilege.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-50043"
+      },
+      {
+        "type": "WEB",
+        "url": "https://jvn.jp/en/jp/JVN20721579"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.seiko-sol.co.jp/archives/94618"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-78"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-01T08:16:21Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-5g5j-j2fm-vcpf"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x525-xmpm-prq9",
+    "modified": "2026-07-01T09:30:25Z",
+    "published": "2026-07-01T09:30:25Z",
+    "aliases": [
+      "CVE-2026-11568"
+    ],
+    "details": "The Product Configurator for WooCommerce WordPress plugin before 1.7.3 does not perform any authorisation or post-status check before returning WooCommerce product data through a public AJAX action, allowing unauthenticated users to retrieve the data (title, price, weight, stock status, and configurator option pricing/SKUs) of private and draft, non-public products by supplying the product ID. WordPress post-visibility controls are bypassed.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11568"
+      },
+      {
+        "type": "WEB",
+        "url": "https://wpscan.com/vulnerability/e208fee5-dad5-4aeb-b9b5-fbd72a5633e4"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-01T07:16:22Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-x525-xmpm-prq9"
+          }
+        ]
+      }
+    }
+  }
+]
