@@ -21467,3 +21467,841 @@
     }
   }
 ]
+[Sun Jul  5 13:50:33 UTC 2026] Latest CVEs:
+[
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-59509",
+      "assignerOrgId": "5a6e4751-2f3f-4070-9419-94fb35b644e8",
+      "state": "PUBLISHED",
+      "assignerShortName": "CIRCL",
+      "dateReserved": "2026-07-05T12:01:53.145Z",
+      "datePublished": "2026-07-05T12:02:06.985Z",
+      "dateUpdated": "2026-07-05T12:44:41.568Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "cve-search",
+            "repo": "https://github.com/cve-search/cve-search/",
+            "vendor": "cve-search",
+            "versions": [
+              {
+                "lessThanOrEqual": "v6.0.0",
+                "status": "affected",
+                "version": "v4.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "George Chen"
+          },
+          {
+            "lang": "en",
+            "type": "remediation developer",
+            "value": "Esa Jokinen"
+          },
+          {
+            "lang": "en",
+            "type": "remediation reviewer",
+            "value": "P-T-I"
+          },
+          {
+            "lang": "en",
+            "type": "coordinator",
+            "value": "Alexandre Dulaunoy"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "An unauthenticated improper input validation vulnerability in the <code>POST /fetch_cve_data</code> endpoint in cve-search. A remote attacker can manipulate request parameters controlling the MongoDB collection, projected fields, and regular-expression filters to read arbitrary application MongoDB collections. This can expose administrative usernames and password hashes from the <code>mgmt_users</code> collection, enabling offline password cracking and potential administrative account compromise."
+              }
+            ],
+            "value": "An unauthenticated improper input validation vulnerability in the POST /fetch_cve_data endpoint in cve-search. A remote attacker can manipulate request parameters controlling the MongoDB collection, projected fields, and regular-expression filters to read arbitrary application MongoDB collections. This can expose administrative usernames and password hashes from the mgmt_users collection, enabling offline password cracking and potential administrative account compromise."
+          }
+        ],
+        "exploits": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "PoC included in the disclosure"
+              }
+            ],
+            "value": "PoC included in the disclosure"
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-676",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-676 NoSQL Injection"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.2,
+              "baseSeverity": "CRITICAL",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-20",
+                "description": "CWE-20 Improper Input Validation",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "5a6e4751-2f3f-4070-9419-94fb35b644e8",
+          "shortName": "CIRCL",
+          "dateUpdated": "2026-07-05T12:44:41.568Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/cve-search/cve-search/pull/1218"
+          },
+          {
+            "tags": [
+              "exploit",
+              "technical-description"
+            ],
+            "url": "https://github.com/cve-search/cve-search/issues/1217"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Unauthenticated arbitrary MongoDB collection read in cve-search",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-59509"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-14749",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-07-04T15:41:16.167Z",
+      "datePublished": "2026-07-05T12:45:07.950Z",
+      "dateUpdated": "2026-07-05T12:45:07.950Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-07-05T12:45:07.950Z"
+        },
+        "title": "mjperpinosa stumasy calculate.php eval code injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-94",
+                "lang": "en",
+                "description": "Code Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "mjperpinosa",
+            "product": "stumasy",
+            "versions": [
+              {
+                "version": "327d1b0f2915ba79d7ef8ebb74553e987609d9be",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:mjperpinosa:stumasy:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was identified in mjperpinosa stumasy up to 327d1b0f2915ba79d7ef8ebb74553e987609d9be. Impacted is the function eval of the file application/pages/imba_calculator/calculate.php. The manipulation of the argument mathematical_sentence leads to code injection. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-07-04T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-07-04T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-07-04T17:46:19.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "gscsd (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/376338",
+            "name": "VDB-376338 | mjperpinosa stumasy calculate.php eval code injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/376338/cti",
+            "name": "VDB-376338 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-14749",
+            "name": "CVE-2026-14749 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/849414",
+            "name": "Submit #849414 | mjperpinosa stumasy 327d1b0f2915ba79d7ef8ebb74553e987609d9be Code Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/mjperpinosa/stumasy/issues/5",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/mjperpinosa/stumasy/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-14749"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-14748",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-07-04T13:05:15.145Z",
+      "datePublished": "2026-07-05T12:15:08.047Z",
+      "dateUpdated": "2026-07-05T12:15:08.047Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-07-05T12:15:08.047Z"
+        },
+        "title": "AIAnytime Awesome-MCP-Server mcp-wiki/wiki-summary server.py server-side request forgery",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-918",
+                "lang": "en",
+                "description": "Server-Side Request Forgery"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "AIAnytime",
+            "product": "Awesome-MCP-Server",
+            "versions": [
+              {
+                "version": "a884bb51bcd99e08e14fd712c749d55d9d9a13ab",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:aianytime:awesome-mcp-server:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "mcp-wiki/wiki-summary"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw has been found in AIAnytime Awesome-MCP-Server up to a884bb51bcd99e08e14fd712c749d55d9d9a13ab. Affected by this issue is some unknown functionality of the file mcp-wiki/src/mcp_wiki/server.py of the component mcp-wiki/wiki-summary. This manipulation of the argument url causes server-side request forgery. The attack may be initiated remotely. The exploit has been published and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-07-04T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-07-04T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-07-04T15:10:19.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "skywings (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/376334",
+            "name": "VDB-376334 | AIAnytime Awesome-MCP-Server mcp-wiki/wiki-summary server.py server-side request forgery",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/376334/cti",
+            "name": "VDB-376334 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-14748",
+            "name": "CVE-2026-14748 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/849289",
+            "name": "Submit #849289 | AIAnytime Awesome-MCP-Server Latest Server-Side Request Forgery",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/849300",
+            "name": "Submit #849300 | AIAnytime Awesome-MCP-Server Latest Server-Side Request Forgery (Duplicate)",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/AIAnytime/Awesome-MCP-Server/issues/34",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/AIAnytime/Awesome-MCP-Server/issues/35",
+            "tags": [
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/AIAnytime/Awesome-MCP-Server/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-14748"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-14747",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-07-04T12:57:11.133Z",
+      "datePublished": "2026-07-05T12:00:08.185Z",
+      "dateUpdated": "2026-07-05T12:00:08.185Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-07-05T12:00:08.185Z"
+        },
+        "title": "code-projects Real State Services addprojectsale.php sql injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "SQL Injection"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-74",
+                "lang": "en",
+                "description": "Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "code-projects",
+            "product": "Real State Services",
+            "versions": [
+              {
+                "version": "1.0",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:code-projects:real_state_services:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was detected in code-projects Real State Services 1.0. Affected by this vulnerability is an unknown functionality of the file /addprojectsale.php. The manipulation of the argument amen results in sql injection. The attack can be launched remotely."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:X/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:X/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:ND/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-07-04T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-07-04T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-07-04T15:02:27.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "XuYue (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/376333",
+            "name": "VDB-376333 | code-projects Real State Services addprojectsale.php sql injection",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/376333/cti",
+            "name": "VDB-376333 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-14747",
+            "name": "CVE-2026-14747 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/849291",
+            "name": "Submit #849291 | code-projects Real State Services V1.0 SQL Injection",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/6Justdododo6/CVE/issues/26",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://code-projects.org/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "tags": [
+          "x_freeware"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-14747"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "cveMetadata": {
+      "state": "PUBLISHED",
+      "cveId": "CVE-2025-69624",
+      "assignerOrgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+      "assignerShortName": "mitre",
+      "dateUpdated": "2026-07-05T12:45:06.398Z",
+      "dateReserved": "2026-01-09T00:00:00.000Z",
+      "datePublished": "2026-04-13T00:00:00.000Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8254265b-2729-46b6-b9e3-3dfca2d5bfca",
+          "shortName": "mitre",
+          "dateUpdated": "2026-07-05T12:45:06.398Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nitro PDF Pro before 14.43 for Windows contains a NULL pointer dereference vulnerability in the JavaScript implementation of app.alert(). When app.alert() is called with more than one argument and the first argument evaluates to null (for example, app.alert(app.activeDocs, true) when app.activeDocs is null), the engine routes the call through a fallback path intended for non-string arguments. In this path, js_ValueToString() is invoked on the null value and returns an invalid string pointer, which is then passed to JS_GetStringChars() without validation. Dereferencing this pointer leads to an access violation and application crash when opening a crafted PDF. For example, 14.41.1.4 and 14.42.0.34 have been reported as vulnerable."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "n/a",
+            "product": "n/a",
+            "versions": [
+              {
+                "version": "n/a",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.gonitro.com/documentation/release-notes"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "text",
+                "lang": "en",
+                "description": "n/a"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-69624"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-476",
+                  "lang": "en",
+                  "description": "CWE-476 NULL Pointer Dereference"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "NONE"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-04-13T19:01:09.748340Z",
+                  "id": "CVE-2025-69624",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-04-13T19:01:40.478Z"
+          }
+        }
+      ]
+    },
+    "dataVersion": "5.2"
+  }
+]
