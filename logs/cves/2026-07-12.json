@@ -1,0 +1,559 @@
+[Sun Jul 12 13:37:31 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-61876",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-07-10T21:54:26.760Z",
+      "datePublished": "2026-07-12T12:07:55.788Z",
+      "dateUpdated": "2026-07-12T12:07:55.788Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-07-12T12:07:55.788Z"
+        },
+        "datePublic": "2026-06-27T00:00:00.000Z",
+        "title": "LuCI DHCPv6 Lease Hostname Stored Cross-Site Scripting",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LuCI versions fail to properly encode DHCPv6 lease hostnames before rendering in status tables, allowing adjacent network attackers to inject HTML markup. Attackers can send a DHCPv6 Client FQDN containing script tags that execute in the administrator's browser when viewing DHCP lease pages."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "openwrt",
+            "product": "luci",
+            "defaultStatus": "affected"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H",
+              "attackVector": "ADJACENT",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "subAvailabilityImpact": "HIGH",
+              "baseScore": 9.4,
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "attackVector": "ADJACENT_NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openwrt/luci/security/advisories/GHSA-686p-p8p9-x6fh",
+            "name": "GitHub Security Advisory (GHSA-686p-p8p9-x6fh)",
+            "tags": [
+              "vendor-advisory"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: LuCI DHCPv6 Lease Hostname Stored Cross-Site Scripting",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/luci-dhcpv6-lease-hostname-stored-cross-site-scripting"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "lujiefsi",
+            "type": "reporter"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-61876"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-61875",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-07-10T21:54:26.760Z",
+      "datePublished": "2026-07-12T12:06:36.956Z",
+      "dateUpdated": "2026-07-12T12:06:36.956Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-07-12T12:06:36.956Z"
+        },
+        "datePublic": "2026-06-27T00:00:00.000Z",
+        "title": "luci-app-upnp Stored XSS via UPnP Port Mapping Description",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "luci-app-upnp contains a stored cross-site scripting vulnerability that allows unauthenticated LAN clients to inject JavaScript via UPnP IGD AddPortMapping SOAP requests. Attackers can send malicious HTML in the NewPortMappingDescription field, which miniupnpd stores and luci-app-upnp renders without output encoding, executing the payload when administrators view the UPnP or Status pages."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "openwrt",
+            "product": "luci",
+            "defaultStatus": "affected"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "ADJACENT_NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openwrt/luci/security/advisories/GHSA-8v49-6387-7f89",
+            "name": "GitHub Security Advisory (GHSA-8v49-6387-7f89)",
+            "tags": [
+              "vendor-advisory"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: luci-app-upnp Stored XSS via UPnP Port Mapping Description",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/luci-app-upnp-stored-xss-via-upnp-port-mapping-description"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "lujiefsi",
+            "type": "reporter"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-61875"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-61874",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-07-10T21:54:26.760Z",
+      "datePublished": "2026-07-12T12:06:36.293Z",
+      "dateUpdated": "2026-07-12T12:06:36.293Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-07-12T12:06:36.293Z"
+        },
+        "datePublic": "2026-06-28T00:00:00.000Z",
+        "title": "filebrowser before 2.63.17 Stale Public Share via Trailing-Slash Delete",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "filebrowser versions before 2.63.17 fail to normalize paths before querying the share index in DeleteWithPathPrefix, allowing authenticated users to leave stale public shares behind. Attackers can delete a shared directory using a trailing-slash path, then recreate the same directory to expose new contents through the dormant public share URL."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Incorrect Authorization",
+                "cweId": "CWE-863",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "filebrowser",
+            "product": "filebrowser",
+            "defaultStatus": "unaffected",
+            "packageURL": "pkg:golang/github.com/filebrowser/filebrowser/v2",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "2.63.17"
+              },
+              {
+                "version": "2.63.17",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 2.3,
+              "baseSeverity": "LOW"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "HIGH",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "baseScore": 3.1,
+              "baseSeverity": "LOW"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/filebrowser/filebrowser/security/advisories/GHSA-pp88-jhwj-5qh5",
+            "name": "GitHub Security Advisory (GHSA-pp88-jhwj-5qh5)",
+            "tags": [
+              "vendor-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/filebrowser/filebrowser/commit/be23ab3a15bf957928ecfed88de5ab67850c1b9c",
+            "name": "https://github.com/filebrowser/filebrowser/commit/be23ab3a15bf957928ecfed88de5ab67850c1b9c",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: filebrowser before 2.63.17 Stale Public Share via Trailing-Slash Delete",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/filebrowser-before-stale-public-share-via-trailing-slash-delete"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "DavidCarliez",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "hacdias",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-61874"
+          }
+        ]
+      }
+    }
+  }
+]
