@@ -764,3 +764,688 @@
     }
   }
 ]
+[Mon Jul 13 09:36:12 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-07-13T09:12:54Z",
+    "published": "2026-06-16T19:27:27Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-5918",
+    "aliases": [
+      "GHSA-f4m6-gffx-m3mq"
+    ],
+    "summary": "Malicious code in nottuff7 (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (15a5e98054661d6eea29d8120457ffc7e00d7b516223a5fa6ec91355e9434652)\nThe tarball ships `auto-publish.sh`, a script that republishes the same payload under ~100 distinct npm names (`ishowfeet1`-`ishowfeet20`, `nottuff1`-`nottuff30`, `abuden*`, `imillegal*`, `ratelimitsucks*`, etc/) by rewriting `package.json.name` and running `npm publish --silent` in a loop — namespace-spam infrastructure shipped inside the package itself. The package's declared `main` is `sw.js`, a browser Service Worker (`importScripts('./8cfc2/hgshm.js')`, `self.addEventListener('install'|'activate'|'fetch'|'message')`) that throws immediately if loaded from Node. The shipped assets are a heavily obfuscated Ultraviolet/bare-mux web-proxy frontend with an `index.html` themed as \"Riverbend Tutoring\" that hides a popunder redirect to `https://abdct.com/` on click/keydown/touchstart. `package.json` declares no `preinstall`/`install`/`postinstall`/`prepare` hooks, and `require('ishowfeet9')` from Node fails before any code runs, so a Node installer experiences no auto-execution. The harm is registry abuse (mass-publication of a misleading name family) and a browser-side proxy/popunder served to whoever later loads these static assets — not installer-side compromise. Routing to human review for namespace-abuse adjudication.\n\n## Source: ghsa-malware (4c560f85796bad830999cf36c1683ca160a67fa4540f3e670742f6e448559560)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "nottuff7"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.7.7",
+          "1.1.7",
+          "2.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "auto-publish.sh",
+                "sha256": "eac36a0d7e3ef6116faba93afc7185a3bd0e8a3e867869c0b17cc56754ab8c5c",
+                "tlsh": "2661521c0d19ff360b8be4fba9d2e8e13105ae66d6542913b4bf4c44ab6bb71f059090"
+              },
+              {
+                "path": "sw.js",
+                "sha256": "bb00271669f18ad7ee9e0b7d2db0a8285e4a0cd1431676839878d4eb93619d12",
+                "tlsh": "98f1629878f611f1425741acc75b6624303be097398bc896bfbc8f102f8639989e37d9"
+              },
+              {
+                "path": "index.html",
+                "sha256": "f184e7a00feeeb351e64f9d6ced030eb58efa8493c49b081dee9b3c0fc46b23c",
+                "tlsh": "2d226507fee295325673112dbb2a7180ff31810b62158d44b9ed539c2f06a6ac7f36ad"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "nottuff7-1.7.7.tgz",
+                "hashes": {
+                  "sha1": "37bc3e2d8732957a23f029c58cde1d0a9971b669",
+                  "sha512_sri": "sha512-pDwerf98zC9jkboorZ8aXXdAKwGrKxYp3AM2vdP1J1GrRNVZumjz9YVCbA5wFAx7e7Wa/8tRWioy9iHycXHkWw=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff7/v/1.7.7"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-f4m6-gffx-m3mq"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff7/v/1.1.7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff7/v/2.0.0"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "inspector-research@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "amazon-inspector",
+          "sha256": "014548171545d3357baafaf1ec9c1755860bacdcf94b42161d8e32b0c94ab3c8",
+          "import_time": "2026-06-16T19:46:15.392786095Z",
+          "id": "IN-MAL-2026-006821",
+          "modified_time": "2026-06-16T19:27:27Z",
+          "versions": [
+            "1.7.7"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "4c560f85796bad830999cf36c1683ca160a67fa4540f3e670742f6e448559560",
+          "import_time": "2026-07-13T07:24:22.577205751Z",
+          "id": "GHSA-f4m6-gffx-m3mq",
+          "modified_time": "2026-07-13T06:27:43Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "15a5e98054661d6eea29d8120457ffc7e00d7b516223a5fa6ec91355e9434652",
+          "import_time": "2026-07-13T09:11:11.368262974Z",
+          "id": "IN-MAL-2026-010071",
+          "modified_time": "2026-07-13T09:02:25Z",
+          "versions": [
+            "1.1.7"
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "6f93db8cbcb68b034b5e4acd8b8ca623e1b7c4cb89e994474ac830c9f46d75ee",
+          "import_time": "2026-07-13T09:11:11.223831872Z",
+          "id": "IN-MAL-2026-010069",
+          "modified_time": "2026-07-13T09:02:05Z",
+          "versions": [
+            "2.0.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-5918"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-07-13T09:12:54Z",
+    "published": "2026-06-16T19:27:24Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-5917",
+    "aliases": [
+      "GHSA-r54f-vpj7-r35g"
+    ],
+    "summary": "Malicious code in nottuff4 (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (c4f105cfb08cd05b609d2fb92793d7f8cb61d42add7d39e2491e6ba791f550e1)\nPackage ships a Scramjet-based web proxy (sw.js service worker + bare-mux + WASM rewriter under assets/) plus a static 'Riverbend Tutoring' index.html cover page. index.html lines 60-69 install click/keydown/touchstart listeners that call window.open(\"https://abdct.com/\", \"_blank\", \"noreferrer\") on first user interaction. The package is one of ~85 throwaway sibling names auto-published via the bundled auto-publish.sh (imillegal*, ishowfeet*, nottuff*, abuden*, ratelimitsucks*); package.json carries placeholder metadata (name 'package', empty author, no homepage/repo). The asset JavaScript is heavily obfuscated (hex-mangled identifiers throughout assets/*.js), consistent with the upstream Scramjet bundles. main is set to sw.js, which begins with importScripts('./8cfc2/hgshm.js') and uses service-worker globals (self.addEventListener for install/activate/fetch/message); require('nottuff4') from Node throws on the first line, so there is no install-time or import-time code path that executes against a developer who runs `npm install nottuff4`. The harm — namespace pollution, ToS-evading proxying, and the monetized popup redirect — only materializes when someone unpacks the tarball and serves it as a website to browser visitors. Routing for human review as registry-policy abuse rather than as a supply-chain attack on installers.\n\n## Source: ghsa-malware (fa6ac915c6a6c43f039731b0770359f0fdf3eb05ff83e498ae4e27664a98970b)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "nottuff4"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.7.7",
+          "1.1.7",
+          "2.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "sw.js",
+                "sha256": "bb00271669f18ad7ee9e0b7d2db0a8285e4a0cd1431676839878d4eb93619d12",
+                "tlsh": "98f1629878f611f1425741acc75b6624303be097398bc896bfbc8f102f8639989e37d9"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "nottuff4-1.7.7.tgz",
+                "hashes": {
+                  "sha1": "0b5f54aa31601d3ad8ce7cad2fb73028e3bc717c",
+                  "sha512_sri": "sha512-nrrKCYLkCHKBnBpIq8VRf8xsWrtWcvJw/Cs7kWPK6FHnamAxVorc5ggFtqJY2AgGFy7+7XWBlsm2A8SAXU64Lg=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff4/v/1.7.7"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-r54f-vpj7-r35g"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff4/v/1.1.7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff4/v/2.0.0"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "inspector-research@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "amazon-inspector",
+          "sha256": "c4f105cfb08cd05b609d2fb92793d7f8cb61d42add7d39e2491e6ba791f550e1",
+          "import_time": "2026-06-16T19:46:15.143193953Z",
+          "id": "IN-MAL-2026-006818",
+          "modified_time": "2026-06-16T19:27:24Z",
+          "versions": [
+            "1.7.7"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "fa6ac915c6a6c43f039731b0770359f0fdf3eb05ff83e498ae4e27664a98970b",
+          "import_time": "2026-07-13T07:24:22.629263471Z",
+          "id": "GHSA-r54f-vpj7-r35g",
+          "modified_time": "2026-07-13T06:27:41Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "7eef17d10b3ef9158b0eec57d7867044278e33d1113a681cf9890ced59fc9fdc",
+          "import_time": "2026-07-13T09:11:11.915638792Z",
+          "id": "IN-MAL-2026-010078",
+          "modified_time": "2026-07-13T09:03:28Z",
+          "versions": [
+            "1.1.7"
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "e7a04e993982eb3da51cc4630f6be5aeed17896af2056ca88f66347f241c0978",
+          "import_time": "2026-07-13T09:11:11.847196654Z",
+          "id": "IN-MAL-2026-010077",
+          "modified_time": "2026-07-13T09:03:21Z",
+          "versions": [
+            "2.0.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-5917"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "modified": "2026-07-13T09:12:54Z",
+    "published": "2026-06-16T19:27:25Z",
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-5916",
+    "aliases": [
+      "GHSA-2gj2-9868-32pf"
+    ],
+    "summary": "Malicious code in nottuff25 (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (238a4f56f3433bf34de372e9a26264a33e33c6bde8592ddc73594d33ab7427f0)\nThe tarball is not a Node library. `package.json` declares `main: sw.js` with description `\"package\"` and an empty author; `sw.js` is a browser ServiceWorker (`importScripts('./8cfc2/hgshm.js')`, `self.skipWaiting()`, `self.clients`, fetch interception) that has no meaning when consumed via `require('nottuff25')` in Node. The shipped static site bundles the Mercury Workshop Scramjet web proxy plus bare-mux, branded as \"Riverbend Tutoring\" while pointing `og:url` at `21baseballacademy.com` — a misrepresentation of what the npm name advertises. The tarball also ships `auto-publish.sh`, a bash script with a hardcoded list of 95+ sibling package names (nottuff1-30, ishowfeet1-20, imillegal1-5, abuden*, ratelimitsucks*) that rewrites `package.json` and runs `npm publish --silent` in a loop — the attacker's own mass-publication pipeline shipped inside the artifact, with the current package name `nottuff25` appearing as a literal entry in that list. `index.html` additionally registers click/keydown/touchstart listeners that open `https://abdct.com/` as a popunder on first interaction (browser-side adware, not installer-side). No install/require-time exfil, RCE, or credential theft is present, but this is a coordinated namespace-pollution campaign and the package misrepresents itself to npm consumers.\n\n## Source: ghsa-malware (6c7010a4f5b3f1f79e55f7e70ae98a97a6143d00550102f17f8f516ec6861cdb)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "nottuff25"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.7.7",
+          "1.1.7",
+          "2.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "auto-publish.sh",
+                "sha256": "eac36a0d7e3ef6116faba93afc7185a3bd0e8a3e867869c0b17cc56754ab8c5c",
+                "tlsh": "2661521c0d19ff360b8be4fba9d2e8e13105ae66d6542913b4bf4c44ab6bb71f059090"
+              },
+              {
+                "path": "package.json",
+                "sha256": "8bc6b5f28f78770058df141fa2c8e5c73211989cc00089b99ba6abf6571be356",
+                "tlsh": "45d0a7681d40a52315c585171c2894567220df1f1444780953df282c419eab35cf635d"
+              },
+              {
+                "path": "index.html",
+                "sha256": "f184e7a00feeeb351e64f9d6ced030eb58efa8493c49b081dee9b3c0fc46b23c",
+                "tlsh": "2d226507fee295325673112dbb2a7180ff31810b62158d44b9ed539c2f06a6ac7f36ad"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "nottuff25-1.7.7.tgz",
+                "hashes": {
+                  "sha1": "7601145a5e09796c48ae385999a9d9e18d4d71f9",
+                  "sha512_sri": "sha512-il4K6NNsw4Q4OB8z7yWty0EcNz6pomcPn9FRnoG8Cufa4fmEy57U5BWkhq42+cal0s1IM5ByLeVsF8MBTmN7EA=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff25/v/1.7.7"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-2gj2-9868-32pf"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff25/v/1.1.7"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/nottuff25/v/2.0.0"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "type": "FINDER",
+        "contact": [
+          "inspector-research@amazon.com"
+        ]
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "source": "amazon-inspector",
+          "sha256": "238a4f56f3433bf34de372e9a26264a33e33c6bde8592ddc73594d33ab7427f0",
+          "import_time": "2026-06-16T19:46:15.266329323Z",
+          "id": "IN-MAL-2026-006819",
+          "modified_time": "2026-06-16T19:27:25Z",
+          "versions": [
+            "1.7.7"
+          ]
+        },
+        {
+          "source": "ghsa-malware",
+          "sha256": "6c7010a4f5b3f1f79e55f7e70ae98a97a6143d00550102f17f8f516ec6861cdb",
+          "import_time": "2026-07-13T07:24:22.487712307Z",
+          "id": "GHSA-2gj2-9868-32pf",
+          "modified_time": "2026-07-13T06:27:42Z",
+          "ranges": [
+            {
+              "type": "SEMVER",
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "6972816016e002a5ff32fe3f1e02cfd7e0741be899e2fb4c33616d1e1151968e",
+          "import_time": "2026-07-13T09:11:13.091844345Z",
+          "id": "IN-MAL-2026-010095",
+          "modified_time": "2026-07-13T09:06:01Z",
+          "versions": [
+            "1.1.7"
+          ]
+        },
+        {
+          "source": "amazon-inspector",
+          "sha256": "63686af50e9441b7812d377004b879e3a267245b32fb26890df495efaa27d3cc",
+          "import_time": "2026-07-13T09:11:13.146421934Z",
+          "id": "IN-MAL-2026-010096",
+          "modified_time": "2026-07-13T09:06:08Z",
+          "versions": [
+            "2.0.0"
+          ]
+        }
+      ]
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "mal-2026-5916"
+          }
+        ]
+      }
+    }
+  }
+]
