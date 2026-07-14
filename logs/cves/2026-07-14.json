@@ -1,0 +1,651 @@
+[Tue Jul 14 13:54:58 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-58409",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-06-30T18:19:58.380Z",
+      "datePublished": "2026-07-13T20:05:56.086Z",
+      "dateUpdated": "2026-07-14T13:06:18.072Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "ChurchCRM: Authenticated Remote Code Execution (RCE) via Malicious Plugin Upload",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-434",
+                "lang": "en",
+                "description": "CWE-434: Unrestricted Upload of File with Dangerous Type",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-37mf-vq43-5qp9",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-37mf-vq43-5qp9"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "ChurchCRM",
+            "product": "CRM",
+            "versions": [
+              {
+                "version": "< 7.4.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-07-13T20:05:56.086Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. Prior to version 7.4.0, an authenticated administrator can achieve Remote Code Execution (RCE) on the server by installing a malicious plugin ZIP archive containing a PHP webshell. The application explicitly includes 'php' in its ALLOWED_EXTENSIONS list, while the dangerous extensions denylist (DENIED_EXTENSIONS) fails to block standard .php files. Because `php` is explicitly included in the allowed extension list for plugin archives, and extracted files are placed directly under the web root, any PHP file inside the ZIP becomes immediately executable via HTTP — without even needing to \"enable\" the plugin through the application UI. The /plugins/install-url API route (management.php) allows an administrator to source the malicious ZIP from any attacker-controlled HTTPS URL, validating it only against an attacker-supplied SHA-256 hash. This issue has been fixed in version 7.4.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-37mf-vq43-5qp9",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-58409"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-37mf-vq43-5qp9",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-07-14T13:06:09.208919Z",
+                  "id": "CVE-2026-58409",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-07-14T13:06:18.072Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-62240",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-07-13T16:41:09.007Z",
+      "datePublished": "2026-07-13T21:04:03.774Z",
+      "dateUpdated": "2026-07-14T13:06:13.692Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-07-14T12:08:53.992Z"
+        },
+        "title": "CrewAI < 1.15.1 SSRF Filter Bypass via HTTP Redirect in Scrape Tools",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CrewAI before 1.15.1 contains a server-side request forgery vulnerability in the validate_url function that performs one-shot DNS resolution and blocklist checks before returning the original URL unchanged. Attackers can bypass the security filter by supplying URLs that redirect to internal addresses or use DNS rebinding techniques to access internal services and cloud metadata endpoints."
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ],
+        "datePublic": "2026-06-25T00:00:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-918",
+                "description": "Server-Side Request Forgery (SSRF)",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "crewAIInc",
+            "product": "crewAI",
+            "defaultStatus": "unaffected",
+            "packageURL": "pkg:pypi/crewai-workspace",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "1.15.1"
+              }
+            ],
+            "repo": "https://github.com/crewAIInc/crewAI"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:crewai:crewai:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "1.15.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "version": "3.1",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/crewAIInc/crewAI/releases/tag/1.15.1",
+            "name": "crewAI 1.15.1 Release Notes",
+            "tags": [
+              "release-notes",
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/crewAIInc/crewAI/issues/6520",
+            "name": "Researcher Disclosure",
+            "tags": [
+              "technical-description",
+              "exploit",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/crewAIInc/crewAI/pull/6331",
+            "name": "Pull Request",
+            "tags": [
+              "issue-tracking",
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/crewAIInc/crewAI/commit/5d4851eac797cafc45b726f65747fe2c9520fc42",
+            "name": "Patch Commit",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/crewai-ssrf-filter-bypass-via-http-redirect-in-scrape-tools",
+            "tags": [
+              "third-party-advisory"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "George Chen",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-62240"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-07-14T13:06:00.658738Z",
+                  "id": "CVE-2026-62240",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-07-14T13:06:13.692Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-15685",
+      "assignerOrgId": "99f1926a-a320-47d8-bbb5-42feb611262e",
+      "state": "PUBLISHED",
+      "assignerShortName": "zdi",
+      "dateReserved": "2026-07-13T21:29:52.777Z",
+      "datePublished": "2026-07-13T21:30:09.180Z",
+      "dateUpdated": "2026-07-14T13:05:28.063Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "99f1926a-a320-47d8-bbb5-42feb611262e",
+          "shortName": "zdi",
+          "dateUpdated": "2026-07-13T21:30:09.180Z"
+        },
+        "title": "Ollama downloadBlob Improper Validation of Array Index Denial-of-Service Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Ollama downloadBlob Improper Validation of Array Index Denial-of-Service Vulnerability. This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of Ollama. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the downloadBlob function. The issue results from the lack of proper validation of user-supplied data, which can result in a memory access past the end of an allocated array. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-27277."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Ollama",
+            "product": "Ollama",
+            "versions": [
+              {
+                "version": "0.7.1",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unknown"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-129",
+                "description": "CWE-129: Improper Validation of Array Index",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-403/",
+            "name": "ZDI-26-403",
+            "tags": [
+              "x_research-advisory"
+            ]
+          }
+        ],
+        "dateAssigned": "2026-07-13T21:29:52.804Z",
+        "datePublic": "2026-07-13T21:30:04.220Z",
+        "source": {
+          "lang": "en",
+          "value": "Nicholas Zubrisky (@NZubrisky) of Trend Research"
+        },
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV3_0": {
+              "version": "3.0",
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-15685"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-07-14T13:05:12.603465Z",
+                  "id": "CVE-2026-15685",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-07-14T13:05:28.063Z"
+          }
+        }
+      ]
+    }
+  }
+]
