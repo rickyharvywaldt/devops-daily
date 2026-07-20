@@ -2473,3 +2473,2478 @@
     }
   }
 ]
+[Mon Jul 20 03:35:23 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update is now available for the Red Hat build of Cryostat 4 on RHEL 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "An update is now available for the Red Hat build of Cryostat 4 on RHEL 9.\n\nSecurity Fix(es):\n\n* golang.org/x/oauth2/jws: Unexpected memory consumption during token parsing in golang.org/x/oauth2/jws (CVE-2025-22868)\n* golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing (CVE-2025-30204)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:3503",
+          "url": "https://access.redhat.com/errata/RHSA-2025:3503"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2348366",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2348366"
+        },
+        {
+          "category": "external",
+          "summary": "2354195",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2354195"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_3503.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat build of Cryostat security update",
+      "tracking": {
+        "current_release_date": "2026-07-20T02:33:37+00:00",
+        "generator": {
+          "date": "2026-07-20T02:33:37+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.7"
+          }
+        },
+        "id": "RHSA-2025:3503",
+        "initial_release_date": "2025-04-02T04:03:14+00:00",
+        "revision_history": [
+          {
+            "date": "2025-04-02T04:03:14+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-04-02T04:03:14+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-20T02:33:37+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Cryostat 4 on RHEL 9",
+                  "product": {
+                    "name": "Cryostat 4 on RHEL 9",
+                    "product_id": "9Base-Cryostat-4",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:cryostat:4::el9"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Cryostat"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+                    "product_id": "cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-agent-init-rhel9&tag=0.5.0-9"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+                    "product_id": "cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-db-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+                    "product_id": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-grafana-dashboard-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+                    "product_id": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-openshift-console-plugin-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+                    "product_id": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-ose-oauth-proxy-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+                    "product_id": "cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-reports-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+                    "product_id": "cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+                    "product_id": "cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-operator-bundle&tag=4.0.0-9"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+                    "product_id": "cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-rhel9-operator&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+                  "product": {
+                    "name": "cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+                    "product_id": "cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595?arch=amd64&repository_url=registry.redhat.io/cryostat/cryostat-storage-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64",
+                  "product": {
+                    "name": "cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64",
+                    "product_id": "cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df?arch=amd64&repository_url=registry.redhat.io/cryostat/jfr-datasource-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "amd64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+                    "product_id": "cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-agent-init-rhel9&tag=0.5.0-9"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+                    "product_id": "cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-db-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+                    "product_id": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-grafana-dashboard-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+                    "product_id": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-openshift-console-plugin-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+                    "product_id": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-ose-oauth-proxy-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+                    "product_id": "cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-reports-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+                    "product_id": "cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+                    "product_id": "cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-operator-bundle&tag=4.0.0-9"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+                    "product_id": "cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-rhel9-operator&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+                  "product": {
+                    "name": "cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+                    "product_id": "cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874?arch=arm64&repository_url=registry.redhat.io/cryostat/cryostat-storage-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+                  "product": {
+                    "name": "cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+                    "product_id": "cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26?arch=arm64&repository_url=registry.redhat.io/cryostat/jfr-datasource-rhel9&tag=4.0.0-10"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "arm64"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64"
+          },
+          "product_reference": "cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64"
+          },
+          "product_reference": "cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64"
+          },
+          "product_reference": "cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64"
+          },
+          "product_reference": "cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64"
+          },
+          "product_reference": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64"
+          },
+          "product_reference": "cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64"
+          },
+          "product_reference": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64"
+          },
+          "product_reference": "cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64"
+          },
+          "product_reference": "cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64"
+          },
+          "product_reference": "cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64"
+          },
+          "product_reference": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64"
+          },
+          "product_reference": "cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64"
+          },
+          "product_reference": "cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64"
+          },
+          "product_reference": "cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64"
+          },
+          "product_reference": "cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64"
+          },
+          "product_reference": "cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64"
+          },
+          "product_reference": "cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64"
+          },
+          "product_reference": "cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64"
+          },
+          "product_reference": "cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64"
+          },
+          "product_reference": "cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64"
+          },
+          "product_reference": "cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64 as a component of Cryostat 4 on RHEL 9",
+            "product_id": "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+          },
+          "product_reference": "cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64",
+          "relates_to_product_reference": "9Base-Cryostat-4"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "acknowledgments": [
+          {
+            "names": [
+              "jub0bs"
+            ]
+          }
+        ],
+        "cve": "CVE-2025-22868",
+        "cwe": {
+          "id": "CWE-1286",
+          "name": "Improper Validation of Syntactic Correctness of Input"
+        },
+        "discovery_date": "2025-02-26T04:00:44.350024+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2348366"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the `golang.org/x/oauth2/jws` package in the token parsing component. This vulnerability is made possible because of the use of `strings.Split(token, \".\")` to split JWT tokens, which can lead to excessive memory consumption when processing maliciously crafted tokens with a large number of `.` characters. An attacker could exploit this functionality by sending numerous malformed tokens and can trigger memory exhaustion and a Denial of Service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang.org/x/oauth2/jws: Unexpected memory consumption during token parsing in golang.org/x/oauth2/jws",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+            "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+            "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-22868"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2348366",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2348366"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-22868",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-22868"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-22868",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-22868"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/652155",
+            "url": "https://go.dev/cl/652155"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/71490",
+            "url": "https://go.dev/issue/71490"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-3488",
+            "url": "https://pkg.go.dev/vuln/GO-2025-3488"
+          }
+        ],
+        "release_date": "2025-02-26T03:07:49.012000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-04-02T04:03:14+00:00",
+            "details": "Before applying this update, make sure all previously released errata relevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:3503"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this vulnerability, it is recommended to pre-validate any payloads passed to `go-jose` to check that they do not contain an excessive amount of `.` characters.",
+            "product_ids": [
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang.org/x/oauth2/jws: Unexpected memory consumption during token parsing in golang.org/x/oauth2/jws"
+      },
+      {
+        "cve": "CVE-2025-30204",
+        "cwe": {
+          "id": "CWE-405",
+          "name": "Asymmetric Resource Consumption (Amplification)"
+        },
+        "discovery_date": "2025-03-21T22:00:43.818367+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2354195"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the golang-jwt implementation of JSON Web Tokens (JWT). In affected versions, a malicious request with specially crafted Authorization header data may trigger an excessive consumption of resources on the host system. This issue can cause significant performance degradation or an application crash, leading to a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+            "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+            "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+            "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+            "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2354195",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2354195"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-30204",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3",
+            "url": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp",
+            "url": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-3553",
+            "url": "https://pkg.go.dev/vuln/GO-2025-3553"
+          }
+        ],
+        "release_date": "2025-03-21T21:42:01.382000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-04-02T04:03:14+00:00",
+            "details": "Before applying this update, make sure all previously released errata relevant to your system have been applied.\n\nFor details on how to apply this update, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:3503"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat Product Security does not have a recommended mitigation at this time.",
+            "product_ids": [
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:12a06a8e0d5d382c26d38c483c4f78e1a51d6ad3d79dff1639bec6a622a09d52_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-agent-init-rhel9@sha256:428c822edc825eb2edc7ca3c2228f445aacbe5f997bc7bd681e2af3c5a386c88_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:157664280b02da4cdde98df786cc27abb3aded584e5a03cbd4bd3784203c4706_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-db-rhel9@sha256:173716b149b7457f165166ce40f894be7d3fecb11460202cbce52040e5409c35_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:54ffe77a5bf806e7be3ee1a8d72e68057d77a249065dc2462a2bbf559827ea92_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-grafana-dashboard-rhel9@sha256:8e3df4dd75a6aafc343aef028698d53e698993d19402d0d355f80d5018bff762_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:c255654c653c29e80cf9c10c7e473cb151f39d94290f944475f19a12ef1c39ec_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-openshift-console-plugin-rhel9@sha256:eb034cbcb54c54ef37dfad635f17182bcd3dc74b79690b116fdc24e4249e8ecb_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:7a4da133dceabc42a411e70d35af99988c2bf1e76f7f44291105f16b561f344e_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-operator-bundle@sha256:8306aa3360d707d0cc3e070e1f924145331a350991a4b130d48d7f9089313ed9_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:1cbdcaff07fcfe25c14191d2d585e2379369dff38ea22d85c85cb7e0219941af_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-ose-oauth-proxy-rhel9@sha256:3552d84395e741d3c3d808734efc4d1a1d539785a4a8f38697cb0060a471833d_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:ccfe79e9225349ba158b6286d9e61f78ea80cb07433c4b691c976ce40debd002_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-reports-rhel9@sha256:fa94f80fd26e0664bfa343018888c90c86290290b519c0e0b2c7dccc869c3a33_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a1e0e21641dac4d48017d0e766a2fa42b502dffeb6df3548eb464e785ec48b6a_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9-operator@sha256:a4c71fd908b5933b74aab3ee1747223d3ec8313a73b14dfe589411dfca41453c_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:2bb5b9eaeeff2f2d8c37390c84ede1133d50e11610b65586f68776897e13357d_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-rhel9@sha256:e9fe9919dd3f96580ab42b92f317cbc6f32229c38b77d566319feeb79dcd5f13_amd64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:16552269a995975755cb616f21896388f7565125323ffb59d4b3f1faf0e45874_arm64",
+              "9Base-Cryostat-4:cryostat/cryostat-storage-rhel9@sha256:6918d6472c06b73ce99c6f2892501c9119e0d0edceefd2202d884bda8bb82595_amd64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:1fe4428a9048c8257b28a748fe72f20fba5adc02f5fa6c017f7472dff83b2f26_arm64",
+              "9Base-Cryostat-4:cryostat/jfr-datasource-rhel9@sha256:437080e91c3dbcb4f6c91bc03613dc33b65ed42b20923464c4ddc634d95be8df_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2025:3503"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for opentelemetry-collector is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Collector with the supported components for a Red Hat build of OpenTelemetry\n\nSecurity Fix(es):\n\n* golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing (CVE-2025-30204)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:3411",
+          "url": "https://access.redhat.com/errata/RHSA-2025:3411"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2354195",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2354195"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_3411.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: opentelemetry-collector security update",
+      "tracking": {
+        "current_release_date": "2026-07-20T02:33:29+00:00",
+        "generator": {
+          "date": "2026-07-20T02:33:29+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.7"
+          }
+        },
+        "id": "RHSA-2025:3411",
+        "initial_release_date": "2025-03-31T14:36:15+00:00",
+        "revision_history": [
+          {
+            "date": "2025-03-31T14:36:15+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-03-31T14:36:15+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-20T02:33:29+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                    "product_id": "AppStream-9.5.0.Z.MAIN",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "opentelemetry-collector-0:0.107.0-10.el9_5.src",
+                  "product": {
+                    "name": "opentelemetry-collector-0:0.107.0-10.el9_5.src",
+                    "product_id": "opentelemetry-collector-0:0.107.0-10.el9_5.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/opentelemetry-collector@0.107.0-10.el9_5?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+                  "product": {
+                    "name": "opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+                    "product_id": "opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/opentelemetry-collector@0.107.0-10.el9_5?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+                  "product": {
+                    "name": "opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+                    "product_id": "opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/opentelemetry-collector@0.107.0-10.el9_5?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "opentelemetry-collector-0:0.107.0-10.el9_5.x86_64",
+                  "product": {
+                    "name": "opentelemetry-collector-0:0.107.0-10.el9_5.x86_64",
+                    "product_id": "opentelemetry-collector-0:0.107.0-10.el9_5.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/opentelemetry-collector@0.107.0-10.el9_5?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+                  "product": {
+                    "name": "opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+                    "product_id": "opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/opentelemetry-collector@0.107.0-10.el9_5?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "opentelemetry-collector-0:0.107.0-10.el9_5.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.aarch64"
+          },
+          "product_reference": "opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le"
+          },
+          "product_reference": "opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "opentelemetry-collector-0:0.107.0-10.el9_5.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.s390x"
+          },
+          "product_reference": "opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "opentelemetry-collector-0:0.107.0-10.el9_5.src as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.src"
+          },
+          "product_reference": "opentelemetry-collector-0:0.107.0-10.el9_5.src",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "opentelemetry-collector-0:0.107.0-10.el9_5.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.x86_64"
+          },
+          "product_reference": "opentelemetry-collector-0:0.107.0-10.el9_5.x86_64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-30204",
+        "cwe": {
+          "id": "CWE-405",
+          "name": "Asymmetric Resource Consumption (Amplification)"
+        },
+        "discovery_date": "2025-03-21T22:00:43.818367+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2354195"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the golang-jwt implementation of JSON Web Tokens (JWT). In affected versions, a malicious request with specially crafted Authorization header data may trigger an excessive consumption of resources on the host system. This issue can cause significant performance degradation or an application crash, leading to a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.src",
+            "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2354195",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2354195"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-30204",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3",
+            "url": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp",
+            "url": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-3553",
+            "url": "https://pkg.go.dev/vuln/GO-2025-3553"
+          }
+        ],
+        "release_date": "2025-03-21T21:42:01.382000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-03-31T14:36:15+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:3411"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat Product Security does not have a recommended mitigation at this time.",
+            "product_ids": [
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:opentelemetry-collector-0:0.107.0-10.el9_5.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2025:3411"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for grafana is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, InfluxDB & OpenTSDB. \n\nSecurity Fix(es):\n\n* golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing (CVE-2025-30204)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:3344",
+          "url": "https://access.redhat.com/errata/RHSA-2025:3344"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2354195",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2354195"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_3344.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: grafana security update",
+      "tracking": {
+        "current_release_date": "2026-07-20T02:33:27+00:00",
+        "generator": {
+          "date": "2026-07-20T02:33:27+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.7"
+          }
+        },
+        "id": "RHSA-2025:3344",
+        "initial_release_date": "2025-03-27T15:46:43+00:00",
+        "revision_history": [
+          {
+            "date": "2025-03-27T15:46:43+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-03-27T15:46:43+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-20T02:33:27+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                    "product_id": "AppStream-9.5.0.Z.MAIN",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-9.el9_5.src",
+                  "product": {
+                    "name": "grafana-0:10.2.6-9.el9_5.src",
+                    "product_id": "grafana-0:10.2.6-9.el9_5.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-9.el9_5?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-9.el9_5.aarch64",
+                  "product": {
+                    "name": "grafana-0:10.2.6-9.el9_5.aarch64",
+                    "product_id": "grafana-0:10.2.6-9.el9_5.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-9.el9_5?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+                    "product_id": "grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-9.el9_5?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+                    "product_id": "grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-9.el9_5?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+                    "product_id": "grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-9.el9_5?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-9.el9_5.ppc64le",
+                  "product": {
+                    "name": "grafana-0:10.2.6-9.el9_5.ppc64le",
+                    "product_id": "grafana-0:10.2.6-9.el9_5.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-9.el9_5?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+                    "product_id": "grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-9.el9_5?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+                    "product_id": "grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-9.el9_5?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+                    "product_id": "grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-9.el9_5?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-9.el9_5.x86_64",
+                  "product": {
+                    "name": "grafana-0:10.2.6-9.el9_5.x86_64",
+                    "product_id": "grafana-0:10.2.6-9.el9_5.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-9.el9_5?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-9.el9_5.x86_64",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-9.el9_5.x86_64",
+                    "product_id": "grafana-selinux-0:10.2.6-9.el9_5.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-9.el9_5?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+                    "product_id": "grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-9.el9_5?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+                    "product_id": "grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-9.el9_5?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "grafana-0:10.2.6-9.el9_5.s390x",
+                  "product": {
+                    "name": "grafana-0:10.2.6-9.el9_5.s390x",
+                    "product_id": "grafana-0:10.2.6-9.el9_5.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana@10.2.6-9.el9_5?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-selinux-0:10.2.6-9.el9_5.s390x",
+                  "product": {
+                    "name": "grafana-selinux-0:10.2.6-9.el9_5.s390x",
+                    "product_id": "grafana-selinux-0:10.2.6-9.el9_5.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-selinux@10.2.6-9.el9_5?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+                  "product": {
+                    "name": "grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+                    "product_id": "grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debugsource@10.2.6-9.el9_5?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+                  "product": {
+                    "name": "grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+                    "product_id": "grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/grafana-debuginfo@10.2.6-9.el9_5?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-9.el9_5.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64"
+          },
+          "product_reference": "grafana-0:10.2.6-9.el9_5.aarch64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-9.el9_5.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le"
+          },
+          "product_reference": "grafana-0:10.2.6-9.el9_5.ppc64le",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-9.el9_5.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x"
+          },
+          "product_reference": "grafana-0:10.2.6-9.el9_5.s390x",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-9.el9_5.src as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src"
+          },
+          "product_reference": "grafana-0:10.2.6-9.el9_5.src",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-0:10.2.6-9.el9_5.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64"
+          },
+          "product_reference": "grafana-0:10.2.6-9.el9_5.x86_64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-9.el9_5.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-9.el9_5.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debuginfo-0:10.2.6-9.el9_5.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64"
+          },
+          "product_reference": "grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-9.el9_5.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-9.el9_5.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-9.el9_5.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-debugsource-0:10.2.6-9.el9_5.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64"
+          },
+          "product_reference": "grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-9.el9_5.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-9.el9_5.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-9.el9_5.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-9.el9_5.s390x",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "grafana-selinux-0:10.2.6-9.el9_5.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+          },
+          "product_reference": "grafana-selinux-0:10.2.6-9.el9_5.x86_64",
+          "relates_to_product_reference": "AppStream-9.5.0.Z.MAIN"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-21613",
+        "cwe": {
+          "id": "CWE-88",
+          "name": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection')"
+        },
+        "discovery_date": "2025-01-06T17:00:41.244449+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2335888"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "An argument injection vulnerability was found in go-git. This flaw allows an attacker to set arbitrary values to git-upload-pack flags, leading to command or code execution, exposure of sensitive data, or other unintended behavior. This is only possible in configurations where the file transport protocol is being used.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "go-git: argument injection via the URL field",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as an Important severity because an argument injection has been discovered in go-git, where an attackers can manipulate git-upload-pack flags, potentially enabling command or code execution leads to an exposure of sensitive data or other unintended actions, this vulnerability occurs exclusively in configurations using the file transport protocol.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-21613"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2335888",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2335888"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-21613",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-21613"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-21613",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-21613"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/go-git/go-git/security/advisories/GHSA-v725-9546-7q7m",
+            "url": "https://github.com/go-git/go-git/security/advisories/GHSA-v725-9546-7q7m"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-3368",
+            "url": "https://pkg.go.dev/vuln/GO-2025-3368"
+          }
+        ],
+        "release_date": "2025-01-06T16:13:10.611000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-03-27T15:46:43+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:3344"
+          },
+          {
+            "category": "workaround",
+            "details": "In cases where it is not possible to update to the latest version of go-git, it is recommended to enforce validation rules for values passed in the URL field.",
+            "product_ids": [
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "go-git: argument injection via the URL field"
+      },
+      {
+        "cve": "CVE-2025-30204",
+        "cwe": {
+          "id": "CWE-405",
+          "name": "Asymmetric Resource Consumption (Amplification)"
+        },
+        "discovery_date": "2025-03-21T22:00:43.818367+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2354195"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the golang-jwt implementation of JSON Web Tokens (JWT). In affected versions, a malicious request with specially crafted Authorization header data may trigger an excessive consumption of resources on the host system. This issue can cause significant performance degradation or an application crash, leading to a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+            "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+            "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2354195",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2354195"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-30204",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30204"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3",
+            "url": "https://github.com/golang-jwt/jwt/commit/0951d184286dece21f73c85673fd308786ffe9c3"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp",
+            "url": "https://github.com/golang-jwt/jwt/security/advisories/GHSA-mh63-6h87-95cp"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-3553",
+            "url": "https://pkg.go.dev/vuln/GO-2025-3553"
+          }
+        ],
+        "release_date": "2025-03-21T21:42:01.382000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-03-27T15:46:43+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:3344"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat Product Security does not have a recommended mitigation at this time.",
+            "product_ids": [
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.src",
+              "AppStream-9.5.0.Z.MAIN:grafana-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debuginfo-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-debugsource-0:10.2.6-9.el9_5.x86_64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.aarch64",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.ppc64le",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.s390x",
+              "AppStream-9.5.0.Z.MAIN:grafana-selinux-0:10.2.6-9.el9_5.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang-jwt/jwt: jwt-go allows excessive memory allocation during header parsing"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2025:3344"
+          }
+        ]
+      }
+    }
+  }
+]
