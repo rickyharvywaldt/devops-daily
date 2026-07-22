@@ -683,3 +683,688 @@
     }
   }
 ]
+[Wed Jul 22 14:07:15 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2024-1282",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2024-02-06T16:33:36.042Z",
+      "datePublished": "2024-02-20T18:56:34.881Z",
+      "dateUpdated": "2026-04-08T17:01:59.247Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-08T17:01:59.247Z"
+        },
+        "affected": [
+          {
+            "vendor": "onlineoptimisation",
+            "product": "Email Encoder – Protect Email Addresses and Phone Numbers",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "2.2.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Email Encoder – Protect Email Addresses and Phone Numbers plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's shortcode(s) in all versions up to, and including, 2.2.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "Email Encoder – Protect Email Addresses and Phone Numbers <= 2.2.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/78da1f88-2446-4ea5-9437-a118324ab6c2?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/tags/2.2.0/core/includes/classes/class-email-encoder-bundle-run.php"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/tags/2.2.0/core/includes/classes/class-email-encoder-bundle-helpers.php"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/tags/2.2.0/core/includes/classes/class-email-encoder-bundle-validate.php"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3033889%40email-encoder-bundle%2Ftrunk&old=3020142%40email-encoder-bundle%2Ftrunk&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Richard Telleng"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2024-02-13T00:00:00.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2024-1282"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "title": "CISA ADP Vulnrichment",
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2024-1282",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2024-03-01T13:41:02.863129Z"
+                }
+              }
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2024-06-04T17:59:23.566Z"
+          }
+        },
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-01T18:33:25.519Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/78da1f88-2446-4ea5-9437-a118324ab6c2?source=cve",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/tags/2.2.0/core/includes/classes/class-email-encoder-bundle-run.php",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/tags/2.2.0/core/includes/classes/class-email-encoder-bundle-helpers.php",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/tags/2.2.0/core/includes/classes/class-email-encoder-bundle-validate.php",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=3033889%40email-encoder-bundle%2Ftrunk&old=3020142%40email-encoder-bundle%2Ftrunk&sfp_email=&sfph_mail=",
+              "tags": [
+                "x_transferred"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2023-7070",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2023-12-21T21:18:22.659Z",
+      "datePublished": "2024-01-11T08:33:09.043Z",
+      "dateUpdated": "2026-04-08T17:33:22.799Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-04-08T17:33:22.799Z"
+        },
+        "affected": [
+          {
+            "vendor": "onlineoptimisation",
+            "product": "Email Encoder – Protect Email Addresses and Phone Numbers",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "2.1.9",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Email Encoder – Protect Email Addresses and Phone Numbers plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's eeb_mailto shortcode in all versions up to, and including, 2.1.9 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+          }
+        ],
+        "title": "Email Encoder – Protect Email Addresses and Phone Numbers <= 2.1.9 - Authenticated (Contributor+) Stored Cross-Site Scripting",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f5afe6ea-93b8-4782-8593-76468e370a45?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/trunk/core/includes/classes/class-email-encoder-bundle-run.php#L518"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/trunk/core/includes/classes/class-email-encoder-bundle-run.php#L529"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3019206%40email-encoder-bundle&new=3019206%40email-encoder-bundle&sfp_email=&sfph_mail="
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Craig Smith"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2024-01-09T00:00:00.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2023-7070"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-02T08:50:07.873Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/f5afe6ea-93b8-4782-8593-76468e370a45?source=cve",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/trunk/core/includes/classes/class-email-encoder-bundle-run.php#L518",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/browser/email-encoder-bundle/trunk/core/includes/classes/class-email-encoder-bundle-run.php#L529",
+              "tags": [
+                "x_transferred"
+              ]
+            },
+            {
+              "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3019206%40email-encoder-bundle&new=3019206%40email-encoder-bundle&sfp_email=&sfph_mail=",
+              "tags": [
+                "x_transferred"
+              ]
+            }
+          ]
+        },
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2023-7070",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2024-01-18T01:26:52.716987Z"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-06-17T21:09:15.385Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2023-47821",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2023-11-12T22:26:07.634Z",
+      "datePublished": "2023-11-22T23:05:32.309Z",
+      "dateUpdated": "2026-04-28T16:08:52.518Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "collectionURL": "https://wordpress.org/plugins",
+            "defaultStatus": "unaffected",
+            "packageName": "email-encoder-bundle",
+            "product": "Email Encoder",
+            "vendor": "Jannis Thuemmig",
+            "versions": [
+              {
+                "changes": [
+                  {
+                    "at": "2.1.9",
+                    "status": "unaffected"
+                  }
+                ],
+                "lessThanOrEqual": "2.1.8",
+                "status": "affected",
+                "version": "n/a",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "value": "NGÔ THIÊN AN / ancorn_ from VNPT-VCI (Patchstack Alliance)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Jannis Thuemmig Email Encoder plugin <=<span style=\"background-color: var(--wht);\"> 2.1.8 versions.</span>"
+              }
+            ],
+            "value": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Jannis Thuemmig Email Encoder plugin <= 2.1.8 versions."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-592",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-592 Stored XSS"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-04-28T16:08:52.518Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vdb-entry"
+            ],
+            "url": "https://patchstack.com/database/vulnerability/email-encoder-bundle/wordpress-email-encoder-bundle-plugin-2-1-8-cross-site-scripting-xss-vulnerability?_s_id=cve"
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Update to 2.1.9 or a higher version."
+              }
+            ],
+            "value": "Update to 2.1.9 or a higher version."
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "WordPress Email Encoder Bundle Plugin <= 2.1.8 is vulnerable to Cross Site Scripting (XSS)",
+        "x_generator": {
+          "engine": "Vulnogram 0.1.0-dev"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2023-47821"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2024-08-02T21:16:43.774Z"
+          },
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "tags": [
+                "vdb-entry",
+                "x_transferred"
+              ],
+              "url": "https://patchstack.com/database/vulnerability/email-encoder-bundle/wordpress-email-encoder-bundle-plugin-2-1-8-cross-site-scripting-xss-vulnerability?_s_id=cve"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
