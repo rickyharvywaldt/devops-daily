@@ -2238,3 +2238,341 @@
     }
   }
 ]
+[Sat Jul 25 13:44:53 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x6wq-gx7f-g22h",
+    "modified": "2026-07-25T12:31:39Z",
+    "published": "2026-07-25T12:31:39Z",
+    "aliases": [
+      "CVE-2026-64515"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: mac80211: fix MLE defragmentation\n\nIf either reconf or EPCS multi-link element (MLE) is contained in\na non-transmitted profile, the defragmentation routine is called\nwith a pointer to the defragmented copy, but the original elements.\n\nThis is incorrect for two reasons:\n - if the original defragmentation was needed, it will not find the\n   correct data\n - if the original frame is at a higher address, the parsing will\n   potentially overrun the heap data (though given the layout of\n   the buffers, only into the new defragmentation buffer, and then\n   it has to stop and fail once that's filled with copied data.\n\nFix it by tracking the container along with the pointer and in\ndoing so also unify the two almost identical defragmentation\nroutines.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64515"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/1f573e17bcb7275ddd1c8f47f46ae0faf0e902a4"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/55c479aae99b120489a432db9c717484e523dfd6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/722b3f86df80644463d29fe5451e30a617f74500"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/a74e893f30db64cdce0fc7a96d3baa417bcd55f5"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-25T10:17:37Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-x6wq-gx7f-g22h"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x5f7-rh4c-gxvr",
+    "modified": "2026-07-25T12:31:39Z",
+    "published": "2026-07-25T12:31:39Z",
+    "aliases": [
+      "CVE-2026-64522"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/mlx5e: Fix eswitch mode block underflow on IPsec acquire SA\n\nmlx5e_xfrm_add_state() handles acquire-flow temporary SAs by allocating\nsoftware state and skipping hardware offload setup.\n\nThat path jumps to the common success label before taking the eswitch mode\nblock. After tunnel-mode validation was moved earlier, the common success\nlabel unconditionally calls mlx5_eswitch_unblock_mode(). For acquire SAs,\nthis decrements esw->offloads.num_block_mode without a matching increment.\n\nReturn directly after installing the acquire SA offload handle, so only the\npaths that successfully called mlx5_eswitch_block_mode() call the matching\nunblock.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64522"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/abe003b33223ff33552f291644bf35d9c2f992fb"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/b5bd4249e430f5963d559708ee96a671716d2400"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/ecafd8284e527666e83261e6e57a7c7341d591cb"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-25T10:17:38Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-x5f7-rh4c-gxvr"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-r2gx-xm5r-33f5",
+    "modified": "2026-07-25T12:31:39Z",
+    "published": "2026-07-25T12:31:38Z",
+    "aliases": [
+      "CVE-2026-64514"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nuserfaultfd: gate must_wait writability check on pte_present()\n\nuserfaultfd_must_wait() and userfaultfd_huge_must_wait() read the PTE\nwithout taking the page table lock and then apply pte_write() /\nhuge_pte_write() to it.  Those accessors decode bits from the present\nencoding only; on a swap or migration entry they read the offset bits that\nhappen to share the same position and return an undefined result.\n\nThe intent of the check is \"is this fault still WP-blocked?\".  A\nnon-marker swap entry means the page is in transit -- the userfault\ncontext the original fault delivered against is no longer the same, and\nthe swap-in or migration completion path will re-deliver a fresh fault if\nuserspace still needs to handle it.  Worst case under the current code the\ngarbage write bit says \"wait\", and the thread stays asleep until a\nUFFDIO_WAKE that may never arrive.\n\nGate the writability check on pte_present() so the lockless re-check only\ninspects present-PTE bits when the entry is actually present.  The\nnon-present, non-marker case returns \"don't wait\" and lets the fault path\nretry.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64514"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/29e6f952c5fb7dc1d6b90fe5b7f36063d44ddae0"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/5f4dbdb0a87596214076b20b94f2b71b522170b3"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/60d696a037eeeedfb57756dfe7ec08a1587c8631"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/710183888174639a15fcec16cd1af766b8480bb7"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/8e80af52db652fbc41320eee45a4f73bc029faf2"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/a5700a4c1c9099ac2ac73fe8a09cf059972e0d2f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/a6e9a4939e359599701b1da351e84f72e021443a"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/d4026417e8184d13850a0bad4d96ceb6ed9f7152"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-07-25T10:17:37Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-r2gx-xm5r-33f5"
+          }
+        ]
+      }
+    }
+  }
+]
