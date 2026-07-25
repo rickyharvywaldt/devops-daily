@@ -2576,3 +2576,1132 @@
     }
   }
 ]
+[Sat Jul 25 19:14:35 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-7374",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2026-04-29T06:46:44.106Z",
+      "datePublished": "2026-05-26T13:14:53.851Z",
+      "dateUpdated": "2026-07-25T17:40:07.465Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Kubevirt: kubevirt virt-handler: privilege escalation and node compromise via symlink following vulnerability",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Important",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in KubeVirt's virt-handler component. This vulnerability allows an authenticated OpenShift user with edit permissions in a single namespace to exploit improper symlink validation when connecting to virtual machine console sockets. By replacing the console socket with a symlink to the host's container runtime (CRI-O) socket, an attacker can hijack virt-handler's privileged connection. This enables the attacker to access any Unix socket on the host, potentially leading to full control of the node and the entire cluster."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.12",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1779375376",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.12::el8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.13",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1778999881",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.13::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.14",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1779321599",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.14::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.15",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1778859977",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.15::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.16",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1778861274",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.16::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.17",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1779174925",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.17::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.18",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1778887155",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.18::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.19",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1779289071",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.19::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.20",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1779288737",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.20::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Container Native Virtualization 4.21",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "container-native-virtualization/virt-handler-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1779420069",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:container_native_virtualization:4.21::el9"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20720",
+            "name": "RHSA-2026:20720",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20736",
+            "name": "RHSA-2026:20736",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20763",
+            "name": "RHSA-2026:20763",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20767",
+            "name": "RHSA-2026:20767",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20782",
+            "name": "RHSA-2026:20782",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20825",
+            "name": "RHSA-2026:20825",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20866",
+            "name": "RHSA-2026:20866",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20886",
+            "name": "RHSA-2026:20886",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20890",
+            "name": "RHSA-2026:20890",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:20975",
+            "name": "RHSA-2026:20975",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2026-7374",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2463728",
+            "name": "RHBZ#2463728",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2026-05-26T12:30:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-59",
+                "description": "Improper Link Resolution Before File Access ('Link Following')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-59: Improper Link Resolution Before File Access ('Link Following')",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "Update cluster RBAC to not allow exec into virt-launcher pods."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2026-04-22T07:20:25.000Z",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2026-05-26T12:30:00.000Z",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "This issue was discovered by Sarah Bennert (Red Hat) and Stoyan Nikolov (Red Hat)."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-07-25T17:40:07.465Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-7374"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-26T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-7374"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-27T03:55:39.340Z"
+          }
+        },
+        {
+          "affected": [
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.12::el8"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler",
+              "product": "Red Hat Container Native Virtualization 4.12",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1779375376",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.13::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.13",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1778999881",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.14::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.14",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1779321599",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.15::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.15",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1778859977",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.16::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.16",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1778861274",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.17::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.17",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1779174925",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.18::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.18",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1778887155",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.19::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.19",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1779289071",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.20::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.2",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1779288737",
+                  "versionType": "rpm"
+                }
+              ]
+            },
+            {
+              "collectionURL": "https://catalog.redhat.com/software/containers/",
+              "cpes": [
+                "cpe:/a:redhat:container_native_virtualization:4.21::el9"
+              ],
+              "defaultStatus": "affected",
+              "packageName": "container-native-virtualization/virt-handler-rhel9",
+              "product": "Red Hat Container Native Virtualization 4.21",
+              "vendor": "Red Hat",
+              "versions": [
+                {
+                  "lessThan": "*",
+                  "status": "unaffected",
+                  "version": "1779420069",
+                  "versionType": "rpm"
+                }
+              ]
+            }
+          ],
+          "datePublic": "2026-05-26T12:30:00.000Z",
+          "descriptions": [
+            {
+              "lang": "en",
+              "value": "A flaw was found in KubeVirt's virt-handler component. This vulnerability allows an authenticated OpenShift user with edit permissions in a single namespace to exploit improper symlink validation when connecting to virtual machine console sockets. By replacing the console socket with a symlink to the host's container runtime (CRI-O) socket, an attacker can hijack virt-handler's privileged connection. This enables the attacker to access any Unix socket on the host, potentially leading to full control of the node and the entire cluster."
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "content": {
+                  "namespace": "https://access.redhat.com/security/updates/classification/",
+                  "value": "Important"
+                },
+                "type": "Red Hat severity rating"
+              }
+            },
+            {
+              "cvssV3_1": {
+                "attackComplexity": "LOW",
+                "attackVector": "NETWORK",
+                "availabilityImpact": "HIGH",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "privilegesRequired": "LOW",
+                "scope": "CHANGED",
+                "userInteraction": "NONE",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "version": "3.1"
+              },
+              "format": "CVSS"
+            }
+          ],
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "cweId": "CWE-59",
+                  "description": "Improper Link Resolution Before File Access ('Link Following')",
+                  "lang": "en",
+                  "type": "CWE"
+                }
+              ]
+            }
+          ],
+          "references": [
+            {
+              "tags": [
+                "vdb-entry",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/security/cve/CVE-2026-7374"
+            },
+            {
+              "name": "RHBZ#2463728",
+              "tags": [
+                "issue-tracking",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2463728"
+            },
+            {
+              "tags": [
+                "x_sadp-csaf-vex"
+              ],
+              "url": "https://security.access.redhat.com/data/csaf/v2/vex/2026/cve-2026-7374.json"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20825"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20886"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20890"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20866"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20975"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20763"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20736"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20767"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20720"
+            },
+            {
+              "tags": [
+                "vendor-advisory",
+                "x_refsource_REDHAT"
+              ],
+              "url": "https://access.redhat.com/errata/RHSA-2026:20782"
+            }
+          ],
+          "solutions": [
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20825: Red Hat Container Native Virtualization 4.12"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20886: Red Hat Container Native Virtualization 4.13"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20890: Red Hat Container Native Virtualization 4.14"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20866: Red Hat Container Native Virtualization 4.15"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20975: Red Hat Container Native Virtualization 4.16"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20763: Red Hat Container Native Virtualization 4.17"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20736: Red Hat Container Native Virtualization 4.18"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20767: Red Hat Container Native Virtualization 4.19"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20720: Red Hat Container Native Virtualization 4.21"
+            },
+            {
+              "lang": "en",
+              "value": "RHSA-2026:20782: Red Hat Container Native Virtualization 4.2"
+            }
+          ],
+          "timeline": [
+            {
+              "lang": "en",
+              "time": "2026-04-22T07:20:25.000Z",
+              "value": "Reported to Red Hat."
+            },
+            {
+              "lang": "en",
+              "time": "2026-05-26T12:30:00.000Z",
+              "value": "Made public."
+            }
+          ],
+          "title": "kubevirt: KubeVirt virt-handler: Privilege escalation and node compromise via symlink following vulnerability",
+          "workarounds": [
+            {
+              "lang": "en",
+              "value": "Update cluster RBAC to not allow exec into virt-launcher pods."
+            }
+          ],
+          "x_adpType": "supplier",
+          "x_generator": {
+            "engine": "sadp-cli 1.0.0"
+          },
+          "providerMetadata": {
+            "orgId": "0b0ca135-0b70-47e7-9f44-1890c2a1c46c",
+            "shortName": "redhat-SADP",
+            "dateUpdated": "2026-07-20T12:05:05.220Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": "1.7.0",
+    "id": "RLSA-2026:43505",
+    "modified": "2026-07-25T18:07:33.114265Z",
+    "published": "2026-07-23T06:07:38.939859Z",
+    "upstream": [
+      "CVE-2026-44172"
+    ],
+    "summary": "Important: mariadb-connector-c security update",
+    "details": "The MariaDB Native Client library (C driver) is used to connect applications developed in C/C++ to MariaDB and MySQL databases. \n\nSecurity Fix(es):\n\n* mariadb: MariaDB server: SQL injection vulnerability via improper handling of big5 character set with mysql_real_escape_string() (CVE-2026-44172)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Rocky Linux:10",
+          "name": "mariadb-connector-c",
+          "purl": "pkg:rpm/rocky-linux/mariadb-connector-c?distro=rocky-linux-10&epoch=0"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0:3.4.4-2.el10_2"
+              }
+            ],
+            "database_specific": {
+              "yum_repository": "BaseOS"
+            }
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://errata.rockylinux.org/RLSA-2026:43505"
+      },
+      {
+        "type": "REPORT",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2488459"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Rocky Enterprise Software Foundation"
+      },
+      {
+        "name": "Red Hat"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rlsa-2026:43505"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.7.0",
+    "id": "RLSA-2026:43400",
+    "modified": "2026-07-25T18:07:33.052412Z",
+    "published": "2026-07-23T06:07:38.939859Z",
+    "upstream": [
+      "CVE-2026-54512",
+      "CVE-2026-54513"
+    ],
+    "summary": "Important: dogtag-pki security update",
+    "details": "IdM PKI is an enterprise software system designed to manage enterprise Public Key Infrastructure deployments.  IdM PKI consists of the following components: \n  * Certificate Authority (CA)\n  * Key Recovery Authority (KRA)\n  * Online Certificate Status Protocol (OCSP) Manager\n  * Token Key Service (TKS)\n  * Token Processing Service (TPS)\n  * Automatic Certificate Management Environment (ACME) Responder\n  * Enrollment over Secure Transport (EST) Responder\n\nSecurity Fix(es):\n\n* jackson-databind: Jackson-databind: Security bypass allows arbitrary code execution (CVE-2026-54513)\n\n* jackson-databind: jackson-databind: Arbitrary code execution via PolymorphicTypeValidator bypass (CVE-2026-54512)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "Rocky Linux:10",
+          "name": "dogtag-pki",
+          "purl": "pkg:rpm/rocky-linux/dogtag-pki?distro=rocky-linux-10&epoch=0"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0:11.9.0-4.el10_2.rocky.0.1"
+              }
+            ],
+            "database_specific": {
+              "yum_repository": "AppStream"
+            }
+          }
+        ]
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://errata.rockylinux.org/RLSA-2026:43400"
+      },
+      {
+        "type": "REPORT",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492015"
+      },
+      {
+        "type": "REPORT",
+        "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2492010"
+      }
+    ],
+    "credits": [
+      {
+        "name": "Rocky Enterprise Software Foundation"
+      },
+      {
+        "name": "Red Hat"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rlsa-2026:43400"
+          }
+        ]
+      }
+    }
+  }
+]
