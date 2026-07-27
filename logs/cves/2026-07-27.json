@@ -1,0 +1,2718 @@
+[Mon Jul 27 03:35:37 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-15928",
+      "assignerOrgId": "07aac9b9-e3e9-4d03-a447-764bd31371d7",
+      "state": "PUBLISHED",
+      "assignerShortName": "TML",
+      "dateReserved": "2026-07-16T07:05:00.749Z",
+      "datePublished": "2026-07-27T02:23:23.674Z",
+      "dateUpdated": "2026-07-27T02:23:23.674Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "07aac9b9-e3e9-4d03-a447-764bd31371d7",
+          "shortName": "TML",
+          "dateUpdated": "2026-07-27T02:23:23.674Z"
+        },
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper neutralization of input during web page generation ('cross-site scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-63",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-63 Cross-Site Scripting (XSS)"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "XMLRPC-C",
+            "product": "XMLRPC-C",
+            "repo": "https://sourceforge.net/p/xmlrpc-c/code/HEAD/tree/",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.07",
+                "lessThanOrEqual": "1.67.01",
+                "versionType": "Advanced"
+              },
+              {
+                "status": "affected",
+                "version": "1.07",
+                "lessThanOrEqual": "1.64.03",
+                "versionType": "Super stable"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XMLRPC-C Library versions 1.07 through 1.67.01 are vulnerable to a reflected cross-site scripting (XSS) vulnerability in the error page component.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "XMLRPC-C Library versions 1.07 through 1.67.01 are vulnerable to a reflected cross-site scripting (XSS) vulnerability in the error page component."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://xmlrpc-c.sourceforge.io/",
+            "tags": [
+              "vendor-advisory"
+            ]
+          },
+          {
+            "url": "https://www.themissinglink.com.au/security-advisories/cve-2026-15928",
+            "tags": [
+              "third-party-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Andrew Bick at The Missing Link Security",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.2"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-15928"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-5278",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2025-05-27T14:05:48.552Z",
+      "datePublished": "2025-05-27T20:52:58.545Z",
+      "dateUpdated": "2026-07-27T01:50:41.278Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Coreutils: heap buffer under-read in gnu coreutils sort via key specification",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Moderate",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "LOW",
+              "baseScore": 4.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in GNU Coreutils. The sort utility's begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data."
+          }
+        ],
+        "affected": [
+          {
+            "versions": [
+              {
+                "status": "affected",
+                "version": "7.2",
+                "lessThan": "9.8",
+                "versionType": "semver"
+              }
+            ],
+            "packageName": "coreutils",
+            "collectionURL": "https://cgit.git.savannah.gnu.org/cgit/coreutils.git/",
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "coreutils",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "0:9.5-8.el10_2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:10.2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "coreutils",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "0:8.32-41.el9_8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:9::baseos"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Cost Management 4",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "costmanagement/costmanagement-metrics-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1783539156",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:cost_management:4::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Discovery 2",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "discovery/discovery-ui-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782756541",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:discovery:2::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Insights proxy 1.5",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "insights-proxy/insights-proxy-container-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782890503",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:insights_proxy:1.5::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-gateway-opa-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782501180",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-gateway-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782501200",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-jaeger-query-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782498923",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-operator-bundle",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782510941",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-query-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782501220",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782501196",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift distributed tracing 3.10.0",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhosdt/tempo-rhel9-operator",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1782501195",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:openshift_distributed_tracing:3.10::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Update Infrastructure 5",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhui5/cds-kubernetes-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1784794818",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:rhui:5::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Update Infrastructure 5",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhui5/cds-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1784794778",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:rhui:5::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Update Infrastructure 5",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhui5/haproxy-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1784795112",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:rhui:5::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Update Infrastructure 5",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhui5/installer-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1784794289",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:rhui:5::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Update Infrastructure 5",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "rhui5/rhua-rhel9",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "1784795076",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:rhui:5::el9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "coreutils",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "coreutils",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "coreutils",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhcos",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:28911",
+            "name": "RHSA-2026:28911",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:33124",
+            "name": "RHSA-2026:33124",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:33313",
+            "name": "RHSA-2026:33313",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:33612",
+            "name": "RHSA-2026:33612",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:34102",
+            "name": "RHSA-2026:34102",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:39981",
+            "name": "RHSA-2026:39981",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:44481",
+            "name": "RHSA-2026:44481",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2025-5278",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368764",
+            "name": "RHBZ#2368764",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://cgit.git.savannah.gnu.org/cgit/coreutils.git/commit/?id=8c9602e3a145e9596dc1a63c6ed67865814b6633"
+          },
+          {
+            "url": "https://debbugs.gnu.org/cgi/bugreport.cgi?bug=78507"
+          }
+        ],
+        "datePublic": "2025-05-27T00:00:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-121",
+                "description": "Stack-based Buffer Overflow",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-121: Stack-based Buffer Overflow",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "Mitigation for this issue is either not available or the currently available options don't meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2025-05-27T13:50:20.148Z",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2025-05-27T00:00:00.000Z",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank Mohamed Maatallah for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-07-27T01:50:41.278Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2025-5278"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2025/05/27/2"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2025/05/29/1"
+            },
+            {
+              "url": "https://security-tracker.debian.org/tracker/CVE-2025-5278"
+            },
+            {
+              "url": "https://cgit.git.savannah.gnu.org/cgit/coreutils.git/commit/?id=8c9602e3a145e9596dc1a63c6ed67865814b6633"
+            },
+            {
+              "url": "https://cgit.git.savannah.gnu.org/cgit/coreutils.git/tree/NEWS?id=8c9602e3a145e9596dc1a63c6ed67865814b6633#n14"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2025/05/29/2"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2025-05-29T18:03:55.440Z"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2025-05-28T13:46:35.101788Z",
+                  "id": "CVE-2025-5278",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2025-05-28T13:48:21.860Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for buildah is now available for Red Hat Enterprise Linux 9.0 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The buildah package provides a tool for facilitating building OCI container images. Among other things, buildah enables you to: Create a working container, either from scratch or using an image as a starting point; Create an image, either from a working container or using the instructions in a Dockerfile; Build both Docker and OCI images. \n\nSecurity Fix(es):\n\n* golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: SSH client panic due to unexpected SSH_AGENT_SUCCESS (CVE-2025-47913)\n\n* crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate (CVE-2025-61729)\n\n* golang: net/url: Memory exhaustion in query parameter parsing in net/url (CVE-2025-61726)\n\n* crypto/tls: Unexpected session resumption in crypto/tls (CVE-2025-68121)\n\n* net/url: Incorrect parsing of IPv6 host literals in net/url (CVE-2026-25679)\n\n* crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages (CVE-2026-32283)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:16102",
+          "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2414943",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2414943"
+        },
+        {
+          "category": "external",
+          "summary": "2418462",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+        },
+        {
+          "category": "external",
+          "summary": "2434432",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+        },
+        {
+          "category": "external",
+          "summary": "2437111",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+        },
+        {
+          "category": "external",
+          "summary": "2445356",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445356"
+        },
+        {
+          "category": "external",
+          "summary": "2456338",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2456338"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_16102.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: buildah security update",
+      "tracking": {
+        "current_release_date": "2026-07-27T02:19:36+00:00",
+        "generator": {
+          "date": "2026-07-27T02:19:36+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.7"
+          }
+        },
+        "id": "RHSA-2026:16102",
+        "initial_release_date": "2026-05-11T22:53:25+00:00",
+        "revision_history": [
+          {
+            "date": "2026-05-11T22:53:25+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-05-11T22:53:25+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-27T02:19:36+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+                    "product_id": "AppStream-9.0.0.Z.E4S",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhel_e4s:9.0::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-1:1.26.11-1.el9_0.src",
+                  "product": {
+                    "name": "buildah-1:1.26.11-1.el9_0.src",
+                    "product_id": "buildah-1:1.26.11-1.el9_0.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.26.11-1.el9_0?arch=src&epoch=1"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-1:1.26.11-1.el9_0.aarch64",
+                  "product": {
+                    "name": "buildah-1:1.26.11-1.el9_0.aarch64",
+                    "product_id": "buildah-1:1.26.11-1.el9_0.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.26.11-1.el9_0?arch=aarch64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-1:1.26.11-1.el9_0.aarch64",
+                  "product": {
+                    "name": "buildah-tests-1:1.26.11-1.el9_0.aarch64",
+                    "product_id": "buildah-tests-1:1.26.11-1.el9_0.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.26.11-1.el9_0?arch=aarch64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+                  "product": {
+                    "name": "buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+                    "product_id": "buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.26.11-1.el9_0?arch=aarch64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+                  "product": {
+                    "name": "buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+                    "product_id": "buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.26.11-1.el9_0?arch=aarch64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+                    "product_id": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.26.11-1.el9_0?arch=aarch64&epoch=1"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-1:1.26.11-1.el9_0.ppc64le",
+                  "product": {
+                    "name": "buildah-1:1.26.11-1.el9_0.ppc64le",
+                    "product_id": "buildah-1:1.26.11-1.el9_0.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.26.11-1.el9_0?arch=ppc64le&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+                  "product": {
+                    "name": "buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+                    "product_id": "buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.26.11-1.el9_0?arch=ppc64le&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+                  "product": {
+                    "name": "buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+                    "product_id": "buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.26.11-1.el9_0?arch=ppc64le&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+                  "product": {
+                    "name": "buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+                    "product_id": "buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.26.11-1.el9_0?arch=ppc64le&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+                    "product_id": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.26.11-1.el9_0?arch=ppc64le&epoch=1"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-1:1.26.11-1.el9_0.x86_64",
+                  "product": {
+                    "name": "buildah-1:1.26.11-1.el9_0.x86_64",
+                    "product_id": "buildah-1:1.26.11-1.el9_0.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.26.11-1.el9_0?arch=x86_64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-1:1.26.11-1.el9_0.x86_64",
+                  "product": {
+                    "name": "buildah-tests-1:1.26.11-1.el9_0.x86_64",
+                    "product_id": "buildah-tests-1:1.26.11-1.el9_0.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.26.11-1.el9_0?arch=x86_64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+                  "product": {
+                    "name": "buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+                    "product_id": "buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.26.11-1.el9_0?arch=x86_64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+                  "product": {
+                    "name": "buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+                    "product_id": "buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.26.11-1.el9_0?arch=x86_64&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64",
+                    "product_id": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.26.11-1.el9_0?arch=x86_64&epoch=1"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-1:1.26.11-1.el9_0.s390x",
+                  "product": {
+                    "name": "buildah-1:1.26.11-1.el9_0.s390x",
+                    "product_id": "buildah-1:1.26.11-1.el9_0.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.26.11-1.el9_0?arch=s390x&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-1:1.26.11-1.el9_0.s390x",
+                  "product": {
+                    "name": "buildah-tests-1:1.26.11-1.el9_0.s390x",
+                    "product_id": "buildah-tests-1:1.26.11-1.el9_0.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.26.11-1.el9_0?arch=s390x&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+                  "product": {
+                    "name": "buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+                    "product_id": "buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.26.11-1.el9_0?arch=s390x&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+                  "product": {
+                    "name": "buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+                    "product_id": "buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.26.11-1.el9_0?arch=s390x&epoch=1"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+                    "product_id": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.26.11-1.el9_0?arch=s390x&epoch=1"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-1:1.26.11-1.el9_0.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64"
+          },
+          "product_reference": "buildah-1:1.26.11-1.el9_0.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-1:1.26.11-1.el9_0.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le"
+          },
+          "product_reference": "buildah-1:1.26.11-1.el9_0.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-1:1.26.11-1.el9_0.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x"
+          },
+          "product_reference": "buildah-1:1.26.11-1.el9_0.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-1:1.26.11-1.el9_0.src as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src"
+          },
+          "product_reference": "buildah-1:1.26.11-1.el9_0.src",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-1:1.26.11-1.el9_0.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64"
+          },
+          "product_reference": "buildah-1:1.26.11-1.el9_0.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-1:1.26.11-1.el9_0.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64"
+          },
+          "product_reference": "buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le"
+          },
+          "product_reference": "buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-1:1.26.11-1.el9_0.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x"
+          },
+          "product_reference": "buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-1:1.26.11-1.el9_0.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          },
+          "product_reference": "buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-1:1.26.11-1.el9_0.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64"
+          },
+          "product_reference": "buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-1:1.26.11-1.el9_0.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le"
+          },
+          "product_reference": "buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-1:1.26.11-1.el9_0.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x"
+          },
+          "product_reference": "buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-1:1.26.11-1.el9_0.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64"
+          },
+          "product_reference": "buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-1:1.26.11-1.el9_0.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64"
+          },
+          "product_reference": "buildah-tests-1:1.26.11-1.el9_0.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-1:1.26.11-1.el9_0.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le"
+          },
+          "product_reference": "buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-1:1.26.11-1.el9_0.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x"
+          },
+          "product_reference": "buildah-tests-1:1.26.11-1.el9_0.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-1:1.26.11-1.el9_0.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64"
+          },
+          "product_reference": "buildah-tests-1:1.26.11-1.el9_0.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64"
+          },
+          "product_reference": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le"
+          },
+          "product_reference": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x"
+          },
+          "product_reference": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.0)",
+            "product_id": "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          },
+          "product_reference": "buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64",
+          "relates_to_product_reference": "AppStream-9.0.0.Z.E4S"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-47913",
+        "discovery_date": "2025-11-13T22:01:26.092452+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2414943"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw in golang.org/x/crypto/ssh/agent causes the SSH agent client to panic when a peer responds with the generic SSH_AGENT_SUCCESS (0x06) message to requests expecting typed replies (e.g., List, Sign). The unmarshal layer produces an unexpected message type, which the client code does not handle, leading to panic(\"unreachable\") or a nil-pointer dereference. A malicious agent or forwarded connection can exploit this to terminate the client process.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: SSH client panic due to unexpected SSH_AGENT_SUCCESS",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability was marked as Important because it allows any malicious or misbehaving SSH agent to force a crash in the client process using a single valid protocol byte. The panic occurs before the client has a chance to validate message structure or recover, which means an attacker controlling—or intercepting—SSH agent traffic can reliably terminate processes that rely on agent interactions. In environments where SSH agents operate over forwarded sockets, shared workspaces, or CI/CD runners, this turns into a reliable, unauthenticated remote denial of service against critical automation or developer tooling. The flaw also stems from unsafe assumptions in the unmarshalling logic, where unexpected but protocol-legal message types drop into “unreachable” code paths instead of being handled gracefully—making it a design-level reliability break rather than a simple error-handling bug. For this reason, it is rated as an important availability-impacting vulnerability rather than a moderate issue.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-47913"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2414943",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2414943"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-47913",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-47913"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-47913",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-47913"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/advisories/GHSA-hcg3-q754-cr77",
+            "url": "https://github.com/advisories/GHSA-hcg3-q754-cr77"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/700295",
+            "url": "https://go.dev/cl/700295"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/75178",
+            "url": "https://go.dev/issue/75178"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4116",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4116"
+          }
+        ],
+        "release_date": "2025-11-13T21:29:39.907000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-11T22:53:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+          },
+          {
+            "category": "workaround",
+            "details": "No mitigation is currently available that meets Red Hat Product Security’s standards for usability, deployment, applicability, or stability.",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang.org/x/crypto/ssh/agent: golang.org/x/crypto/ssh/agent: SSH client panic due to unexpected SSH_AGENT_SUCCESS"
+      },
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-11T22:53:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in golang. A remote attacker could exploit this vulnerability by providing a specially crafted certificate during the error string construction process within the `HostnameError.Error()` function. This flaw, caused by unbounded string concatenation, leads to excessive resource consumption. Successful exploitation can result in a denial of service (DoS) for the affected system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-11T22:53:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      },
+      {
+        "cve": "CVE-2025-68121",
+        "discovery_date": "2026-02-05T18:01:30.086058+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2437111"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the crypto/tls component. This vulnerability occurs during Transport Layer Security (TLS) session resumption when certificate authority (CA) settings are modified between the initial and resumed handshakes. An attacker could exploit this to bypass certificate validation, allowing a client or server to establish a connection that should have been rejected. This could lead to an authentication bypass under specific conditions.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This is a moderate flaw because it only occurs under specific conditions, such as TLS session resumption with runtime changes to certificate authority settings. Exploitation is not straightforward and requires a controlled setup. The impact is limited to certificate validation within the same component and does not affect system availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2437111",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-68121",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/737700",
+            "url": "https://go.dev/cl/737700"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77217",
+            "url": "https://go.dev/issue/77217"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337"
+          }
+        ],
+        "release_date": "2026-02-05T17:48:44.141000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-11T22:53:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption"
+      },
+      {
+        "cve": "CVE-2026-25679",
+        "cwe": {
+          "id": "CWE-1286",
+          "name": "Improper Validation of Syntactic Correctness of Input"
+        },
+        "discovery_date": "2026-03-06T22:02:11.567841+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445356"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "The Go standard library function net/url.Parse insufficiently validated the host/authority component and accepted some invalid URLs by effectively treating garbage before an IP-literal as ignorable. The function should have rejected this as invalid.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "net/url: Incorrect parsing of IPv6 host literals in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445356",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445356"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-25679",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752180",
+            "url": "https://go.dev/cl/752180"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77578",
+            "url": "https://go.dev/issue/77578"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4601",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4601"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:14.211000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-11T22:53:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "net/url: Incorrect parsing of IPv6 host literals in net/url"
+      },
+      {
+        "cve": "CVE-2026-32283",
+        "cwe": {
+          "id": "CWE-764",
+          "name": "Multiple Locks of a Critical Resource"
+        },
+        "discovery_date": "2026-04-08T02:01:16.213799+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2456338"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the `crypto/tls` package within the Go (golang) standard library, specifically affecting TLS 1.3 connections. A remote attacker can exploit this vulnerability by sending multiple key update messages in a single record after the handshake. This can cause the connection to deadlock, leading to uncontrolled consumption of resources and ultimately a denial of service (DoS).",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Important: A flaw in the Go `crypto/tls` package allows a remote attacker to cause a denial of service in applications using TLS 1.3. By sending multiple key update messages in a single record post-handshake, an attacker can trigger a connection deadlock, leading to uncontrolled resource consumption. This impacts Red Hat products utilizing the affected Go standard library for TLS 1.3 connections.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+            "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+            "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-32283"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2456338",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2456338"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-32283",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-32283"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-32283",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32283"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/763767",
+            "url": "https://go.dev/cl/763767"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/78334",
+            "url": "https://go.dev/issue/78334"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU",
+            "url": "https://groups.google.com/g/golang-announce/c/0uYbvbPZRWU"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4870",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4870"
+          }
+        ],
+        "release_date": "2026-04-08T01:06:57.670000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-11T22:53:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:16102"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.src",
+              "AppStream-9.0.0.Z.E4S:buildah-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debuginfo-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-debugsource-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-1:1.26.11-1.el9_0.x86_64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.aarch64",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.ppc64le",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.s390x",
+              "AppStream-9.0.0.Z.E4S:buildah-tests-debuginfo-1:1.26.11-1.el9_0.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:16102"
+          }
+        ]
+      }
+    }
+  }
+]
