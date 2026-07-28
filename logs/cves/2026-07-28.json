@@ -1302,3 +1302,613 @@
     }
   }
 ]
+[Tue Jul 28 14:20:23 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "pivotick",
+            "repo": "https://github.com/Pivotick/Pivotick",
+            "vendor": "pivotick",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.4.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Jeroen Pinoy"
+          },
+          {
+            "lang": "en",
+            "type": "remediation developer",
+            "value": "Sami Mokaddem"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<p>Pivotick contains a DOM-based cross-site scripting vulnerability in its generic UI element resolution and icon-rendering utilities.</p><p>The <code>tryResolveHTMLElement</code> function treated any resolved string as HTML markup by assigning it to a <code>&lt;template&gt;</code> element through <code>innerHTML</code>. Strings derived from untrusted graph properties or custom rendering callbacks could therefore introduce arbitrary HTML or SVG elements into the live document. The vulnerable function was used by multiple UI components, including headers, property panels, extra panels, and tooltips.</p><p>Additionally, <code>createIcon</code> inserted caller-supplied <code>svgIcon</code> markup into a template without sanitization. An application integrating Pivotick and deriving icon markup from untrusted data could therefore expose a second script-execution path.</p><p>An unauthenticated attacker able to provide a crafted graph, property value, rendering result, or SVG icon could execute JavaScript in another user's browser when the affected content is displayed or interacted with. Successful exploitation could allow the attacker to access information available to the victim, manipulate graph data or application state, and perform actions with the victim's privileges.</p><p>The patch changes string rendering to use <code>textContent</code>, requiring callers to explicitly return an <code>Element</code> when HTML rendering is intended. It also sanitizes SVG icon markup before inserting it into the DOM.</p><br>"
+              }
+            ],
+            "value": "Pivotick contains a DOM-based cross-site scripting vulnerability in its generic UI element resolution and icon-rendering utilities.\n\nThe tryResolveHTMLElement function treated any resolved string as HTML markup by assigning it to a <template> element through innerHTML. Strings derived from untrusted graph properties or custom rendering callbacks could therefore introduce arbitrary HTML or SVG elements into the live document. The vulnerable function was used by multiple UI components, including headers, property panels, extra panels, and tooltips.\n\nAdditionally, createIcon inserted caller-supplied svgIcon markup into a template without sanitization. An application integrating Pivotick and deriving icon markup from untrusted data could therefore expose a second script-execution path.\n\nAn unauthenticated attacker able to provide a crafted graph, property value, rendering result, or SVG icon could execute JavaScript in another user's browser when the affected content is displayed or interacted with. Successful exploitation could allow the attacker to access information available to the victim, manipulate graph data or application state, and perform actions with the victim's privileges.\n\nThe patch changes string rendering to use textContent, requiring callers to explicitly return an Element when HTML rendering is intended. It also sanitizes SVG icon markup before inserting it into the DOM."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-588",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-588 DOM-Based XSS"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 9.2,
+              "baseSeverity": "CRITICAL",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:L/VA:N/SC:H/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "00000000-0000-4000-9000-000000000000"
+        },
+        "references": [
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/Pivotick/Pivotick/commit/67c597cdf7f6910f97a4c73905a7b845e0d039f1"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "DOM-Based Cross-Site Scripting via Unsafe String and SVG Icon Rendering in Pivotick",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "gcve-1-2026-20149"
+          }
+        ]
+      }
+    },
+    "cveMetadata": {
+      "assignerOrgId": "00000000-0000-4000-9000-000000000000",
+      "requesterUserId": "00000000-0000-4000-9000-000000000000",
+      "serial": 1,
+      "state": "PUBLISHED",
+      "vulnId": "gcve-1-2026-20149",
+      "datePublished": "2026-07-28T13:53:22.770579Z",
+      "dateUpdated": "2026-07-28T13:53:32.396211Z",
+      "cveId": "CVE-2026-67174",
+      "dateReserved": "2026-07-28T13:53:32.327Z"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  },
+  {
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "pivotick",
+            "repo": "https://github.com/Pivotick/Pivotick",
+            "vendor": "pivotick",
+            "versions": [
+              {
+                "lessThanOrEqual": "1.4.0",
+                "status": "affected",
+                "version": "0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Jeroen Pinoy"
+          },
+          {
+            "lang": "en",
+            "type": "remediation developer",
+            "value": "Sami Mokaddem"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "<p>Pivotick did not validate the URL scheme of node <code>imagePath</code> values derived from graph data before assigning them to SVG image resources. An attacker able to supply crafted graph data could set an image path to a malicious URI.</p><p>When a victim rendered the affected graph, the browser could resolve the attacker-controlled URI and initiate an unintended request or invoke scheme-specific handling in the victim’s context. Depending on the URI, browser behaviour, and installed protocol handlers, exploitation could disclose limited client or network metadata, facilitate rendering-based tracking, or attempt to access local or internal resources.</p><p>Exploitation requires a victim to load or render graph data containing the malicious <code>imagePath</code>. The patch normalizes ASCII whitespace and control characters in URI schemes and restricts image paths to relative URLs or the <code>http</code>, <code>https</code>, <code>data</code>, and <code>blob</code> schemes.</p><br>"
+              }
+            ],
+            "value": "Pivotick did not validate the URL scheme of node imagePath values derived from graph data before assigning them to SVG image resources. An attacker able to supply crafted graph data could set an image path to a malicious URI.\n\nWhen a victim rendered the affected graph, the browser could resolve the attacker-controlled URI and initiate an unintended request or invoke scheme-specific handling in the victim’s context. Depending on the URI, browser behaviour, and installed protocol handlers, exploitation could disclose limited client or network metadata, facilitate rendering-based tracking, or attempt to access local or internal resources.\n\nExploitation requires a victim to load or render graph data containing the malicious imagePath. The patch normalizes ASCII whitespace and control characters in URI schemes and restricts image paths to relative URLs or the http, https, data, and blob schemes."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-664",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-664 Server Side Request Forgery"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.1,
+              "baseSeverity": "MEDIUM",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "ACTIVE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-918",
+                "description": "CWE-918 Server-Side Request Forgery (SSRF)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "00000000-0000-4000-9000-000000000000"
+        },
+        "references": [
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/Pivotick/Pivotick/commit/2a6ad284e7ed69ab845087febe47f4cc82f13e1c"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "Pivotick Unvalidated Node Image URLs Allow Unintended Client-Side Requests",
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "gcve-1-2026-20077"
+          }
+        ]
+      }
+    },
+    "cveMetadata": {
+      "assignerOrgId": "00000000-0000-4000-9000-000000000000",
+      "requesterUserId": "00000000-0000-4000-9000-000000000000",
+      "serial": 1,
+      "state": "PUBLISHED",
+      "vulnId": "gcve-1-2026-20077",
+      "datePublished": "2026-07-28T13:31:59.211427Z",
+      "dateUpdated": "2026-07-28T13:32:09.051521Z",
+      "cveId": "CVE-2026-67173",
+      "dateReserved": "2026-07-28T13:32:08.981Z"
+    },
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.1"
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-60472",
+      "assignerOrgId": "43595867-4340-4103-b7a2-9a5208d29a85",
+      "state": "PUBLISHED",
+      "assignerShortName": "oracle",
+      "dateReserved": "2026-07-08T15:51:40.539Z",
+      "datePublished": "2026-07-21T21:35:29.670Z",
+      "dateUpdated": "2026-07-25T03:55:34.884Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "43595867-4340-4103-b7a2-9a5208d29a85",
+          "shortName": "oracle",
+          "dateUpdated": "2026-07-21T21:35:29.670Z"
+        },
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en-US",
+                "description": "Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise WebCenter Content: Imaging.  Successful attacks of this vulnerability can result in takeover of WebCenter Content: Imaging."
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Oracle Corporation",
+            "product": "WebCenter Content: Imaging",
+            "versions": [
+              {
+                "version": "12.2.1.4.0",
+                "status": "affected",
+                "versionType": "semver"
+              },
+              {
+                "version": "14.1.2.0.0",
+                "status": "affected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:webcenter_content__imaging:12.2.1.4.0:*:*:*:*:*:*:*"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:webcenter_content__imaging:14.1.2.0.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en-US",
+            "value": "Vulnerability in the WebCenter Content: Imaging product of Oracle Fusion Middleware (component: Core).  Supported versions that are affected are 12.2.1.4.0 and  14.1.2.0.0. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise WebCenter Content: Imaging.  Successful attacks of this vulnerability can result in takeover of WebCenter Content: Imaging. CVSS 3.1 Base Score 8.8 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujul2026.html",
+            "name": "Oracle Advisory",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-60472"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-07-24T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-60472"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-07-25T03:55:34.884Z"
+          }
+        }
+      ]
+    }
+  }
+]
