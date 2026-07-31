@@ -1,0 +1,3329 @@
+[Fri Jul 31 08:55:53 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Red Hat Web Terminal Operator 1.13.0 has been released.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The Web Terminal provides a way to access a fully in-browser terminal emulator within the OpenShift Console. Command-line tools for interacting with the OpenShift cluster are pre-installed.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:8338",
+          "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61726",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61729",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-68121",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-25679",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-27137",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-27137"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-33186",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-33186"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-366",
+          "url": "https://redhat.atlassian.net/browse/WTO-366"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-371",
+          "url": "https://redhat.atlassian.net/browse/WTO-371"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-375",
+          "url": "https://redhat.atlassian.net/browse/WTO-375"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-381",
+          "url": "https://redhat.atlassian.net/browse/WTO-381"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-386",
+          "url": "https://redhat.atlassian.net/browse/WTO-386"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-391",
+          "url": "https://redhat.atlassian.net/browse/WTO-391"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-396",
+          "url": "https://redhat.atlassian.net/browse/WTO-396"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_8338.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Web Terminal Operator 1.13.0 release.",
+      "tracking": {
+        "current_release_date": "2026-07-31T08:16:19+00:00",
+        "generator": {
+          "date": "2026-07-31T08:16:19+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.8"
+          }
+        },
+        "id": "RHSA-2026:8338",
+        "initial_release_date": "2026-04-15T18:17:16+00:00",
+        "revision_history": [
+          {
+            "date": "2026-04-15T18:17:16+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-07-25T05:39:32+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-31T08:16:19+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Web Terminal 1.13",
+                  "product": {
+                    "name": "Red Hat Web Terminal 1.13",
+                    "product_id": "Red Hat Web Terminal 1.13",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:webterminal:1.13::el9"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Web Terminal"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-exec-rhel9@sha256%3A33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776197785"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-rhel9-operator@sha256%3Ac9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776197691"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-operator-bundle@sha256%3A54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776197674"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-tooling-rhel9@sha256%3A790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776197792"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "amd64"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64 as a component of Red Hat Web Terminal 1.13",
+            "product_id": "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.13"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64 as a component of Red Hat Web Terminal 1.13",
+            "product_id": "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.13"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64 as a component of Red Hat Web Terminal 1.13",
+            "product_id": "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.13"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64 as a component of Red Hat Web Terminal 1.13",
+            "product_id": "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.13"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:17:16+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.18 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in golang. A remote attacker could exploit this vulnerability by providing a specially crafted certificate during the error string construction process within the `HostnameError.Error()` function. This flaw, caused by unbounded string concatenation, leads to excessive resource consumption. Successful exploitation can result in a denial of service (DoS) for the affected system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:17:16+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.18 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      },
+      {
+        "cve": "CVE-2025-68121",
+        "discovery_date": "2026-02-05T18:01:30.086058+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2437111"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the crypto/tls component. This vulnerability occurs during Transport Layer Security (TLS) session resumption when certificate authority (CA) settings are modified between the initial and resumed handshakes. An attacker could exploit this to bypass certificate validation, allowing a client or server to establish a connection that should have been rejected. This could lead to an authentication bypass under specific conditions.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This is a moderate flaw because it only occurs under specific conditions, such as TLS session resumption with runtime changes to certificate authority settings. Exploitation is not straightforward and requires a controlled setup. The impact is limited to certificate validation within the same component and does not affect system availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2437111",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-68121",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/737700",
+            "url": "https://go.dev/cl/737700"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77217",
+            "url": "https://go.dev/issue/77217"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337"
+          }
+        ],
+        "release_date": "2026-02-05T17:48:44.141000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:17:16+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.18 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption"
+      },
+      {
+        "cve": "CVE-2026-25679",
+        "cwe": {
+          "id": "CWE-1286",
+          "name": "Improper Validation of Syntactic Correctness of Input"
+        },
+        "discovery_date": "2026-03-06T22:02:11.567841+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445356"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "The Go standard library function net/url.Parse insufficiently validated the host/authority component and accepted some invalid URLs by effectively treating garbage before an IP-literal as ignorable. The function should have rejected this as invalid.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "net/url: Incorrect parsing of IPv6 host literals in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445356",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445356"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-25679",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752180",
+            "url": "https://go.dev/cl/752180"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77578",
+            "url": "https://go.dev/issue/77578"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4601",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4601"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:14.211000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:17:16+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.18 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "net/url: Incorrect parsing of IPv6 host literals in net/url"
+      },
+      {
+        "cve": "CVE-2026-27137",
+        "cwe": {
+          "id": "CWE-295",
+          "name": "Improper Certificate Validation"
+        },
+        "discovery_date": "2026-03-06T22:01:38.859733+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445345"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A certificate validation flaw has been discovered in the golang crypto/x509 module. When verifying a certificate chain which contains a certificate containing multiple email address constraints which share common local portions but different domain portions, these constraints will not be properly applied, and only the last constraint will be considered.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: Incorrect enforcement of email constraints in crypto/x509",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445345",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445345"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-27137",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-27137",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752182",
+            "url": "https://go.dev/cl/752182"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77952",
+            "url": "https://go.dev/issue/77952"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4599",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4599"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:13.748000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:17:16+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.18 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: Incorrect enforcement of email constraints in crypto/x509"
+      },
+      {
+        "cve": "CVE-2026-33186",
+        "cwe": {
+          "id": "CWE-551",
+          "name": "Incorrect Behavior Order: Authorization Before Parsing and Canonicalization"
+        },
+        "discovery_date": "2026-03-20T23:02:27.802640+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2449833"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in gRPC-Go, the Go language implementation of gRPC. This vulnerability, an authorization bypass, is caused by improper input validation of the HTTP/2 `:path` pseudo-header. A remote attacker can exploit this by sending raw HTTP/2 frames with a malformed `:path` that omits the mandatory leading slash. This allows the attacker to bypass defined security policies, potentially leading to unauthorized access to services or information disclosure.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "google.golang.org/grpc/grpc-go: google.golang.org/grpc/authz: gRPC-Go: Authorization bypass due to improper HTTP/2 path validation",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+            "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-33186"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2449833",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2449833"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-33186",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-33186"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-33186",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33186"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/grpc/grpc-go/security/advisories/GHSA-p77j-4mvh-x3m3",
+            "url": "https://github.com/grpc/grpc-go/security/advisories/GHSA-p77j-4mvh-x3m3"
+          }
+        ],
+        "release_date": "2026-03-20T22:23:32.147000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:17:16+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.18 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8338"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this issue, implement infrastructure-level normalization to ensure all incoming HTTP/2 `:path` headers are properly formatted with a leading slash before reaching the gRPC-Go server. This can be achieved by configuring a reverse proxy or API gateway to validate and normalize the `:path` header. Ensure that any such intermediary is properly configured and restarted to apply the changes, which may temporarily impact service availability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:33aedbb88539c99ebf0a85e99a1f0b7e681f69a9ee281e88c5ff214e54d85d8a_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:54ef39794ebdb90596e4666bb89e23a4fad8fe8cdc79eb825f1c57af5af9951b_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:c9e040ffac9873b07f37d29b8c83cbebf5f380d94c46be86ad63798afe8ba363_amd64",
+              "Red Hat Web Terminal 1.13:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:790b2a87d81149568d58618db96e7804068b2bc112ff9313e0a06e95ac9841de_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "google.golang.org/grpc/grpc-go: google.golang.org/grpc/authz: gRPC-Go: Authorization bypass due to improper HTTP/2 path validation"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:8338"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Red Hat Web Terminal Operator 1.14.0 has been released.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The Web Terminal provides a way to access a fully in-browser terminal emulator within the OpenShift Console. Command-line tools for interacting with the OpenShift cluster are pre-installed.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:8337",
+          "url": "https://access.redhat.com/errata/RHSA-2026:8337"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61726",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61729",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-68121",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-25679",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-27137",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-27137"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-367",
+          "url": "https://redhat.atlassian.net/browse/WTO-367"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-372",
+          "url": "https://redhat.atlassian.net/browse/WTO-372"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-376",
+          "url": "https://redhat.atlassian.net/browse/WTO-376"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-382",
+          "url": "https://redhat.atlassian.net/browse/WTO-382"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-388",
+          "url": "https://redhat.atlassian.net/browse/WTO-388"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-392",
+          "url": "https://redhat.atlassian.net/browse/WTO-392"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_8337.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Web Terminal Operator 1.14.0 release.",
+      "tracking": {
+        "current_release_date": "2026-07-31T08:16:19+00:00",
+        "generator": {
+          "date": "2026-07-31T08:16:19+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.8"
+          }
+        },
+        "id": "RHSA-2026:8337",
+        "initial_release_date": "2026-04-15T18:11:57+00:00",
+        "revision_history": [
+          {
+            "date": "2026-04-15T18:11:57+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-07-25T05:39:32+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-31T08:16:19+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Web Terminal 1.14",
+                  "product": {
+                    "name": "Red Hat Web Terminal 1.14",
+                    "product_id": "Red Hat Web Terminal 1.14",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:webterminal:1.14::el9"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Web Terminal"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-exec-rhel9@sha256%3A3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776199398"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-rhel9-operator@sha256%3A7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776199421"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-operator-bundle@sha256%3Af729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776199340"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-tooling-rhel9@sha256%3Ad066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1776199491"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "amd64"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64 as a component of Red Hat Web Terminal 1.14",
+            "product_id": "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.14"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64 as a component of Red Hat Web Terminal 1.14",
+            "product_id": "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.14"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64 as a component of Red Hat Web Terminal 1.14",
+            "product_id": "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.14"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64 as a component of Red Hat Web Terminal 1.14",
+            "product_id": "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.14"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:11:57+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.19 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8337"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in golang. A remote attacker could exploit this vulnerability by providing a specially crafted certificate during the error string construction process within the `HostnameError.Error()` function. This flaw, caused by unbounded string concatenation, leads to excessive resource consumption. Successful exploitation can result in a denial of service (DoS) for the affected system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:11:57+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.19 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8337"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      },
+      {
+        "cve": "CVE-2025-68121",
+        "discovery_date": "2026-02-05T18:01:30.086058+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2437111"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the crypto/tls component. This vulnerability occurs during Transport Layer Security (TLS) session resumption when certificate authority (CA) settings are modified between the initial and resumed handshakes. An attacker could exploit this to bypass certificate validation, allowing a client or server to establish a connection that should have been rejected. This could lead to an authentication bypass under specific conditions.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This is a moderate flaw because it only occurs under specific conditions, such as TLS session resumption with runtime changes to certificate authority settings. Exploitation is not straightforward and requires a controlled setup. The impact is limited to certificate validation within the same component and does not affect system availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2437111",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-68121",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/737700",
+            "url": "https://go.dev/cl/737700"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77217",
+            "url": "https://go.dev/issue/77217"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337"
+          }
+        ],
+        "release_date": "2026-02-05T17:48:44.141000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:11:57+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.19 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8337"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption"
+      },
+      {
+        "cve": "CVE-2026-25679",
+        "cwe": {
+          "id": "CWE-1286",
+          "name": "Improper Validation of Syntactic Correctness of Input"
+        },
+        "discovery_date": "2026-03-06T22:02:11.567841+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445356"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "The Go standard library function net/url.Parse insufficiently validated the host/authority component and accepted some invalid URLs by effectively treating garbage before an IP-literal as ignorable. The function should have rejected this as invalid.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "net/url: Incorrect parsing of IPv6 host literals in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445356",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445356"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-25679",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752180",
+            "url": "https://go.dev/cl/752180"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77578",
+            "url": "https://go.dev/issue/77578"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4601",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4601"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:14.211000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:11:57+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.19 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8337"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "net/url: Incorrect parsing of IPv6 host literals in net/url"
+      },
+      {
+        "cve": "CVE-2026-27137",
+        "cwe": {
+          "id": "CWE-295",
+          "name": "Improper Certificate Validation"
+        },
+        "discovery_date": "2026-03-06T22:01:38.859733+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445345"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A certificate validation flaw has been discovered in the golang crypto/x509 module. When verifying a certificate chain which contains a certificate containing multiple email address constraints which share common local portions but different domain portions, these constraints will not be properly applied, and only the last constraint will be considered.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: Incorrect enforcement of email constraints in crypto/x509",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+            "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445345",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445345"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-27137",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-27137",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752182",
+            "url": "https://go.dev/cl/752182"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77952",
+            "url": "https://go.dev/issue/77952"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4599",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4599"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:13.748000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-15T18:11:57+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.19 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8337"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:3c82f905387f86f41d9b8d0acd2a27b448d050bee44c2d2f37f98fefc907a7a3_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:f729c368c8c4024a93c6cb8e46a45d1e2d6e99df5cedbc1e613a4798f5cbbfb2_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:7ea6fdd34e982d2bcd7239936c7322c3d91173ce50a932e05b8995d008625cf6_amd64",
+              "Red Hat Web Terminal 1.14:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:d066e6bf5de5495db36fae45c2fe16b2362c2a9142248371d73283e76ac62ce0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: Incorrect enforcement of email constraints in crypto/x509"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:8337"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "Red Hat Web Terminal Operator 1.15.0 has been released.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The Web Terminal provides a way to access a fully in-browser terminal emulator within the OpenShift Console. Command-line tools for interacting with the OpenShift cluster are pre-installed.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:8167",
+          "url": "https://access.redhat.com/errata/RHSA-2026:8167"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61726",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61729",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-68121",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-25679",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-27137",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-27137"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-368",
+          "url": "https://redhat.atlassian.net/browse/WTO-368"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-373",
+          "url": "https://redhat.atlassian.net/browse/WTO-373"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-377",
+          "url": "https://redhat.atlassian.net/browse/WTO-377"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-383",
+          "url": "https://redhat.atlassian.net/browse/WTO-383"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-390",
+          "url": "https://redhat.atlassian.net/browse/WTO-390"
+        },
+        {
+          "category": "external",
+          "summary": "https://redhat.atlassian.net/browse/WTO-393",
+          "url": "https://redhat.atlassian.net/browse/WTO-393"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_8167.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Web Terminal Operator 1.15.0 release.",
+      "tracking": {
+        "current_release_date": "2026-07-31T08:16:17+00:00",
+        "generator": {
+          "date": "2026-07-31T08:16:17+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.8"
+          }
+        },
+        "id": "RHSA-2026:8167",
+        "initial_release_date": "2026-04-14T18:58:52+00:00",
+        "revision_history": [
+          {
+            "date": "2026-04-14T18:58:52+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-07-25T05:39:32+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-07-31T08:16:17+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Web Terminal 1.15",
+                  "product": {
+                    "name": "Red Hat Web Terminal 1.15",
+                    "product_id": "Red Hat Web Terminal 1.15",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:webterminal:1.15::el9"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Web Terminal"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-exec-rhel9@sha256%3A1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1775672762"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-rhel9-operator@sha256%3Aa531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1775672765"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-operator-bundle@sha256%3A69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1775672724"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64",
+                  "product": {
+                    "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64",
+                    "product_id": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64",
+                    "product_identification_helper": {
+                      "purl": "pkg:oci/web-terminal-tooling-rhel9@sha256%3A4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0?arch=amd64&repository_url=registry.redhat.io/web-terminal&tag=1775672831"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "amd64"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64 as a component of Red Hat Web Terminal 1.15",
+            "product_id": "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.15"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64 as a component of Red Hat Web Terminal 1.15",
+            "product_id": "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.15"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64 as a component of Red Hat Web Terminal 1.15",
+            "product_id": "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.15"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64 as a component of Red Hat Web Terminal 1.15",
+            "product_id": "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+          },
+          "product_reference": "registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64",
+          "relates_to_product_reference": "Red Hat Web Terminal 1.15"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61726",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2026-01-28T20:01:42.791305+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2434432"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the net/url package in the Go standard library. The package does not enforce a limit on the number of unique query parameters it parses. A Go application using the net/http.Request.ParseForm method will try to process all parameters provided in the request. A specially crafted HTTP request containing a massive number of query parameters will cause the application to consume an excessive amount of memory, eventually causing the application to crash or become unresponsive, resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: net/url: Memory exhaustion in query parameter parsing in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this flaw, an attacker must be able to send a specially crafted HTTP request to an application parsing URL-encoded forms with net/url, specifically a request containing a large number of unique query parameters. The request will cause the application to consume an excessive amount of memory and eventually result in a denial of service, with no impact to confidentiality or integrity. Due to this reason, this vulnerability has been rated with an important severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2434432",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2434432"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61726",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61726"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/736712",
+            "url": "https://go.dev/cl/736712"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77101",
+            "url": "https://go.dev/issue/77101"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc",
+            "url": "https://groups.google.com/g/golang-announce/c/Vd2tYVM8eUc"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4341",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4341"
+          }
+        ],
+        "release_date": "2026-01-28T19:30:31.215000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-14T18:58:52+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.20 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8167"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat has investigated whether a possible mitigation exists for this issue, and has not been able to identify a practical example. Please update the affected package as soon as possible.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "golang: net/url: Memory exhaustion in query parameter parsing in net/url"
+      },
+      {
+        "cve": "CVE-2025-61729",
+        "cwe": {
+          "id": "CWE-1050",
+          "name": "Excessive Platform Resource Consumption within a Loop"
+        },
+        "discovery_date": "2025-12-02T20:01:45.330964+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418462"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in golang. A remote attacker could exploit this vulnerability by providing a specially crafted certificate during the error string construction process within the `HostnameError.Error()` function. This flaw, caused by unbounded string concatenation, leads to excessive resource consumption. Successful exploitation can result in a denial of service (DoS) for the affected system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418462",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418462"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61729",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61729"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/725920",
+            "url": "https://go.dev/cl/725920"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76445",
+            "url": "https://go.dev/issue/76445"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4155",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4155"
+          }
+        ],
+        "release_date": "2025-12-02T18:54:10.166000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-14T18:58:52+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.20 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8167"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: golang: Denial of Service due to excessive resource consumption via crafted certificate"
+      },
+      {
+        "cve": "CVE-2025-68121",
+        "discovery_date": "2026-02-05T18:01:30.086058+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2437111"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the crypto/tls component. This vulnerability occurs during Transport Layer Security (TLS) session resumption when certificate authority (CA) settings are modified between the initial and resumed handshakes. An attacker could exploit this to bypass certificate validation, allowing a client or server to establish a connection that should have been rejected. This could lead to an authentication bypass under specific conditions.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This is a moderate flaw because it only occurs under specific conditions, such as TLS session resumption with runtime changes to certificate authority settings. Exploitation is not straightforward and requires a controlled setup. The impact is limited to certificate validation within the same component and does not affect system availability.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2437111",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2437111"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-68121",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-68121"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/737700",
+            "url": "https://go.dev/cl/737700"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77217",
+            "url": "https://go.dev/issue/77217"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337"
+          }
+        ],
+        "release_date": "2026-02-05T17:48:44.141000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-14T18:58:52+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.20 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8167"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "crypto/tls: crypto/tls: Incorrect certificate validation during TLS session resumption"
+      },
+      {
+        "cve": "CVE-2026-25679",
+        "cwe": {
+          "id": "CWE-1286",
+          "name": "Improper Validation of Syntactic Correctness of Input"
+        },
+        "discovery_date": "2026-03-06T22:02:11.567841+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445356"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "The Go standard library function net/url.Parse insufficiently validated the host/authority component and accepted some invalid URLs by effectively treating garbage before an IP-literal as ignorable. The function should have rejected this as invalid.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "net/url: Incorrect parsing of IPv6 host literals in net/url",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445356",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445356"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-25679",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25679"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752180",
+            "url": "https://go.dev/cl/752180"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77578",
+            "url": "https://go.dev/issue/77578"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4601",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4601"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:14.211000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-14T18:58:52+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.20 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8167"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "net/url: Incorrect parsing of IPv6 host literals in net/url"
+      },
+      {
+        "cve": "CVE-2026-27137",
+        "cwe": {
+          "id": "CWE-295",
+          "name": "Improper Certificate Validation"
+        },
+        "discovery_date": "2026-03-06T22:01:38.859733+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2445345"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A certificate validation flaw has been discovered in the golang crypto/x509 module. When verifying a certificate chain which contains a certificate containing multiple email address constraints which share common local portions but different domain portions, these constraints will not be properly applied, and only the last constraint will be considered.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "crypto/x509: Incorrect enforcement of email constraints in crypto/x509",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+          ],
+          "known_not_affected": [
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+            "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2445345",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2445345"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-27137",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-27137",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27137"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/752182",
+            "url": "https://go.dev/cl/752182"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/77952",
+            "url": "https://go.dev/issue/77952"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk",
+            "url": "https://groups.google.com/g/golang-announce/c/EdhZqrQ98hk"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2026-4599",
+            "url": "https://pkg.go.dev/vuln/GO-2026-4599"
+          }
+        ],
+        "release_date": "2026-03-06T21:28:13.748000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-14T18:58:52+00:00",
+            "details": "To start using the Web Terminal Operator, install the Web Terminal Operator from OpenShift OperatorHub on OpenShift Container Platform 4.20 or higher.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8167"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-exec-rhel9@sha256:1a4e4ddfdd6f353c67172dec6b6d5e3c07d3f67410d537066e2b0321b044698a_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-operator-bundle@sha256:69bbe9115e6a686bf3efba029c4d27fe87a003745536db3a80abe7466398206d_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-rhel9-operator@sha256:a531c9a89a0ddf261241c353de8866f6609b535e3dbaf05bf3ff410234398d7b_amd64",
+              "Red Hat Web Terminal 1.15:registry.redhat.io/web-terminal/web-terminal-tooling-rhel9@sha256:4c3d303dca13ac5383927d0c428b9418a6009e2b8ee686b1f246c94b783e02b0_amd64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "crypto/x509: Incorrect enforcement of email constraints in crypto/x509"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:8167"
+          }
+        ]
+      }
+    }
+  }
+]
