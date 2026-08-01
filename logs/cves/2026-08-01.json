@@ -18300,3 +18300,443 @@
     }
   }
 ]
+[Sat Aug  1 08:27:00 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-15932",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-07-16T07:53:32.791Z",
+      "datePublished": "2026-08-01T06:00:07.998Z",
+      "dateUpdated": "2026-08-01T06:00:07.998Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-08-01T06:00:07.998Z"
+        },
+        "title": "Support Genix Lite < 1.4.48 - Unauthenticated Arbitrary File Read via Path Traversal",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "Support Genix",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThan": "1.4.48"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Support Genix  WordPress plugin before 1.4.48 does not prevent directory traversal in its ticket-attachment download route, allowing unauthenticated attackers to read arbitrary files with an allowlisted extension — including other users' private ticket attachments — from the server."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/d03887a5-1a0e-4097-8dfa-7899aae8a6d5/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Artus KG",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-15932"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-15368",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-07-10T07:53:39.566Z",
+      "datePublished": "2026-08-01T06:00:09.399Z",
+      "dateUpdated": "2026-08-01T06:00:09.399Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-08-01T06:00:09.399Z"
+        },
+        "title": "Profile Builder < 3.16.4 - Unauthenticated Account Takeover via Auto-Login After Registration",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-269 Improper Privilege Management",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "User Profile Builder",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThan": "3.16.4"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The User Profile Builder  WordPress plugin before 3.16.4 does not correctly bind the automatic login performed after user registration to the newly created account, allowing unauthenticated attackers to obtain an authenticated session for an arbitrary existing user, including administrators, on sites using a supported but non-default configuration."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/df1eb738-15bf-4f8b-aa06-e0a42f1e9c2e/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Jakub Herman",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-15368"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-15262",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-07-09T13:46:18.376Z",
+      "datePublished": "2026-08-01T06:00:10.257Z",
+      "dateUpdated": "2026-08-01T06:00:10.257Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-08-01T06:00:10.257Z"
+        },
+        "title": "Admin Columns for ACF Fields <= 0.3.2 - Contributor+ Stored XSS via ACF Field Value Column",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-79 Cross-Site Scripting (XSS)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "Admin Columns for ACF Fields",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThanOrEqual": "0.3.2"
+              }
+            ],
+            "defaultStatus": "unknown"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Admin Columns for ACF Fields WordPress plugin through 0.3.2 does not escape Advanced Custom Fields values before outputting them in the WordPress admin list-table columns, allowing users with contributor-level access or above to store a payload that executes as JavaScript in the session of higher-privileged users who view the affected post-list screen."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/dea1f3a9-2681-47a6-9e36-9d6ea799decb/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Shivamani Vastrala",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-15262"
+          }
+        ]
+      }
+    }
+  }
+]
