@@ -1,0 +1,3679 @@
+[Sun Aug  9 02:03:09 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for podman is now available for Red Hat Enterprise Linux 9.6 Extended Update Support.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The podman tool manages pods, container images, and containers. It is part of the libpod library, which is for applications that use container pods. Container pods is a concept in Kubernetes.\n\nSecurity Fix(es):\n\n* runc: container escape and denial of service due to arbitrary write gadgets and procfs write redirects (CVE-2025-52881)\n\n* golang: archive/tar: Unbounded allocation when parsing GNU sparse map (CVE-2025-58183)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:22030",
+          "url": "https://access.redhat.com/errata/RHSA-2025:22030"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2404715",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404715"
+        },
+        {
+          "category": "external",
+          "summary": "2407258",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2407258"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_22030.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: podman security update",
+      "tracking": {
+        "current_release_date": "2026-08-09T01:22:45+00:00",
+        "generator": {
+          "date": "2026-08-09T01:22:45+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.12"
+          }
+        },
+        "id": "RHSA-2025:22030",
+        "initial_release_date": "2025-11-25T08:02:25+00:00",
+        "revision_history": [
+          {
+            "date": "2025-11-25T08:02:25+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-11-25T08:02:25+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-09T01:22:45+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+                    "product_id": "AppStream-9.6.0.Z.EUS",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhel_eus:9.6::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "podman-5:5.4.0-15.el9_6.src",
+                  "product": {
+                    "name": "podman-5:5.4.0-15.el9_6.src",
+                    "product_id": "podman-5:5.4.0-15.el9_6.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman@5.4.0-15.el9_6?arch=src&epoch=5"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "podman-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-plugins-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-plugins-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-remote-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-remote-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-tests-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-tests-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debugsource@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debuginfo@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins-debuginfo@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote-debuginfo@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                  "product": {
+                    "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_id": "podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests-debuginfo@5.4.0-15.el9_6?arch=aarch64&epoch=5"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "podman-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-remote-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-remote-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-tests-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-tests-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debugsource@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debuginfo@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins-debuginfo@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote-debuginfo@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                  "product": {
+                    "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_id": "podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests-debuginfo@5.4.0-15.el9_6?arch=ppc64le&epoch=5"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "podman-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-plugins-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-plugins-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-remote-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-remote-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-tests-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-tests-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debugsource@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debuginfo@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins-debuginfo@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote-debuginfo@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                  "product": {
+                    "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_id": "podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests-debuginfo@5.4.0-15.el9_6?arch=x86_64&epoch=5"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "podman-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-plugins-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-plugins-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-remote-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-remote-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-tests-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-tests-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debugsource-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-debugsource-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-debugsource-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debugsource@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-debuginfo@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-plugins-debuginfo@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-remote-debuginfo@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+                  "product": {
+                    "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_id": "podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-tests-debuginfo@5.4.0-15.el9_6?arch=s390x&epoch=5"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "podman-docker-5:5.4.0-15.el9_6.noarch",
+                  "product": {
+                    "name": "podman-docker-5:5.4.0-15.el9_6.noarch",
+                    "product_id": "podman-docker-5:5.4.0-15.el9_6.noarch",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/podman-docker@5.4.0-15.el9_6?arch=noarch&epoch=5"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "noarch"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-5:5.4.0-15.el9_6.src as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src"
+          },
+          "product_reference": "podman-5:5.4.0-15.el9_6.src",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debuginfo-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debuginfo-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debuginfo-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debuginfo-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debugsource-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debugsource-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debugsource-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-debugsource-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-debugsource-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-docker-5:5.4.0-15.el9_6.noarch as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch"
+          },
+          "product_reference": "podman-docker-5:5.4.0-15.el9_6.noarch",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-plugins-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-plugins-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-plugins-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-remote-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-remote-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-remote-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-remote-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-tests-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-tests-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-tests-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-tests-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64"
+          },
+          "product_reference": "podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le"
+          },
+          "product_reference": "podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x"
+          },
+          "product_reference": "podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64 as a component of Red Hat Enterprise Linux AppStream EUS (v.9.6)",
+            "product_id": "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+          },
+          "product_reference": "podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64",
+          "relates_to_product_reference": "AppStream-9.6.0.Z.EUS"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-52881",
+        "cwe": {
+          "id": "CWE-59",
+          "name": "Improper Link Resolution Before File Access ('Link Following')"
+        },
+        "discovery_date": "2025-10-17T14:19:18.652000+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2404715"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in runc. This attack is a more sophisticated variant of CVE-2019-16884, which was a flaw that allowed an attacker to trick runc into writing the LSM process labels for a container process into a dummy tmpfs file and thus not apply the correct LSM labels to the container process. The mitigation applied for CVE-2019-16884 was fairly limited and effectively only caused runc to verify that when we write LSM labels that those labels are actual procfs files.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Red Hat considers this as an Important flaw since the impact is limited to local attack with minimal privileges in order to jeopardize the environment.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2404715",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404715"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-52881",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-52881",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm",
+            "url": "https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/opencontainers/selinux/pull/237",
+            "url": "https://github.com/opencontainers/selinux/pull/237"
+          }
+        ],
+        "release_date": "2025-11-05T09:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-11-25T08:02:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:22030"
+          },
+          {
+            "category": "workaround",
+            "details": "Potential mitigations for this issue include:\n\n* Using rootless containers, as doing so will block most of the inadvertent writes (runc would run with reduced privileges, making attempts to write to procfs files ineffective).\n* Based on our analysis, neither AppArmor or SELinux can protect against the full version of the redirected write attack. The container runtime is generally privileged enough to write to arbitrary procfs files, which is more than sufficient to cause a container breakout.",
+            "product_ids": [
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects"
+      },
+      {
+        "cve": "CVE-2025-58183",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2025-10-29T23:01:50.573951+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2407258"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the archive/tar package in the Go standard library. tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A specially crafted tar archive with a pax header indicating a big number of sparse regions can cause a Go program to try to allocate a large amount of memory, causing an out-of-memory condition and resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this issue, an attacker needs to be able to process a specially crafted GNU tar pax 1.0 archive with the application using the archive/tar package. Additionally, this issue can cause the Go application to allocate a large amount of memory, eventually leading to an out-of-memory condition and resulting in a denial of service with no other security impact. Due to these reasons, this flaw has been rated with a moderate severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+            "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+            "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2407258",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2407258"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-58183",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/709861",
+            "url": "https://go.dev/cl/709861"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/75677",
+            "url": "https://go.dev/issue/75677"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "url": "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4014",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4014"
+          }
+        ],
+        "release_date": "2025-10-29T22:10:14.376000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-11-25T08:02:25+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:22030"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.src",
+              "AppStream-9.6.0.Z.EUS:podman-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-debugsource-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-docker-5:5.4.0-15.el9_6.noarch",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-plugins-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-remote-debuginfo-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-5:5.4.0-15.el9_6.x86_64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.aarch64",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.ppc64le",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.s390x",
+              "AppStream-9.6.0.Z.EUS:podman-tests-debuginfo-5:5.4.0-15.el9_6.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2025:22030"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for buildah is now available for Red Hat Enterprise Linux 10.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The buildah package provides a tool for facilitating building OCI container images. Among other things, buildah enables you to: Create a working container, either from scratch or using an image as a starting point; Create an image, either from a working container or using the instructions in a Dockerfile; Build both Docker and OCI images. \n\nSecurity Fix(es):\n\n* runc: container escape and denial of service due to arbitrary write gadgets and procfs write redirects (CVE-2025-52881)\n\n* golang: archive/tar: Unbounded allocation when parsing GNU sparse map (CVE-2025-58183)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:22012",
+          "url": "https://access.redhat.com/errata/RHSA-2025:22012"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2404715",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404715"
+        },
+        {
+          "category": "external",
+          "summary": "2407258",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2407258"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_22012.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: buildah security update",
+      "tracking": {
+        "current_release_date": "2026-08-09T01:22:43+00:00",
+        "generator": {
+          "date": "2026-08-09T01:22:43+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.12"
+          }
+        },
+        "id": "RHSA-2025:22012",
+        "initial_release_date": "2025-11-25T05:03:24+00:00",
+        "revision_history": [
+          {
+            "date": "2025-11-25T05:03:24+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-11-25T05:03:24+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-09T01:22:43+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 10)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 10)",
+                    "product_id": "AppStream-10.1.Z",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/o:redhat:enterprise_linux:10.1"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el10_1.src",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el10_1.src",
+                    "product_id": "buildah-2:1.41.6-1.el10_1.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el10_1?arch=src&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el10_1.aarch64",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el10_1.aarch64",
+                    "product_id": "buildah-2:1.41.6-1.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el10_1?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el10_1.aarch64",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el10_1.aarch64",
+                    "product_id": "buildah-tests-2:1.41.6-1.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el10_1?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el10_1?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el10_1?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el10_1?arch=aarch64&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el10_1.ppc64le",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el10_1.ppc64le",
+                    "product_id": "buildah-2:1.41.6-1.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el10_1?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+                    "product_id": "buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el10_1?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el10_1?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el10_1?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el10_1?arch=ppc64le&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el10_1.x86_64",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el10_1.x86_64",
+                    "product_id": "buildah-2:1.41.6-1.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el10_1?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el10_1.x86_64",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el10_1.x86_64",
+                    "product_id": "buildah-tests-2:1.41.6-1.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el10_1?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el10_1?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el10_1?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el10_1?arch=x86_64&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el10_1.s390x",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el10_1.s390x",
+                    "product_id": "buildah-2:1.41.6-1.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el10_1?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el10_1.s390x",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el10_1.s390x",
+                    "product_id": "buildah-tests-2:1.41.6-1.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el10_1?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el10_1?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el10_1?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el10_1?arch=s390x&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el10_1.src as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el10_1.src",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 10)",
+            "product_id": "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64",
+          "relates_to_product_reference": "AppStream-10.1.Z"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-52881",
+        "cwe": {
+          "id": "CWE-59",
+          "name": "Improper Link Resolution Before File Access ('Link Following')"
+        },
+        "discovery_date": "2025-10-17T14:19:18.652000+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2404715"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in runc. This attack is a more sophisticated variant of CVE-2019-16884, which was a flaw that allowed an attacker to trick runc into writing the LSM process labels for a container process into a dummy tmpfs file and thus not apply the correct LSM labels to the container process. The mitigation applied for CVE-2019-16884 was fairly limited and effectively only caused runc to verify that when we write LSM labels that those labels are actual procfs files.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Red Hat considers this as an Important flaw since the impact is limited to local attack with minimal privileges in order to jeopardize the environment.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2404715",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404715"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-52881",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-52881",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm",
+            "url": "https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/opencontainers/selinux/pull/237",
+            "url": "https://github.com/opencontainers/selinux/pull/237"
+          }
+        ],
+        "release_date": "2025-11-05T09:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-11-25T05:03:24+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:22012"
+          },
+          {
+            "category": "workaround",
+            "details": "Potential mitigations for this issue include:\n\n* Using rootless containers, as doing so will block most of the inadvertent writes (runc would run with reduced privileges, making attempts to write to procfs files ineffective).\n* Based on our analysis, neither AppArmor or SELinux can protect against the full version of the redirected write attack. The container runtime is generally privileged enough to write to arbitrary procfs files, which is more than sufficient to cause a container breakout.",
+            "product_ids": [
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects"
+      },
+      {
+        "cve": "CVE-2025-58183",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2025-10-29T23:01:50.573951+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2407258"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the archive/tar package in the Go standard library. tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A specially crafted tar archive with a pax header indicating a big number of sparse regions can cause a Go program to try to allocate a large amount of memory, causing an out-of-memory condition and resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this issue, an attacker needs to be able to process a specially crafted GNU tar pax 1.0 archive with the application using the archive/tar package. Additionally, this issue can cause the Go application to allocate a large amount of memory, eventually leading to an out-of-memory condition and resulting in a denial of service with no other security impact. Due to these reasons, this flaw has been rated with a moderate severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+            "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+            "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2407258",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2407258"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-58183",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/709861",
+            "url": "https://go.dev/cl/709861"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/75677",
+            "url": "https://go.dev/issue/75677"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "url": "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4014",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4014"
+          }
+        ],
+        "release_date": "2025-10-29T22:10:14.376000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-11-25T05:03:24+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:22012"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.src",
+              "AppStream-10.1.Z:buildah-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debuginfo-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-debugsource-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-2:1.41.6-1.el10_1.x86_64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.aarch64",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.ppc64le",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.s390x",
+              "AppStream-10.1.Z:buildah-tests-debuginfo-2:1.41.6-1.el10_1.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2025:22012"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for buildah is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Important. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The buildah package provides a tool for facilitating building OCI container images. Among other things, buildah enables you to: Create a working container, either from scratch or using an image as a starting point; Create an image, either from a working container or using the instructions in a Dockerfile; Build both Docker and OCI images. \n\nSecurity Fix(es):\n\n* runc: container escape and denial of service due to arbitrary write gadgets and procfs write redirects (CVE-2025-52881)\n\n* golang: archive/tar: Unbounded allocation when parsing GNU sparse map (CVE-2025-58183)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2025:22011",
+          "url": "https://access.redhat.com/errata/RHSA-2025:22011"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#important",
+          "url": "https://access.redhat.com/security/updates/classification/#important"
+        },
+        {
+          "category": "external",
+          "summary": "2404715",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404715"
+        },
+        {
+          "category": "external",
+          "summary": "2407258",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2407258"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2025/rhsa-2025_22011.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: buildah security update",
+      "tracking": {
+        "current_release_date": "2026-08-09T01:22:42+00:00",
+        "generator": {
+          "date": "2026-08-09T01:22:42+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.12"
+          }
+        },
+        "id": "RHSA-2025:22011",
+        "initial_release_date": "2025-11-25T05:23:44+00:00",
+        "revision_history": [
+          {
+            "date": "2025-11-25T05:23:44+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2025-11-25T05:23:44+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-09T01:22:42+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                    "product_id": "AppStream-9.7.0.Z.MAIN",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el9_7.src",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el9_7.src",
+                    "product_id": "buildah-2:1.41.6-1.el9_7.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el9_7?arch=src&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el9_7.aarch64",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el9_7.aarch64",
+                    "product_id": "buildah-2:1.41.6-1.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el9_7?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el9_7.aarch64",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el9_7.aarch64",
+                    "product_id": "buildah-tests-2:1.41.6-1.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el9_7?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el9_7?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el9_7?arch=aarch64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el9_7?arch=aarch64&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el9_7.ppc64le",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el9_7.ppc64le",
+                    "product_id": "buildah-2:1.41.6-1.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el9_7?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+                    "product_id": "buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el9_7?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el9_7?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el9_7?arch=ppc64le&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el9_7?arch=ppc64le&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el9_7.x86_64",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el9_7.x86_64",
+                    "product_id": "buildah-2:1.41.6-1.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el9_7?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el9_7.x86_64",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el9_7.x86_64",
+                    "product_id": "buildah-tests-2:1.41.6-1.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el9_7?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el9_7?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el9_7?arch=x86_64&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el9_7?arch=x86_64&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "buildah-2:1.41.6-1.el9_7.s390x",
+                  "product": {
+                    "name": "buildah-2:1.41.6-1.el9_7.s390x",
+                    "product_id": "buildah-2:1.41.6-1.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah@1.41.6-1.el9_7?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-2:1.41.6-1.el9_7.s390x",
+                  "product": {
+                    "name": "buildah-tests-2:1.41.6-1.el9_7.s390x",
+                    "product_id": "buildah-tests-2:1.41.6-1.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests@1.41.6-1.el9_7?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+                  "product": {
+                    "name": "buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+                    "product_id": "buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debugsource@1.41.6-1.el9_7?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+                  "product": {
+                    "name": "buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+                    "product_id": "buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-debuginfo@1.41.6-1.el9_7?arch=s390x&epoch=2"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+                  "product": {
+                    "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+                    "product_id": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/buildah-tests-debuginfo@1.41.6-1.el9_7?arch=s390x&epoch=2"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el9_7.src as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el9_7.src",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-2:1.41.6-1.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64"
+          },
+          "product_reference": "buildah-2:1.41.6-1.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debuginfo-2:1.41.6-1.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64"
+          },
+          "product_reference": "buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-debugsource-2:1.41.6-1.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64"
+          },
+          "product_reference": "buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-2:1.41.6-1.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64"
+          },
+          "product_reference": "buildah-tests-2:1.41.6-1.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+          },
+          "product_reference": "buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64",
+          "relates_to_product_reference": "AppStream-9.7.0.Z.MAIN"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-52881",
+        "cwe": {
+          "id": "CWE-59",
+          "name": "Improper Link Resolution Before File Access ('Link Following')"
+        },
+        "discovery_date": "2025-10-17T14:19:18.652000+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2404715"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in runc. This attack is a more sophisticated variant of CVE-2019-16884, which was a flaw that allowed an attacker to trick runc into writing the LSM process labels for a container process into a dummy tmpfs file and thus not apply the correct LSM labels to the container process. The mitigation applied for CVE-2019-16884 was fairly limited and effectively only caused runc to verify that when we write LSM labels that those labels are actual procfs files.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Red Hat considers this as an Important flaw since the impact is limited to local attack with minimal privileges in order to jeopardize the environment.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2404715",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2404715"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-52881",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-52881",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-52881"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm",
+            "url": "https://github.com/opencontainers/runc/security/advisories/GHSA-cgrx-mc8f-2prm"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/opencontainers/selinux/pull/237",
+            "url": "https://github.com/opencontainers/selinux/pull/237"
+          }
+        ],
+        "release_date": "2025-11-05T09:00:00+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-11-25T05:23:44+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:22011"
+          },
+          {
+            "category": "workaround",
+            "details": "Potential mitigations for this issue include:\n\n* Using rootless containers, as doing so will block most of the inadvertent writes (runc would run with reduced privileges, making attempts to write to procfs files ineffective).\n* Based on our analysis, neither AppArmor or SELinux can protect against the full version of the redirected write attack. The container runtime is generally privileged enough to write to arbitrary procfs files, which is more than sufficient to cause a container breakout.",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "runc: opencontainers/selinux: container escape and denial of service due to arbitrary write gadgets and procfs write redirects"
+      },
+      {
+        "cve": "CVE-2025-58183",
+        "cwe": {
+          "id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        },
+        "discovery_date": "2025-10-29T23:01:50.573951+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2407258"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the archive/tar package in the Go standard library. tar.Reader does not set a maximum size on the number of sparse region data blocks in GNU tar pax 1.0 sparse files. A specially crafted tar archive with a pax header indicating a big number of sparse regions can cause a Go program to try to allocate a large amount of memory, causing an out-of-memory condition and resulting in a denial of service.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this issue, an attacker needs to be able to process a specially crafted GNU tar pax 1.0 archive with the application using the archive/tar package. Additionally, this issue can cause the Go application to allocate a large amount of memory, eventually leading to an out-of-memory condition and resulting in a denial of service with no other security impact. Due to these reasons, this flaw has been rated with a moderate severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+            "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+            "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2407258",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2407258"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-58183",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-58183"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/709861",
+            "url": "https://go.dev/cl/709861"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/75677",
+            "url": "https://go.dev/issue/75677"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI",
+            "url": "https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4014",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4014"
+          }
+        ],
+        "release_date": "2025-10-29T22:10:14.376000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2025-11-25T05:23:44+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2025:22011"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.src",
+              "AppStream-9.7.0.Z.MAIN:buildah-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debuginfo-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-debugsource-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-2:1.41.6-1.el9_7.x86_64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.aarch64",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.ppc64le",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.s390x",
+              "AppStream-9.7.0.Z.MAIN:buildah-tests-debuginfo-2:1.41.6-1.el9_7.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "golang: archive/tar: Unbounded allocation when parsing GNU sparse map"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2025:22011"
+          }
+        ]
+      }
+    }
+  }
+]
