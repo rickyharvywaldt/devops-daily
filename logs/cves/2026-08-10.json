@@ -347,3 +347,2916 @@
     }
   }
 ]
+[Mon Aug 10 19:02:56 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Moderate"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for libgcrypt is now available for Red Hat Enterprise Linux 9.4 Update Services for SAP Solutions.\n\nRed Hat Product Security has rated this update as having a security impact of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The libgcrypt library provides general-purpose implementations of various cryptographic algorithms.\n\nSecurity Fix(es):\n\n* Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext (CVE-2026-41989)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:52952",
+          "url": "https://access.redhat.com/errata/RHSA-2026:52952"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#moderate",
+          "url": "https://access.redhat.com/security/updates/classification/#moderate"
+        },
+        {
+          "category": "external",
+          "summary": "2461063",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461063"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_52952.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: libgcrypt security update",
+      "tracking": {
+        "current_release_date": "2026-08-10T18:33:28+00:00",
+        "generator": {
+          "date": "2026-08-10T18:33:28+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.14"
+          }
+        },
+        "id": "RHSA-2026:52952",
+        "initial_release_date": "2026-08-10T18:33:03+00:00",
+        "revision_history": [
+          {
+            "date": "2026-08-10T18:33:03+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-08-10T18:33:03+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-10T18:33:28+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+                    "product_id": "AppStream-9.4.0.Z.E4S",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:rhel_e4s:9.4::appstream"
+                    }
+                  }
+                },
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+                    "product_id": "BaseOS-9.4.0.Z.E4S",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/o:redhat:rhel_e4s:9.4::baseos"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_id": "libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-10.el9_4.2?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-10.el9_4.2?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-10.el9_4.2?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-10.el9_4.2?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_id": "libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_4.2?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+                    "product_id": "libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-10.el9_4.2?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-10.el9_4.2?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-10.el9_4.2?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-10.el9_4.2?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-10.el9_4.2.i686",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-10.el9_4.2.i686",
+                    "product_id": "libgcrypt-0:1.10.0-10.el9_4.2.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_4.2?arch=i686"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "i686"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_id": "libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-10.el9_4.2?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-10.el9_4.2?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-10.el9_4.2?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-10.el9_4.2?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-10.el9_4.2.x86_64",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_id": "libgcrypt-0:1.10.0-10.el9_4.2.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_4.2?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_id": "libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-10.el9_4.2?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-10.el9_4.2?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-10.el9_4.2?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-10.el9_4.2?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_id": "libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_4.2?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+                    "product_id": "libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-10.el9_4.2?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-10.el9_4.2?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-10.el9_4.2?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-10.el9_4.2?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+                    "product_id": "libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_4.2?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-10.el9_4.2.src",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-10.el9_4.2.src",
+                    "product_id": "libgcrypt-0:1.10.0-10.el9_4.2.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-10.el9_4.2?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux AppStream E4S (v.9.4)",
+            "product_id": "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "AppStream-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-10.el9_4.2.src as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.src"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-10.el9_4.2.src",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64 as a component of Red Hat Enterprise Linux BaseOS E4S (v.9.4)",
+            "product_id": "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+          "relates_to_product_reference": "BaseOS-9.4.0.Z.E4S"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-41989",
+        "cwe": {
+          "id": "CWE-131",
+          "name": "Incorrect Calculation of Buffer Size"
+        },
+        "discovery_date": "2026-04-23T05:00:56.113348+00:00",
+        "flags": [
+          {
+            "label": "vulnerable_code_not_present",
+            "product_ids": [
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+            ]
+          }
+        ],
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2461063"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Libgcrypt. A remote attacker could exploit this vulnerability by sending crafted Elliptic Curve Diffie-Hellman (ECDH) ciphertext to the `gcry_pk_decrypt` function. This can lead to a heap-based buffer overflow, potentially causing a denial of service (DoS) condition.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.i686",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.src",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.x86_64"
+          ],
+          "known_not_affected": [
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+            "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+            "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2461063",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461063"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-41989",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-41989",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "https://dev.gnupg.org/T8211",
+            "url": "https://dev.gnupg.org/T8211"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html",
+            "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2026/04/21/1",
+            "url": "https://www.openwall.com/lists/oss-security/2026/04/21/1"
+          }
+        ],
+        "release_date": "2026-04-23T04:30:26.124000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-08-10T18:33:03+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.src",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:52952"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base, or stability.",
+            "product_ids": [
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.src",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-0:1.10.0-10.el9_4.2.x86_64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "AppStream-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.src",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debuginfo-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-debugsource-0:1.10.0-10.el9_4.2.x86_64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.aarch64",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.i686",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.ppc64le",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.s390x",
+              "BaseOS-9.4.0.Z.E4S:libgcrypt-devel-debuginfo-0:1.10.0-10.el9_4.2.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:52952"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Moderate"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for Red Hat Hardened Images RPMs is now available.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "This update includes the following RPMs:\n\nlibgcrypt:\n  * libgcrypt-1.12.2-1.hum1 (aarch64, x86_64)\n  * libgcrypt-devel-1.12.2-1.hum1 (aarch64, x86_64)\n  * libgcrypt-1.12.2-1.hum1.src (src)",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:8466",
+          "url": "https://access.redhat.com/errata/RHSA-2026:8466"
+        },
+        {
+          "category": "external",
+          "summary": "https://images.redhat.com/",
+          "url": "https://images.redhat.com/"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-41989",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-41989"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-41990",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-41990"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_8466.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+      "tracking": {
+        "current_release_date": "2026-08-10T18:33:18+00:00",
+        "generator": {
+          "date": "2026-08-10T18:33:18+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.14"
+          }
+        },
+        "id": "RHSA-2026:8466",
+        "initial_release_date": "2026-04-16T13:14:38+00:00",
+        "revision_history": [
+          {
+            "date": "2026-04-16T13:14:38+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-08-08T04:36:23+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-10T18:33:18+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Hardened Images",
+                  "product": {
+                    "name": "Red Hat Hardened Images",
+                    "product_id": "Red Hat Hardened Images",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:hummingbird:1"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Hardened Images"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-main@aarch64",
+                  "product": {
+                    "name": "libgcrypt-main@aarch64",
+                    "product_id": "libgcrypt-main@aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.12.2-1.hum1?arch=aarch64&distro=hummingbird-20251124&repository_id=public-hummingbird-aarch64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-main@src",
+                  "product": {
+                    "name": "libgcrypt-main@src",
+                    "product_id": "libgcrypt-main@src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.12.2-1.hum1?arch=src&distro=hummingbird-20251124&repository_id=public-hummingbird-source-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-main@x86_64",
+                  "product": {
+                    "name": "libgcrypt-main@x86_64",
+                    "product_id": "libgcrypt-main@x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.12.2-1.hum1?arch=x86_64&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-main@aarch64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:libgcrypt-main@aarch64"
+          },
+          "product_reference": "libgcrypt-main@aarch64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-main@src as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:libgcrypt-main@src"
+          },
+          "product_reference": "libgcrypt-main@src",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-main@x86_64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:libgcrypt-main@x86_64"
+          },
+          "product_reference": "libgcrypt-main@x86_64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-41989",
+        "cwe": {
+          "id": "CWE-131",
+          "name": "Incorrect Calculation of Buffer Size"
+        },
+        "discovery_date": "2026-04-23T05:00:56.113348+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2461063"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Libgcrypt. A remote attacker could exploit this vulnerability by sending crafted Elliptic Curve Diffie-Hellman (ECDH) ciphertext to the `gcry_pk_decrypt` function. This can lead to a heap-based buffer overflow, potentially causing a denial of service (DoS) condition.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:libgcrypt-main@aarch64",
+            "Red Hat Hardened Images:libgcrypt-main@src",
+            "Red Hat Hardened Images:libgcrypt-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2461063",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461063"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-41989",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-41989",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "https://dev.gnupg.org/T8211",
+            "url": "https://dev.gnupg.org/T8211"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html",
+            "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2026/04/21/1",
+            "url": "https://www.openwall.com/lists/oss-security/2026/04/21/1"
+          }
+        ],
+        "release_date": "2026-04-23T04:30:26.124000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-16T13:14:38+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:libgcrypt-main@aarch64",
+              "Red Hat Hardened Images:libgcrypt-main@src",
+              "Red Hat Hardened Images:libgcrypt-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8466"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base, or stability.",
+            "product_ids": [
+              "Red Hat Hardened Images:libgcrypt-main@aarch64",
+              "Red Hat Hardened Images:libgcrypt-main@src",
+              "Red Hat Hardened Images:libgcrypt-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:libgcrypt-main@aarch64",
+              "Red Hat Hardened Images:libgcrypt-main@src",
+              "Red Hat Hardened Images:libgcrypt-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext"
+      },
+      {
+        "cve": "CVE-2026-41990",
+        "cwe": {
+          "id": "CWE-787",
+          "name": "Out-of-bounds Write"
+        },
+        "discovery_date": "2026-04-23T05:01:20.381118+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2461068"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Libgcrypt. During Dilithium signing operations, the library fails to perform a bounds check when writing to a static array. While the data involved is not directly controlled by an attacker, this vulnerability could lead to memory corruption, potentially resulting in a denial of service (DoS) or affecting data integrity.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "Libgcrypt: Libgcrypt: Denial of Service or data integrity issues from missing bounds check during Dilithium signing.",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:libgcrypt-main@aarch64",
+            "Red Hat Hardened Images:libgcrypt-main@src",
+            "Red Hat Hardened Images:libgcrypt-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-41990"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2461068",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461068"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-41990",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-41990"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-41990",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41990"
+          },
+          {
+            "category": "external",
+            "summary": "https://dev.gnupg.org/T8208",
+            "url": "https://dev.gnupg.org/T8208"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html",
+            "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2026/04/21/1",
+            "url": "https://www.openwall.com/lists/oss-security/2026/04/21/1"
+          }
+        ],
+        "release_date": "2026-04-23T04:39:04.524000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-16T13:14:38+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:libgcrypt-main@aarch64",
+              "Red Hat Hardened Images:libgcrypt-main@src",
+              "Red Hat Hardened Images:libgcrypt-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:8466"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base, or stability.",
+            "product_ids": [
+              "Red Hat Hardened Images:libgcrypt-main@aarch64",
+              "Red Hat Hardened Images:libgcrypt-main@src",
+              "Red Hat Hardened Images:libgcrypt-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "LOW",
+              "baseScore": 3.3,
+              "baseSeverity": "LOW",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:L/A:L",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:libgcrypt-main@aarch64",
+              "Red Hat Hardened Images:libgcrypt-main@src",
+              "Red Hat Hardened Images:libgcrypt-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Low"
+          }
+        ],
+        "title": "Libgcrypt: Libgcrypt: Denial of Service or data integrity issues from missing bounds check during Dilithium signing."
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:8466"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Moderate"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for libgcrypt is now available for Red Hat Enterprise Linux 9.\n\nRed Hat Product Security has rated this update as having a security impact of Moderate. A Common Vulnerability Scoring System (CVSS) base score, which gives a detailed severity rating, is available for each vulnerability from the CVE link(s) in the References section.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "The libgcrypt library provides general-purpose implementations of various cryptographic algorithms.\n\nSecurity Fix(es):\n\n* Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext (CVE-2026-41989)\n\nFor more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:50147",
+          "url": "https://access.redhat.com/errata/RHSA-2026:50147"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/#moderate",
+          "url": "https://access.redhat.com/security/updates/classification/#moderate"
+        },
+        {
+          "category": "external",
+          "summary": "2461063",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461063"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_50147.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: libgcrypt security update",
+      "tracking": {
+        "current_release_date": "2026-08-10T18:33:18+00:00",
+        "generator": {
+          "date": "2026-08-10T18:33:18+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.14"
+          }
+        },
+        "id": "RHSA-2026:50147",
+        "initial_release_date": "2026-08-04T19:52:46+00:00",
+        "revision_history": [
+          {
+            "date": "2026-08-04T19:52:46+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-08-04T19:52:46+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-10T18:33:18+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux AppStream (v. 9)",
+                    "product_id": "AppStream-9.8.0.Z.MAIN.EUS",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:enterprise_linux:9::appstream"
+                    }
+                  }
+                },
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Enterprise Linux BaseOS (v. 9)",
+                  "product": {
+                    "name": "Red Hat Enterprise Linux BaseOS (v. 9)",
+                    "product_id": "BaseOS-9.8.0.Z.MAIN.EUS",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/o:redhat:enterprise_linux:9::baseos"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Enterprise Linux"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-13.el9_8.x86_64",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-13.el9_8.x86_64",
+                    "product_id": "libgcrypt-0:1.10.0-13.el9_8.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-13.el9_8?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-13.el9_8?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-13.el9_8?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-13.el9_8?arch=x86_64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+                    "product_id": "libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-13.el9_8?arch=x86_64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-13.el9_8.i686",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-13.el9_8.i686",
+                    "product_id": "libgcrypt-0:1.10.0-13.el9_8.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-13.el9_8?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-13.el9_8?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-13.el9_8?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-13.el9_8?arch=i686"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+                    "product_id": "libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-13.el9_8?arch=i686"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "i686"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-13.el9_8.src",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-13.el9_8.src",
+                    "product_id": "libgcrypt-0:1.10.0-13.el9_8.src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-13.el9_8?arch=src"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-13.el9_8.aarch64",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-13.el9_8.aarch64",
+                    "product_id": "libgcrypt-0:1.10.0-13.el9_8.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-13.el9_8?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-13.el9_8?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-13.el9_8?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-13.el9_8?arch=aarch64"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+                    "product_id": "libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-13.el9_8?arch=aarch64"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+                    "product_id": "libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-13.el9_8?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-13.el9_8?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-13.el9_8?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-13.el9_8?arch=ppc64le"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+                    "product_id": "libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-13.el9_8?arch=ppc64le"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "ppc64le"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-0:1.10.0-13.el9_8.s390x",
+                  "product": {
+                    "name": "libgcrypt-0:1.10.0-13.el9_8.s390x",
+                    "product_id": "libgcrypt-0:1.10.0-13.el9_8.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt@1.10.0-13.el9_8?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+                  "product": {
+                    "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+                    "product_id": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debugsource@1.10.0-13.el9_8?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+                  "product": {
+                    "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+                    "product_id": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-debuginfo@1.10.0-13.el9_8?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+                  "product": {
+                    "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+                    "product_id": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel-debuginfo@1.10.0-13.el9_8?arch=s390x"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+                  "product": {
+                    "name": "libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+                    "product_id": "libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/libgcrypt-devel@1.10.0-13.el9_8?arch=s390x"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "s390x"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux AppStream (v. 9)",
+            "product_id": "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "AppStream-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-13.el9_8.src as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.src"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-13.el9_8.src",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64 as a component of Red Hat Enterprise Linux BaseOS (v. 9)",
+            "product_id": "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64"
+          },
+          "product_reference": "libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+          "relates_to_product_reference": "BaseOS-9.8.0.Z.MAIN.EUS"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-41989",
+        "cwe": {
+          "id": "CWE-131",
+          "name": "Incorrect Calculation of Buffer Size"
+        },
+        "discovery_date": "2026-04-23T05:00:56.113348+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2461063"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in Libgcrypt. A remote attacker could exploit this vulnerability by sending crafted Elliptic Curve Diffie-Hellman (ECDH) ciphertext to the `gcry_pk_decrypt` function. This can lead to a heap-based buffer overflow, potentially causing a denial of service (DoS) condition.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+            "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.aarch64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.i686",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.s390x",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.src",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.x86_64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+            "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2461063",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2461063"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-41989",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-41989",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41989"
+          },
+          {
+            "category": "external",
+            "summary": "https://dev.gnupg.org/T8211",
+            "url": "https://dev.gnupg.org/T8211"
+          },
+          {
+            "category": "external",
+            "summary": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html",
+            "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q2/000503.html"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.openwall.com/lists/oss-security/2026/04/21/1",
+            "url": "https://www.openwall.com/lists/oss-security/2026/04/21/1"
+          }
+        ],
+        "release_date": "2026-04-23T04:30:26.124000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-08-04T19:52:46+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\n\nhttps://access.redhat.com/articles/11258",
+            "product_ids": [
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.src",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:50147"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base, or stability.",
+            "product_ids": [
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.src",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-0:1.10.0-13.el9_8.x86_64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "AppStream-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.src",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debuginfo-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-debugsource-0:1.10.0-13.el9_8.x86_64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.aarch64",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.i686",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.ppc64le",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.s390x",
+              "BaseOS-9.8.0.Z.MAIN.EUS:libgcrypt-devel-debuginfo-0:1.10.0-13.el9_8.x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "Libgcrypt: Libgcrypt: Denial of Service and buffer overflow via crafted ECDH ciphertext"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:50147"
+          }
+        ]
+      }
+    }
+  }
+]
