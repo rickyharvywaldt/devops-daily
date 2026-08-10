@@ -1,0 +1,349 @@
+[Mon Aug 10 07:49:28 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-v867-w97p-3vx2",
+    "modified": "2026-08-10T06:31:21Z",
+    "published": "2026-08-10T06:31:21Z",
+    "aliases": [
+      "CVE-2026-72522"
+    ],
+    "details": "libexpat before 2.8.3 has an out-of-bounds read and resultant infinite loop because low surrogates are treated the same as high surrogates during Unicode processing in the *_toUtf16 functions.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-72522"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/libexpat/libexpat/pull/1296"
+      },
+      {
+        "type": "WEB",
+        "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=2053153"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-125"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-10T04:16:50Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-v867-w97p-3vx2"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-9257-7w38-92hh",
+    "modified": "2026-08-10T06:31:21Z",
+    "published": "2026-08-10T06:31:21Z",
+    "aliases": [
+      "CVE-2026-17519"
+    ],
+    "details": "Rejected reason: none",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-17519"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-10T06:16:42Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-9257-7w38-92hh"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-12570",
+      "assignerOrgId": "c09c270a-b464-47c1-9133-acb35b22c19a",
+      "state": "PUBLISHED",
+      "assignerShortName": "@huntr_ai",
+      "dateReserved": "2026-06-18T01:55:25.311Z",
+      "datePublished": "2026-08-10T06:29:56.111Z",
+      "dateUpdated": "2026-08-10T06:29:56.111Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Denial of Service via HDF5 Shape Bomb in keras.models.load_model() in keras-team/keras",
+        "providerMetadata": {
+          "orgId": "c09c270a-b464-47c1-9133-acb35b22c19a",
+          "shortName": "@huntr_ai",
+          "dateUpdated": "2026-08-10T06:29:56.111Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in keras-team/keras versions <= 3.15.0 allows for a denial of service (DoS) attack when loading malicious .keras model files via the keras.models.load_model() function. The H5IOStore.__getitem__ method in keras/src/saving/saving_lib.py does not validate the shape or size of datasets, leading to unbounded memory allocation. A specially crafted .keras file can exploit this flaw to trigger an out-of-memory (OOM) condition, causing the process to be terminated (exit code 137). This issue bypasses the fix for CVE-2026-0897, which only addressed a similar vulnerability in KerasFileEditor. The attack vector includes poisoned models from public repositories or malicious model registries, posing a risk to machine learning pipelines that process untrusted models."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "keras-team",
+            "product": "keras-team/keras",
+            "versions": [
+              {
+                "version": "unspecified",
+                "lessThan": "3.12.3, 3.15.0",
+                "status": "affected",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://huntr.com/bounties/a064f475-780a-409a-82f7-678512f27ad8"
+          },
+          {
+            "url": "https://github.com/keras-team/keras/commit/4933ea4a5b3fcc24ceacdc276f5bb5dfbd06756c"
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "description": "CWE-770 Allocation of Resources Without Limits or Throttling",
+                "cweId": "CWE-770"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "advisory": "a064f475-780a-409a-82f7-678512f27ad8",
+          "discovery": "EXTERNAL"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-12570"
+          }
+        ]
+      }
+    }
+  }
+]
