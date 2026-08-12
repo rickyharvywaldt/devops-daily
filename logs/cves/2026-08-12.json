@@ -1,0 +1,729 @@
+[Wed Aug 12 02:19:42 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-7210",
+      "assignerOrgId": "28c92f92-d60d-412d-b760-e73465c3df22",
+      "state": "PUBLISHED",
+      "assignerShortName": "PSF",
+      "dateReserved": "2026-04-27T14:43:40.042Z",
+      "datePublished": "2026-05-11T17:19:09.784Z",
+      "dateUpdated": "2026-08-12T00:26:41.158Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "modules": [
+              "xml",
+              "expat"
+            ],
+            "product": "CPython",
+            "repo": "https://github.com/python/cpython",
+            "vendor": "Python Software Foundation",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "3.13.14",
+                "status": "affected",
+                "versionType": "python"
+              },
+              {
+                "version": "3.14.0",
+                "lessThan": "3.14.6",
+                "status": "affected",
+                "versionType": "python"
+              },
+              {
+                "version": "3.15.0a1",
+                "lessThan": "3.15.0b2",
+                "status": "affected",
+                "versionType": "python"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "coordinator",
+            "value": "Stan Ulbrych (https://github.com/StanFromIreland)"
+          },
+          {
+            "lang": "en",
+            "type": "remediation reviewer",
+            "value": "Gregory P. Smith (https://github.com/gpshead)"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "value": "`xml.parsers.expat` and `xml.etree.ElementTree` use insufficient entropy for Expat hash-flooding protection, which allows a crafted XML document to trigger hash flooding.\\r\\n\\r\\nFully mitigating this vulnerability requires both updating libexpat to 2.8.0 or later and applying this patch."
+              }
+            ],
+            "value": "`xml.parsers.expat` and `xml.etree.ElementTree` use insufficient entropy for Expat hash-flooding protection, which allows a crafted XML document to trigger hash flooding.\\r\\n\\r\\nFully mitigating this vulnerability requires both updating libexpat to 2.8.0 or later and applying this patch."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 6.3,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "NONE",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "LOW",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-331",
+                "description": "CWE-331 Insufficient entropy",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "28c92f92-d60d-412d-b760-e73465c3df22",
+          "shortName": "PSF",
+          "dateUpdated": "2026-08-12T00:26:41.158Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/PNY5OMBDPM2FRUZTWFFPJ6LISWKV627K/"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/python/cpython/pull/149023"
+          },
+          {
+            "tags": [
+              "issue-tracking"
+            ],
+            "url": "https://github.com/python/cpython/issues/149018"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/python/cpython/commit/24b8f12544468e4cedf5bfbe25442fcd495391e4"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/python/cpython/commit/3573b3b1ecbd99030a0b18658e1bfece771b2566"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/python/cpython/commit/eeea765cb9d8f1fc3d8918b272ac3c477983f27a"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/python/cpython/commit/fc9b11ff49cbc82e6f917d07a61517a2b5f3145f"
+          },
+          {
+            "tags": [
+              "patch"
+            ],
+            "url": "https://github.com/python/cpython/commit/e37df2a6a71d6538698e2d3188a7c345b827640b"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "title": "The expat and elementtree parsers use insufficient entropy for XML hash-flooding protection",
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-7210"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-05-11T18:53:57.884366Z",
+                  "id": "CVE-2026-7210",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-05-11T18:54:12.868Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/11/8"
+            },
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/11/13"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-05-11T20:34:17.811Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-6484",
+      "assignerOrgId": "8338d8cb-57f7-4252-abc0-96fd13e98d21",
+      "state": "PUBLISHED",
+      "assignerShortName": "Insyde",
+      "dateReserved": "2026-04-17T06:07:36.576Z",
+      "datePublished": "2026-08-12T00:20:36.095Z",
+      "dateUpdated": "2026-08-12T00:20:36.095Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "8338d8cb-57f7-4252-abc0-96fd13e98d21",
+          "shortName": "Insyde",
+          "dateUpdated": "2026-08-12T00:20:36.095Z"
+        },
+        "title": "Lack of verified boot to certain FV may cause arbitrary code execution",
+        "datePublic": "2026-08-12T00:04:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-1277",
+                "description": "CWE-1277: Insufficient Verification of Data Authenticity in Firmware",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Insyde Software",
+            "product": "InsydeH2O",
+            "platforms": [
+              "x86"
+            ],
+            "versions": [
+              {
+                "status": "unknown",
+                "version": "See in the Solution"
+              }
+            ],
+            "defaultStatus": "unknown"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In an UEFI, Lack of verified boot to certain FV may cause arbitrary code execution.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "In an UEFI, Lack of verified boot to certain FV may cause arbitrary code execution."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.insyde.com/security-pledge/sa-2026003/"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Intel Mobile Platforms:\nPanther Lake: Unaffected\nLunar Lake: Unaffected\nAarow Lake H/U: Version 05.56.17.0022\nAarow Lake S/HX: Version 05.56.17.0037\nRapter Lake: Version 05.47.24.0058\nTwin Lake: Version 05.44.45.0029\n\n\n\n \n\n\n\nIntel Server/Embedded platforms:\nWhitley (CLX/CPX/ICX): Trunk\nCedarIsland (CPX): Trunk\nEagle Stream: Unaffected\nBirch Stream: Unaffected\nMehlow/Mehlow-R(CFL-S): Unaffected\nTatlow (RKS): Unaffected\nJacobsville(SNR): Trunk\nIdaville: Trunk\nKaseyville: Unaffected\nWhiskey Lake: Trunk\nCome tLake-S: Unaffected\nTiger Lake UP3/H: Unaffected\nAlder Lake: Version 05.47.24.2057\nRaptor Lake: Version 05.47.24.0057\nMeteor Lake – U/H ARL-H/U: Version 05.56.07.0022\nMeteor Lake – PS ARL-H/U: Version 05.56.07.0022\nArrow Lake – S ARL-S/HX: Version 05.55.45.0036\nArrow Lake – U/H ARL-H/U: Version 05.56.07.0022\nElkhart Lake: Version 05.48.17.0030\nAlder Lake N: Trunk\nAmston Lake: Trunk\nTwin Lake: Trunk",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p><strong>Intel Mobile Platforms:</strong><br>Panther Lake: Unaffected<br>Lunar Lake: Unaffected<br>Aarow Lake H/U: Version 05.56.17.0022<br>Aarow Lake S/HX: Version 05.56.17.0037<br>Rapter Lake: Version 05.47.24.0058<br>Twin Lake: Version 05.44.45.0029</p><p>&nbsp;</p><p><strong>Intel Server/Embedded platforms:<br></strong>Whitley (CLX/CPX/ICX): Trunk<br>CedarIsland (CPX): Trunk<br>Eagle Stream: Unaffected<br>Birch Stream: Unaffected<br>Mehlow/Mehlow-R(CFL-S): Unaffected<br>Tatlow (RKS): Unaffected<br>Jacobsville(SNR): Trunk<br>Idaville: Trunk<br>Kaseyville: Unaffected<br>Whiskey Lake: Trunk<br>Come tLake-S: Unaffected<br>Tiger Lake UP3/H: Unaffected<br>Alder Lake: Version 05.47.24.2057<br>Raptor Lake: Version 05.47.24.0057<br>Meteor Lake – U/H ARL-H/U: Version 05.56.07.0022<br>Meteor Lake – PS ARL-H/U: Version 05.56.07.0022<br>Arrow Lake – S ARL-S/HX: Version 05.55.45.0036<br>Arrow Lake – U/H ARL-H/U: Version 05.56.07.0022<br>Elkhart Lake: Version 05.48.17.0030<br>Alder Lake N: Trunk<br>Amston Lake: Trunk<br>Twin Lake: Trunk</p>"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Thanks to Nikolaj Schlej, independent firmware security researcher, for reporting the vulnerability and engaging in this coordinated disclosure.",
+            "type": "reporter"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.4"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-6484"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-68450",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-07-30T09:28:09.395Z",
+      "datePublished": "2026-08-12T00:51:48.970Z",
+      "dateUpdated": "2026-08-12T00:51:48.970Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-08-12T00:51:48.970Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nbtrfs: free mapping node on duplicate reloc root insert\n\n__add_reloc_root() allocates a mapping_node before inserting it into\nrc->reloc_root_tree.  If rb_simple_insert() finds an existing entry, it\nreturns the existing rb_node and leaves the newly allocated node unlinked.\n\nThe error path then returns -EEXIST without freeing the new node.  Since\nthe node was never inserted into reloc_root_tree, the later cleanup in\nput_reloc_control() cannot find it either.\n\nFree the newly allocated node before returning -EEXIST.\n\nThe callers currently assert that -EEXIST should not happen, so this is a\ndefensive cleanup for an unexpected duplicate insert path.  If the path is\never reached, the local allocation should still be released."
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "fs/btrfs/relocation.c"
+            ],
+            "versions": [
+              {
+                "version": "57a304cfd43b2b4a5b44b8f5dc026abb34183068",
+                "lessThan": "92bedc0455552b42ada1a1f42b0e3a8593cdfccc",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "57a304cfd43b2b4a5b44b8f5dc026abb34183068",
+                "lessThan": "14a8be9428435ee17f17fae7991215c246b7fd43",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "57a304cfd43b2b4a5b44b8f5dc026abb34183068",
+                "lessThan": "797dc567146c7e3c4f8d9680e4fbc76e0a6d9151",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "57a304cfd43b2b4a5b44b8f5dc026abb34183068",
+                "lessThan": "ae0629ff9ccb836416ada129f4edc7efea6eaaad",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "57a304cfd43b2b4a5b44b8f5dc026abb34183068",
+                "lessThan": "6a8269b6459ed870a8156c106a0f597383907872",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "fs/btrfs/relocation.c"
+            ],
+            "versions": [
+              {
+                "version": "5.13",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "5.13",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.148",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.101",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.42",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.1.6",
+                "lessThanOrEqual": "7.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.2-rc5",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.13",
+                    "versionEndExcluding": "6.6.148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.13",
+                    "versionEndExcluding": "6.12.101"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.13",
+                    "versionEndExcluding": "6.18.42"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.13",
+                    "versionEndExcluding": "7.1.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.13",
+                    "versionEndExcluding": "7.2-rc5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/92bedc0455552b42ada1a1f42b0e3a8593cdfccc"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/14a8be9428435ee17f17fae7991215c246b7fd43"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/797dc567146c7e3c4f8d9680e4fbc76e0a6d9151"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/ae0629ff9ccb836416ada129f4edc7efea6eaaad"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/6a8269b6459ed870a8156c106a0f597383907872"
+          }
+        ],
+        "title": "btrfs: free mapping node on duplicate reloc root insert",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-68450"
+          }
+        ]
+      }
+    }
+  }
+]
