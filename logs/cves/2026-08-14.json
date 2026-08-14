@@ -1,0 +1,332 @@
+[Fri Aug 14 07:38:12 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xqxv-q9jf-7cwc",
+    "modified": "2026-08-14T06:31:05Z",
+    "published": "2026-08-14T06:31:05Z",
+    "aliases": [
+      "CVE-2026-12949"
+    ],
+    "details": "The Wishlist Member plugin for WordPress is vulnerable to Account Takeover via Insufficient Verification of Data Authenticity in versions up to and including 3.34.1. This is due to the wpm_register() function validating the registration cookie only against the GET reg parameter while accepting the POST mergewith and POST wpm_id parameters without verifying that the mergewith user ID references a temporary or incomplete registrant that is bound to the current registration transaction. This makes it possible for unauthenticated attackers to take over any existing WordPress account — including administrator accounts — by supplying an arbitrary user's numeric ID as the mergewith value, which causes wp_update_user() to overwrite the target account's username (additionally written via a direct $wpdb UPDATE), password, email address, first name, and last name with attacker-controlled values, while WordPress password and email change notification emails are explicitly suppressed. When wpm_id references a non-existent membership level, no role key is added to the update payload, causing wp_update_user() to preserve the target user's existing role — including administrator — making full privilege escalation a direct consequence of the takeover.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12949"
+      },
+      {
+        "type": "WEB",
+        "url": "https://wishlistmember.com"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/84afe5a7-1bf4-4b83-bf77-efbb003a30cd?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-640"
+      ],
+      "severity": "CRITICAL",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-14T06:16:53Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xqxv-q9jf-7cwc"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wqwq-hmg7-q93r",
+    "modified": "2026-08-14T06:31:05Z",
+    "published": "2026-08-14T06:31:05Z",
+    "aliases": [
+      "CVE-2026-16739"
+    ],
+    "details": "The Epeken All Kurir for Woocommerce WordPress plugin through 2.1.2 does not verify that a payment-confirmation request originates from the owner of the targeted order, nor that any payment actually occurred, allowing unauthenticated attackers to mark arbitrary orders as confirmed and, in a non-default configuration, paid.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-16739"
+      },
+      {
+        "type": "WEB",
+        "url": "https://wpscan.com/vulnerability/b66b86f9-e49e-4654-84a1-0f2e5c859289"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-14T06:17:03Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wqwq-hmg7-q93r"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-w66q-5x8w-9jjm",
+    "modified": "2026-08-14T06:31:05Z",
+    "published": "2026-08-14T06:31:05Z",
+    "aliases": [
+      "CVE-2026-19792"
+    ],
+    "details": "A security flaw has been discovered in Tenda G0 up to 20260625. Impacted is the function setPortMapping of the file /goform/module of the component httpd web management interface. Performing a manipulation of the argument portMappingServer/porMappingtInternal/portMappingExternal results in buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19792"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/lipenghai/iot_bug/blob/main/Tenda/G0/3.md"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/cve/CVE-2026-19792"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/submit/868929"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/389758"
+      },
+      {
+        "type": "WEB",
+        "url": "https://vuldb.com/vuln/389758/cti"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.tenda.com.cn"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-119"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-14T05:16:59Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-w66q-5x8w-9jjm"
+          }
+        ]
+      }
+    }
+  }
+]
