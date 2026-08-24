@@ -2375,3 +2375,2380 @@
     }
   }
 ]
+[Mon Aug 24 18:47:06 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for Red Hat Hardened Images RPMs is now available.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "This update includes the following RPMs:\n\npostgresql17:\n  * postgresql17-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-contrib-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-docs-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-plperl-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-plpython3-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-pltcl-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-private-devel-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-private-libs-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-server-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-server-devel-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-static-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-test-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-test-rpm-macros-17.10-0.1.hum1 (noarch)\n  * postgresql17-upgrade-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-upgrade-devel-17.10-0.1.hum1 (aarch64, x86_64)\n  * postgresql17-17.10-0.1.hum1.src (src)",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:21182",
+          "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+        },
+        {
+          "category": "external",
+          "summary": "https://images.redhat.com/",
+          "url": "https://images.redhat.com/"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6478",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6478"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6477",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6477"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6475",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6475"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6575",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6575"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6472",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6472"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6479",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6479"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6637",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6637"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-6638",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-6638"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_21182.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+      "tracking": {
+        "current_release_date": "2026-08-24T18:09:52+00:00",
+        "generator": {
+          "date": "2026-08-24T18:09:52+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.16"
+          }
+        },
+        "id": "RHSA-2026:21182",
+        "initial_release_date": "2026-05-26T23:31:06+00:00",
+        "revision_history": [
+          {
+            "date": "2026-05-26T23:31:06+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-08-22T06:15:42+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-24T18:09:52+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Hardened Images",
+                  "product": {
+                    "name": "Red Hat Hardened Images",
+                    "product_id": "Red Hat Hardened Images",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:hummingbird:1"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Hardened Images"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "postgresql17-main@aarch64",
+                  "product": {
+                    "name": "postgresql17-main@aarch64",
+                    "product_id": "postgresql17-main@aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/postgresql17@17.10-0.1.hum1?arch=aarch64&distro=hummingbird-20251124&repository_id=public-hummingbird-aarch64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "postgresql17-main@src",
+                  "product": {
+                    "name": "postgresql17-main@src",
+                    "product_id": "postgresql17-main@src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/postgresql17@17.10-0.1.hum1?arch=src&distro=hummingbird-20251124&repository_id=public-hummingbird-source-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "postgresql17-main@x86_64",
+                  "product": {
+                    "name": "postgresql17-main@x86_64",
+                    "product_id": "postgresql17-main@x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/postgresql17@17.10-0.1.hum1?arch=x86_64&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "postgresql17-main@noarch",
+                  "product": {
+                    "name": "postgresql17-main@noarch",
+                    "product_id": "postgresql17-main@noarch",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/postgresql17-test-rpm-macros@17.10-0.1.hum1?arch=noarch&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "noarch"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "postgresql17-main@aarch64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:postgresql17-main@aarch64"
+          },
+          "product_reference": "postgresql17-main@aarch64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "postgresql17-main@noarch as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:postgresql17-main@noarch"
+          },
+          "product_reference": "postgresql17-main@noarch",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "postgresql17-main@src as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:postgresql17-main@src"
+          },
+          "product_reference": "postgresql17-main@src",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "postgresql17-main@x86_64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:postgresql17-main@x86_64"
+          },
+          "product_reference": "postgresql17-main@x86_64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-6472",
+        "cwe": {
+          "id": "CWE-862",
+          "name": "Missing Authorization"
+        },
+        "discovery_date": "2026-05-14T14:01:10.230544+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477436"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL CREATE TYPE handling for multirange types. The database failed to properly verify schema CREATE privileges during multirange type creation. An authenticated database user could exploit this issue to hijack queries that rely on search_path resolution for user-defined or extension-defined types, potentially causing execution of arbitrary SQL functions within the affected database context.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL CREATE TYPE does not check multirange schema CREATE privilege",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability affects PostgreSQL multirange type creation functionality. Red Hat Product Security has assessed this issue as a Moderate severity vulnerability.\n\nThe vulnerability does not directly provide operating system command execution or PostgreSQL superuser privileges. The impact is limited to the affected database context and depends on application query behavior and schema resolution patterns. Therefore, Red Hat assessed the Confidentiality and Integrity impacts as Low (C:L/I:L), with no demonstrated Availability impact (A:N).",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6472"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477436",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477436"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6472",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6472"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6472",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6472"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6472/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6472/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:02.086000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          },
+          {
+            "category": "workaround",
+            "details": "Red Hat is not aware of a practical temporary workaround that fully mitigates this issue or meets Red Hat Product Security's standards for usability, deployment, applicability, or stability.",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "postgresql: PostgreSQL CREATE TYPE does not check multirange schema CREATE privilege"
+      },
+      {
+        "cve": "CVE-2026-6475",
+        "cwe": {
+          "id": "CWE-59",
+          "name": "Improper Link Resolution Before File Access ('Link Following')"
+        },
+        "discovery_date": "2026-05-14T14:01:20.040061+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477439"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL. This vulnerability, related to symlink following in pg_basebackup (plain format) and pg_rewind, allows an origin superuser to overwrite local files. By exploiting this, an attacker could potentially hijack the operating system account. This attack has practical implications if specific actions are taken, such as moving files to a different virtual machine (VM) or snapshotting the VM, between the execution of these commands and the server's restart.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL: Operating system account hijack via symlink following in pg_basebackup and pg_rewind",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This MODERATE symlink following vulnerability in PostgreSQL's pg_basebackup and pg_rewind allows an origin superuser to overwrite local files. Exploitation requires local access, high privileges (superuser), and specific intermediate actions before server restart. Impact is high to confidentiality, integrity, and availability if exploited. Affects versions before 18.4, 17.10, 16.14, 15.18, and 14.23.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6475"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477439",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477439"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6475",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6475"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6475",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6475"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6475/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6475/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:11.039000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 6.7,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "postgresql: PostgreSQL: Operating system account hijack via symlink following in pg_basebackup and pg_rewind"
+      },
+      {
+        "cve": "CVE-2026-6477",
+        "cwe": {
+          "id": "CWE-120",
+          "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+        },
+        "discovery_date": "2026-05-14T14:01:31.087667+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477442"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL libpq. A server superuser can exploit a buffer overflow vulnerability in the PQfn function, which is used by client functions such as lo_export(), lo_read(), lo_lseek64(), and lo_tell64(). This allows the superuser to send an arbitrarily large response, overwriting the client's stack memory, specifically in tools like psql and pg_dump. This could lead to arbitrary code execution on the client system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL libpq: Buffer overflow allows server superuser to overwrite client stack memory",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This IMPORTANT buffer overflow in PostgreSQL libpq allows a malicious server superuser to overwrite client stack memory via lo_* functions. Exploitation requires the victim to connect to a compromised or malicious server (UI:R). The scope is changed as the server attack affects the client system. Impact is high to confidentiality, integrity, and availability through potential client-side code execution. Affects versions before 18.4, 17.10, 16.14, 15.18, and 14.23.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6477"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477442",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477442"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6477",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6477"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6477",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6477"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6477/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6477/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:12.497000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          },
+          {
+            "category": "workaround",
+            "details": "Only connect to trusted PostgreSQL servers. Avoid using psql or pg_dump against untrusted or potentially compromised database servers.",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.4,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "postgresql: PostgreSQL libpq: Buffer overflow allows server superuser to overwrite client stack memory"
+      },
+      {
+        "cve": "CVE-2026-6478",
+        "cwe": {
+          "id": "CWE-385",
+          "name": "Covert Timing Channel"
+        },
+        "discovery_date": "2026-05-14T14:01:45.568001+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477447"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL. This vulnerability, a covert timing channel, exists in the comparison of MD5-hashed passwords during authentication. A remote attacker could exploit this to recover user credentials, gaining unauthorized access to the database. This issue specifically impacts databases that retain MD5-hashed passwords from upgrades of PostgreSQL 13 or earlier.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL: Credential recovery via covert timing channel in MD5 password comparison",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6478"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477447",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477447"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6478",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6478"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6478",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6478"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6478/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6478/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:13.174000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this vulnerability, ensure that all PostgreSQL user passwords are not hashed using MD5. Users should migrate to stronger hashing algorithms such as `scram-sha-256`. This can be achieved by altering user passwords, which will automatically update their hash to the currently configured default. For example, to change a user's password: `ALTER USER username WITH PASSWORD 'new_password';` This action will require users to re-authenticate. If a service relies on these credentials, it may require a restart to pick up the new authentication details.",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "postgresql: PostgreSQL: Credential recovery via covert timing channel in MD5 password comparison"
+      },
+      {
+        "cve": "CVE-2026-6479",
+        "cwe": {
+          "id": "CWE-606",
+          "name": "Unchecked Input for Loop Condition"
+        },
+        "discovery_date": "2026-05-14T14:01:40.164297+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477445"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL. Uncontrolled recursion during SSL (Secure Sockets Layer) and GSS (Generic Security Service) negotiation allows an attacker to achieve a sustained denial of service. This can be exploited by an attacker with access to a PostgreSQL AF_UNIX socket. If SSL and GSS are both disabled, the same denial of service can be achieved via a PostgreSQL TCP socket.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL: Denial of Service via uncontrolled recursion in SSL/GSS negotiation",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Uncontrolled recursion during PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL socket to trigger sustained CPU/stack exhaustion, resulting in denial of service. This affects the core connection-negotiation path, which runs unconditionally for every incoming connection attempt regardless of configuration — there is no optional feature or code path that must be enabled for exploitation, unlike some other recent flaws in this batch. Fix versions are 18.4, 17.10, 16.14, 15.18, and 14.23; PostgreSQL 12 and 13 branches are not listed as affected by upstream and do not contain the vulnerable recursion path. Affects were determined purely by comparing each shipped build's PostgreSQL version against these per-major-version fix thresholds.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6479"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477445",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477445"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6479",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6479"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6479",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6479"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6479/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6479/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:13.859000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          },
+          {
+            "category": "workaround",
+            "details": "Upgrade to PostgreSQL 18.4, 17.10, 16.14, 15.18, or 14.23 (matching your major version) or later. Restricting network/socket access to trusted clients reduces exposure but does not eliminate the vulnerability.",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "postgresql: PostgreSQL: Denial of Service via uncontrolled recursion in SSL/GSS negotiation"
+      },
+      {
+        "cve": "CVE-2026-6575",
+        "cwe": {
+          "id": "CWE-805",
+          "name": "Buffer Access with Incorrect Length Value"
+        },
+        "discovery_date": "2026-05-14T14:01:22.648738+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477440"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL. This buffer over-read vulnerability in the `pg_restore_attribute_stats()` function allows a table maintainer to infer memory values. By providing array values of unmatched length, a malicious table maintainer can cause query planning to read past the end of an array, leading to information disclosure.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL: Information disclosure via buffer over-read in pg_restore_attribute_stats()",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6575"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477440",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477440"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6575",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6575"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6575",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6575"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6575/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6575/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:14.542000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          },
+          {
+            "category": "workaround",
+            "details": "To mitigate this information disclosure vulnerability, restrict network access to the PostgreSQL server to only trusted clients. Configure firewall rules to limit inbound connections to the PostgreSQL port (default 5432) from authorized hosts only. For example, using `firewall-cmd` on Red Hat Enterprise Linux:\n\n`sudo firewall-cmd --permanent --add-source=<TRUSTED_IP_ADDRESS>/32 --zone=public`\n`sudo firewall-cmd --permanent --add-port=5432/tcp --zone=public`\n`sudo firewall-cmd --reload`\n\nAlternatively, configure PostgreSQL to listen only on the localhost interface by setting `listen_addresses = 'localhost'` in `postgresql.conf` and restarting the PostgreSQL service.\n\n`sudo systemctl restart postgresql`\n\nThis reduces the attack surface by preventing unauthorized network access to the database. Note that restarting the PostgreSQL service will temporarily interrupt database operations.",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "postgresql: PostgreSQL: Information disclosure via buffer over-read in pg_restore_attribute_stats()"
+      },
+      {
+        "cve": "CVE-2026-6637",
+        "cwe": {
+          "id": "CWE-120",
+          "name": "Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')"
+        },
+        "discovery_date": "2026-05-14T14:01:33.754271+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477443"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL. A stack buffer overflow in the 'refint' module allows an unprivileged database user to execute arbitrary code as the operating system user running the database. Additionally, a separate vulnerability exists where, if an application uses a user-controlled column as a 'refint' cascade primary key and allows user-controlled updates, a SQL injection can enable an attacker to execute arbitrary SQL commands as the database user performing the update.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL: Arbitrary code execution vulnerability in 'refint' module",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6637"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477443",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477443"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6637",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6637"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6637",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6637"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6637/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6637/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:15.223000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "postgresql: PostgreSQL: Arbitrary code execution vulnerability in 'refint' module"
+      },
+      {
+        "cve": "CVE-2026-6638",
+        "cwe": {
+          "id": "CWE-89",
+          "name": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"
+        },
+        "discovery_date": "2026-05-14T14:01:42.864382+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2477446"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in PostgreSQL. This SQL injection vulnerability exists within the logical replication feature, specifically when using the ALTER SUBSCRIPTION ... REFRESH PUBLICATION command. A malicious subscriber table creator can exploit this flaw to execute arbitrary SQL commands with the elevated privileges of the subscription's publication-side credentials. The attack is triggered when the REFRESH PUBLICATION command is next executed.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "postgresql: PostgreSQL: Arbitrary SQL execution via SQL injection in logical replication",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "SQL injection in PostgreSQL logical replication allows a subscriber-side table creator to execute arbitrary SQL on the publisher using the subscription's publication-side credentials. ALTER SUBSCRIPTION ... REFRESH PUBLICATION interpolates subscriber-side schema and relation names into SQL sent to the publisher without properly quoting them; a crafted relation name can therefore inject arbitrary SQL that runs with the privileges of the subscription's publication-side role the next time REFRESH PUBLICATION is executed. Exploitation requires the attacker to already hold table-creation privileges on the subscriber database, for logical replication to be configured with an untrusted subscriber-side user, and for a privileged user to subsequently run REFRESH PUBLICATION, which limits the practical attack surface for most default deployments. Only PostgreSQL major versions 16, 17, and 18 are affected; versions prior to 16 do not include the vulnerable code path (introduced by commit 875693019053b8897ec3983e292acbb439b088c3).",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:postgresql17-main@aarch64",
+            "Red Hat Hardened Images:postgresql17-main@noarch",
+            "Red Hat Hardened Images:postgresql17-main@src",
+            "Red Hat Hardened Images:postgresql17-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-6638"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2477446",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2477446"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-6638",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-6638"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-6638",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6638"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.postgresql.org/support/security/CVE-2026-6638/",
+            "url": "https://www.postgresql.org/support/security/CVE-2026-6638/"
+          }
+        ],
+        "release_date": "2026-05-14T13:00:15.848000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-05-26T23:31:06+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:21182"
+          },
+          {
+            "category": "workaround",
+            "details": "Upgrade to PostgreSQL 18.4, 17.10, or 16.14 (matching your major version) or later, which corrects the identifier quoting used when the subscriber's apply worker sends the REFRESH PUBLICATION SQL to the publisher. Versions prior to PostgreSQL 16 are not affected. As a temporary mitigation, restrict CREATE TABLE / table-ownership privileges on subscriber databases to trusted roles only, avoid configuring logical replication subscriptions for untrusted subscriber-side users, and scope the subscription's publication-side credentials to the minimum privileges necessary.",
+            "product_ids": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 3.7,
+              "baseSeverity": "LOW",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:postgresql17-main@aarch64",
+              "Red Hat Hardened Images:postgresql17-main@noarch",
+              "Red Hat Hardened Images:postgresql17-main@src",
+              "Red Hat Hardened Images:postgresql17-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "postgresql: PostgreSQL: Arbitrary SQL execution via SQL injection in logical replication"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:21182"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Moderate"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for Red Hat Hardened Images RPMs is now available.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "This update includes the following RPMs:",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:7070",
+          "url": "https://access.redhat.com/errata/RHSA-2026:7070"
+        },
+        {
+          "category": "external",
+          "summary": "https://images.redhat.com/",
+          "url": "https://images.redhat.com/"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2025-61727",
+          "url": "https://access.redhat.com/security/cve/CVE-2025-61727"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_7070.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Hardened Images RPMs bug fix and enhancement update",
+      "tracking": {
+        "current_release_date": "2026-08-24T18:07:34+00:00",
+        "generator": {
+          "date": "2026-08-24T18:07:34+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.16"
+          }
+        },
+        "id": "RHSA-2026:7070",
+        "initial_release_date": "2026-04-08T13:25:14+00:00",
+        "revision_history": [
+          {
+            "date": "2026-04-08T13:25:14+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-08-22T06:15:42+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-24T18:07:34+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Hardened Images",
+                  "product": {
+                    "name": "Red Hat Hardened Images",
+                    "product_id": "Red Hat Hardened Images",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:hummingbird:1"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Hardened Images"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "golang-fips1-25-main@aarch64",
+                  "product": {
+                    "name": "golang-fips1-25-main@aarch64",
+                    "product_id": "golang-fips1-25-main@aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/golang-fips1.25@1.25.8-0.1.hum1?arch=aarch64&distro=hummingbird-20251124&repository_id=public-hummingbird-aarch64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "golang-fips1-25-main@src",
+                  "product": {
+                    "name": "golang-fips1-25-main@src",
+                    "product_id": "golang-fips1-25-main@src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/golang-fips1.25@1.25.8-0.1.hum1?arch=src&distro=hummingbird-20251124&repository_id=public-hummingbird-source-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "golang-fips1-25-main@x86_64",
+                  "product": {
+                    "name": "golang-fips1-25-main@x86_64",
+                    "product_id": "golang-fips1-25-main@x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/golang-fips1.25@1.25.8-0.1.hum1?arch=x86_64&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "golang-fips1-25-main@noarch",
+                  "product": {
+                    "name": "golang-fips1-25-main@noarch",
+                    "product_id": "golang-fips1-25-main@noarch",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/golang-fips1.25-docs@1.25.8-0.1.hum1?arch=noarch&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "noarch"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "golang-fips1-25-main@aarch64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:golang-fips1-25-main@aarch64"
+          },
+          "product_reference": "golang-fips1-25-main@aarch64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "golang-fips1-25-main@noarch as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:golang-fips1-25-main@noarch"
+          },
+          "product_reference": "golang-fips1-25-main@noarch",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "golang-fips1-25-main@src as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:golang-fips1-25-main@src"
+          },
+          "product_reference": "golang-fips1-25-main@src",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "golang-fips1-25-main@x86_64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:golang-fips1-25-main@x86_64"
+          },
+          "product_reference": "golang-fips1-25-main@x86_64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2025-61727",
+        "cwe": {
+          "id": "CWE-295",
+          "name": "Improper Certificate Validation"
+        },
+        "discovery_date": "2025-12-03T20:01:21.730501+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2418677"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the crypto/x509 package in the Go standard library. This vulnerability allows a certificate validation bypass via an excluded subdomain constraint in a certificated chain as it does not restrict the usage of wildcard SANs in the leaf certificate.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "To exploit this issue, an attacker needs to obtain a leaf certificate with a wildcard SAN (e.g., *.example.com) and the legitimate certificate policy must contain an excluded DNS name constraint (e.g., to prevent issuance for test.example.com), allowing an application using the crypto/x509 package to validate the certificate when it should have been rejected and to be vulnerable to MITM (man-in-the-middle) attacks. Additionally, the attacker does not have full control of what data can be read of modified during the attack. Due to these reasons, this flaw has been rated with a moderate severity.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:golang-fips1-25-main@aarch64",
+            "Red Hat Hardened Images:golang-fips1-25-main@noarch",
+            "Red Hat Hardened Images:golang-fips1-25-main@src",
+            "Red Hat Hardened Images:golang-fips1-25-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2025-61727"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2418677",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2418677"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2025-61727",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-61727"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2025-61727",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-61727"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/cl/723900",
+            "url": "https://go.dev/cl/723900"
+          },
+          {
+            "category": "external",
+            "summary": "https://go.dev/issue/76442",
+            "url": "https://go.dev/issue/76442"
+          },
+          {
+            "category": "external",
+            "summary": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4",
+            "url": "https://groups.google.com/g/golang-announce/c/8FJoBkPddm4"
+          },
+          {
+            "category": "external",
+            "summary": "https://pkg.go.dev/vuln/GO-2025-4175",
+            "url": "https://pkg.go.dev/vuln/GO-2025-4175"
+          }
+        ],
+        "release_date": "2025-12-03T19:37:15.054000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-04-08T13:25:14+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:golang-fips1-25-main@aarch64",
+              "Red Hat Hardened Images:golang-fips1-25-main@noarch",
+              "Red Hat Hardened Images:golang-fips1-25-main@src",
+              "Red Hat Hardened Images:golang-fips1-25-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:7070"
+          },
+          {
+            "category": "workaround",
+            "details": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability.",
+            "product_ids": [
+              "Red Hat Hardened Images:golang-fips1-25-main@aarch64",
+              "Red Hat Hardened Images:golang-fips1-25-main@noarch",
+              "Red Hat Hardened Images:golang-fips1-25-main@src",
+              "Red Hat Hardened Images:golang-fips1-25-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:golang-fips1-25-main@aarch64",
+              "Red Hat Hardened Images:golang-fips1-25-main@noarch",
+              "Red Hat Hardened Images:golang-fips1-25-main@src",
+              "Red Hat Hardened Images:golang-fips1-25-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Moderate"
+          }
+        ],
+        "title": "golang: crypto/x509: excluded subdomain constraint does not restrict wildcard SANs"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:7070"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "namespace": "https://access.redhat.com/security/updates/classification/",
+        "text": "Important"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "text": "Copyright © Red Hat, Inc. All rights reserved.",
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "An update for Red Hat Hardened Images RPMs is now available.",
+          "title": "Topic"
+        },
+        {
+          "category": "general",
+          "text": "This update includes the following RPMs:\n\ndotnet8.0:\n  * aspnetcore-runtime-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * aspnetcore-runtime-dbg-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * aspnetcore-targeting-pack-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * dotnet-apphost-pack-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * dotnet-hostfxr-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * dotnet-runtime-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * dotnet-runtime-dbg-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * dotnet-sdk-8.0-8.0.128-1.2.hum1 (aarch64, x86_64)\n  * dotnet-sdk-8.0-source-built-artifacts-8.0.128-1.2.hum1 (aarch64, x86_64)\n  * dotnet-sdk-dbg-8.0-8.0.128-1.2.hum1 (aarch64, x86_64)\n  * dotnet-targeting-pack-8.0-8.0.28-1.2.hum1 (aarch64, x86_64)\n  * dotnet-templates-8.0-8.0.128-1.2.hum1 (aarch64, x86_64)\n  * dotnet8.0-8.0.128-1.2.hum1.src (src)\n\nSecurity Fix(es):\n\ndotnet8.0:\n  * CVE-2026-53486",
+          "title": "Details"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "This content is licensed under the Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/). If you distribute this content, or a modified version of it, you must provide attribution to Red Hat Inc. and provide a link to the original.",
+          "title": "Terms of Use"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "https://access.redhat.com/security/team/contact/",
+        "issuing_authority": "Red Hat Product Security is responsible for vulnerability handling across all Red Hat products and services.",
+        "name": "Red Hat Product Security",
+        "namespace": "https://www.redhat.com"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "https://access.redhat.com/errata/RHSA-2026:40415",
+          "url": "https://access.redhat.com/errata/RHSA-2026:40415"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-53486",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-53486"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/updates/classification/",
+          "url": "https://access.redhat.com/security/updates/classification/"
+        },
+        {
+          "category": "external",
+          "summary": "https://images.redhat.com/",
+          "url": "https://images.redhat.com/"
+        },
+        {
+          "category": "external",
+          "summary": "https://access.redhat.com/security/cve/CVE-2026-59869",
+          "url": "https://access.redhat.com/security/cve/CVE-2026-59869"
+        },
+        {
+          "category": "self",
+          "summary": "Canonical URL",
+          "url": "https://security.access.redhat.com/data/csaf/v2/advisories/2026/rhsa-2026_40415.json"
+        }
+      ],
+      "title": "Red Hat Security Advisory: Red Hat Hardened Images RPMs Security Update",
+      "tracking": {
+        "current_release_date": "2026-08-24T18:07:31+00:00",
+        "generator": {
+          "date": "2026-08-24T18:07:31+00:00",
+          "engine": {
+            "name": "Red Hat SDEngine",
+            "version": "5.3.16"
+          }
+        },
+        "id": "RHSA-2026:40415",
+        "initial_release_date": "2026-07-15T21:53:54+00:00",
+        "revision_history": [
+          {
+            "date": "2026-07-15T21:53:54+00:00",
+            "number": "1",
+            "summary": "Initial version"
+          },
+          {
+            "date": "2026-08-22T06:15:42+00:00",
+            "number": "2",
+            "summary": "Last updated version"
+          },
+          {
+            "date": "2026-08-24T18:07:31+00:00",
+            "number": "3",
+            "summary": "Last generated version"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_name",
+                  "name": "Red Hat Hardened Images",
+                  "product": {
+                    "name": "Red Hat Hardened Images",
+                    "product_id": "Red Hat Hardened Images",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:redhat:hummingbird:1"
+                    }
+                  }
+                }
+              ],
+              "category": "product_family",
+              "name": "Red Hat Hardened Images"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "dotnet8-0-main@aarch64",
+                  "product": {
+                    "name": "dotnet8-0-main@aarch64",
+                    "product_id": "dotnet8-0-main@aarch64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/aspnetcore-runtime-8.0@8.0.28-1.2.hum1?arch=aarch64&distro=hummingbird-20251124&repository_id=public-hummingbird-aarch64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "aarch64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "dotnet8-0-main@x86_64",
+                  "product": {
+                    "name": "dotnet8-0-main@x86_64",
+                    "product_id": "dotnet8-0-main@x86_64",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/aspnetcore-runtime-8.0@8.0.28-1.2.hum1?arch=x86_64&distro=hummingbird-20251124&repository_id=public-hummingbird-x86_64-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "x86_64"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "dotnet8-0-main@src",
+                  "product": {
+                    "name": "dotnet8-0-main@src",
+                    "product_id": "dotnet8-0-main@src",
+                    "product_identification_helper": {
+                      "purl": "pkg:rpm/redhat/dotnet8.0@8.0.128-1.2.hum1?arch=src&distro=hummingbird-20251124&repository_id=public-hummingbird-source-rpms"
+                    }
+                  }
+                }
+              ],
+              "category": "architecture",
+              "name": "src"
+            }
+          ],
+          "category": "vendor",
+          "name": "Red Hat"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "dotnet8-0-main@aarch64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:dotnet8-0-main@aarch64"
+          },
+          "product_reference": "dotnet8-0-main@aarch64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "dotnet8-0-main@src as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:dotnet8-0-main@src"
+          },
+          "product_reference": "dotnet8-0-main@src",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        },
+        {
+          "category": "default_component_of",
+          "full_product_name": {
+            "name": "dotnet8-0-main@x86_64 as a component of Red Hat Hardened Images",
+            "product_id": "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+          },
+          "product_reference": "dotnet8-0-main@x86_64",
+          "relates_to_product_reference": "Red Hat Hardened Images"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-53486",
+        "cwe": {
+          "id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        },
+        "discovery_date": "2026-07-14T21:04:22.589145+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2500679"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in the decompress package for Node.js. A remote attacker can exploit this vulnerability by crafting a malicious archive. When the archive is extracted, it can create files and links outside the intended directory, leading to unauthorized reading or writing of files. This is due to improper handling of hardlink and symlink entries, insufficient path containment checks, and failure to remove setuid, setgid, or sticky bits from file modes. This can result in high confidentiality and integrity impacts.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "decompress: @xhmikosr/decompress: Decompress: Arbitrary file read/write via crafted archive extraction",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "Red Hat Build of Keycloak, Red Hat Advanced Cluster Management (VolSync), Red Hat Hardened Images (dotnet8.0), and the Fedora/EPEL yarnpkg packages bundle the original, unmaintained npm decompress package (version 4.2.1 or earlier), which does not receive an upstream fix for this issue. None of these components use the actively maintained @xhmikosr/decompress fork that received the fix in versions 10.2.1 and 11.1.3. Red Hat rates this issue with a CVSS score of 8.1 (Important), reflecting that in these products archive extraction is performed on locally supplied or build-time archives rather than automatically on arbitrary network-supplied input, which Red Hat scores as requiring user interaction (UI:R) in contrast to the upstream CVSS score of 9.1.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+            "Red Hat Hardened Images:dotnet8-0-main@src",
+            "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-53486"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2500679",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2500679"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-53486",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-53486"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-53486",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53486"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/commit/281cefa00cd4275c10479bc5f1abba6b14dee8bd",
+            "url": "https://github.com/XhmikosR/decompress/commit/281cefa00cd4275c10479bc5f1abba6b14dee8bd"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/commit/60b5299402e72b0b53ca2e55222e9a1ccb44afae",
+            "url": "https://github.com/XhmikosR/decompress/commit/60b5299402e72b0b53ca2e55222e9a1ccb44afae"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/commit/9fcda4b0a66ca22dc8d337f9b0e7c30293c5fb89",
+            "url": "https://github.com/XhmikosR/decompress/commit/9fcda4b0a66ca22dc8d337f9b0e7c30293c5fb89"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/commit/aca5aac415dc04a6fae5200e51368cff436a09dd",
+            "url": "https://github.com/XhmikosR/decompress/commit/aca5aac415dc04a6fae5200e51368cff436a09dd"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/releases/tag/v10.2.1",
+            "url": "https://github.com/XhmikosR/decompress/releases/tag/v10.2.1"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/releases/tag/v11.1.3",
+            "url": "https://github.com/XhmikosR/decompress/releases/tag/v11.1.3"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/XhmikosR/decompress/security/advisories/GHSA-mp2f-45pm-3cg9",
+            "url": "https://github.com/XhmikosR/decompress/security/advisories/GHSA-mp2f-45pm-3cg9"
+          }
+        ],
+        "release_date": "2026-07-14T20:07:14.190000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-07-15T21:53:54+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+              "Red Hat Hardened Images:dotnet8-0-main@src",
+              "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:40415"
+          },
+          {
+            "category": "workaround",
+            "details": "There is no upstream fix for the original, unmaintained decompress npm package used by these components (last release 4.2.1). The maintained fork, @xhmikosr/decompress, resolves this issue in versions 10.2.1 and 11.1.3, but is not used by any affected Red Hat component. As a general mitigation, only extract archives from trusted sources with the affected tooling, run extraction as a non-root user to prevent the setuid/setgid/sticky-bit issue from creating a privileged file, and verify that any symlinks or hardlinks produced by extraction resolve inside the intended output directory.",
+            "product_ids": [
+              "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+              "Red Hat Hardened Images:dotnet8-0-main@src",
+              "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+              "Red Hat Hardened Images:dotnet8-0-main@src",
+              "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "decompress: @xhmikosr/decompress: Decompress: Arbitrary file read/write via crafted archive extraction"
+      },
+      {
+        "cve": "CVE-2026-59869",
+        "cwe": {
+          "id": "CWE-606",
+          "name": "Unchecked Input for Loop Condition"
+        },
+        "discovery_date": "2026-07-08T16:01:38.408322+00:00",
+        "ids": [
+          {
+            "system_name": "Red Hat Bugzilla ID",
+            "text": "2498122"
+          }
+        ],
+        "notes": [
+          {
+            "category": "description",
+            "text": "A flaw was found in js-yaml, a JavaScript YAML parser and dumper. A remote attacker could exploit this vulnerability by providing a specially crafted YAML document containing a chain of mappings with merge keys. This could cause the parser to consume excessive CPU resources, leading to a Denial of Service (DoS) for the affected system.",
+            "title": "Vulnerability description"
+          },
+          {
+            "category": "summary",
+            "text": "js-yaml: js-yaml: Denial of Service via crafted YAML documents",
+            "title": "Vulnerability summary"
+          },
+          {
+            "category": "other",
+            "text": "This vulnerability is rated as Important. Red Hat products utilizing `js-yaml` to process untrusted YAML input are susceptible to a denial of service, as a remote attacker can provide a crafted document that consumes excessive CPU resources. This is considered Important due to the potential for service disruption without requiring authentication or complex attack vectors.",
+            "title": "Statement"
+          },
+          {
+            "category": "general",
+            "text": "The CVSS score(s) listed for this vulnerability do not reflect the associated product's status, and are included for informational purposes to better understand the severity of this vulnerability.",
+            "title": "CVSS score applicability"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+            "Red Hat Hardened Images:dotnet8-0-main@src",
+            "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "Canonical URL",
+            "url": "https://access.redhat.com/security/cve/CVE-2026-59869"
+          },
+          {
+            "category": "external",
+            "summary": "RHBZ#2498122",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2498122"
+          },
+          {
+            "category": "external",
+            "summary": "https://www.cve.org/CVERecord?id=CVE-2026-59869",
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-59869"
+          },
+          {
+            "category": "external",
+            "summary": "https://nvd.nist.gov/vuln/detail/CVE-2026-59869",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59869"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/nodeca/js-yaml/commit/24f13e79ee1343a7e30bd6f6c9d9cdbf0ac9b2b7",
+            "url": "https://github.com/nodeca/js-yaml/commit/24f13e79ee1343a7e30bd6f6c9d9cdbf0ac9b2b7"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/nodeca/js-yaml/commit/59423c6f8cdc78742ac00e25a4dd39ef16b702e4",
+            "url": "https://github.com/nodeca/js-yaml/commit/59423c6f8cdc78742ac00e25a4dd39ef16b702e4"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/nodeca/js-yaml/releases/tag/3.15.0",
+            "url": "https://github.com/nodeca/js-yaml/releases/tag/3.15.0"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/nodeca/js-yaml/releases/tag/4.3.0",
+            "url": "https://github.com/nodeca/js-yaml/releases/tag/4.3.0"
+          },
+          {
+            "category": "external",
+            "summary": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-52cp-r559-cp3m",
+            "url": "https://github.com/nodeca/js-yaml/security/advisories/GHSA-52cp-r559-cp3m"
+          }
+        ],
+        "release_date": "2026-07-08T15:15:54.675000+00:00",
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "date": "2026-07-15T21:53:54+00:00",
+            "details": "For details on how to apply this update, which includes the changes described in this advisory, refer to:\nhttps://images.redhat.com/",
+            "product_ids": [
+              "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+              "Red Hat Hardened Images:dotnet8-0-main@src",
+              "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+            ],
+            "restart_required": {
+              "category": "none"
+            },
+            "url": "https://access.redhat.com/errata/RHSA-2026:40415"
+          },
+          {
+            "category": "workaround",
+            "details": "To reduce exposure, restrict the processing of untrusted YAML documents by applications that rely on `js-yaml`. Implement robust input validation and sanitization for all YAML data originating from external or untrusted sources. Consider limiting network access to services that parse YAML content to trusted networks or clients through appropriate firewall configurations.",
+            "product_ids": [
+              "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+              "Red Hat Hardened Images:dotnet8-0-main@src",
+              "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "Red Hat Hardened Images:dotnet8-0-main@aarch64",
+              "Red Hat Hardened Images:dotnet8-0-main@src",
+              "Red Hat Hardened Images:dotnet8-0-main@x86_64"
+            ]
+          }
+        ],
+        "threats": [
+          {
+            "category": "impact",
+            "details": "Important"
+          }
+        ],
+        "title": "js-yaml: js-yaml: Denial of Service via crafted YAML documents"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "rhsa-2026:40415"
+          }
+        ]
+      }
+    }
+  }
+]
