@@ -1,0 +1,597 @@
+[Tue Aug 25 18:45:50 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-56847",
+      "assignerOrgId": "36234546-b8fa-4601-9d6f-f4e334aa8ea1",
+      "state": "PUBLISHED",
+      "assignerShortName": "hackerone",
+      "dateReserved": "2026-06-23T15:00:03.632Z",
+      "datePublished": "2026-07-30T06:02:50.099Z",
+      "dateUpdated": "2026-07-30T12:35:31.331Z"
+    },
+    "containers": {
+      "cna": {
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw in Node.js Permission Model enforcement allows `trace_events.createTracing().enable()` Writes Trace Logs Outside `--allow-fs-write`.\r\n\r\nThis can lead to confidentiality impact or bypass of the intended security boundary under affected configurations.\r\n\r\nThis vulnerability affects Node.js **22.x**, **24.x**, and **26.x**."
+          }
+        ],
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "vendor": "nodejs",
+            "product": "node",
+            "versions": [
+              {
+                "version": "26.5.0",
+                "status": "affected",
+                "lessThanOrEqual": "26.5.0",
+                "versionType": "semver"
+              },
+              {
+                "version": "24.18.0",
+                "status": "affected",
+                "lessThanOrEqual": "24.18.0",
+                "versionType": "semver"
+              },
+              {
+                "version": "22.23.1",
+                "status": "affected",
+                "lessThanOrEqual": "22.23.1",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://nodejs.org/en/blog/vulnerability/july-2026-security-releases"
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "baseScore": 3.3,
+              "baseSeverity": "LOW"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "lang": "en",
+                "cweId": "CWE-1119",
+                "description": "CWE-1119 Excessive Use of Unconditional Branching"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "36234546-b8fa-4601-9d6f-f4e334aa8ea1",
+          "shortName": "hackerone",
+          "dateUpdated": "2026-07-30T06:02:50.099Z"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-56847"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-07-30T12:34:51.815184Z",
+                  "id": "CVE-2026-56847",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-07-30T12:35:31.331Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-76195",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-08-19T11:07:57.285Z",
+      "datePublished": "2026-08-25T17:27:11.530Z",
+      "dateUpdated": "2026-08-25T17:50:20.470Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Adobe Campaign Classic",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "ACC v7: 7.4.4 build 9400",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              },
+              {
+                "status": "unaffected",
+                "version": "ACC v7: 7.4.4 build 9401",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-08-25T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Campaign Classic (ACC) is affected by an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability that could result in arbitrary code execution in the context of the current user. An attacker could exploit this vulnerability to execute arbitrary code. Exploitation of this issue does not require user interaction. Scope is changed."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 10,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 10,
+              "environmentalSeverity": "CRITICAL",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "HIGH",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "NETWORK",
+              "modifiedAvailabilityImpact": "HIGH",
+              "modifiedConfidentialityImpact": "HIGH",
+              "modifiedIntegrityImpact": "HIGH",
+              "modifiedPrivilegesRequired": "NONE",
+              "modifiedScope": "CHANGED",
+              "modifiedUserInteraction": "NONE",
+              "privilegesRequired": "NONE",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "CHANGED",
+              "temporalScore": 10,
+              "temporalSeverity": "CRITICAL",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') (CWE-78)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-08-25T17:27:11.530Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx-internal.corp.adobe.com/content/help/en/security/products/campaign/apsb26-134.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Adobe Campaign Classic (ACC) | Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') (CWE-78)",
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-76195"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-08-25T17:49:37.371312Z",
+                  "id": "CVE-2026-76195",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-08-25T17:50:20.470Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-71441",
+      "assignerOrgId": "078d4453-3bcd-4900-85e6-15281da43538",
+      "state": "PUBLISHED",
+      "assignerShortName": "adobe",
+      "dateReserved": "2026-08-06T16:40:07.109Z",
+      "datePublished": "2026-08-25T17:49:59.846Z",
+      "dateUpdated": "2026-08-25T17:49:59.846Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "affected",
+            "product": "Illustrator Desktop 2026",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "30.6",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              },
+              {
+                "status": "unaffected",
+                "version": "30.7",
+                "versionType": "custom"
+              }
+            ]
+          },
+          {
+            "defaultStatus": "affected",
+            "product": "Illustrator Desktop 2025",
+            "vendor": "Adobe",
+            "versions": [
+              {
+                "lessThanOrEqual": "29.8.9",
+                "status": "affected",
+                "version": "0",
+                "versionType": "custom"
+              },
+              {
+                "status": "unaffected",
+                "version": "29.8.10",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "datePublic": "2026-08-25T17:00:00.000Z",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Illustrator is affected by an out-of-bounds read vulnerability that could lead to disclosure of sensitive memory. An attacker could leverage this vulnerability to disclose sensitive information. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "NONE",
+              "availabilityRequirement": "NOT_DEFINED",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "confidentialityRequirement": "NOT_DEFINED",
+              "environmentalScore": 5.5,
+              "environmentalSeverity": "MEDIUM",
+              "exploitCodeMaturity": "NOT_DEFINED",
+              "integrityImpact": "NONE",
+              "integrityRequirement": "NOT_DEFINED",
+              "modifiedAttackComplexity": "LOW",
+              "modifiedAttackVector": "LOCAL",
+              "modifiedAvailabilityImpact": "NONE",
+              "modifiedConfidentialityImpact": "HIGH",
+              "modifiedIntegrityImpact": "NONE",
+              "modifiedPrivilegesRequired": "NONE",
+              "modifiedScope": "UNCHANGED",
+              "modifiedUserInteraction": "REQUIRED",
+              "privilegesRequired": "NONE",
+              "remediationLevel": "NOT_DEFINED",
+              "reportConfidence": "NOT_DEFINED",
+              "scope": "UNCHANGED",
+              "temporalScore": 5.5,
+              "temporalSeverity": "MEDIUM",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-125",
+                "description": "Out-of-bounds Read (CWE-125)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "078d4453-3bcd-4900-85e6-15281da43538",
+          "shortName": "adobe",
+          "dateUpdated": "2026-08-25T17:49:59.846Z"
+        },
+        "references": [
+          {
+            "tags": [
+              "vendor-advisory"
+            ],
+            "url": "https://helpx.adobe.com/security/products/illustrator/apsb26-124.html"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "title": "Illustrator | Out-of-bounds Read (CWE-125)",
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-71441"
+          }
+        ]
+      }
+    }
+  }
+]
