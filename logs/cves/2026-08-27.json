@@ -1,0 +1,3443 @@
+[Thu Aug 27 08:30:12 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE"
+        }
+      },
+      "lang": "nl",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "The Netherlands Cyber Security Center (henceforth: NCSC-NL) maintains this page to enhance access to its information and security advisories. The use of this security advisory is subject to the following terms and conditions:\n\n    NCSC-NL makes every reasonable effort to ensure that the content of this page is kept up to date, and that it is accurate and complete. Nevertheless, NCSC-NL cannot entirely rule out the possibility of errors, and therefore cannot give any warranty in respect of its completeness, accuracy or continuous keeping up-to-date. The information contained in this security advisory is intended solely for the purpose of providing general information to professional users. No rights can be derived from the information provided therein.\n\n    NCSC-NL and the Kingdom of the Netherlands assume no legal liability or responsibility for any damage resulting from either the use or inability of use of this security advisory. This includes damage resulting from the inaccuracy of incompleteness of the information contained in the advisory.\n    This security advisory is subject to Dutch law. All disputes related to or arising from the use of this advisory will be submitted to the competent court in The Hague. This choice of means also applies to the court in summary proceedings."
+        },
+        {
+          "category": "description",
+          "text": "Apache heeft meerdere kwetsbaarheden verholpen in Apache CloudStack, specifiek in versies 4.12.0.0 tot en met 4.22.1.0.",
+          "title": "Feiten"
+        },
+        {
+          "category": "description",
+          "text": "De kwetsbaarheden betreffen onder andere OS Command Injection in de NAS backup provider plugin, Server-Side Request Forgery (SSRF) in verschillende modules zoals metalink mirror URL resolutie en webhook, onvoldoende toegangscontrole in userdata-gerelateerde API's, OAuth en LDAP authenticatie plugins, en improper privilege management in de two-factor authentication plugin.\n\nVerder zijn er kwetsbaarheden in de user interface met betrekking tot onjuiste encoding of escaping, command injection in diagnostics APIs, en improper access control in Kubernetes Service plugin en annotation APIs. Ook is er een kwetsbaarheid in de SAML certificaatvalidatie die het mogelijk maakt om authenticatie te omzeilen.\n\nSommige kwetsbaarheden maken het mogelijk voor geauthenticeerde gebruikers om root- of administratieve commando's uit te voeren op KVM hypervisor hosts, systeem virtual machines en virtual routers, of om ongeautoriseerde toegang te verkrijgen tot gevoelige informatie en tenant data. Daarnaast is er een kwetsbaarheid in de listHostTags API die domeinrestricties kan omzeilen, en een issue in projectrollenbeheer door domeinbeheerders.\n\nDe kwetsbaarheden zijn aanwezig in meerdere opeenvolgende versies van Apache CloudStack en betreffen zowel core functionaliteiten als plugins en API's.",
+          "title": "Interpretaties"
+        },
+        {
+          "category": "description",
+          "text": "Apache heeft updates uitgebracht in versies 4.20.3.1 en 4.22.1.1 of later om de genoemde kwetsbaarheden te verhelpen. Zie bijgevoegde referenties voor meer informatie.",
+          "title": "Oplossingen"
+        },
+        {
+          "category": "general",
+          "text": "medium",
+          "title": "Kans"
+        },
+        {
+          "category": "general",
+          "text": "high",
+          "title": "Schade"
+        },
+        {
+          "category": "general",
+          "text": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+          "title": "CWE-77"
+        },
+        {
+          "category": "general",
+          "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+          "title": "CWE-78"
+        },
+        {
+          "category": "general",
+          "text": "Improper Encoding or Escaping of Output",
+          "title": "CWE-116"
+        },
+        {
+          "category": "general",
+          "text": "Encoding Error",
+          "title": "CWE-172"
+        },
+        {
+          "category": "general",
+          "text": "Improper Certificate Validation",
+          "title": "CWE-295"
+        },
+        {
+          "category": "general",
+          "text": "Missing Authentication for Critical Function",
+          "title": "CWE-306"
+        },
+        {
+          "category": "general",
+          "text": "Cleartext Storage of Sensitive Information",
+          "title": "CWE-312"
+        },
+        {
+          "category": "general",
+          "text": "Improper Verification of Cryptographic Signature",
+          "title": "CWE-347"
+        },
+        {
+          "category": "general",
+          "text": "Missing Authorization",
+          "title": "CWE-862"
+        },
+        {
+          "category": "general",
+          "text": "Server-Side Request Forgery (SSRF)",
+          "title": "CWE-918"
+        }
+      ],
+      "publisher": {
+        "category": "coordinator",
+        "contact_details": "cert@ncsc.nl",
+        "name": "Nationaal Cyber Security Centrum",
+        "namespace": "https://www.ncsc.nl/"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Reference",
+          "url": "https://cloudstack.apache.org/blog/security-release-advisory-4.20.3.1-4.22.1.1"
+        }
+      ],
+      "title": "Kwetsbaarheden verholpen in Apache CloudStack",
+      "tracking": {
+        "current_release_date": "2026-08-27T07:44:49.055001Z",
+        "generator": {
+          "date": "2025-08-04T16:30:00Z",
+          "engine": {
+            "name": "V.A.",
+            "version": "1.3"
+          }
+        },
+        "id": "NCSC-2026-0332",
+        "initial_release_date": "2026-08-27T07:44:49.055001Z",
+        "revision_history": [
+          {
+            "date": "2026-08-27T07:44:49.055001Z",
+            "number": "1.0.0",
+            "summary": "Initiele versie"
+          }
+        ],
+        "status": "final",
+        "version": "1.0.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-1"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "CloudStack"
+            }
+          ],
+          "category": "vendor",
+          "name": "Apache Software Foundation"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-47359",
+        "cwe": {
+          "id": "CWE-78",
+          "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+            "title": "CWE-78"
+          },
+          {
+            "category": "description",
+            "text": "Apache CloudStack versions 4.20.0.0 to 4.20.3.0 and 4.21.0.0 to 4.22.1.0 contain an OS Command Injection vulnerability in the NAS backup provider plugin allowing arbitrary command execution on KVM hypervisor hosts during backup restore.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-47359 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-47359.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-47359"
+      },
+      {
+        "cve": "CVE-2026-50112",
+        "cwe": {
+          "id": "CWE-78",
+          "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+            "title": "CWE-78"
+          },
+          {
+            "category": "other",
+            "text": "Server-Side Request Forgery (SSRF)",
+            "title": "CWE-918"
+          },
+          {
+            "category": "description",
+            "text": "An authenticated tenant in Apache CloudStack versions 4.14.0.0 through 4.22.1.0 can exploit SSRF via metalink mirror URL resolution to execute arbitrary root commands on the KVM hypervisor, with fixes in 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-50112 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-50112.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-50112"
+      },
+      {
+        "cve": "CVE-2026-50222",
+        "cwe": {
+          "id": "CWE-862",
+          "name": "Missing Authorization"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Missing Authorization",
+            "title": "CWE-862"
+          },
+          {
+            "category": "description",
+            "text": "Apache CloudStack versions 4.18.0.0 through 4.20.3.0 and 4.21.0.0 through 4.22.1.0 contain a vulnerability in userdata-related APIs due to insufficient access control, enabling unauthorized cross-tenant access, fixed in versions 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-50222 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-50222.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-50222"
+      },
+      {
+        "cve": "CVE-2026-59085",
+        "cwe": {
+          "id": "CWE-918",
+          "name": "Server-Side Request Forgery (SSRF)"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Server-Side Request Forgery (SSRF)",
+            "title": "CWE-918"
+          },
+          {
+            "category": "description",
+            "text": "Apache CloudStack versions 4.20.0.0 to 4.20.3.0 and 4.21.0.0 to 4.22.1.0 contain a Server-Side Request Forgery (SSRF) vulnerability in the webhook module, resolved in versions 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-59085 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-59085.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-59085"
+      },
+      {
+        "cve": "CVE-2026-59655",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in Apache CloudStack's OAuth authentication plugin exposes sensitive information when listing OAuth providers, affecting versions 4.19.0.0 to 4.20.3.0 and 4.21.0.0 to 4.22.1.0, with fixes in 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-59655 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-59655.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-59655"
+      },
+      {
+        "cve": "CVE-2026-59657",
+        "cwe": {
+          "id": "CWE-312",
+          "name": "Cleartext Storage of Sensitive Information"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Cleartext Storage of Sensitive Information",
+            "title": "CWE-312"
+          },
+          {
+            "category": "description",
+            "text": "Apache CloudStack versions 4.0.0 through 4.20.3.0 and 4.21.0.0 through 4.22.1.0 contain a Cleartext Storage of Sensitive Information vulnerability in AsyncJob database storage.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-59657 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-59657.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-59657"
+      },
+      {
+        "cve": "CVE-2026-59780",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in Apache CloudStack's LDAP authentication plugin allows any authenticated user with access to the listLdapConfigurations API to view sensitive LDAP configurations in versions 4.2.0.0 through 4.22.1.0, fixed in 4.20.3.1 and 4.22.1.1.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-59780 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-59780.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-59780"
+      },
+      {
+        "cve": "CVE-2026-59799",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Privilege Management vulnerability in Apache CloudStack's Two-factor authentication plugin allows bypassing the two-factor authentication disable flow in versions 4.18.0.0 through 4.22.1.0, with fixes in 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-59799 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-59799.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-59799"
+      },
+      {
+        "cve": "CVE-2026-61397",
+        "notes": [
+          {
+            "category": "description",
+            "text": "Apache CloudStack versions 4.19.0.0 through 4.20.3.0 and 4.21.0.0 through 4.22.1.0 contain a vulnerability in the OAuth2 authentication plugin and Google OAuth integration that exposes sensitive information, fixed in versions 4.20.3.1 and 4.22.1.1.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-61397 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-61397.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-61397"
+      },
+      {
+        "cve": "CVE-2026-61398",
+        "cwe": {
+          "id": "CWE-116",
+          "name": "Improper Encoding or Escaping of Output"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Encoding or Escaping of Output",
+            "title": "CWE-116"
+          },
+          {
+            "category": "description",
+            "text": "An Improper Encoding or Escaping of Output vulnerability in Apache CloudStack's UI during the Instance Reset Password function affects versions 4.15.1.0 through 4.20.3.0 and 4.21.0.0 through 4.22.1.0, with fixes in 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-61398 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-61398.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-61398"
+      },
+      {
+        "cve": "CVE-2026-61399",
+        "cwe": {
+          "id": "CWE-116",
+          "name": "Improper Encoding or Escaping of Output"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Encoding or Escaping of Output",
+            "title": "CWE-116"
+          },
+          {
+            "category": "description",
+            "text": "An Improper Encoding or Escaping of Output vulnerability in Apache CloudStack UI's Lock User functionality affects versions 4.20.0.0 to 4.20.3.0 and 4.21.0.0 to 4.22.1.0, with fixes in 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-61399 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-61399.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "baseScore": 4.8,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-61399"
+      },
+      {
+        "cve": "CVE-2026-61400",
+        "cwe": {
+          "id": "CWE-77",
+          "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+            "title": "CWE-77"
+          },
+          {
+            "category": "description",
+            "text": "A command injection vulnerability in Apache CloudStack diagnostics APIs allows authenticated admin users to execute arbitrary root commands on system VMs and virtual routers, affecting versions prior to 4.20.3.1 and 4.22.1.1.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-61400 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-61400.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-61400"
+      },
+      {
+        "cve": "CVE-2026-61422",
+        "cwe": {
+          "id": "CWE-918",
+          "name": "Server-Side Request Forgery (SSRF)"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Server-Side Request Forgery (SSRF)",
+            "title": "CWE-918"
+          },
+          {
+            "category": "description",
+            "text": "An authenticated pre-validation SSRF vulnerability in Apache CloudStack's template and ISO registration process affects versions 4.20.3.0 and 4.21.0.0 through 4.22.1.0, with fixes in 4.20.3.1 and 4.22.1.1 or later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-61422 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-61422.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-61422"
+      },
+      {
+        "cve": "CVE-2026-62440",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Access Control vulnerability in Apache CloudStack's Kubernetes Service plugin allows cross-tenant manipulation of Kubernetes clusters during node addition or removal in versions 4.21.0.0 through 4.22.1.0, fixed in 4.22.1.1 and later.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-62440 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-62440.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-62440"
+      },
+      {
+        "cve": "CVE-2026-65613",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in Apache CloudStack's Webhook module in versions 4.20.0.0 to 4.20.3.0 and 4.21.0.0 to 4.22.1.0 allows unauthorized exposure of sensitive information during delivery listing and deletion, fixed in 4.20.3.1 and 4.22.1.1.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-65613 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-65613.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-65613"
+      },
+      {
+        "cve": "CVE-2026-66721",
+        "cwe": {
+          "id": "CWE-862",
+          "name": "Missing Authorization"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Missing Authorization",
+            "title": "CWE-862"
+          },
+          {
+            "category": "description",
+            "text": "A missing authorization check in Apache CloudStack's listHostTags API allows domain admins to view host tags across all hosts, affecting versions 4.12.0.0 to 4.22.1.0, with fixes in 4.20.3.1 and 4.22.1.1.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-66721 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-66721.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+              "baseScore": 2.7,
+              "baseSeverity": "LOW"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-66721"
+      },
+      {
+        "cve": "CVE-2026-66722",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in Apache CloudStack versions 4.15.0.0 to 4.20.3.0 and 4.21.0.0 to 4.22.1.0 allows Domain Admins to improperly manage project roles and permissions across unrelated domains due to insufficient authorization checks.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-66722 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-66722.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 7.2,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-66722"
+      },
+      {
+        "cve": "CVE-2026-66797",
+        "cwe": {
+          "id": "CWE-862",
+          "name": "Missing Authorization"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Missing Authorization",
+            "title": "CWE-862"
+          },
+          {
+            "category": "description",
+            "text": "Two vulnerabilities affect Red Hat Advanced Cluster Management for Kubernetes and Apache CloudStack, enabling privilege escalation via malicious RBAC injection and improper access control in annotation APIs, respectively.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-66797 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-66797.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 8.5,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-66797"
+      },
+      {
+        "cve": "CVE-2026-68745",
+        "cwe": {
+          "id": "CWE-347",
+          "name": "Improper Verification of Cryptographic Signature"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Verification of Cryptographic Signature",
+            "title": "CWE-347"
+          },
+          {
+            "category": "description",
+            "text": "Apache CloudStack versions 4.20.3.0 and 4.22.1.0 contain a SAML certificate validation vulnerability that permits attackers to forge SAML responses and gain unauthorized access, fixed in versions 4.20.3.1 and 4.22.1.1.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-68745 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-68745.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-68745"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ncsc-2026-0332"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE"
+        }
+      },
+      "lang": "nl",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "The Netherlands Cyber Security Center (henceforth: NCSC-NL) maintains this page to enhance access to its information and security advisories. The use of this security advisory is subject to the following terms and conditions:\n\n    NCSC-NL makes every reasonable effort to ensure that the content of this page is kept up to date, and that it is accurate and complete. Nevertheless, NCSC-NL cannot entirely rule out the possibility of errors, and therefore cannot give any warranty in respect of its completeness, accuracy or continuous keeping up-to-date. The information contained in this security advisory is intended solely for the purpose of providing general information to professional users. No rights can be derived from the information provided therein.\n\n    NCSC-NL and the Kingdom of the Netherlands assume no legal liability or responsibility for any damage resulting from either the use or inability of use of this security advisory. This includes damage resulting from the inaccuracy of incompleteness of the information contained in the advisory.\n    This security advisory is subject to Dutch law. All disputes related to or arising from the use of this advisory will be submitted to the competent court in The Hague. This choice of means also applies to the court in summary proceedings."
+        },
+        {
+          "category": "description",
+          "text": "Adobe heeft meerdere kwetsbaarheden verholpen in Adobe Campaign Classic.",
+          "title": "Feiten"
+        },
+        {
+          "category": "description",
+          "text": "De kwetsbaarheden betreffen een Server-Side Request Forgery (SSRF) en OS Command Injection in Adobe Campaign Classic. De SSRF-kwetsbaarheid maakt het mogelijk voor een aanvaller om verzoeken op de server te manipuleren, wat kan leiden tot het uitvoeren van willekeurige code zonder gebruikersinteractie. De OS Command Injection kwetsbaarheden stellen een aanvaller in staat om willekeurige besturingssysteemcommando's uit te voeren met de rechten van de huidige gebruiker, eveneens zonder dat hiervoor gebruikersinteractie nodig is. Afhankelijk van de gebruikersrechten kan dit leiden tot volledige compromittering van het systeem waarop Adobe Campaign Classic draait.",
+          "title": "Interpretaties"
+        },
+        {
+          "category": "description",
+          "text": "Adobe heeft updates uitgebracht om de kwetsbaarheden in Adobe Campaign Classic te verhelpen. Zie bijgevoegde referenties voor meer informatie.",
+          "title": "Oplossingen"
+        },
+        {
+          "category": "general",
+          "text": "medium",
+          "title": "Kans"
+        },
+        {
+          "category": "general",
+          "text": "high",
+          "title": "Schade"
+        },
+        {
+          "category": "general",
+          "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+          "title": "CWE-78"
+        },
+        {
+          "category": "general",
+          "text": "Server-Side Request Forgery (SSRF)",
+          "title": "CWE-918"
+        }
+      ],
+      "publisher": {
+        "category": "coordinator",
+        "contact_details": "cert@ncsc.nl",
+        "name": "Nationaal Cyber Security Centrum",
+        "namespace": "https://www.ncsc.nl/"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Reference",
+          "url": "https://helpx.adobe.com//security/products/campaign/apsb26-134.html"
+        }
+      ],
+      "title": "Kwetsbaarheden verholpen in Adobe Campaign Classic",
+      "tracking": {
+        "current_release_date": "2026-08-27T07:42:45.663454Z",
+        "generator": {
+          "date": "2025-08-04T16:30:00Z",
+          "engine": {
+            "name": "V.A.",
+            "version": "1.3"
+          }
+        },
+        "id": "NCSC-2026-0331",
+        "initial_release_date": "2026-08-27T07:42:45.663454Z",
+        "revision_history": [
+          {
+            "date": "2026-08-27T07:42:45.663454Z",
+            "number": "1.0.0",
+            "summary": "Initiele versie"
+          }
+        ],
+        "status": "final",
+        "version": "1.0.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-1"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Campaign Classic"
+            }
+          ],
+          "category": "vendor",
+          "name": "Adobe"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-76193",
+        "cwe": {
+          "id": "CWE-918",
+          "name": "Server-Side Request Forgery (SSRF)"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Server-Side Request Forgery (SSRF)",
+            "title": "CWE-918"
+          },
+          {
+            "category": "description",
+            "text": "Adobe Campaign Classic (ACC) contains a Server-Side Request Forgery (SSRF) vulnerability enabling attackers to execute arbitrary code without user interaction, resulting in an altered execution scope.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-76193 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-76193.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 10.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-76193"
+      },
+      {
+        "cve": "CVE-2026-76195",
+        "cwe": {
+          "id": "CWE-78",
+          "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+            "title": "CWE-78"
+          },
+          {
+            "category": "description",
+            "text": "Adobe Campaign Classic contains an OS Command Injection vulnerability enabling attackers to execute arbitrary code under the current user's context without requiring user interaction.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-76195 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-76195.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 10.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-76195"
+      },
+      {
+        "cve": "CVE-2026-76197",
+        "cwe": {
+          "id": "CWE-78",
+          "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+            "title": "CWE-78"
+          },
+          {
+            "category": "description",
+            "text": "Adobe Campaign Classic contains an OS Command Injection vulnerability enabling attackers to execute arbitrary code under the current user's context without requiring user interaction.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-76197 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-76197.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 10.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1"
+            ]
+          }
+        ],
+        "title": "CVE-2026-76197"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ncsc-2026-0331"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE"
+        }
+      },
+      "lang": "nl",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "The Netherlands Cyber Security Center (henceforth: NCSC-NL) maintains this page to enhance access to its information and security advisories. The use of this security advisory is subject to the following terms and conditions:\n\n    NCSC-NL makes every reasonable effort to ensure that the content of this page is kept up to date, and that it is accurate and complete. Nevertheless, NCSC-NL cannot entirely rule out the possibility of errors, and therefore cannot give any warranty in respect of its completeness, accuracy or continuous keeping up-to-date. The information contained in this security advisory is intended solely for the purpose of providing general information to professional users. No rights can be derived from the information provided therein.\n\n    NCSC-NL and the Kingdom of the Netherlands assume no legal liability or responsibility for any damage resulting from either the use or inability of use of this security advisory. This includes damage resulting from the inaccuracy of incompleteness of the information contained in the advisory.\n    This security advisory is subject to Dutch law. All disputes related to or arising from the use of this advisory will be submitted to the competent court in The Hague. This choice of means also applies to the court in summary proceedings."
+        },
+        {
+          "category": "description",
+          "text": "Ubiquiti heeft kwetsbaarheden verholpen in verschillende UniFi-producten, waaronder UniFi Protect, UniFi OS, UniFi Network Application, UniFi Connect, UniFi Access Application, UniFi OS Server, UID Enterprise Agent, UniFi Connect Display Cast Pro, UniFi Enterprise Audio/Video Bridge en UniFi Talk.",
+          "title": "Feiten"
+        },
+        {
+          "category": "description",
+          "text": "De kwetsbaarheden betreffen voornamelijk improper input validation en improper access control binnen de genoemde UniFi-producten. Door onvoldoende validatie van invoer kunnen kwaadwillenden met netwerktoegang, soms zonder verhoogde privileges en soms met verhoogde privileges, command injection uitvoeren op het hostapparaat. Dit maakt het mogelijk om willekeurige commando's uit te voeren met de rechten van het getroffen proces of de applicatie.\n\nDaarnaast bevatten sommige UniFi OS-apparaten een kwetsbaarheid waarbij improper neutralization van CRLF-sequenties kan leiden tot het omzeilen van authenticatiemechanismen, wat ongeautoriseerde toegang tot apparaatfuncties of beheerinterfaces mogelijk maakt.\n\nVerder is er een kwetsbaarheid met actieve debugcode in UniFi OS-apparaten die privilege-escalatie door een aanvaller met lage privileges op het netwerk mogelijk maakt.\n\nDe kwetsbaarheden stellen een aanvaller in staat om privileges te escaleren, ongeautoriseerde acties uit te voeren en controle over de getroffen systemen te verkrijgen. Exploitatie vereist netwerktoegang, waarbij sommige kwetsbaarheden ook zonder verhoogde privileges kunnen worden misbruikt.",
+          "title": "Interpretaties"
+        },
+        {
+          "category": "description",
+          "text": "Ubiquiti heeft updates uitgebracht om de kwetsbaarheden in de verschillende UniFi-producten te verhelpen. Zie bijgevoegde referenties voor meer informatie.",
+          "title": "Oplossingen"
+        },
+        {
+          "category": "general",
+          "text": "medium",
+          "title": "Kans"
+        },
+        {
+          "category": "general",
+          "text": "high",
+          "title": "Schade"
+        },
+        {
+          "category": "general",
+          "text": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+          "title": "CWE-78"
+        },
+        {
+          "category": "general",
+          "text": "Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+          "title": "CWE-93"
+        },
+        {
+          "category": "general",
+          "text": "Active Debug Code",
+          "title": "CWE-489"
+        }
+      ],
+      "publisher": {
+        "category": "coordinator",
+        "contact_details": "cert@ncsc.nl",
+        "name": "Nationaal Cyber Security Centrum",
+        "namespace": "https://www.ncsc.nl/"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Reference",
+          "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-067/fc4a3488-7c43-4628-8bab-f715e96dbfc9"
+        }
+      ],
+      "title": "Kwetsbaarheden verholpen in UniFi-producten van Ubiquiti",
+      "tracking": {
+        "current_release_date": "2026-08-27T07:40:35.087960Z",
+        "generator": {
+          "date": "2025-08-04T16:30:00Z",
+          "engine": {
+            "name": "V.A.",
+            "version": "1.3"
+          }
+        },
+        "id": "NCSC-2026-0330",
+        "initial_release_date": "2026-08-27T07:40:35.087960Z",
+        "revision_history": [
+          {
+            "date": "2026-08-27T07:40:35.087960Z",
+            "number": "1.0.0",
+            "summary": "Initiele versie"
+          }
+        ],
+        "status": "final",
+        "version": "1.0.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-1"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Cloud Gateways"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-2"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Cloud Keys"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-3"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Dream Machines"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-4"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Dream Routers"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-5"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Dream Wall"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-6"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Enterprise Firewall Core"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-7"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Enterprise Fortress Gateway"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-8"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Enterprise Network Attached Storage"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-9"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Enterprise Network Video Recorders"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-10"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Express"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-11"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Express 7"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-12"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Network Attached Storage"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-13"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Network Video Recorders"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-14"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UID Enterprise Agent"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-15"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UniFi Access Application"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-16"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UniFi Connect Application"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-17"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UniFi Enterprise Audio/Video Bridge"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-18"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UniFi OS Server"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-19"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UniFi Protect AI Key"
+            },
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "vers:unknown/*",
+                  "product": {
+                    "name": "vers:unknown/*",
+                    "product_id": "CSAFPID-20"
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "UniFi Talk Application"
+            }
+          ],
+          "category": "vendor",
+          "name": "Ubiquiti Inc"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-77533",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A low-privilege network attacker can exploit an Improper Input Validation vulnerability in the UniFi Protect Application to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77533 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77533.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77533"
+      },
+      {
+        "cve": "CVE-2026-77534",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Access Control vulnerability in certain UniFi OS devices allows a low-privilege malicious actor on the network to escalate their privileges.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77534 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77534.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77534"
+      },
+      {
+        "cve": "CVE-2026-77535",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Input Validation vulnerability in the UniFi Network Application allows a high-privilege network attacker to perform Command Injection on an adopted device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77535 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77535.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77535"
+      },
+      {
+        "cve": "CVE-2026-77536",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Access Control vulnerability in certain UniFi OS devices allows a low-privilege malicious actor on the network to escalate their privileges.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77536 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77536.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77536"
+      },
+      {
+        "cve": "CVE-2026-77537",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A command injection vulnerability exists in the UniFi Protect Application due to improper input validation, allowing a malicious actor with network access to execute arbitrary commands on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77537 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77537.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 10.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77537"
+      },
+      {
+        "cve": "CVE-2026-77538",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in the UniFi Connect Application enables a malicious actor with network access to escalate privileges due to improper access control mechanisms.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77538 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77538.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:L",
+              "baseScore": 8.2,
+              "baseSeverity": "HIGH"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77538"
+      },
+      {
+        "cve": "CVE-2026-77539",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Input Validation vulnerability in UniFi OS Server allows a high-privilege network attacker to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77539 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77539.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77539"
+      },
+      {
+        "cve": "CVE-2026-77540",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Input Validation vulnerability in UniFi OS Server allows a high-privilege network attacker to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77540 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77540.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77540"
+      },
+      {
+        "cve": "CVE-2026-77541",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A high-privilege malicious actor can exploit an Improper Access Control vulnerability in the UniFi Network Application to escalate privileges within the application.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77541 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77541.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77541"
+      },
+      {
+        "cve": "CVE-2026-77542",
+        "notes": [
+          {
+            "category": "description",
+            "text": "An Improper Input Validation vulnerability in UID Enterprise Agent allows a high-privilege network attacker to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77542 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77542.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.1,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77542"
+      },
+      {
+        "cve": "CVE-2026-77543",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A low-privilege network attacker can exploit an Improper Input Validation vulnerability in the UniFi Access Application to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77543 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77543.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77543"
+      },
+      {
+        "cve": "CVE-2026-77545",
+        "cwe": {
+          "id": "CWE-489",
+          "name": "Active Debug Code"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Active Debug Code",
+            "title": "CWE-489"
+          },
+          {
+            "category": "description",
+            "text": "A vulnerability in UniFi OS devices enables a low-privilege network actor to exploit Active Debug Code, potentially leading to privilege escalation.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77545 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77545.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "baseScore": 9.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77545"
+      },
+      {
+        "cve": "CVE-2026-77546",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A low-privilege network attacker can exploit an Improper Input Validation vulnerability in the UniFi Access Application to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77546 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77546.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77546"
+      },
+      {
+        "cve": "CVE-2026-77547",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A low-privilege network attacker can exploit an Improper Input Validation vulnerability in the UniFi Access Application to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77547 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77547.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77547"
+      },
+      {
+        "cve": "CVE-2026-77548",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A low-privilege network attacker can exploit an Improper Input Validation vulnerability in the UniFi Protect Application to perform command injection on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77548 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77548.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77548"
+      },
+      {
+        "cve": "CVE-2026-77549",
+        "cwe": {
+          "id": "CWE-93",
+          "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+            "title": "CWE-93"
+          },
+          {
+            "category": "description",
+            "text": "A vulnerability in UniFi OS devices enables a network attacker to exploit improper neutralization of CRLF sequences, potentially bypassing authentication under specific conditions.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77549 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77549.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77549"
+      },
+      {
+        "cve": "CVE-2026-77550",
+        "cwe": {
+          "id": "CWE-93",
+          "name": "Improper Neutralization of CRLF Sequences ('CRLF Injection')"
+        },
+        "notes": [
+          {
+            "category": "other",
+            "text": "Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+            "title": "CWE-93"
+          },
+          {
+            "category": "description",
+            "text": "A vulnerability in UniFi OS devices enables a network attacker to bypass authentication by exploiting improper neutralization of CRLF sequences.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77550 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77550.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 10.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77550"
+      },
+      {
+        "cve": "CVE-2026-77551",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in UniFi Connect Display Cast Pro allows a malicious actor with network access to escalate privileges on the device due to improper access control.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77551 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77551.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77551"
+      },
+      {
+        "cve": "CVE-2026-77552",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A command injection vulnerability exists in UniFi Enterprise Audio/Video Bridge due to improper input validation, exploitable by a malicious actor with network access.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77552 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77552.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77552"
+      },
+      {
+        "cve": "CVE-2026-77553",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A low-privilege attacker on the network can exploit an Improper Access Control vulnerability in the UniFi Access Application to escalate privileges on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77553 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77553.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77553"
+      },
+      {
+        "cve": "CVE-2026-77554",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A command injection vulnerability exists in the UniFi Talk Application due to improper input validation, allowing a malicious actor with network access to execute arbitrary commands on the host device.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77554 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77554.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 10.0,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77554"
+      },
+      {
+        "cve": "CVE-2026-77557",
+        "notes": [
+          {
+            "category": "description",
+            "text": "A vulnerability in UniFi Protect AI Key allows a malicious actor with network access to escalate privileges on the device due to improper access control.",
+            "title": "Summary"
+          }
+        ],
+        "product_status": {
+          "known_affected": [
+            "CSAFPID-1",
+            "CSAFPID-2",
+            "CSAFPID-3",
+            "CSAFPID-4",
+            "CSAFPID-5",
+            "CSAFPID-6",
+            "CSAFPID-7",
+            "CSAFPID-8",
+            "CSAFPID-9",
+            "CSAFPID-10",
+            "CSAFPID-11",
+            "CSAFPID-12",
+            "CSAFPID-13",
+            "CSAFPID-14",
+            "CSAFPID-15",
+            "CSAFPID-16",
+            "CSAFPID-17",
+            "CSAFPID-18",
+            "CSAFPID-19",
+            "CSAFPID-20"
+          ]
+        },
+        "references": [
+          {
+            "category": "self",
+            "summary": "CVE-2026-77557 | NCSC-NL Website",
+            "url": "https://vulnerabilities.ncsc.nl/csaf/v2/2026/cve-2026-77557.json"
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            },
+            "products": [
+              "CSAFPID-1",
+              "CSAFPID-2",
+              "CSAFPID-3",
+              "CSAFPID-4",
+              "CSAFPID-5",
+              "CSAFPID-6",
+              "CSAFPID-7",
+              "CSAFPID-8",
+              "CSAFPID-9",
+              "CSAFPID-10",
+              "CSAFPID-11",
+              "CSAFPID-12",
+              "CSAFPID-13",
+              "CSAFPID-14",
+              "CSAFPID-15",
+              "CSAFPID-16",
+              "CSAFPID-17",
+              "CSAFPID-18",
+              "CSAFPID-19",
+              "CSAFPID-20"
+            ]
+          }
+        ],
+        "title": "CVE-2026-77557"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ncsc-2026-0330"
+          }
+        ]
+      }
+    }
+  }
+]
