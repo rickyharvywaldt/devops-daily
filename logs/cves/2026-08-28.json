@@ -331,3 +331,336 @@
     }
   }
 ]
+[Fri Aug 28 10:43:38 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-6788-84vh-frqm",
+    "modified": "2026-08-28T09:31:51Z",
+    "published": "2026-08-28T09:31:50Z",
+    "aliases": [
+      "CVE-2026-9548"
+    ],
+    "details": "An improper neutralization of input during web page generation ('Cross-site Scripting') vulnerability in extract domain in Synology Chat Server before 2.4.5-22148 allows remote authenticated users, via a UI interaction, to read or write restricted files and conduct limited denial-of-service attacks in DSM.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9548"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.synology.com/en-global/security/advisory/Synology_SA_26_10"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-28T08:16:59Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-6788-84vh-frqm"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-xr66-5v48-7crq",
+    "modified": "2026-08-28T09:31:50Z",
+    "published": "2026-08-28T09:31:50Z",
+    "aliases": [
+      "CVE-2026-80701"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/vmwgfx: enforce cursor size limits for MOB cursors\n\nvmw_cursor_plane_atomic_check() bounds cursor width and height only\non the legacy update path; the SVGA_CAP2_CURSOR_MOB path -- the\ndefault on modern hosts -- accepts any size.  When the requested size\nexceeds SVGA_REG_CURSOR_MAX_DIMENSION or SVGA_REG_MOB_MAX_SIZE,\nvmw_cursor_mob_get() returns -EINVAL and leaves vps->cursor.mob NULL.\nIts return value is then discarded in vmw_cursor_plane_prepare_fb(),\nso the subsequent vmw_cursor_update_mob() calls\nvmw_bo_map_and_cache(NULL) and oopses inside\nvmw_bo_map_and_cache_size() on the tbo.base.size load.\n\nReachable from any DRM master via DRM_IOCTL_MODE_CURSOR2 with a\nsufficiently large width or height (e.g. cursor_max_dim + 1).\n\nReject oversized cursors in atomic_check for both MOB-backed cursor\nupdate types.  The MOB byte-size limit only applies to the\nSVGA_CAP2_CURSOR_MOB path (vmw_cursor_mob_size() returns 0 for\nGB_ONLY); compute the required MOB size in 64-bit to avoid overflow\nwhen very large dimensions are requested.\n\nIn prepare_fb only call vmw_cursor_mob_get()/_map() for\nVMW_CURSOR_UPDATE_MOB -- the GB_ONLY path uses bo->map.virtual\ndirectly and would otherwise be silently downgraded to NONE on hosts\nwithout SVGA_CAP2_CURSOR_MOB (where vmw_cursor_mob_get() always\nreturns -EINVAL).  Degrade the update to NONE if vmw_cursor_mob_get()\nor vmw_cursor_mob_map() fails so the update path does not run with a\nNULL backing MOB.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80701"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/1eb4f796695be39e0b5c4383350033ced9ade703"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/9109b7935b9c058b75348610ef8437c52f9020e3"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/d5ed8749168ad13c0dbaa8300f68d854b6076966"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-28T08:16:55Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-xr66-5v48-7crq"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-wv7w-q623-9gwq",
+    "modified": "2026-08-28T09:31:50Z",
+    "published": "2026-08-28T09:31:50Z",
+    "aliases": [
+      "CVE-2026-80718"
+    ],
+    "details": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/percpu-km: fix bitmap overflow and accounting in pcpu_create_chunk()\n\nIn pcpu_create_chunk(), nr_pages is the total contiguous backing\nallocation, i.e., nr_units * pcpu_unit_pages, but pcpu_chunk_populated()\nuses it to set chunk->populated, whose size is pcpu_unit_pages, bitmap. \nSince bit N in chunk->populated means page offset N inside every unit is\nbacked.  When nr_units > 1, the function writes beyond chunk->populated. \nFix it by using chunk->nr_pages.\n\nIt also fixes the global pcpu_nr_empty_pop_pages accounting, since\npcpu_balance_free() only iterates up to chunk->nr_pages.\n\nCommit a63d4ac4ab609 (\"percpu: make percpu-km set chunk->populated bitmap\nproperly\") introduced the bitmap overflow issue.  Later, commit\nb539b87fed37f (\"percpu: implmeent pcpu_nr_empty_pop_pages and\nchunk->nr_populated\") added pcpu_nr_empty_pop_pages and caused the\naccounting issue.",
+    "severity": [],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-80718"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/01504da375f5b19df195cb1cb1cf1dd184318f97"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/32134cf9211b83bed9076d0739c5906fbea4c763"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/5c7fc39bf19abb38a996aaad77b3e3a8f48581c3"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/5f43d2c1bea280dcdfabaf156c25e7402fb8039f"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/6fc7da2a052f2825fff785e860e67183f5acaaba"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/89b1b79c308818a715e75f28744b70d8940a07c9"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/92c43ac3c2b09eb16162e8144e73c00b7c3e29d6"
+      },
+      {
+        "type": "WEB",
+        "url": "https://git.kernel.org/stable/c/a6940b84c8c035da465b7165fdfcfb005545724e"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [],
+      "severity": null,
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-28T08:16:57Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-wv7w-q623-9gwq"
+          }
+        ]
+      }
+    }
+  }
+]
