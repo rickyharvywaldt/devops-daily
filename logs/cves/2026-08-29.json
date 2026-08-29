@@ -389,3 +389,394 @@
     }
   }
 ]
+[Sat Aug 29 20:43:59 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-15369",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-07-10T08:05:43.197Z",
+      "datePublished": "2026-08-29T19:26:34.288Z",
+      "dateUpdated": "2026-08-29T19:26:34.288Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-08-29T19:26:34.288Z"
+        },
+        "affected": [
+          {
+            "vendor": "Addify",
+            "product": "Custom User Registration Fields for WooCommerce",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "2.2.3",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Custom User Registration Fields for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 2.2.3. This is due to the plugin accepting an attacker-controlled afreg_select_user_role value from the unauthenticated WooCommerce Store API /wc/store/v1/checkout request in the af_reg_checkout_data_to_order_meta_data_block() function, persisting it in order meta, and then passing it directly to WP_User::add_role() in the af_reg_custom_order_processing_function() function (hooked to woocommerce_thankyou) without validating against the plugin's admin-configured allowed role list. This makes it possible for unauthenticated attackers to elevate their privileges to Administrator by creating an account during checkout with a modified JSON body specifying administrator (or any other role slug) as the desired role. Note: The exploit requires the \"User Role Selection\" setting to be enabled."
+          }
+        ],
+        "title": "Custom User Registration Fields for WooCommerce <= 2.2.3 - Unauthenticated Privilege Escalation via 'afreg_select_user_role' Parameter in Store API Checkout",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/715723e7-5820-4a64-848f-f89b5b73a681?source=cve"
+          },
+          {
+            "url": "https://woocommerce.com/products/custom-user-registration-fields-for-woocommerce/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-269 Improper Privilege Management",
+                "cweId": "CWE-269",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "0xd4rk5id3"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-08-29T06:31:39.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-15369"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-rw55-gcm9-cgjp",
+    "modified": "2026-08-29T18:31:32Z",
+    "published": "2026-08-29T18:31:32Z",
+    "aliases": [
+      "CVE-2026-82476"
+    ],
+    "details": "Memos through 0.30.0 omits the 100.64.0.0/10 carrier-grade NAT address range from SSRF protection in its link-metadata fetcher, allowing unauthenticated attackers to bypass IP validation. Attackers can make the server request internal hosts in that range including cloud metadata services and read page titles and descriptions back.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82476"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/usememos/memos/issues/6099"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/usememos/memos"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/usememos/memos/blob/v0.30.0/internal/httpgetter/html_meta.go"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/memos-through-0.30.0-ssrf-via-omitted-cgnat-address-range"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-918"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-29T17:18:00Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-rw55-gcm9-cgjp"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-qm54-2jq3-88j9",
+    "modified": "2026-08-29T18:31:32Z",
+    "published": "2026-08-29T18:31:31Z",
+    "aliases": [
+      "CVE-2026-82472"
+    ],
+    "details": "Documenso before 2.13.0 accepts PDF file uploads on the /api/files/upload-pdf endpoint without requiring authentication, session tokens, or API credentials. Unauthenticated attackers can upload arbitrary PDF files indefinitely to exhaust storage resources or fill the database with unlinked document records.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+      },
+      {
+        "type": "CVSS_V4",
+        "score": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82472"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/documenso/documenso/commit/4f346d3c2d5264f221e4d787e162f16051e44114"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/documenso/documenso"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/documenso/documenso/blob/v2.12.0/apps/remix/server/api/files/files.ts"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.vulncheck.com/advisories/documenso-before-2.13.0-unauthenticated-file-upload-via-api-files-upload-pdf"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-306"
+      ],
+      "severity": "HIGH",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-08-29T17:17:59Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "ghsa-qm54-2jq3-88j9"
+          }
+        ]
+      }
+    }
+  }
+]
