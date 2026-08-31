@@ -631,3 +631,601 @@
     }
   }
 ]
+[Mon Aug 31 22:40:49 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-18729",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2026-08-03T18:15:57.016Z",
+      "datePublished": "2026-08-28T20:49:43.600Z",
+      "dateUpdated": "2026-08-31T18:32:24.045Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2026-08-28T20:49:43.600Z"
+        },
+        "title": "Langflow is affected by multiple remote code execution vulnerabilities due to insufficient code-execution policy enforcement",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-94",
+                "description": "CWE-94 Improper Control of Generation of Code ('Code Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "IBM",
+            "product": "Langflow OSS",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.0.0",
+                "lessThanOrEqual": "1.11.1",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:langflow_oss:1.11.1:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote authenticated attacker to execute arbitrary code due to improper control of generation of code.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7284733",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "IBM strongly recommends addressing the vulnerability now by upgrading  Langflow OSS to version 1.11.2 https://pypi.org/project/langflow/",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM strongly recommends addressing the vulnerability now by upgrading <a href=\"https://pypi.org/project/langflow/\" rel=\"nofollow\">Langflow OSS to version 1.11.2</a></p>"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-18729"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-08-31T18:32:14.845576Z",
+                  "id": "CVE-2026-18729",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-08-31T18:32:24.045Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-18891",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2026-08-04T19:48:56.798Z",
+      "datePublished": "2026-08-28T20:51:27.834Z",
+      "dateUpdated": "2026-08-31T13:52:41.780Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2026-08-28T20:51:27.834Z"
+        },
+        "title": "Langflow is affected by multiple authentication bypass, path traversal, authorization, and server-side request forgery vulnerabilities",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-287",
+                "description": "CWE-287 Improper Authentication",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "IBM",
+            "product": "Langflow OSS",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.0.0",
+                "lessThanOrEqual": "1.11.1",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:langflow_oss:1.11.1:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote attacker to execute arbitrary flows and access sensitive information due to improper authentication.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote attacker to execute arbitrary flows and access sensitive information due to improper authentication.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7284579",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "IBM strongly recommends addressing the vulnerability now by upgrading  Langflow OSS to version 1.11.2 https://pypi.org/project/langflow/",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM strongly recommends addressing the vulnerability now by upgrading <a href=\"https://pypi.org/project/langflow/\" rel=\"nofollow\">Langflow OSS to version 1.11.2</a></p>"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-18891"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-08-31T13:52:35.677058Z",
+                  "id": "CVE-2026-18891",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-08-31T13:52:41.780Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-18899",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2026-08-04T20:00:03.635Z",
+      "datePublished": "2026-08-28T20:51:48.083Z",
+      "dateUpdated": "2026-08-28T20:51:48.083Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2026-08-28T20:51:48.083Z"
+        },
+        "title": "Langflow is affected by multiple authentication bypass, path traversal, authorization, and server-side request forgery vulnerabilities",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-22",
+                "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "IBM",
+            "product": "Langflow OSS",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "1.0.0",
+                "lessThanOrEqual": "1.11.1",
+                "versionType": "semver"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:langflow_oss:1.0.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:langflow_oss:1.11.1:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote attacker to read arbitrary files due to path traversal.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM Langflow OSS 1.0.0 through 1.11.1 could allow a remote attacker to read arbitrary files due to path traversal.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7284579",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "IBM strongly recommends addressing the vulnerability now by upgrading  Langflow OSS to version 1.11.2 https://pypi.org/project/langflow/",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM strongly recommends addressing the vulnerability now by upgrading <a href=\"https://pypi.org/project/langflow/\" rel=\"nofollow\">Langflow OSS to version 1.11.2</a></p>"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-18899"
+          }
+        ]
+      }
+    }
+  }
+]
