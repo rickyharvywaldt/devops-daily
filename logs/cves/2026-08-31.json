@@ -1,0 +1,633 @@
+[Mon Aug 31 13:12:28 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-82695",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-08-30T17:44:12.858Z",
+      "datePublished": "2026-08-31T12:45:09.596Z",
+      "dateUpdated": "2026-08-31T12:45:09.596Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-08-31T12:45:09.596Z"
+        },
+        "title": "Tenda AC18 Telnet telnet missing authentication",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-306",
+                "lang": "en",
+                "description": "Missing Authentication"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-287",
+                "lang": "en",
+                "description": "Improper Authentication"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Tenda",
+            "product": "AC18",
+            "versions": [
+              {
+                "version": "15.03.05.19",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:o:tenda:ac18_firmware:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "Telnet Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in Tenda AC18 15.03.05.19. Impacted is an unknown function of the file /goform/telnet of the component Telnet Handler. The manipulation results in missing authentication. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 10,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P",
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 10,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 10,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H/E:P/RL:X/RC:R",
+              "baseSeverity": "CRITICAL"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 10,
+              "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-08-30T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-08-30T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-08-30T19:49:18.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "ST4R0003 (VulDB User)",
+            "type": "reporter"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/397183",
+            "name": "VDB-397183 | Tenda AC18 Telnet telnet missing authentication",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/397183/cti",
+            "name": "VDB-397183 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-82695",
+            "name": "CVE-2026-82695 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/894242",
+            "name": "Submit #894242 | Tenda AC18 ac18_kf_V15.03.05.19 Missing Authentication for Critical Function",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/dxz0069/WAVLINK-WN530H4-Command-Injection-in-set_add_routing/blob/main/TENDA-AC18-TELNET-DEFAULT-UNAUTH-001-vulndb.md",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://www.tenda.com.cn/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_generator": [
+          "VulDB PVTS v202608"
+        ],
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-82695"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5956",
+      "assignerOrgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+      "state": "PUBLISHED",
+      "assignerShortName": "TR-CERT",
+      "dateReserved": "2026-04-09T07:53:25.006Z",
+      "datePublished": "2026-08-31T12:43:59.512Z",
+      "dateUpdated": "2026-08-31T12:43:59.512Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+          "shortName": "TR-CERT",
+          "dateUpdated": "2026-08-31T12:43:59.512Z"
+        },
+        "title": "SQLi in Ankara Hosting's Site Management Panel",
+        "datePublic": "2026-08-31T12:40:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-89",
+                "description": "CWE-89 Improper neutralization of special elements used in an SQL command ('SQL injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-66",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-66 SQL Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Ankara Hosting",
+            "product": "Site Management Panel",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThanOrEqual": "15062026",
+                "versionType": "custom"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Ankara Hosting Site Management Panel allows SQL Injection.\n\nThis issue affects Site Management Panel: through 15062026.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Ankara Hosting Site Management Panel allows SQL Injection.<p>This issue affects Site Management Panel: through 15062026.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-0955",
+            "tags": [
+              "government-resource"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Mehmet Akif KUBUR",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "defect": [
+            "TR-26-0955"
+          ],
+          "advisory": "TR-26-0955",
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-5956"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-14835",
+      "assignerOrgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+      "state": "PUBLISHED",
+      "assignerShortName": "WPScan",
+      "dateReserved": "2026-07-06T09:51:53.034Z",
+      "datePublished": "2026-08-30T06:00:17.612Z",
+      "dateUpdated": "2026-08-31T12:38:06.830Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1bfdd5d7-9bf6-4a53-96ea-42e2716d7a81",
+          "shortName": "WPScan",
+          "dateUpdated": "2026-08-30T06:00:17.612Z"
+        },
+        "title": "SOGO Add Script to Individual Pages Header Footer <= 3.9 - Contributor+ Stored XSS via Post Metabox",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-79 Cross-Site Scripting (XSS)",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Unknown",
+            "product": "SOGO Add Script to Individual Pages Header Footer",
+            "versions": [
+              {
+                "status": "affected",
+                "versionType": "semver",
+                "version": "0",
+                "lessThanOrEqual": "3.9"
+              }
+            ],
+            "defaultStatus": "unknown"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The SOGO Add Script to Individual Pages Header Footer WordPress plugin through 3.9 does not sanitise or escape the custom header/footer script values saved from its post metabox, and does not restrict them to users with the unfiltered_html capability, allowing users with contributor-level access and above to store JavaScript that executes in the browser of any administrator who reviews the post and of any visitor once the post is published."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/f0b869b1-ef43-4540-9ca5-4440e763d307/",
+            "tags": [
+              "exploit",
+              "vdb-entry",
+              "technical-description"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Chamseddine Bouzaiene",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "WPScan",
+            "type": "coordinator"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "WPScan CVE Generator"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-14835"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.8,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "HIGH",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2026-14835",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2026-08-31T12:31:36.696666Z"
+                }
+              }
+            }
+          ],
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "lang": "en",
+                  "type": "CWE",
+                  "cweId": "CWE-79",
+                  "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+                }
+              ]
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-08-31T12:38:06.830Z"
+          }
+        }
+      ]
+    }
+  }
+]
