@@ -1,0 +1,731 @@
+[Fri Sep  4 03:50:30 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2025-19"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "pysec-2024-115"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-81286",
+      "assignerOrgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Patchstack",
+      "dateReserved": "2026-08-26T17:33:24.197Z",
+      "datePublished": "2026-09-02T11:37:24.650Z",
+      "dateUpdated": "2026-09-04T02:28:24.901Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "21595511-bba5-4825-b968-b78d1f9984a3",
+          "shortName": "Patchstack",
+          "dateUpdated": "2026-09-02T11:37:24.650Z"
+        },
+        "title": "WordPress WCFM Marketplace plugin <= 3.8.1 - SQL Injection vulnerability",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-89",
+                "description": "CWE-89 Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-7",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-7 Blind SQL Injection"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "WC Lovers",
+            "collectionURL": "https://wordpress.org/plugins",
+            "defaultStatus": "unaffected",
+            "packageName": "wc-multivendor-marketplace",
+            "product": "WCFM Marketplace",
+            "versions": [
+              {
+                "lessThanOrEqual": "3.8.1",
+                "status": "affected",
+                "version": "n/a",
+                "versionType": "custom",
+                "changes": [
+                  {
+                    "at": "3.8.2",
+                    "status": "unaffected"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Unauthenticated SQL Injection in WCFM Marketplace <= 3.8.1 versions."
+              }
+            ],
+            "value": "Unauthenticated SQL Injection in WCFM Marketplace <= 3.8.1 versions."
+          }
+        ],
+        "references": [
+          {
+            "tags": [
+              "vdb-entry"
+            ],
+            "url": "https://patchstack.com/database/wordpress/plugin/wc-multivendor-marketplace/vulnerability/wordpress-wcfm-marketplace-plugin-3-8-1-sql-injection-vulnerability?_s_id=cve"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "LOW",
+              "version": "3.1",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "base64": false,
+                "type": "text/html",
+                "value": "Update the WordPress WCFM Marketplace Plugin to the latest available version (at least 3.8.2)."
+              }
+            ],
+            "value": "Update the WordPress WCFM Marketplace Plugin to the latest available version (at least 3.8.2)."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "user": "00000000-0000-4000-9000-000000000000",
+            "value": "Ivaylo Atanassov | Patchstack Bug Bounty Program"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-81286"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-04T02:28:15.906934Z",
+                  "id": "CVE-2026-81286",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-04T02:28:24.901Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-84804",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-09-02T10:19:32.991Z",
+      "datePublished": "2026-09-02T11:11:17.676Z",
+      "dateUpdated": "2026-09-04T02:27:09.396Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-09-02T11:11:17.676Z"
+        },
+        "datePublic": "2026-08-19T00:00:00.000Z",
+        "title": "Kimai before 2.65.0 Authorization Bypass via Team Activity API",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Kimai before 2.65.0 fails to properly validate permissions when removing team access to activities, projects, and customers via API endpoints. Authenticated users with edit_team permission can revoke team access without the required permissions_activity check, bypassing authorization controls."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Access Control",
+                "cweId": "CWE-284",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "kimai",
+            "product": "kimai",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "2.65.0"
+              },
+              {
+                "version": "2.65.0",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:kimai:kimai:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "2.65.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "LOW",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.4,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/kimai/kimai/security/advisories/GHSA-mc86-77vp-82g3",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "name": "GitHub Security Advisory (GHSA-mc86-77vp-82g3)"
+          },
+          {
+            "name": "VulnCheck Advisory: Kimai before 2.65.0 Authorization Bypass via Team Activity API",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/kimai-before-2.65.0-authorization-bypass-via-team-activity-api"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "ashrexon",
+            "type": "reporter"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-84804"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-04T02:26:57.984860Z",
+                  "id": "CVE-2026-84804",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-04T02:27:09.396Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-84799",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-09-02T10:19:06.331Z",
+      "datePublished": "2026-09-02T11:11:14.295Z",
+      "dateUpdated": "2026-09-04T02:26:22.911Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-09-02T11:11:14.295Z"
+        },
+        "datePublic": "2026-08-18T00:00:00.000Z",
+        "title": "Craft CMS before 5.11.0 PII Disclosure via GraphQL User Relations",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Craft CMS before 5.11.0 fails to enforce user-group scope filters on native GraphQL user relations including author, authors, uploader, draftCreator, and revisionCreator fields. Attackers with a scoped GraphQL token can query these relations to read usernames, email addresses, and full names of any content author or uploader including administrators."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Authorization",
+                "cweId": "CWE-285",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "craftcms",
+            "product": "cms",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "5.0.0-RC1",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "5.11.0"
+              },
+              {
+                "version": "5.11.0",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:craftcms:craft_cms:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndExcluding": "5.11.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "attackVector": "NETWORK",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "exploitMaturity": "NOT_DEFINED",
+              "privilegesRequired": "LOW",
+              "providerUrgency": "NOT_DEFINED",
+              "subAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "userInteraction": "NONE",
+              "valueDensity": "NOT_DEFINED",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0",
+              "vulnAvailabilityImpact": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnerabilityResponseEffort": "NOT_DEFINED"
+            },
+            "format": "CVSS"
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.3,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/craftcms/cms/security/advisories/GHSA-4w9w-3x96-7ghp",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "name": "GitHub Security Advisory (GHSA-4w9w-3x96-7ghp)"
+          },
+          {
+            "name": "VulnCheck Advisory: Craft CMS before 5.11.0 PII Disclosure via GraphQL User Relations",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/craft-cms-before-5.11.0-pii-disclosure-via-graphql-user-relations"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "recordType": "advisory",
+            "vulnId": "cve-2026-84799"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-04T02:26:13.021510Z",
+                  "id": "CVE-2026-84799",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-04T02:26:22.911Z"
+          }
+        }
+      ]
+    }
+  }
+]
