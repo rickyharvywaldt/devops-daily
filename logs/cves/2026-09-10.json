@@ -3525,3 +3525,762 @@
     }
   }
 ]
+[Thu Sep 10 16:08:04 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-4129",
+      "assignerOrgId": "bca5b2e8-03a4-4781-b4ca-c6a078c0bfd4",
+      "state": "PUBLISHED",
+      "assignerShortName": "NI",
+      "dateReserved": "2026-03-13T14:11:47.565Z",
+      "datePublished": "2026-09-10T15:37:53.659Z",
+      "dateUpdated": "2026-09-10T15:37:53.659Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "bca5b2e8-03a4-4781-b4ca-c6a078c0bfd4",
+          "shortName": "NI",
+          "dateUpdated": "2026-09-10T15:37:53.659Z"
+        },
+        "title": "Improper Access Controls in NI SystemLink",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-862",
+                "description": "CWE-862: Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-115",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-115 Authentication Bypass"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "NI",
+            "product": "SystemLink",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThanOrEqual": "26.5.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "NI",
+            "product": "SystemLink Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThanOrEqual": "26.5.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ni:systemlink:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "0",
+                    "versionEndIncluding": "26.5.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ni:systemlink_server:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "0",
+                    "versionEndIncluding": "26.5.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "There is an improper access control vulnerability in NI SystemLink that may allow an authenticated user with limited privileges to access host operating system files and directories that should be restricted. This vulnerability affects NI SystemLink and NI SystemLink Server 2026 Q3 and prior versions.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "There is an improper access control vulnerability in NI SystemLink that may allow an authenticated user with limited privileges to access host operating system files and directories that should be restricted. This vulnerability affects NI SystemLink and NI SystemLink Server 2026 Q3 and prior versions."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/improper-access-controls-in-ni-systemlink.html"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.6,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-4129",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-86597",
+      "assignerOrgId": "412d305a-227d-44f9-a262-a31ba44f2aea",
+      "state": "PUBLISHED",
+      "assignerShortName": "SNOWFLAKE",
+      "dateReserved": "2026-09-08T08:21:54.812Z",
+      "datePublished": "2026-09-08T08:24:15.020Z",
+      "dateUpdated": "2026-09-10T15:37:52.230Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Sensitive information written to logs by Snowflake drivers",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insertion of sensitive information into log files in the Snowflake Python, Go, JDBC, Node.js, PHP PDO, and ODBC drivers allowed authentication tokens, query-result encryption keys, pre-signed cloud-storage URLs, and SAML assertions to be written to diagnostic logs in circumstances where the available log redaction did not cover all affected log paths and data types. An attacker with read access to the log destination, whether the local filesystem, a log aggregation service, or a CI/CD artifact store, could obtain credentials and decryption keys that, if still valid at the time of access, could be used to authenticate to the corresponding Snowflake account or cloud-storage object. Successful exploitation requires read access to the log destination, and impact is bounded by credential lifetime and object scope. The fix is available in Snowflake Connector for Python v4.7.3, Snowflake Go Driver v2.2.0, Snowflake JDBC Driver v4.3.4 (including the snowflake-jdbc-fips and snowflake-jdbc-thin), Snowflake Node.js Driver v3.3.0, Snowflake PHP PDO Driver v4.2.0, and Snowflake ODBC Driver v3.20.0. Users must manually upgrade and should securely delete previously generated diagnostic logs containing sensitive information where retention is not required."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake Connector for Python",
+            "collectionURL": "https://pypi.org",
+            "packageName": "snowflake-connector-python",
+            "repo": "https://github.com/snowflakedb/snowflake-connector-python",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "4.7.3",
+                "versionType": "python",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake Go Driver",
+            "collectionURL": "https://pkg.go.dev",
+            "packageName": "github.com/snowflakedb/gosnowflake",
+            "repo": "https://github.com/snowflakedb/gosnowflake",
+            "versions": [
+              {
+                "version": "0",
+                "lessThanOrEqual": "1.19.1",
+                "versionType": "semver",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake Go Driver",
+            "collectionURL": "https://pkg.go.dev",
+            "packageName": "github.com/snowflakedb/gosnowflake/v2",
+            "repo": "https://github.com/snowflakedb/gosnowflake",
+            "versions": [
+              {
+                "version": "2.0.0",
+                "lessThan": "2.2.0",
+                "versionType": "semver",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake JDBC Driver",
+            "collectionURL": "https://repo.maven.apache.org/maven2",
+            "packageName": "net.snowflake:snowflake-jdbc",
+            "repo": "https://github.com/snowflakedb/snowflake-jdbc",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "4.3.4",
+                "versionType": "maven",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake JDBC Driver (FIPS)",
+            "collectionURL": "https://repo.maven.apache.org/maven2",
+            "packageName": "net.snowflake:snowflake-jdbc-fips",
+            "repo": "https://github.com/snowflakedb/snowflake-jdbc",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "4.3.4",
+                "versionType": "maven",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake JDBC Driver (Thin)",
+            "collectionURL": "https://repo.maven.apache.org/maven2",
+            "packageName": "net.snowflake:snowflake-jdbc-thin",
+            "repo": "https://github.com/snowflakedb/snowflake-jdbc",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "4.3.4",
+                "versionType": "maven",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake Node.js Driver",
+            "collectionURL": "https://registry.npmjs.org",
+            "packageName": "snowflake-sdk",
+            "repo": "https://github.com/snowflakedb/snowflake-connector-nodejs",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "3.3.0",
+                "versionType": "semver",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake PHP PDO Driver",
+            "repo": "https://github.com/snowflakedb/pdo_snowflake",
+            "versions": [
+              {
+                "version": "3.4.0",
+                "lessThan": "4.2.0",
+                "versionType": "semver",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Snowflake",
+            "product": "Snowflake ODBC Driver",
+            "versions": [
+              {
+                "version": "3.16.0",
+                "lessThan": "3.20.0",
+                "versionType": "semver",
+                "status": "affected"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-532",
+                "description": "Insertion of Sensitive Information into Log File",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "CHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/snowflakedb/snowflake-connector-python/releases/tag/v4.7.3",
+            "name": "Snowflake Connector for Python Release Notes"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/release-notes/clients-drivers/golang-2026#version-220-sep-03-2026",
+            "name": "Snowflake Go Driver Release Notes"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/release-notes/clients-drivers/jdbc-2026#version-434-sep-03-2026",
+            "name": "Snowflake JDBC Driver Release Notes"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/release-notes/clients-drivers/nodejs-2026#version-330-september-3-2026",
+            "name": "Snowflake Node.js Driver Release Notes"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/release-notes/clients-drivers/php-pdo-2026#version-420-sep-3-2026",
+            "name": "Snowflake PHP PDO Driver Release Notes"
+          },
+          {
+            "url": "https://docs.snowflake.com/en/release-notes/clients-drivers/odbc-2026#version-3200-sep-3-2026",
+            "name": "Snowflake ODBC Driver Release Notes"
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "412d305a-227d-44f9-a262-a31ba44f2aea",
+          "shortName": "SNOWFLAKE",
+          "dateUpdated": "2026-09-10T15:37:52.230Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-86597",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-08T12:22:44.788390Z",
+                  "id": "CVE-2026-86597",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-08T12:22:54.846Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-87503",
+      "assignerOrgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+      "state": "PUBLISHED",
+      "assignerShortName": "Chrome",
+      "dateReserved": "2026-09-08T22:38:55.815Z",
+      "datePublished": "2026-09-09T00:09:42.111Z",
+      "dateUpdated": "2026-09-10T15:37:30.780Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "vendor": "Google",
+            "product": "Chrome",
+            "versions": [
+              {
+                "version": "153.0.8010.36",
+                "status": "affected",
+                "lessThan": "153.0.8010.36",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Inappropriate implementation in Downloads in Google Chrome on on Android prior to 153.0.8010.36 allowed a remote attacker leveraging social engineering to bypass system access restrictions via a crafted HTML page. (Chromium security severity: Medium)"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Inappropriate implementation",
+                "cweId": "CWE-841"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "ebfee0ef-53dd-4cf3-9e2a-08a5bd7a7e28",
+          "shortName": "Chrome",
+          "dateUpdated": "2026-09-09T00:09:42.111Z"
+        },
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/09/stable-channel-update-for-desktop_0808145027.html"
+          },
+          {
+            "url": "https://issues.chromium.org/issues/497986036"
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-87503",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 6.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "integrityImpact": "HIGH",
+                "userInteraction": "REQUIRED",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "NONE"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-10T15:37:06.280725Z",
+                  "id": "CVE-2026-87503",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-10T15:37:30.780Z"
+          }
+        }
+      ]
+    }
+  }
+]
