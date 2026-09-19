@@ -1,0 +1,431 @@
+[Sat Sep 19 10:36:53 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-j95r-4g94-87j7",
+    "modified": "2026-09-19T09:32:13Z",
+    "published": "2026-09-19T09:32:12Z",
+    "aliases": [
+      "CVE-2026-9766"
+    ],
+    "details": "The Empik for Woocommerce plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.5.1. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to modify arbitrary WooCommerce product metadata, including Empik logistic class (_empik_logistic_klass), product state (_empik_product_state, _empik_product_state_all_variants), and Empik export and offer flags on any product in the store.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9766"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/empik-for-woocommerce/tags/1.5.1/src/Wp_Admin/CSV/CSV_Ajax.php#L12"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/empik-for-woocommerce/tags/1.5.1/src/Wp_Admin/CSV/CSV_Ajax.php#L19"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/empik-for-woocommerce/tags/1.5.1/src/Wp_Admin/CSV/CSV_Ajax.php#L64"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/empik-for-woocommerce/tags/1.5.1/src/Wp_Admin/CSV/CSV_Import.php#L38"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/empik-for-woocommerce/tags/1.5.1/src/Wp_Admin/Products_List_Offers_import_Column.php#L29"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/empik-for-woocommerce/tags/1.5.1/src/Wp_Admin/Products_List_Product_import_Column.php#L28"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset?reponame=&old=3592900%40empik-for-woocommerce&new=3592900%40empik-for-woocommerce"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a0a5259d-7340-48b5-a0cf-f68abdb21156?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-09-19T09:16:35Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "ghsa-j95r-4g94-87j7",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-2m92-vwcx-jmjg",
+    "modified": "2026-09-19T09:32:13Z",
+    "published": "2026-09-19T09:32:13Z",
+    "aliases": [
+      "CVE-2026-9613"
+    ],
+    "details": "The Datalogics Ecommerce Delivery – Datalogics plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.6.65. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to create and cancel real shipping orders through the external logistics API using the store's stored authentication token, modify arbitrary WooCommerce order post meta on any order, overwrite the plugin's stored API token, and trigger shipping notification emails to customers.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9613"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L198"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L244"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L646"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L679"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L691"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L76"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.63/actions.php#L809"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L198"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L244"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L646"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L679"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L691"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L76"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/datalogics/tags/2.6.65/actions.php#L809"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset?reponame=&old=3552733%40datalogics&new=3552733%40datalogics"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c0ed27b8-dbdc-4927-8019-52a622bfbff6?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-862"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-09-19T09:16:35Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "ghsa-2m92-vwcx-jmjg",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.4.0",
+    "id": "GHSA-x3gq-9gj8-jmhv",
+    "modified": "2026-09-19T09:32:12Z",
+    "published": "2026-09-19T09:32:12Z",
+    "aliases": [
+      "CVE-2026-5410"
+    ],
+    "details": "The Redux Framework plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the spinner field in versions up to, and including, 4.5.13 This is due to insufficient input sanitization and output escaping. In the user_meta_save() function scalar values bypass the sanitization logic that only processes arrays, allowing the spinner field value to be stored in user meta without proper sanitization. Later, at line 56 of class-redux-spinner.php in the render() function, this value is rendered in an unquoted HTML attribute without escaping via '$data_string .= ' data-val=' . $this->value;'. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.",
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N"
+      }
+    ],
+    "affected": [],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5410"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/redux-framework/tags/4.5.10/redux-core/inc/extensions/users/class-redux-extension-users.php#L1018"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/redux-framework/tags/4.5.10/redux-core/inc/fields/spinner/class-redux-spinner.php#L56"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/redux-framework/trunk/redux-core/inc/extensions/users/class-redux-extension-users.php#L1018"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/browser/redux-framework/trunk/redux-core/inc/fields/spinner/class-redux-spinner.php#L56"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset/3688279/redux-framework/trunk/redux-core/inc/extensions/users/class-redux-extension-users.php"
+      },
+      {
+        "type": "WEB",
+        "url": "https://plugins.trac.wordpress.org/changeset?reponame=&new=3688279%40redux-framework%2Ftags%2F4.5.14&old=3582185%40redux-framework%2Ftags%2F4.5.13"
+      },
+      {
+        "type": "WEB",
+        "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/116c57c2-6257-40b3-a838-194f8959be16?source=cve"
+      }
+    ],
+    "database_specific": {
+      "cwe_ids": [
+        "CWE-79"
+      ],
+      "severity": "MODERATE",
+      "github_reviewed": false,
+      "github_reviewed_at": null,
+      "nvd_published_at": "2026-09-19T09:16:34Z"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "ghsa-x3gq-9gj8-jmhv",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
