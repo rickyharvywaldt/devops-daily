@@ -2092,3 +2092,763 @@
     }
   }
 ]
+[Tue Sep 22 21:04:44 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-75101",
+      "assignerOrgId": "82327ea3-741d-41e4-88f8-2cf9e791e760",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_P",
+      "dateReserved": "2026-08-17T17:21:03.791Z",
+      "datePublished": "2026-09-22T20:43:59.193Z",
+      "dateUpdated": "2026-09-22T20:43:59.193Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "82327ea3-741d-41e4-88f8-2cf9e791e760",
+          "shortName": "GitHub_P",
+          "dateUpdated": "2026-09-22T20:43:59.193Z"
+        },
+        "title": "Authorization bypass vulnerability in GitHub Enterprise Server allowed reading of private pull request diffs and patches via repository name collision",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-639",
+                "description": "CWE-639 Authorization Bypass Through User-Controlled Key",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "GitHub",
+            "product": "Enterprise Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "3.17.0",
+                "lessThan": "3.17.*",
+                "changes": [
+                  {
+                    "at": "3.17.21",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "3.18.0",
+                "lessThan": "3.18.*",
+                "changes": [
+                  {
+                    "at": "3.18.15",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "3.19.0",
+                "lessThan": "3.19.*",
+                "changes": [
+                  {
+                    "at": "3.19.12",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "3.20.0",
+                "lessThan": "3.20.*",
+                "changes": [
+                  {
+                    "at": "3.20.8",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "3.21.0",
+                "lessThan": "3.21.*",
+                "changes": [
+                  {
+                    "at": "3.21.6",
+                    "status": "unaffected"
+                  }
+                ],
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unknown"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authorization bypass vulnerability was identified in GitHub Enterprise Server that allowed any authenticated user of the instance to read the raw diff or patch of pull requests in private repositories without authorization. Access tokens for raw pull request diffs and patches were scoped to the repository name and pull request number rather than to a globally unique repository identifier, so an attacker who created a repository and pull request matching a target's repository name and pull request number could use a token for their own repository to retrieve the private pull request's contents. Exploitation required the attacker to know the target repository's name and a valid pull request number. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.22 and was fixed in versions 3.17.21, 3.18.15, 3.19.12, 3.20.8, and 3.21.6. This vulnerability was reported via the GitHub Bug Bounty program.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "An authorization bypass vulnerability was identified in GitHub Enterprise Server that allowed any authenticated user of the instance to read the raw diff or patch of pull requests in private repositories without authorization. Access tokens for raw pull request diffs and patches were scoped to the repository name and pull request number rather than to a globally unique repository identifier, so an attacker who created a repository and pull request matching a target's repository name and pull request number could use a token for their own repository to retrieve the private pull request's contents. Exploitation required the attacker to know the target repository's name and a valid pull request number. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.22 and was fixed in versions 3.17.21, 3.18.15, 3.19.12, 3.20.8, and 3.21.6. This vulnerability was reported via the GitHub Bug Bounty program.<br><br>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.github.com/en/enterprise-server@3.17/admin/release-notes#3.17.21",
+            "tags": [
+              "release-notes"
+            ]
+          },
+          {
+            "url": "https://docs.github.com/en/enterprise-server@3.18/admin/release-notes#3.18.15",
+            "tags": [
+              "release-notes"
+            ]
+          },
+          {
+            "url": "https://docs.github.com/en/enterprise-server@3.19/admin/release-notes#3.19.12",
+            "tags": [
+              "release-notes"
+            ]
+          },
+          {
+            "url": "https://docs.github.com/en/enterprise-server@3.20/admin/release-notes#3.20.8",
+            "tags": [
+              "release-notes"
+            ]
+          },
+          {
+            "url": "https://docs.github.com/en/enterprise-server@3.21/admin/release-notes#3.21.6",
+            "tags": [
+              "release-notes"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "syvb",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-75101",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-94501",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-09-21T17:54:19.950Z",
+      "datePublished": "2026-09-21T18:16:19.637Z",
+      "dateUpdated": "2026-09-21T18:37:07.425Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-09-21T18:16:19.637Z"
+        },
+        "datePublic": "2026-09-19T00:00:00.000Z",
+        "title": "jshERP through 3.6 Privilege Escalation via userBusiness CRUD",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "jshERP through 3.6 contains an authorization bypass vulnerability in the userBusiness CRUD endpoints that allows authenticated users to create, modify, or delete authorization-relation rows without privilege checks. Attackers can manipulate user-role mappings and access controls to escalate privileges, strip access from other accounts, or modify role-function relationships for any user in the tenant."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-862",
+                "type": "CWE",
+                "description": "CWE-862 Missing Authorization"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "jishenghua",
+            "product": "jshERP",
+            "packageURL": "pkg:github/jishenghua/jshERP",
+            "repo": "https://github.com/jishenghua/jshERP",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "0",
+                "lessThanOrEqual": "3.6",
+                "status": "affected",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jishenghua:jsherp:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "3.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "baseScore": 8.8,
+              "baseSeverity": "HIGH",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH"
+            }
+          },
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/LinYuanyi1/cve-request-poc/blob/master/jshERP/poc-07-userbusiness-authorization-delete.py",
+            "name": "Proof of concept",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://github.com/jishenghua/jshERP/blob/v3.6/jshERP-boot/src/main/java/com/jsh/erp/controller/UserBusinessController.java#L50-L80",
+            "name": "Vulnerable code",
+            "tags": [
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://github.com/jishenghua/jshERP",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: jshERP through 3.6 Privilege Escalation via userBusiness CRUD",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/jsherp-through-3.6-privilege-escalation-via-userbusiness-crud"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Mingsheng Lin",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-94501",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-21T18:36:46.586738Z",
+                  "id": "CVE-2026-94501",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-21T18:37:07.425Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-94497",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-09-21T17:52:02.192Z",
+      "datePublished": "2026-09-21T18:16:18.452Z",
+      "dateUpdated": "2026-09-22T17:45:10.430Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-09-21T18:16:18.452Z"
+        },
+        "datePublic": "2026-09-19T00:00:00.000Z",
+        "title": "jshERP through 3.6 Unauthorized Access via by-id Endpoints",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "jshERP through 3.6 fails to validate object ownership in by-id info, update, and delete endpoints across multiple resource types. Authenticated users can read, modify, and delete other users' business objects by submitting direct object identifiers without authorization checks."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-639",
+                "type": "CWE",
+                "description": "CWE-639 Authorization Bypass Through User-Controlled Key"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "jishenghua",
+            "product": "jshERP",
+            "packageURL": "pkg:github/jishenghua/jshERP",
+            "repo": "https://github.com/jishenghua/jshERP",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "0",
+                "lessThanOrEqual": "3.6",
+                "status": "affected",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jishenghua:jsherp:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "3.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+              "baseScore": 8.3,
+              "baseSeverity": "HIGH",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "LOW"
+            }
+          },
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/LinYuanyi1/cve-request-poc/blob/master/jshERP/poc-12-business-data-horizontal-access.py",
+            "name": "Proof of concept",
+            "tags": [
+              "exploit"
+            ]
+          },
+          {
+            "url": "https://github.com/jishenghua/jshERP/blob/v3.6/jshERP-boot/src/main/java/com/jsh/erp/controller/MaterialController.java#L119-L125",
+            "name": "Vulnerable code",
+            "tags": [
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://github.com/jishenghua/jshERP",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: jshERP through 3.6 Unauthorized Access via by-id Endpoints",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/jsherp-through-3.6-unauthorized-access-via-by-id-endpoints"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Mingsheng Lin",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-94497",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-22T17:19:24.111758Z",
+                  "id": "CVE-2026-94497",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-22T17:45:10.430Z"
+          }
+        }
+      ]
+    }
+  }
+]
