@@ -1,0 +1,698 @@
+[Tue Sep 22 11:16:19 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-7273",
+      "assignerOrgId": "96e50032-ad0d-4058-a115-4d2c13821f9f",
+      "state": "PUBLISHED",
+      "assignerShortName": "Zyxel",
+      "dateReserved": "2026-04-28T06:21:36.574Z",
+      "datePublished": "2026-06-16T02:20:29.847Z",
+      "dateUpdated": "2026-09-22T03:55:39.207Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "96e50032-ad0d-4058-a115-4d2c13821f9f",
+          "shortName": "Zyxel",
+          "dateUpdated": "2026-06-16T02:20:29.847Z"
+        },
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-121",
+                "description": "CWE-121 Stack-based buffer overflow",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-48HPv2 firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(ABTQ.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-8 firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAHH.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-8HP firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAHI.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-10HP firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAZI.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-16 firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAHJ.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-24 firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAHL.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-24E firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAHK.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-24EP firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(ABTO.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-24HPv2 firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(ABTP.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Zyxel",
+            "product": "GS1900-48 firmware",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "<= 2.90(AAHN.1)C0"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through 2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "A stack-based buffer overflow vulnerability in the CGI program of Zyxel GS1900-48HPv2 firmware versions through&nbsp;2.90(ABTQ.1)C0 could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zyxel.com/global/en/support/security-advisories/zyxel-security-advisory-for-stack-based-buffer-overflow-vulnerability-in-gs1900-series-switches-06-16-2026",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "ADJACENT_NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.8,
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.2"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-7273",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-06-17T00:00:00+00:00",
+                  "options": [
+                    {
+                      "Exploitation": "active"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3",
+                  "id": "CVE-2026-7273"
+                }
+              }
+            },
+            {
+              "other": {
+                "type": "kev",
+                "content": {
+                  "dateAdded": "2026-09-21",
+                  "reference": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7273"
+                }
+              }
+            }
+          ],
+          "references": [
+            {
+              "url": "https://www.greynoise.io/blog/open-season-on-kapibala-attacker-steals-government-records-wordpress-exploitation",
+              "tags": [
+                "third-party-advisory"
+              ]
+            },
+            {
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-7273",
+              "tags": [
+                "government-resource"
+              ]
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-22T03:55:39.207Z"
+          },
+          "timeline": [
+            {
+              "time": "2026-09-21T00:00:00.000Z",
+              "lang": "en",
+              "value": "CVE-2026-7273 added to CISA KEV"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-90990",
+      "assignerOrgId": "f7d6281c-4801-44ce-ace2-493291dedb0f",
+      "state": "PUBLISHED",
+      "assignerShortName": "Checkmk",
+      "dateReserved": "2026-09-14T14:17:32.990Z",
+      "datePublished": "2026-09-22T10:43:28.959Z",
+      "dateUpdated": "2026-09-22T10:43:28.959Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Checkmk",
+            "vendor": "Checkmk GmbH",
+            "versions": [
+              {
+                "lessThan": "2.5.0p14",
+                "status": "affected",
+                "version": "2.5.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of newlines in filter values in the monitoring host and service list APIs in Checkmk <2.5.0p14 allows an authenticated user to inject additional Livestatus query headers, bypassing object visibility restrictions in count queries to infer information about hosts and services outside their contact groups and occupying web server and Livestatus workers for an attacker-controlled duration."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-15",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-15: Command Delimiters"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-93",
+                "description": "CWE-93: Improper Neutralization of CRLF Sequences ('CRLF Injection')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f7d6281c-4801-44ce-ace2-493291dedb0f",
+          "shortName": "Checkmk",
+          "dateUpdated": "2026-09-22T10:43:28.959Z"
+        },
+        "references": [
+          {
+            "url": "https://checkmk.com/werk/19604",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "title": "Livestatus injection via monitoring filter values",
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.5.0",
+                    "versionEndExcluding": "2.5.0p14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-90990",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-92882",
+      "assignerOrgId": "f7d6281c-4801-44ce-ace2-493291dedb0f",
+      "state": "PUBLISHED",
+      "assignerShortName": "Checkmk",
+      "dateReserved": "2026-09-17T08:34:06.088Z",
+      "datePublished": "2026-09-22T10:42:59.432Z",
+      "dateUpdated": "2026-09-22T10:42:59.432Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Checkmk",
+            "vendor": "Checkmk GmbH",
+            "versions": [
+              {
+                "lessThan": "2.5.0p15",
+                "status": "affected",
+                "version": "2.5.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.4.0p37",
+                "status": "affected",
+                "version": "2.4.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.3.0p51",
+                "status": "affected",
+                "version": "2.3.0",
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "2.2.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficiently protected credentials in the host and folder configuration endpoints of the REST API in Checkmk <2.5.0p15, <2.4.0p37, <2.3.0p51 and 2.2.0 (EOL) allows an authenticated user who may view a host's configuration to read stored SNMP community strings, SNMPv3 auth and privacy pass phrases and IPMI passwords in clear text from GET responses, although the setup GUI never displays these values."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-116",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-116: Excavation"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "baseScore": 2.3,
+              "baseSeverity": "LOW",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:L/SI:L/SA:L",
+              "version": "4.0"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-522",
+                "description": "CWE-522: Insufficiently Protected Credentials",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f7d6281c-4801-44ce-ace2-493291dedb0f",
+          "shortName": "Checkmk",
+          "dateUpdated": "2026-09-22T10:42:59.432Z"
+        },
+        "references": [
+          {
+            "url": "https://checkmk.com/werk/20077",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "title": "Redact SNMP community, SNMPv3 pass phrases, and IPMI password in host config REST API GET responses",
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.5.0",
+                    "versionEndExcluding": "2.5.0p15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.4.0",
+                    "versionEndExcluding": "2.4.0p37"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.3.0",
+                    "versionEndExcluding": "2.3.0p51"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:2.2.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-92882",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
