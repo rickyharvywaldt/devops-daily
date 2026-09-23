@@ -647,3 +647,657 @@
     }
   }
 ]
+[Wed Sep 23 11:09:13 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5696",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2026-04-06T12:34:00.885Z",
+      "datePublished": "2026-09-23T10:22:43.693Z",
+      "dateUpdated": "2026-09-23T10:22:43.693Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2026-09-23T10:22:43.693Z"
+        },
+        "title": "Multiple vulnerabilities in the Microweber administration panel",
+        "datePublic": "2026-09-23T10:21:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-79",
+                "description": "CWE-79 Improper neutralization of input during web page generation ('cross-site scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Microweber",
+            "product": "Administration panel",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.0.19"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microweber:administration_panel:2.0.19:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Reflected Cross-Site Scripting (XSS) in Microweber. The vulnerability lies in the ‘group’ parameter of the ‘/admin/settings’ endpoint in the administration panel. A successful exploit allows an attacker to trick an authenticated user into executing malicious JavaScript code in their browser. This enables the attacker to perform actions without the victim’s consent, steal confidential information or hijack the user’s session.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Reflected Cross-Site Scripting (XSS) in Microweber. The vulnerability lies in the ‘group’ parameter of the ‘/admin/settings’ endpoint in the administration panel. A successful exploit allows an attacker to trick an authenticated user into executing malicious JavaScript code in their browser. This enables the attacker to perform actions without the victim’s consent, steal confidential information or hijack the user’s session."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-microweber-administration-panel"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 5.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "There is no reported solution at this time.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "There is no reported solution at this time."
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "David Aparicio Salcedo",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-5696",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-5695",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2026-04-06T12:33:58.454Z",
+      "datePublished": "2026-09-23T10:20:51.738Z",
+      "dateUpdated": "2026-09-23T10:21:26.797Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2026-09-23T10:21:26.797Z"
+        },
+        "title": "Multiple vulnerabilities in the Microweber administration panel",
+        "datePublic": "2026-09-23T10:21:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-434",
+                "description": "CWE-434 Unrestricted upload of file with dangerous type",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Microweber",
+            "product": "Administration panel",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.0.19"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microweber:administration_panel:2.0.19:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Arbitrary file upload vulnerability due to a lack of proper validation in upload forms. This allows authenticated users to upload files to the server without restrictions. An attacker could exploit this flaw to execute malicious code remotely (demonstrated by uploading the EICAR test file), which could result in the system being completely compromised.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Arbitrary file upload vulnerability due to a lack of proper validation in upload forms. This allows authenticated users to upload files to the server without restrictions. An attacker could exploit this flaw to execute malicious code remotely (demonstrated by uploading the EICAR test file), which could result in the system being completely compromised."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-microweber-administration-panel"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.4,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "There is no reported solution at this time.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "There is no reported solution at this time."
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "David Aparicio Salcedo",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-5695",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-96454",
+      "assignerOrgId": "48a46f29-ae42-4e1d-90dd-c1676c1e5e6d",
+      "state": "PUBLISHED",
+      "assignerShortName": "JFROG",
+      "dateReserved": "2026-09-23T09:53:06.527Z",
+      "datePublished": "2026-09-23T09:56:32.668Z",
+      "dateUpdated": "2026-09-23T09:56:32.668Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "48a46f29-ae42-4e1d-90dd-c1676c1e5e6d",
+          "shortName": "JFROG",
+          "dateUpdated": "2026-09-23T09:56:32.668Z"
+        },
+        "title": "Pake grants unrestricted IPC access to every HTTPS origin loaded in generated applications",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-862",
+                "description": "CWE-862 Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-923",
+                "description": "CWE-923 Improper Restriction of Communication Channel to Intended Endpoints",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "tw93",
+            "product": "Pake",
+            "platforms": [
+              "macOS",
+              "Windows",
+              "Linux"
+            ],
+            "collectionURL": "https://registry.npmjs.org",
+            "packageName": "pake-cli",
+            "repo": "https://github.com/tw93/Pake",
+            "programFiles": [
+              "src-tauri/capabilities/default.json",
+              "src-tauri/tauri.conf.json"
+            ],
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThanOrEqual": "3.17.0",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "affected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Pake turns a website into a desktop application built on Tauri. Every application it generates inherits two settings from the upstream template, and together they hand native functionality to untrusted web content.\n\n\n\nThe first is in src-tauri/capabilities/default.json, which grants IPC access with \"remote\": { \"urls\": [\"https://*.*\"] }. That wildcard tells Tauri to accept IPC from any HTTPS origin, not just the site the application was built to wrap. The second is \"withGlobalTauri\": true in src-tauri/tauri.conf.json, which puts window.__TAURI__.core.invoke() in reach of ordinary page JavaScript.\n\n\n\nTauri's access control list only checks plugin commands, the ones prefixed with plugin:. Commands the application registers itself through generate_handler!, known as app commands, are never checked against the ACL. So once an origin holds IPC access, it can call every app command with nothing else standing in the way. Pake registers download_file as an app command, and it does not appear in the permissions list because it does not need to.\n\n\n\nThe practical effect is that any script running on any HTTPS page inside a Pake application can invoke the application's native commands. That includes third-party script the wrapped site loads on its own, such as analytics, advertising, or a compromised CDN. Anyone distributing their own Pake application gets the same access without asking for it. Chained with the path traversal in download_file that is tracked separately as CVE-2026-82635, this reaches arbitrary file write and persistent code execution.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>Pake turns a website into a desktop application built on Tauri. Every application it generates inherits two settings from the upstream template, and together they hand native functionality to untrusted web content.</p><p>The first is in src-tauri/capabilities/default.json, which grants IPC access with \"remote\": { \"urls\": [\"https://*.*\"] }. That wildcard tells Tauri to accept IPC from any HTTPS origin, not just the site the application was built to wrap. The second is \"withGlobalTauri\": true in src-tauri/tauri.conf.json, which puts window.__TAURI__.core.invoke() in reach of ordinary page JavaScript.</p><p>Tauri's access control list only checks plugin commands, the ones prefixed with plugin:. Commands the application registers itself through generate_handler!, known as app commands, are never checked against the ACL. So once an origin holds IPC access, it can call every app command with nothing else standing in the way. Pake registers download_file as an app command, and it does not appear in the permissions list because it does not need to.</p><p>The practical effect is that any script running on any HTTPS page inside a Pake application can invoke the application's native commands. That includes third-party script the wrapped site loads on its own, such as analytics, advertising, or a compromised CDN. Anyone distributing their own Pake application gets the same access without asking for it. Chained with the path traversal in download_file that is tracked separately as CVE-2026-82635, this reaches arbitrary file write and persistent code execution.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/tw93/Pake",
+            "name": "Pake",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "https://github.com/tw93/Pake/blob/main/src-tauri/capabilities/default.json",
+            "name": "Pake capabilities/default.json - wildcard remote.urls grant",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "https://github.com/tw93/Pake/blob/main/src-tauri/tauri.conf.json",
+            "name": "Pake tauri.conf.json - withGlobalTauri enabled",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "url": "https://v2.tauri.app/security/capabilities/",
+            "name": "Tauri v2 capabilities and remote origin access",
+            "tags": [
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://github.com/tw93/Pake/releases/tag/V3.17.0",
+            "name": "Pake V3.17.0 - latest release, still affected",
+            "tags": [
+              "release-notes"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "CHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.2,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:H/A:N"
+            }
+          }
+        ],
+        "exploits": [
+          {
+            "lang": "en",
+            "value": "JFrog holds a private proof of concept. Reproduction is deterministic and affects every application Pake generates. Full exploit details are not included in this record.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>JFrog holds a private proof of concept. Reproduction is deterministic and affects every application Pake generates. Full exploit details are not included in this record.</p>"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Yuval Moravchick | JFrog",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.4"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-96454",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
