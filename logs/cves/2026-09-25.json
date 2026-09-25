@@ -455,3 +455,626 @@
     }
   }
 ]
+[Fri Sep 25 16:55:38 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-67408",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-29T15:02:20.411Z",
+      "datePublished": "2026-09-25T16:35:22.829Z",
+      "dateUpdated": "2026-09-25T16:35:22.829Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "RabbitMQ: Stream Management Super-Stream Binding Keys Allocation Allows Low-Privilege Node Denial of Service",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-400",
+                "lang": "en",
+                "description": "CWE-400: Uncontrolled Resource Consumption",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-2hm4-4438-49q8",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-2hm4-4438-49q8"
+          },
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/commit/0f3defd176e027f54f447beee168d906d4f109b6",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/commit/0f3defd176e027f54f447beee168d906d4f109b6"
+          },
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/commit/eb11bc44005fd6d327a78bf171bc598207778c9b",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/commit/eb11bc44005fd6d327a78bf171bc598207778c9b"
+          },
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+          },
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "rabbitmq",
+            "product": "rabbitmq-server",
+            "versions": [
+              {
+                "version": ">= 4.3.0, < 4.3.3",
+                "status": "affected"
+              },
+              {
+                "version": ">= 4.2.0, < 4.2.9",
+                "status": "affected"
+              },
+              {
+                "version": ">= 4.1.0, < 4.1.11",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-09-25T16:35:22.829Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RabbitMQ is a messaging and streaming broker. From 4.1.0 until 4.3.3, 4.2.9, and 4.1.11, Stream Management Super-Stream Binding Keys Allocation Allows Low-Privilege Node Denial of Service. rabbitMQ 4.3.1 with rabbitmqstreammanagement enabled accepts PUT /api/stream/super-streams/{vhost}/{name} requests from an authenticated management user that can access the target vhost. When the request body contains the binding-keys field, the handler parses the attacker-controlled comma-separated string and builds the full stream-name list before checking whether the user has permission to configure the resulting streams. A low-privileged management user with vhost access but no configure, write, or read permission can therefore force large transient allocations before the resource permission check. In a 768 MB memory-limited container, one HTTP PUT with about 4.5 MB of JSON body killed the RabbitMQ container with Docker state exited true An authenticated low-privileged management user can kill a memory-limited RabbitMQ node with one HTTP This issue is fixed in versions 4.3.3, 4.2.9, and 4.1.11."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-2hm4-4438-49q8",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-67408",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-67406",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-29T15:02:20.411Z",
+      "datePublished": "2026-09-25T16:34:06.122Z",
+      "dateUpdated": "2026-09-25T16:34:06.122Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "RabbitMQ: Federation and Shovel Gen-Servers Lack format_status Callback — Plaintext Credentials Exposed in Crash Dumps and sys:get_status",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-200",
+                "lang": "en",
+                "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 4.6,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-q44f-9vc5-grh7",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/security/advisories/GHSA-q44f-9vc5-grh7"
+          },
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.2.9"
+          },
+          {
+            "name": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/rabbitmq/rabbitmq-server/releases/tag/v4.3.3"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "rabbitmq",
+            "product": "rabbitmq-server",
+            "versions": [
+              {
+                "version": ">= 4.3.0, < 4.3.3",
+                "status": "affected"
+              },
+              {
+                "version": ">= 4.2.0, < 4.2.9",
+                "status": "affected"
+              },
+              {
+                "version": ">= 4.1.0, < 4.1.14",
+                "status": "affected"
+              },
+              {
+                "version": ">= 4.0.0, < 4.0.23",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-09-25T16:34:06.122Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RabbitMQ is a messaging and streaming broker. From 4.0.0 until 4.3.3, 4.2.9, 4.1.14, and 4.0.23, Shovel does not format state logged by the crash reporter and can leave unencrypted credentials in a crash dump file. the shovel worker genserver processes does not implement the formatstatus/2 callback. When these processes crash (e.g., due to network partitions, connection failures), the OTP SASL error handler writes the full process state , including plaintext AMQP passwords and URIs , to the error log. This is particularly severe for the shovel worker, which stores deobfuscated plaintext URIs (including amqp://user:password@host format) in its genserver state for the entire process Automatic Credential Exposure: Shovel worker crashes (common during network partitions) automatically write plaintext upstream/downstream passwords to error logs No Special Configuration Needed: Unlike DEBUG logging, SASL error reports are always active Broad. This issue is fixed in versions 4.3.3, 4.2.9, 4.1.14, and 4.0.23."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-q44f-9vc5-grh7",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-67406",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-88956",
+      "assignerOrgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+      "state": "PUBLISHED",
+      "assignerShortName": "icscert",
+      "dateReserved": "2026-09-10T15:31:03.083Z",
+      "datePublished": "2026-09-24T19:59:50.348Z",
+      "dateUpdated": "2026-09-25T16:33:51.345Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "7d14cffa-0d7d-4270-9dc0-52cabd5a23a6",
+          "shortName": "icscert",
+          "dateUpdated": "2026-09-24T19:59:50.348Z"
+        },
+        "title": "Botslab G980H Dashcams Missing Authentication for Critical Function",
+        "datePublic": "2026-09-24T14:31:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-306",
+                "description": "CWE-306 Missing authentication for critical function",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Botslab",
+            "product": "G980H",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "30010_QHG980HN5294SysFW+"
+              },
+              {
+                "status": "affected",
+                "version": "58_QHG980HMCN5291SysFW+"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Botslab G980H dash camera firmware contains an authentication vulnerability in the root account exposed through the device's UART interface. The affected account does not require a password before granting access to a privileged system interface, and the interface also displays the device's WiFi password during startup. An unauthenticated attacker with physical access to the device could connect to the UART interface, obtain root privileges, and recover the WiFi password.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "The Botslab G980H dash camera firmware contains an authentication vulnerability in the root account exposed through the device's UART interface. The affected account does not require a password before granting access to a privileged system interface, and the interface also displays the device's WiFi password during startup. An unauthenticated attacker with physical access to the device could connect to the UART interface, obtain root privileges, and recover the WiFi password.<br>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.botslab.com/pages/about-botslab"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+          },
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-267-01.json"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "PHYSICAL",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7,
+              "vectorString": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "PHYSICAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.8,
+              "vectorString": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            }
+          }
+        ],
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "Botslab has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of G980H Dashcams are invited to reach out to Botslab for more information:  https://www.botslab.com/pages/about-botslab",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Botslab has not responded to requests to work with CISA to mitigate this vulnerability. Users of affected versions of G980H Dashcams are invited to reach out to Botslab for more information: <a href=\"https://www.botslab.com/pages/about-botslab\">https://www.botslab.com/pages/about-botslab</a>"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Julian of Software Secured reported this vulnerability to CISA.",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "advisory": "ICSA-26-267-01",
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-88956",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-25T16:33:35.486957Z",
+                  "id": "CVE-2026-88956",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-25T16:33:51.345Z"
+          }
+        }
+      ]
+    }
+  }
+]
