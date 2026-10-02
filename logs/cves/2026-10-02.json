@@ -1,0 +1,683 @@
+[Fri Oct  2 22:00:45 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-98163",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-09-25T10:25:14.321Z",
+      "datePublished": "2026-09-26T08:31:50.899Z",
+      "dateUpdated": "2026-09-26T08:31:50.899Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-09-26T08:31:50.899Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\ncgroup: Avoid iteration of dying tasks with zero refcount\n\nThe commit 260fbcb92bbea (\"cgroup: Move dying_tasks cleanup from\ncgroup_task_release() to cgroup_task_free()\") extended the lifetime of\ntasks on the dying_tasks list.\nThe iterators have provision to go through dying_tasks because of\ndying threadgroup leaders or explicit CSS_TASK_ITER_WITH_DEAD, however,\nit was expected that such tasks can obtain a new reference (that is\npossible before cgroup_task_release()/put_task_struct_rcu_user()).\nThe tasks after cgroup_task_release() and before cgroup_task_free()\nare subject to race when they may or may not have ->usage count > 0.\n\nThe race window is between css_task_iter_next() invocations\nwhen css_set_lock is released and we may arrive at a new ->task_pos.\nThe iterator should not attempt to resurrect tasks whose ->usage count\ndropped to zero. (When that happens, __put_task_struct_rcu_cb() is\nalready imminent and the returned task_struct would could be used\nafter free.)\n\nAs for the fix, we cannot simply check the signal->live count of a task\non the dying list because that won't distinguish regular zombies waiting\nto be reaped from RCU remnant tasks that are going to be free'd.\nTherefore add an extra check to rule out ->usage==0 tasks from any\niteration.\n\nThe repeat: loop in css_task_iter_advance() doesn't consider ->usage\ncount, so add a new loop to css_task_iter_next() to skip de-used tasks\non the dying_list.\n\nRough illustration of the possible race\n\n  R (reader of cgroup.procs)         T (thread)                       L (group leader)\n  ---------------------------------  -------------------------------- --------------------------------\n                                                                      L exits, signal->live > 0\n                                                                      cgroup_task_dead(L)\n                                                                        css_set_skip_task_iters() // skips only cset->tasks\n                                                                        list_add_tail(&L->cg_list, &cset->dying_tasks)\n  css_task_iter_next()\n    take css_set_lock\n    css_task_iter_advance()\n      leader && signal->live != 0\n      => it->task_pos = &L->cg_list\n    release css_set_lock\n                                     T exits\n                                     --signal->live == 0\n\t\t\t\t     cgroup_task_dead(T) // css_set_lock\n                                     release_task(T)\n                                       cgroup_task_release(T)\n                                       release_task(L) // zap_leader\n                                         cgroup_task_release(L)\n                                         put_task_struct_rcu_user(L)\n                                         ...RCU...\n                                         put_task_struct(L)\n                                           L->usage = 0\n                                           /* L still on dying_tasks */\n                                           ...RCU...\n                                           __put_task_struct(L)\n  css_task_iter_next() // another iteration\n    take css_set_lock\n    it->task_pos = &L->cg_list\n    get_task_struct(L)\n      => addition on 0\n    drop css_set_lock\n                                           cgroup_task_free(L)\n                                             css_set_skip_task_iters() // dying skip comes too late\n                                           free_task(L)\n  cgroup_procs_show()\n    task_pid_vnr(L)"
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "kernel/cgroup/cgroup.c"
+            ],
+            "versions": [
+              {
+                "version": "260fbcb92bbeacfcd050410fdc2d24ab15044400",
+                "lessThan": "828938118d6c2bb711301748c3e39e4bed6a62f5",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "260fbcb92bbeacfcd050410fdc2d24ab15044400",
+                "lessThan": "057dac23d329d5c5ed62352f2659a39fd46c6d4a",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "kernel/cgroup/cgroup.c"
+            ],
+            "versions": [
+              {
+                "version": "6.19",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "6.19",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.2.8",
+                "lessThanOrEqual": "7.2.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.3-rc4",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "7.2.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "7.3-rc4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/828938118d6c2bb711301748c3e39e4bed6a62f5"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/057dac23d329d5c5ed62352f2659a39fd46c6d4a"
+          }
+        ],
+        "title": "cgroup: Avoid iteration of dying tasks with zero refcount",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-98163",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-48005",
+      "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+      "state": "PUBLISHED",
+      "assignerShortName": "apache",
+      "dateReserved": "2026-05-20T16:10:04.617Z",
+      "datePublished": "2026-10-01T16:01:35.559Z",
+      "dateUpdated": "2026-10-01T20:09:21.826Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+          "shortName": "apache",
+          "dateUpdated": "2026-10-01T16:01:35.559Z"
+        },
+        "title": "Apache HTTP Server: mod_auth_digest reauthentication attack",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-306 Missing authentication for critical function",
+                "lang": "en",
+                "cweId": "CWE-306",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "affected": [
+          {
+            "vendor": "Apache Software Foundation",
+            "product": "Apache HTTP Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.4.0",
+                "lessThanOrEqual": "2.4.68",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Missing authentication checks in mod_auth_digest in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows an unauthenticated remote client to cause a denial of service (forced re-authentication) via forged Authorization headers when Digest authentication is enabled with AuthDigestNcCheck .\n\nUsers are recommended to upgrade to version 2.4.69, which fixes this issue.",
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Missing authentication checks in mod_auth_digest in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows an unauthenticated remote client to cause a denial of service (forced re-authentication) via forged Authorization headers when Digest authentication is enabled with AuthDigestNcCheck .<br><br>Users are recommended to upgrade to version 2.4.69, which fixes this issue."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "other": {
+              "type": "Textual description of severity",
+              "content": {
+                "text": "low"
+              }
+            },
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-05-14T12:20:00.000Z",
+            "lang": "en",
+            "value": "Report received"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "en",
+            "value": "fixed in 2.4.x by r1937721"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "eng",
+            "value": "2.4.69 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "lokerxx",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Zhen Kong",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-48005",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "NONE"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-01T19:03:22.441368Z",
+                  "id": "CVE-2026-48005",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-01T19:04:09.469Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/10/01/15"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-10-01T20:09:21.826Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-56153",
+      "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+      "state": "PUBLISHED",
+      "assignerShortName": "apache",
+      "dateReserved": "2026-06-19T12:17:10.922Z",
+      "datePublished": "2026-10-01T16:03:25.568Z",
+      "dateUpdated": "2026-10-01T20:09:22.770Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+          "shortName": "apache",
+          "dateUpdated": "2026-10-01T16:03:25.568Z"
+        },
+        "title": "Apache HTTP Server: mod_charset_lite: Heap overflow in finish_partial_char",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-787 Out-of-bounds Write",
+                "lang": "en",
+                "cweId": "CWE-787",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "affected": [
+          {
+            "vendor": "Apache Software Foundation",
+            "product": "Apache HTTP Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.4.0",
+                "lessThanOrEqual": "2.4.68",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Out-of-bounds Write vulnerability in Apache HTTP Server's mod_charset_lite.\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.",
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>Out-of-bounds Write vulnerability in Apache HTTP Server's mod_charset_lite.</p><p>This issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.<br></p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "other": {
+              "type": "Textual description of severity",
+              "content": {
+                "text": "low"
+              }
+            },
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-06-09T12:00:00.000Z",
+            "lang": "en",
+            "value": "reported"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "en",
+            "value": "fixed in 2.4.x by r1938658"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "eng",
+            "value": "2.4.69 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Bartlomiej Dmitruk at striga.ai",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Masumi Tanaka",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-56153",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-01T18:32:17.410566Z",
+                  "id": "CVE-2026-56153",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-01T18:32:54.395Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/10/01/16"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-10-01T20:09:22.770Z"
+          }
+        }
+      ]
+    }
+  }
+]
