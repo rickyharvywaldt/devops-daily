@@ -1,0 +1,746 @@
+[Mon Oct  5 14:07:49 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-56449",
+      "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+      "state": "PUBLISHED",
+      "assignerShortName": "apache",
+      "dateReserved": "2026-06-22T12:59:42.862Z",
+      "datePublished": "2026-10-01T16:06:24.050Z",
+      "dateUpdated": "2026-10-01T20:09:24.694Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+          "shortName": "apache",
+          "dateUpdated": "2026-10-01T16:06:24.050Z"
+        },
+        "title": "Apache HTTP Server: mod_proxy_html: crash in dump_content",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-787 Out-of-bounds Write",
+                "lang": "en",
+                "cweId": "CWE-787",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "affected": [
+          {
+            "vendor": "Apache Software Foundation",
+            "product": "Apache HTTP Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.4.0",
+                "lessThanOrEqual": "2.4.68",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Out-of-bounds Write vulnerability in Apache HTTP Server's mod_proxy_html with crafted HTTP response bodies.\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.",
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>Out-of-bounds Write vulnerability in Apache HTTP Server's mod_proxy_html with crafted HTTP response bodies.</p><p>This issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "other": {
+              "type": "Textual description of severity",
+              "content": {
+                "text": "low"
+              }
+            },
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-06-14T12:00:00.000Z",
+            "lang": "en",
+            "value": "reported"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "en",
+            "value": "fixed in 2.4.x by r1938661"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "eng",
+            "value": "2.4.69 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Lucian Nitescu",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-56449",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 7.5,
+                "attackVector": "NETWORK",
+                "baseSeverity": "HIGH",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-01T18:33:29.294468Z",
+                  "id": "CVE-2026-56449",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-01T18:34:31.043Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/10/01/18"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-10-01T20:09:24.694Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-57941",
+      "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+      "state": "PUBLISHED",
+      "assignerShortName": "apache",
+      "dateReserved": "2026-06-26T13:34:41.733Z",
+      "datePublished": "2026-10-01T16:06:53.028Z",
+      "dateUpdated": "2026-10-01T20:09:25.619Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+          "shortName": "apache",
+          "dateUpdated": "2026-10-01T16:06:53.028Z"
+        },
+        "title": "Apache HTTP Server: mod_http2 use-after-free / wild write via shared session->bbtmp re-entrancy",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-416 Use After Free",
+                "lang": "en",
+                "cweId": "CWE-416",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "affected": [
+          {
+            "vendor": "Apache Software Foundation",
+            "product": "Apache HTTP Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.4.0",
+                "lessThanOrEqual": "2.4.68",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Use After Free vulnerability in Apache HTTP Server's mod_http2 via shared session->bbtmp re-entrancy\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.",
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>Use After Free vulnerability in Apache HTTP Server's mod_http2&nbsp;<span>via shared session-&gt;bbtmp re-entrancy</span></p><p>This issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.</p><p><br></p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "other": {
+              "type": "Textual description of severity",
+              "content": {
+                "text": "moderate"
+              }
+            },
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-06-15T12:00:00.000Z",
+            "lang": "en",
+            "value": "reported"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "en",
+            "value": "fixed in 2.4.x by r1938665"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "eng",
+            "value": "2.4.69 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Lucian Nitescu",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Simon Kappel",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Gianluca Danesin, Altervista",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-57941",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 9.8,
+                "attackVector": "NETWORK",
+                "baseSeverity": "CRITICAL",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "integrityImpact": "HIGH",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "HIGH",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "HIGH"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-01T19:06:52.698741Z",
+                  "id": "CVE-2026-57941",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-01T19:07:14.748Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/10/01/19"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-10-01T20:09:25.619Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-58415",
+      "assignerOrgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+      "state": "PUBLISHED",
+      "assignerShortName": "apache",
+      "dateReserved": "2026-06-30T18:21:24.562Z",
+      "datePublished": "2026-10-01T16:07:20.338Z",
+      "dateUpdated": "2026-10-01T20:09:26.575Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "f0158376-9dc2-43b6-827c-5f631a4d8d09",
+          "shortName": "apache",
+          "dateUpdated": "2026-10-01T16:07:20.338Z"
+        },
+        "title": "Apache HTTP Server: mod_dav_fs property database read access",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "description": "CWE-552 Files or directories accessible to external parties",
+                "lang": "en",
+                "cweId": "CWE-552",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "affected": [
+          {
+            "vendor": "Apache Software Foundation",
+            "product": "Apache HTTP Server",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.4.0",
+                "lessThanOrEqual": "2.4.68",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "value": "Internal state files accessible to external parties in mod_dav_fs in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows a remote client to read WebDAV dead properties of resources it cannot author via a GET request for the .DAV state directory\n\n\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.",
+            "lang": "en",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p><span>Internal state files accessible to external parties in mod_dav_fs in Apache Software Foundation Apache HTTP Server before 2.4.69 on all platforms allows a remote client to read WebDAV dead properties of resources it cannot author via a GET request for the .DAV state directory</span></p><p><span>This issue affects Apache HTTP Server: from 2.4.0 through 2.4.68.</span></p><p><br></p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "other": {
+              "type": "Textual description of severity",
+              "content": {
+                "text": "low"
+              }
+            },
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-06-24T12:00:00.000Z",
+            "lang": "en",
+            "value": "reported"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "en",
+            "value": "fixed in 2.4.x by r1938668"
+          },
+          {
+            "time": "2026-10-01T12:00:00.000Z",
+            "lang": "eng",
+            "value": "2.4.69 released"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "이지웅 (kimchunbok)",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "sungbyeongchan",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "Vulnogram 0.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-58415",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "cvssV3_1": {
+                "scope": "UNCHANGED",
+                "version": "3.1",
+                "baseScore": 5.3,
+                "attackVector": "NETWORK",
+                "baseSeverity": "MEDIUM",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "integrityImpact": "NONE",
+                "userInteraction": "NONE",
+                "attackComplexity": "LOW",
+                "availabilityImpact": "NONE",
+                "privilegesRequired": "NONE",
+                "confidentialityImpact": "LOW"
+              }
+            },
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-01T19:08:26.844128Z",
+                  "id": "CVE-2026-58415",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-01T19:08:54.054Z"
+          }
+        },
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/10/01/20"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-10-01T20:09:26.575Z"
+          }
+        }
+      ]
+    }
+  }
+]
