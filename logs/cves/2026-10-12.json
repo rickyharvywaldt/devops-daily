@@ -1,0 +1,574 @@
+[Mon Oct 12 05:16:36 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-17700",
+    "published": "2026-10-08T08:02:30Z",
+    "modified": "2026-10-12T04:38:51.183621749Z",
+    "summary": "Malicious code in dransay (npm)",
+    "details": "dransay@99.0.0 is a dependency-confusion probe for an internal unscoped `dransay` package name, not an identified public package. Its `preinstall` hook runs on npm install as `node beacon.js` and sends a DNS lookup and an HTTPS GET to `db3klhbi6i9hark1kegg174t38h33b6wt.oast.site`, using `dransay-unscoped` in the request; npm account `0xamino_hunter` published it on 2026-10-08.\n\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (46d06d0ce82913346840f676660d67f9838f48511e58eef793bfe7c52091071f)\ndransay@99.0.0 declares a `preinstall` lifecycle script that runs `node beacon.js`, which performs a DNS lookup and HTTPS GET against a hardcoded Interactsh (`oast.site`) collaborator subdomain (`db3klhbi6i9hark1kegg174t38h33b6wt.oast.site`) on every `npm install`. The outbound request discloses the installer's source IP, DNS resolver IP, hostname-derived data, and timestamp to a third-party collaborator host unrelated to any first-party publisher. The package name and implausibly high version (99.0.0) are consistent with a dependency-confusion probe targeting an internal package name. The README self-labels the package as a benign dependency-confusion proof-of-concept; the self-label does not change the behavior — install-time, non-consensual outbound network I/O to a researcher-controlled OAST host that collects installer network identity.\n",
+    "affected": [
+      {
+        "package": {
+          "name": "dransay",
+          "ecosystem": "npm"
+        },
+        "versions": [
+          "99.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "beacon.js",
+                "sha256": "def65592785337a3ce4a18e0af15acf013ab32c97a3b6c390d2782dbb458fe1c",
+                "tlsh": "451168ad56e42700b1e9f45494cd01e84b73d1a4844946c0f1cec39b5e5347d17674f7"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "dransay-99.0.0.tgz",
+                "hashes": {
+                  "sha1": "aca0769ba477e971d3dd231bc9914cbeede8dda1",
+                  "sha512_sri": "sha512-Za78JrpJOW8wN1gBxjRfMcvJGWFYRTdHvOFTEfhuoh1bbh7ruvfRLBJLFnUrnr3uxNjWWUStvE36oPMXS0ITLw=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/dransay/v/99.0.0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/dransay"
+      }
+    ],
+    "database_specific": {
+      "iocs": {
+        "domains": [
+          "db3klhbi6i9hark1kegg174t38h33b6wt.oast.site"
+        ],
+        "files": [
+          {
+            "digests": {
+              "sha256": "c5cc6a9931a5f44a55ce863dd075911b34ffb2fb3cbf1180c5c487a259dea35c"
+            },
+            "note": "preinstall script: node beacon.js",
+            "paths": [
+              "package.json"
+            ],
+            "source": "PACKAGE_ARCHIVE"
+          },
+          {
+            "digests": {
+              "sha256": "def65592785337a3ce4a18e0af15acf013ab32c97a3b6c390d2782dbb458fe1c"
+            },
+            "note": "Executed by the preinstall script of dransay@99.0.0.",
+            "paths": [
+              "beacon.js"
+            ],
+            "source": "PACKAGE_ARCHIVE"
+          }
+        ],
+        "urls": [
+          "https://db3klhbi6i9hark1kegg174t38h33b6wt.oast.site/dransay-unscoped"
+        ]
+      },
+      "malicious-packages-origins": [
+        {
+          "id": "IN-MAL-2026-021227",
+          "import_time": "2026-10-08T17:43:20.188351321Z",
+          "modified_time": "2026-10-08T17:23:01Z",
+          "sha256": "46d06d0ce82913346840f676660d67f9838f48511e58eef793bfe7c52091071f",
+          "source": "amazon-inspector",
+          "versions": [
+            "99.0.0"
+          ]
+        }
+      ]
+    },
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "contact": [
+          "inspector-research@amazon.com"
+        ],
+        "type": "FINDER"
+      },
+      {
+        "name": "InvisiRisk, Inc.",
+        "contact": [
+          "https://www.invisirisk.com",
+          "mailto:research@invisirisk.com"
+        ],
+        "type": "FINDER"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "mal-2026-17700",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-17699",
+    "published": "2026-10-08T07:57:07Z",
+    "modified": "2026-10-12T04:38:49.442483347Z",
+    "summary": "Malicious code in @dransay/secrets (npm)",
+    "details": "@dransay/secrets@99.0.0 is a dependency-confusion probe claiming the internal `@dransay/*` namespace, not an identified public package. Its `preinstall` hook runs on npm install as `node beacon.js` and sends a DNS lookup and an HTTPS GET to `db3klhbi6i9hark1kegg174t38h33b6wt.oast.site`, using the package name in the request; npm account `0xamino_hunter` published it on 2026-10-08.\n\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (aef0f6b36413e45664391c5341f7c30a4501c2cc916add9ba6525bf57e559d51)\nThe package declares a `preinstall` script that runs `beacon.js`, which performs a DNS lookup and HTTPS GET to a hardcoded Interactsh collector host (`db3klhbi6i9hark1kegg174t38h33b6wt.oast.site`) at `npm install` time. Both the DNS query and the HTTPS request embed the package name, so any machine that resolves and installs this scoped name sends an unsolicited out-of-band callback carrying the installing host's source IP, resolver identity, timing, and the internal package name to a third-party collector. The implausibly high `99.0.0` version against a scoped name is the dependency-confusion shape — the artifact is intended to win resolution against an internal `@dransay/secrets` and beacon from whichever build environment resolves it, disclosing internal network and build-system identity. No functional library code accompanies the beacon; the package's only on-install effect is the callback.\n",
+    "affected": [
+      {
+        "package": {
+          "name": "@dransay/secrets",
+          "ecosystem": "npm"
+        },
+        "versions": [
+          "99.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "beacon.js",
+                "sha256": "c349b97633b914de05b90a5f3e2a89908f2527742ec54b89b9d98cdff30fc48e",
+                "tlsh": "481132a81af42b00b1e9b4a4988e11e84b73d1a8844a46c0f1cec3ab5e5347c17674fb"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "secrets-99.0.0.tgz",
+                "hashes": {
+                  "sha1": "0baa0bf39156a02d8337e0dbb6bc84058c0426ff",
+                  "sha512_sri": "sha512-MlwVfk5JhL++bQCdDJ2NWh1U0CIhJfgsG7AMKZsmHIZa/7cHPPLyHOB93XZF5uIfOcnrqodOvDT2l0rEU3hxhg=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/@dransay/secrets/v/99.0.0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/@dransay/secrets"
+      }
+    ],
+    "database_specific": {
+      "iocs": {
+        "domains": [
+          "db3klhbi6i9hark1kegg174t38h33b6wt.oast.site"
+        ],
+        "files": [
+          {
+            "digests": {
+              "sha256": "51e626c9f32212b62e3b23ea432e47b6bb55f0f4de913bf0c50198273ef4f47d"
+            },
+            "note": "preinstall script: node beacon.js",
+            "paths": [
+              "package.json"
+            ],
+            "source": "PACKAGE_ARCHIVE"
+          },
+          {
+            "digests": {
+              "sha256": "c349b97633b914de05b90a5f3e2a89908f2527742ec54b89b9d98cdff30fc48e"
+            },
+            "note": "Executed by the preinstall script of @dransay/secrets@99.0.0.",
+            "paths": [
+              "beacon.js"
+            ],
+            "source": "PACKAGE_ARCHIVE"
+          }
+        ],
+        "urls": [
+          "https://db3klhbi6i9hark1kegg174t38h33b6wt.oast.site/secrets"
+        ]
+      },
+      "malicious-packages-origins": [
+        {
+          "id": "IN-MAL-2026-021218",
+          "import_time": "2026-10-08T17:17:19.515163388Z",
+          "modified_time": "2026-10-08T16:54:53Z",
+          "sha256": "aef0f6b36413e45664391c5341f7c30a4501c2cc916add9ba6525bf57e559d51",
+          "source": "amazon-inspector",
+          "versions": [
+            "99.0.0"
+          ]
+        }
+      ]
+    },
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "contact": [
+          "inspector-research@amazon.com"
+        ],
+        "type": "FINDER"
+      },
+      {
+        "name": "InvisiRisk, Inc.",
+        "contact": [
+          "https://www.invisirisk.com",
+          "mailto:research@invisirisk.com"
+        ],
+        "type": "FINDER"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "mal-2026-17699",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-17698",
+    "published": "2026-10-08T07:58:28Z",
+    "modified": "2026-10-12T04:38:49.441139506Z",
+    "summary": "Malicious code in @dransay/phone-fix-test (npm)",
+    "details": "@dransay/phone-fix-test@99.0.0 is a dependency-confusion probe claiming the internal `@dransay/*` namespace, not an identified public package. Its `preinstall` hook runs on npm install as `node beacon.js` and sends a DNS lookup and an HTTPS GET to `db3klhbi6i9hark1kegg174t38h33b6wt.oast.site`, using the package name in the request; npm account `0xamino_hunter` published it on 2026-10-08.\n\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (e01479e9a6af5de5f6abec6c16007bd3757b52b0e434b38b44d40fde12961c08)\nPackage.json declares scripts.preinstall=\"node beacon.js\", which fires automatically on npm install. beacon.js performs a DNS lookup and HTTPS GET to a hardcoded Interactsh/OAST subdomain under oast.site, keyed on the package name, causing the installing host's source IP and resolver metadata to be logged by a non-first-party collector. The package is published under the @dransay scope on the public npm registry at version 99.0.0 — the standard dependency-confusion probe shape (scoped name matching a target organization, implausibly high version to win resolution against an internal package of the same name). Any build system that resolves @dransay/phone-fix-test from public npm will execute the preinstall callout and leak its network identifier to the researcher's OAST endpoint. The README self-labels the behavior as authorized security research, but a self-label does not change the installer-side effect: unconsented install-time exfiltration of host-identifying network metadata to a researcher-controlled collector.\n",
+    "affected": [
+      {
+        "package": {
+          "name": "@dransay/phone-fix-test",
+          "ecosystem": "npm"
+        },
+        "versions": [
+          "99.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            },
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ],
+          "indicators": {
+            "evidence_files": [
+              {
+                "path": "beacon.js",
+                "sha256": "5dc2a8fab9b03b476d4dc0a1e0adec0f975bbf16b17967b8390ae78e96992329",
+                "tlsh": "011168ac07f42700b1e8f4a8848d11e94b73d164854a46c0f1cdc3ab5e5347c17674f7"
+              },
+              {
+                "path": "package.json",
+                "sha256": "3dc54ac5fa10bce7e2048f9f9a14275e825cef5d0ba3db3c5d74244597028dad",
+                "tlsh": "64e0f1506b802e3700cc64f00d2c529792f3dd2e535d2d0891cb431f932d53553b715c"
+              }
+            ],
+            "package_integrity": [
+              {
+                "filename": "phone-fix-test-99.0.0.tgz",
+                "hashes": {
+                  "sha1": "b7fdc06abc2940455b48d5ffd1f3b4a9c5201def",
+                  "sha512_sri": "sha512-AS1c+M78pNmZUH7O9rag0Hk5WPpqn2STcxWBsa85lQRsUFthN+KzHyL93t4aU3Uk53DJ14GL4mVGneKJULCnXg=="
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/@dransay/phone-fix-test/v/99.0.0"
+      },
+      {
+        "type": "PACKAGE",
+        "url": "https://www.npmjs.com/package/@dransay/phone-fix-test"
+      }
+    ],
+    "database_specific": {
+      "iocs": {
+        "domains": [
+          "db3klhbi6i9hark1kegg174t38h33b6wt.oast.site"
+        ],
+        "files": [
+          {
+            "digests": {
+              "sha256": "3dc54ac5fa10bce7e2048f9f9a14275e825cef5d0ba3db3c5d74244597028dad"
+            },
+            "note": "preinstall script: node beacon.js",
+            "paths": [
+              "package.json"
+            ],
+            "source": "PACKAGE_ARCHIVE"
+          },
+          {
+            "digests": {
+              "sha256": "5dc2a8fab9b03b476d4dc0a1e0adec0f975bbf16b17967b8390ae78e96992329"
+            },
+            "note": "Executed by the preinstall script of @dransay/phone-fix-test@99.0.0.",
+            "paths": [
+              "beacon.js"
+            ],
+            "source": "PACKAGE_ARCHIVE"
+          }
+        ],
+        "urls": [
+          "https://db3klhbi6i9hark1kegg174t38h33b6wt.oast.site/phone-fix-test"
+        ]
+      },
+      "malicious-packages-origins": [
+        {
+          "id": "IN-MAL-2026-021219",
+          "import_time": "2026-10-08T17:17:19.55248728Z",
+          "modified_time": "2026-10-08T16:55:05Z",
+          "sha256": "e01479e9a6af5de5f6abec6c16007bd3757b52b0e434b38b44d40fde12961c08",
+          "source": "amazon-inspector",
+          "versions": [
+            "99.0.0"
+          ]
+        }
+      ]
+    },
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "contact": [
+          "inspector-research@amazon.com"
+        ],
+        "type": "FINDER"
+      },
+      {
+        "name": "InvisiRisk, Inc.",
+        "contact": [
+          "https://www.invisirisk.com",
+          "mailto:research@invisirisk.com"
+        ],
+        "type": "FINDER"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "mal-2026-17698",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
