@@ -738,3 +738,811 @@
     }
   }
 ]
+[Tue Oct 13 22:28:27 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "text": "hoch"
+      },
+      "category": "csaf_base",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "de-DE",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+        },
+        {
+          "category": "description",
+          "text": "ImageMagick ist eine Sammlung von Programmbibliotheken und Werkzeugen, die Grafiken in zahlreichen Formaten verarbeiten kann.",
+          "title": "Produktbeschreibung"
+        },
+        {
+          "category": "summary",
+          "text": "Ein Angreifer kann mehrere Schwachstellen in ImageMagick ausnutzen, um beliebigen Programmcode mit den Rechten des Dienstes auszuführen, den Speicher zu beschädigen, Cross-Site-Scripting-Angriffe durchzuführen, einen Denial-of-Service-Angriff auszulösen, Daten zu manipulieren und vertrauliche Informationen offenzulegen.",
+          "title": "Angriff"
+        },
+        {
+          "category": "general",
+          "text": "- Linux\n- MacOS X\n- UNIX\n- Windows",
+          "title": "Betroffene Betriebssysteme"
+        }
+      ],
+      "publisher": {
+        "category": "other",
+        "contact_details": "csaf-provider@cert-bund.de",
+        "name": "Bundesamt für Sicherheit in der Informationstechnik",
+        "namespace": "https://www.bsi.bund.de"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "WID-SEC-W-2026-3867 - CSAF Version",
+          "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3867.json"
+        },
+        {
+          "category": "self",
+          "summary": "WID-SEC-2026-3867 - Portal Version",
+          "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3867"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Advisory Database vom 2026-10-11",
+          "url": "https://github.com/advisories/GHSA-92C8-5JFQ-J2VJ"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-5222-mhv9-26rg vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-5222-mhv9-26rg"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-528x-2384-jmxp vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-528x-2384-jmxp"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-5jf2-9gcp-q234 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-5jf2-9gcp-q234"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-6p6q-wfrv-ffhh vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-6p6q-wfrv-ffhh"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-7438-vh5v-v52h vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-7438-vh5v-v52h"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-79p5-w6jv-r997 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-79p5-w6jv-r997"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-7r5g-p7ff-jgcp vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-7r5g-p7ff-jgcp"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-83w9-w85j-h9jc vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-83w9-w85j-h9jc"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-8ghq-p369-g395 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8ghq-p369-g395"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-8w9c-hj38-8pf9 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-8w9c-hj38-8pf9"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-c2qq-jqw7-q4mx vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-c2qq-jqw7-q4mx"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-fp46-842c-2v83 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-fp46-842c-2v83"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-h3qx-937j-245g vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-h3qx-937j-245g"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-j2rp-5r6m-f7x8 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-j2rp-5r6m-f7x8"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-j657-rmv3-4m94 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-j657-rmv3-4m94"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-m938-565c-h9qf vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-m938-565c-h9qf"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-mqmp-r5jh-jx7w vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-mqmp-r5jh-jx7w"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-pj4h-g4pf-66v3 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-pj4h-g4pf-66v3"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-pwpf-8799-94cj vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-pwpf-8799-94cj"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-qq8x-fq3x-43h4 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-qq8x-fq3x-43h4"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-v5f5-4v9x-p3f2 vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-v5f5-4v9x-p3f2"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-v9q4-cm37-q2jm vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-v9q4-cm37-q2jm"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-vm77-q83h-5fhg vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-vm77-q83h-5fhg"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-x258-xjqf-6j3f vom 2026-10-11",
+          "url": "https://github.com/ImageMagick/ImageMagick/security/advisories/GHSA-x258-xjqf-6j3f"
+        }
+      ],
+      "source_lang": "en-US",
+      "title": "ImageMagick: Mehrere Schwachstellen",
+      "tracking": {
+        "current_release_date": "2026-10-13T22:00:00.000+00:00",
+        "generator": {
+          "date": "2026-10-13T18:04:15.847+00:00",
+          "engine": {
+            "name": "BSI-WID",
+            "version": "1.6.0"
+          }
+        },
+        "id": "WID-SEC-W-2026-3867",
+        "initial_release_date": "2026-10-11T22:00:00.000+00:00",
+        "revision_history": [
+          {
+            "date": "2026-10-11T22:00:00.000+00:00",
+            "number": "1",
+            "summary": "Initiale Fassung"
+          },
+          {
+            "date": "2026-10-12T22:00:00.000+00:00",
+            "number": "2",
+            "summary": "CVE ergänzt"
+          },
+          {
+            "date": "2026-10-13T22:00:00.000+00:00",
+            "number": "3",
+            "summary": "CVE-2026-109964 ergänzt"
+          }
+        ],
+        "status": "final",
+        "version": "3"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "<7.1.2-33",
+                  "product": {
+                    "name": "Open Source ImageMagick <7.1.2-33",
+                    "product_id": "T060995"
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "7.1.2-33",
+                  "product": {
+                    "name": "Open Source ImageMagick 7.1.2-33",
+                    "product_id": "T060995-fixed",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:imagemagick:imagemagick:7.1.2-33"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version_range",
+                  "name": "<6.9.13-58",
+                  "product": {
+                    "name": "Open Source ImageMagick <6.9.13-58",
+                    "product_id": "T060996"
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "6.9.13-58",
+                  "product": {
+                    "name": "Open Source ImageMagick 6.9.13-58",
+                    "product_id": "T060996-fixed",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:imagemagick:imagemagick:6.9.13-58"
+                    }
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "ImageMagick"
+            }
+          ],
+          "category": "vendor",
+          "name": "Open Source"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-108693",
+        "product_status": {
+          "known_affected": [
+            "T060996",
+            "T060995"
+          ]
+        },
+        "release_date": "2026-10-11T22:00:00.000+00:00",
+        "title": "CVE-2026-108693"
+      },
+      {
+        "cve": "CVE-2026-105081",
+        "product_status": {
+          "known_affected": [
+            "T060996",
+            "T060995"
+          ]
+        },
+        "release_date": "2026-10-11T22:00:00.000+00:00",
+        "title": "CVE-2026-105081"
+      },
+      {
+        "cve": "CVE-2026-109964",
+        "product_status": {
+          "known_affected": [
+            "T060996",
+            "T060995"
+          ]
+        },
+        "release_date": "2026-10-11T22:00:00.000+00:00",
+        "title": "CVE-2026-109964"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "wid-sec-w-2026-3867",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "aggregate_severity": {
+        "text": "hoch"
+      },
+      "category": "csaf_base",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "de-DE",
+      "notes": [
+        {
+          "category": "legal_disclaimer",
+          "text": "Das BSI ist als Anbieter für die eigenen, zur Nutzung bereitgestellten Inhalte nach den allgemeinen Gesetzen verantwortlich. Nutzerinnen und Nutzer sind jedoch dafür verantwortlich, die Verwendung und/oder die Umsetzung der mit den Inhalten bereitgestellten Informationen sorgfältig im Einzelfall zu prüfen."
+        },
+        {
+          "category": "description",
+          "text": "Froxlor ist eine Web-basierte Server-Management-Software.",
+          "title": "Produktbeschreibung"
+        },
+        {
+          "category": "summary",
+          "text": "Ein entfernter, authentisierter Angreifer kann mehrere Schwachstellen in Froxlor ausnutzen, um Cross-Site-Scripting-Angriffe durchzuführen, vertrauliche Informationen offenzulegen, Daten zu manipulieren und möglicherweise erweiterte Berechtigungen zu erlangen.",
+          "title": "Angriff"
+        },
+        {
+          "category": "general",
+          "text": "- Sonstiges\n- UNIX",
+          "title": "Betroffene Betriebssysteme"
+        }
+      ],
+      "publisher": {
+        "category": "other",
+        "contact_details": "csaf-provider@cert-bund.de",
+        "name": "Bundesamt für Sicherheit in der Informationstechnik",
+        "namespace": "https://www.bsi.bund.de"
+      },
+      "references": [
+        {
+          "category": "self",
+          "summary": "WID-SEC-W-2026-3629 - CSAF Version",
+          "url": "https://wid.cert-bund.de/.well-known/csaf/white/2026/wid-sec-w-2026-3629.json"
+        },
+        {
+          "category": "self",
+          "summary": "WID-SEC-2026-3629 - Portal Version",
+          "url": "https://wid.cert-bund.de/portal/wid/securityadvisory?name=WID-SEC-2026-3629"
+        },
+        {
+          "category": "external",
+          "summary": "Froxlor 2.3.14 Release Notes vom 2026-09-28",
+          "url": "https://github.com/froxlor/froxlor/releases/tag/2.3.14"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-3jpp-mhvh-rv66 vom 2026-09-28",
+          "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-3jpp-mhvh-rv66"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-646m-cj89-hm32 vom 2026-09-28",
+          "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-646m-cj89-hm32"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-mx7x-72gh-8j8f vom 2026-09-28",
+          "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-mx7x-72gh-8j8f"
+        },
+        {
+          "category": "external",
+          "summary": "GitHub Security Advisory GHSA-v44g-c58r-37w2 vom 2026-09-28",
+          "url": "https://github.com/froxlor/froxlor/security/advisories/GHSA-v44g-c58r-37w2"
+        }
+      ],
+      "source_lang": "en-US",
+      "title": "Froxlor: Mehrere Schwachstellen",
+      "tracking": {
+        "current_release_date": "2026-10-13T22:00:00.000+00:00",
+        "generator": {
+          "date": "2026-10-13T17:59:16.231+00:00",
+          "engine": {
+            "name": "BSI-WID",
+            "version": "1.6.0"
+          }
+        },
+        "id": "WID-SEC-W-2026-3629",
+        "initial_release_date": "2026-09-28T22:00:00.000+00:00",
+        "revision_history": [
+          {
+            "date": "2026-09-28T22:00:00.000+00:00",
+            "number": "1",
+            "summary": "Initiale Fassung"
+          },
+          {
+            "date": "2026-10-13T22:00:00.000+00:00",
+            "number": "2",
+            "summary": "CVE-Nummern ergänzt"
+          }
+        ],
+        "status": "final",
+        "version": "2"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version_range",
+                  "name": "<2.3.14",
+                  "product": {
+                    "name": "Open Source Froxlor <2.3.14",
+                    "product_id": "T060338"
+                  }
+                },
+                {
+                  "category": "product_version",
+                  "name": "2.3.14",
+                  "product": {
+                    "name": "Open Source Froxlor 2.3.14",
+                    "product_id": "T060338-fixed",
+                    "product_identification_helper": {
+                      "cpe": "cpe:/a:froxlor:froxlor:2.3.14"
+                    }
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "Froxlor"
+            }
+          ],
+          "category": "vendor",
+          "name": "Open Source"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-109960",
+        "product_status": {
+          "known_affected": [
+            "T060338"
+          ]
+        },
+        "release_date": "2026-09-28T22:00:00.000+00:00",
+        "title": "CVE-2026-109960"
+      },
+      {
+        "cve": "CVE-2026-109963",
+        "product_status": {
+          "known_affected": [
+            "T060338"
+          ]
+        },
+        "release_date": "2026-09-28T22:00:00.000+00:00",
+        "title": "CVE-2026-109963"
+      },
+      {
+        "cve": "CVE-2026-109962",
+        "product_status": {
+          "known_affected": [
+            "T060338"
+          ]
+        },
+        "release_date": "2026-09-28T22:00:00.000+00:00",
+        "title": "CVE-2026-109962"
+      },
+      {
+        "cve": "CVE-2026-109961",
+        "product_status": {
+          "known_affected": [
+            "T060338"
+          ]
+        },
+        "release_date": "2026-09-28T22:00:00.000+00:00",
+        "title": "CVE-2026-109961"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "wid-sec-w-2026-3629",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-84420",
+      "assignerOrgId": "e437aed5-38e0-4fa3-a98b-cb73e7acaec6",
+      "state": "PUBLISHED",
+      "assignerShortName": "Citrix",
+      "dateReserved": "2026-09-01T17:47:17.683Z",
+      "datePublished": "2026-10-13T21:47:44.392Z",
+      "dateUpdated": "2026-10-13T21:47:44.392Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "e437aed5-38e0-4fa3-a98b-cb73e7acaec6",
+          "shortName": "Citrix",
+          "dateUpdated": "2026-10-13T21:47:44.392Z"
+        },
+        "title": "Out-of-Bounds Write and Out-of-Bounds Read",
+        "datePublic": "2026-10-13T21:44:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-125",
+                "description": "CWE-125 Out-of-bounds read",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Citirx",
+            "product": "Citrix Workspace app for Windows",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "2603.20 CR",
+                "versionType": "patch"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "LTSR 2607",
+                "versionType": "patch"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "LTSR 2507 CU3",
+                "versionType": "patch"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Out-of-bounds read vulnerability in Citirx Citrix Workspace app for Windows.\n\nThis issue affects Citrix Workspace app for Windows: before 2603.20 CR, before LTSR 2607, and before LTSR 2507 CU3.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Out-of-bounds read vulnerability in Citirx Citrix Workspace app for Windows.<p>This issue affects Citrix Workspace app for Windows: before 2603.20 CR, before LTSR 2607, and before LTSR 2507 CU3.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697181"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "LOCAL",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 5.8,
+              "vectorString": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-84420",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
