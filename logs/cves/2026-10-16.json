@@ -1,0 +1,525 @@
+[Fri Oct 16 11:03:19 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-96768",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-09-23T16:05:51.932Z",
+      "datePublished": "2026-10-16T09:26:36.859Z",
+      "dateUpdated": "2026-10-16T09:26:36.859Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-10-16T09:26:36.859Z"
+        },
+        "affected": [
+          {
+            "vendor": "softaculous",
+            "product": "GoSMTP Pro",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "1.2.3",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The GoSMTP Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content via Email Log Body in all versions up to, and including, 1.2.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit is made possible because WordPress comment kses does not strip entity-encoded tag delimiters, allowing the payload to pass moderation as safe text before being decoded into live HTML by core email notification functions and written verbatim into the plugin's email log database table."
+          }
+        ],
+        "title": "GoSMTP Pro <= 1.2.3 - Unauthenticated Stored Cross-Site Scripting via Comment Content via Email Log Body",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1e91e58d-a7b8-4d86-8c2d-9baaccb3e953?source=cve"
+          },
+          {
+            "url": "https://gosmtp.net/blog/gosmtp-1-2-4-launched/"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 7.2,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "Rafie Muhammad"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-10-01T18:24:24.000Z",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2026-10-15T20:34:23.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-96768",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-14452",
+      "assignerOrgId": "f7d6281c-4801-44ce-ace2-493291dedb0f",
+      "state": "PUBLISHED",
+      "assignerShortName": "Checkmk",
+      "dateReserved": "2026-07-02T07:44:10.607Z",
+      "datePublished": "2026-10-16T09:51:30.453Z",
+      "dateUpdated": "2026-10-16T09:51:30.453Z"
+    },
+    "containers": {
+      "cna": {
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "product": "Checkmk",
+            "vendor": "Checkmk GmbH",
+            "versions": [
+              {
+                "lessThan": "2.5.0p15",
+                "status": "affected",
+                "version": "2.5.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.4.0p38",
+                "status": "affected",
+                "version": "2.4.0",
+                "versionType": "semver"
+              },
+              {
+                "lessThan": "2.3.0p51",
+                "status": "affected",
+                "version": "2.3.0",
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "2.2.0",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper validation of the reset_url parameter of the Setup in-page search in Checkmk <2.5.0p15, <2.4.0p38, <2.3.0p51 and 2.2.0 (EOL) allows an attacker to execute arbitrary script in the session of an authenticated user with Setup access, or to redirect that user to an arbitrary external site, by tricking the user into opening a crafted URL and clicking the Reset button or submitting an empty search."
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-63",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-63: Cross-Site Scripting (XSS)"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "baseScore": 8.6,
+              "baseSeverity": "HIGH",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:L/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-601",
+                "description": "CWE-601: URL Redirection to Untrusted Site ('Open Redirect')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "f7d6281c-4801-44ce-ace2-493291dedb0f",
+          "shortName": "Checkmk",
+          "dateUpdated": "2026-10-16T09:51:30.453Z"
+        },
+        "references": [
+          {
+            "url": "https://checkmk.com/werk/22314",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "title": "Open redirect and XSS via reset_url parameter",
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.5.0",
+                    "versionEndExcluding": "2.5.0p15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.4.0",
+                    "versionEndExcluding": "2.4.0p38"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.3.0",
+                    "versionEndExcluding": "2.3.0p51"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:checkmk:checkmk:2.2.0:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-14452",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-110703",
+      "assignerOrgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+      "state": "PUBLISHED",
+      "assignerShortName": "Wordfence",
+      "dateReserved": "2026-10-14T14:23:08.631Z",
+      "datePublished": "2026-10-16T09:26:37.351Z",
+      "dateUpdated": "2026-10-16T09:26:37.351Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "b15e7b5b-3da4-40ae-a43c-f7aa60e62599",
+          "shortName": "Wordfence",
+          "dateUpdated": "2026-10-16T09:26:37.351Z"
+        },
+        "affected": [
+          {
+            "vendor": "paoltaia",
+            "product": "GeoDirectory – WP Business Directory Plugin and Classified Listings Directory",
+            "versions": [
+              {
+                "version": "0",
+                "status": "affected",
+                "lessThanOrEqual": "2.8.191",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'post_content' parameter in all versions up to, and including, 2.8.191 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the attacker to own a published listing, as the ownership check in GeoDir_Post_Data::can_edit() limits who can store the payload; however, because ajax_save_post() re-applies the existing post_status, edits to an already-published listing bypass re-moderation and remain live immediately."
+          }
+        ],
+        "title": "GeoDirectory <= 2.8.191 - Authenticated (Subscriber+) Stored Cross-Site Scripting via 'post_content' Parameter via data-embed-url Attribute",
+        "references": [
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/2af46137-6cdc-4898-8d59-3c603ebe02c4?source=cve"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/geodirectory/tags/2.8.191/vendor/ayecode/wp-ayecode-ui/includes/inc/bs5-js.php#L328"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/geodirectory/tags/2.8.191/includes/post-functions.php#L2032"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/geodirectory/tags/2.8.191/includes/class-geodir-post-data.php#L1661"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/geodirectory/tags/2.8.191/includes/class-geodir-ajax.php#L821"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?reponame=&old=3746728%40geodirectory&new=3746728%40geodirectory"
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "cweId": "CWE-79",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N",
+              "baseScore": 6.4,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "type": "finder",
+            "value": "UKO"
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-10-14T14:39:01.000Z",
+            "lang": "en",
+            "value": "Vendor Notified"
+          },
+          {
+            "time": "2026-10-15T20:54:50.000Z",
+            "lang": "en",
+            "value": "Disclosed"
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-110703",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
