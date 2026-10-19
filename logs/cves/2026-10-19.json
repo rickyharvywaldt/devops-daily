@@ -1,0 +1,856 @@
+[Mon Oct 19 04:01:48 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-85013",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2026-09-02T19:15:03.876Z",
+      "datePublished": "2026-09-15T15:08:33.907Z",
+      "dateUpdated": "2026-10-19T02:56:17.951Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Environment-modules: command injection in environment-modules bash completion via malicious module names containing shell metacharacters",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Moderate",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.3,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in environment-modules. A local attacker can exploit this vulnerability by placing a maliciously named modulefile in a location visible to the victim's `MODULEPATH`. When the victim uses Bash completion for `module` or `ml` commands, the malicious module name, containing shell metacharacters, is evaluated as a command. This can lead to arbitrary command execution in the completing user's shell, impacting their confidentiality, integrity, and availability."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "environment-modules",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "0:5.6.1-2.el10_2.1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:10.2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "environment-modules",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "0:4.5.2-5.el8_10",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8::baseos"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "environment-modules",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "0:5.3.0-2.el9_8.1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:9::baseos"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Hardened Images",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "environment-modules-main",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "5.6.2-1.hum1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:hummingbird:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "environment-modules",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "environment-modules",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:7"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:64766",
+            "name": "RHSA-2026:64766",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:80664",
+            "name": "RHSA-2026:80664",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:82919",
+            "name": "RHSA-2026:82919",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:84594",
+            "name": "RHSA-2026:84594",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2026-85013",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2465635",
+            "name": "RHBZ#2465635",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://github.com/envmodules/modules/security/advisories/GHSA-8hrw-p88g-qhmg"
+          }
+        ],
+        "datePublic": "2026-09-15T14:10:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-78",
+                "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "To mitigate this issue, avoid enabling Bash completion for `module` and `ml` in environments where untrusted users can influence `MODULEPATH`. Additionally, ensure that shared module search paths do not include attacker-writable directories. As a practical measure, the affected completion script can be removed or disabled by commenting out its sourcing in shell configuration files (e.g., `~/.bashrc` or `/etc/profile.d/`). Users must start a new shell session for changes to take effect."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2026-05-04T15:54:57.000Z",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2026-09-15T14:10:00.000Z",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "This issue was discovered by Found by AISLE in partnership with Red Hat."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-10-19T02:56:17.951Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-85013",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/envmodules/modules/security/advisories/GHSA-8hrw-p88g-qhmg",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-15T17:20:35.841689Z",
+                  "id": "CVE-2026-85013",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-15T17:21:51.961Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-112044",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-10-18T10:46:29.599Z",
+      "datePublished": "2026-10-19T02:45:18.604Z",
+      "dateUpdated": "2026-10-19T02:45:18.604Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-10-19T02:45:18.604Z"
+        },
+        "title": "dotnet eShop Catalog API Extensions.cs AddApplicationServices improper authentication",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-287",
+                "lang": "en",
+                "description": "Improper Authentication"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "dotnet",
+            "product": "eShop",
+            "versions": [
+              {
+                "version": "913acea66708a59595351174cee9b29f37179d29",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:dotnet:eshop:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "Catalog API"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in dotnet eShop up to 913acea66708a59595351174cee9b29f37179d29. The affected element is the function AddApplicationServices of the file src/Catalog.API/Extensions/Extensions.cs of the component Catalog API. The manipulation leads to improper authentication. The attack can be initiated remotely. The project was informed of the problem early through an issue report but has not responded yet."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-10-18T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-10-18T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-10-18T12:51:35.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "geochen (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/421692",
+            "name": "VDB-421692 | dotnet eShop Catalog API Extensions.cs AddApplicationServices improper authentication",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/421692/cti",
+            "name": "VDB-421692 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-112044",
+            "name": "CVE-2026-112044 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/1009026",
+            "name": "Submit #1009026 | https://github.com/dotnet/ eShop .NET 8 Improper Authentication",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/dotnet/eShop/issues/997",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/dotnet/eShop/",
+            "tags": [
+              "product"
+            ]
+          }
+        ],
+        "x_generator": [
+          "VulDB PVTS v202610"
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-112044",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-112043",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-10-18T10:43:00.972Z",
+      "datePublished": "2026-10-19T02:30:14.914Z",
+      "dateUpdated": "2026-10-19T02:30:14.914Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-10-19T02:30:14.914Z"
+        },
+        "title": "calcom cal.com/cal.diy Webhook util.ts createWebhookProcedure authorization",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-639",
+                "lang": "en",
+                "description": "Authorization Bypass"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-285",
+                "lang": "en",
+                "description": "Improper Authorization"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "calcom",
+            "product": "cal.com",
+            "versions": [
+              {
+                "version": "6.0",
+                "status": "affected"
+              },
+              {
+                "version": "6.1",
+                "status": "affected"
+              },
+              {
+                "version": "6.2.0",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:calcom:cal.com:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "Webhook Handler"
+            ]
+          },
+          {
+            "vendor": "calcom",
+            "product": "cal.diy",
+            "versions": [
+              {
+                "version": "6.0",
+                "status": "affected"
+              },
+              {
+                "version": "6.1",
+                "status": "affected"
+              },
+              {
+                "version": "6.2.0",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:calcom:cal.diy:*:*:*:*:*:*:*:*"
+            ],
+            "modules": [
+              "Webhook Handler"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A weakness has been identified in calcom cal.com and cal.diy up to 6.2.0. Impacted is the function createWebhookProcedure of the file packages/trpc/server/routers/viewer/webhook/util.ts of the component Webhook Handler. Executing a manipulation of the argument ID can lead to authorization bypass. It is possible to launch the attack remotely. The pull request to fix this issue awaits acceptance."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 5.3,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:X/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 6.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L/E:X/RL:X/RC:C",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 6.5,
+              "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P/E:ND/RL:ND/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-10-18T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-10-18T02:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-10-18T12:48:06.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "geochen (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/421691",
+            "name": "VDB-421691 | calcom cal.com/cal.diy Webhook util.ts createWebhookProcedure authorization",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/421691/cti",
+            "name": "VDB-421691 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-112043",
+            "name": "CVE-2026-112043 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/1009017",
+            "name": "Submit #1009017 | https://github.com/calcom/ cal.diy a46d5f8dd4a9e5a821c7c7f54ef5d2e5999e445d Authorization Bypass",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/calcom/cal.diy/issues/29982",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/calcom/cal.diy/pull/30223",
+            "tags": [
+              "issue-tracking",
+              "patch"
+            ]
+          }
+        ],
+        "x_generator": [
+          "VulDB PVTS v202610"
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-112043",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
