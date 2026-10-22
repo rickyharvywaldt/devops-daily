@@ -1,0 +1,1309 @@
+[Thu Oct 22 11:28:35 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "RUSTSEC-2026-0384",
+    "modified": "2026-10-22T10:49:47Z",
+    "published": "2026-10-21T12:00:00Z",
+    "aliases": [
+      "GHSA-5wjr-9356-4wc8"
+    ],
+    "related": [],
+    "summary": "Race condition in `tokio::time::Interval` on Tokio v1.54.0",
+    "details": "## Summary\n\nOn the multi-threaded runtime, there is a race condition between `Interval::poll_tick` and the runtime's time driver.\n\nThis affects `Interval` only. `Sleep` and `Timeout` are **not** affected.\n\n## Details\n\nIn Tokio v1.54.0, a race condition between `tokio::time::Interval::poll_tick` (including `.tick().await`) and the runtime time driver can drop an internal timer entry without synchronizing with the driver thread that is firing it. This causes a data race and use-after-free on the timer's waker and task state in safe Rust, leading to assertion panics, task reference-count corruption, or heap memory corruption.\n\nThis bug was introduced by https://github.com/tokio-rs/tokio/pull/8458, and it was fixed by https://github.com/tokio-rs/tokio/pull/8692.\n\n## Impact\n\nThis may lead to crashes and use-after-frees in applications using `Interval` on a multi-threaded runtime.\n\nSince this issue is known to lead to crashes in production systems, the v1.54.0 release of Tokio has been yanked.\n\n## Credits\n\nThank you to [creepycode](https://github.com/ByteZ1337) and [carabistouille](https://github.com/carabistouflette) for reporting this privately using the procedure outlined in our security policy. They both reported the issue independently of each other.",
+    "severity": [],
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "crates.io",
+          "name": "tokio",
+          "purl": "pkg:cargo/tokio"
+        },
+        "ecosystem_specific": {
+          "affects": {
+            "arch": [],
+            "os": [],
+            "functions": []
+          },
+          "affected_functions": null
+        },
+        "database_specific": {
+          "categories": [
+            "memory-corruption",
+            "thread-safety"
+          ],
+          "cvss": null,
+          "informational": null
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "1.54.0"
+              },
+              {
+                "fixed": "1.54.1"
+              }
+            ]
+          }
+        ],
+        "versions": []
+      }
+    ],
+    "references": [
+      {
+        "type": "PACKAGE",
+        "url": "https://crates.io/crates/tokio"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://rustsec.org/advisories/RUSTSEC-2026-0384.html"
+      },
+      {
+        "type": "WEB",
+        "url": "https://github.com/tokio-rs/tokio/pull/8692"
+      }
+    ],
+    "database_specific": {
+      "license": "CC0-1.0"
+    },
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "rustsec-2026-0384",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "acknowledgments": [
+        {
+          "organization": "CERT@VDE",
+          "summary": "coordination",
+          "urls": [
+            "https://www.certvde.com"
+          ]
+        }
+      ],
+      "aggregate_severity": {
+        "namespace": "https://www.first.org/cvss/v3.1/specification-document#Qualitative-Severity-Rating-Scale",
+        "text": "High"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en-GB",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "The monitoring functionality of affected CODESYS Control runtime systems processes read and write requests to PLC application data sent by the CODESYS Development System and other clients such as HMIs.\n\nDue to improper synchronization in the CmpMonitor2 component when processing concurrent requests from multiple clients, incorrect data may be read or written, potentially resulting in unexpected behavior of the affected product. \n\nPLCs based on the CODESYS Runtime Toolkit or CODESYS Safety SIL2 are affected if they allow simultaneous access by two or more clients via the CODESYS protocol. In CODESYS Development System 3, simultaneous access to the included Simulation Runtime can only occur when access by an external client, such as an HMI, has been explicitly enabled through dedicated configuration. The default configuration of CODESYS Development System 3 is not affected.\n\nThe vulnerability can be exploited by an authenticated remote attacker with monitoring access by issuing concurrent requests to an affected product.",
+          "title": "Summary"
+        },
+        {
+          "category": "description",
+          "text": "Successful exploitation may allow an authenticated remote attacker with monitoring access to cause incorrect data processing, malfunction of the affected products, or a denial-of-service condition.",
+          "title": "Impact"
+        },
+        {
+          "category": "description",
+          "text": "Update the following products to version 3.5.22.40. \n* CODESYS Control RTE (SL)\n* CODESYS Control RTE (for Beckhoff CX) SL\n* CODESYS Control Win (SL)\n* CODESYS Runtime Toolkit\n* CODESYS Safety SIL2\n* CODESYS HMI (SL)\n* CODESYS Development System 3\n\nUpdate the following products to version 4.23.0.0.\n* CODESYS Control for BeagleBone SL\n* CODESYS Control for emPC-A/iMX6 SL\n* CODESYS Control for IOT2000 SL\n* CODESYS Control for Linux ARM SL\n* CODESYS Control for Linux SL\n* CODESYS Control for PFC100 SL\n* CODESYS Control for PFC200 SL\n* CODESYS Control for PLCnext SL\n* CODESYS Control for Raspberry Pi SL\n* CODESYS Control for WAGO Touch Panels 600 SL\n* CODESYS Virtual Control SL \n\nThe CODESYS Development System and the products available as CODESYS add-ons can be downloaded and installed directly with the CODESYS Installer or be downloaded from the CODESYS Store. Alternatively, as well as for all other products, you will find further information on obtaining the software update in the CODESYS Update area https://www.codesys.com/download/.",
+          "title": "Remediation"
+        },
+        {
+          "category": "general",
+          "text": "As part of a security strategy, CODESYS GmbH strongly recommends at least the following best-practice\ndefense measures:\n\n* Use controllers and devices only in a protected environment to minimize network exposure and ensure that they are not accessible from outside\n* Use firewalls to protect and separate the control system network from other networks\n* Activate and apply user management and password features\n* Limit the access to both development and control system by physical means, operating system features, etc.\n* Use encrypted communication links\n* Use VPN (Virtual Private Networks) tunnels if remote access is required\n* Protect both development and control system by using up to date virus detecting solutions\n\nFor more information and general recommendations for protecting machines and plants, see also the\nCODESYS Security Whitepaper [here.](https://www.customers.codesys.com/fileadmin/data/customers/security/CODESYS-Security-Whitepaper.pdf)",
+          "title": "General Recommendation"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "CODESYS GmbH assumes no liability whatsoever for indirect, collateral, accidental or consequential losses\nthat occur by the distribution and/or use of this document or any losses in connection with the distribution and/or use of this document. All information published in this document is provided on good faith by CODESYS GmbH.\nInsofar as permissible by law, however, none of this information shall establish any guarantee, commitment or\nliability on the part of CODESYS GmbH.\n\nNote: Not all CODESYS features are available in all territories. For more information on geographic restrictions,\nplease contact sales@codesys.com.",
+          "title": "Disclaimer"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "security@codesys.com",
+        "name": "CODESYS GmbH",
+        "namespace": "https://www.codesys.com"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "CERT@VDE Security Advisories for CODESYS GmbH",
+          "url": "https://www.certvde.com/en/advisories/vendor/codesys"
+        },
+        {
+          "category": "self",
+          "summary": "Advisory2026-12_VDE-2026-097: CODESYS Control Runtime - Improper Synchronization in Monitoring - HTML",
+          "url": "https://www.certvde.com/en/advisories/VDE-2026-097/"
+        },
+        {
+          "category": "self",
+          "summary": "Advisory2026-12_VDE-2026-097: CODESYS Control Runtime - Improper Synchronization in Monitoring - CSAF",
+          "url": "https://codesys.csaf-tp.certvde.com/.well-known/csaf/white/2026/advisory2026-12_vde-2026-097.json"
+        },
+        {
+          "category": "external",
+          "summary": "CODESYS Security Advisories",
+          "url": "https://www.codesys.com/security/security-reports.html"
+        },
+        {
+          "category": "self",
+          "summary": "Advisory2026-12_VDE-2026-097: CODESYS Control Runtime - Improper Synchronization in Monitoring - PDF",
+          "url": "https://api-www.codesys.com/fileadmin/user_upload/CODESYS_Group/Ecosystem/Up-to-Date/Security/Security-Advisories/Advisory2026-12_CDS-94929.pdf"
+        }
+      ],
+      "title": "CODESYS Control Runtime - Improper Synchronization in Monitoring",
+      "tracking": {
+        "aliases": [
+          "VDE-2026-097",
+          "CODESYS Security Advisory 2026-12"
+        ],
+        "current_release_date": "2026-10-22T10:00:00.000Z",
+        "generator": {
+          "date": "2026-10-20T14:39:03.531Z",
+          "engine": {
+            "name": "Secvisogram",
+            "version": "2.6.15"
+          }
+        },
+        "id": "Advisory2026-12_VDE-2026-097",
+        "initial_release_date": "2026-09-30T10:00:00.000Z",
+        "revision_history": [
+          {
+            "date": "2026-09-30T10:00:00.000Z",
+            "number": "1.0.0",
+            "summary": "Initial revision."
+          },
+          {
+            "date": "2026-10-22T10:00:00.000Z",
+            "number": "1.1.0",
+            "summary": "Updated remediation category - fixed SL runtimes are now available, formal adaptions."
+          }
+        ],
+        "status": "final",
+        "version": "1.1.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Control RTE (SL) 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51001",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_rte_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Control RTE (SL) 3.5.22.40",
+                        "product_id": "CSAFPID-52001",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_rte_sl:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control RTE (SL)"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Control RTE (for Beckhoff CX) SL 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51002",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_rte_for_beckhoff_cx_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Control RTE (for Beckhoff CX) SL 3.5.22.40",
+                        "product_id": "CSAFPID-52002",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_rte_for_beckhoff_cx_sl:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control RTE (for Beckhoff CX) SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Control Win (SL) 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51003",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_win_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Control Win (SL) 3.5.22.40",
+                        "product_id": "CSAFPID-52003",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_win_sl:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control Win (SL)"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Runtime Toolkit 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51004",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_runtime_toolkit:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Runtime Toolkit 3.5.22.40",
+                        "product_id": "CSAFPID-52004",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_runtime_toolkit:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Runtime Toolkit"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Safety SIL2 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51005",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_safety_sil2:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Safety SIL2 3.5.22.40",
+                        "product_id": "CSAFPID-52005",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_safety_sil2:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Safety SIL2"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS HMI (SL) 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51006",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_hmi_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS HMI (SL) 3.5.22.40",
+                        "product_id": "CSAFPID-52006",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_hmi_sl:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS HMI (SL)"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.0.0.0|<3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Development System 3 3.0.0.0<3.5.22.40",
+                        "product_id": "CSAFPID-51007",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_development_system_3:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "3.5.22.40",
+                      "product": {
+                        "name": "CODESYS Development System 3 3.5.22.40",
+                        "product_id": "CSAFPID-52007",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_development_system_3:3.5.22.40:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Development System 3"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for BeagleBone SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51008",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_beaglebone_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for BeagleBone SL 4.23.0.0",
+                        "product_id": "CSAFPID-52008",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_beaglebone_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for BeagleBone SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for emPC-A/iMX6 SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51009",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_empc_a_imx6_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for emPC-A/iMX6 SL 4.23.0.0",
+                        "product_id": "CSAFPID-52009",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_empc_a_imx6_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for emPC-A/iMX6 SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for IOT2000 SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51010",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_iot2000_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for IOT2000 SL 4.23.0.0",
+                        "product_id": "CSAFPID-52010",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_iot2000_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for IOT2000 SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for Linux ARM SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51011",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_linux_arm_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for Linux ARM SL 4.23.0.0",
+                        "product_id": "CSAFPID-52011",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_linux_arm_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for Linux ARM SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for Linux SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51012",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_linux_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for Linux SL 4.23.0.0",
+                        "product_id": "CSAFPID-52012",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_linux_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for Linux SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for PFC100 SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51013",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_pfc100_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for PFC100 SL 4.23.0.0",
+                        "product_id": "CSAFPID-52013",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_pfc100_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for PFC100 SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for PFC200 SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51014",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_pfc200_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for PFC200 SL 4.23.0.0",
+                        "product_id": "CSAFPID-52014",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_pfc200_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for PFC200 SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for PLCnext SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51015",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_plcnext_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for PLCnext SL 4.23.0.0",
+                        "product_id": "CSAFPID-52015",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_plcnext_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for PLCnext SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for Raspberry Pi SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51016",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_raspberry_pi_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for Raspberry Pi SL 4.23.0.0",
+                        "product_id": "CSAFPID-52016",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_raspberry_pi_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for Raspberry Pi SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for WAGO Touch Panels 600 SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51017",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_wago_touch_panels_600_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Control for WAGO Touch Panels 600 SL 4.23.0.0",
+                        "product_id": "CSAFPID-52017",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_control_for_wago_touch_panels_600_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Control for WAGO Touch Panels 600 SL"
+                },
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:generic/>=3.5.0.0|<4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Virtual Control SL 3.5.0.0<4.23.0.0",
+                        "product_id": "CSAFPID-51018",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_virtual_control_sl:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    },
+                    {
+                      "category": "product_version",
+                      "name": "4.23.0.0",
+                      "product": {
+                        "name": "CODESYS Virtual Control SL 4.23.0.0",
+                        "product_id": "CSAFPID-52018",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:codesys:codesys_virtual_control_sl:4.23.0.0:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "CODESYS Virtual Control SL"
+                }
+              ],
+              "category": "product_family",
+              "name": "Software"
+            }
+          ],
+          "category": "vendor",
+          "name": "CODESYS"
+        }
+      ],
+      "product_groups": [
+        {
+          "group_id": "CSAFGID-1001",
+          "product_ids": [
+            "CSAFPID-51001",
+            "CSAFPID-51002",
+            "CSAFPID-51003",
+            "CSAFPID-51004",
+            "CSAFPID-51005",
+            "CSAFPID-51006",
+            "CSAFPID-51007"
+          ],
+          "summary": "Affected products v3.5.x."
+        },
+        {
+          "group_id": "CSAFGID-2001",
+          "product_ids": [
+            "CSAFPID-52001",
+            "CSAFPID-52002",
+            "CSAFPID-52003",
+            "CSAFPID-52004",
+            "CSAFPID-52005",
+            "CSAFPID-52006",
+            "CSAFPID-52007"
+          ],
+          "summary": "Fixed products v3.5.x."
+        },
+        {
+          "group_id": "CSAFGID-1002",
+          "product_ids": [
+            "CSAFPID-51008",
+            "CSAFPID-51009",
+            "CSAFPID-51010",
+            "CSAFPID-51011",
+            "CSAFPID-51012",
+            "CSAFPID-51013",
+            "CSAFPID-51014",
+            "CSAFPID-51015",
+            "CSAFPID-51016",
+            "CSAFPID-51017",
+            "CSAFPID-51018"
+          ],
+          "summary": "Affected products v4.x."
+        },
+        {
+          "group_id": "CSAFGID-2002",
+          "product_ids": [
+            "CSAFPID-52008",
+            "CSAFPID-52009",
+            "CSAFPID-52010",
+            "CSAFPID-52011",
+            "CSAFPID-52012",
+            "CSAFPID-52013",
+            "CSAFPID-52014",
+            "CSAFPID-52015",
+            "CSAFPID-52016",
+            "CSAFPID-52017",
+            "CSAFPID-52018"
+          ],
+          "summary": "Fixed products v4.x."
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-79625",
+        "cwe": {
+          "id": "CWE-362",
+          "name": "Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')"
+        },
+        "notes": [
+          {
+            "audience": "all",
+            "category": "description",
+            "text": "Affected products do not properly synchronize access to their monitoring functionality. When multiple clients send concurrent requests, this may lead to incorrect reads or writes, or to corruption of internal memory structures. An authenticated remote attacker with monitoring access can exploit this issue to cause incorrect data processing or a denial-of-service condition.",
+            "title": "CVE description"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "CSAFPID-52001",
+            "CSAFPID-52002",
+            "CSAFPID-52003",
+            "CSAFPID-52004",
+            "CSAFPID-52005",
+            "CSAFPID-52006",
+            "CSAFPID-52007",
+            "CSAFPID-52008",
+            "CSAFPID-52009",
+            "CSAFPID-52010",
+            "CSAFPID-52011",
+            "CSAFPID-52012",
+            "CSAFPID-52013",
+            "CSAFPID-52014",
+            "CSAFPID-52015",
+            "CSAFPID-52016",
+            "CSAFPID-52017",
+            "CSAFPID-52018"
+          ],
+          "known_affected": [
+            "CSAFPID-51001",
+            "CSAFPID-51002",
+            "CSAFPID-51003",
+            "CSAFPID-51004",
+            "CSAFPID-51005",
+            "CSAFPID-51006",
+            "CSAFPID-51007",
+            "CSAFPID-51008",
+            "CSAFPID-51009",
+            "CSAFPID-51010",
+            "CSAFPID-51011",
+            "CSAFPID-51012",
+            "CSAFPID-51013",
+            "CSAFPID-51014",
+            "CSAFPID-51015",
+            "CSAFPID-51016",
+            "CSAFPID-51017",
+            "CSAFPID-51018"
+          ]
+        },
+        "references": [
+          {
+            "category": "external",
+            "summary": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N - 7.2 / High",
+            "url": "https://www.first.org/cvss/calculator/4.0#CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N"
+          }
+        ],
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "details": "Update the following products to version 3.5.22.40. \n* CODESYS Control RTE (SL)\n* CODESYS Control RTE (for Beckhoff CX) SL\n* CODESYS Control Win (SL)\n* CODESYS Runtime Toolkit\n* CODESYS Safety SIL2\n* CODESYS HMI (SL)\n* CODESYS Development System 3\n\nThe CODESYS Development System and the products available as CODESYS add-ons can be downloaded and installed directly with the CODESYS Installer or be downloaded from the CODESYS Store. Alternatively, as well as for all other products, you will find further information on obtaining the software update in the CODESYS Update area https://www.codesys.com/download/. ",
+            "group_ids": [
+              "CSAFGID-1001"
+            ]
+          },
+          {
+            "category": "vendor_fix",
+            "details": "Update the following products to version 4.23.0.0. \n* CODESYS Control for BeagleBone SL\n* CODESYS Control for emPC-A/iMX6 SL\n* CODESYS Control for IOT2000 SL\n* CODESYS Control for Linux ARM SL\n* CODESYS Control for Linux SL\n* CODESYS Control for PFC100 SL\n* CODESYS Control for PFC200 SL\n* CODESYS Control for PLCnext SL\n* CODESYS Control for Raspberry Pi SL\n* CODESYS Control for WAGO Touch Panels 600 SL\n* CODESYS Virtual Control SL \n\nThe CODESYS Development System and the products available as CODESYS add-ons can be downloaded and installed directly with the CODESYS Installer or be downloaded from the CODESYS Store. Alternatively, as well as for all other products, you will find further information on obtaining the software update in the CODESYS Update area https://www.codesys.com/download/. ",
+            "group_ids": [
+              "CSAFGID-1002"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "NONE",
+              "environmentalScore": 8.1,
+              "environmentalSeverity": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "temporalScore": 8.1,
+              "temporalSeverity": "HIGH",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "CSAFPID-51001",
+              "CSAFPID-51002",
+              "CSAFPID-51003",
+              "CSAFPID-51004",
+              "CSAFPID-51005",
+              "CSAFPID-51006",
+              "CSAFPID-51007",
+              "CSAFPID-51008",
+              "CSAFPID-51009",
+              "CSAFPID-51010",
+              "CSAFPID-51011",
+              "CSAFPID-51012",
+              "CSAFPID-51013",
+              "CSAFPID-51014",
+              "CSAFPID-51015",
+              "CSAFPID-51016",
+              "CSAFPID-51017",
+              "CSAFPID-51018"
+            ]
+          }
+        ],
+        "title": "Improper Synchronization in Monitoring in CODESYS Control Runtime"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "advisory2026-12_vde-2026-097",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-113681",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-10-20T14:51:02.489Z",
+      "datePublished": "2026-10-20T15:40:41.797Z",
+      "dateUpdated": "2026-10-22T09:49:36.614Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-10-22T09:49:36.614Z"
+        },
+        "datePublic": "2026-10-13T13:19:03.000Z",
+        "title": "OpenImageIO before 3.0.20.0, 3.1.x before 3.1.15.0, and 3.2.x before 3.2.0.3-beta1 Cineon Reader Heap Out-of-Bounds Read",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenImageIO before 3.0.20.0, 3.1.x before 3.1.15.0, and 3.2.x before 3.2.0.3-beta1 contains an integer overflow in cineon::Codec::Read that undersizes the scanline buffer, causing a heap out-of-bounds read. Attackers can supply a crafted Cineon file with a huge declared width that wraps the size calculation to zero, so UnPackPacked reads past a 4-byte buffer and crashes the application."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Integer Overflow or Wraparound",
+                "cweId": "CWE-190",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "AcademySoftwareFoundation",
+            "product": "OpenImageIO",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "0",
+                "lessThan": "3.0.20.0",
+                "versionType": "custom",
+                "status": "affected"
+              },
+              {
+                "version": "3.1.0.0",
+                "lessThan": "3.1.15.0",
+                "versionType": "custom",
+                "status": "affected"
+              },
+              {
+                "version": "3.2.0.0-dev",
+                "lessThan": "3.2.0.3-beta1",
+                "versionType": "custom",
+                "status": "affected"
+              }
+            ],
+            "packageURL": "pkg:pypi/openimageio",
+            "repo": "https://github.com/AcademySoftwareFoundation/OpenImageIO"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openimageio:openimageio:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "3.0.20.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openimageio:openimageio:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.1.0.0",
+                    "versionEndExcluding": "3.1.15.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openimageio:openimageio:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.2.0.0-dev",
+                    "versionEndExcluding": "3.2.0.3-beta1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.8,
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "HIGH",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/5567",
+            "tags": [
+              "patch",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/AcademySoftwareFoundation/OpenImageIO/pull/5568",
+            "tags": [
+              "patch",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/AcademySoftwareFoundation/OpenImageIO/commit/07e3c3e0373551c57e7d8e01353deaa4b3646613",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/AcademySoftwareFoundation/OpenImageIO/blob/v3.0.19.0/src/cineon.imageio/libcineon/Codec.cpp#L79-L82",
+            "tags": [
+              "technical-description"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: OpenImageIO before 3.0.20.0, 3.1.x before 3.1.15.0, and 3.2.x before 3.2.0.3-beta1 Cineon Reader Heap Out-of-Bounds Read",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/openimageio-before-3.0.20.0-3.1-x-before-3.1.15.0-and-3.2-x-before-3.2.0.3-beta1-cineon-reader-heap-out-of-bounds-read"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Sohaib Harraoui (Ostorlab)",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-113681",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-20T16:21:27.916905Z",
+                  "id": "CVE-2026-113681",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-20T16:21:37.806Z"
+          }
+        }
+      ]
+    }
+  }
+]
