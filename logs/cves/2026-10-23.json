@@ -787,3 +787,792 @@
     }
   }
 ]
+[Fri Oct 23 21:13:34 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-110836",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-10-14T22:11:15.575Z",
+      "datePublished": "2026-10-14T22:52:11.374Z",
+      "dateUpdated": "2026-10-20T02:17:21.565Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-10-14T22:52:11.374Z"
+        },
+        "datePublic": "2026-09-29T00:00:00.000Z",
+        "title": "FreeRDP 3.0.0 before 3.32.0 Infinite Loop DoS via Gateway Content-Type",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FreeRDP from 3.0.0 before 3.32.0 contains an infinite loop vulnerability in http_response_recv() that allows malicious gateways to exhaust client CPU via crafted Content-Type headers. Attackers controlling a gateway can return a nonzero Content-Length with a semicolon-containing unrecognized Content-Type, pinning a client thread at full CPU indefinitely."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+                "cweId": "CWE-835",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "FreeRDP",
+            "product": "FreeRDP",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "3.0.0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "3.32.0"
+              },
+              {
+                "version": "3.32.0",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freerdp:freerdp:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.0.0",
+                    "versionEndExcluding": "3.32.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "HIGH",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-h7fx-22wv-4cg8",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "name": "GitHub Security Advisory (GHSA-h7fx-22wv-4cg8)"
+          },
+          {
+            "name": "VulnCheck Advisory: FreeRDP 3.0.0 before 3.32.0 Infinite Loop DoS via Gateway Content-Type",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/freerdp-3.0.0-before-3.32.0-infinite-loop-dos-via-gateway-content-type"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Kushalkhemka",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "mayank-jangid-moon",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "skigeek16",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "opensec-intelligence",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-110836",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-h7fx-22wv-4cg8",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-20T02:16:48.685378Z",
+                  "id": "CVE-2026-110836",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-20T02:17:21.565Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-110837",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-10-14T22:11:15.575Z",
+      "datePublished": "2026-10-14T22:52:12.464Z",
+      "dateUpdated": "2026-10-15T13:47:43.486Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-10-14T22:52:12.464Z"
+        },
+        "datePublic": "2026-09-30T00:00:00.000Z",
+        "title": "FreeRDP 2.0.0 before 3.32.0 Heap Buffer Overflow via MP3 Audio Decoding",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FreeRDP 2.0.0 before 3.32.0, when built with WITH_LAME=ON and WITH_DSP_FFMPEG=OFF, has a heap-based buffer overflow in freerdp_dsp_decode_mp3 because the right-channel PCM pointer is offset by a byte count treated as short elements. A malicious RDP server can send MP3 audio over rdpsnd so decoded samples cross the heap allocation, crashing the client."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Heap-based Buffer Overflow",
+                "cweId": "CWE-122",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "FreeRDP",
+            "product": "FreeRDP",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "2.0.0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "3.32.0"
+              },
+              {
+                "version": "3.32.0",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freerdp:freerdp:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.0.0",
+                    "versionEndExcluding": "3.32.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:L/VI:H/VA:H/SC:N/SI:N/SA:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "HIGH",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.1,
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:H",
+              "attackVector": "NETWORK",
+              "attackComplexity": "HIGH",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-52xc-5973-w5vv",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "name": "GitHub Security Advisory (GHSA-52xc-5973-w5vv)"
+          },
+          {
+            "name": "VulnCheck Advisory: FreeRDP 2.0.0 before 3.32.0 Heap Buffer Overflow via MP3 Audio Decoding",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/freerdp-2.0.0-before-3.32.0-heap-buffer-overflow-via-mp3-audio-decoding"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Kushalkhemka",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "mayank-jangid-moon",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "skigeek16",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "opensec-intelligence",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-110837",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-52xc-5973-w5vv",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-15T13:46:25.348471Z",
+                  "id": "CVE-2026-110837",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-15T13:47:43.486Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-110838",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-10-14T22:11:15.575Z",
+      "datePublished": "2026-10-14T22:52:13.434Z",
+      "dateUpdated": "2026-10-16T17:15:12.757Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-10-14T22:52:13.434Z"
+        },
+        "datePublic": "2026-09-30T00:00:00.000Z",
+        "title": "FreeRDP shadow before 3.32.0 Pre-Authentication Input Injection via Confirm Active bypass",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FreeRDP shadow server from 3.0.0 before 3.32.0 dispatches input PDUs during the Confirm Active state before authentication, allowing unauthenticated attackers to inject keyboard input. Attackers can negotiate TLS-only RDP and send an input PDU without Confirm Active to inject synthetic keystrokes into the host user's X11 session via XTEST."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Missing Authentication for Critical Function",
+                "cweId": "CWE-306",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "FreeRDP",
+            "product": "FreeRDP",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "3.0.0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "3.32.0"
+              },
+              {
+                "version": "3.32.0",
+                "status": "unaffected",
+                "versionType": "semver"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freerdp:freerdp:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "3.0.0",
+                    "versionEndExcluding": "3.32.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 8.7,
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-m998-cvfm-9444",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "name": "GitHub Security Advisory (GHSA-m998-cvfm-9444)"
+          },
+          {
+            "name": "VulnCheck Advisory: FreeRDP shadow before 3.32.0 Pre-Authentication Input Injection via Confirm Active bypass",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/freerdp-shadow-before-3.32.0-pre-authentication-input-injection-via-confirm-active-bypass"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Kushalkhemka",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "mayank-jangid-moon",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "skigeek16",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "opensec-intelligence",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-110838",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-16T16:46:51.878958Z",
+                  "id": "CVE-2026-110838",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-16T17:15:12.757Z"
+          }
+        }
+      ]
+    }
+  }
+]
