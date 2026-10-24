@@ -9557,3 +9557,896 @@
     }
   }
 ]
+[Sat Oct 24 15:40:22 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-115557",
+      "assignerOrgId": "28c92f92-d60d-412d-b760-e73465c3df22",
+      "state": "PUBLISHED",
+      "assignerShortName": "PSF",
+      "dateReserved": "2026-10-22T21:32:20.396Z",
+      "datePublished": "2026-10-24T14:15:14.283Z",
+      "dateUpdated": "2026-10-24T14:20:50.539Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "28c92f92-d60d-412d-b760-e73465c3df22",
+          "shortName": "PSF",
+          "dateUpdated": "2026-10-24T14:20:50.539Z"
+        },
+        "title": "Distrust compromised intermediate certificates in ssl module",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-299",
+                "description": "CWE-299 Improper check for certificate revocation",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Python Software Foundation",
+            "product": "CPython",
+            "repo": "https://github.com/python/cpython",
+            "modules": [
+              "ssl"
+            ],
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThanOrEqual": "3.16.0",
+                "versionType": "python"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Python has added a denylist for known compromised certificates to the \"ssl\" module to ensure user safety even without certificate revocation configured. Known compromised certificates will automatically be rejected regardless of the SSLContext policy configuration.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Python has added a denylist for known compromised certificates to the \"ssl\" module to ensure user safety even without certificate revocation configured. Known compromised certificates will automatically be rejected regardless of the SSLContext policy configuration."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/10/20/29",
+            "tags": [
+              "related"
+            ]
+          },
+          {
+            "url": "https://github.com/python/cpython/pull/160042",
+            "tags": [
+              "patch"
+            ]
+          },
+          {
+            "url": "https://github.com/python/cpython/issues/160040",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://emudhra.we-have-a-problem.com/",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/FNAJMZV6XQYLVPABNINDMF3VF66AYLW4/",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "PASSIVE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.4,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+            }
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-115557",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-115933",
+      "assignerOrgId": "4cdc9741-f887-419a-a2fd-acbbd2729276",
+      "state": "PUBLISHED",
+      "assignerShortName": "postiz",
+      "dateReserved": "2026-10-23T21:21:06.893Z",
+      "datePublished": "2026-10-24T14:17:05.755Z",
+      "dateUpdated": "2026-10-24T14:18:35.919Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "4cdc9741-f887-419a-a2fd-acbbd2729276",
+          "shortName": "postiz",
+          "dateUpdated": "2026-10-24T14:18:35.919Z"
+        },
+        "title": "Forged signed tokens let any registered user take over other users and organizations",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Postiz signs its session, invitation and password reset tokens with one shared secret and without any marker of what a token is for. A route that refreshes the credentials of a browser-extension channel signed data taken from the request itself and stored the result where the requesting user can read it back. A user could therefore obtain a validly signed token containing any claims they choose, which the application accepts as a session, as an organization invitation with a chosen role, as a password reset or as an enterprise provisioning token.\n\nA second, narrower route that creates team invitations signs extra fields from the request body in the same way."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "GitroomHQ",
+            "product": "postiz-app",
+            "packageName": "postiz-app",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "2.15.0",
+                "status": "affected",
+                "versionType": "semver",
+                "lessThan": "2.25.3"
+              }
+            ],
+            "repo": "https://github.com/gitroomhq/postiz-app"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gitroomhq/postiz-app",
+            "tags": [
+              "product"
+            ],
+            "name": "Postiz"
+          },
+          {
+            "url": "https://github.com/gitroomhq/postiz-app/releases/tag/v2.25.3",
+            "tags": [
+              "release-notes"
+            ],
+            "name": "v2.25.3"
+          },
+          {
+            "url": "https://github.com/gitroomhq/postiz-app/commit/a5affe62c74e39c1e7ac960d50d8418b807d532c",
+            "tags": [
+              "patch"
+            ],
+            "name": "a5affe62"
+          },
+          {
+            "url": "https://gadvisory.org/advisories/PSA-2026-YT2HMH",
+            "tags": [
+              "vendor-advisory"
+            ],
+            "name": "GAdvisory"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.9,
+              "baseSeverity": "CRITICAL"
+            }
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-290",
+                "cweId": "CWE-290",
+                "type": "CWE"
+              },
+              {
+                "lang": "en",
+                "description": "CWE-345",
+                "cweId": "CWE-345",
+                "type": "CWE"
+              },
+              {
+                "lang": "en",
+                "description": "CWE-915",
+                "cweId": "CWE-915",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Anthropic, PBC",
+            "type": "finder"
+          },
+          {
+            "lang": "en",
+            "value": "Enno Gelhaus",
+            "type": "coordinator"
+          },
+          {
+            "lang": "en",
+            "value": "Nevo David",
+            "type": "coordinator"
+          }
+        ],
+        "datePublic": "2026-10-24T14:16:52.748Z",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "If you do not use channels that rely on the Postiz browser extension, block POST /integrations/extension-refresh at your reverse proxy. This removes the main signing route; the team invitation route remains."
+          },
+          {
+            "lang": "en",
+            "value": "Set DISABLE_REGISTRATION=true. The attacker needs an ordinary account, so closing self-registration limits exposure to people who already hold one. This reduces reach, it does not close the issue."
+          }
+        ],
+        "exploits": [
+          {
+            "lang": "en",
+            "value": "Exploitation was demonstrated end to end against an unmodified backend build at commit 3a7d28b7ad96: a second self-registered user became super administrator of another user's organization and read its API key. Session, password reset, enterprise and subscription tokens obtained the same way were each accepted by their endpoints."
+          }
+        ],
+        "configurations": [
+          {
+            "lang": "en",
+            "value": "The instance must be able to reach api2.skool.com, as any instance using the Skool provider can. No setting has to be changed."
+          },
+          {
+            "lang": "en",
+            "value": "With Stripe billing configured, the attacker's own plan must allow one channel and the target organization must not be on the STANDARD tier. The session and password reset tokens are not affected by these limits."
+          },
+          {
+            "lang": "en",
+            "value": "Self-registration is open unless DISABLE_REGISTRATION is set to true."
+          }
+        ],
+        "impacts": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "A registered user can obtain a validly signed token with claims of their choosing and use it as a login session for another user, without knowing any identifier of the victim when database filter objects are used as claims."
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "An attacker can join any other organization as super administrator, using an organization id that is exposed by any shared post preview link, read its API key and channel list and schedule posts through its connected social accounts."
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "An attacker can reset the password of a user whose id they know, and can obtain an organization with a lifetime top-tier subscription through the enterprise provisioning endpoint."
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "Forged tokens do not expire and cannot be told apart from genuine ones."
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "The narrower invitation route lets a user who may invite team members repeatedly stop the scheduled posts of a channel of another organization, and lift the channel limit of their own plan."
+              }
+            ]
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-10-23T17:45:00.000Z",
+            "lang": "en",
+            "value": "Anthropic has disclosed a thorough report of this vulnerability including a working PoC to Postiz"
+          },
+          {
+            "time": "2026-10-23T18:00:00.000Z",
+            "lang": "en",
+            "value": "Postiz has reproduced the vulnerability and is working on a fix"
+          },
+          {
+            "time": "2026-10-24T13:27:00.000Z",
+            "lang": "en",
+            "value": "Postiz has pushed a fix for this vulnerability and verified it"
+          },
+          {
+            "time": "2026-10-24T14:18:00.000Z",
+            "lang": "en",
+            "value": "Postiz has created a release and published the advisory"
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-115933",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-99999",
+      "assignerOrgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+      "state": "PUBLISHED",
+      "assignerShortName": "Linux",
+      "dateReserved": "2026-09-25T10:25:14.451Z",
+      "datePublished": "2026-10-15T12:19:22.784Z",
+      "dateUpdated": "2026-10-24T14:17:15.740Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+          "shortName": "Linux",
+          "dateUpdated": "2026-10-24T14:17:15.740Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv4: validate checksum_start before completing checksum\n\nIf a packet with bad checksum metadata gets into the ipv4 stack,\nskb_checksum_help can corrupt the network header and cause a bunch of\nmischief.\n\nThis was discovered and reported by Paulos, and has been reporoduced\nby others independently since.\n\nWe really shouldn't allow such packets in, but as a defence\nin depth measure, let's also check before we complete the checksum.\n\nA more complete validation at input is forthcoming, but needs more work."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "baseScore": 9.3,
+              "baseSeverity": "CRITICAL"
+            },
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "AV:L - A malicious microVM supplies crafted virtio-net checksum metadata with its outbound frame. The VMM writes it to the host TAP, where tun_get_user() feeds the skb to the IPv4 stack and ip_do_fragment() calls skb_checksum_help(); this is a guest/local virtual-device path, not an Internet receive path.\nAC:L - The guest controls the frame, checksum start and offset, and packet size and can repeat the same fragmentation sequence. No race, timing window, or uncontrollable memory layout is needed; host leak, crash, and code-execution variants were reproduced with crafted packets.\nPR:N - In the microVM scenario, a tenant workload able to transmit through its assigned virtio-net interface can supply the triggering traffic. It needs no host credentials, capability, or access to /dev/net/tun; the privileged VMM merely forwards guest output to its existing TAP fd.\nUI:N - The attacker sends the crafted guest packets directly, and host TAP/IPv4 processing invokes checksum completion automatically. No host administrator or other victim must act.\nS:C - The checksum metadata originates in an untrusted microVM, but skb_checksum_help() and ip_do_fragment() process and corrupt state in the host kernel. The demonstrated leak, crash, and administrator code execution cross the guest-to-host isolation boundary.\nC:H - After skb_checksum_help() changes an already-validated IPv4 IHL, ip_do_fragment() trusts the new length and ip_frag_next() copies beyond the skb's logical linear head into transmitted IPv4 options. This was demonstrated as continuous host-memory disclosure in guest-emitted packets.\nI:H - skb_checksum_help() writes at the attacker-controlled checksum position inside an IPv4 header after routing and validation, and downstream code trusts the modified fields. Crafted guest packets using this flaw were demonstrated to execute commands with full administrator privileges on the host.\nA:H - Malformed checksum offsets reach skb_checksum_help() from IPv4 fragmentation and can trip WARN_ONCE/panic paths or poison the header geometry used downstream. Crafted guest packets were demonstrated to crash the physical host, taking down all sandboxes on it."
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "unaffected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "include/net/ip.h",
+              "net/bridge/netfilter/nf_conntrack_bridge.c",
+              "net/ipv4/ip_output.c",
+              "net/netfilter/nfnetlink_queue.c",
+              "net/netfilter/xt_CHECKSUM.c",
+              "net/xfrm/xfrm_output.c"
+            ],
+            "versions": [
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "a464d950f31c89565cbaae038cc60db04fe01956",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "0fab003ef4698e0628060a45a48f14b43ba2a40a",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "94524b7b32691de2e2ce162c04d6cbc9106e5cbf",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "a65f69e0f38ffbed1b128029e09097436416dc8b",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "32a8b0adaa18e52aaa0b246b5ffe683075354dbb",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "f3e835af6226f1dd12160cbd696081e9b6155de0",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "c3e33464746166264334641dc850a36eef7e6326",
+                "status": "affected",
+                "versionType": "git"
+              },
+              {
+                "version": "f43798c27684ab925adde7d8acc34c78c6e50df8",
+                "lessThan": "6785011f8b16abf40b1e9d8b2e332232b3e68822",
+                "status": "affected",
+                "versionType": "git"
+              }
+            ]
+          },
+          {
+            "product": "Linux",
+            "vendor": "Linux",
+            "defaultStatus": "affected",
+            "repo": "https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git",
+            "programFiles": [
+              "include/net/ip.h",
+              "net/bridge/netfilter/nf_conntrack_bridge.c",
+              "net/ipv4/ip_output.c",
+              "net/netfilter/nfnetlink_queue.c",
+              "net/netfilter/xt_CHECKSUM.c",
+              "net/xfrm/xfrm_output.c"
+            ],
+            "versions": [
+              {
+                "version": "2.6.27",
+                "status": "affected"
+              },
+              {
+                "version": "0",
+                "lessThan": "2.6.27",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.10.272",
+                "lessThanOrEqual": "5.10.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "5.15.223",
+                "lessThanOrEqual": "5.15.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.1.190",
+                "lessThanOrEqual": "6.1.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.6.159",
+                "lessThanOrEqual": "6.6.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.12.113",
+                "lessThanOrEqual": "6.12.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "6.18.57",
+                "lessThanOrEqual": "6.18.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.2.11",
+                "lessThanOrEqual": "7.2.*",
+                "status": "unaffected",
+                "versionType": "semver"
+              },
+              {
+                "version": "7.3",
+                "lessThanOrEqual": "*",
+                "status": "unaffected",
+                "versionType": "original_commit_for_fix"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "5.10.272"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "5.15.223"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "6.1.190"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "6.6.159"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "6.12.113"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "6.18.57"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "7.2.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "2.6.27",
+                    "versionEndExcluding": "7.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/a464d950f31c89565cbaae038cc60db04fe01956"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/0fab003ef4698e0628060a45a48f14b43ba2a40a"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/94524b7b32691de2e2ce162c04d6cbc9106e5cbf"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a65f69e0f38ffbed1b128029e09097436416dc8b"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/32a8b0adaa18e52aaa0b246b5ffe683075354dbb"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/f3e835af6226f1dd12160cbd696081e9b6155de0"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c3e33464746166264334641dc850a36eef7e6326"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/6785011f8b16abf40b1e9d8b2e332232b3e68822"
+          },
+          {
+            "url": "https://pwn.ai/blog/pwnescape"
+          },
+          {
+            "url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
+          }
+        ],
+        "title": "ipv4: validate checksum_start before completing checksum",
+        "x_generator": {
+          "engine": "bippy-1.2.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-99999",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/10/15/5"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-10-15T22:07:24.590Z"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2026-99999",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2026-10-16T15:49:03.519458Z"
+                }
+              }
+            }
+          ],
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "lang": "en",
+                  "type": "CWE",
+                  "cweId": "CWE-20",
+                  "description": "CWE-20 Improper Input Validation"
+                }
+              ]
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-19T21:19:28.844Z"
+          }
+        }
+      ]
+    }
+  }
+]
