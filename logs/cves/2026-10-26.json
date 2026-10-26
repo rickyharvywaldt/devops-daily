@@ -14501,3 +14501,2829 @@
     }
   }
 ]
+[Mon Oct 26 12:34:36 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-96432",
+      "assignerOrgId": "a59d8014-47c4-4630-ab43-e1b13cbe58e3",
+      "state": "PUBLISHED",
+      "assignerShortName": "Qt",
+      "dateReserved": "2026-09-23T06:49:22.184Z",
+      "datePublished": "2026-10-26T11:31:20.304Z",
+      "dateUpdated": "2026-10-26T11:31:20.304Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "a59d8014-47c4-4630-ab43-e1b13cbe58e3",
+          "shortName": "Qt",
+          "dateUpdated": "2026-10-26T11:31:20.304Z"
+        },
+        "title": "Null pointer dereference vulnerability in QNetworkAccessManager impacts Qt",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-476",
+                "description": "CWE-476 NULL Pointer Dereference",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-220",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-220 Client-Server Protocol Manipulation"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "qt",
+            "product": "qt",
+            "modules": [
+              "qtbase"
+            ],
+            "versions": [
+              {
+                "status": "affected",
+                "version": "6.8.0",
+                "lessThanOrEqual": "6.8.9",
+                "versionType": "python"
+              },
+              {
+                "status": "affected",
+                "version": "6.9.0",
+                "lessThanOrEqual": "6.11.2",
+                "versionType": "python"
+              }
+            ],
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:2.3:a:qt:qt:*:*:*:*:*:*:*:*",
+              "cpe:2.3:a:qt:qtbase:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A malicious or compromised HTTP/2 server withholding SETTINGS ACK can send RST_STREAM on a completed stream, planting a null pointer, and then send a PUSH_PROMISE for that stream, causing a null pointer dereference in the QNetworkAccessManager class of the Qt Network module that crashes the application.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "A malicious or compromised HTTP/2 server withholding SETTINGS ACK can send RST_STREAM on a completed stream, planting a null pointer, and then send a PUSH_PROMISE for that stream, causing a null pointer dereference in the QNetworkAccessManager class of the Qt Network module that crashes the application."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wiki.qt.io/List_of_known_vulnerabilities_in_Qt_products#CVE-2026-96432:",
+            "tags": [
+              "vendor-advisory"
+            ]
+          },
+          {
+            "url": "https://codereview.qt-project.org/c/qt/qtbase/+/759718",
+            "tags": [
+              "patch"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "ACTIVE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "UNREPORTED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NO",
+              "Recovery": "USER",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "LOW",
+              "providerUrgency": "GREEN",
+              "version": "4.0",
+              "baseSeverity": "LOW",
+              "baseScore": 2.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U/AU:N/R:U/RE:L/U:Green"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Daniel Birtwhistle",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-96432",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-94380",
+      "assignerOrgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+      "state": "PUBLISHED",
+      "assignerShortName": "TR-CERT",
+      "dateReserved": "2026-09-21T12:39:06.448Z",
+      "datePublished": "2026-10-26T11:15:45.141Z",
+      "dateUpdated": "2026-10-26T11:15:45.141Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "ca940d4e-fea4-4aa2-9a58-591a58b1ce21",
+          "shortName": "TR-CERT",
+          "dateUpdated": "2026-10-26T11:15:45.141Z"
+        },
+        "title": "Host Header Injection in HAVELSAN's Liman MYS",
+        "datePublic": "2026-10-26T11:10:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-640",
+                "description": "CWE-640 Weak Password Recovery Mechanism for Forgotten Password",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "impacts": [
+          {
+            "capecId": "CAPEC-50",
+            "descriptions": [
+              {
+                "lang": "en",
+                "value": "CAPEC-50 Password Recovery Exploitation"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "HAVELSAN Inc.",
+            "product": "Liman MYS",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.3.4-1124",
+                "lessThan": "2.3.5-1131",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Weak Password Recovery Mechanism for Forgotten Password vulnerability in HAVELSAN Inc. Liman MYS allows Password Recovery Exploitation.\n\nThis issue affects Liman MYS: from 2.3.4-1124 before 2.3.5-1131.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Weak Password Recovery Mechanism for Forgotten Password vulnerability in HAVELSAN Inc. Liman MYS allows Password Recovery Exploitation.<p>This issue affects Liman MYS: from 2.3.4-1124 before 2.3.5-1131.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://siberguvenlik.gov.tr/guvenlik-bildirimleri/detay/tr-26-1396",
+            "tags": [
+              "government-resource"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "NONE",
+              "userInteraction": "REQUIRED",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "availabilityImpact": "NONE",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Eren Can ÖZMEN",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "defect": [
+            "TR-26-1396"
+          ],
+          "advisory": "TR-26-1396",
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-94380",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-84823",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2026-09-02T10:32:15.835Z",
+      "datePublished": "2026-10-15T23:47:13.986Z",
+      "dateUpdated": "2026-10-26T11:18:58.184Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Org.wildfly.core: wildfly: path traversal in take-snapshot discloses the server configuration to the monitor role",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Low",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in WildFly. A user with the `Monitor` role, which is the lowest standard Role-Based Access Control (RBAC) role, can exploit a path traversal vulnerability in the `take-snapshot` operation. By manipulating the `name` parameter, this user can write a copy of the server configuration to an arbitrary location. This allows the `Monitor` role to read back the server configuration, including sensitive credentials, which would otherwise be restricted by RBAC, leading to information disclosure."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "pki-core:10.6/resteasy",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "pki-deps:10.6/resteasy",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "resteasy",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-cli",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-controller-client",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-galleon-pack",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-management-client",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-management-subsystem",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-security",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-security-api",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-deployment-repository",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-deployment-scanner",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-discovery",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-domain-http-error-context",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-domain-http-interface",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-domain-management",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-elytron-integration",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-elytron-tool-wrapper",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-embedded",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-event-logger",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-host-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-io",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-jmx",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-launcher",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-logging",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-management-client-content",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-model-test",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-network",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-patching",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-platform-mbean",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-process-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-protocol",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-remoting",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-request-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-security-manager",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-self-contained",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-server",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-subsystem-test-framework",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-threads",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Fuse 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-version",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_fuse:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "jboss-eap-7/eap74-els-openjdk11-openshift-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "jboss-eap-7/eap74-els-openjdk17-openshift-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "jboss-eap-7/eap74-els-openjdk8-openshift-rhel8",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-cli",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-controller-client",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-build",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-build-legacy",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-component-matrix-builder",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-dist",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-dist-legacy",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-feature-pack",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-feature-pack-common",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-feature-pack-ee-8-api",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-feature-pack-galleon-common",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-feature-pack-galleon-pruned",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-feature-pack-parent",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-galleon-pack",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management-client",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management-subsystem",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-model-test",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-model-test-controller-optional",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-model-test-framework",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-model-test-tests",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-parent",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-security",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-security-api",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-security-parent",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-testbom",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-test-runner",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-testsuite-shared",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-deployment-repository",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-deployment-scanner",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-discovery",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-http",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-http-error-context",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-http-interface",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-management",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-elytron-integration",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-elytron-tool-wrapper",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-embedded",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-event-logger",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-host-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io-bom",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io-tests",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jmx",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-launcher",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-logging",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-management-client-content",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-model-test",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-network",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-patching",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-platform-mbean",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-process-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-protocol",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-remoting",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-remoting-parent",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-remoting-test",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-request-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-security-manager",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-server",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-subsystem-test",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-subsystem-test-framework",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-subsystem-test-parent",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-subsystem-test-tests",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-threads",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 7",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-version",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-cli",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-controller-client",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management-client",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management-subsystem",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-security",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-deployment-repository",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-deployment-scanner",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-discovery",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-http-interface",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-management",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-elytron-integration",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-elytron-tool-wrapper",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-embedded",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-event-logger",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-host-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-installation-manager",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io-spi",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jar-boot",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jar-runtime",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jmx",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-logging",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-management-client-content",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-network",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-patching",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-platform-mbean",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-process-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-protocol",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-remoting",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-request-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-security-manager",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-server",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-service",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-subsystem",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-threads",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform 8",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-version",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:jboss_enterprise_application_platform:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-cli",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-controller-client",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management-client",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-management-subsystem",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-core-security",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-deployment-repository",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-deployment-scanner",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-discovery",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-http-interface",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-domain-management",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-elytron-integration",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-elytron-tool-wrapper",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-embedded",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-event-logger",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-host-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-installation-manager",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-io-spi",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jar-boot",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jar-runtime",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-jmx",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-logging",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-management-client-content",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-network",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-patching",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-platform-mbean",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-process-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-protocol",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-remoting",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-request-controller",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-security-manager",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-server",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-service",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-subsystem",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-threads",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat JBoss Enterprise Application Platform Expansion Pack",
+            "collectionURL": "https://access.redhat.com/jbossnetwork/restricted/listSoftware.html",
+            "packageName": "wildfly-version",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:jbosseapxp"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-cli",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-controller-client",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-feature-pack",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-management-client",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-management-subsystem",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-security",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-core-security-api",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-deployment-repository",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-deployment-scanner",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-discovery",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-domain-http-error-context",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-domain-http-interface",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-domain-management",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-elytron-integration",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-elytron-tool-wrapper",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-embedded",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-event-logger",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-host-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-io",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-jmx",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-launcher",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-logging",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-management-client-content",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-model-test",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-network",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-patching",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-platform-mbean",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-process-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-protocol",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-remoting",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-request-controller",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-security-manager",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-server",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-subsystem-test-framework",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-threads",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Single Sign-On 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "wildfly-version",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:red_hat_single_sign_on:7"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2026-84823",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2527902",
+            "name": "RHBZ#2527902",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2026-09-01T00:00:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "description": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "To mitigate this issue, restrict access to the WildFly management interface to trusted networks and users. Implement firewall rules to limit network reachability to the management ports. Additionally, review existing Role-Based Access Control (RBAC) assignments within WildFly and ensure that users are granted only the minimum necessary privileges, adhering to the principle of least privilege. Reviewing role assignments might impact functionality if users genuinely require the `Monitor` role for their operations."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2026-09-01T00:00:00.000Z",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2026-09-01T00:00:00.000Z",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank Hung Bach Ngoc (VinSOC Labs) for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-10-26T11:18:58.184Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-84823",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-16T16:31:49.890938Z",
+                  "id": "CVE-2026-84823",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-16T17:07:53.314Z"
+          }
+        }
+      ]
+    }
+  }
+]
