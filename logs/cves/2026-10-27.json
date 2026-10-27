@@ -4116,3 +4116,607 @@
     }
   }
 ]
+[Tue Oct 27 11:52:08 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-101833",
+      "assignerOrgId": "43595867-4340-4103-b7a2-9a5208d29a85",
+      "state": "PUBLISHED",
+      "assignerShortName": "oracle",
+      "dateReserved": "2026-09-28T15:40:09.509Z",
+      "datePublished": "2026-10-20T21:23:14.208Z",
+      "dateUpdated": "2026-10-27T11:21:23.720Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "43595867-4340-4103-b7a2-9a5208d29a85",
+          "shortName": "oracle",
+          "dateUpdated": "2026-10-20T21:23:14.208Z"
+        },
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en-US",
+                "description": "Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Shipping Execution.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Shipping Execution accessible data as well as  unauthorized update, insert or delete access to some of Oracle Shipping Execution accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Shipping Execution."
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Oracle Corporation",
+            "product": "Oracle Shipping Execution",
+            "versions": [
+              {
+                "version": "12.2.3",
+                "status": "affected",
+                "lessThanOrEqual": "12.2.15",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:shipping_execution:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "12.2.3",
+                    "versionEndIncluding": "12.2.15"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en-US",
+            "value": "Vulnerability in the Oracle Shipping Execution product of Oracle E-Business Suite (component: Internal Operations).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Shipping Execution.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Shipping Execution accessible data as well as  unauthorized update, insert or delete access to some of Oracle Shipping Execution accessible data and unauthorized ability to cause a partial denial of service (partial DOS) of Oracle Shipping Execution. CVSS 3.1 Base Score 7.6 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L)."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuoct2026.html",
+            "name": "Oracle Advisory",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "LOW",
+              "availabilityImpact": "LOW",
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L",
+              "baseScore": 7.6,
+              "baseSeverity": "HIGH"
+            }
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-101833",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-27T11:21:12.196816Z",
+                  "id": "CVE-2026-101833",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-27T11:21:23.720Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-101832",
+      "assignerOrgId": "43595867-4340-4103-b7a2-9a5208d29a85",
+      "state": "PUBLISHED",
+      "assignerShortName": "oracle",
+      "dateReserved": "2026-09-28T15:40:09.509Z",
+      "datePublished": "2026-10-20T21:23:13.800Z",
+      "dateUpdated": "2026-10-27T11:21:02.320Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "43595867-4340-4103-b7a2-9a5208d29a85",
+          "shortName": "oracle",
+          "dateUpdated": "2026-10-20T21:23:13.800Z"
+        },
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en-US",
+                "description": "Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Order Management.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Order Management accessible data."
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Oracle Corporation",
+            "product": "Oracle Order Management",
+            "versions": [
+              {
+                "version": "12.2.3",
+                "status": "affected",
+                "lessThanOrEqual": "12.2.15",
+                "versionType": "custom"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:order_management:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "12.2.3",
+                    "versionEndIncluding": "12.2.15"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en-US",
+            "value": "Vulnerability in the Oracle Order Management product of Oracle E-Business Suite (component: Product Diagnostic Tools).  Supported versions that are affected are 12.2.3-12.2.15. Easily exploitable vulnerability allows low privileged attacker with network access via HTTP to compromise Oracle Order Management.  Successful attacks of this vulnerability can result in  unauthorized access to critical data or complete access to all Oracle Order Management accessible data. CVSS 3.1 Base Score 6.5 (Confidentiality impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N)."
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuoct2026.html",
+            "name": "Oracle Advisory",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-101832",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-284",
+                  "lang": "en",
+                  "description": "CWE-284 Improper Access Control"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-10-27T11:17:14.623699Z",
+                  "id": "CVE-2026-101832",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-10-27T11:21:02.320Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-90732",
+      "assignerOrgId": "c550e75a-17ff-4988-97f0-544cde3820fe",
+      "state": "PUBLISHED",
+      "assignerShortName": "dell",
+      "dateReserved": "2026-09-13T10:04:17.592Z",
+      "datePublished": "2026-10-27T11:21:01.459Z",
+      "dateUpdated": "2026-10-27T11:21:01.459Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "c550e75a-17ff-4988-97f0-544cde3820fe",
+          "shortName": "dell",
+          "dateUpdated": "2026-10-27T11:21:01.459Z"
+        },
+        "datePublic": "2026-10-01T06:30:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-121",
+                "description": "CWE-121: Stack-based Buffer Overflow",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Dell",
+            "product": "PowerProtect Data Domain",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "8.9.0.0 or later",
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "7.13.1.90 or later",
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "8.3.1.50 or later",
+                "versionType": "semver"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "8.6.1.30 or later",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through LTS 2026, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain a Stack-based Buffer Overflow vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Dell PowerProtect Data Domain, Feature Release versions 7.7.1.0 through LTS 2026, LTS2024 release versions 7.13.1.0 through 7.13.1.80, LTS2025 release versions 8.3.1.0 through 8.3.1.40, LTS2026 release versions 8.6.1.0 through 8.6.1.20, contain a Stack-based Buffer Overflow vulnerability. A high privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.dell.com/support/kbdoc/en-us/000515178/dsa-2026-416-security-update-for-dell-powerprotect-data-domain-multiple-vulnerabilities",
+            "tags": [
+              "vendor-advisory"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "HIGH",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "HIGH",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 4.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H"
+            }
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Dell would like to thank songxiaoyue for reporting the following issues",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-90732",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
