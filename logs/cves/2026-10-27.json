@@ -4720,3 +4720,489 @@
     }
   }
 ]
+[Tue Oct 27 17:46:36 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-118131",
+      "assignerOrgId": "37e5125f-f79b-445b-8fad-9564f167944b",
+      "state": "PUBLISHED",
+      "assignerShortName": "certcc",
+      "dateReserved": "2026-10-27T17:21:42.310Z",
+      "datePublished": "2026-10-27T17:23:46.474Z",
+      "dateUpdated": "2026-10-27T17:23:46.474Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "CVE-2026-118131",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GnuPG (version 2.5.21) for Windows contains a vulnerability where default Discretionary Access Control List (DACL) inheritance on the C:\\ProgramData directory allows members of the BUILTIN\\Users group to create arbitrary subdirectories under this path. An attacker with low-privilege access can create the expected GnuPG configuration directory and inject malicious configuration files consumed by GnuPG components. This can result in code execution within the security context of the victim user."
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "affected": [
+          {
+            "vendor": "GnuPG",
+            "product": "GnuPG",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "2.5.21"
+              }
+            ]
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-732 Incorrect Permission Assignment for Critical Resource"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-379 Creation of Temporary File in Directory with Insecure Permissions"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "CWE-427 Uncontrolled Search Path Element"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://atos.net/en/lp/cybershield/a-tale-of-several-hijacks-and-what-it-taught-me-about-runtime-driven-testing"
+          }
+        ],
+        "x_generator": {
+          "engine": "VINCE 3.0.51",
+          "env": "prod",
+          "origin": "https://cveawg.mitre.org/api/cve/CVE-2026-118131"
+        },
+        "providerMetadata": {
+          "orgId": "37e5125f-f79b-445b-8fad-9564f167944b",
+          "shortName": "certcc",
+          "dateUpdated": "2026-10-27T17:23:46.474Z"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-118131",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-116677",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-10-26T20:00:59.829Z",
+      "datePublished": "2026-10-27T17:23:01.792Z",
+      "dateUpdated": "2026-10-27T17:23:01.792Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "OpenWISP Controller CA CRL REST API does not scope requests to managed organizations",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-862",
+                "lang": "en",
+                "description": "CWE-862: Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 5.3,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/openwisp/openwisp-controller/security/advisories/GHSA-9gh4-xw24-9xh5",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/openwisp/openwisp-controller/security/advisories/GHSA-9gh4-xw24-9xh5"
+          },
+          {
+            "name": "https://github.com/openwisp/openwisp-controller/commit/90ded783267aa11b89768b0ec9ae69895cc3730c",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/openwisp/openwisp-controller/commit/90ded783267aa11b89768b0ec9ae69895cc3730c"
+          },
+          {
+            "name": "https://github.com/openwisp/openwisp-controller/commit/9e1869e17734a0f34bc428622d463c1a8c230720",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/openwisp/openwisp-controller/commit/9e1869e17734a0f34bc428622d463c1a8c230720"
+          },
+          {
+            "name": "https://github.com/openwisp/openwisp-controller/releases/tag/1.3.2",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/openwisp/openwisp-controller/releases/tag/1.3.2"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "openwisp",
+            "product": "openwisp-controller",
+            "versions": [
+              {
+                "version": ">= 1.0.0, < 1.3.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-10-27T17:23:01.792Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenWISP Controller is a network and WiFi controller for provisioning, configuration management, updates, and PKI management. From 1.0.0 until 1.3.2, the GET /api/v1/controller/ca/<integer-id>/crl endpoint allows an authenticated organization manager with CA view permission to retrieve another organization's certificate revocation list by requesting its sequential CA identifier. CrlDownloadView.retrieve resolves the CA directly instead of using the organization-scoped object retrieval enforced by FilterByOrganizationManaged, bypassing the endpoint's intended authorization boundary. The response can disclose CA issuer information and revoked certificate serial numbers, but it does not expose CA private keys or allow modification. This issue is fixed in version 1.3.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-9gh4-xw24-9xh5",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-116677",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "schema_version": "1.7.4",
+    "id": "MAL-2026-2967",
+    "published": "2026-04-21T13:55:41Z",
+    "modified": "2026-10-27T17:21:59.122409122Z",
+    "aliases": [
+      "GHSA-r9qx-xcg2-7wcc"
+    ],
+    "summary": "Malicious code in 6161test1234 (npm)",
+    "details": "\n---\n_-= Per source details. Do not edit below this line.=-_\n\n## Source: amazon-inspector (074806dcf23de8a6066ce2cbbcc5f711ca552db945714be52cd8d3a7e1415af4)\nThe package 6161test1234 was found to contain malicious code.\n\n## Source: ghsa-malware (a505f81bce246ee3561867d9493770fc7b9e66d18ad6d965037935b29129fa18)\nAny computer that has this package installed or running should be considered fully compromised. All secrets and keys stored on that computer should be rotated immediately from a different computer. The package should be removed, but as full control of the computer may have been given to an outside entity, there is no guarantee that removing the package will remove all malicious software resulting from installing it.\n\n## Source: ossf-package-analysis (9301ea5f660d33cbc333b2a64f7a7a8c6b644aa2a0ecfcd845e288c5b3a7f099)\nThe OpenSSF Package Analysis project identified '6161test1234' @ 1.0.0 (npm) as malicious.\n\nIt is considered malicious because:\n\n- The package communicates with a domain associated with malicious activity.\n",
+    "affected": [
+      {
+        "package": {
+          "name": "6161test1234",
+          "ecosystem": "npm"
+        },
+        "ranges": [
+          {
+            "type": "SEMVER",
+            "events": [
+              {
+                "introduced": "0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "1.0.0"
+        ],
+        "database_specific": {
+          "cwes": [
+            {
+              "cweId": "CWE-506",
+              "description": "The product contains code that appears to be malicious in nature.",
+              "name": "Embedded Malicious Code"
+            }
+          ]
+        }
+      }
+    ],
+    "references": [
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-r9qx-xcg2-7wcc"
+      }
+    ],
+    "database_specific": {
+      "malicious-packages-origins": [
+        {
+          "import_time": "2026-04-21T14:39:42.142690215Z",
+          "modified_time": "2026-04-21T13:55:41Z",
+          "sha256": "9301ea5f660d33cbc333b2a64f7a7a8c6b644aa2a0ecfcd845e288c5b3a7f099",
+          "source": "ossf-package-analysis",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        {
+          "import_time": "2026-04-23T20:48:57.936167618Z",
+          "modified_time": "2026-04-23T20:43:56Z",
+          "sha256": "074806dcf23de8a6066ce2cbbcc5f711ca552db945714be52cd8d3a7e1415af4",
+          "source": "amazon-inspector",
+          "versions": [
+            "1.0.0"
+          ]
+        },
+        {
+          "id": "GHSA-r9qx-xcg2-7wcc",
+          "import_time": "2026-10-27T17:19:51.747509506Z",
+          "modified_time": "2026-10-27T16:29:06Z",
+          "ranges": [
+            {
+              "events": [
+                {
+                  "introduced": "0"
+                }
+              ],
+              "type": "SEMVER"
+            }
+          ],
+          "sha256": "a505f81bce246ee3561867d9493770fc7b9e66d18ad6d965037935b29129fa18",
+          "source": "ghsa-malware"
+        }
+      ]
+    },
+    "credits": [
+      {
+        "name": "Amazon Inspector",
+        "contact": [
+          "actran@amazon.com"
+        ],
+        "type": "FINDER"
+      },
+      {
+        "name": "OpenSSF: Package Analysis",
+        "contact": [
+          "https://github.com/ossf/package-analysis",
+          "https://openssf.slack.com/channels/package_analysis"
+        ],
+        "type": "FINDER"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "mal-2026-2967",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
