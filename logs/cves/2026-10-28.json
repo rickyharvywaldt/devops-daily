@@ -1788,3 +1788,706 @@
     }
   }
 ]
+[Wed Oct 28 22:23:36 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "document": {
+      "acknowledgments": [
+        {
+          "organization": "CERT@VDE",
+          "summary": "coordination",
+          "urls": [
+            "https://certvde.com"
+          ]
+        }
+      ],
+      "aggregate_severity": {
+        "namespace": "https://www.first.org/cvss/v3.1/specification-document#Qualitative-Severity-Rating-Scale",
+        "text": "Critical"
+      },
+      "category": "csaf_security_advisory",
+      "csaf_version": "2.0",
+      "distribution": {
+        "tlp": {
+          "label": "WHITE",
+          "url": "https://www.first.org/tlp/"
+        }
+      },
+      "lang": "en-GB",
+      "notes": [
+        {
+          "category": "summary",
+          "text": "OCTO Image Server contains a vulnerable version of PHP affected by PHP2Shell (CVE-2026-109618 and CVE-2026-109619). We strongly recommend to upgrade PHP to version 8.2.35.",
+          "title": "Summary"
+        },
+        {
+          "category": "description",
+          "text": "Octo Image Server is typically installed on computers within a customer's internal network and is not intended to be directly exposed to the public internet.\nWhile the risk to installations is low, we recommend updating the PHP package to version 8.2.35 to eliminate any potential exposure and maintain current cybersecurity best practices.",
+          "title": "Remediation"
+        },
+        {
+          "category": "legal_disclaimer",
+          "text": "Your use of the information on this document or materials linked from this document is at your own risk. METTLER TOLEDO makes reasonable efforts to ensure the accuracy of the information but does not grant any warranty, express or implied, including warranties of merchantability or fitness for a particular purpose. To the extent permitted by applicable law, METTLER TOLEDO excludes liability for any loss, claim, expense or damage arising from or related to the statements in this document. METTLER TOLEDO reserves the right to change or update this document at any time.",
+          "title": "Disclaimer"
+        },
+        {
+          "category": "description",
+          "text": "A vulnerable PHP component in OCTO Image Server may allow remote code execution. An attacker could execute arbitrary code on the system hosting OCTO Image Server.",
+          "title": "Impact"
+        }
+      ],
+      "publisher": {
+        "category": "vendor",
+        "contact_details": "psirt@mt.com",
+        "name": "Mettler-Toledo GmbH",
+        "namespace": "https://www.mt.com"
+      },
+      "references": [
+        {
+          "category": "external",
+          "summary": "Product security website of METTLER TOLEDO",
+          "url": "https://www.mt.com/ph/en/home/site_content/product-security.html"
+        },
+        {
+          "category": "external",
+          "summary": "CERT@VDE Security Advisories for METTLER TOLEDO",
+          "url": "https://certvde.com/en/advisories/vendor/mettler-toledo/"
+        },
+        {
+          "category": "self",
+          "summary": "VDE-2026-137: METTLER TOLEDO: PHP2Shell in Octo Image Server - HTML",
+          "url": "https://certvde.com/en/advisories/VDE-2026-137/"
+        },
+        {
+          "category": "self",
+          "summary": "VDE-2026-137: METTLER TOLEDO: PHP2Shell in Octo Image Server - CSAF",
+          "url": "https://mettler-toledo.csaf-tp.certvde.com/.well-known/csaf/white/2026/vde-2026-137.json"
+        }
+      ],
+      "title": "METTLER TOLEDO: PHP2Shell in Octo Image Server",
+      "tracking": {
+        "aliases": [
+          "VDE-2026-137"
+        ],
+        "current_release_date": "2026-10-28T22:00:00.000Z",
+        "generator": {
+          "date": "2026-10-28T09:22:46.040Z",
+          "engine": {
+            "name": "Secvisogram",
+            "version": "2.6.16"
+          }
+        },
+        "id": "VDE-2026-137",
+        "initial_release_date": "2026-10-28T22:00:00.000Z",
+        "revision_history": [
+          {
+            "date": "2026-10-28T22:00:00.000Z",
+            "number": "1.0.0",
+            "summary": "Initial revision"
+          }
+        ],
+        "status": "final",
+        "version": "1.0.0"
+      }
+    },
+    "product_tree": {
+      "branches": [
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "branches": [
+                    {
+                      "category": "product_version_range",
+                      "name": "vers:intdot/>=1.0.0|<=5.0.10",
+                      "product": {
+                        "name": "OCTO Image Server 5.0.10 and earlier",
+                        "product_id": "CSAFPID-51000",
+                        "product_identification_helper": {
+                          "cpe": "cpe:2.3:a:mettler_toledo:octo_image_server:*:*:*:*:*:*:*:*"
+                        }
+                      }
+                    }
+                  ],
+                  "category": "product_name",
+                  "name": "OCTO Image Server"
+                }
+              ],
+              "category": "product_family",
+              "name": "Software"
+            }
+          ],
+          "category": "vendor",
+          "name": "METTLER TOLEDO"
+        },
+        {
+          "branches": [
+            {
+              "branches": [
+                {
+                  "category": "product_version",
+                  "name": "8.2.35",
+                  "product": {
+                    "name": "PHP 8.2.35",
+                    "product_id": "CSAFPID-52000",
+                    "product_identification_helper": {
+                      "cpe": "cpe:2.3:a:php:php:8.2.35:*:*:*:*:*:*:*"
+                    }
+                  }
+                },
+                {
+                  "category": "product_version_range",
+                  "name": "vers:semver/>=8.2.0|<=8.2.34",
+                  "product": {
+                    "name": "PHP 8.2.0 to 8.2.34",
+                    "product_id": "CSAFPID-51001",
+                    "product_identification_helper": {
+                      "cpe": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*"
+                    }
+                  }
+                }
+              ],
+              "category": "product_name",
+              "name": "PHP"
+            }
+          ],
+          "category": "vendor",
+          "name": "PHP Group"
+        }
+      ],
+      "relationships": [
+        {
+          "category": "external_component_of",
+          "full_product_name": {
+            "name": "PHP 8.2.0 to 8.2.34 external component of OCTO Image Server 5.0.10 and earlier",
+            "product_id": "CSAFPID-31000",
+            "product_identification_helper": {
+              "cpe": "cpe:2.3:a:mettler_toledo:octo_image_server:*:*:*:*:*:*:*:*"
+            }
+          },
+          "product_reference": "CSAFPID-51001",
+          "relates_to_product_reference": "CSAFPID-51000"
+        },
+        {
+          "category": "external_component_of",
+          "full_product_name": {
+            "name": "PHP 8.2.35 external component of OCTO Image Server 5.0.10 and earlier",
+            "product_id": "CSAFPID-32000",
+            "product_identification_helper": {
+              "cpe": "cpe:2.3:a:mettler_toledo:octo_image_server:*:*:*:*:*:*:*:*"
+            }
+          },
+          "product_reference": "CSAFPID-52000",
+          "relates_to_product_reference": "CSAFPID-51000"
+        }
+      ]
+    },
+    "vulnerabilities": [
+      {
+        "cve": "CVE-2026-109618",
+        "cwe": {
+          "id": "CWE-416",
+          "name": "Use After Free"
+        },
+        "notes": [
+          {
+            "audience": "all",
+            "category": "description",
+            "text": "PHP uses longjmp() for out-of-memory (OOM) errors to exit the current context and abort handling of the request. Some contexts may not properly account for this scenario and leave request memory in an uninitialized state before performing an allocation. The subsequent request cleanup procedure may read or branch on this memory. Multiple OOM strategies can consistently trigger this condition and lead to remote code execution (RCE).",
+            "title": "CVE description"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "CSAFPID-32000"
+          ],
+          "known_affected": [
+            "CSAFPID-31000"
+          ]
+        },
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "details": "Update the PHP component of OCTO Image Server 5.0.10 and earlier to PHP 8.2.35",
+            "product_ids": [
+              "CSAFPID-31000"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 9.8,
+              "baseSeverity": "CRITICAL",
+              "confidentialityImpact": "HIGH",
+              "environmentalScore": 9.8,
+              "environmentalSeverity": "CRITICAL",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "temporalScore": 9.8,
+              "temporalSeverity": "CRITICAL",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "CSAFPID-31000"
+            ]
+          }
+        ],
+        "title": "RCE via OOM corruption"
+      },
+      {
+        "cve": "CVE-2026-109619",
+        "cwe": {
+          "id": "CWE-416",
+          "name": "Use After Free"
+        },
+        "notes": [
+          {
+            "audience": "all",
+            "category": "description",
+            "text": "PHP has various global state that temporarily points into request memory. In some scenarios, global state may not be correctly reset, or may be repopulated after being reset. The global state may then refer to request memory even after it has been freed. Subsequent requests may read or branch on this stale state before it is fully initialized. Multiple strategies can trigger this condition and produce remote code execution (RCE).",
+            "title": "CVE description"
+          }
+        ],
+        "product_status": {
+          "fixed": [
+            "CSAFPID-32000"
+          ],
+          "known_affected": [
+            "CSAFPID-31000"
+          ]
+        },
+        "remediations": [
+          {
+            "category": "vendor_fix",
+            "details": "Update the PHP component of OCTO Image Server 5.0.10 and earlier to PHP 8.2.35",
+            "product_ids": [
+              "CSAFPID-31000"
+            ]
+          }
+        ],
+        "scores": [
+          {
+            "cvss_v3": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "HIGH",
+              "baseScore": 8.1,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "environmentalScore": 8.1,
+              "environmentalSeverity": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "temporalScore": 8.1,
+              "temporalSeverity": "HIGH",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "products": [
+              "CSAFPID-31000"
+            ]
+          }
+        ],
+        "title": "RCE via stale global state"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "vde-2026-137",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-61575",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-10T17:12:17.235Z",
+      "datePublished": "2026-10-28T21:57:55.205Z",
+      "dateUpdated": "2026-10-28T21:57:55.205Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "AVideo-Encoder vulnerable to stored DOM cross-site scripting through queue titles",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-79",
+                "lang": "en",
+                "description": "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 4.7,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "NONE",
+              "scope": "CHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/WWBN/AVideo-Encoder/security/advisories/GHSA-w2g8-p296-r5g9",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/WWBN/AVideo-Encoder/security/advisories/GHSA-w2g8-p296-r5g9"
+          },
+          {
+            "name": "https://github.com/WWBN/AVideo-Encoder/commit/d9b3446bec9b5daec4e248a54fc343c5fab081f7",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/WWBN/AVideo-Encoder/commit/d9b3446bec9b5daec4e248a54fc343c5fab081f7"
+          },
+          {
+            "name": "https://github.com/WWBN/AVideo-Encoder/releases/tag/v8.1.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/WWBN/AVideo-Encoder/releases/tag/v8.1.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "WWBN",
+            "product": "AVideo-Encoder",
+            "versions": [
+              {
+                "version": "< 8.1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-10-28T21:57:55.205Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "AVideo is a video-sharing Platform. Prior to 8.1.0, `view/queue.php` uses `pathinfo` on the caller-controlled `fileURI` and stores its filename through `setTitle` in `encoder_queue.title` without neutralization. `fileURI` is not in the `objects/security.php` filter lists, and the `Login::canUpload()` capability needed to submit a queue entry can be self-granted using an attacker-controlled login site without legitimate encoder credentials. `view/index.php` loads `queue.json` from `view/queue.json.php` into the `#grid` jQuery Bootgrid table; its title formatter concatenates `row.title` into raw cell HTML. An attacker can therefore store an HTML title whose event handler runs in a privileged viewer's browser. `Encoder::getAll` limits nonadministrators to their own streamer's rows, so the victim must be an administrator who sees all rows or an operator on the attacker's streamer. A second `.html()` sink in the progress panel uses the same title but additionally depends on a helper script loaded from the streamer; the Bootgrid sink is reachable from encoder code alone. The script can read session-visible data and rendered streamer credentials, act with the viewer's privileges, and execute again for each qualifying viewer until the row is removed. This issue is fixed in version 8.1.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-w2g8-p296-r5g9",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-61575",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-61569",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-10T16:48:39.924Z",
+      "datePublished": "2026-10-28T21:54:38.358Z",
+      "dateUpdated": "2026-10-28T21:54:38.358Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "AVideo-Encoder: pre-authentication streamer-login SQL injection",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-89",
+                "lang": "en",
+                "description": "CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.5,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/WWBN/AVideo-Encoder/security/advisories/GHSA-2rrq-xf8q-3qpf",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/WWBN/AVideo-Encoder/security/advisories/GHSA-2rrq-xf8q-3qpf"
+          },
+          {
+            "name": "https://github.com/WWBN/AVideo-Encoder/commit/8a6e2b8aedb87702656636d3fc8d9e26e559a762",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/WWBN/AVideo-Encoder/commit/8a6e2b8aedb87702656636d3fc8d9e26e559a762"
+          },
+          {
+            "name": "https://github.com/WWBN/AVideo-Encoder/releases/tag/v8.1.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/WWBN/AVideo-Encoder/releases/tag/v8.1.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "WWBN",
+            "product": "AVideo-Encoder",
+            "versions": [
+              {
+                "version": "< 8.1.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-10-28T21:54:38.358Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "AVideo is a video-sharing Platform. Prior to 8.1.0, the unauthenticated streamer login at `objects/login.json.php` passes the `user` parameter to `Streamer::get` in `objects/Streamer.php`, where it is interpolated into a single-quoted MariaDB SELECT without parameterization or escaping. Although `objects/security.php` strips literal single quotes, `html_entity_decode` in `objects/Login.php` restores entity-encoded quotes before the query. The supplied `siteURL` must pass the streamer allowlist, which allows all sites when empty by default, and an attacker-hosted login response must set `canUpload` or `isAdmin` to reach `Streamer::createIfNotExists`. That function calls `Streamer::get` before its additional allowlist check. UNION results are exposed through `streamers_id`, while failures return the rendered query and MariaDB error. An attacker can read arbitrary encoder database data, including stored upstream streamer credentials, allowlist configuration, and queue records, without encoder credentials. Stacked statements are not permitted by the mysqli driver and the tested database account lacks global FILE privilege, so the demonstrated vector is bounded to reads rather than server-side file writes. Stolen streamer credentials can provide continued upstream access until rotated. This issue is fixed in version 8.1.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-2rrq-xf8q-3qpf",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-61569",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
