@@ -1,0 +1,991 @@
+[Mon Nov  2 05:18:16 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-120336",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-11-01T14:36:38.832Z",
+      "datePublished": "2026-11-02T03:15:18.679Z",
+      "dateUpdated": "2026-11-02T03:15:18.679Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-11-02T03:15:18.679Z"
+        },
+        "title": "VStarcam O-KAM Client DevDll_925.dll FUN_10003EA0 stack-based overflow",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-121",
+                "lang": "en",
+                "description": "Stack-based Buffer Overflow"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-119",
+                "lang": "en",
+                "description": "Memory Corruption"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "VStarcam",
+            "product": "O-KAM Client",
+            "versions": [
+              {
+                "version": "1.3.3.32",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:vstarcam:o-kam_client:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in VStarcam O-KAM Client 1.3.3.32. Affected by this vulnerability is the function FUN_10003EA0 in the library DevDll_925.dll. The manipulation results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:R",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:UR"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-11-01T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-11-01T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-11-01T15:41:48.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/429661",
+            "name": "VDB-429661 | VStarcam O-KAM Client DevDll_925.dll FUN_10003EA0 stack-based overflow",
+            "tags": [
+              "vdb-entry",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/429661/cti",
+            "name": "VDB-429661 | CTI Indicators (IOB, IOC, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-120336",
+            "name": "CVE-2026-120336 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/1016301",
+            "name": "Submit #1016301 | Shenzhen VStarcam Technology Co., Ltd O-KAM Client (DevDll_925.dll) 1.3.3.32 CWE-121: Stack-based Buffer Overflow",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/Ishanoshada/f6345a42a46e1345e6c7400aac311d77",
+            "tags": [
+              "exploit"
+            ]
+          }
+        ],
+        "x_generator": [
+          "VulDB PVTS v202611"
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-120336",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-120341",
+      "assignerOrgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulDB",
+      "dateReserved": "2026-11-01T15:39:18.009Z",
+      "datePublished": "2026-11-02T04:15:14.428Z",
+      "dateUpdated": "2026-11-02T04:15:14.428Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "1af790b2-7ee1-4545-860a-a788eba489b5",
+          "shortName": "VulDB",
+          "dateUpdated": "2026-11-02T04:15:14.428Z"
+        },
+        "title": "mathurvishal CloudClassroom-PHP-Project studentdetails.php redirect",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-698",
+                "lang": "en",
+                "description": "Execution After Redirect"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "type": "CWE",
+                "cweId": "CWE-705",
+                "lang": "en",
+                "description": "Incorrect Control Flow Scoping"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "mathurvishal",
+            "product": "CloudClassroom-PHP-Project",
+            "versions": [
+              {
+                "version": "5dadec098bfbbf3300d60c3494db3fb95b66e7be",
+                "status": "affected"
+              },
+              {
+                "version": "c46ce5736007d9d6e51a8feeb9250729fe85f139",
+                "status": "affected"
+              },
+              {
+                "version": "dae0c5961a35a4faf28cde9e02117538f09f81c1",
+                "status": "affected"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:mathurvishal:cloudclassroom-php-project:*:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security vulnerability has been detected in mathurvishal CloudClassroom-PHP-Project. Impacted is an unknown function of the file studentdetails.php. The manipulation leads to execution after redirect. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The vendor was contacted early about this disclosure but did not respond in any way."
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "version": "4.0",
+              "baseScore": 6.9,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "version": "3.1",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV3_0": {
+              "version": "3.0",
+              "baseScore": 7.3,
+              "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P/RL:X/RC:C",
+              "baseSeverity": "HIGH"
+            }
+          },
+          {
+            "cvssV2_0": {
+              "version": "2.0",
+              "baseScore": 7.5,
+              "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P/E:POC/RL:ND/RC:C"
+            }
+          }
+        ],
+        "timeline": [
+          {
+            "time": "2026-11-01T00:00:00.000Z",
+            "lang": "en",
+            "value": "Advisory disclosed"
+          },
+          {
+            "time": "2026-11-01T01:00:00.000Z",
+            "lang": "en",
+            "value": "VulDB entry created"
+          },
+          {
+            "time": "2026-11-01T16:44:41.000Z",
+            "lang": "en",
+            "value": "VulDB entry last update"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "vinniboy021 (VulDB User)",
+            "type": "reporter"
+          },
+          {
+            "lang": "en",
+            "value": "VulDB CNA Team",
+            "type": "coordinator"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/vuln/429666",
+            "name": "VDB-429666 | mathurvishal CloudClassroom-PHP-Project studentdetails.php redirect",
+            "tags": [
+              "vdb-entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/vuln/429666/cti",
+            "name": "VDB-429666 | CTI Indicators (IOB, IOC, TTP, IOA)",
+            "tags": [
+              "signature",
+              "permissions-required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-120341",
+            "name": "CVE-2026-120341 | CVE Analysis and Report",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/submit/1016328",
+            "name": "Submit #1016328 | https://github.com/mathurvishal/CloudClassroom-PHP-Project CloudClassroom-PHP-Project 5dadec098bfbbf3300d60c3494db3fb95b66e7be Missing Authorization",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/vinniboy021-blip/Advisory/blob/main/details-plaintext-disclosure.md",
+            "tags": [
+              "broken-link",
+              "exploit"
+            ]
+          }
+        ],
+        "x_generator": [
+          "VulDB PVTS v202611"
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-120341",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2025-11395",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2025-10-07T03:14:35.482Z",
+      "datePublished": "2026-09-15T22:59:03.366Z",
+      "dateUpdated": "2026-11-02T04:15:06.682Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Podman: arbitrary file write when importing oci archive",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Moderate",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "ADJACENT_NETWORK",
+              "availabilityImpact": "LOW",
+              "baseScore": 5.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "LOW",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in Podman. If an attacker can pass a crafted tar archive to the `podman load` command, they can create files on the host machine with the privileges of the user running Podman."
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "buildah",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "2:1.43.1-7.el10_2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:10.2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "skopeo",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "2:1.22.2-6.el10_2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:10.2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "podman",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "7:5.8.2-12.el10_2",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:10.2"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "buildah",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "2:1.43.3-2.el9_8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:9::appstream"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "skopeo",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "2:1.22.2-8.el9_8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:9::appstream"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "podman",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "6:5.8.2-8.el9_8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:9::appstream"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "buildah",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "2:1.43.4-2.el9_8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:9::appstream"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "skopeo",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "2:1.22.2-9.el9_8",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:9::appstream"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "buildah",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "container-tools:rhel8/podman",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "skopeo",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/o:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Hardened Images",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "podman",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:hummingbird:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "buildah",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "podman",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "rhcos",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "skopeo",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Dev Spaces",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "devspaces/udi-base-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift_devspaces:3"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Dev Spaces",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "devspaces/udi-rhel9",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:openshift_devspaces:3"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:70640",
+            "name": "RHSA-2026:70640",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:70641",
+            "name": "RHSA-2026:70641",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:88262",
+            "name": "RHSA-2026:88262",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:89761",
+            "name": "RHSA-2026:89761",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:90362",
+            "name": "RHSA-2026:90362",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:90424",
+            "name": "RHSA-2026:90424",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:90462",
+            "name": "RHSA-2026:90462",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:93464",
+            "name": "RHSA-2026:93464",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2025-11395",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2402034",
+            "name": "RHBZ#2402034",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          }
+        ],
+        "datePublic": "2025-11-07T00:00:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-277",
+                "description": "Insecure Inherited Permissions",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-277: Insecure Inherited Permissions",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "Mitigation for this issue is either not available or the currently available options do not meet the Red Hat Product Security criteria comprising ease of use and deployment, applicability to widespread installation base or stability."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2025-10-07T03:10:59.473Z",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2025-11-07T00:00:00.000Z",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank XeR for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-11-02T04:15:06.682Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2025-11395",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-09-16T19:44:06.242490Z",
+                  "id": "CVE-2025-11395",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-16T19:44:17.305Z"
+          }
+        }
+      ]
+    }
+  }
+]
