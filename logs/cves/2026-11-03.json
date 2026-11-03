@@ -1,0 +1,657 @@
+[Tue Nov  3 13:54:03 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-50541",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-06-04T20:37:18.653Z",
+      "datePublished": "2026-10-28T13:25:10.271Z",
+      "dateUpdated": "2026-11-03T12:59:56.849Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Xibo: IDOR (Broken Object-Level Authorization) on GET /dataset/export/csv/{id} Allows Arbitrary Dataset Export",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-862",
+                "lang": "en",
+                "description": "CWE-862: Missing Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 6.5,
+              "baseSeverity": "MEDIUM",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "privilegesRequired": "LOW",
+              "scope": "UNCHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/xibosignage/xibo-cms/security/advisories/GHSA-v6xr-pmg9-qpmv",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/xibosignage/xibo-cms/security/advisories/GHSA-v6xr-pmg9-qpmv"
+          },
+          {
+            "name": "https://github.com/xibosignage/xibo-cms/pull/3493",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/xibosignage/xibo-cms/pull/3493"
+          },
+          {
+            "name": "https://github.com/xibosignage/xibo-cms/commit/98b347d3bf81d369ebe67bde030b913085a11556",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/xibosignage/xibo-cms/commit/98b347d3bf81d369ebe67bde030b913085a11556"
+          },
+          {
+            "name": "https://github.com/xibosignage/xibo-cms/commit/bba1bd82da8fb96919ba07462fe06ddacb22116b",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/xibosignage/xibo-cms/commit/bba1bd82da8fb96919ba07462fe06ddacb22116b"
+          },
+          {
+            "name": "https://github.com/xibosignage/xibo-cms/releases/tag/4.4.3",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/xibosignage/xibo-cms/releases/tag/4.4.3"
+          },
+          {
+            "name": "https://github.com/xibosignage/xibo-cms/releases/tag/4.5.0-beta",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/xibosignage/xibo-cms/releases/tag/4.5.0-beta"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "xibosignage",
+            "product": "xibo-cms",
+            "versions": [
+              {
+                "version": "< 4.4.3",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-10-28T13:25:10.271Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Xibo is an open source digital signage platform with a web content management system and Windows display player software. Prior to 4.4.3, missing access-control checks on `GET /dataset/export/csv/{id}` allow an authenticated user to export data from any dataset, including datasets created by administrators, by iterating over `sequential dataset IDs`. Exploitation requires access to the privilege allowing edits, including deletion, to all created `DataSets` independently of Layouts. This privilege is not granted to non-administrators as standard. This issue is fixed in version 4.4.3."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-v6xr-pmg9-qpmv",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-50541",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-11-03T12:59:18.757590Z",
+                  "id": "CVE-2026-50541",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-11-03T12:59:56.849Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-121458",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-11-03T12:47:04.613Z",
+      "datePublished": "2026-11-03T12:59:17.285Z",
+      "dateUpdated": "2026-11-03T12:59:17.285Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-11-03T12:59:17.285Z"
+        },
+        "title": "Instatic before 0.0.21 Authorization Bypass via MCP Content Read Tools",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Instatic before 0.0.21 contains a missing authorization vulnerability in its AI/MCP content read tools that allows low-privileged authenticated users with ai.chat and content.edit.own capabilities to access data rows belonging to other users by calling content_get_document and content_list_documents without the object-level authorization checks enforced by the normal HTTP API. Attackers can use the MCP interface to retrieve private or unpublished draft content and enumerate rows from the posts system table, resulting in cross-user data disclosure."
+          }
+        ],
+        "tags": [
+          "x_open-source"
+        ],
+        "datePublic": "2026-11-03T00:00:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Missing Authorization",
+                "cweId": "CWE-862",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "defaultStatus": "unaffected",
+            "vendor": "CoreBunch",
+            "product": "Instatic",
+            "packageURL": "pkg:github/CoreBunch/Instatic",
+            "repo": "https://github.com/CoreBunch/Instatic",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0.0.12",
+                "versionType": "semver",
+                "lessThan": "0.0.21"
+              }
+            ]
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:corebunch:instatic:*:*:*:*:*:*:*:*",
+                    "versionStartIncluding": "0.0.12",
+                    "versionEndExcluding": "0.0.21"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 7.1,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N"
+            }
+          },
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "NONE",
+              "version": "3.1",
+              "baseSeverity": "MEDIUM",
+              "baseScore": 6.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/CoreBunch/Instatic/security/advisories/GHSA-x5cc-8486-8qqx",
+            "name": "Vendor Advisory",
+            "tags": [
+              "vendor-advisory",
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://github.com/CoreBunch/Instatic/releases/tag/v0.0.21",
+            "name": "Vendor Patch",
+            "tags": [
+              "patch",
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/instatic-before-authorization-bypass-via-mcp-content-read-tools",
+            "name": "VulnCheck Advisory: Instatic before 0.0.21 Authorization Bypass via MCP Content Read Tools",
+            "tags": [
+              "third-party-advisory"
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Sriman Aluvala",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-121458",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-59176",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-02T19:53:48.829Z",
+      "datePublished": "2026-10-28T13:08:52.592Z",
+      "dateUpdated": "2026-11-03T12:58:35.532Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Functype: MCP set_functype_version Package Alias RCE via Unsanitized pnpm install + Dynamic Import",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-829",
+                "lang": "en",
+                "description": "CWE-829: Inclusion of Functionality from Untrusted Control Sphere",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/jordanburke/functype/security/advisories/GHSA-wcjj-9m6g-2fr2",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/jordanburke/functype/security/advisories/GHSA-wcjj-9m6g-2fr2"
+          },
+          {
+            "name": "https://github.com/jordanburke/functype/commit/c0d58ad9c2a7d15c6117bd3adbbd75de37317dcf",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/jordanburke/functype/commit/c0d58ad9c2a7d15c6117bd3adbbd75de37317dcf"
+          },
+          {
+            "name": "https://github.com/jordanburke/functype/releases/tag/v1.4.4",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/jordanburke/functype/releases/tag/v1.4.4"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "jordanburke",
+            "product": "functype",
+            "versions": [
+              {
+                "version": "< 1.4.4",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-10-28T13:08:52.592Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Functype is a family of TypeScript functional programming libraries. Prior to 1.4.4, the `set_functype_version` MCP tool in `functype-mcp-server` accepts an unconstrained `version` string using only `z.string()` validation in `packages/mcp-server/src/index.ts` and interpolates it into `functype@<version>` for `pnpm add`. Package-alias syntaxes such as `file:`, `npm:`, URLs, or paths can cause an arbitrary local or remote package to be installed as functype. Immediately afterward, `initDocsData(true)` in `packages/mcp-server/src/lib/docs/data.ts` resolves `functype/cli` and dynamically imports the newly installed module, executing attacker-controlled JavaScript with the MCP server process's privileges. Any MCP client able to send a `tools/call` request invoking the tool can exploit the flaw; the tool is enabled by default without authentication in `stdio` mode. A connected AI assistant susceptible to indirect prompt injection can also be induced to invoke it from a malicious document or web page. In non-default `TRANSPORT_TYPE=httpStream` deployments, a network-accessible attacker does not require local access. Successful execution can read process secrets, modify files, or terminate the server. This issue is fixed in `version` 1.4.4."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-wcjj-9m6g-2fr2",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-59176",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "references": [
+            {
+              "url": "https://github.com/jordanburke/functype/security/advisories/GHSA-wcjj-9m6g-2fr2",
+              "tags": [
+                "exploit"
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-11-03T12:57:44.435165Z",
+                  "id": "CVE-2026-59176",
+                  "options": [
+                    {
+                      "Exploitation": "poc"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-11-03T12:58:35.532Z"
+          }
+        }
+      ]
+    }
+  }
+]
