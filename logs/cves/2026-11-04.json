@@ -28652,3 +28652,776 @@
     }
   }
 ]
+[Wed Nov  4 23:26:50 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-62662",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-14T20:22:04.394Z",
+      "datePublished": "2026-11-04T22:29:36.917Z",
+      "dateUpdated": "2026-11-04T22:29:36.917Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Pocket ID: Client credentials grant allows any OIDC client to obtain tokens for arbitrary audiences",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-20",
+                "lang": "en",
+                "description": "CWE-20: Improper Input Validation",
+                "type": "CWE"
+              }
+            ]
+          },
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-863",
+                "lang": "en",
+                "description": "CWE-863: Incorrect Authorization",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV3_0": {
+              "attackComplexity": "HIGH",
+              "attackVector": "NETWORK",
+              "availabilityImpact": "NONE",
+              "baseScore": 7.7,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "HIGH",
+              "scope": "CHANGED",
+              "userInteraction": "NONE",
+              "vectorString": "CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:N",
+              "version": "3.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/pocket-id/pocket-id/security/advisories/GHSA-q4xm-p75h-h9p3",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/pocket-id/pocket-id/security/advisories/GHSA-q4xm-p75h-h9p3"
+          },
+          {
+            "name": "https://github.com/pocket-id/pocket-id/pull/1520",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/pocket-id/pocket-id/pull/1520"
+          },
+          {
+            "name": "https://github.com/pocket-id/pocket-id/commit/8158452b37304115c97c61c3a56082ce938ce6f0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/pocket-id/pocket-id/commit/8158452b37304115c97c61c3a56082ce938ce6f0"
+          },
+          {
+            "name": "https://github.com/pocket-id/pocket-id/releases/tag/v2.10.0",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/pocket-id/pocket-id/releases/tag/v2.10.0"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "pocket-id",
+            "product": "pocket-id",
+            "versions": [
+              {
+                "version": ">= 1.11.0, < 2.10.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-11-04T22:29:36.917Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Pocket ID is an OIDC provider that allows users to authenticate with their passkeys to services. From 1.11.0 until 2.10.0, createTokenFromClientCredentials in backend/internal/service/oidc_service.go accepts the client-controlled resource parameter and embeds it directly in the access token aud claim without validating that the audience is registered or that the requesting client may access it. Any authenticated OIDC client can therefore obtain a Pocket ID-signed token naming another client or an arbitrary audience. The /api/oidc/introspect endpoint cannot distinguish the unauthorized token because it treats a token as active when the introspecting client's identifier matches the attacker-selected audience. In deployments where resource servers trust Pocket ID access tokens for service-to-service authorization, this bypasses audience-based access controls and can permit unauthorized data access or actions; deployments that do not use these tokens for resource-server authorization have no immediate exploitable impact. This issue is fixed in version 2.10.0."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-q4xm-p75h-h9p3",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-62662",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-119600",
+      "assignerOrgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+      "state": "PUBLISHED",
+      "assignerShortName": "VulnCheck",
+      "dateReserved": "2026-10-30T11:46:46.502Z",
+      "datePublished": "2026-10-30T13:18:19.167Z",
+      "dateUpdated": "2026-11-04T22:28:53.487Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "83251b91-4cc7-4094-a5c7-464a1b83ea10",
+          "shortName": "VulnCheck",
+          "dateUpdated": "2026-10-30T13:18:19.167Z"
+        },
+        "datePublic": "2026-10-22T00:00:00.000Z",
+        "title": "tcpflow through 1.6.1 Out-of-Bounds Read via TCP Demultiplexer Payload Length",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "tcpflow through 1.6.1 contains an out-of-bounds read vulnerability that allows unauthenticated attackers to read process memory by sending packets with forged IP payload lengths. Attackers can inject crafted IPv4 or IPv6 TCP packets into captured traffic or pcap files to leak adjacent memory into reconstructed flow files or crash tcpflow."
+          }
+        ],
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "description": "Improper Handling of Length Parameter Inconsistency",
+                "cweId": "CWE-130",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "simsong",
+            "product": "tcpflow",
+            "defaultStatus": "unaffected",
+            "versions": [
+              {
+                "version": "0",
+                "lessThanOrEqual": "1.6.1",
+                "status": "affected",
+                "versionType": "semver"
+              }
+            ],
+            "repo": "https://github.com/simsong/tcpflow"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "cvssV4_0": {
+              "version": "4.0",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N",
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "LOW",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.3,
+              "baseSeverity": "MEDIUM"
+            }
+          },
+          {
+            "format": "CVSS",
+            "cvssV3_1": {
+              "version": "3.1",
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "attackVector": "NETWORK",
+              "attackComplexity": "HIGH",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "LOW",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "LOW",
+              "baseScore": 4.8,
+              "baseSeverity": "MEDIUM"
+            }
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/simsong/tcpflow/issues/279",
+            "tags": [
+              "issue-tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/simsong/tcpflow/blob/tcpflow-1.6.1/src/tcpdemux.cpp#L781",
+            "tags": [
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://github.com/simsong/tcpflow/blob/tcpflow-1.6.1/src/tcpdemux.cpp#L747",
+            "tags": [
+              "technical-description"
+            ]
+          },
+          {
+            "url": "https://hackmd.io/@haindpwn/tcpflow-ip-payload-length-oob-read",
+            "tags": [
+              "third-party-advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/simsong/tcpflow",
+            "tags": [
+              "product"
+            ]
+          },
+          {
+            "name": "VulnCheck Advisory: tcpflow through 1.6.1 Out-of-Bounds Read via TCP Demultiplexer Payload Length",
+            "tags": [
+              "third-party-advisory"
+            ],
+            "url": "https://www.vulncheck.com/advisories/tcpflow-through-1.6.1-out-of-bounds-read-via-tcp-demultiplexer-payload-length"
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "HaiND from the Post and Telecommunication Institute of Technology",
+            "type": "finder"
+          }
+        ],
+        "x_generator": {
+          "engine": "vulncheck-endgame"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-119600",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-11-04T22:28:41.522672Z",
+                  "id": "CVE-2026-119600",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-11-04T22:28:53.487Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-43961",
+      "assignerOrgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+      "state": "PUBLISHED",
+      "assignerShortName": "redhat",
+      "dateReserved": "2026-05-04T18:07:21.843Z",
+      "datePublished": "2026-08-19T14:06:09.120Z",
+      "dateUpdated": "2026-11-04T22:28:44.339Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "Vim: vimscript injection via unescaped filename in netrw s:netrwmarkfile() filter() expression allows arbitrary code execution",
+        "metrics": [
+          {
+            "other": {
+              "content": {
+                "value": "Important",
+                "namespace": "https://access.redhat.com/security/updates/classification/"
+              },
+              "type": "Red Hat severity rating"
+            }
+          },
+          {
+            "cvssV3_1": {
+              "attackComplexity": "LOW",
+              "attackVector": "LOCAL",
+              "availabilityImpact": "HIGH",
+              "baseScore": 7.8,
+              "baseSeverity": "HIGH",
+              "confidentialityImpact": "HIGH",
+              "integrityImpact": "HIGH",
+              "privilegesRequired": "NONE",
+              "scope": "UNCHANGED",
+              "userInteraction": "REQUIRED",
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "version": "3.1"
+            },
+            "format": "CVSS"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in Vim's netrw plugin. A crafted filename containing quote characters and expression fragments can break out of the quoted context during mark/unmark operations, allowing arbitrary Vimscript execution. This can be leveraged to run shell commands with the privileges of the user running Vim."
+          }
+        ],
+        "affected": [
+          {
+            "repo": "https://github.com/vim/vim/",
+            "vendor": "vim",
+            "product": "vim",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "9.2.0480",
+                "versionType": "semver"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Hardened Images",
+            "collectionURL": "https://catalog.redhat.com/software/containers/",
+            "packageName": "vim-main",
+            "defaultStatus": "affected",
+            "versions": [
+              {
+                "version": "9.2.967-1.1.hum1",
+                "lessThan": "*",
+                "versionType": "rpm",
+                "status": "unaffected"
+              }
+            ],
+            "cpes": [
+              "cpe:/a:redhat:hummingbird:1"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 10",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "vim",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:10"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 6",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "vim",
+            "defaultStatus": "unknown",
+            "cpes": [
+              "cpe:/o:redhat:rhel_els:6"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 7",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "vim",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/o:redhat:rhel_els:7"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 8",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "vim",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:8"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat Enterprise Linux 9",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "vim",
+            "defaultStatus": "affected",
+            "cpes": [
+              "cpe:/a:redhat:enterprise_linux:9"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift/ose-rhel-coreos-8",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 4",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift/ose-rhel-coreos-9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:4"
+            ]
+          },
+          {
+            "vendor": "Red Hat",
+            "product": "Red Hat OpenShift Container Platform 5",
+            "collectionURL": "https://access.redhat.com/downloads/content/package-browser/",
+            "packageName": "openshift/ose-rhel-coreos-9",
+            "defaultStatus": "unaffected",
+            "cpes": [
+              "cpe:/a:redhat:openshift:5"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:57614",
+            "name": "RHSA-2026:57614",
+            "tags": [
+              "vendor-advisory",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2026-43961",
+            "tags": [
+              "vdb-entry",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2460434",
+            "name": "RHBZ#2460434",
+            "tags": [
+              "issue-tracking",
+              "x_refsource_REDHAT"
+            ]
+          },
+          {
+            "url": "https://github.com/vim/vim/security/advisories/GHSA-66hr-7p6x-x5j3"
+          }
+        ],
+        "datePublic": "2026-08-19T13:26:06.830Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-94",
+                "description": "Improper Control of Generation of Code",
+                "lang": "en",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "x_redhatCweChain": "CWE-94: Improper Control of Generation of Code",
+        "workarounds": [
+          {
+            "lang": "en",
+            "value": "To mitigate this issue, users should avoid browsing untrusted directories or interacting with files from untrusted sources using Vim's netrw plugin. Exercise caution when opening directories that may contain maliciously crafted filenames."
+          }
+        ],
+        "timeline": [
+          {
+            "lang": "en",
+            "time": "2026-04-21T23:21:48.000Z",
+            "value": "Reported to Red Hat."
+          },
+          {
+            "lang": "en",
+            "time": "2026-08-19T13:26:06.830Z",
+            "value": "Made public."
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Red Hat would like to thank AISLE Research for reporting this issue."
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "53f830b8-0a3f-465b-8143-3b8a9948e749",
+          "shortName": "redhat",
+          "dateUpdated": "2026-11-04T22:28:44.339Z"
+        },
+        "x_generator": {
+          "engine": "cvelib 1.8.0"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-43961",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "title": "CVE Program Container",
+          "references": [
+            {
+              "url": "http://www.openwall.com/lists/oss-security/2026/05/14/7"
+            }
+          ],
+          "providerMetadata": {
+            "orgId": "af854a3a-2127-422b-91ae-364da2661108",
+            "shortName": "CVE",
+            "dateUpdated": "2026-08-19T14:15:30.768Z"
+          }
+        },
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-08-19T14:15:10.966562Z",
+                  "id": "CVE-2026-43961",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-08-19T14:20:55.728Z"
+          }
+        }
+      ]
+    }
+  }
+]
