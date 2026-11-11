@@ -1,0 +1,516 @@
+[Wed Nov 11 05:30:53 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-59191",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-02T19:53:48.831Z",
+      "datePublished": "2026-11-11T04:24:36.256Z",
+      "dateUpdated": "2026-11-11T04:24:36.256Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "TwigView: FileLoader is vulnerable to arbitrary file read",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-22",
+                "lang": "en",
+                "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "LOW",
+              "vulnIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/cakephp/twig-view/security/advisories/GHSA-hq9r-72jq-2pxp",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/cakephp/twig-view/security/advisories/GHSA-hq9r-72jq-2pxp"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/releases/tag/1.3.3",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/releases/tag/1.3.3"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/releases/tag/2.1.2",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/releases/tag/2.1.2"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "cakephp",
+            "product": "twig-view",
+            "versions": [
+              {
+                "version": "< 1.3.3",
+                "status": "affected"
+              },
+              {
+                "version": ">= 2.0.0, < 2.1.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-11-11T04:24:36.256Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TwigView plugin for CakePHP provides wrappers for common View operations and extensions that expose CakePHP functions and jasny/twig-extensions helpers. Prior to versions 1.3.3 and 2.1.2, if FileLoader::findTemplate() is supplied un-validated user controlled data, arbitrary files can be read. This issue has been patched in versions 1.3.3 and 2.1.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-hq9r-72jq-2pxp",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-59191",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-59192",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-02T19:53:48.831Z",
+      "datePublished": "2026-11-11T04:22:38.885Z",
+      "dateUpdated": "2026-11-11T04:22:38.885Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "TwigView: Deserialization of Untrusted Data",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-502",
+                "lang": "en",
+                "description": "CWE-502: Deserialization of Untrusted Data",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "LOW",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6.9,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/cakephp/twig-view/security/advisories/GHSA-48qj-5wxh-m8hc",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/cakephp/twig-view/security/advisories/GHSA-48qj-5wxh-m8hc"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/pull/119",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/pull/119"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/pull/120",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/pull/120"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/commit/99a59407b138a0efff0ce3896cbf67e71a9c9cd3",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/commit/99a59407b138a0efff0ce3896cbf67e71a9c9cd3"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/releases/tag/1.3.3",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/releases/tag/1.3.3"
+          },
+          {
+            "name": "https://github.com/cakephp/twig-view/releases/tag/2.1.2",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/cakephp/twig-view/releases/tag/2.1.2"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "cakephp",
+            "product": "twig-view",
+            "versions": [
+              {
+                "version": "< 1.3.3",
+                "status": "affected"
+              },
+              {
+                "version": ">= 2.0.0, < 2.1.2",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-11-11T04:22:38.885Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TwigView plugin for CakePHP provides wrappers for common View operations and extensions that expose CakePHP functions and jasny/twig-extensions helpers. Prior to versions 1.3.3 and 2.1.2, the unserialize filter has no restriction on which classes are allowed. This can used as a deserialization remote-code-execution gadget. This issue has been patched in versions 1.3.3 and 2.1.2."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-48qj-5wxh-m8hc",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-59192",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-61810",
+      "assignerOrgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+      "state": "PUBLISHED",
+      "assignerShortName": "GitHub_M",
+      "dateReserved": "2026-07-10T20:17:57.991Z",
+      "datePublished": "2026-11-11T04:16:28.714Z",
+      "dateUpdated": "2026-11-11T04:16:28.714Z"
+    },
+    "containers": {
+      "cna": {
+        "title": "libspdm: SPDM (DSP0274) FINISH transcript under-specifies the new 1.4 OpaqueData fields",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "cweId": "CWE-325",
+                "lang": "en",
+                "description": "CWE-325: Missing Cryptographic Step",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "cvssV4_0": {
+              "attackVector": "ADJACENT",
+              "attackComplexity": "LOW",
+              "attackRequirements": "PRESENT",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "subAvailabilityImpact": "NONE",
+              "baseScore": 6,
+              "baseSeverity": "MEDIUM",
+              "vectorString": "CVSS:4.0/AV:A/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+              "version": "4.0"
+            }
+          }
+        ],
+        "references": [
+          {
+            "name": "https://github.com/DMTF/libspdm/security/advisories/GHSA-chjj-xvqx-c8w4",
+            "tags": [
+              "x_refsource_CONFIRM"
+            ],
+            "url": "https://github.com/DMTF/libspdm/security/advisories/GHSA-chjj-xvqx-c8w4"
+          },
+          {
+            "name": "https://github.com/DMTF/libspdm/issues/3633",
+            "tags": [
+              "x_refsource_MISC"
+            ],
+            "url": "https://github.com/DMTF/libspdm/issues/3633"
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "DMTF",
+            "product": "libspdm",
+            "versions": [
+              {
+                "version": "= 1.4.0",
+                "status": "affected"
+              }
+            ]
+          }
+        ],
+        "providerMetadata": {
+          "orgId": "a0819718-46f1-4df5-94e2-005712e83aaa",
+          "shortName": "GitHub_M",
+          "dateUpdated": "2026-11-11T04:16:28.714Z"
+        },
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "libspdm is a sample implementation that follows the DMTF SPDM specifications. In version 1.4.0, both the FINISH request (Table 80) and the FINISH_RSP response (Table 81) gained two new fields, OpaqueDataLength and OpaqueData, placed before the trailing signed/authenticated field. The transcript definitions used to compute and verify the FINISH signature, the FINISH HMAC (RequesterVerifyData), and the FINISH_RSP HMAC (ResponderVerifyData) were not updated and still terminate with a step of the form. Per DSP0274, the \"SPDM Header Fields\" are only the four header bytes (SPDMVersion, RequestResponseCode, Param1, Param2). A literal reading therefore excludes OpaqueDataLength and OpaqueData, even though those fields are transmitted before the trailing signature/HMAC field. Because the signature/HMAC must cover every field transmitted before it to \"protect the entire handshake against manipulation by an active attacker,\" an active attacker could otherwise modify the opaque data in flight without invalidating the signature or HMAC. This issue has been patched in version 1.4.1."
+          }
+        ],
+        "source": {
+          "advisory": "GHSA-chjj-xvqx-c8w4",
+          "discovery": "UNKNOWN"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-61810",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
