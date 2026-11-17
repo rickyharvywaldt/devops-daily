@@ -1,0 +1,714 @@
+[Tue Nov 17 15:44:18 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-19086",
+      "assignerOrgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+      "state": "PUBLISHED",
+      "assignerShortName": "ibm",
+      "dateReserved": "2026-08-06T12:22:07.522Z",
+      "datePublished": "2026-09-14T21:03:44.860Z",
+      "dateUpdated": "2026-09-15T17:31:47.444Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "9a959283-ebb5-44b6-b705-dcc2bbced522",
+          "shortName": "ibm",
+          "dateUpdated": "2026-09-14T21:03:44.860Z"
+        },
+        "title": "IBM i is Affected By Multiple Vulnerabilities in PASE [, ]",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-125",
+                "description": "CWE-125 Out-of-bounds Read",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "IBM",
+            "product": "i",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "7.6"
+              },
+              {
+                "status": "affected",
+                "version": "7.5"
+              },
+              {
+                "status": "affected",
+                "version": "7.4"
+              },
+              {
+                "status": "affected",
+                "version": "7.3"
+              }
+            ],
+            "cpes": [
+              "cpe:2.3:a:ibm:i:7.6:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.6.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.5:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.5.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.4:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.4.0:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.3:*:*:*:*:*:*:*",
+              "cpe:2.3:a:ibm:i:7.3.0:*:*:*:*:*:*:*"
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM i 7.6, 7.5, 7.4, and 7.3 could allow a denial of service as a result of a buffer overflow in a PASE process. An authenticated attacker could leverage this to terminate their own process.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<p>IBM i 7.6, 7.5, 7.4, and 7.3 could allow a denial of service as a result of a buffer overflow in a PASE process. An authenticated attacker could leverage this to terminate their own process.</p>"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7287409",
+            "tags": [
+              "vendor-advisory",
+              "patch"
+            ]
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV3_1": {
+              "version": "3.1",
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "scope": "UNCHANGED",
+              "confidentialityImpact": "NONE",
+              "integrityImpact": "NONE",
+              "availabilityImpact": "LOW",
+              "baseSeverity": "LOW",
+              "baseScore": 3.3,
+              "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "IBM i Release5770-999 \nPTF Number(s)PTF Download Link(s)7.6MJ11517\nMJ11513 https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11517 \n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11513 7.5MJ11516\nMJ11511\n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11516 \n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11511 7.4MJ11515\nMJ11510\n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11515 \n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11510 7.3MJ11514\nMJ11509\n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11514 \n https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11509 \n\n\n\nIBM recommends users running unsupported versions of affected products upgrade to a supported and fixed version of affected products.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "<div><table><colgroup><col/><col/><col/></colgroup><thead><tr><td><strong>IBM i Release</strong></td><td><strong>5770-999 <br/>PTF Number(s)</strong></td><td><strong>PTF Download Link(s)</strong></td></tr></thead><tbody><tr><td>7.6</td><td>MJ11517<br/>MJ11513</td><td><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11517\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11517</a><br/><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11513\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11513</a></td></tr><tr><td>7.5</td><td>MJ11516<br/>MJ11511<br/></td><td><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11516\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11516</a><br/><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11511\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11511</a></td></tr><tr><td>7.4</td><td>MJ11515<br/>MJ11510<br/></td><td><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11515\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11515</a><br/><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11510\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11510</a></td></tr><tr><td>7.3</td><td>MJ11514<br/>MJ11509<br/></td><td><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11514\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11514</a><br/><a href=\"https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11509\" rel=\"nofollow\">https://www.ibm.com/mysupport/s/fix-information?legacy=MJ11509</a></td></tr></tbody></table></div><p>IBM recommends users running unsupported versions of affected products upgrade to a supported and fixed version of affected products.</p>"
+              }
+            ]
+          }
+        ],
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-19086",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "id": "CVE-2026-19086",
+                  "role": "CISA Coordinator",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "version": "2.0.3",
+                  "timestamp": "2026-09-15T17:24:29.114690Z"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-09-15T17:31:47.444Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-112174",
+      "assignerOrgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+      "state": "PUBLISHED",
+      "assignerShortName": "INCIBE",
+      "dateReserved": "2026-10-19T08:26:43.703Z",
+      "datePublished": "2026-11-11T09:47:40.067Z",
+      "dateUpdated": "2026-11-17T14:50:27.620Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "0cbda920-cd7f-484a-8e76-bf7f4b7f4516",
+          "shortName": "INCIBE",
+          "dateUpdated": "2026-11-11T09:47:40.067Z"
+        },
+        "title": "Privilege escalation in Enter’s Iperius Backup",
+        "datePublic": "2026-11-11T09:35:00.000Z",
+        "problemTypes": [
+          {
+            "descriptions": [
+              {
+                "lang": "en",
+                "cweId": "CWE-250",
+                "description": "CWE-250 Execution with unnecessary privileges",
+                "type": "CWE"
+              }
+            ]
+          }
+        ],
+        "affected": [
+          {
+            "vendor": "Enter",
+            "product": "Iperius Backup",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "8.8.3 for Windows"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "cpeApplicability": [
+          {
+            "operator": "OR",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:enter:iperius_backup:8.8.3_for_windows:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Local privilege escalation vulnerability in Iperius Backup 8.8.3, due to insufficient separation between the graphical user interface running with elevated privileges and local users with low privileges. When the backup service is configured to run persistently with Administrator privileges, a local attacker with low privileges can use the native Windows dialogues exposed by the application to run programmes that inherit its elevated context. This allows commands to be executed with SYSTEM or Administrator privileges, depending on the application’s context, and compromises the affected Windows system.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Local privilege escalation vulnerability in Iperius Backup 8.8.3, due to insufficient separation between the graphical user interface running with elevated privileges and local users with low privileges. When the backup service is configured to run persistently with Administrator privileges, a local attacker with low privileges can use the native Windows dialogues exposed by the application to run programmes that inherit its elevated context. This allows commands to be executed with SYSTEM or Administrator privileges, depending on the application’s context, and compromises the affected Windows system."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/privilege-escalation-enters-iperius-backup"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "LOCAL",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "LOW",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "HIGH",
+              "subConfidentialityImpact": "HIGH",
+              "vulnIntegrityImpact": "HIGH",
+              "subIntegrityImpact": "HIGH",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "HIGH",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "CRITICAL",
+              "baseScore": 9.3,
+              "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H"
+            }
+          }
+        ],
+        "solutions": [
+          {
+            "lang": "en",
+            "value": "Update to Iperius Backup 8.8.9. According to the manufacturer, this version includes restrictive permissions by default that prevent the vulnerability. When the service is installed, it applies these permissions to the configuration folders and prevents non-administrator users from creating, modifying or running backup jobs.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Update to Iperius Backup 8.8.9. According to the manufacturer, this version includes restrictive permissions by default that prevent the vulnerability. When the service is installed, it applies these permissions to the configuration folders and prevents non-administrator users from creating, modifying or running backup jobs."
+              }
+            ]
+          }
+        ],
+        "credits": [
+          {
+            "lang": "en",
+            "value": "Jonas Fernández",
+            "type": "finder"
+          }
+        ],
+        "source": {
+          "discovery": "EXTERNAL"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-112174",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-11-17T14:50:13.994823Z",
+                  "id": "CVE-2026-112174",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "no"
+                    },
+                    {
+                      "Technical Impact": "total"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-11-17T14:50:27.620Z"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "dataType": "CVE_RECORD",
+    "dataVersion": "5.2",
+    "cveMetadata": {
+      "cveId": "CVE-2026-107413",
+      "assignerOrgId": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+      "state": "PUBLISHED",
+      "assignerShortName": "NetScaler",
+      "dateReserved": "2026-10-08T00:18:26.021Z",
+      "datePublished": "2026-11-13T02:24:22.832Z",
+      "dateUpdated": "2026-11-17T14:50:23.075Z"
+    },
+    "containers": {
+      "cna": {
+        "providerMetadata": {
+          "orgId": "50a63c94-1ea7-4568-8c11-eb79e7c5a2b5",
+          "shortName": "NetScaler",
+          "dateUpdated": "2026-11-13T02:24:22.832Z"
+        },
+        "title": "Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway",
+        "datePublic": "2026-11-12T23:05:00.000Z",
+        "affected": [
+          {
+            "vendor": "Citrix NetScaler",
+            "product": "ADC",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "14.1-73.57",
+                "versionType": "patch"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "13.1-64.39",
+                "versionType": "patch"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "14.1-73.58 FIPS",
+                "versionType": "patch"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "13.1-37.293 FIPs and NDcPP",
+                "versionType": "patch"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          },
+          {
+            "vendor": "Citrix NetScaler",
+            "product": "Gateway",
+            "versions": [
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "14.1-73.57",
+                "versionType": "patch"
+              },
+              {
+                "status": "affected",
+                "version": "0",
+                "lessThan": "13.1-64.39",
+                "versionType": "patch"
+              }
+            ],
+            "defaultStatus": "unaffected"
+          }
+        ],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.",
+            "supportingMedia": [
+              {
+                "type": "text/html",
+                "base64": false,
+                "value": "Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway."
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697305"
+          }
+        ],
+        "metrics": [
+          {
+            "format": "CVSS",
+            "scenarios": [
+              {
+                "lang": "en",
+                "value": "GENERAL"
+              }
+            ],
+            "cvssV4_0": {
+              "attackVector": "NETWORK",
+              "attackComplexity": "LOW",
+              "attackRequirements": "NONE",
+              "privilegesRequired": "NONE",
+              "userInteraction": "NONE",
+              "vulnConfidentialityImpact": "NONE",
+              "subConfidentialityImpact": "NONE",
+              "vulnIntegrityImpact": "NONE",
+              "subIntegrityImpact": "NONE",
+              "vulnAvailabilityImpact": "HIGH",
+              "subAvailabilityImpact": "NONE",
+              "exploitMaturity": "NOT_DEFINED",
+              "Safety": "NOT_DEFINED",
+              "Automatable": "NOT_DEFINED",
+              "Recovery": "NOT_DEFINED",
+              "valueDensity": "NOT_DEFINED",
+              "vulnerabilityResponseEffort": "NOT_DEFINED",
+              "providerUrgency": "NOT_DEFINED",
+              "version": "4.0",
+              "baseSeverity": "HIGH",
+              "baseScore": 8.7,
+              "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N"
+            }
+          }
+        ],
+        "source": {
+          "discovery": "UNKNOWN"
+        },
+        "x_generator": {
+          "engine": "Vulnogram 1.0.5"
+        },
+        "x_gcve": [
+          {
+            "vulnId": "cve-2026-107413",
+            "recordType": "advisory"
+          }
+        ]
+      },
+      "adp": [
+        {
+          "problemTypes": [
+            {
+              "descriptions": [
+                {
+                  "type": "CWE",
+                  "cweId": "CWE-122",
+                  "lang": "en",
+                  "description": "CWE-122 Heap-based Buffer Overflow"
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "other": {
+                "type": "ssvc",
+                "content": {
+                  "timestamp": "2026-11-17T14:50:08.318776Z",
+                  "id": "CVE-2026-107413",
+                  "options": [
+                    {
+                      "Exploitation": "none"
+                    },
+                    {
+                      "Automatable": "yes"
+                    },
+                    {
+                      "Technical Impact": "partial"
+                    }
+                  ],
+                  "role": "CISA Coordinator",
+                  "version": "2.0.3"
+                }
+              }
+            }
+          ],
+          "title": "CISA ADP Vulnrichment",
+          "providerMetadata": {
+            "orgId": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "shortName": "CISA-ADP",
+            "dateUpdated": "2026-11-17T14:50:23.075Z"
+          }
+        }
+      ]
+    }
+  }
+]
