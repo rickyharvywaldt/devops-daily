@@ -1,0 +1,344 @@
+[Thu Nov 26 21:11:50 UTC 2026] Latest CVEs:
+[
+  {
+    "id": "PYSEC-2025-19",
+    "modified": "2027-07-09T15:54:00+00:00",
+    "published": "2025-03-03T19:15:34+00:00",
+    "aliases": [
+      "CVE-2025-1889",
+      "GHSA-769v-p64c-89pr"
+    ],
+    "details": "picklescan before 0.0.22 only considers standard pickle file extensions in the scope for its vulnerability scan. An attacker could craft a malicious model that uses Pickle and include a malicious pickle file with a non-standard file extension. Because the malicious pickle file inclusion is not considered as part of the scope of picklescan, the file would pass security checks and appear to be safe, when it could instead prove to be problematic.",
+    "affected": [
+      {
+        "package": {
+          "ecosystem": "PyPI",
+          "name": "picklescan",
+          "purl": "pkg:pypi/picklescan"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0"
+              },
+              {
+                "fixed": "0.0.22"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.0.1",
+          "0.0.10",
+          "0.0.11",
+          "0.0.12",
+          "0.0.13",
+          "0.0.14",
+          "0.0.15",
+          "0.0.16",
+          "0.0.17",
+          "0.0.18",
+          "0.0.19",
+          "0.0.2",
+          "0.0.20",
+          "0.0.21",
+          "0.0.3",
+          "0.0.4",
+          "0.0.5",
+          "0.0.6",
+          "0.0.7",
+          "0.0.8",
+          "0.0.9"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://sites.google.com/sonatype.com/vulnerabilities/cve-2025-1889"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-769v-p64c-89pr"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2025-19",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "PYSEC-2024-115",
+    "details": "A vulnerability in the GraphCypherQAChain class of langchain-ai/langchain-community version 0.2.5 allows for SQL injection through prompt injection. This vulnerability can lead to unauthorized data manipulation, data exfiltration, denial of service (DoS) by deleting all data, breaches in multi-tenant security environments, and data integrity issues. Attackers can create, update, or delete nodes and relationships without proper authorization, extract sensitive data, disrupt services, access data across different tenants, and compromise the integrity of the database.",
+    "aliases": [
+      "CVE-2024-8309",
+      "GHSA-45pg-36p6-83v9"
+    ],
+    "modified": "2027-07-09T15:45:00Z",
+    "published": "2024-11-05T16:04:14Z",
+    "references": [
+      {
+        "type": "EVIDENCE",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "WEB",
+        "url": "https://huntr.com/bounties/8f4ad910-7fdc-4089-8f0a-b5df5f32e7c5"
+      },
+      {
+        "type": "FIX",
+        "url": "https://github.com/langchain-ai/langchain/commit/c2a3021bb0c5f54649d380b42a0684ca5778c255"
+      },
+      {
+        "type": "ADVISORY",
+        "url": "https://github.com/advisories/GHSA-45pg-36p6-83v9"
+      }
+    ],
+    "affected": [
+      {
+        "package": {
+          "name": "langchain-community",
+          "ecosystem": "PyPI",
+          "purl": "pkg:pypi/langchain-community"
+        },
+        "ranges": [
+          {
+            "type": "ECOSYSTEM",
+            "events": [
+              {
+                "introduced": "0.2.0"
+              },
+              {
+                "fixed": "0.3.0"
+              }
+            ]
+          }
+        ],
+        "versions": [
+          "0.2.0",
+          "0.2.1",
+          "0.2.2",
+          "0.2.3",
+          "0.2.4",
+          "0.2.5",
+          "0.2.6",
+          "0.2.7",
+          "0.2.9",
+          "0.2.10",
+          "0.2.11",
+          "0.2.12",
+          "0.2.13",
+          "0.2.15",
+          "0.2.16",
+          "0.2.17",
+          "0.2.18",
+          "0.2.14",
+          "0.3.0.dev1",
+          "0.3.0.dev2",
+          "0.2.19"
+        ]
+      }
+    ],
+    "severity": [
+      {
+        "type": "CVSS_V3",
+        "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+      }
+    ],
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "pysec-2024-115",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "DEBIAN-CVE-2026-121717",
+    "issue": "CVE-2026-121717",
+    "packages": {
+      "fzf": {
+        "description": "fzf is a command-line fuzzy finder. Prior to 0.74.5, trigger-driven zsh completion in shell/completion.zsh uses _fzf_feed_fifo to create a FIFO at the predictable shared path ${TMPDIR:-/tmp}/fzf-complete-fifo-$$ and continues after removal or creation errors. On a multi-user host, a local attacker can pre-create that path as a symlink so the victim's completion stream overwrites a victim-writable file, potentially enabling code execution when that file is later sourced. A pre-created FIFO can instead disclose a bounded stream of completion candidates or block completion. On default modern hosts, fs.protected_symlinks blocks the overwrite variant, and protected_fifos and protected_regular further limit the FIFO disclosure and blocking variants, so exploitation depends on the relevant kernel protections being disabled and on the victim invoking the affected completion. This issue is fixed in version 0.74.5.",
+        "scope": "local",
+        "releases": {
+          "bookworm": {
+            "status": "open",
+            "repositories": {
+              "bookworm": "0.38.0-1"
+            },
+            "urgency": "not yet assigned",
+            "nodsa": "Minor issue",
+            "nodsa_reason": "postponed"
+          },
+          "forky": {
+            "status": "resolved",
+            "repositories": {
+              "forky": "0.74.5-1"
+            },
+            "fixed_version": "0.74.5-1",
+            "urgency": "not yet assigned"
+          },
+          "sid": {
+            "status": "resolved",
+            "repositories": {
+              "sid": "0.74.5-1"
+            },
+            "fixed_version": "0.74.5-1",
+            "urgency": "not yet assigned"
+          },
+          "trixie": {
+            "status": "open",
+            "repositories": {
+              "trixie": "0.60.3-1"
+            },
+            "urgency": "not yet assigned",
+            "nodsa": "Minor issue",
+            "nodsa_reason": ""
+          }
+        }
+      }
+    },
+    "modified": "2026-11-26T20:17:11.749181+00:00",
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "debian-cve-2026-121717",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "DEBIAN-CVE-2026-121716",
+    "issue": "CVE-2026-121716",
+    "packages": {
+      "fzf": {
+        "description": "fzf is a command-line fuzzy finder. Prior to 0.74.5, bin/fzf-tmux validates separately supplied layout sizes but does not validate attached -l and -u layout values before Bash arithmetic expansion, allowing command substitution in a crafted operand to execute as the invoking user during option parsing. The same validation failure lets space-bearing popup geometry options -x, -y, -w, -h, and -p reach an unquoted tmux popup option string and inject additional tmux flags. Exploitation requires less-trusted project configuration, a wrapper, or a plugin to supply the poisoned value and requires the victim to invoke fzf-tmux; normal values are usually trusted, and the script has been superseded by built-in tmux options. This issue is fixed in version 0.74.5.",
+        "scope": "local",
+        "releases": {
+          "bookworm": {
+            "status": "open",
+            "repositories": {
+              "bookworm": "0.38.0-1"
+            },
+            "urgency": "not yet assigned",
+            "nodsa": "Minor issue",
+            "nodsa_reason": "postponed"
+          },
+          "forky": {
+            "status": "resolved",
+            "repositories": {
+              "forky": "0.74.5-1"
+            },
+            "fixed_version": "0.74.5-1",
+            "urgency": "not yet assigned"
+          },
+          "sid": {
+            "status": "resolved",
+            "repositories": {
+              "sid": "0.74.5-1"
+            },
+            "fixed_version": "0.74.5-1",
+            "urgency": "not yet assigned"
+          },
+          "trixie": {
+            "status": "open",
+            "repositories": {
+              "trixie": "0.60.3-1"
+            },
+            "urgency": "not yet assigned",
+            "nodsa": "Minor issue",
+            "nodsa_reason": ""
+          }
+        }
+      }
+    },
+    "modified": "2026-11-26T20:17:11.749181+00:00",
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "debian-cve-2026-121716",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "DEBIAN-CVE-2026-114608",
+    "issue": "CVE-2026-114608",
+    "packages": {
+      "pylint": {
+        "description": "Pylint is a static code analyser for Python. From 0.15.2 until 4.0.9, Pylint stores module statistics in predictable files under PYLINT_HOME and loads those files with pickle.load on a later run. An attacker who can write to a shared, group-writable, or otherwise untrusted cache directory can replace a stats cache with crafted serialized data, causing arbitrary code to execute with the privileges of the user who next runs Pylint. The default per-user cache is not normally writable by another user. This issue is fixed in version 4.0.9.",
+        "scope": "local",
+        "releases": {
+          "bookworm": {
+            "status": "open",
+            "repositories": {
+              "bookworm": "2.16.2-2"
+            },
+            "urgency": "not yet assigned",
+            "nodsa": "Minor issue",
+            "nodsa_reason": "postponed"
+          },
+          "forky": {
+            "status": "resolved",
+            "repositories": {
+              "forky": "4.0.9-1"
+            },
+            "fixed_version": "4.0.9-1",
+            "urgency": "not yet assigned"
+          },
+          "sid": {
+            "status": "resolved",
+            "repositories": {
+              "sid": "4.0.9-1"
+            },
+            "fixed_version": "4.0.9-1",
+            "urgency": "not yet assigned"
+          },
+          "trixie": {
+            "status": "open",
+            "repositories": {
+              "trixie": "3.3.4-1"
+            },
+            "urgency": "not yet assigned",
+            "nodsa": "Minor issue",
+            "nodsa_reason": ""
+          }
+        }
+      }
+    },
+    "modified": "2026-11-26T20:17:11.749181+00:00",
+    "containers": {
+      "cna": {
+        "x_gcve": [
+          {
+            "vulnId": "debian-cve-2026-114608",
+            "recordType": "advisory"
+          }
+        ]
+      }
+    }
+  }
+]
